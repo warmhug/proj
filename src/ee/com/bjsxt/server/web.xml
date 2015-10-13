@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <web-app>
+	 <servlet>
+	 	<servlet-name>login</servlet-name>
+	 	<servlet-class>com.bjsxt.servlet.LoginWeb</servlet-class>
+	 </servlet>
+	  <servlet-mapping>
+	  	<servlet-name>login</servlet-name>
+	  	<url-pattern>/g</url-pattern>
+	  	<url-pattern>/y</url-pattern>
+	  </servlet-mapping>
+ </web-app>

@@ -1,0 +1,33 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+.idea.xml
+*.iml
+*.iws
+*.ipr
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# other
+out
+bin
+bak
+.metadata
+*.class
+*.bak
+tmp/
+.tmp
+.myeclipse/
+
+velocity.log
+velocity.log.1
+
