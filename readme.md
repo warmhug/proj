@@ -1,20 +1,19 @@
 
 # Java
 
-
-
-
 ## 学习：
 1. 学Java语法，精通面向对象的思想（理解好多态）
 2. 数据库，包括sql、jdbc、orm，事务，ACID
 3. 学Java web，包括servlet、jsp
 4. 框架学习：Spring、Hibernate、iBATIS、JPA
 
-
-
 # 软件、环境
-
 注意：mac不区分文件名的大小写，类名及文件名大小写改变后，不会自动刷新。编译时可能抛出“找不到类”的错误，要重新删除相应文件，再下载下来。
+
+### maven依赖找不到
+- 先在用户目录（~/.m2）下的 settings.xml 里，添加内网mvn仓库源。
+- 若不行，再把maven安装目录（xx/apache-maven-3.3.3/conf）下的 settings.xml 替换为与用户目录下 settings.xml 一致。
+- 若还不行，删掉用户目录（~/.m2/repository）下已下载的所有依赖，在项目目录下`mvn install -DskipTests`重新安装。
 
 ### eclipse配置jre
 preferences --> Java --> Installed JREs --> search

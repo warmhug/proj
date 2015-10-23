@@ -1,4 +1,8 @@
 
+orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
+
+Hibernate比iBATIS性能低？因为每次都要编译sql语句？
+
 数据库连接数问题：连接利用率低
 
 一致性hash要解决的问题
@@ -14,7 +18,6 @@
 - 数据库切分：单个商品库切分为多个
 
 IDC(interne data center)数据中心，数据中心里的Linux服务器用什么牌子？Dell/HP/huawei/ibm。
-
 
 ------
 
@@ -67,15 +70,15 @@ iBATIS大力支持SQL，而Hibernate和JPA则是使用它们自己的查询语�
 
 ```
 mysql -uroot  #登陆root账户
-show databases; 
+show databases;
 show tables;
 show tables from database_name;
 
-drop database <数据库名>;  #删除数据库 
+drop database <数据库名>;  #删除数据库
 ```
 
 ### 事务
-ACID
+ACID（原子性Atomicity、一致性Consistency、隔离性Isolation和持久性Durability)
 实质是锁和并行
 读写锁，隔离
 数据一致性，数据完整性
