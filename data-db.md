@@ -9,6 +9,10 @@ Hibernate比iBATIS性能低？因为每次都要编译sql语句？
 
 ------
 
+Hibernate not only takes care of the mapping from Java classes to database tables (and from Java data types to SQL data types), but also provides data query and retrieval facilities. It can significantly reduce development time otherwise spent with manual data handling in SQL and JDBC. Hibernate’s design goal is to relieve the developer from 95% of common data persistence-related programming tasks by eliminating the need for manual, hand-crafted data processing using SQL and JDBC. However, unlike many other persistence solutions, Hibernate does not hide the power of SQL from you and guarantees that your investment in relational technology and knowledge is as valid as always.
+
+------
+
 当访问量大的时候（数据库连接数不够）：
 
 - 业务垂直拆分，拆分后就需要远程服务调用框架hsf
