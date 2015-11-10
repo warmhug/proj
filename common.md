@@ -76,10 +76,12 @@ Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量�
 
 
 # rest
-- [1](http://www.cnblogs.com/artech/p/restful-web-api-01.html)、[2](http://www.cnblogs.com/artech/p/restful-web-api-02.html)、[3](http://www.360doc.com/content/09/0918/23/11553_6152605.shtml)  
-- [理解RESTful架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)、[RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
-- [理解本真的REST架构风格](http://www.infoq.com/cn/articles/understanding-restful-style)、[为啥REST如此重要？](http://www.csdn.net/article/2013-08-01/2816424-Why-REST-is-so-important)、[如何设计好的RESTful API？](http://www.infoq.com/cn/articles/how-to-design-a-good-restful-api)
+- [介绍-入门](http://www.cnblogs.com/artech/p/restful-web-api-02.html)
+- [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+- [理解本真的REST架构风格](http://www.infoq.com/cn/articles/understanding-restful-style)、[如何设计好的RESTful API？](http://www.infoq.com/cn/articles/how-to-design-a-good-restful-api)
 - [RESTful API的十个最佳实践](http://www.cnblogs.com/xiaoyaojian/p/4612503.html)
+- [最佳实践](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+- [Google/Facebook/GitHub等设计对比](http://blog.octo.com/en/design-a-rest-api/)
 - [jsonapi](http://jsonapi.org/format/) - [jsonapi中文](http://jsonapi.org.cn/format/)
 
 总结：
@@ -91,7 +93,7 @@ Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量�
     - 过滤：为所有字段或者查询语句提供独立的查询参数：`GET /cars?color=red Returns a list of red cars`
     - 排序：允许跨越多字段的正序或者倒序排列：`GET /cars?sort=-manufactorer,+model`
     - 字段选择：一些情况下，我们只需要在列表中查询几个有标识意义的字段，我们不需要从服务端把所有字段的值都请求出来，所以需要支持API选择查询字段的能力，这也可以提到网络传输性能和速度：`GET /cars?fields=manufacturer,model,id,color`
-    - 使用offset和limit来获取固定数量的资源结果，当其中一个参数没有出现时，应该提供各自的默认值，比如默认取第一页，或者默认取20条数据：`GET /cars?offset=10&limit=5 取第10页的5条数据`
+    - 使用offset和limit来获取固定数量的资源结果，当其中一个参数没有出现时，应该提供各自的默认值，比如默认取第一页，或者默认取20条数据：`GET /cars?offset=10&limit=5 取第三页的5条数据`
     - 使用自定义的头X-Total-Count发回给调用段实际的资源数量。
 - 使用HTTP状态码处理错误
     - 200 – OK – 一切正常

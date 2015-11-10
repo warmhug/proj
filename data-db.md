@@ -79,6 +79,31 @@ show tables;
 show tables from database_name;
 
 drop database <数据库名>;  #删除数据库
+
+select a.pwd, a.username, b.name from t_user a right join company b on a.companyId = b.id;
+select * from t_user where pwd is not null;
+
+show columns from t_user;
+show create table t_user;
+
+alter table t_user add i int;
+alter table t_user drop i;
+alter table t_user modify username varchar(100);
+
+SHOW INDEX FROM t_user;
+
+create temporary table temp_table (t_name varchar(50) not null, t_sales decimal(12,2) not null default 0.00);
+insert into temp_table (t_name, t_sales) values ('t_name', 99.99);
+select * from temp_table;
+
+select version();
+select database();
+select user();
+show status;
+show variables;
+
+SELECT * FROM t_user INTO OUTFILE '/Users/hua/Downloads/t_user_table.txt';
+
 ```
 
 ### 事务
