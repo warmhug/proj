@@ -2,6 +2,8 @@
 
 # 架构
 
+[浅谈命令查询职责分离(CQRS)模式](http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html)
+
 baas-中台：
 
 - 对业务开发团队来说，他们的开发能力更专注前端，交互，需要掌握的技术栈里就只需要javascript和Restful API就够了，他们可以跟专注去理解业务模型和逻辑，快速构建业务系统，进行业务创新。
