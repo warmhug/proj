@@ -1,75 +1,78 @@
 
+http://neo4j.com/
+
+------
+
+------
+## 问题、优化
+
+实质是锁和并行
+读写锁，隔离
+数据一致性，数据完整性
+MVCC：读写并行
+
+单机事务，分布式事务
+死锁检测：碰撞检测
+
 orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
 
 数据库连接数问题：连接利用率低
 
 一致性hash要解决的问题
 
+Hibernate 比 iBATIS 性能低？因为每次都要编译sql语句？
+
 ------
-Hibernate比iBATIS性能低？因为每次都要编译sql语句？
+
+
+### Hibernate
 
 Hibernate not only takes care of the mapping from Java classes to database tables (and from Java data types to SQL data types), but also provides data query and retrieval facilities. It can significantly reduce development time otherwise spent with manual data handling in SQL and JDBC. Hibernate’s design goal is to relieve the developer from 95% of common data persistence-related programming tasks by eliminating the need for manual, hand-crafted data processing using SQL and JDBC. However, unlike many other persistence solutions, Hibernate does not hide the power of SQL from you and guarantees that your investment in relational technology and knowledge is as valid as always.
 
+联合主键构成类时，需要重写类的equal hashcode，实现序列化接口。
+
+list 和 iterate 的区别，什么状况下需要延迟获取对象、具体业务场景？
+
+
+### 关系映射
+对象之间的关系：一对一、一对多、多对多。另外，关联分为单向、双向两种，例如可以通过老师找到学生是单向，如果也可以通过学生能找到老师那就是双向。
+
+- 一对一：一个学生对应一个学生证（可以记录到一张表里，不需要中间表）。一对一关系实际应用里比较少，用外键映射。
+- 一对多(多对一)：一个组对应多个用户，每个用户只能属于一个组。一个人有多辆车，每个车只属于一个人。一个人有多个梦想，每个梦想属于一个人。
+    - 表设计：在多方加外键。
+- 多对多：一个老师对应多个学生，但每个学生可被多个老师教。多对多比较少用，双向关联的多对多关系更加少用。
+    - 表设计：加中间表。例如：学生、课程、分数表设计，分数表作为中间表，里边有学生id/课程id、分数，中间表的主键可以为：
+    - 联合主键(学生id和课程id)、并且不能是自动生成的(需要从学生表id和课程表id获得)。问题：操作不方便
+    - 也可单独设置分数表id作为主键。分数表和学生或课程表是多对一的关系。比联合主键简单
+
+
+### 表设计
+
+三范式：  
+
+- 要有主键，列不可分。
+- 联合主键，不能存在部分依赖。
+- 不能存在传递依赖。
+
+
+
 ------
 
-对数据库进行读写分离。 让主数据库处理事务性的增，删，改操作(Insert,Update,Delete)操作，让从数据库处理查询操作(Select操作)，数据库复制被用来将事务性操作导致的变更同步到集群中的从数据库。
 
-当访问量大的时候（数据库连接数不够）：
+### 事务
+ACID（原子性Atomicity、一致性Consistency、隔离性Isolation和持久性Durability)
 
-- 业务垂直拆分，拆分后就需要远程服务调用框架hsf
-    - 淘宝业务类型：商品、交易、评价、属性
-    - 拆分为“商品中心、用户中心”等，不同团队分别负责
-- 中间加一层，这层下边的机器要减少，作为proxy
-- 数据库切分：单个商品库切分为多个
+事务隔离级别：1 read-uncommitted，2 read-committed，4 repeatable read，8 serializable 。级别越高，越安全但效率越低。一般设置为 read-committed ，不会出现 dirty-read 问题，会等另一个事务提交了才能读到结果、不会读出中间状态，但还会有 non-repeatable read（不可重复读）和 phantom read（幻读）的问题，可以用悲观锁或乐观锁解决。
 
-IDC(interne data center)数据中心，数据中心里的Linux服务器用什么牌子？Dell/HP/huawei/ibm。
-
-------
-
-Java应用传统上使用JDBC（Java Database Connectivity）API来把数据持久到关系数据库中。JDBC API使用SQL语句来完成创建（create）、读取（read）、更新（update）和删除（delete）（CRUD）操作。JDBC代码内嵌在Java类中——换句话说，这类代码与业务逻辑紧密耦合在一起。这类代码还在很大程度上依赖于SQL，而SQL并非是跨数据库的标准；这使得从一种数据库移植到另一种数据库变得困难起来。
-
-对象-关系映射（ORM）使用直接映射来生成内部的JDBC或是SQL代码。然而对于一些应用场景来说，你需要对SQL查询做更加直接的控制。在编写涉及了一系列更新查询的应用时，直接编写自己的SQL查询比依赖于ORM生成的SQL来得更有效一些。另外，在对象模型和数据模型之间存在失配时，ORM是不能够使用的。
-
-iBATIS最好是用在你需要全面地控制SQL的时候，在需要对SQL查询做微调的时候也很有用。当你在应用和数据库设计两方面都有完全的控制权的时候，就不应该使用iBATIS，因为在这样的情况下，应用可能会做出修改以适应数据库，或是反过来。在这种情形中，你可以构建一个完全的对象-关系应用，其他的ORM工具更适于使用，因为iBATIS较为以SQL为中心，其通常被称作反转的——功能齐全的ORM工具生成SQL，而iBATIS直接使用SQL。iBATIS也不适合于非关系型的数据库，因为这类数据库不支持事务和其他iBATIS用到的键特性。
-
-JPA为Java SE应用和Java EE应用提供了一个标准的基于POJO的ORM解决方案，其使用实体类、实体管理器和持久单元来映射和持久领域对象和数据库中的表。JPA应该用在需要标准的基于Java的持久性解决方案的时候。JPA支持继承和多态这两种面向对象编程特性。JPA的缺点是其需要一个实现了其自身的提供程序。此外，JPA被定义成只能在关系数据库上工作。如果你的持久化解决方案需要扩展到其他类型的数据存储上，比如XML数据库上的话，则JPA就不能够用来解决你的持久性问题了。
-
-JPA是需要Provider来实现其功能的，Hibernate就是JPA Provider中很强的一个，应该说无人能出其右。从功能上来说，JPA就是Hibernate功能的一个子集。Hibernate 从3.2开始，就开始兼容JPA。Hibernate3.2获得了Sun TCK的JPA(Java Persistence API) 兼容认证。
-
-只要熟悉Hibernate或者其他ORM框架，在使用JPA时会发现其实非常容易上手。例如实体对象的状态，在Hibernate有自由、持久、游离三种，JPA里有new，managed，detached，removed，明眼人一看就知道，这些状态都是一一对应的。再如flush方法，都是对应的，而其他的再如说Query query = manager.createQuery(sql)，它在Hibernate里写法上是session，而在JPA中变成了manager，所以从Hibernate到JPA的代价应该是非常小的
-
-同样，JDO，也开始兼容JPA。在ORM的领域中，看来JPA已经是王道，规范就是规范。在各大厂商的支持下，JPA的使用开始变得广泛。
-
-像Hibernate和JPA一类的传统的ORM解决方案应该用来作为一种完全的对象-关系映射手段。Hibernate和JPA直接把Java对象映射到数据库表上，而iBATIS则是把Java对象映射到SQL查询的结果上。在某些应用中，领域模型中的对象是根据业务逻辑来设计的，可能不完全与数据模型匹配，在这种情况下，iBATIS是合适的选择。
-
-总是会存在精通Java的人和更信任SQL的人这样的一种划分，对于一个熟练的Java程序员来说，他想使用一个无需与SQL有太多交互的持久性框架，那么Hibernate是最好的选择，因为它会在运行时生成高效率的SQL查询。但是，如果你想要使用存储过程来对数据库查询做各方面的控制的话，则iBATIS是推荐的解决方案。JPA还可通过EntityManager的createNativeQuery()方法来支持SQL。
-
-iBATIS大力支持SQL，而Hibernate和JPA则是使用它们自己的查询语言（分别是HQL和JPQL），这些语言与SQL类似。
-
-一个应用要成功的话需要具备良好的性能。Hibernate通过提供缓存设施来提高性能，这些缓存设施有助于更快地从数据库中检索数据。iBATIS使用SQL查询，这些查询可通过微调来获得更佳性能。JPA的性能则取决于供应商的实现，根据每个应用的特有情况做选择。
-
-有时候，你需要改变应用使用的关系数据库，如果你使用Hibernate来作为持久化解决方案的话，那么这一问题很容易解决，因为Hibernate在配置文件中使用了一个数据库方言属性。从一个数据库移植到另一个数据库上仅是把dialect属性修改成适当值的事。Hibernate使用这一属性来作为生成特定于某种给定数据库的SQL代码的指南。
-
-如前所述，iBATIS要求你编写自己的SQL代码，因此，iBATIS应用的可移植性取决于这些SQL。如果查询是使用可移植的SQL编写的话，那么iBATIS也是可在不同的关系数据库之间做移植的。另一方面，JPA的移植性则取决于其正在使用的供应商实现。JPA是可在不同的实现之间做移植的，比如Hibernate和TopLink Essentials之间。因此，如果应用没有用到某些提供商特有的功能特性的话，那么移植性就不是什么大问题。
+- 悲观锁：获取到数据后加锁，防止别人更新。使用的是数据库的锁。
+- 乐观锁：所有对数据的更新带上版本号，对照不同版本判断是否被更新过。不在获取数据后加锁。
 
 
+### sql语句
+用 in 还是 exists ？后者效率更高。
 
 
-## 数据库
-
-从存储上来说，主要分为几类：
-
-- Key/Value形式，典型的产品如tair。
-- Schema-free, 典型的如mongoDB，阿里云的OTS，这一类产品的特点是使用灵活简单，但如果有二级索引的需求，会比较麻烦。
-- SQL,关系型数据库，比如MySQL、OceanBase，特点是有较高的使用成本，schema变更较为麻烦，但功能强大，特别是OceanBase解决了扩展性和性能问题。
-
-业界 HBase 的二级索引已经有很多产出了，不知道 OTS 目前对于二级索引有什么新进展。
-
-### 数据库（jdbc）
-- 建立与数据库的连接很耗时（花接近一秒），实质是建立了socket连接，用“连接池”来解决。
-- `java.sql.Statement`用来执行sql语句并返回结果，很容易造成“sql注入”风险，例如执行了`delete from xx where id=`，用户输入的id为`5 or 1=1`，这条语句就会删掉表上所有数据。所以，不要用这个，改用`java.sql.PreparedStatement`
-
-#### mysql
+### mysql
 > 默认账户root，密码为空。  
 > 命令行命令以`;`结尾
 
@@ -107,18 +110,35 @@ SELECT * FROM t_user INTO OUTFILE '/Users/hua/Downloads/t_user_table.txt';
 
 ```
 
-### 事务
-ACID（原子性Atomicity、一致性Consistency、隔离性Isolation和持久性Durability)
-实质是锁和并行
-读写锁，隔离
-数据一致性，数据完整性
-MVCC：读写并行
+### 数据库
 
-单机事务，分布式事务
-死锁检测：碰撞检测
+从存储上来说，数据库主要分为几类：
 
-## 数据库编程
-几个名词：`JDBC`、`SQL`、`LOB`、`存储过程`、`可滚动和可更新的结果集`、`行集`、`事务`、`JNDI`、`数据库连接池`
+- Key/Value形式，典型的产品如tair。
+- Schema-free, 典型的如mongoDB，阿里云的OTS，这一类产品的特点是使用灵活简单，但如果有二级索引的需求，会比较麻烦。
+- SQL,关系型数据库，比如MySQL、OceanBase，特点是有较高的使用成本，schema变更较为麻烦，但功能强大，特别是OceanBase解决了扩展性和性能问题。
+
+业界 HBase 的二级索引已经有很多产出了，不知道 OTS 目前对于二级索引有什么新进展。
+
+
+对数据库进行读写分离。 让主数据库处理事务性的增，删，改操作(Insert,Update,Delete)操作，让从数据库处理查询操作(Select操作)，数据库复制被用来将事务性操作导致的变更同步到集群中的从数据库。
+
+当访问量大的时候（数据库连接数不够）：
+
+- 业务垂直拆分，拆分后就需要远程服务调用框架hsf
+    - 淘宝业务类型：商品、交易、评价、属性
+    - 拆分为“商品中心、用户中心”等，不同团队分别负责
+- 中间加一层，这层下边的机器要减少，作为proxy
+- 数据库切分：单个商品库切分为多个
+
+IDC(interne data center)数据中心，数据中心里的Linux服务器用什么牌子？Dell/HP/huawei/ibm。
+
+
+- 建立与数据库的连接很耗时（花接近一秒），实质是建立了socket连接，用“连接池”来解决。
+- `java.sql.Statement`用来执行sql语句并返回结果，很容易造成“sql注入”风险，例如执行了`delete from xx where id=`，用户输入的id为`5 or 1=1`，这条语句就会删掉表上所有数据。所以，不要用这个，改用`java.sql.PreparedStatement`
+
+
+名词：`可滚动和可更新的结果集`、`JNDI`
 
 除了数字、字符串和日期之外，许多数据库还可以存储大对象，例如图片或其他数据。在sql中，二进制大对象称为BLOB，字符型大对象称为CLOB。
 
@@ -135,6 +155,60 @@ MVCC：读写并行
 
 ## 《数据库系统概念》第六版
 
+数据库系统体系结构图：
+![](https://os.alipayobjects.com/rmsportal/MMmEvpOcrbmXqar.png)
+
+数据库结构的基础是数据模型（data model）：一个用于描述数据、数据之间的联系、数据语义和数据约束的概念工具的集合。关系数据模型是最广泛使用的将数据存储到数据库中的模型。其他的数据模型有面向对象模型、对象-关系模型和半结构化数据模型。
+
+关系数据库由表（table）的集合构成，每个表有唯一的名字。如instructor 表有 Id、name、dept_name、salary 四个列，考察这个表，表中的行可被认为是代表了从一个特定的 Id 到相应的 name、dept_name、salary 值之间的联系。由于一个表就是这种联系的一个集合，表这个概念和数学上的关系这个概念是密切相关的，这也正是关系数据模型名称的由来。在数学术语中，元祖（tuple）只是一组值的序列，在 n 个值之间的一种联系可以在数学上用关于这些值的一个 n 元组（n-tuple）来表示，n 元组对应于表中的一行。这样，在关系模型的术语中，关系（relation）用来指代表，而元组（tuple）用来指代行，属性（attribute）指代表中的列。对于关系的每个属性，都存在一个允许取值的集合，称为该属性的域（domain）。
+
+实体-联系（E-R）数据模型使用一组称作实体的基本对象，以及这些对象间的联系。数据库中实体通过属性集合来描述，例如属性 dept_name、building 与 budget 可以描述大学中的一个系，类似地，属性Id、name、salary 可以描述 instructor 实体。
+
+联系（relationship）是几个实体之间的关联。例如，member 联系将一位教师和她所在的系关联在一起。同一类型的所有实体的集合称作实体集（entity set），同一类型的所有联系的集合称作联系集（relationship set）。
+
+数据库的总体逻辑结构（模式）可以用 实体-联系 图（entity-relationship diagram，E-R 图）进行图形化表示。最常用的方法是采用统一建模语言（Unified Modeling Language，UML）来画这样的图。
+
+-----
+
+数据操纵语言（Data-Manipulation Language，DML）是使得用户可以访问和操纵数据的语言。当今广泛使用的是非过程化的DML，它只需要用户指明需要什么数据，而不需指明如何获得这些数据。
+
+数据定义语言（Data-Definition Language，DDL）是说明数据库模式和数据的其他特性的语言。数据库设计主要包括数据库模式的设计，实体-联系（E-R）数据模型是广泛用于数据库设计的数据模型，它提供了一种方便的图形化的方式来观察数据、联系和约束。
+
+查询语言（query language）是用户用来从数据库中请求获取信息的语言。可以分为过程化的和非过程化的。在过程化语言（procedural language）中，用户指导系统对数据库执行一些列操作以计算出所需的结果。在非过程化的语言（nonprocedural language）中，用户只需描述所需信息，而不用给出获取该信息的具体过程。
+
+
+### sql
+sql语言有以下几个部分：
+
+- 数据定义语言（Data-Definition Language，DDL）：SQL DDL 提供定义关系模式、删除关系以及修改关系模式的命令。
+- 数据操纵语言（Data-Manipulation Language，DML）：SQL DML 提供从数据库中查询信息，以及在数据库中插入元组、删除元组、修改元组的能力。
+- 完整性（integrity）：SQL DDL 包括定义完整性约束的命令，保存在数据库中的数据必须满足所定义的完整性约束。
+- 视图定义（view definition）：SQL DDL 包括定义视图的命令。
+- 事务控制（transaction control）：SQL 包括定义事务的开始和结束的命令。
+- 嵌入式SQL和动态SQL（embedded SQL and dynamic SQL）：定义SQL语句如何嵌入到通用编程语言，如C、C++、Java中。
+- 授权（authorization）：SQL DDL 包括定义对关系和视图的访问权限的命令。
+
+SQL 标准支持多种固有类型，包括：
+
+- char(n)：固定长度为n的字符串。如果长度不足补充存入空格，使其达到n的长度。
+- varchar(n)：可变长度的字符串，最大长度为n。
+    - 建议使用 varchar 而不是 char
+- int、smallint、numeric、float 等等。
+
+使用 create table 命令建立表（即关系），通用形式是：
+
+    create table r
+        (A1 D1, 
+        A2 D2, 
+        ..., 
+        An Dn, 
+        <完整性约束1>,
+        ...,
+        <完整性约束n>);
+
+其中 r 是关系名，每个 A 是关系 r 模式中的一个属性名，D 是属性 A 的域(指定了属性的类型以及可选的约束)
+
+
 ### 数据挖掘与信息检索
 数据挖掘（data mining）这个术语指半自动地分析大型数据库并从中找出有用的模式的过程。和人工智能中的知识发现（也称为机器学习（machine learning））或者统计分析一样，数据挖掘试图从数据中寻找规则或模式。但是，数据挖掘和机器学习、统计分析不一样的地方在于它处理大量的主要存储在磁盘上的数据。也就是说，数据挖掘就是在数据库中发现知识。
 
@@ -147,3 +221,34 @@ MVCC：读写并行
 大型企业有各种不同的可用于业务决策的数据来源。要在这些各种各样的数据上高效地执行查询，企业建立了数据仓库（data warehouse）。数据仓库从多个来源收集数据，建立统一的模式，驻留在单个节点上。于是，就为用户提供了单个统一的数据界面。
 
 文本数据也爆炸式增长。文本数据是非结构化的，与关系数据库中严格的结构化数据不同。查询非结构化的文本数据被称为信息检索（information retrieval）。信息检索系统和数据库系统很大程度上是相同的——特别是基于辅助存储器的数据存储和检索。但是信息系统领域与数据库系统所强调的重点是不同的，信息系统重点强调基于关键词的查询，文档与查询的相似度，以及文档的分析、分类和索引。
+
+
+
+## JDBC、Hibernate、iBATIS 使用区别
+
+Java应用传统上使用JDBC（Java Database Connectivity）API来把数据持久到关系数据库中。JDBC API使用SQL语句来完成创建（create）、读取（read）、更新（update）和删除（delete）（CRUD）操作。JDBC代码内嵌在Java类中——换句话说，这类代码与业务逻辑紧密耦合在一起。这类代码还在很大程度上依赖于SQL，而SQL并非是跨数据库的标准；这使得从一种数据库移植到另一种数据库变得困难起来。
+
+对象-关系映射（ORM）使用直接映射来生成内部的JDBC或是SQL代码。然而对于一些应用场景来说，你需要对SQL查询做更加直接的控制。在编写涉及了一系列更新查询的应用时，直接编写自己的SQL查询比依赖于ORM生成的SQL来得更有效一些。另外，在对象模型和数据模型之间存在失配时，ORM是不能够使用的。
+
+iBATIS最好是用在你需要全面地控制SQL的时候，在需要对SQL查询做微调的时候也很有用。当你在应用和数据库设计两方面都有完全的控制权的时候，就不应该使用iBATIS，因为在这样的情况下，应用可能会做出修改以适应数据库，或是反过来。在这种情形中，你可以构建一个完全的对象-关系应用，其他的ORM工具更适于使用，因为iBATIS较为以SQL为中心，其通常被称作反转的——功能齐全的ORM工具生成SQL，而iBATIS直接使用SQL。iBATIS也不适合于非关系型的数据库，因为这类数据库不支持事务和其他iBATIS用到的键特性。
+
+JPA为Java SE应用和Java EE应用提供了一个标准的基于POJO的ORM解决方案，其使用实体类、实体管理器和持久单元来映射和持久领域对象和数据库中的表。JPA应该用在需要标准的基于Java的持久性解决方案的时候。JPA支持继承和多态这两种面向对象编程特性。JPA的缺点是其需要一个实现了其自身的提供程序。此外，JPA被定义成只能在关系数据库上工作。如果你的持久化解决方案需要扩展到其他类型的数据存储上，比如XML数据库上的话，则JPA就不能够用来解决你的持久性问题了。
+
+JPA是需要Provider来实现其功能的，Hibernate就是JPA Provider中很强的一个，应该说无人能出其右。从功能上来说，JPA就是Hibernate功能的一个子集。Hibernate 从3.2开始，就开始兼容JPA。Hibernate3.2获得了Sun TCK的JPA(Java Persistence API) 兼容认证。
+
+只要熟悉Hibernate或者其他ORM框架，在使用JPA时会发现其实非常容易上手。例如实体对象的状态，在Hibernate有自由、持久、游离三种，JPA里有new，managed，detached，removed，明眼人一看就知道，这些状态都是一一对应的。再如flush方法，都是对应的，而其他的再如说Query query = manager.createQuery(sql)，它在Hibernate里写法上是session，而在JPA中变成了manager，所以从Hibernate到JPA的代价应该是非常小的
+
+同样，JDO，也开始兼容JPA。在ORM的领域中，看来JPA已经是王道，规范就是规范。在各大厂商的支持下，JPA的使用开始变得广泛。
+
+像Hibernate和JPA一类的传统的ORM解决方案应该用来作为一种完全的对象-关系映射手段。Hibernate和JPA直接把Java对象映射到数据库表上，而iBATIS则是把Java对象映射到SQL查询的结果上。在某些应用中，领域模型中的对象是根据业务逻辑来设计的，可能不完全与数据模型匹配，在这种情况下，iBATIS是合适的选择。
+
+总是会存在精通Java的人和更信任SQL的人这样的一种划分，对于一个熟练的Java程序员来说，他想使用一个无需与SQL有太多交互的持久性框架，那么Hibernate是最好的选择，因为它会在运行时生成高效率的SQL查询。但是，如果你想要使用存储过程来对数据库查询做各方面的控制的话，则iBATIS是推荐的解决方案。JPA还可通过EntityManager的createNativeQuery()方法来支持SQL。
+
+iBATIS大力支持SQL，而Hibernate和JPA则是使用它们自己的查询语言（分别是HQL和JPQL），这些语言与SQL类似。
+
+一个应用要成功的话需要具备良好的性能。Hibernate通过提供缓存设施来提高性能，这些缓存设施有助于更快地从数据库中检索数据。iBATIS使用SQL查询，这些查询可通过微调来获得更佳性能。JPA的性能则取决于供应商的实现，根据每个应用的特有情况做选择。
+
+有时候，你需要改变应用使用的关系数据库，如果你使用Hibernate来作为持久化解决方案的话，那么这一问题很容易解决，因为Hibernate在配置文件中使用了一个数据库方言属性。从一个数据库移植到另一个数据库上仅是把dialect属性修改成适当值的事。Hibernate使用这一属性来作为生成特定于某种给定数据库的SQL代码的指南。
+
+如前所述，iBATIS要求你编写自己的SQL代码，因此，iBATIS应用的可移植性取决于这些SQL。如果查询是使用可移植的SQL编写的话，那么iBATIS也是可在不同的关系数据库之间做移植的。另一方面，JPA的移植性则取决于其正在使用的供应商实现。JPA是可在不同的实现之间做移植的，比如Hibernate和TopLink Essentials之间。因此，如果应用没有用到某些提供商特有的功能特性的话，那么移植性就不是什么大问题。
+

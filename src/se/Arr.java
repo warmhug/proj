@@ -1,6 +1,8 @@
 package se;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by hua on 15/9/21.
@@ -20,4 +22,6 @@ public class Arr {
         System.out.println(b.length);
 
     }
+
+
 }

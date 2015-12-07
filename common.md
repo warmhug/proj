@@ -2,6 +2,8 @@
 
 # 架构
 
+[微服务架构的几种模式](http://microservices.io/patterns/index.html)
+
 [浅谈命令查询职责分离(CQRS)模式](http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html)
 
 baas-中台：
@@ -11,76 +13,15 @@ baas-中台：
 
 soa是Service-Oriented Architecture的首字母简称，面向服务架构。开发人员很容易理解为是一个Web Service，但是这绝对不是SOA，那顶多只能算是SOA的一种实现方法。
 
-面向接口编程：业务中写接口/实现
-
 [stateless-authentication-for-microservices](http://www.slideshare.net/alvarosanchezmariscal/stateless-authentication-for-microservices)、
 [user-authentication-with-jwt](http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/)
 
-### rpc & rest
-- rpc优却点：低延迟，数据量小；不可缓存(手动管理)，紧耦合
-- rest优却点：可缓存，松耦合；高延迟，数据量大
 
-两者结合:
-
-- one model everywhere
-- The data is the API
-
-再说说WebService和soap，WebService也是微软重头宣传的技术之一，但是微软喜欢封装，所以采用了SOAP方式实现WebService，这又是一个过重的协议，又证明了微软没有高并发高性能程序设计经验。独霸Web的LAMP平台，也使用了WebService，但是人家没有采用soap，而是采用xml-rpc, json-rpc，还有Restful webserivice，这些都比微软的soap webservice轻量级，而且更简单。
-至于后来的wcf, wpf, wf，那更是直接把微软送入了地狱。
-
-B/S架构：无需安装、跨平台，像web项目。基于统一的应用层协议HTTP来交互数据，HTTP是无状态的短连接通信方式。C/S架构：本地安装、不跨平台，像QQ等客户端程序。采用长连接的交互模式。
-
-### 设计
-- bean 普通的java bean 可以包含业务逻辑代码！
-- entity 实体bean ，一般是用于ORM 对象关系映射 ，一个实体映射成一张表，一般无业务逻辑代码！
-- POJO全称是Plain Ordinary Java Object / Plain Old Java Object，中文可以翻译成：普通Java类，具有一部分getter/setter方法的那种类就可以称作POJO，很显然POJO也是JavaBean的一种。一般在web应用程序中建立一个数据库的映射对象时，我们只能称它为POJO。
-
-- DAL(数据访问层)、IDAL(接口层)、BLL(业务逻辑层)
-- PO(Persisent Object)持久对象，和VO一样都是由一组属性和属性的 get 和 set 方法组成。PO 的属性是跟数据库表的字段一一对应的。PO 对象需要实现序列化接口。
-- VO(value object)值对象，通常用于业务层之间的数据传递，和 PO 一样也是仅仅包含数据而已。但应是抽象出的业务对象 ,可以和表对应 ,也可以不 ,这根据业务的需要。
-- DAO(data access object) 数据访问对象，它负持久层的操作，为业务层提供接口。此对象用于访问数据库。通常和 PO 结合使用， DAO 中包含了各种数据库的操作方法。通过它的方法 , 结合 PO 对数据库进行相关的操作。
-- DTO(Data Transfer Object) 数据传输对象，主要用于远程调用等需要大量传输对象的地方。
-比如我们一张表有 100 个字段，那么对应的 PO 就有 100 个属性。
-但是我们界面上只要显示 10 个字段，客户端用 WEB service 来获取数据，没有必要把整个 PO 对象传递到客户端，这时我们就可以用只有这 10 个属性的 DTO 来传递结果到客户端，这样也不会暴露服务端表结构 . 到达客户端以后，如果用这个对象来对应界面显示，那此时它的身份就转为 VO。
-- BO(business object) 业务对象，从业务模型的角度看 , 见 UML 元件领域模型中的领域对象。封装业务逻辑的 java 对象 , 通过调用 DAO 方法 , 结合 PO,VO 进行业务操作。主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。比如一个简历，有教育经历、工作经历、社会关系等等。我们可以把教育经历对应一个 PO ，工作经历对应一个 PO ，社会关系对应一个 PO 。建立一个对应简历的 BO 对象处理简历，每个 BO 包含这些 PO 。这样处理业务逻辑时，我们就可以针对 BO去处理。
-
-
-### 服务器
-通常一个Web服务站点的后端服务器不是将Java的应用服务器直接暴露给服务访问者，而是在应用服务器（如Jboss）的前面再加一个Web服务器（如Apache或Nginx），可以做日志分析、负载均衡、权限控制、防止恶意请求以及静态资源预加载等。
-
-Tomcat中的设计模式：模板模式；工厂模式；单例模式；门面设计模式；观察者模式；命令模式；责任链模式。
-
-
-
-# 云计算
-个人觉得云计算最大的好处是“高可扩展性/可伸缩性”，而“性能”和“高可用性”不一定是最好的。。传统系统中，工程师最基本的能力也要让系统能做到“水平扩展”，即通过加机器能应对流量暴涨，但也要尽量节约机器成本。
-
-性能和扩展性
-
-- 什么是性能问题？ 如果你的系统对于一个用户访问还很慢，那就是性能问题；
-- 什么是扩展性问题？ 如果你的系统对一个用户来说是快的，但是在用户不断增长的高访问量下就慢了。
-
-MapReduce 是一种分布式的程序设计模型，专门用来在集群里处理大量的数据。主要由两部分组成：mapper和reducer。mapper读取一部分数据，运算后输出成一系列的中间（intermediate）数据；而reducer将mapper的输出数据查核、合并，产生最后输出。
-
-许多语言都可以实现MapReduce，所以有很多不同的实现版本，除了Google自己的版本，还有许多开源的版本，例如Hadoop、GridGain等，最常被使用的就是Hadoop。Hadoop是以Java实现的，但是可以支持许多其他语言写成的mapper和reducer。
-
-Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量数据时，就会比关系型数据库还要慢了。
-
-采用虚拟化技术可降低Linux使用硬件的成本，虚拟化技术有：VMWare / KVM / XEN / Microsoft Hyper-V 。 如 CPU16核/内存24G/硬盘300G 的Linux服务器，可以“一虚三”、即虚拟出三个虚拟机来。
-
-## 大数据
-应用场景：业务报表、商圈聚类、消费预测、BI
-
-### 问题
-- 关系型数据库迁移到Hadoop
-- 数据同步策略，数据一致性的保障
-- 查询的速度
-
-
-# rest
+## rest
 - [介绍-入门](http://www.cnblogs.com/artech/p/restful-web-api-02.html)
 - [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 - [理解本真的REST架构风格](http://www.infoq.com/cn/articles/understanding-restful-style)、[如何设计好的RESTful API？](http://www.infoq.com/cn/articles/how-to-design-a-good-restful-api)
+- [hateoas](http://timelessrepo.com/haters-gonna-hateoas)
 - [RESTful API的十个最佳实践](http://www.cnblogs.com/xiaoyaojian/p/4612503.html)
 - [最佳实践](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 - [Google/Facebook/GitHub等设计对比](http://blog.octo.com/en/design-a-rest-api/)
@@ -110,27 +51,6 @@ Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量�
     - 500 – Internal Server Error – 标准服务端错误，API开发人员应该尽量避开这种错误
 
 资源、子资源、相关资源，都能通过「links」关联，达到从一个资源找到相关资源(links列出URL)，或者直接embedded相关资源。
-
-    {
-      data: {
-        published_at: "02/21/1848",
-        body: "In bourgeois ..",
-        author: {
-          data: {
-            name: "Monsieur Ramboz",
-          },
-          links: {
-            self: "/authors/karlm",
-            blog_posts: "/authors/karlm/blog_posts"
-          }
-        }
-      },
-      links: {
-        self: "/blog_posts/1",
-        comments: "/blog_posts/1/comments",
-        author: "/authors/karlm"
-      }
-    }
 
 根据[richardson模型](http://martinfowler.com/articles/richardsonMaturityModel.html), REST架构的成熟度有3个等级:
 
@@ -178,6 +98,8 @@ HTTP协议本身是一种面向资源的应用层协议，但对HTTP协议的使
 - HTTP POST和PUT的区别容易被简单地误认为“POST表示创建资源，PUT表示更新资源”；而实际上，二者均可用于创建资源，更为本质的差别是在幂等性方面。
 - POST所对应的URI并非创建的资源本身，而是资源的接收者。比如：POST http://www.forum.com/articles的语义是在http://www.forum.com/articles下创建一篇帖子，HTTP响应中应包含帖子的创建状态以及帖子的URI。两次相同的POST请求会在服务器端创建两份资源，它们具有不同的URI；所以，POST方法不具备幂等性。
 - 而PUT所对应的URI是要创建或更新的资源本身。比如：PUT http://www.forum/articles/4231的语义是创建或更新ID为4231的帖子。对同一URI进行多次PUT的副作用和一次PUT是相同的；因此，PUT方法具有幂等性。
+
+[http pipelining](https://en.wikipedia.org/wiki/HTTP_pipelining)
 
 #### Content-type & Accept
 - Content-type in a request refers to the type of the data you are sending!
