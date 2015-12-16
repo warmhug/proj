@@ -99,12 +99,33 @@ HTTP协议本身是一种面向资源的应用层协议，但对HTTP协议的使
 - POST所对应的URI并非创建的资源本身，而是资源的接收者。比如：POST http://www.forum.com/articles的语义是在http://www.forum.com/articles下创建一篇帖子，HTTP响应中应包含帖子的创建状态以及帖子的URI。两次相同的POST请求会在服务器端创建两份资源，它们具有不同的URI；所以，POST方法不具备幂等性。
 - 而PUT所对应的URI是要创建或更新的资源本身。比如：PUT http://www.forum/articles/4231的语义是创建或更新ID为4231的帖子。对同一URI进行多次PUT的副作用和一次PUT是相同的；因此，PUT方法具有幂等性。
 
-[http pipelining](https://en.wikipedia.org/wiki/HTTP_pipelining)
-
 #### Content-type & Accept
 - Content-type in a request refers to the type of the data you are sending!
     - [Do I need a content type for http get requests](http://stackoverflow.com/questions/5661596/do-i-need-a-content-type-for-http-get-requests)：Get requests should not have content-type because they do not have request entity (that is, a body)
 - Accept：Content-Types that are acceptable for the response.
+
+### [合并 HTTP 请求是否真的有意义？](http://www.zhihu.com/question/34401250)
+- 浏览器针对每个域名并发建立的最大TCP连接数基本都是6个，然后每个连接上串行发送若干个请求。HTTP1.1协议规定请求只能串行发送。
+- 100个请求下：在http1.1，keep-alive是默认的，现代浏览器都有DNS缓存，DNS寻址时间可忽略。
+    - 寻址还是会花很少量时间，考虑个别情况下 DNS 缓存失效时需要更多点时间（10ms 左右）。另外url检查时间，一般可忽略。
+- 3次握手由于有 keep-alive，一条和一百条都只需一次TCP握手--无差别。
+- 发送报文--增多了99次的http请求头，请求之间有停顿（网络延迟 RTT），如果合并后节省延迟时间 RTT*(n-1)。网络延迟低或请求数n比较小时，可忽略不计。（4G以上网络延迟很低）。
+    - PC上的RTT大概是50ms, wifi 为100ms， 3G为200ms，2G为400ms。例如：一个200M带宽、2000ms延迟的网络，和一个2M带宽，20ms延迟的网络。
+    - 无线环境下头部大小每减少100个字节，速度能够提升20~30ms。因为：上下行带宽严重不对称，上行带宽太小。
+        - 假设一个请求头部是800个字节，如果上行带宽是100个字节，那至少得传8次才能将一个请求传完。补充一下，上下行带宽不对称主要是技术和市场原因决定的，倒不是运营商太奸诈。
+- 考虑丢包（比如移动网络），合并请求会更有优势。
+    - 丢的是tcp包？服务器怎么知道丢了，丢了哪些内容(如get请求内容一部分丢了)？浏览器会重新发送，还是自动重发？    
+- 据说keep-alive在经过代理或者防火墙的时候可能会被断开。
+
+#### [http pipelining](https://en.wikipedia.org/wiki/HTTP_pipelining)  
+- pipeline 原理是 客户端可以并行发送多个请求，但是服务器的响应必须按次序返回。一些服务器和代理不支持pipeline；在 pipeline 中的前一个链接可能会阻塞后边的链接；减缓页面加载速度。
+- 检测浏览器是否开启：Firefox 地址栏中输入 about:config 搜索 pipe 找到 network.http.pipelining 。Chrome 地址栏中输入 chrome://flags 找不到开启地方，Chrome 默认禁止了 pipelining。[原因](https://www.chromium.org/developers/design-documents/network-stack/http-pipelining)
+
+#### SPDY 和 HTTP2
+核心优势就是多路复用，简单说来就是将多个请求通过一个TCP连接发送。
+
+浏览器能不能将100个请求通过一个TCP连接发送？会出现什么问题？那就是TCP协议的head of line blocking,队头阻塞。
+设想这样一个场景，一个页面有100个请求，第99个请求时，TCP丢了一个包，TCP自然会重传，重传时间是T1，重传成功后，浏览器才能获取到完整页面的响应内容，然后渲染和展示整个页面。也就是说整个页面的加载时间延迟了T1时间。在此之前，用户没有得到任何内容。
 
 
 
