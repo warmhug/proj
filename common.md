@@ -133,6 +133,9 @@ HTTP协议本身是一种面向资源的应用层协议，但对HTTP协议的使
 
 [htt2 and UDP](http://2014.jsconf.eu/speakers/iliyan-peychev-http-20-and-quic-protocols-of-the-near-future.html)
 
+[websockets 的问题](https://samsaffron.com/archive/2015/12/29/websockets-caution-required)
+
+
 
 # 字符编码
 计算机中存储信息的最小单元是一个字节，即8个bit，所以能表示的字符范围是0~255个。
