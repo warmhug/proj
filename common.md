@@ -18,6 +18,7 @@ soa是Service-Oriented Architecture的首字母简称，面向服务架构。开
 [stateless-authentication-for-microservices](http://www.slideshare.net/alvarosanchezmariscal/stateless-authentication-for-microservices)、
 [user-authentication-with-jwt](http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/)
 
+uuid 全宇宙单独id。guid 一定范围内单独id，比 uuid 范围小。
 
 ## rest
 - [介绍-入门](http://www.cnblogs.com/artech/p/restful-web-api-02.html)
