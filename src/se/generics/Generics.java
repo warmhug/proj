@@ -1,4 +1,4 @@
-package se;
+package se.generics;
 
 import java.util.Map;
 
@@ -21,7 +21,7 @@ class Box<T> {
         return t;
     }
     /**
-     * 静态方法。静态方法不可以访问类上定义的泛型。重新声明T，此处的 T 与 se.Box<T> 的 T 没有关系（可以没有Box<T>的T）。
+     * 静态方法。静态方法不可以访问类上定义的泛型。重新声明T，此处的 T 与 se.generics.Box<T> 的 T 没有关系（可以没有Box<T>的T）。
      */
     public static <T> void update(T obj){
     }
