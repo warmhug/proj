@@ -26,11 +26,7 @@ public class Dispatcher implements Runnable{
 			return ;
 		}
 	}
-	
-	
-	
-	
-	
+
 	@Override
 	public void run() {
 		try {
@@ -44,14 +40,14 @@ public class Dispatcher implements Runnable{
 		}catch (Exception e) {
 			e.printStackTrace();
 			this.code=500;
-		}	
+		}
 		try {
 			rep.pushToClient(500);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		req.close();
-		rep.close();		
+		rep.close();
 		CloseUtil.closeSocket(client);
 	}
 

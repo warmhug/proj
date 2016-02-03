@@ -18,8 +18,6 @@ import java.sql.SQLException;
  *
  */
 public class Demo11 {
-
-
 	public static void main(String[] args) {
 		Connection conn = null;
 		PreparedStatement ps = null;

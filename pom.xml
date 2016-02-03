@@ -10,7 +10,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <guava.version>19.0.20150826</guava.version>
+        <guava.version>18.0</guava.version>
     </properties>
 
     <dependencies>
@@ -18,6 +18,11 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.1</version>
         </dependency>
     </dependencies>
 
