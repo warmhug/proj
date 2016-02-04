@@ -13,6 +13,11 @@ public class Demo {
 
     // 初始化 arraylist 的方法：http://stackoverflow.com/questions/1005073/initialization-of-an-arraylist-in-one-line
     static List<String> list = new ArrayList<String>(Arrays.asList("1", "2", null, "3"));
+    ArrayList<String> list1 = new ArrayList<String>() {{
+        add("A");
+        add("B");
+        add("C");
+    }};
 
     public static void main(String[] args) {
         System.out.println(rawJoin(list, ","));
