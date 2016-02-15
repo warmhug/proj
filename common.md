@@ -4,7 +4,7 @@
 
 [微服务架构的几种模式](http://microservices.io/patterns/index.html)
 
-[浅谈命令查询职责分离(CQRS)模式](http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html)
+[浅谈命令查询职责分离(CQRS)模式](http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html)、[DDD CQRS架构和传统架构的优缺点比较](http://www.cnblogs.com/netfocus/archive/2016/02/06/5184182.html)
 
 什么是微服务架构：https://os.alipayobjects.com/rmsportal/OzCkwPWAvRGwqXv.png
 
