@@ -12,7 +12,7 @@ abstract class InnerClass {
 }
 public class OutClass {
     // 当所在的方法的形参需要被内部类里面使用时，该形参必须为final
-    public InnerClass getInnerClass(final int age, final String name){
+    public InnerClass getInnerClass(final int age, final String name) {
         return new InnerClass() {
             int age_ ;
             String name_;
