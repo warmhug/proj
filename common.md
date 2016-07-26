@@ -44,6 +44,10 @@ uuid 全宇宙单独id。guid 一定范围内单独id，比 uuid 范围小。
 - [Google/Facebook/GitHub等设计对比](http://blog.octo.com/en/design-a-rest-api/)
 - [jsonapi](http://jsonapi.org/format/) - [jsonapi中文](http://jsonapi.org.cn/format/)
 
+[来自于PayPal的RESTful API标准](https://segmentfault.com/a/1190000005924733)
+
+[Microsoft/api-guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
+
 总结：
 
 - 使用名词而不是动词，使用名词的复数形式。（一些非CRUD操作如login/logout，可以用动词，方便理解）

@@ -2,6 +2,8 @@ package se.innerclass;
 
 /**
  * 匿名内部类
+ * An anonymous class in Java is a class not given a name and
+ * is both defined and instantiated in a single succinct expression using the new operator.
  *
  * 使用匿名内部类我们必须要继承一个父类或者实现一个接口，当然也仅能只继承一个父类或者实现一个接口。
  * 匿名内部类中不能定义构造函数，不能存在任何的静态成员变量和静态方法。
