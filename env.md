@@ -1,4 +1,10 @@
 
+
+
+Android NDK向前但不向后兼容，利用NDK针对android-17生成的so文件可以在android-22上运行，反之却不行。
+这点与Android SDK的兼容性不一样，在SDK14上编译的应用，在API23上也是可以运行的；
+在SDk23上的编译的应用，只要minSdkVersion小于14，同样在API14上可以运行。
+
 ## 学习：
 1. 学Java语法，精通面向对象的思想（理解好多态）
 2. 数据库，包括sql、jdbc、orm，事务，ACID
