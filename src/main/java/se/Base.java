@@ -36,6 +36,12 @@ class MyStack {
 }
 
 public class Base {
+    public int myPublicInt; // visible to all
+    protected myProtectedInt; // visible to subclasses of MyClass and to other members of the mytest.myvisibility package
+    int myPackageInt; // visible only to other members of the mytest.myvisibility package
+    private int myPrivateInt; // visible only to MyClass objects.
+    boolean flag = false;
+
     public static void main(String[] args) {
 
         MyStack theStack = new MyStack(10);
