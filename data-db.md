@@ -121,7 +121,7 @@ SELECT * FROM t_user INTO OUTFILE '/Users/hua/Downloads/t_user_table.txt';
 
 从存储上来说，数据库主要分为几类：
 
-- Key/Value形式，典型的产品如tair。
+- Key/Value形式，典型的产品如tair。NoSql数据库，在NoSql分类中，有一种基于键值对（key/value pairs）的结构化数据类型，它通常被存储在内存中以支持快速访问。三种最流行的基于内存键值对的存储系统是：Memcached，Cassandra和Redis。
 - Schema-free, 典型的如mongoDB，阿里云的OTS，这一类产品的特点是使用灵活简单，但如果有二级索引的需求，会比较麻烦。
 - SQL,关系型数据库，比如MySQL、OceanBase，特点是有较高的使用成本，schema变更较为麻烦，但功能强大，特别是OceanBase解决了扩展性和性能问题。
 
