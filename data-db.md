@@ -83,7 +83,7 @@ ACID（原子性Atomicity、一致性Consistency、隔离性Isolation和持久�
 > 默认账户root，密码为空。  
 > 命令行命令以`;`结尾
 
-```
+```sh
 mysql -uroot  #登陆root账户
 show databases;
 show tables;
@@ -114,8 +114,9 @@ show status;
 show variables;
 
 SELECT * FROM t_user INTO OUTFILE '/Users/hua/Downloads/t_user_table.txt';
-
 ```
+
+约束: https://gw.alipayobjects.com/zos/rmsportal/PDMVJVKZwvVWWGNaKvsK.png
 
 ### 数据库
 
