@@ -1,0 +1,45 @@
+
+body {
+  padding: 30px;
+}
+
+.prc {
+  //消息
+&-message {
+  text-align: center;
+  padding-top: 100px;
+  .prc-icon-des {
+    margin-left: 0;
+  }
+}
+
+  &-icon {
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: -8px;
+    vertical-align: top;
+
+    &-m {
+      display: inline-block;
+      text-align: left;
+
+      &-title {
+        font-size:14px;
+      }
+      &-des {
+        display: block;
+        margin-left: 33px;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+
+    &[icon="check-circle"] {
+      color: #48be3d;
+    }
+    &[icon="warn-circle"] {
+      color: #fe8c6a;
+    }
+  }
+}

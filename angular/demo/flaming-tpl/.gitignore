@@ -1,0 +1,9 @@
+.idea
+.tmp
+node_modules
+.DS_Store
+bower_components
+sftp-config.json
+spm_modules
+uploads
+npm-debug.log

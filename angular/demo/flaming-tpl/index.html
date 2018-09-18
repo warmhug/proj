@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="flaming.cloud">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title ng-bind="title"></title>
+    <!-- [STYLE] 火烧云样式  -->
+    <!--[APP STYLE]-->
+    <!-- <link rel="stylesheet" href="static/components/dist/css/flaming-cloud-components.css?v=1432727480"> -->
+    <link rel="stylesheet" href="https://a.alipayobjects.com/flaming-cloud/components/2.2.20/css/flaming-cloud-components.css">
+    <link rel="stylesheet/less" href="static/css/fc.less?v=1432002220">
+    <!--[APP STYLE END]-->
+    <script src="https://a.alipayobjects.com/flaming-cloud/??jquery-1.11.2.js,angular-1.3.15/angular.js,angular-1.3.15/angular-animate.js,angular-1.3.15/angular-cookies.js,angular-1.3.15/angular-resource.js,angular-1.3.15/angular-sanitize.js,d3-3.5.5.js,hammer.js,jquery-ui-1.10.4.js,lodash-3.6.0.js,acharts-1.0.23.js,angular-ui-router-0.2.13.js,angular-ui-tree-2.1.5.js"></script>
+    <!--[STATIC SCRIPT]-->
+    <script src="static/vendor/angular-cookie.js?v=1432002220"></script>
+    <script src="static/vendor/angular-file-upload-html5-shim.js?v=1432002220"></script>
+    <!-- <script src="static/components/dist/js/flaming-cloud-components.js?v=1432727481"></script> -->
+    <script src="https://a.alipayobjects.com/flaming-cloud/components/2.2.20/js/flaming-cloud-components.js"></script>
+    <script src="static/dev/less.js?v=1432002220"></script>
+    <!--[STATIC SCRIPT END]-->
+    <script>
+    var app = angular.module('flaming.cloud', [
+      'ui.router',
+      'ngAnimate',
+      'ngSanitize',
+      'ngResource',
+      'fc.modules',
+      'ipCookie',
+      'ui.tree'
+    ]);
+    </script>
+    <!--[APP SCRIPT]-->
+    <script src="router.js?v=1432727466"></script>
+    <script src="layouts/appcenter/menu.js?v=1432727466"></script>
+    <script src="layouts/appcenter/router.js?v=1432727466"></script>
+    <script src="layouts/sidenav/router.js?v=1432727007"></script>
+    <script src="bundles/appcenter/apps/controller.js?v=1432727466"></script>
+    <script src="bundles/appcenter/apps/router.js?v=1432727466"></script>
+    <script src="bundles/appcenter/apps/service.js?v=1432727466"></script>
+    <script src="bundles/auth/controller.js?v=1432727007"></script>
+    <script src="bundles/auth/router.js?v=1432727007"></script>
+    <script src="bundles/demo/controller.js?v=1432002220"></script>
+    <script src="bundles/demo/directive.js?v=1432002220"></script>
+    <script src="bundles/demo/router.js?v=1432018333"></script>
+    <script src="bundles/demo/service.js?v=1432002220"></script>
+    <script src="facade/app.js?v=1432727466"></script>
+    <script src="facade/facade.demo.js?v=1432002220"></script>
+    <script src="facade/facade.js?v=1432727466"></script>
+    <script src="common/menu/index.js?v=1432727466"></script>
+    <!--[APP SCRIPT END]-->
+  </head>
+  <body>
+    <div ui-view class="fc-body">
+      <style>
+      .fc-index {
+        width: 100%;
+        height: 100%;
+      }
+      .fc-index .fc-index-loading {
+        margin: 200px auto;
+        width: 200px;
+        line-height: 30px;
+      }
+      </style>
+      <div class="fc-index">
+        <div class="fc-index-loading">
+          <span loading="circle lg blue"></span> 页面加载中，请稍等...
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

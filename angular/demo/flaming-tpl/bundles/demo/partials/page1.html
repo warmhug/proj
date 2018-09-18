@@ -1,0 +1,32 @@
+<style>
+  .overview {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+</style>
+<div class="overview">
+  <fc-breadcrumbs displayname-property="data.breadcrumb"></fc-breadcrumbs>
+  <a ui-sref="demo.child">Page2</a>
+  <h1>A simple Demo</h1>
+  <p>Message: {{ message }}</p>
+  <p>Message2: {{ static_message }}</p>
+
+  <h3>
+    Simple directive
+  </h3>
+
+  <sample-directive hello="haha"></sample-directive>
+
+  <h3>Display Data</h3>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    <tr ng-repeat="app in ctrl.appList">
+      <td><a ui-sref="demo.child({id:app.id})">{{ app.id }}</td>
+      <td>{{ app.name }}</td>
+    </tr>
+  </table>
+</div>

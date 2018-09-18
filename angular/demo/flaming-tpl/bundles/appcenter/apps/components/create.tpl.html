@@ -1,0 +1,17 @@
+
+<!-- header -->
+<div class="modal-header">
+    <div class="close" ng-click="$hide()"><span icon="error"></span></div>
+    <h4 class="modal-title">创建应用</h4>
+</div>
+<div class="modal-body">
+  <form name="myForm">
+    <h3>此处写要业务代码</h3>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" btn="round" ng-click="$hide()">取 消</button>
+  <button type="button" btn="round blue" ng-disabled="myForm.$invalid || vm.submitting" ng-click="vm.createApp()" >
+    <i ng-show="confirmLoading" icon="loading"></i>确 定
+  </button>
+</div>
