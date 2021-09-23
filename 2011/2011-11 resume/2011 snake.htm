@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html,body{ margin:0px; padding:0px;}
+    #container{ width:500px; height:500px; border:1px solid #000; position:relative; margin:20px auto 0px auto;}
+    </style>
+    <script type="text/javascript">
+        function $(id) { return document.getElementById(id); }
+        var x = [160, 180, 200, 220], y = [300, 300, 300, 300];   // 存放蛇的每节位置
+        var snakes = [];  // 存放蛇的每节元素
+        var lt = false, rt = false, up = false, down = false;  // 标记键盘方向键
+        var count = 0, timer;
+        var foods = [];
+        function init() {
+            // 画出背景小格子
+            var container = $("container");
+            for (var i = 0; i < 25; i++) {
+                for (var j = 0; j < 25; j++) { 
+                    var span = document.createElement("span");
+                    span.style.cssText = "width:20px; height:20px; border:1px solid #ccc; position:absolute";
+                    span.style.left = j * 20 + 'px';
+                    span.style.top = i * 20 + 'px';                
+                    container.appendChild(span);
+                }
+            }
+            // 初始化一条三节小蛇
+            for (var i = 0; i < x.length; i++) {
+                var span1 = document.createElement("span");
+                span1.style.cssText = "width:20px; height:20px; background:#00f; border:1px solid #fff; position:absolute";
+                span1.style.left = x[i] + 'px';
+                span1.style.top = y[i] + 'px';
+                container.appendChild(span1);
+                snakes.push(span1);
+            }
+            food(container);
+            $("begin").onclick = snakeRun;
+        }
+        //产生食物
+        function food(container) {
+            var span2 = document.createElement("span");
+            span2.style.cssText = "width:20px; height:20px; background:#0f0; border:1px solid #fff; position:absolute";
+            var ranX = parseInt(Math.random() * 500);
+            var ranY = parseInt(Math.random() * 500);
+            while (ranX % 20 != 0 || ranY % 20 != 0) {  // 注意逻辑，这里是||不是&&
+                ranX = parseInt(Math.random() * 500);
+                ranY = parseInt(Math.random() * 500);
+            }
+            span2.style.left = ranX + 'px';
+            span2.style.top = ranY + 'px';
+            container.appendChild(span2);
+            foods.push(span2);
+            setTimeout(function () { food(container); }, 10000);
+        }
+        //吃食物
+        var x0, y0;
+        function eat() { 
+            for (var i = 0; i < foods.length; i++) {
+                var l = parseInt(foods[i].style.left), t = parseInt(foods[i].style.top);
+                if ((Math.abs(x[snakes.length - 1] - l) == 20 && y[snakes.length - 1] == t) ||
+                    (x[snakes.length - 1] == l && Math.abs(y[snakes.length - 1] - t) == 20)) {
+                    x0 = x[0];
+                    y0 = y[0];
+                }
+
+                if (x[snakes.length - 1] == l && y[snakes.length - 1] == t) {
+                    foods[i].style.background = "#00f";
+                    snakes.push(foods[i]);
+                    x.splice(0, 0, x0);
+                    y.splice(0, 0, y0);
+                    foods.splice(i, 1);
+                    setPosition();
+                }
+            }
+
+        }
+        //蛇的运动
+        function snakeRun() {
+            if (flag) return;
+            clearTimeout(timer);
+            for (var i = 0; i < snakes.length - 1; i++) {
+                x[i] = x[i + 1];
+                y[i] = y[i + 1];
+            }
+            if (lt) {
+                x[snakes.length - 1] -= 20;
+                setPosition();
+            } else if (rt) {
+                x[snakes.length - 1] += 20;
+                setPosition();
+            } else if (up) {
+                y[snakes.length - 1] -= 20;
+                setPosition();
+            } else if (down) {
+                y[snakes.length - 1] += 20;
+                setPosition();
+            } else {
+                x[snakes.length - 1] += 20;
+                setPosition();
+                rt = true;
+            }
+            count++;
+            timer = setTimeout(snakeRun, 300);
+            eat();
+        }
+        // 设置位置
+        var flag = false;
+        function setPosition() {
+            if (x[snakes.length - 1] > 480 || x[snakes.length - 1] < 0 || y[snakes.length - 1] < 0 || y[snakes.length - 1] > 480) {
+                clearTimeout(timer);
+                alert("I'm sorry 你越界了");
+                flag = true;
+                return;
+            }
+            for (var i = 0; i < snakes.length; i++) {
+                snakes[i].style.left = x[i] + 'px';
+                snakes[i].style.top = y[i] + 'px';
+            }
+            for (var i = 0; i < snakes.length - 1; i++) {
+                if (x[snakes.length - 1] == x[i] && y[snakes.length - 1] == y[i]) {
+                    clearTimeout(timer);
+                    alert("I'm sorry 你撞住自己了");
+                    //return false;
+                    flag = true;
+                }
+            }
+        }
+        // 键盘事件
+        function keydown(e) {
+            var e = e || event;
+            var currKey = e.keyCode || e.which || e.charCode;
+            switch (currKey) {
+                case 37:  // 左方向键
+                    rt == true ? lt = false : lt = true;
+                    up = down = false;
+                    break;
+                case 38:  // 上方向键
+                    down == true ? up = false : up = true;
+                    lt = rt = false;
+                    break;
+                case 39:  // 右方向键
+                    lt == true ? rt = false : rt = true;
+                    up = down = false;
+                    break;
+                case 40:  // 下方向键
+                    up == true ? down = false : down = true;
+                    lt = rt = false;
+                    break;
+                default: rt = true; break;
+            }
+        }
+        document.onkeydown = keydown;
+        window.onload = init;
+    </script>
+</head>
+<body>
+<div style="color:red">声明：功能实现完全原创！（界面设计或有参考他人）（测试推荐浏览器IE9\FF）<br />
+    本游戏没有依赖其他外部库，一般运行在单独的页面里，所以没有进行封装<br />
+    （如果要嵌入其他页面内，最好进行封装，避免全局变量污染）</div> 
+<div id="container">
+</div>
+<div style=" text-align:center;">
+<input id="begin" type="button" value="开始" />	
+<input type="button" value="重新开始" onclick="location.reload()">
+</div>
+</body>
+</html>

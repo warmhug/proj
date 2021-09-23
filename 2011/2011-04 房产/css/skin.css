@@ -1,0 +1,37 @@
+body,html{background:#000;}
+
+/* SIGNAL AND LINK COLOR */
+input[type=submit]:hover, 
+input[type=submit]#searchsubmit-flex:hover, 
+#searchsubmit:hover, 
+#nav ul li.current_page_ancestor a, 
+#nav ul li.current_page_item a,
+#homebutton a.active,
+#shortcuts ul li a,
+a.button,
+.shortcut_hover
+{background-color:#750544;}
+a{color:#9eab00;}
+
+/* DARK COLOR */
+input[type=submit],
+#nav ul,
+#nav ul ul li a,
+#homebutton a,
+#tabnav li.active a,
+h2.trigger{background-color:#333;}
+a:hover {color:#464646; }
+
+/* MEDIUM DARK COLOR */
+#search, #searchsubmit,#nav ul li a:hover,#nav ul ul li.current_menu_parent ul li a:hover, 
+#nav ul ul li.current-menu-ancestor ul li a:hover,#nav ul ul li.current-menu-item ul li a:hover,#nav ul ul li a:hover,#homebutton a:hover,
+#tabnav li a,h2.trigger:hover,h2.active,.slider-full{background-color:#999;}
+
+#nav, #homebutton{/*border-bottom:2px solid #CCC;*/}
+
+/* LIGHT COLOR */
+.sidebar, .author-box{background:#f7f7f7;}
+.caption-sidebar {background:url(../images/caption_olive.png) no-repeat left -126px ;}
+.caption-sidebar span {background:url(../images/caption_olive.png) no-repeat  right -63px;}
+.caption {background:url(../images/caption_olive.png) no-repeat  left top;}
+.caption span {background:url(../images/caption_olive.png) no-repeat  right -63px;}

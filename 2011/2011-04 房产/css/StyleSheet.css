@@ -1,0 +1,22 @@
+.recentcomments A{    padding: 0px;    margin: 0px;    display: inline !important;    }
+#primary {background:#333333;/* background:#750544;*/background-image:  url(../images/sprite.png);}
+input[type=submit]:hover, 
+.button:hover, 
+.button-dark:hover, 
+.button-dark:hover span{background-color:#ba2f7e;} 
+input[type=submit], 
+.button,
+.button-dark, 
+.button-dark span{background-color:#750544;} #feature-wrap{background:#003F51 url(../images/f-bg.png) repeat-x; }
+
+p{font-size:12px;}a{color:#ba2f7e;} 
+h2.active, h2.active:hover, div.list h2.active, div.list h2.active:hover,.tabcontent div.list h2.active, 
+.tabcontent div.list h2.active:hover { background-color:#ba2f7e; background-position: right -46px;}a:hover{color:#750544;}
+#tabnav li a:hover,
+h2.trigger:hover
+{background:#750544;} 
+#content-wrap{background-color:#fafafa; font-family:0; font-size:12px;}
+#content-wrap{background-image: url(); }
+#slide-frame{height:420px;}
+
+body{ background-color:Blue; }

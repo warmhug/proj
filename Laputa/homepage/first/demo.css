@@ -1,0 +1,44 @@
+/**
+ *
+ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.directives {
+  position: absolute;
+}
+.btn-group a {
+  display: inline-block;
+  margin-top: 5px;
+}
+.btn-group a:hover {
+  text-decoration: none;
+}
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+  background-color: #eee;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+body {
+  position: relative;
+}
+.container {
+  margin-bottom: 20px;
+}
+.header {
+  margin: 20px 0;
+  text-align: center;
+}
+.header .nav {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.header .logo img {
+  width: 200px;
+}

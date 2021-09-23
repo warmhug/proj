@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="laputa">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>laputa</title>
+
+    <!--codemirror-->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/codemirror/4.0.3/codemirror.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/codemirror/4.0.3/theme/elegant.css">
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/codemirror.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/codemirror/4.0.3/codemirror.css">
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/javascript/javascript.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/css/css.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/xml/xml.js"></script>
+    <!-- markdown to html -->
+    <script src="http://softwaremaniacs.org/playground/showdown-highlight/showdown.js"></script>
+    <!-- assets -->
+    <script src="http://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular-route.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular-sanitize.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- laputa -->
+    <script src="lp/laputa.ui.js"></script>
+    <link rel="stylesheet" href="lp/angular-animate.css" />
+    <link rel="stylesheet" href="lp/bootstrap-additions.css" />
+    <!-- 启动 -->
+    <link rel="stylesheet" href="demo.css" />
+    <script src="demo.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills">
+                <li><a href="#alert">组件</a></li>
+                <li><a href="">简介</a></li>
+                <li><a href="">code</a></li>
+                <li><a href="">wiki</a></li>
+            </ul>
+            <p class="logo"><img src="lp/laputa.jpg" /></p>
+            <h1> laputa </h1>
+            <h4 style="color: #999;">基于AngularJS和bootstrap的企业应用解决方案</h4>
+        </div>
+
+        <!-- 组件列表 -->
+        <div id="alert" class="components">
+            <h2>组件directive</h2>
+            <hr />
+            <div class="btn-group">
+                <a href="#alert">
+                    <button type="button" class="btn btn-default">alert</button>
+                </a>
+                <a href="#modal">
+                    <button type="button" class="btn btn-default">modal</button>
+                </a>
+                <a href="#tooltip">
+                    <button type="button" class="btn btn-default">tooltip</button>
+                </a>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class="view col-md-12" ng-view></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

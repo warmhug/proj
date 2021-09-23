@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>myApp</title>
+    <!-- public assets -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+    <script src="http://static.alipayobjects.com/laputa/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-animate.min.js"></script>
+    <!-- local assets -->
+    <link href="lp/angular-animate.css" rel="stylesheet"  />
+    <link href="lp/bootstrap-additions.css" rel="stylesheet" />
+    <script src="lp/laputa.shim.js"></script>
+    <script src="lp/laputa.ui.js"></script>
+    <script>
+        var laputaApp = angular.module('app', ['ngSanitize', 'ngAnimate', 'laputa.ui']);
+    </script>
+</head>
+<body>
+<div ng-controller="SelectDemoCtrl">
+    <label>Single select:</label>
+    <button type="button" class="btn btn-default"
+            ng-model="selectedIcon"
+            data-html="1"
+            ng-options="icon.value as icon.label for icon in icons"
+            lp-select>
+        Action
+        <span class="caret"></span>
+    </button>
+    <hr>
+    <label>Multiple select:</label>
+    <button type="button" class="btn btn-default"
+            ng-model="selectedIcons"
+            data-html="1"
+            data-multiple="1"
+            data-animation="am-flip-x"
+            ng-options="icon.value as icon.label for icon in icons"
+            lp-select>
+        Action
+        <span class="caret"></span>
+    </button>
+</div>
+<script>
+    function SelectDemoCtrl($scope) {
+        $scope.selectedIcon = '';
+        $scope.selectedIcons = ['Globe', 'Heart'];
+        $scope.icons = [
+            {value: 'Gear', label: '<i class="fa fa-gear"></i> Gear'},
+            {value: 'Globe', label: '<i class="fa fa-globe"></i> Globe'},
+            {value: 'Heart', label: '<i class="fa fa-heart"></i> Heart'},
+            {value: 'Camera', label: '<i class="fa fa-camera"></i> Camera'}
+        ];
+
+        $scope.selectedMonth = 0;
+        $scope.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    }
+</script>
+</body>
+</html>

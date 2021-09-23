@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>laputa</title>
+
+    <!--codemirror-->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/codemirror/4.0.3/codemirror.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/codemirror/4.0.3/theme/elegant.css">
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/codemirror.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/javascript/javascript.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/css/css.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/xml/xml.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/4.0.3/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- assets -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="http://cdn.staticfile.org/jquery/1.11.0/jquery.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular-animate.min.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="demo1.css" />
+    <script src="demo1.js"></script>
+</head>
+<body ng-controller="main">
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills">
+                <li><a href="#directive">组件</a></li>
+                <li><a href="">简介</a></li>
+                <li><a href="">code</a></li>
+                <li><a href="">wiki</a></li>
+            </ul>
+            <p class="logo"><img style="" src="laputa.jpg" /></p>
+            <h1> laputa </h1>
+            <h4 style="color: #999;">基于AngularJS和bootstrap的企业应用解决方案</h4>
+        </div>
+
+        <!-- 组件列表 -->
+        <div id="directive" class="row">
+            <h2>组件directive</h2>
+            <hr />
+            <div class="js-btnGroup btn-group">
+                <a ng-repeat="name in modules"
+                   ng-click="clickOne($event, $index)"
+                   type="{{ name }}">
+                    <button type="button" class="btn btn-default">{{ name }}</button>
+                </a>
+            </div>
+        </div>
+        <!--  -->
+        <div class="main row">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="js-title panel-title">
+                        <span>{{ selectedModule }}</span> <small>示例</small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <iframe code-iframe id="demoIfa" class="demo-ifa" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="js-title panel-title">
+                        <span>{{ selectedModule }}</span> <small>代码</small>
+                        <a class="js-reRun open-window" href="javascript:;">编辑后点击此处重新运行</a>
+                    </h3>
+                </div>
+                <div class="panel-body fix-height">
+                    <textarea code-container class="code" id="codemirror"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

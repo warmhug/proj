@@ -1,0 +1,230 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+  <style>
+    .css-form input.ng-invalid.ng-dirty, input.ng-invalid-required {
+    border-color: #FA787E;
+    }
+    input.error{
+        border-color: #fa787e;
+    }
+    .error{
+        color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="apply-form-content" ng-controller="Ctrl">
+<form novalidate action="" class="css-form" name="form" id="form">
+<div class="fm-paragraph">
+    <div class="fm-item clearfix">
+        <label for="expectMoney" class="fm-lab">申请金额：</label>
+        <input type="text" class="fm-ipt" name="moneySum"
+               value="" id="expectMoney" maxLength="10"
+               ng-required="requireSth" required-verify
+               ng-model="user.moneySum"
+               ng-pattern="/^[1-9]\d*$/"
+               ng-blur="act()"
+               ng-class="{error:exceedSum}" />
+        <span class="fm-span">元</span>
+        <!--验证区域-->
+        <div class="fm-tip">
+            <span ng-show="form.moneySum.$valid && !exceedSum">
+                您输入的金额不能超过{{maxApplyMoney}}元</span>
+            <span ng-show="form.moneySum.$error.required" class="error">
+                请输入您期望的贷款金额</span>
+            <span ng-show="form.moneySum.$dirty && !form.moneySum.$error.required && form.moneySum.$invalid" class="error">
+                请输入正确的期望贷款金额</span>
+            <span ng-show="exceedSum" class="error">您输入的申请金额不得超过{{maxApplyMoney}}元</span>
+        </div>
+    </div>
+    <!--静态区域-->
+    <div class="fm-item clearfix no-highlight">
+        <label for="" class="fm-lab">还款方式：</label>
+        <span class="fm-span">每月归还相同本金，根据每月贷款余额计算当前利息，还款金额逐月递减</span>
+    </div>
+    <div class="fm-item clearfix no-highlight">
+        <label for="" class="fm-lab">申请贷款期限：</label>
+        <span class="fm-span">最多12个月</span>
+        <div class="fm-tip">您可以提前还款，第1-3期收取还款金额2%的手续费，第4-9期收取1%手续费</div>
+    </div>
+    <!-- 选择贷款方式 -->
+    <div class="fm-item clearfix no-highlight">
+        <label for="" class="fm-lab">日利率：</label>
+        <div class="rate-container fl">
+            <div class="rate-content clearfix">
+                <input type="radio" ng-model="user.firstLoad" name="rateChoose" class="fm-radio"
+                       id="rateBase" value="false">
+                <label for="rateBase" class="fm-val-lab rate-val-lab">
+                    <em class="c3"><strong>0.06%</strong>/天</em>
+                    <em class="c6">（例如贷款1万元，一天利息6元，用一天算一天）</em>
+                </label>
+            </div>
+            <div class="rate-content clearfix">
+                <input type="radio" ng-model="user.firstLoad" name="rateChoose" class="fm-radio"
+                       id="rateFirst" value="true">
+                <label for="rateFirst" class="fm-val-lab">
+                    <span class="icon-rate-first"></span>
+                    <p>首贷有礼：缴纳0.88%手续费，即可享受首月免息，次月起每日0.05%利息</p>
+                    <span>（15天内短期贷款不推荐，贷款时间超过15天强烈推荐，利息最高节省50%）</span>
+                </label>
+            </div>
+            <div ng-show="">请选择其中一项</div>
+        </div>
+    </div>
+    <div class="fm-item clearfix no-highlight">
+        <label for="" class="fm-lab">放款账号：</label>
+        <span class="fm-span" id="">fangkai1985072@126.com</span>
+        <div class="fm-tip">贷款将全额放款到该支付宝账户</div>
+    </div>
+
+<!-- 我的优惠-打折卡开始 -->
+<div class="fm-item clearfix lab-auto">
+    <label for="discount" class="fm-lab">我的优惠：</label>
+    <div class="fm-preferential ">
+        <div class="fm-preferential-item clearfix">
+            <input type="checkbox" name="cp-discount" class="fm-checkbox" checked="checked" disabled="disabled" id="cp-discount">
+            <label for="cp-discount" class="fm-val-lab">积分折扣98折</label>
+        </div>
+        <div class="fm-preferential-item clearfix">
+            <input type="checkbox" name="cp-discount" class="fm-checkbox"
+                   id="activity-discount" ng-disabled="isEnable()" ng-model="user.checkStat1">
+            <label for="activity-discount" class="fm-val-lab">我是定时打折，比如518</label>
+            <div ng-show="user.firstLoad" class="fm-tip">选择了首贷有礼无法使用打折卡</div>
+        </div>
+        <div class="fm-preferential-item clearfix">
+            <input type="checkbox" name="sp-discount" class="fm-checkbox"
+                   id="sp-discount" ng-disabled="isEnable()" ng-model="user.checkStat2">
+            <label for="sp-discount" class="fm-val-lab">我是敏感定价</label>
+            <div ng-show="user.firstLoad" class="fm-tip">选择了首贷有礼无法使用敏感定价</div>
+        </div>
+        <div class="fm-preferential-item clearfix">
+            <input type="checkbox" name="discount" class="fm-checkbox"
+                   id="discount" ng-disabled="isEnable()" ng-model="user.useInst">
+            <label for="discount" class="fm-val-lab">使用利息打折</label>
+            <div ng-show="user.firstLoad" class="fm-tip">选择了首贷有礼无法使用打折卡</div>
+        </div>
+    </div>
+</div>
+<div class="fm-extra discount-hiden-container lab-auto" ng-show="user.useInst">
+    <div class="fm-item clearfix installment-discount"
+         ng-repeat="item in list"
+         data-discount-list='{{item.discount}}'>
+        <label for="" class="fm-lab"></label>
+        <input type="radio" name="dicountList" class="fm-radio" id="discount{{$index + 1}}">
+        <label for="discount{{$index + 1}}" class="fm-val-lab clearfix">
+            <span class="discount-desc-1 fl">{{item.des1}}</span>
+            <span class="discount-desc-2 fl">{{item.des2}}</span>
+            <span class="discount-desc-3 fl">{{item.des3}}</span>
+        </label>
+    </div>
+</div>
+<!-- 我的优惠-打折卡结束 -->
+</div>
+<div class="apply-btn-container clearfix">
+    <button data-ng-click="add()" ng-disabled="form.$invalid || form.moneySum.$pristine"
+       class="btn btn-apply" id="form-submit"><span>提交申请表</span></button>
+</div>
+</form>
+</div>
+    <script src="http://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular.min.js"></script>
+    <script>
+      angular.module('app', []).controller('Ctrl',function ($scope) {
+    var user =
+        $scope.user = {};
+
+    //常量，不用放到对象属性上
+    $scope.maxApplyMoney = 58400;
+
+    $scope.$watch('user.moneySum', function (newVal) {
+        if (angular.isDefined(newVal) && newVal > $scope.maxApplyMoney) {
+            $scope.exceedSum = true;
+        } else {
+            $scope.exceedSum = false;
+        }
+    })
+
+    user.firstLoad = null;
+    $scope.$watch('user.firstLoad', function (newVal) {
+        console.log(newVal)
+    })
+
+    //控制checkbox的enable与否
+    $scope.isEnable = function () {
+        return $scope.user.firstLoad === 'true';
+    }
+
+    //互斥选项
+    user.checkStat1 = false;
+    user.checkStat2 = false;
+    $scope.$watch(function () {
+        return [user.checkStat1, user.checkStat2]
+    }, function (newVal, oldVal) {
+        //第一个按钮切换
+        if(newVal[0] !== oldVal[0] && newVal[0] && newVal[1]){
+            user.checkStat2 = false;
+        }
+        //第二个按钮切换
+        if(newVal[1] !== oldVal[1] && newVal[0] && newVal[1]){
+            user.checkStat1 = false;
+        }
+    }, true);
+
+    //展开列表
+    $scope.$watch('user.useInst', function () {
+        //回调处理
+    })
+
+    //列表
+    $scope.list = [
+        {
+            des1: '75折',
+            des2: '嗨金盛宴利息打折卡是',
+            des3: '到期时间2013.07.31'
+        },
+        {
+            des1: '75折',
+            des2: '嗨金盛宴利息打折卡是',
+            des3: '到期时间2013.07.31',
+            discount:''
+        },
+        {
+            des1: '75折',
+            des2: '嗨金盛宴利息打折卡是',
+            des3: '到期时间2013.07.31',
+            discount:''
+        },
+        {
+            des1: '75折',
+            des2: '嗨金盛宴利息打折卡是',
+            des3: '到期时间2013.07.31'
+        },
+        {
+            des1: '75折',
+            des2: '嗨金盛宴利息打折卡是',
+            des3: '到期时间2013.07.31'
+        }
+    ];
+
+    $scope.add = function () {
+    };
+}).directive('requiredVerify', ['$timeout', function ($timeout) {
+        return {
+            require: 'ngModel',
+            link: function (scope, element, attrs, ctrl) {
+                scope.requireSth = false;
+                scope.act = function () {
+                    if(!element.val()){
+                        //alert(1);
+                        scope.requireSth = true;
+                    }
+                }
+            }
+        };
+    }
+]);
+    </script>
+</body>
+</html>

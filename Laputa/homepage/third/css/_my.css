@@ -1,0 +1,59 @@
+/**
+ * Created by hua on 14-7-4.
+ */
+.mTop {
+  height: auto;
+}
+.topContact li {
+  font-size: 12px;
+  line-height: 26px;
+}
+.headContent {
+  padding-bottom: 10px;
+}
+.headContent nav,
+.headContent li,
+.headContent ul {
+  max-height: 70px;
+}
+.navMenu > li > a {
+  line-height: 1;
+}
+li.backLava:before {
+  top: 84%;
+}
+.brand img {
+  width: 200px;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.intro,
+.services,
+.portfolio {
+  padding: 30px 0;
+}
+.divider {
+  margin: 0 auto 20px;
+}
+.separator {
+  padding: 25px 0;
+}
+.testi p {
+  margin-bottom: 0;
+}
+.testi p.testio {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+.intro .tile p {
+  min-height: 63px;
+}
+.servDetil {
+  margin-left: 0;
+  padding: 10px;
+  height: 90px;
+  overflow: scroll;
+  background: #fff;
+  color: #333;
+}

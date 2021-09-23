@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>myApp</title>
+    <!-- public assets -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+    <script src="http://static.alipayobjects.com/laputa/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-animate.min.js"></script>
+    <!-- local assets -->
+    <link href="lp/angular-animate.css" rel="stylesheet"  />
+    <link href="lp/bootstrap-additions.css" rel="stylesheet" />
+    <script src="lp/laputa.shim.js"></script>
+    <script src="lp/laputa.ui.js"></script>
+    <script>
+        var laputaApp = angular.module('app', ['ngSanitize', 'ngAnimate', 'laputa.ui']);
+    </script>
+</head>
+<body>
+<div ng-controller="DemoCtrl">
+    <!--  -->
+    <h4>Default</h4>
+    <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+    <pre style="margin:15px 0;">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre>
+    <button class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
+    <button class="btn btn-sm btn-default" ng-click="isReadonly = ! isReadonly">Toggle Readonly</button>
+    <hr />
+    <h4>Custom icons</h4>
+    <div ng-init="x = 5">
+        <rating ng-model="x" max="15" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'"></rating>
+        <b>(<i>Rate:</i> {{x}})</b></div>
+    <div ng-init="y = 2">
+        <rating ng-model="y" rating-states="ratingStates"></rating>
+        <b>(<i>Rate:</i> {{y}})</b></div>
+</div>
+<script>
+    function DemoCtrl($scope) {
+        $scope.rate = 7;
+        $scope.max = 10;
+        $scope.isReadonly = false;
+
+        $scope.hoveringOver = function (value) {
+            $scope.overStar = value;
+            $scope.percent = 100 * (value / $scope.max);
+        };
+
+        $scope.ratingStates = [
+            {stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle'},
+            {stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty'},
+            {stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle'},
+            {stateOn: 'glyphicon-heart'},
+            {stateOff: 'glyphicon-off'}
+        ];
+    }
+</script>
+</body>
+</html>

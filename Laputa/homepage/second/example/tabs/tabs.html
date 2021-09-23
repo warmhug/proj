@@ -1,0 +1,73 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>myApp</title>
+    <!-- public assets -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+    <script src="http://static.alipayobjects.com/laputa/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-animate.min.js"></script>
+    <!-- local assets -->
+    <link href="lp/angular-animate.css" rel="stylesheet"  />
+    <link href="lp/bootstrap-additions.css" rel="stylesheet" />
+    <script src="lp/laputa.shim.js"></script>
+    <script src="lp/laputa.ui.js"></script>
+    <script>
+        var laputaApp = angular.module('app', ['ngSanitize', 'ngAnimate', 'laputa.ui']);
+    </script>
+</head>
+<body>
+<div ng-controller="DemoCtrl">
+    <!--  -->
+    <p>Select a tab by setting active binding to true:</p>
+    <p>
+        <button class="btn btn-default btn-sm" ng-click="tabs[0].active = true">Select second tab</button>
+        <button class="btn btn-default btn-sm" ng-click="tabs[1].active = true">Select third tab</button>
+    </p>
+    <p>
+        <button class="btn btn-default btn-sm" ng-click="tabs[1].disabled = ! tabs[1].disabled">
+            Enable / Disable third tab
+        </button>
+    </p>
+    <hr />
+    <tabset>
+        <tab heading="Static title">Static content</tab>
+        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+            {{tab.content}}
+        </tab>
+        <tab select="alertMe()">
+            <tab-heading>
+                <i class="glyphicon glyphicon-bell"></i> Alert!
+            </tab-heading>
+            I've got an HTML heading, and a select callback. Pretty cool!
+        </tab>
+    </tabset>
+    <hr />
+    <tabset vertical="true" type="pills">
+        <tab heading="Vertical 1">Vertical content 1</tab>
+        <tab heading="Vertical 2">Vertical content 2</tab>
+    </tabset>
+    <hr />
+    <tabset justified="true">
+        <tab heading="Justified">Justified content</tab>
+        <tab heading="SJ">Short Labeled Justified content</tab>
+        <tab heading="Long Justified">Long Labeled Justified content</tab>
+    </tabset>
+</div>
+<script>
+    function DemoCtrl($scope) {
+        $scope.tabs = [
+            { title: 'Dynamic Title 1', content: 'Dynamic content 1' },
+            { title: 'Dynamic Title 2', content: 'Dynamic content 2', disabled: true }
+        ];
+
+        $scope.alertMe = function () {
+            setTimeout(function () {
+                alert('You\'ve selected the alert tab!');
+            });
+        };
+    }
+</script>
+</body>
+</html>

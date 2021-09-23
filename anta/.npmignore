@@ -1,0 +1,13 @@
+test
+tmp
+build
+yarn.lock
+package-lock.json
+.editorconfig
+.gitignore
+.DS_Store
+npm-debug.log
+gsheets.config.js
+
+# Typescript built files
+typings/types.js
