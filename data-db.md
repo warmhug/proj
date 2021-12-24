@@ -38,6 +38,8 @@ list 和 iterate 的区别，什么状况下需要延迟获取对象、具体业
 
 
 ### Mybatis
+MyBatis是支持普通SQL查询，存储过程和高级映射的优秀持久层框架。MyBatis消除了几乎所有的JDBC代码和参数的手工设置以及对结果集的检索。MyBatis可以使用简单的XML或注解用于配置和原始映射，将接口和Java的POJO（Plain Old Java Objects，普通的Java对象）映射成数据库中的记录。
+
 
 - 一对一：mapper xml 里 resultMap 里 association 。
 - 一对多：mapper xml 里 resultMap 里 collection 。
