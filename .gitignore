@@ -1,6 +1,44 @@
+*~
+~*
+*.diff
+*.patch
+*.bak
+.DS_Store
+Thumbs.db
+.*proj
+.svn/
+*.swp
+*.pyc
+*.pyo
+node_modules
+bower_components/
+npm-debug.log
+.module-cache
+.*.sw*
+dist
+*.pem
+yarn.lock
+package-lock.json
+
+# c / c++
+*.out
+
+# https://github.com/github/gitignore/blob/master/CMake.gitignore
+CMakeCache.txt
+CMakeFiles
+cmake-build-debug
+
+# Eclipse for c++
+.metadata
+.settings
+.cproject
+.project
+Debug
+RemoteSystemsTempFiles
+
+
 # Eclipse
 .classpath
-.project
 .settings/
 
 # Intellij
@@ -9,9 +47,6 @@
 *.iml
 *.iws
 *.ipr
-
-# Mac
-.DS_Store
 
 # Maven
 log/
