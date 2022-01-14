@@ -1,0 +1,13 @@
+{
+  "name": "flaming-cloud",
+  "version": "1.0.0",
+  "description": "一个基于 AugularJS 和 RESTFul 的前端单页应用",
+  "pravite": true,
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "lodash": "*"
+  },
+  "scripts": {
+    "hint": "jshint ."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "umi-perf",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "3.x",
+    "babel-plugin-import": "^1.6.2",
+    "classnames": "^2.2.5",
+    "marked": "^0.3.17",
+    "react": "^16.0.0",
+    "react-app-rewire-less": "^2.0.8",
+    "react-app-rewired": "^1.3.4",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.16"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build && node ./scripts/mv",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "html-webpack-inline-source-plugin": "0.0.9",
+    "mv": "^2.1.1"
+  }
+}

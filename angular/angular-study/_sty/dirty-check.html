@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.16/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="Ctrl">
+        普通method函数-执行两次，{{ method() }}
+        <!-- {{ count }} -- {{ xxx() }}抛错 -->
+        <ul>
+          <li ng-repeat="i in items">
+            无错误 - {{ getInfo(i.id) }} <br>
+            <!-- 有错误 - <test infdig="getInfo(i.id)"></test> -->
+            无错误 - <test infdig="info" ng-init="info = getInfo(i.id)"></test>
+            无错误 - <test title-obj="{{getInfo(i.id)}}">transclude</test>
+            无错误 - <test stop-infdig="stopInfdig(i)">transclude</test>
+          </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = angular.module('app', []);
+        app.controller('Ctrl', ['$scope', function ($scope) {
+            $scope.method = function () {
+                console.log('跑两次')
+                return {}
+            };
+            $scope.count = 0;
+            $scope.xxx = function () {
+                console.log('如果xxx()和count同时放到view中，会一直触发digest，报错');
+                $scope.count++;
+            }
+            $scope.items = [{id:1}, {id:2}, {id:3}, {id:4}]
+            $scope.getInfo = function (i) {
+              console.log('msg', i);
+              return {name: i }
+            }
+            $scope.stopInfdig = function (i) {
+              console.log('stopInfdig', i);
+            }
+        }]);
+        app.directive('test', function () {
+          return {
+            restrict: 'E',
+            scope: {
+              infdig: '=',
+              titleObj: '@',
+              onInfdig: '&stopInfdig'
+            },
+            transclude: true,
+            template: '<div><button ng-click="onInfdig(\'dir-inner\')">button</button><span ng-transclude></span></div>',
+            link: function ($scope) {
+              // $scope.$watch('infdig.name', function (n, o){
+              //   console.log(n);
+              // })
+              console.log($scope.titleObj);
+            }
+          }
+        })
+    </script>
+</body>
+</html>

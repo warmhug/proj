@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html,body{ margin:0px; padding:0px; }
+    #container{ position:relative; margin:20px auto; width:500px; height:375px; border:1px solid #111; }
+    .small{ position:absolute; border:1px solid white; overflow:hidden;  
+            background:url('./wall6.jpg') no-repeat;  }
+    </style>
+    <script type="text/javascript">
+        function $(id) { return document.getElementById(id); }
+        function getStyle(node) {
+            return node.currentStyle || document.defaultView.getComputedStyle(node, null) || node.style;
+        }
+        var container, row, col, reset, btn, rs, cs, conW, conH, sps, rpos;
+        function init() {
+            container = $("container");
+            row = $("row");
+            col = $("col");
+            btn = $("btn");
+            reset = $("reset");
+            rpos = $("rPos");
+            rs = parseInt(row.value);
+            cs = parseInt(col.value);
+            conW = parseInt(getStyle(container).width);
+            conH = parseInt(getStyle(container).height);
+            reset.onclick = set;
+            btn.onclick = daluan;
+            initPic();
+            sps = container.getElementsByTagName("span");
+        }
+        function set() {
+            rs = parseInt(row.value);
+            cs = parseInt(col.value);
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+            initPic();
+        }
+        var curr;
+        function daluan() {
+            var rands = [];
+            var ra = parseInt(rs * cs * Math.random());
+            rands.push(ra);
+            for (var r = 0; r < rs * cs - 1; r++) {
+                ra = parseInt(rs * cs * Math.random());
+                for (var m = 0; m < rands.length; m++) {
+                    while (rands[m] == ra) {
+                        ra = parseInt(rs * cs * Math.random());
+                        m = -1;
+                    }
+                }
+                rands.push(ra);               
+            }
+            //alert(rands);
+
+            var k = 0;
+            curr = [];
+            for (var i = 0; i < rs; i++) {
+                var temp = [];
+                for (var j = 0; j < cs; j++) {
+                    for (var q = 0; q < sps.length; q++) {
+                        if (sps[q].index == rands[k]) {
+                            //k++;
+                            sps[q].style.left = j * conW / cs + "px";
+                            sps[q].style.top = i * conH / rs + "px";
+                        }
+                    }
+                    temp.push(rands[k]);
+                    k++;
+                }
+                curr.push(temp);
+            }
+            //alert(curr);
+            //alert(endrow);
+            change();
+        }
+        //var flag;
+        //var count = 0;
+        function change() {
+            for (var z = 0; z < sps.length; z++) {
+                sps[z].onclick = null;
+            }
+            //if (curr == endrow) { 
+            //    alert("win");
+            //}
+            var count = 0;
+            for (var x = 0; x < rs; x++) {
+                for (var y = 0; y < cs; y++) {
+                    if (curr[x][y] == endrow[x][y]) {
+                        //alert("win");
+                        count++;
+                        rpos.innerHTML = count;
+                        if (count == rs * cs) {
+                            alert("win");
+                        }
+                    }
+                }
+            }
+
+            for (var x = 0; x < rs; x++) {
+                for (var y = 0; y < cs; y++) {
+                    if (curr[x][y] == rs * cs - 1) {
+                        for (var z = 0; z < sps.length; z++) {
+                            if (sps[z].index == curr[x][y]) {
+                                var o = sps[z];
+                            }
+                        }
+                        if (y - 1 >= 0) {  // 左
+                            for (var z = 0; z < sps.length; z++) {
+                                if (sps[z].index == curr[x][y - 1]) {
+                                    (function (x, y, z) {
+                                        sps[z].onclick = function () { exchange(x, y, o, sps[z], "left"); }
+                                    })(x, y, z);    
+                                }
+                            }
+                        }
+                        if (y + 1 < cs) {  // 右
+                            for (var z = 0; z < sps.length; z++) {
+                                if (sps[z].index == curr[x][y + 1]) {
+                                    (function (x, y, z) {
+                                        sps[z].onclick = function () { exchange(x, y, o, sps[z], "right"); } 
+                                    })(x, y, z);  
+                                }
+                            }
+                        }
+                        if (x - 1 >= 0) {  // 上
+                            for (var z = 0; z < sps.length; z++) {
+                                if (sps[z].index == curr[x - 1][y]) {
+                                    (function (x, y, z) {
+                                        sps[z].onclick = function () { exchange(x, y, o, sps[z], "up"); } 
+                                    })(x, y, z); 
+                                }
+                            }
+                        }
+                        if (x + 1 < rs) {  // 下
+                            for (var z = 0; z < sps.length; z++) {
+                                if (sps[z].index == curr[x + 1][y]) {
+                                    (function (x, y, z) {
+                                        sps[z].onclick = function () { exchange(x, y, o, sps[z], "down"); } 
+                                    })(x, y, z); 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        function exchange(x, y, obj, objc, dir) {
+            //alert("dd");
+            switch (dir) {
+                case "left":
+                    var temp = curr[x][y - 1];
+                    curr[x][y - 1] = curr[x][y];
+                    curr[x][y] = temp;
+                    var temL = getStyle(objc).left, temT = getStyle(objc).top;
+                    objc.style.left = obj.style.left;
+                    objc.style.top = obj.style.top;
+                    obj.style.left = temL;
+                    obj.style.top = temT;
+                    //alert(getStyle(obj).width);
+                    break;
+                case "right":
+                    var temp = curr[x][y + 1];
+                    curr[x][y + 1] = curr[x][y];
+                    curr[x][y] = temp;
+                    var temL = getStyle(objc).left, temT = getStyle(objc).top;
+                    objc.style.left = obj.style.left;
+                    objc.style.top = obj.style.top;
+                    obj.style.left = temL;
+                    obj.style.top = temT;
+                    break;
+                case "up":
+                    var temp = curr[x - 1][y];
+                    curr[x - 1][y] = curr[x][y];
+                    curr[x][y] = temp;
+                    var temL = getStyle(objc).left, temT = getStyle(objc).top;
+                    objc.style.left = obj.style.left;
+                    objc.style.top = obj.style.top;
+                    obj.style.left = temL;
+                    obj.style.top = temT;
+                    break;
+                case "down":
+                    var temp = curr[x + 1][y];
+                    curr[x + 1][y] = curr[x][y];
+                    curr[x][y] = temp;
+                    var temL = getStyle(objc).left, temT = getStyle(objc).top;
+                    objc.style.left = obj.style.left;
+                    objc.style.top = obj.style.top;
+                    obj.style.left = temL;
+                    obj.style.top = temT;
+                    break;
+            }
+            change();
+        }
+        var endrow;
+        function initPic() {
+            endrow = [];
+            var k = 0;
+            for (var i = 0; i < rs; i++) {
+                var endcol = [];
+                for (var j = 0; j < cs; j++) { 
+                    var sp = document.createElement("span");
+                    sp.className = "small";
+                    sp.index = k;
+                    endcol.push(k);
+                    k++;
+
+                    sp.style.width = conW / cs + "px";
+                    sp.style.height = conH / rs + "px";
+                    sp.style.left = j * conW / cs + "px";
+                    sp.style.top = i * conH / rs + "px";
+                    if (i == rs - 1 && j == cs - 1) {
+                        sp.style.background = "#888";
+                        //sp.index = -1;
+                    } else {
+                        sp.style.backgroundPosition = -j * conW / cs + "px " + -i * conH / rs + "px"; 
+                    }
+                    container.appendChild(sp);
+                }
+                endrow.push(endcol);
+            }
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+<div style="color:red">声明：功能实现完全原创！（界面设计或有参考他人）（测试推荐浏览器IE9\FF）<br />
+    本游戏没有依赖其他外部库，一般运行在单独的页面里，所以没有进行封装<br />
+    （如果要嵌入其他页面内，最好进行封装，避免全局变量污染）</div>  
+<div id="container"></div>
+<span>行X列：</span><input id="row" type="text" value="3" />x<input id="col" type="text" value="4" />
+    <input id="reset" type="button" value="重置" /><input id="btn" type="button" value="打乱" /><br />
+    <span>正确的位置个数为：<span id="rPos" style=" font-size:20px; color:Red;"></span>个</span>
+    
+</body>
+</html>

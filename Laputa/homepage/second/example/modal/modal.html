@@ -1,0 +1,69 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>myApp</title>
+    <!-- public assets -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+    <script src="http://static.alipayobjects.com/laputa/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="http://static.alipayobjects.com/laputa/angularjs/1.2.16/angular-animate.min.js"></script>
+    <!-- local assets -->
+    <link href="lp/angular-animate.css" rel="stylesheet"  />
+    <link href="lp/bootstrap-additions.css" rel="stylesheet" />
+    <script src="lp/laputa.shim.js"></script>
+    <script src="lp/laputa.ui.js"></script>
+    <script>
+        var laputaApp = angular.module('app', ['ngSanitize', 'ngAnimate', 'laputa.ui']);
+    </script>
+</head>
+<body>
+<div ng-controller="modalCtrl">
+    <!-- 使用scope上的对象 -->
+    <button type="button" class="btn btn-lg btn-primary"
+            data-animation="am-fade-and-scale"
+            data-placement="center"
+            lp-modal="modal">
+        弹出
+    </button>
+    <!-- 使用`data-template`自定义模板 -->
+    <button type="button" class="btn btn-lg btn-danger"
+            data-animation="am-fade-and-slide-top"
+            data-template="modal.tpl.demo.html"
+            lp-modal="modal">
+        自定义modal模板
+    </button>
+    <!-- custom template -->
+    <script type="text/ng-template" id="modal.tpl.demo.html">
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" ng-show="title">
+                        <button type="button" class="close" ng-click="$hide()">&times;</button>
+                        <h4 class="modal-title" ng-bind-html="title"></h4>
+                    </div>
+                    <div class="modal-body" ng-show="content">
+                        <h4>Text in a modal</h4>
+                        <p ng-bind-html="content"></p>
+                        <pre>2 + 3 = {{ 2 + 3 }}</pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="$hide()">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+<!--  -->
+<script>
+    function modalCtrl($scope) {
+        $scope.modal = {
+            "title": "Title",
+            "content": "Hello Modal<br />This is a multiline message!"
+        };
+    }
+</script>
+</body>
+</html>

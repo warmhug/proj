@@ -1,0 +1,16 @@
+<style>
+  .overview {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+</style>
+<div class="overview">
+  <fc-breadcrumbs displayname-property="data.breadcrumb"></fc-breadcrumbs>
+  <a ui-sref="demo">Page1</a>
+  <a ui-sref="demo.child">Page2</a>
+  <div ng-bind-html="ctrl.message">
+  </div>
+
+  <p>ID: {{ ctrl.app.id }}, Name: {{ ctrl.app.name }}</p>
+</div>

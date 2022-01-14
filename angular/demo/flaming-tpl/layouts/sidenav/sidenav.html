@@ -1,0 +1,69 @@
+<div class="fc-sidebar" ng-class="{'fc-sidebar-hide': hideSidebar}">
+  <div ui-view="sidenav"></div>
+</div>
+
+<div class="fc-main" ng-class="{'fc-main-explain': hideSidebar}">
+  <nav class="fc-main-nav" clearfix>
+    <div pull-left>
+      <div class="nav-exchange">
+        <a ng-click="toggleSidebar()" ng-if="!hideSidebar"><span icon="menu-fold"></span></a>
+        <a ng-click="toggleSidebar()" ng-if="hideSidebar"><span icon="menu-unfold"></span></a>
+      </div>
+    </div>
+    <div pull-right>
+      <div class="nav-loading" >
+        <span loading="dot lg dark" ng-show="stateChangeFlag"></span>
+      </div>
+      <div class="nav-tenant">
+        <a href="javascript:;">{{tenant.displayName || tenant.name}}</a>
+      </div>
+      <div class="nav-workspace">
+        <fc-workspace source="workspace"></fc-workspace>
+      </div>
+      <ul class="nav-platform">
+        <li class="nav-platform-item nav-platform-user" fc-dropdown data-template="loginNameTpl" data-trigger="hover"  data-container="self" data-placement="bottom">
+          <a href="javascript:;" class="nav-platform-item-toggle">
+            <span icon="user"></span>
+            <span>{{userinfo.loginName}}</span>
+          </a>
+          <script type="text/ng-template" id="loginNameTpl">
+          <ul dropdown-menu>
+            <li><a ui-sref="user.profile"><span icon="user-setting"></span>个人设置</a></li>
+            <li><a ng-click="logout()"><span icon="pwoer-off"></span>退出</a></li>
+          </ul>
+          </script>
+        </li>
+        <li class="nav-platform-item nav-platform-setting" ng-class="{ active: active('settings') }" fc-dropdown
+          data-template="settingsTpl" data-trigger="hover" data-container="self" data-placement="bottom">
+          <a href="javascript:;" class="nav-platform-item-toggle">
+            <span icon="cog"></span>
+          </a>
+          <script type="text/ng-template" id="settingsTpl">
+            <ul dropdown-menu>
+              <li><a ui-sref="settings.workspace"><span icon="cog"></span>配置管理</a></li>
+              <li><a ui-sref="settings.user"><span icon="cog"></span>权限管理</a></li>
+            </ul>
+          </script>
+        </li>
+        <li class="nav-platform-item nav-platform-notification" ng-class="{ active: active('notification') }">
+          <a ui-sref="notification.list" class="nav-platform-item-toggle">
+            <span icon="bell"></span>
+            <span ng-show="notificationIns.data.list.length">{{notificationIns.data.totalSize}}</span>
+          </a>
+        </li>
+        <li class="nav-platform-item" >
+          <a ng-click="toggleLogModal()" class="nav-platform-item-toggle">
+            <span icon="clock-circle"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="fc-main-content-wrapper">
+    <div class="fc-main-breadcrumb" ui-view="breadcrumb">
+      <fc-breadcrumbs displayname-property="data.breadcrumb"></fc-breadcrumbs>
+    </div>
+    <div class="fc-main-content" ui-view="content"></div>
+  </div>
+</div>

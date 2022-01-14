@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html,body{ margin:0px; padding:0px;}
+    #main{ position:relative; margin:10px auto; border:1px solid #000; width:500px; height:500px;}
+    #container{ position:relative; float:left; border:1px solid #000; width:300px; height:500px; overflow:hidden;}
+    #smallcon{ position:relative; float:left; border:5px solid #ccc; width:120px; height:100px; margin:20px 20px;}
+    #sco,#paus{ float:left; width:100px; height:50px; margin:20px 20px;}              
+    .bg_grid{ position:absolute; border:1px solid #ccc; width:20px; height:20px; }
+    </style>
+    <script type="text/javascript">
+        function $(id) { return document.getElementById(id); }
+        Array.prototype.max = function () { return Math.max.apply({}, this); }
+        Array.prototype.min = function () { return Math.min.apply({}, this); }
+        var container, smallcon, score, pause;
+        var blocks = [], timer, w = 20;
+        var xx = [[0, w, 0, w], [0, w, 0, w], [0, w, 0, w], [0, w, 0, w],
+        [0, w, 2 * w, 3 * w], [0, 0, 0, 0], [0, w, 2 * w, 3 * w], [0, 0, 0, 0],
+        [0, w, w, 2 * w], [w, w, 0, 0], [0, w, w, 2 * w], [w, w, 0, 0],
+        [0, w, w, w, 2 * w], [2 * w, 2 * w, w, 0, 0], [0, w, w, w, 2 * w], [2 * w, 2 * w, w, 0, 0],
+        [0, w, w, 2 * w], [0, 0, w, w], [0, w, w, 2 * w], [0, 0, w, w],
+        [0, w, w, 2 * w], [0, 0, 0, w], [0, w, w, 2 * w], [0, w, w, w],
+        [0, w, 2 * w, w, w], [0, w, 2 * w, 2 * w, 2 * w], [0, w, w, w, 2 * w], [0, 0, 0, w, 2 * w],
+        [0, w, w, w, 0], [0, 0, w, 2 * w, 2 * w], [0, 0, 0, w, w], [0, 0, w, 2 * w, 2 * w],
+        [0, 0, w, 2 * w], [0, w, w, w], [0, w, 2 * w, 2 * w], [0, 0, 0, w],
+        [0, w, 2 * w, 2 * w], [0, w, w, w], [0, 0, w, 2 * w], [0, 0, 0, w]];
+        //十种类型的方块，每种四个变换（有的重复）。列入数组xx,yy里。
+        var yy = [[0, 0, w, w], [0, 0, w, w], [0, 0, w, w], [0, 0, w, w],
+        [0, 0, 0, 0], [0, w, 2 * w, 3 * w], [0, 0, 0, 0], [0, w, 2 * w, 3 * w],
+        [0, 0, w, w], [0, w, w, 2 * w], [0, 0, w, w], [0, w, w, 2 * w],
+        [0, 0, w, 2 * w, 2 * w], [0, w, w, w, 2 * w], [0, 0, w, 2 * w, 2 * w], [0, w, w, w, 2 * w],
+        [w, w, 0, 0], [0, w, w, 2 * w], [w, w, 0, 0], [0, w, w, 2 * w],
+        [w, w, 0, w], [0, w, 2 * w, w], [0, 0, w, 0], [w, 0, w, 2 * w],
+        [0, 0, 0, w, 2 * w], [w, w, 0, w, 2 * w], [2 * w, 0, w, 2 * w, 2 * w], [0, w, 2 * w, w, w],
+        [0, 0, w, 2 * w, 2 * w], [0, w, w, w, 0], [0, w, 2 * w, 0, 2 * w], [0, w, 0, 0, w], 
+        [0, w, 0, 0], [0, 0, w, 2 * w], [w, w, w, 0], [0, w, 2 * w, 2 * w],
+        [0, 0, 0, w], [2 * w, 0, w, 2 * w], [0, w, w, w], [0, w, 2 * w, 0]];
+        var pNums = 0;
+        function block(index, bigClass, smallClass, pieceNums, contain, x, y, flag, bgcolor) {
+            this.index = index;  // 每种形状的标记（共40种，有重复）
+            this.bigClass = bigClass;  // 大块大类型（共10类）
+            this.smallClass = smallClass;  // 每种大类型的变体
+            this.pieceNums = pieceNums;  // 一个大块中有多少小块（4 或 5）
+            this.contain = contain;
+            this.x = x || 0;  // 初始位置
+            this.y = y || 0;
+            this.flag = flag || false;
+            this.bgcolor = bgcolor || "#" + parseInt(Math.random() * 12).toString(16) +
+                parseInt(Math.random() * 12).toString(16) + parseInt(Math.random() * 12).toString(16);
+            for (var i = 0; i < pieceNums; i++) {
+                var ss = document.createElement("div");
+                ss.blockNum = index;
+                var s = ss.style;
+                s.cssText = "position:absolute;  width:20px; height:20px";
+                s.left = this.x + xx[index][i] + "px";
+                s.top = this.y + yy[index][i] + "px";
+                s.background = this.bgcolor;
+                this.contain.appendChild(ss);
+                if (!this.flag) {
+                    ss.index = pNums++;   
+                    blocks.push(ss);  
+                }                
+            }
+        }
+        var scores = 0; // 得分
+        function init() {
+            container = $("container");
+            smallcon = $("smallcon");
+            score = $("score");
+            score.innerHTML = scores;
+            pause = $("pause");
+            pause.onclick = pau;
+            for (var i = 0; i < 15; i++) {
+                for (var j = 0; j < 25; j++) {
+                    var span = document.createElement("span");
+                    span.className = "bg_grid";
+                    span.style.left = i * 20 + 'px';
+                    span.style.top = j * 20 + 'px';
+                    container.appendChild(span);
+                }
+            }
+            initshape();
+        }
+        function pau() {
+            if (!stop) { stop = true; pause.value = "开始"; }
+            else { stop = false; fall(); pause.value = "暂停"; }
+        }
+        var shapes = [];
+        function initshape() {
+            var k = 0, p = 4, b;
+            for (var i = 0; i < 10; i++) {
+                var m = [];
+                for (var j = 0; j < 4; j++) {
+                    p = (i == 3 || i == 6 || i == 7) ? 5 : 4;
+                    b = new block(k++, i, j, p, smallcon, 20, 20, true);
+                    m.push(b);
+                }
+                shapes.push(m);
+            }
+            setVisible();
+        }
+        var xuhao = 0, args = {};
+        function setVisible() {
+            var alldivs = smallcon.getElementsByTagName("div");
+            var o = shapes[xuhao][parseInt(Math.random() * 4)];
+            for (var i = 0, len = alldivs.length; i < len; i++) {
+                alldivs[i].style.display = "none";
+                if (o.index == alldivs[i].blockNum) alldivs[i].style.display = "";
+            }
+            xuhao = xuhao < 9 ? ++xuhao : 0;
+            args.index = o.index;
+            args.bigClass = o.bigClass;
+            args.smallClass = o.smallClass;
+            args.pieceNums = o.pieceNums;
+            args.bgcolor = o.bgcolor;
+            createBlock();
+        }
+        var noc = false;
+        function createBlock() {
+            if (up) { // 如果按了上方向键
+                up = false;
+				var num1 = [0, 1, 2, 3]; // 田字形都一样，不必再重新生成
+				for (var i = 0; i < num1.length; i++) {
+				    if (args.index == num1[i]) return;
+				}
+                if (noc) return;
+                if (blocks.length >= args.pieceNums) {
+                    for (var i = 0; i < args.pieceNums; i++) {
+                        blocks.pop();
+                    }
+                }
+                var divs = container.getElementsByTagName("div");
+                var lll = [], ttt = [], left, top;
+                for (var i = 0, len = divs.length; i < len; i++) {
+                    if (divs[i].blockNum == args.index) {
+                        lll.push(parseInt(divs[i].style.left));
+                        ttt.push(parseInt(divs[i].style.top));
+                    }
+                }
+                left = lll.min();
+                top = ttt.min();
+                for (var i = divs.length - 1; i >= 0; i--) {
+                    if (divs[i].blockNum == args.index) container.removeChild(divs[i]);
+                }
+                if (args.smallClass == 3) {
+                    args.smallClass = 0;
+                    args.index -= 3;
+                } else {
+                    args.smallClass += 1;
+                    args.index += 1;
+                } 
+                
+                new block(args.index, args.bigClass, args.smallClass, args.pieceNums, container, left, top, false, args.bgcolor);
+                fall();
+            } else {
+                new block(args.index, args.bigClass, args.smallClass, args.pieceNums, container, 100, -40, false, args.bgcolor);
+                fall();
+            }
+        }
+        function removeBlocks() {
+            var divs = container.getElementsByTagName("div");
+            if (divs.length < 15) return;
+            var toparr = [];
+            for (var r = 0, lll = divs.length; r < lll; r++) {
+                if (divs[r].blockNum == -1) toparr.push(parseInt(divs[r].style.top));
+            }
+            var min = toparr.min();
+            if (min <= 60) {
+                stop = true;
+                alert("Game over!");
+                return;
+            }
+            for (var j = (500 - min) / 20; j > 0; j--) {
+                var count = 0;
+                for (var i = 0, len = divs.length; i < len; i++) {
+                    if (divs[i].blockNum == -1) {
+                        if (parseInt(divs[i].style.top) == 500 - j * 20) count++;
+                    }
+                }
+                if (count > 14) {
+                    scores += 100;
+                    score.innerHTML = scores;
+                    if (scores < 1000) interval = 1000;
+                    else if (scores < 2000) interval = 500;
+                    else if (scores < 4000) interval = 250;
+                    else interval = 100;
+                    for (var p = divs.length - 1; p >= 0; p--) {
+                        if (divs[p].blockNum == -1) {
+                            if (parseInt(divs[p].style.top) == 500 - j * 20) {
+                                container.removeChild(divs[p]);
+                            }
+                        }
+                    }
+                    for (var q = 0; q < divs.length; q++) {
+                        if (divs[q].blockNum == -1) {
+                            var dd = parseInt(divs[q].style.top);
+                            if (dd < 500 - j * 20) {
+                                divs[q].style.top = dd + 20 + "px";
+                            }
+                        }
+                    }
+                    for (var y = yyy.length - 1; y >= 0; y--) {
+                        if (yyy[y] == 500 - j * 20) {
+                            yyy.splice(y, 1);
+                            xxx.splice(y, 1);  // 主要是删除yyy里的值，但是对应的xxx里的值，也应该删除。
+                        }
+                    }
+                    for (var z = 0; z < yyy.length; z++) {
+                        if (yyy[z] < 500 - j * 20) {
+                            yyy[z] += 20;
+                        }
+                    }
+                }
+            }
+        }
+        var stop = false, interval = 1000;
+        function fall() {
+            clearTimeout(timer);
+            if (stop) return;
+			setTop = true;
+            setPosition(0, 20);
+            timer = setTimeout(fall, interval);
+        }
+        function bounds(l, t, ll, tt, arr, num1, num11,flag) {
+            var x = flag ? l : t;
+            for (var i = 0; i < arr.length; i++) {
+                if (args.index == arr[i]) {           
+                    if (x > num1) { noc = true; } // 是否触碰到底边或右边缘
+                    else {
+                        var tm = [];
+                        for (var j = 0; j < ll.length; j++) {
+                            if (flag) {
+                                if (t + 20 == tt[j]) tm.push(ll[j]);
+                            } else {
+                                if (l == ll[j]) tm.push(tt[j]);
+                            }      
+                        }
+                        for (var j = 0; j < tm.length; j++) {
+                            if (flag) {
+                                if (tm[j] - l >= 0 && tm[j] - l <= num11) noc = true;
+                            } else {
+                                if (tm[j] - t >= 0 && tm[j] - t <= num11) noc = true;
+                            }
+                        }
+                    }      
+                }
+            }
+        }
+        function noup(l, t, ll, tt) { // 方块不允许变换 的条件。
+            noc = false;
+            var wid3 = [8, 10, 16, 18, 20, 22, 29, 31, 32, 34, 36, 38]; // 宽度3格子，高度2格子的方块
+            var wid4 = [4, 6]; // 横长条
+            var hei3 = [9, 11, 17, 19, 21, 23, 28, 30, 33, 35, 37, 39]; // 宽度2格子，高度3格子的方块
+            var hei4 = [5, 7]; // 竖长条
+            document.title = t;
+            bounds(l, t, ll, tt, hei4, 220, 60, true); //竖长条 到右边缘以及右边空间不足时，禁止变换
+            bounds(l, t, ll, tt, hei3, 240, 40, true); //hei3类型的方块 到右边缘。。。。禁止变换
+            bounds(l, t, ll, tt, wid4, 380, 100); //横长条 到底边以及下边空间不足时，禁止变换
+            bounds(l, t, ll, tt, wid3, 420, 60); //wid3类型的方块 到底边以及下边空间不足时，禁止变换         
+        }
+
+        var setTop = false, rangeL = false, rangeR = false;
+        function setPosition(l, t) {
+            var ll = [], tt = [], bb = [];
+            var lln = [], ttn = [], bbn = [];
+            var divs = container.getElementsByTagName("div");
+            for (var i = 0, len = divs.length; i < len; i++) {
+                if (divs[i].blockNum == args.index) {
+                    bb.push(divs[i]);
+                    ll.push(parseInt(divs[i].style.left));
+                    tt.push(parseInt(divs[i].style.top));
+                }
+                if (divs[i].blockNum == -1) {
+                    bbn.push(divs[i]);
+                    lln.push(parseInt(divs[i].style.left));
+                    ttn.push(parseInt(divs[i].style.top));
+                }
+            }
+            judgeLRside(ll);
+
+            if (xxx.length != 0 && yyy.length != 0) {
+                for (var p = 0; p < bb.length; p++) {
+                    for (var q = 0; q < yyy.length; q++) {
+                        if (Math.abs(tt[p] - yyy[q]) == 0) {
+                            if (ll[p] - xxx[q] == 20 && l < 0) l = 0;
+                            if (ll[p] - xxx[q] == -20 && l > 0) l = 0;
+                        }
+                    }
+                }
+            }
+            var endL = [], endT = [];
+            for (var i = 0, len = tt.length; i < len; i++) {
+                if (!rangeL && !rangeR || rangeL && l > 0 || rangeR && l < 0 || l == 0) {
+                    bb[i].style.left = ll[i] + l + "px";
+                    endL.push(ll[i] + l);
+                }
+                if (setTop) {
+                    bb[i].style.top = tt[i] + t + "px";
+                    endT.push(tt[i] + t);
+                } 
+            }
+            noup(ll.min() + l, tt.max(), lln, ttn);
+            if (endT.length == 0) endT = tt;
+            judgeBott(endL, endT, bb);
+        }
+        var xxx = [], yyy = [];
+        function judgeBott(bLeft, bTop, divs) {
+            if (bTop.max() > 460) {
+                for (var i = 0, len = divs.length; i < len; i++) {
+                    divs[i].blockNum = -1;
+                }
+                xxx = xxx.concat(bLeft);
+                yyy = yyy.concat(bTop);
+                setVisible();
+                removeBlocks();
+            } else if (xxx.length != 0 && yyy.length != 0) {
+                for (var p = 0; p < bLeft.length; p++) {
+                    for (var q = 0; q < yyy.length; q++) { 
+                        if (bLeft[p] - xxx[q] == 0 && bTop[p] - yyy[q] == -20) {
+                            for (var i = 0, len = divs.length; i < len; i++) {
+                                divs[i].blockNum = -1;
+                            }
+                            xxx = xxx.concat(bLeft);
+                            yyy = yyy.concat(bTop);
+                            setVisible();
+                            removeBlocks();
+                            return;
+                        }
+                    }
+                }
+            } else { }
+        }
+        function judgeLRside(bLeft) { // 控制方块移到左右边缘时，不越界。
+            if (bLeft.min() <= 0) rangeL = true;
+            else rangeL = false; 
+
+            if (bLeft.max() >= 280) rangeR = true;
+            else rangeR = false;
+        }
+
+        var up = false; 
+        function keydown(e) {
+            var e = e || event;
+            var currKey = e.keyCode || e.which || e.charCode;
+            switch (currKey) {
+                case 37:  // 左方向键
+					setTop = false;
+					setPosition(-20, 20);
+                    break;
+                case 38:  // 上方向键
+                    up = true;
+                    createBlock();
+                    break;
+                case 39:  // 右方向键
+					setTop = false;
+					setPosition(20, 20);
+                    break;
+                case 40:  // 下方向键
+                    setPosition(0, 20);
+                    break;
+                default:  break;
+            }
+        }
+        document.onkeydown = keydown;
+        window.onload = init;
+    </script>
+</head>
+<body>
+<div id="main">
+<div id="container"></div>
+<div id="smallcon"></div>
+<div id="sco"><span>得分：</span><span id="score"></span></div>
+<div id="paus"><input id="pause" type="button" value="暂停" /></div>
+</div>
+<div style=" text-align:center;">
+<input type="button" value="重新开始" onclick="location.reload()">
+</div>
+<div style="color:red">声明：功能实现完全原创！（测试推荐浏览器IE9\FF）<br />
+    本游戏没有依赖其他外部库，一般运行在单独的页面里，所以没有进行封装<br />
+    （如果要嵌入其他页面内，最好进行封装，避免全局变量污染）
+</div> 
+</body>
+</html>

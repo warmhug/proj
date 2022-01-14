@@ -1,0 +1,89 @@
+<!-- [PAGE][START] 应用列表-列表 -->
+<div row class="appcenter-list-container">
+  <div col="12">
+    <div class="list-wrapper">
+      <div class="card-container clearfix">
+        <div col="12" class="tool mb15">
+          <div col="4">
+            <button ng-click="vm.startCreate()" btn="round blue">
+              <i style="line-height: 1" class="iconfont icon-addmore"></i>
+              创建应用
+            </button>
+            <button fc-dropdown btn="round" data-template="dd-op">
+              运维操作
+              <i icon="chevron-down"></i>
+            </button>
+          </div>
+          <script type="text/ng-template" id="dd-op">
+            <ul dropdown-menu>
+              <li ng-repeat="d in vm.dropdown">
+                <a href="javascript:;">{{ d.text }}</a>
+              </li>
+            </ul>
+          </script>
+          <div class="search-tool-bar" col="4">
+            <div col="10">
+              <input form-control type="text" ng-model="vm.filterApp"  placeholder="search" />
+            </div>
+            <div col="2" col-pdlf="2">
+              <button ng-click="ctrl.doSearch()" btn="circle lg"><span icon="search"></span></button>
+            </div>
+          </div>
+        </div>
+        <div col="12">
+          <fc-tabs fc-selected="isComponent">
+            <fc-tab ng-disabled="loading">自定义</fc-tab>
+            <fc-tab ng-disabled="loading">组件</fc-tab>
+          </fc-tabs>
+          <div fc-table
+            reference="fctable"
+            selection
+            source="vm.appList"
+            pagination="{totalItems: vm.appList.totalItems, currentPage: vm.appList.currentPage}"
+            >
+            <table class="table" >
+              <thead>
+                <tr>
+                  <th width="10%" sort="name">英文名</th>
+                  <th width="10%" sort="chineseName">中文名</th>
+                  <th sort="appDomainName">应用分组</th>
+                  <th sort="containerCount">ECS</th>
+                  <th sort="databaseCount">RDS</th>
+                  <th>版本</th>
+                  <th>上次部署时间</th>
+                  <th>应用创建者</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="app in vm.appList track by $index">
+                  <td class="break-all"><a ui-sref="appcenter.apps.detail({appId: app.id})">{{ app.name }}</a></td>
+                  <td class="break-all">{{ app.chineseName || '无'}}</td>
+                  <td>{{ app.appDomainName || '无' }}</td>
+                  <td>{{ app.containerCount }}台</td>
+                  <td>{{ app.databaseCount }}台</td>
+                  <td>{{ app.lastDeployVersion || '无' }}</td>
+                  <td>{{ (app.lastDeployTime | date: 'yyyy-MM-dd') || '未部署' }}</td>
+                  <td>{{ app.ownerName }}</td>
+                  <td class="fc-action">
+                    <div class="fc-action-item">
+                      <a fc-dropdown dropdown-trigger data-trigger="hover" data-container="self" data-template="dd-edit">基础<span icon="chevron-down"></span></a>
+                      <script type="text/ng-template" id="dd-edit">
+                        <ul dropdown-menu role="menu">
+                          <li><a href ng-click="startEdit(app, 1)">基本信息</a></li>
+                          <li><a href ng-click="startEdit(app, 2)">高级信息</a></li>
+                          <li><a href ng-click="crud.deleteApp(app.id, $index)">删除</a></li>
+                        </ul>
+                      </script>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- //applist -->
+<!-- [PAGE][END] 应用列表-列表 -->

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云测真机调用</title>
+</head>
+<body>
+  <script>
+    // from 裴炀 睿远 http://slm.alipay.net/apptest.html?platform=android&solutionId=42&planId=896&v=17080901
+
+    // 可以直接 get 请求
+    // http://slm.alipay.net/proxy/action.json?params={"action":"result","id":272350} // 内网
+    // http://slm.dl.alipaydev.com/proxy/action.json?params={"action":"result","id":272350} // 公网代理
+    // http://slm.dl.alipaydev.com/proxy/action.json?params={"action":"Callback","id":272350} // 公网代理
+    // http://slm.dl.alipaydev.com/proxy/result.json?id=272954
+
+    // 查看运行的任务：http://slm3.alipay.net/tasks
+    // 正常 post 请求
+    fetch('http://slm.dl.alipaydev.com/proxy/action.json', {
+      method: 'post',
+      headers: {
+        // 'Accept': 'application/json',
+        // 'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+      },
+      body: 'params=' + JSON.stringify({
+        action: 'INVOKE', // 任务创建
+        planId: 896,  // 执行计划ID，写死就行
+        name: '然则的lighthouse测试', // 自定义任务名称
+        trigger: 'hualei.hl', // 触发人域帐号登录名
+        envs: { // 业务变量
+          RUNNING_CONFIG: 'https://gw.alipayobjects.com/os/rmsportal/LKACPzrTRdBUuXULpasw.js', // default_uc 或 default_google 或 <customUrl>，表示使用uc/google默认配置或自定义js配置文件的url
+          RESULT_MODE: 'json', // 结果类型，json|html
+          // H5_URL: JSON.stringify('http://example.com/') // 指定URL，JSON.stringify 会修改纯字符串、导致错误
+          H5_URL: JSON.stringify(['http://example.com/']) // 指定URL
+          // H5_URL: JSON.stringify(['http://example.com/', 'https://mobile.ant.design/']) // 指定URL
+        },
+        devices: [ // 设备申请
+          {
+            support: 'gift', // 设备用途，这个写死
+            brand: 'LGE', // 品牌
+            product: 'Nexus 5X' // 型号
+          }
+        ]
+      })
+    }).then((response) => {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' + response.status);
+        return;
+      }
+      return response.json().then(rawJson => {
+        console.log(rawJson);
+        console.log('检测过程，需要 5 分钟左右，请稍后查看结果');
+        setTimeout(() => {
+          getResult(rawJson);
+        }, 5000 * 60);
+      });
+    }).catch(function(error) {
+      console.log('request failed', error)
+    });
+
+    function getResult(data) {
+      const url = `http://slm.dl.alipaydev.com/proxy/action.json?params={"action":"result","id":${data.details.taskId}}`;
+      // 轮询 检测结果
+      let timer;
+      const loop = () => {
+        fetch(url).then(res => res.json()).then(res => {
+          if (res.result) {
+            clearTimeout(timer);
+            getLhResult(res);
+          } else {
+            console.log('no result', res);
+            timer = setTimeout(loop, 2000);
+          }
+        })
+      };
+      loop();
+    }
+
+    function getLhResult(res) {
+      if (res.details.details[0]) {
+        if (res.details.details[0].result === 'Failed') {
+          console.log('检测失败');
+          return;
+        }
+        Object.keys(res.details.details[0].attachments).forEach(ks => {
+          // ks like lighthouse-1520400573480-result.json
+          if (/lighthouse-\d+-result.json/.test(ks)) {
+            const lhUrl = `http://slm.dl.alipaydev.com/artifacts${res.details.details[0].attachments[ks]}`;
+            fetch(lhUrl).then(re => re.json()).then(lhRes => {
+              console.log('lh result', lhRes);
+            });
+          }
+        });
+      } else {
+        console.log('have result', res);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    html,body{ margin:0px; padding:0px; }
+    #container{ position:relative; margin:20px auto; width:400px; height:400px; border:1px solid #111; }
+    #block1{ position:absolute; top:20px; left:10px; width:100px; height:50px; background:blue;}
+    #block2{ position:absolute; top:300px; left:10px; width:80px; height:50px; background:gray;}
+    #block3{ position:absolute; top:50px; left:310px; width:80px; height:50px; background:green;}
+    #block4{ position:absolute; top:200px; left:290px; width:100px; height:50px; background:red;}
+    #dragObj{ position:absolute; top:150px; left:150px; width:50px; height:50px; background:#ccc; cursor:move;}
+    </style>
+    <script type="text/javascript">
+        function $(id) { return document.getElementById(id); }
+        function each(obj, fun) {
+            for (var i = 0; i < obj.length; i++) {
+                fun.call(obj[i], i);
+            }
+        }
+        function getStyle(node) {
+            return node.currentStyle || document.defaultView.getComputedStyle(node, null) || node.style;
+        }
+
+        var container, block1, block2, block3, block4, conW, conH,
+            maxL1, maxT1, maxL2, maxT2, maxL3, maxT3, maxL4, maxT4,
+            dragObj;
+        function init() {
+            container = $("container");
+            block1 = $("block1");
+            block2 = $("block2");
+            block3 = $("block3");
+            block4 = $("block4");
+            dragObj = $("dragObj");
+            conW = parseInt(getStyle(container).width);
+            conH = parseInt(getStyle(container).height);
+            maxL1 = conW - parseInt(getStyle(block1).width);
+            maxT1 = conH - parseInt(getStyle(block1).height);
+            maxL2 = conW - parseInt(getStyle(block2).width);
+            maxT2 = conH -  parseInt(getStyle(block2).height);
+            maxL3 = conW - parseInt(getStyle(block3).width);
+            maxT3 = conH -  parseInt(getStyle(block3).height);
+            maxL4 = conW - parseInt(getStyle(block4).width);
+            maxT4 = conH - parseInt(getStyle(block4).height);
+            for (var i = 0; i < 8; i++) {
+                symbols[i] = 1;
+                firsts[i] = true;
+            }
+            //blockMove();
+            drag();
+        }
+        var startT, finishT;
+        function drag() {
+            dragObj.onmousedown = function (e) {
+                var date = new Date();
+                startT = date.getTime();
+                blockMove();
+                var e = e || window.event;
+                var offsetX = e.offsetX || e.layerX, offsetY = e.offsetY || e.layerY;
+                if (dragObj.setCapture) {
+                    dragObj.setCapture();
+                } else if (window.captureEvents) {
+                    window.captureEvents(Event.MOUSEMOVE | Event.MOUSEUP);
+                }
+                document.onmousemove = function (e) {
+                    var e = e || window.event;
+                    var L = e.clientX - container.offsetLeft - offsetX,
+                        T = e.clientY - container.offsetTop - offsetY;
+
+                    if (L < 0) L = 0;
+                    if (T < 0) T = 0;
+                    if (L > 350) L = 350;
+                    if (T > 350) T = 350;
+                    dragObj.style.left = L + "px";
+                    dragObj.style.top = T + "px";
+                }
+                document.onmouseup = function (e) {
+                    if (dragObj.releaseCapture) {
+                        dragObj.releaseCapture();
+                    } else if (window.releaseEvents) {
+                        window.releaseEvents(Event.MOUSEMOVE | Event.MOUSEUP);
+                    }
+                    document.onmousemove = null;   // 注意必须要注销move和up事件。
+                    document.onmouseup = null;
+                }
+            }
+        }
+        // 碰撞检测
+        var mmm = 0;
+        var coll = false;
+        function collision() {
+            var LL = [], TT = [], WW = [], HH = [];
+            function getInfo() {
+                for (var i = 1; i < 5; i++) {
+                    LL.push(parseInt(getStyle(eval("block" + i)).left));
+                    TT.push(parseInt(getStyle(eval("block" + i)).top));
+                    WW.push(parseInt(getStyle(eval("block" + i)).width));
+                    HH.push(parseInt(getStyle(eval("block" + i)).height));
+                }
+            }
+            getInfo();
+            var dragL = parseInt(getStyle(dragObj).left), dragT = parseInt(getStyle(dragObj).top),
+            dragW = dragH = parseInt(getStyle(dragObj).width);
+            for (var i = 0; i < 4; i++) {
+                if (dragL - LL[i] < 0 && dragT - TT[i] < 0) {
+                    if (Math.abs(dragL - LL[i]) < dragW && Math.abs(dragT - TT[i]) < dragH) {
+                        //alert("zhuangle");
+                        document.title = 11;
+                        coll = true;
+                    }
+                }
+                if (dragL - LL[i] < 0 && dragT - TT[i] > 0) {
+                    if (Math.abs(dragL - LL[i]) < dragW && Math.abs(dragT - TT[i]) < HH[i]) {
+                        //alert("zhuangle");
+                        document.title = 22;
+                        coll = true;
+                    }
+                }
+                if (dragL - LL[i] > 0 && dragT - TT[i] > 0) {
+                    if (Math.abs(dragL - LL[i]) < WW[i] && Math.abs(dragT - TT[i]) < HH[i]) {
+                        //alert("zhuangle");
+                        document.title = 33;
+                        coll = true;
+                    }
+                }
+                if (dragL - LL[i] > 0 && dragT - TT[i] < 0) {
+                    if (Math.abs(dragL - LL[i]) < WW[i] && Math.abs(dragT - TT[i]) < dragH) {
+                        //alert("zhuangle");
+                        document.title = 44;
+                        coll = true;
+                    }
+                }
+            }
+        }
+
+        //　四个块的移动
+        var i = 30000, symbols = [], firsts = [], timer;
+        function blockMove() {
+            clearTimeout(timer);
+            collision();
+            if (coll) {
+                var date = new Date();
+                finishT = date.getTime();
+                alert("坚持了 "+(finishT - startT)/1000+"s");
+                return; 
+            }
+            control(block1, maxL1, 0, 0);
+            control(block1, maxT1, 1, 1, true);
+            control(block2, maxL2, 2, 2);
+            control(block2, maxT2, 3, 3, true);
+            control(block3, maxL3, 4, 4);
+            control(block3, maxT3, 5, 5, true);
+            control(block4, maxL4, 6, 6);
+            control(block4, maxT4, 7, 7, true);
+            i--;
+            if (i < 10) i = 10;
+            timer = setTimeout(blockMove, parseInt(Math.sqrt(i)));
+            //document.title = parseInt(Math.sqrt(i));
+        }
+        function control(obj, max, symbol, first, flag) { // flag为true时 表示top
+            var flag = flag;
+            var step = 20;
+            var LT;
+            if (flag) {
+                LT = parseInt(getStyle(obj).top);
+            } else {
+                LT = parseInt(getStyle(obj).left);
+            }
+            if (max != LT && (max - LT) < step) {
+                step = max - LT;
+                first = false;
+            }
+            if (LT != 0 && LT < step) {
+                if (!firsts[first]) step = LT;
+            }
+            if (LT <= 0 || LT >= max) symbols[symbol] = -symbols[symbol];
+            
+            if (flag) {
+                obj.style.top = LT + symbols[symbol] * step + "px";
+            } else { obj.style.left = LT + symbols[symbol] * step + "px"; }
+             
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+<div style="color:red">声明：功能实现完全原创！（界面设计或有参考他人）（测试推荐浏览器IE9\FF）<br />
+    本游戏没有依赖其他外部库，一般运行在单独的页面里，所以没有进行封装<br />
+    （如果要嵌入其他页面内，最好进行封装，避免全局变量污染）</div>  
+<div id="container">
+<div id="block1"></div>
+<div id="block2"></div>
+<div id="block3"></div>
+<div id="block4"></div>
+<div id="dragObj"></div>
+</div>
+<div style=" text-align:center;">
+<input type="button" value="重新开始" onclick="location.reload()">
+</div>
+</body>
+</html>

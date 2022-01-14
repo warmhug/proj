@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>school  life</title>
+    <style type="text/css">
+    body {
+	background-color: #C9CFAD;
+	margin-left: 2px;
+	margin-top: 2px;
+    }
+    div#container {
+	
+		width: 858px;
+		margin: 0 auto 0 auto;
+	
+	}
+	
+	div#content {
+	    margin-top: -10px;
+		background-image: url(images/img/contentbg.gif);
+		background-repeat: repeat-y;
+		padding-left: 75px;
+		padding-top:20px;
+		min-height: 450px;
+	
+	}
+
+	div#left {
+	
+		width: 214px;
+		float: left;
+	
+	}
+	
+	div#right {
+	
+		width: 450px;
+		margin-left: 244px;
+	
+	}
+	#top ul li
+	{
+	    display: inline;
+	    list-style-type: square;
+	    margin-left: 10px;
+	    }
+	
+	.STYLE2 {
+
+	width: 80px;
+	font-size: 12px;
+	height:15px;
+	overflow:hidden;
+	color: #000000;
+	font-weight: bold;
+	border-left-width: 10px;
+	border-left-style: solid;
+	border-left-color: #466700;
+	margin-left: 0px;
+	padding-top: 8px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+    background-image: url('images/img/pic3.jpg');
+
+}
+
+    </style>
+
+
+    <!--以下为图片变换样式和代码-->
+
+    <style type="text/css">
+.sideL {
+ WIDTH: 430px}
+#bannerSN {
+	WIDTH: 150px;  HEIGHT: 13px;float:right;
+}
+#bannerSN ul {
+	list-style-type:none;
+	margin: 0px;
+}
+#bannerSN li {
+	FLOAT: left; WIDTH: 18px; HEIGHT: 13px;margin: 0px;
+}
+img{border:0px;}
+</style>
+<script language="JavaScript" type="text/javascript">
+    var cpAD = new Array();
+    var cpADlink = new Array();
+    //用到的数组的下标
+    var adNum = 4;
+    var coll = 0;
+    cpAD[0] = "images/005.jpg";
+    cpADlink[0] = "#"
+    cpAD[1] = "images/001.jpg";
+    cpADlink[1] = "#";
+    cpAD[2] = "images/002.png";
+    cpADlink[2] = "#";
+    cpAD[3] = "images/003.jpg";
+    cpADlink[3] = "#";
+    cpAD[4] = "images/004.jpg";
+    cpADlink[4] = "#";
+    //图片的连接
+    function jump2url() {
+        jumpUrl = cpADlink[adNum];
+        jumpTarget = '_blank';
+        if (jumpUrl != '') {
+            if (jumpTarget != '')
+                window.open(jumpUrl, jumpTarget);
+            else location.href = jumpUrl;
+        }
+    }
+    //改变按钮图片和展示图片
+    function changeimg(n) {
+        adNum = n;
+        switch (adNum) {
+            case 0:
+                {
+                    document.images.img1.src = "images/serial_01a.gif";
+                    document.images.img2.src = "images/serial_02.gif";
+                    document.images.img3.src = "images/serial_03.gif";
+                    document.images.img4.src = "images/serial_04.gif";
+                    document.images.img5.src = "images/serial_05.gif";
+                    break;
+                }
+            case 1:
+                {
+                    document.images.img1.src = "images/serial_01.gif";
+                    document.images.img2.src = "images/serial_02a.gif";
+                    document.images.img3.src = "images/serial_03.gif";
+                    document.images.img4.src = "images/serial_04.gif";
+                    document.images.img5.src = "images/serial_05.gif";
+                    break;
+                }
+            case 2:
+                {
+                    document.images.img1.src = "images/serial_01.gif";
+                    document.images.img2.src = "images/serial_02.gif";
+                    document.images.img3.src = "images/serial_03a.gif";
+                    document.images.img4.src = "images/serial_04.gif";
+                    document.images.img5.src = "images/serial_05.gif";
+                    break;
+                }
+            case 3:
+                {
+                    document.images.img1.src = "images/serial_01.gif";
+                    document.images.img2.src = "images/serial_02.gif";
+                    document.images.img3.src = "images/serial_03.gif";
+                    document.images.img4.src = "images/serial_04a.gif";
+                    document.images.img5.src = "images/serial_05.gif";
+                    break;
+                }
+            case 4:
+                {
+                    document.images.img1.src = "images/serial_01.gif";
+                    document.images.img2.src = "images/serial_02.gif";
+                    document.images.img3.src = "images/serial_03.gif";
+                    document.images.img4.src = "images/serial_04.gif";
+                    document.images.img5.src = "images/serial_05a.gif";
+                    break;
+                }
+        }
+        window.clearInterval(theTimer);
+        adNum = adNum - 1;
+        nextAd();
+    }
+    //每隔3000ms依次改变按钮图片和显示下一张展示图片
+    function nextAd() {
+        coll++;
+        if (coll > 1) {
+            switch (adNum + 1) {
+                case 5:
+                    {
+                        document.images.img1.src = "images/serial_01a.gif";
+                        document.images.img2.src = "images/serial_02.gif";
+                        document.images.img3.src = "images/serial_03.gif";
+                        document.images.img4.src = "images/serial_04.gif";
+                        document.images.img5.src = "images/serial_05.gif";
+                        break;
+                    }
+                case 1:
+                    {
+                        document.images.img1.src = "images/serial_01.gif";
+                        document.images.img2.src = "images/serial_02a.gif";
+                        document.images.img3.src = "images/serial_03.gif";
+                        document.images.img4.src = "images/serial_04.gif";
+                        document.images.img5.src = "images/serial_05.gif";
+                        break;
+                    }
+                case 2:
+                    {
+                        document.images.img1.src = "images/serial_01.gif";
+                        document.images.img2.src = "images/serial_02.gif";
+                        document.images.img3.src = "images/serial_03a.gif";
+                        document.images.img4.src = "images/serial_04.gif";
+                        document.images.img5.src = "images/serial_05.gif";
+                        break;
+                    }
+                case 3:
+                    {
+                        document.images.img1.src = "images/serial_01.gif";
+                        document.images.img2.src = "images/serial_02.gif";
+                        document.images.img3.src = "images/serial_03.gif";
+                        document.images.img4.src = "images/serial_04a.gif";
+                        document.images.img5.src = "images/serial_05.gif";
+                        break;
+                    }
+                case 4:
+                    {
+                        document.images.img1.src = "images/serial_01.gif";
+                        document.images.img2.src = "images/serial_02.gif";
+                        document.images.img3.src = "images/serial_03.gif";
+                        document.images.img4.src = "images/serial_04.gif";
+                        document.images.img5.src = "images/serial_05a.gif";
+                        break;
+                    }
+            }
+        }
+        if (adNum < cpAD.length - 1) adNum++;
+        else adNum = 0;
+        setTransition();
+        document.images.cpADrush.src = cpAD[adNum];
+        playTransition();
+        theTimer = setTimeout("nextAd()", 3000);
+    }
+    //赋予滤镜
+    function setTransition() {
+        if (document.all) {
+            cpADrush.filters.revealTrans.Transition = 23;
+            cpADrush.filters.revealTrans.apply();
+        }
+    }
+    //播放滤镜效果
+    function playTransition() {
+        if (document.all)
+            cpADrush.filters.revealTrans.play()
+    }
+</script>
+
+
+</head>
+<body>
+<div id="container">
+<div><img src="images/img/banner.jpg" alt=""></div>
+
+
+<div id="content">
+
+
+<div id="left">
+
+<div class="STYLE2" >我的形象</div>
+
+<div  style="width:195px; border:3px solid #E5E5E5; height:150px; padding:5px">
+<img src="images/img/me.jpg" width="200" height="150" /></div><br/>
+
+<div class="STYLE2">个性签名</div>
+
+			  <textarea  rows="4" >如果想了解我，请来我的个人主页看看，欢迎光临</textarea>
+
+			  </div>
+
+
+
+<div id="right">
+<div id="top">
+<ul>
+<li><a href="default.htm">首页</a></li>
+<li><a href="myself.htm" >自我介绍</a></li>
+<li><a href="photos.htm" >生活照</a></li>
+<li><a href="school-life.htm" >高中与大学生活</a></li>
+</ul>
+</div>		
+<!--以下为图片变换-->
+<div class="sideL">
+  <div id="banner"> <a href="javascript:jump2url()"><img src="images/005.JPG"  name="cpADrush" width="430" height="313" style="filter:revealTrans(duration=2,transition=23)" /></a></div>
+  <script type="text/javascript" language="javascript">      nextAd();</script>
+  <div id="bannerSN">
+    <ul>
+      <li><a href="#" onMouseOver="changeimg(0)"><img name="img1" id="img1" src="images/serial_01.gif" onClick="changeimg(0)" alt="1" /></a></li>
+      <li><a href="#" onMouseOver="changeimg(1)"><img name="img2" id="img2" src="images/serial_02.gif" onClick="changeimg(1)" alt="2" /></a></li>
+      <li><a href="#" onMouseOver="changeimg(2)"><img name="img3" id="img3" src="images/serial_03.gif" onClick="changeimg(2)" alt="3" /></a></li>
+      <li><a href="#" onMouseOver="changeimg(3)"><img name="img4" id="img4" src="images/serial_04.gif" onClick="changeimg(3)" alt="4" /></a></li>
+      <li><a href="#" onMouseOver="changeimg(4)"><img name="img5" id="img5" src="images/serial_05.gif" onClick="changeimg(4)" alt="5" /></a></li>
+    </ul>
+  </div>
+</div>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+<title>JavaScript 仿LightBox内容显示效果</title>
+
+<style type="text/css">
+.lightbox{width:300px;background:#FFFFFF;border:1px solid #ccc;line-height:25px; top:20%; left:20%;}
+.lightbox dt{background:#f4f4f4; padding:5px;}
+</style>
+
+<script type="text/javascript">
+
+var isIE = (document.all) ? true : false;
+
+var $ = function (id) {
+	return "string" == typeof id ? document.getElementById(id) : id;
+};
+
+var Bind = function(object, fun) {
+	return function() {
+		return fun.apply(object, arguments);
+	}
+}
+
+var addEventHandler = function (obj, sEventType, handler) {
+    if (obj.addEventListener) {
+        obj.addEventListener(sEventType, handler, false);
+    } else if (obj.attachEvent) {
+        obj.attachEvent("on" + sEventType, handler);
+    } else {
+        obj["on" + sEventType] = handler;
+    }
+}
+
+var Each = function(list, fun){
+	for (var i = 0, len = list.length; i < len; i++) { fun(list[i], i); }
+};
+
+var Contains = function(a, b){
+	return a.contains ? a != b && a.contains(b) : !!(a.compareDocumentPosition(b) & 16);
+}
+
+var extend = function (destination, source) {
+    for (var property in source) {
+        destination[property] = source[property];
+    }
+    return destination;
+}
+
+var OverLay = function () { return this.initialize.apply(this, arguments); }
+OverLay.prototype = {
+    initialize: function (options) {
+        var div = document.createElement("div");
+        with (div.style) {
+            position = "absolute";
+            top = "0px";
+            left = "0px";
+            width = document.documentElement.scrollWidth + "px";
+            height = document.documentElement.scrollHeight + "px";
+            background = "#ccc";
+            filter = "alpha(opacity=50)";
+            opacity = 0.5;
+            zIndex = 99;
+        }
+        document.body.appendChild(div);
+        return div;
+    }
+
+};
+
+
+var LightBox = function () { this.initialize.apply(this, arguments); }
+LightBox.prototype = {
+    initialize: function (box, options) {
+        this.Box = $(box); //显示层	
+        this.OverLay = new OverLay(); //覆盖层
+        this.OverLay.style.display = "none";
+
+        var opts = this.setOptions(options);
+        this.openBtn = $(opts.openBtn);
+        this.closeBtn = $(opts.closeBtn);
+        this.isCenter = opts.center;
+        this.isFixed = opts.fixed;
+        this.isOverlay = opts.overlay;
+
+        this.Box.style.display = "none";
+
+        addEventHandler(this.openBtn, "click", Bind(this, this.show));
+        addEventHandler(this.closeBtn, "click", Bind(this, this.close));
+
+    },
+    // 设置默认值
+    setOptions: function (options) {
+        this.options = {
+            openBtn: "", //控制打开弹出层的元素id
+            closeBtn: "", //控制关闭弹出层的元素id
+            center: false,
+            fixed: false,
+            overlay: true
+        }
+        return extend(this.options, options || {});  // 思考加不加return的结果有何不一样？
+    },
+    show: function () {
+        this.Box.style.display = "";
+        this.isFixed ? this.Box.style.position = "fixed" : this.Box.style.position = "absolute";
+        this.Box.style.zIndex = 100;
+        this.isOverlay ? this.OverLay.style.display = "" : this.OverLay.style.display = "none";
+
+        if (this.isCenter) {
+            this.Box.style.top = (document.documentElement.clientHeight - this.Box.offsetHeight) / 2 + "px";
+            this.Box.style.left = (document.documentElement.clientWidth - this.Box.offsetWidth) / 2 + "px";
+        } else {
+            this.Box.style.top = "20%";
+            this.Box.style.left = "20%";
+        }
+    },
+    close: function () {
+        this.Box.style.display = "none";
+        this.OverLay.style.display = "none";
+    }
+
+};
+
+
+</script>
+
+</head>
+
+<body>
+
+<br /><br /><br /><br />
+
+<dl id="idBox" class="lightbox">
+  <dt id="idBoxHead"><b>LightBox</b> </dt>
+  <dd>
+    内容显示
+    <br /><br />
+    <input name="" type="button" value=" 关闭 " id="idBoxCancel" />
+    <br /><br />
+  </dd>
+</dl>
+
+
+<div style="margin:0 auto; width:900px; height:1000px; border:1px solid #000000;">
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<input name="" type="button" value=" 打开 " id="idBoxOpen" /><br />
+<input id="juz" type="button" value="居中" />
+<input id="fix" type="button" value="固定" />
+<input id="olay" type="button" value="不显示覆盖层" />
+</div>
+
+
+<script type="text/javascript">
+
+    var box = new LightBox("idBox", { openBtn: "idBoxOpen", closeBtn: "idBoxCancel" });
+    $("juz").onclick = function () {
+        if (box.isCenter) {
+            box.isCenter = false;
+            this.value = "居中";
+        } else {
+            box.isCenter = true;
+            this.value = "不居中";
+        }
+    };
+    $("fix").onclick = function () {
+        if (box.isFixed) {
+            box.isFixed = false;
+            this.value = "固定";
+        } else {
+            box.isFixed = true;
+            this.value = "不固定";
+        }
+    };
+    $("olay").onclick = function () {
+        if (box.isOverlay) {
+            box.isOverlay = false;
+            this.value = "显示覆盖层";
+        } else {
+            box.isOverlay = true;
+            this.value = "不显示覆盖层";
+        }
+    }
+</script>
+
+</body>
+</html>
