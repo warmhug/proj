@@ -8,6 +8,7 @@ Thumbs.db
 .*proj
 .svn/
 *.swp
+*.swo
 *.pyc
 *.pyo
 node_modules
@@ -19,6 +20,11 @@ dist
 *.pem
 yarn.lock
 package-lock.json
+build
+assembly/
+logs
+tmp
+
 
 # c / c++
 *.out
