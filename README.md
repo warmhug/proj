@@ -10,6 +10,6 @@
 ## misc
 
 - 2015 node
-- 2015-10 ~ 2016 java / linux
+- 2015-10 ~ 2016 java / web-api / linux
 - 2016 android / php-ksweb
 - 2017 python / cpp / AI
