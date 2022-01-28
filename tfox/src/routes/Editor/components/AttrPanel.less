@@ -1,0 +1,179 @@
+
+.color-box {
+  width: 175px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.34);
+  background-color: #fff;
+
+  > div {
+    padding: 10px 10px 0;
+  }
+
+  &-label {
+    margin: 5px 0;
+  }
+
+  &-item {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 1px;
+    border: 1px #ccc solid;
+
+    &.sel {
+      border-width: 2px;
+      box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.44);
+    }
+  }
+
+  .more-opt {
+    border-top: 1px solid #ccc;
+    padding: 10px 0 10px 3px;
+  }
+}
+
+.attr {
+  &-panel {
+    background-color: #f6f6f8;
+    width: 225px;
+    flex: none;
+    height: 100%;
+
+    .ant-tabs {
+      .ant-tabs-tab {
+        border: solid 1px #DEDEDE;
+        border-radius: 0px 0px 0 0;
+        border-width: 1px 1px 1px 1px;
+        padding: 5px 4px;
+        border-left-width: 0;
+        margin: 0;
+      }
+      .ant-tabs-tab:first-child {
+        border-left-width: 1px;
+      }
+      .ant-tabs-tab .ant-tabs-tab-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+      }
+      .ant-tabs-tab.ant-tabs-tab-active {
+        color: #4184f7;
+        background-color: #fff;
+      }
+      .ant-tabs-nav{
+        margin: 0;
+      }
+    }
+  }
+
+  &-container {
+    box-shadow: 0 2px 6px 0 rgba(173, 173, 173, 0.5);
+    overflow: auto;
+    height: 100%;
+
+    .mult-tips {
+      padding: 10px;
+      font-size: 12px;
+      color: gray;
+    }
+  }
+
+  &-section {
+    padding: 8px 0 8px 16px;
+    border-top: 1px solid #ddd;
+    &.align-functions {
+      .attr-body {
+        display: flex;
+        .align {
+          border: 1px solid #aaaaaa;
+          padding: 2px;
+          width: 28px;
+          height: 28px;
+          background-position-x: 4px;
+        }
+      }
+    }
+    .icon-right {
+      margin-left: 10px;
+      color: #9b9ea0;
+    }
+  }
+
+  &-top {
+    margin: 10px 0;
+    // color: #373d41;
+
+    .info {
+      margin-left: 5px;
+    }
+  }
+
+  &-img-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+  }
+
+  &-item {
+    padding: 4px;
+    display: flex;
+
+    input {
+      height: 20px;
+    }
+
+    .color {
+      display: inline-block;
+      margin-left: 6px;
+      width: 23px;
+      height: 22px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .dashed {
+      flex: 1;
+      margin-right: 5px;
+    }
+
+    .fontSize,
+    .strokeWidth {
+      width: 66px;
+      border: 1px solid #000;
+      border-radius: 2px;
+    }
+
+    .fontFamily {
+      flex: 1;
+    }
+
+    .item-inline {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        flex: 2;
+      }
+    }
+
+    .icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      background-size: contain;
+      background-color: transparent;
+      background-repeat: no-repeat;
+
+      &.checked {
+        border: 1px solid #aaa;
+      }
+
+      &.bold {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABj0lEQVRYR+3Wv0scQRjG8c+1VnbBH5UQBAUbS1MYkKRKxEKJhWAjpomdYpekDKRK0hiEgI2glZpKi9hZioJW6VIEsQrkDwiT7Mlw5HZ2ubvdxrdb5p33+e77zjvvNNRsjZr13QOkMjCJZwXK9AvnuMJtAf87lxTAN0yXCYjPWC26pxcATe1U7L9+Kac4A29z/qoPE3ga+azjfSoTZQAe4zQR8AV2I59B/Mzb022AoHWA55loOMBfqwZ4g9eZaChb+G5rvcjAFyxnigvYrxJgLLsLmprjuK4CoB+PcBSJHbd0xX85ypQg1VHx+g3mcJba1CuAoLuJd3UCBO1KD+EDTOEDhqI/f4jv7TJRpgRFbsKmzg8MZx9r+Fg1wEZU/22sVA0QRngYZMHC/AjZ67gNy5RgCTuZYu77oFdnYA/zGcArfKoyA/EwCrpPcNINgLwHSYg/gBHMRGJbeNmtWZC61FrXDzGb2lTmDKRixeuh7UL7JS0FsIjRZJR/Dr9xiQuEYVTIUgCFgnTidA9Qewb+ABgEUCHbL0e3AAAAAElFTkSuQmCC');
+      }
+
+      &.italic {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABSklEQVRYR+3WSUoEMRTG8V9fQN14AMELiONSN44XEIcTKOIJnG4g6gmcTuC40aWioHvxBiJ4AwlEaHpTXa+6qzd+UCSQVL5/XpKXNPRYjR77+weIRmC6zaV7LOoXBXhAEUQyn+kmQOvYCah1xl0DaDbvwzv6MYWPolk3t0eXoHmMWdzhFgtlzFPfTgDsYg/7uSzF0AmAG8xjCdel3DsQgSG84QsT+K4bYBmXuMBqWfNO7IFDbGEbqV5aVffAcw59On6pXlpVAMbwkr+0/iFVAdjAMU6wGXKveApOsYZ1nNUNMJBDP4hRfNYNMJdT7z1SPazoHtjJqfcAKRWHFQW4wmK+fNIlFFYEYDif+R+MIJVhRQBWcJ5TcKpXUgTgL/2mFHxUyT2YB54wiXG81gGQ3nrpEVqkSDTbehH1HKBo5pXaQ2Gr5Njy8z/ALwRwLyGpJDWOAAAAAElFTkSuQmCC');
+      }
+    }
+  }
+}

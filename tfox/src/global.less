@@ -1,0 +1,32 @@
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body,
+#app {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    flex: 1;
+  }
+}
+
+.dtmp-layout {
+  height: 100%;
+
+  .not-found {
+    padding: 20px;
+
+    .text {
+      font-size: 20px;
+    }
+  }
+}

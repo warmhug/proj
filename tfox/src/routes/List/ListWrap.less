@@ -1,0 +1,54 @@
+.glist {
+  background: #f4f7fd;
+
+  &-header {
+    background-color: #fff;
+    padding: 20px 135px;
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-size: 18px;
+      font-weight: 400;
+
+      a {
+        margin-right: 10px;
+        opacity: 0.6;
+      }
+
+      .sel {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-main {
+    margin: 0 135px;
+
+    .srh {
+      margin: 20px 0;
+      width: 400px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .gcards {
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 10px;
+
+      .gcard {
+        width: calc((100% - 40px) / 3);
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+  
+      .gcard:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

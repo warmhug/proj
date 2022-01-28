@@ -1,0 +1,144 @@
+.sidebar {
+  width: 230px;
+  // overflow-y: auto;
+  background-color: #f5f7ff;
+
+  & > .ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0 2px;
+  }
+
+  &-tooltip {
+    color: #333333;
+    font-size: 12px;
+
+    &-icon {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &-comps,
+  &-shapes,
+  &-scratchpad {
+    padding: 10px;
+    background-color: #e7ebfc;
+  }
+
+  &-comps {
+    &-tit {
+      font-size: 10px;
+      color: #373d41;
+    }
+  
+    &-item {
+      cursor: pointer;
+      margin: 5px 0 15px 0;
+      border: 2px solid transparent;
+  
+      &:hover {
+        border: 2px solid #4184f7;
+      }
+  
+      img {
+        width: 100%;
+      }
+  
+      &.img-checked {
+        border: 2px solid #4184f7;
+      }
+    }
+  }
+
+  &-add {
+    margin-bottom: 5px;
+    line-height: 28px;
+    cursor: pointer;
+
+    &.active {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &-shapes {
+    .arrow {
+      display: flex;
+      margin-top: 3px;
+
+      .des {
+        margin-right: 3px;
+      }
+    }
+
+    img {
+      width: 40px;
+      padding: 4px;
+
+      &[title="ellipse"],
+      &[title="container1"] {
+        width: 32px;
+      }
+    }
+
+    .mxToolbarModeSelected {
+      margin: 0;
+      margin-right: 2px;
+      margin-bottom: 2px;
+      border-width: 2px;
+      border-style: inset;
+    }
+  }
+
+  &-scratchpad {
+    &-graph {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    &-item {
+      position: relative;
+      flex: 0 0 42px;
+      height: 50px;
+      padding: 4px;
+
+      .ss-svg {
+        height: 50px;
+      }
+
+      .ss-del,
+      .ss-plus {
+        display: none;
+        position: absolute;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .ss-del {
+        top: -2px;
+        right: 5px;
+      }
+
+      .ss-plus {
+        left: 40%;
+        top: 30%;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.45);
+
+        .ss-svg {
+          opacity: 0.3;
+        }
+
+        .ss-del,
+        .ss-plus {
+          display: block;
+        }
+      }
+    }
+  }
+}

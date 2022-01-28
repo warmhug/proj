@@ -1,0 +1,11 @@
+dist
+node_modules/
+
+.umi
+.umi-production
+.npmrc
+\.*
+/mock
+
+backup/
+src/materials/

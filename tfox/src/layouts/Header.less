@@ -1,0 +1,38 @@
+.header_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 24px;
+  flex: none !important;
+  background-color: black;
+
+  .header_left {
+    display: flex;
+    align-items: center;
+
+    .logo_icon {
+      img {
+        width: 32px;
+      }
+    }
+  }
+
+  .header_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-menu.ant-menu-horizontal,
+  .ant-menu-horizontal > .ant-menu-submenu,
+  .ant-menu-horizontal > .ant-menu-submenu:hover {
+    background: transparent;
+    border: none;
+    color: #fff;
+    .ant-menu-item,
+    .ant-menu-item:hover {
+      border-bottom: none;
+    }
+  }
+}
