@@ -26,7 +26,7 @@ example 文件参考
 
 ## 删除或未用到的方法 (移到 backup 目录)
 
-- 框选功能(@轻浅) http://gitlab.alibaba-inc.com/gts-dtmp/dtmp-fe/commit/15853fdbb3a187c532401a013f1c61bdf5d1d96a
+- 框选功能(@qingqian)
 - 导出文件、高亮节点边框/选区
 
 ## 设计器其他常用方法

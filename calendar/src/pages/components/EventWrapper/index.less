@@ -1,0 +1,53 @@
+.evtWrap {
+  :global {
+    .rbc-event {
+      padding: 0 4px;
+      color: rgba(0, 0, 0, 0.75);
+      border-radius: 2px;
+    }
+  }
+  &:global(.meeting .rbc-event) {
+    background-color: #b9e7a4;
+  }
+  &:global(.todo.done .rbc-event) {
+    color: #c4c4c4;
+    background-color: #edf6ff;
+  }
+  &:global(.todo .rbc-event) {
+    color: #171717;
+    background-color: #a8d5ff;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:global(.collaboration.done .rbc-event),
+  &:global(.collaboration.cancel .rbc-event) {
+    color: #c4c4c4;
+    background-color: #fff7ed;
+  }
+  &:global(.collaboration .rbc-event) {
+    color: #171717;
+    background-color: #ffdaae;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.evPopover {
+  width: 280px;
+  h3 {
+    color: #333;
+    font-size: 14px;
+  }
+}
+// 组件自带弹窗宽度限制
+:global {
+  .rbc-overlay {
+    width: 280px;
+    .rbc-event-content {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

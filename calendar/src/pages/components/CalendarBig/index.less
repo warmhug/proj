@@ -1,0 +1,135 @@
+@margin: 20px;
+
+.root {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  :global {
+    // .rbc-calendar {
+    //   min-height: 580px;
+    // }
+    .rbc-off-range-bg {
+      background-color: #fff;
+    }
+    .rbc-month-view,
+    .rbc-time-view {
+      border-color: #eaeaea;
+    }
+    .rbc-month-row + .rbc-month-row,
+    .rbc-day-bg + .rbc-day-bg {
+      border-color: #ededed;
+    }
+    .rbc-today {
+      background-color: #fff;
+    }
+    .rbc-toolbar {
+      padding: 0 (70px + 12px + @margin) 0 @margin;
+      button {
+        border: none;
+      }
+      .rbc-btn-group {
+        button {
+          margin-right: 12px;
+          padding: 7px 8px;
+          border-radius: 4px;
+          &:hover {
+            background-color: #f8f8f8;
+          }
+        }
+        > button:first-child:not(:last-child) {
+          padding: 6px 16px;
+          background-color: #fafafa;
+          border: 1px solid #dedede;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+      .rbc-toolbar-label {
+        padding: 0;
+        text-align: left;
+      }
+    }
+    .rbc-header {
+      height: 36px;
+      font-weight: normal;
+      line-height: 36px;
+    }
+    .rbc-header + .rbc-header {
+      border-left: none;
+    }
+    .rbc-event {
+      height: 15px;
+      .rbc-event-content {
+        font-size: 12px;
+        transform: scale(0.9);
+        width: 111%;
+        transform-origin: top left;
+      }
+      &.draft-event {
+        color: #171717;
+        background-color: #efefef;
+      }
+    }
+    .rbc-date-cell {
+      a {
+        margin: 4px 0;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-weight: normal;
+        text-align: center;
+      }
+    }
+    .rbc-now {
+      a {
+        color: #fff;
+        background-color: #0586fe;
+        border-radius: 50%;
+      }
+    }
+    .rbc-show-more {
+      color: #ccc;
+      font-weight: normal;
+    }
+    .rbc-addons-dnd .rbc-addons-dnd-dragged-event {
+      opacity: 0.2;
+    }
+    // 扩大左右拖动区域
+    .rbc-addons-dnd .rbc-addons-dnd-resize-ew-anchor {
+      top: 2px;
+      .rbc-addons-dnd-resize-ew-icon {
+        width: 12px;
+      }
+      &:last-child {
+        .rbc-addons-dnd-resize-ew-icon {
+          border-right: 3px double;
+          border-left: none;
+        }
+      }
+    }
+  }
+  .newBtnTrigger {
+    position: absolute;
+    top: 0;
+    right: @margin;
+  }
+  .newBtnWrap {
+    width: 124px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+    .newBtn:first-child {
+      margin-bottom: 4px;
+    }
+    :global {
+      .ant-btn {
+        padding: 5px 16px;
+      }
+    }
+  }
+  .titleTxt {
+    font-size: 13px;
+  }
+}
