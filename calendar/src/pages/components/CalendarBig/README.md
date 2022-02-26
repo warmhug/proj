@@ -35,3 +35,9 @@ Object.defineProperties(start, {
 
 另附社区其他解法 https://github.com/jquense/react-big-calendar/issues/838#issuecomment-417783468
 
+
+### 其他问题
+
+Q: 在”周视图“里由于自定义的外围 event wrap 的元素位置跟 event 事项条本身元素位置、不在一个地方，此时 antd 的 Popover 组件弹窗就出现在错误位置的 wrap 元素边上、跟预期不符。
+A: 使用自定义的 CalendarPopover 弹窗组件、搭配日历组件提供的 `selected` 和 `onSelectEvent` 方法实现。
+  2022-02-17 

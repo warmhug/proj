@@ -1,16 +1,14 @@
 import * as React from 'react';
-import type { IProps } from './defines';
-/*
-import * as CalendarInterface from '../../defines';
-import { IMap } from '../../defines/base';
-import moment, { DurationInputArg2 } from 'moment';
-*/
+import {
+  IProps,
+} from './defines';
 import { UsePopoverPos } from '../PopoverPos';
 
 interface IHooks {
   props: IProps;
   popoverRef: React.RefObject<HTMLDivElement>;
 }
+
 
 interface IMethod {
   handleMaskClick: () => void;
@@ -41,14 +39,15 @@ const ViewModelHooks = (params: IHooks): IViewModelReturnValue => {
     if (props.visible) {
       calPopoverPosition();
     }
-  }, [calPopoverPosition, props.children, props.visible]);
+  }, [calPopoverPosition, popoverRef, props.children, props.visible]);
 
   const handleMaskClick = () => {
     props.onVisibleChange(false);
   };
 
   return {
-    viewData: {},
+    viewData: {
+    },
     viewMethod: {
       handleMaskClick,
     },

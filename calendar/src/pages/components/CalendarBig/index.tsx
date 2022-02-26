@@ -3,11 +3,13 @@ import { Button, Dropdown } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { useModel } from 'umi';
 import moment from 'moment';
+import cls from 'classnames';
 import { Calendar, momentLocalizer, Views } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
-import EventWrapper from '../EventWrapper';
+import EventPopover from '../EventPopover';
+import CalendarPopover from './CalendarPopover';
 import CalendarPopoverFixed from './CalendarPopoverFixed';
 import momentLocalizer1 from './moment-localizer';
 import { bizTypes } from '@/utils';
@@ -26,6 +28,7 @@ export default () => {
   const { setCollaborationTime } = useModel('left');
   const containerRef = React.useRef<HTMLDivElement>(null);
   const viewRef = React.useRef<string>(Views.MONTH);
+  const [selectedEvent, setSelectedEvent] = useState<null | IEventItem>(null);
 
   const disableDragOrResize = (evt: any) => {
     if (evt?.bizType === bizTypes[1]) {
@@ -37,6 +40,12 @@ export default () => {
   const getCreateCardMiniNode = React.useCallback((): HTMLDivElement | null => {
     let selectEventTarget: HTMLDivElement | null = null;
     selectEventTarget = document.querySelector(`.${DRAFT_EVENT}`) as HTMLDivElement;
+    return selectEventTarget;
+  }, []);
+
+  const getEventCardNode = React.useCallback((): HTMLDivElement | null => {
+    let selectEventTarget: HTMLDivElement | null = null;
+    selectEventTarget = document.querySelector('.rbc-selected') as HTMLDivElement;
     return selectEventTarget;
   }, []);
 
@@ -62,7 +71,7 @@ export default () => {
     </div>
   );
 
-  console.log('events', events);
+  // console.log('events', events);
   return (
     <div className={styles.root} ref={containerRef}>
       <Dropdown overlay={newBtns} getPopupContainer={(ele) => ele.parentElement}>
@@ -71,7 +80,7 @@ export default () => {
         </Button>
       </Dropdown>
       <DragAndDropCalendar
-        views={[Views.MONTH]}
+        views={[Views.MONTH, Views.WEEK]}
         localizer={localizer}
         events={draftEvent ? [...events, draftEvent] : events}
         defaultDate={new Date('2022-01-03T09:58:55.000+0000')}
@@ -89,7 +98,14 @@ export default () => {
           showMore: (total: string) => `还有${total}项`,
         }}
         components={{
-          eventWrapper: (evProps: any) => <EventWrapper evProps={evProps} />,
+          eventWrapper: (props: any) => {
+            const { event, children } = props;
+            const { bizType, bizData } = event;
+            const { statusType } = bizData || {};
+            return <div className={cls(styles.eventWrap, bizType, statusType)}>{children}</div>
+          },
+          // event: (props: any) => <MyEvent {...props} />,
+          timeGutterHeader: () => <div>全天</div>,
           month: {
             // event: (headProps) => {
             //   console.log('headProps', headProps);
@@ -103,8 +119,12 @@ export default () => {
         }}
         popup
         selectable
+        selected={selectedEvent}
         onSelectEvent={(evt: IEventItem, ev: any) => {
-          // console.log('select', evt, ev);
+          ev.preventDefault();
+          ev.stopPropagation();
+          setSelectedEvent(evt);
+          console.log('select', evt, ev);
         }}
         onSelectSlot={createDraftEvent}
         resizable
@@ -152,6 +172,18 @@ export default () => {
           }
         }}
       />
+      <CalendarPopover
+        getSelectedNode={getEventCardNode}
+        visible={!!selectedEvent}
+        onVisibleChange={(visible: boolean) => {
+          if (!visible) {
+            setSelectedEvent(null);
+          }
+        }}
+        parentRef={containerRef}
+      >
+        <EventPopover event={selectedEvent} />
+      </CalendarPopover>
       <CalendarPopoverFixed
         getSelectedNode={getCreateCardMiniNode}
         visible={!!draftEvent}

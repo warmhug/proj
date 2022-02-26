@@ -5,9 +5,6 @@
   height: 100%;
   min-height: 400px;
   :global {
-    // .rbc-calendar {
-    //   min-height: 580px;
-    // }
     .rbc-off-range-bg {
       background-color: #fff;
     }
@@ -19,15 +16,29 @@
     .rbc-day-bg + .rbc-day-bg {
       border-color: #ededed;
     }
-    .rbc-today {
+    .rbc-month-view .rbc-today {
       background-color: #fff;
+    }
+    .rbc-current-time-indicator {
+      background-color: #ff5219;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -5px;
+        top: -3px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ff5219;
+      }
     }
     .rbc-toolbar {
       padding: 0 (70px + 12px + @margin) 0 @margin;
       button {
         border: none;
       }
-      .rbc-btn-group {
+      .rbc-btn-group:first-child {
         button {
           margin-right: 12px;
           padding: 7px 8px;
@@ -44,6 +55,19 @@
           border-bottom-right-radius: 4px;
         }
       }
+      .rbc-btn-group:last-child {
+        border-radius: 4px;
+        background-color: #F1F1F1;
+        padding: 2px;
+        .rbc-active {
+          border-radius: 2px;
+          background-color: #FFFFFF;
+          box-shadow: none;
+        }
+        button {
+          background-color: #F1F1F1;
+        }
+      }
       .rbc-toolbar-label {
         padding: 0;
         text-align: left;
@@ -57,17 +81,22 @@
     .rbc-header + .rbc-header {
       border-left: none;
     }
-    .rbc-event {
-      height: 15px;
-      .rbc-event-content {
-        font-size: 12px;
-        transform: scale(0.9);
-        width: 111%;
-        transform-origin: top left;
+    .rbc-time-view {
+      .rbc-allday-cell {
+        flex: 1;
       }
-      &.draft-event {
-        color: #171717;
-        background-color: #efefef;
+    }
+    .rbc-time-content {
+      border-top-width: 1px;
+      .rbc-timeslot-group .rbc-label {
+        color: rgba(0,0,0,0.50);
+      }
+      .rbc-day-slot .rbc-events-container {
+        margin-right: 0;
+        .rbc-addons-dnd-drag-preview {
+          background-color: rgba(0, 0, 0, 0.1);
+          border: none;
+        }
       }
     }
     .rbc-date-cell {
@@ -97,6 +126,7 @@
     }
     // 扩大左右拖动区域
     .rbc-addons-dnd .rbc-addons-dnd-resize-ew-anchor {
+      z-index: 5;
       top: 2px;
       .rbc-addons-dnd-resize-ew-icon {
         width: 12px;
@@ -131,5 +161,95 @@
   }
   .titleTxt {
     font-size: 13px;
+  }
+}
+
+.eventWrap {
+  :global {
+    .rbc-event {
+      padding: 0 4px;
+      color: rgba(0, 0, 0, 0.75);
+      border-radius: 2px;
+      border: none;
+      height: 15px;
+      .rbc-event-content {
+        font-size: 12px;
+        transform: scale(0.9);
+        width: 111%;
+        transform-origin: top left;
+      }
+      &.draft-event {
+        color: #171717;
+        background-color: #efefef;
+        border: none;
+      }
+    }
+  }
+  &:global(.meeting.cancelled .rbc-event) {
+    color: #c4c4c4;
+    background-color: #f1fbed;
+  }
+  &:global(.meeting .rbc-event) {
+    color: #171717;
+    background-color: #b9e7a4;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:global(.meeting .rbc-event.rbc-selected) {
+    color: #fff;
+    background-color: #50c41b;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:global(.todo.done .rbc-event) {
+    color: #c4c4c4;
+    background-color: #edf6ff;
+  }
+  &:global(.todo .rbc-event) {
+    color: #171717;
+    background-color: #a8d5ff;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:global(.todo .rbc-event.rbc-selected) {
+    color: #fff;
+    background-color: #0586fe;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:global(.collaboration.done .rbc-event),
+  &:global(.collaboration.cancel .rbc-event) {
+    color: #c4c4c4;
+    background-color: #fff7ed;
+  }
+  &:global(.collaboration .rbc-event) {
+    color: #171717;
+    background-color: #ffdaae;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:global(.collaboration .rbc-event.rbc-selected) {
+    color: #fff;
+    background-color: #ff6a00;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// 组件自带弹窗宽度限制
+:global {
+  .rbc-overlay {
+    width: 280px;
+    .rbc-event-content {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 }
