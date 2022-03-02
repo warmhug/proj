@@ -38,6 +38,11 @@ Object.defineProperties(start, {
 
 ### 其他问题
 
+#### 2022-02-17
 Q: 在”周视图“里由于自定义的外围 event wrap 的元素位置跟 event 事项条本身元素位置、不在一个地方，此时 antd 的 Popover 组件弹窗就出现在错误位置的 wrap 元素边上、跟预期不符。
-A: 使用自定义的 CalendarPopover 弹窗组件、搭配日历组件提供的 `selected` 和 `onSelectEvent` 方法实现。
-  2022-02-17 
+A: 使用自定义的 CalendarPopover 弹窗、搭配日历组件提供的 `selected` 和 `onSelectEvent` 方法实现。
+
+#### 2022-02-28
+Q: 设置周日放前边？需要看 culture 的原理
+A: 在官方仓库 `react-big-calendar/examples/bundle.js` 文件里搜索 `Gregorian_USEnglish` 查看官方 demo 日历时间设置。 调试官方 demo 代码里的 `firstVisibleDay` 找到 `localizer.startOfWeek()` 关键点。最终使用 `moment.updateLocale` 更新 week 设置生效。
+

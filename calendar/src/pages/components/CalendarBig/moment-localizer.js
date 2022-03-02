@@ -1,4 +1,5 @@
 import { DateLocalizer } from 'react-big-calendar';
+import 'moment/locale/zh-cn';
 
 const weekRangeFormat = ({ start, end }, culture, local) =>
   local.format(start, 'MMMM DD', culture) +
@@ -50,6 +51,14 @@ function fixUnit(unit) {
 }
 
 export default function (moment) {
+  console.log(moment(), moment.locale()); // zh-cn
+  // moment.locale('en');
+  // 中文文化下 周日改为第一天
+  moment.updateLocale(moment.locale(), {
+    week: { dow: 0, doy: 6 }
+  });
+  console.log(moment(), moment.locale()); // en
+
   const locale = (m, c) => (c ? m.locale(c) : m);
 
   /*** BEGIN localized date arithmetic methods with moment ***/
@@ -177,6 +186,7 @@ export default function (moment) {
     return dt.minutes();
   }
 
+  // 切换 月周视图 时执行
   function firstOfWeek(culture) {
     const data = culture ? moment.localeData(culture) : moment.localeData();
     return data ? data.firstDayOfWeek() : 0;
@@ -200,6 +210,7 @@ export default function (moment) {
       current = add(current, 1, 'd');
     }
 
+    // console.log('how many times?');
     return days;
   }
   /*** END localized date arithmetic methods with moment ***/

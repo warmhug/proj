@@ -12,6 +12,7 @@ import EventPopover from '../EventPopover';
 import CalendarPopover from './CalendarPopover';
 import CalendarPopoverFixed from './CalendarPopoverFixed';
 import momentLocalizer1 from './moment-localizer';
+import DateHeader from './DateHeader';
 import { bizTypes } from '@/utils';
 import { DRAFT_EVENT } from '@/constants';
 import type { IEventItem } from '@/interface/IEvents';
@@ -21,14 +22,33 @@ import styles from './index.less';
 const localizer = momentLocalizer1(moment);
 const DragAndDropCalendar = withDragAndDrop(Calendar);
 
+const defaultDate = new Date('2022-01-03T09:58:55.000+0000');
+
 export default () => {
-  const { events, resizeEvent, moveEvent, draftEvent, setDraftEvent, createDraftEvent } = useModel(
-    'events',
-  );
-  const { setCollaborationTime } = useModel('left');
+  const {
+    setCalendarRange,
+    events,
+    resizeEvent,
+    moveEvent,
+    draftEvent,
+    setDraftEvent,
+    createDraftEvent,
+  } = useModel('events');
+  const { needSignInList } = useModel('left');
   const containerRef = React.useRef<HTMLDivElement>(null);
   const viewRef = React.useRef<string>(Views.MONTH);
   const [selectedEvent, setSelectedEvent] = useState<null | IEventItem>(null);
+
+  useEffect(() => {
+    const rangeDays = localizer.visibleDays(defaultDate);
+    // console.log('rangeDays', rangeDays);
+    if (rangeDays?.length) {
+      setCalendarRange({
+        startTime: moment(rangeDays[0]).format('YYYY-MM-DD 00:00:00'),
+        endTime: moment(rangeDays[rangeDays.length - 1]).format('YYYY-MM-DD 00:00:00'),
+      });
+    }
+  }, []);
 
   const disableDragOrResize = (evt: any) => {
     if (evt?.bizType === bizTypes[1]) {
@@ -83,7 +103,7 @@ export default () => {
         views={[Views.MONTH, Views.WEEK]}
         localizer={localizer}
         events={draftEvent ? [...events, draftEvent] : events}
-        defaultDate={new Date('2022-01-03T09:58:55.000+0000')}
+        defaultDate={defaultDate}
         formats={{
           // dayFormat: (date, culture, localizer) => localizer.format(date, 'DDD', culture),
           monthHeaderFormat: (date: Date, culture: any, locer: any) =>
@@ -111,10 +131,13 @@ export default () => {
             //   console.log('headProps', headProps);
             //   return <div>ssss</div>;
             // },
-            // dateHeader: (headProps) => {
-            //   const { label, drilldownView, onDrillDown } = headProps;
-            //   return <a href="#" onClick={onDrillDown} role="cell">{label} 这里放图标</a>;
-            // },
+            dateHeader: (headProps: any) => {
+              // console.log('headProps', headProps, needSignInList);
+              return <DateHeader {...headProps} />;
+            },
+          },
+          week: {
+            header: (headProps: any) => <DateHeader {...headProps} />,
           },
         }}
         popup
@@ -168,7 +191,7 @@ export default () => {
             default:
           }
           if (rangeTime) {
-            setCollaborationTime(rangeTime);
+            setCalendarRange(rangeTime);
           }
         }}
       />

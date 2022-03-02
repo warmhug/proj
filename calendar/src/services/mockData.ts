@@ -88,3 +88,17 @@ export const groupMembersResult = {
   traceId: '',
   empty: false,
 };
+
+export const needSignInListMock = {
+  code: 200,
+  data: [
+    {
+      date: '2022-01-13T09:58:55.000+0000',
+    },
+    {
+      date: '2022-01-14T09:58:55.000+0000',
+    },
+  ],
+  success: true,
+  message: null,
+};

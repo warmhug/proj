@@ -3,13 +3,20 @@ import { message } from 'antd';
 import moment from 'moment';
 import { diffTime, fixEndTime } from '@/utils';
 import { DRAFT_EVENT } from '@/constants';
-import type { IEventItem } from '@/interface/IEvents';
+import type { IEventItem, IcalendarRange } from '@/interface/IEvents';
+
+const defaultRange = {
+  startTime: moment().startOf('month').add(-7, 'days').format('YYYY-MM-DD 00:00:00'),
+  endTime: moment().endOf('month').add(15, 'days').format('YYYY-MM-DD 00:00:00'),
+};
 
 export default () => {
   // 日历统一数据源
   const [events, setEvents] = useState<IEventItem[]>([]);
   // 点击或多选日历单元格、生成的数据
   const [draftEvent, setDraftEvent] = useState<IEventItem | null>();
+  // 日历起止时间
+  const [calendarRange, setCalendarRange] = useState<IcalendarRange | null>();
   const [changeTimeSucceed, setChangeTimeSucceed] = useState(0);
 
   const createDraftEvent = (slotData: {
@@ -106,6 +113,8 @@ export default () => {
   };
 
   return {
+    calendarRange,
+    setCalendarRange,
     events,
     setEvents,
     draftEvent,

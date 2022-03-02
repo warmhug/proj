@@ -39,3 +39,8 @@ export interface ICollaborationItemResult {
   mode?: string;
   subType?: string;
 }
+
+export type IcalendarRange = {
+  startTime: any;
+  endTime: any;
+};

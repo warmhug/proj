@@ -18,7 +18,7 @@
   "dependencies": {
     "@umijs/preset-react": "1.x",
     "antd": "^4.5.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.2",
     "dva": "^2.6.0-beta.19",
     "dva-loading": "^3.0.20",
     "history": "^4.7.2",
