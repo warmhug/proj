@@ -4,7 +4,7 @@ import styles from './index.less';
 
 export default (props: any) => {
   const { event } = props;
-  const { title } = event || {};
+  const { title, bizData } = event || {};
   const popoverRef = useRef(null);
 
   const content = (
@@ -12,7 +12,10 @@ export default (props: any) => {
       <Typography.Title level={3}>{title}</Typography.Title>
       <div>
         正文
-        <br/><br/><br/><br/>
+        <br/>
+        b-start: {bizData?.startTime}
+        <br/>
+        b-end: {bizData?.endTime}
       </div>
     </div>
   );

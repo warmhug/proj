@@ -28,6 +28,7 @@ export const fixEndTime = (endTime: Date, index = 1) => {
   // 比如 2022-01-05T16:00:00.000+00:00
   // console.log('endT', endTime, new Date(endTime), moment(endTime).isSame(new Date(endTime)));
   const et = new Date(endTime);
+  // return et;
   if (
     et.getHours() === 0 &&
     et.getMinutes() === 0 &&

@@ -1,4 +1,5 @@
 @margin: 20px;
+@rowHeight: 15px;
 
 .root {
   position: relative;
@@ -11,6 +12,11 @@
     .rbc-month-view,
     .rbc-time-view {
       border-color: #eaeaea;
+    }
+    .rbc-row-segment {
+      padding: 0 2px 1px 2px;
+      // 解决每个格子显示多少事项条的计算误差问题
+      max-height: @rowHeight + 1;
     }
     .rbc-month-row + .rbc-month-row,
     .rbc-day-bg + .rbc-day-bg {
@@ -84,6 +90,27 @@
     .rbc-time-view {
       .rbc-allday-cell {
         flex: 1;
+        .rbc-row-content {
+          max-height: 100px;
+          overflow: scroll;
+        }
+      }
+      .rbc-event {
+        box-shadow: -1px 0 2px 0 #fff;
+      }
+      .meeting .rbc-event {
+        box-shadow: -1px 0 2px 0 #50c41b;
+      }
+      .todo .rbc-event {
+        box-shadow: -1px 0 2px 0 #0586fe;
+      }
+      .collaboration .rbc-event {
+        box-shadow: -1px 0 2px 0 #ff6a00;
+      }
+      .done {
+        .rbc-event {
+          box-shadow: -1px 0 2px 0 #969799;
+        }
       }
     }
     .rbc-time-content {
@@ -167,11 +194,11 @@
 .eventWrap {
   :global {
     .rbc-event {
+      height: @rowHeight;
       padding: 0 4px;
       color: rgba(0, 0, 0, 0.75);
       border-radius: 2px;
       border: none;
-      height: 15px;
       .rbc-event-content {
         font-size: 12px;
         transform: scale(0.9);

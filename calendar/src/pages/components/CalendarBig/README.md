@@ -46,3 +46,7 @@ A: 使用自定义的 CalendarPopover 弹窗、搭配日历组件提供的 `sele
 Q: 设置周日放前边？需要看 culture 的原理
 A: 在官方仓库 `react-big-calendar/examples/bundle.js` 文件里搜索 `Gregorian_USEnglish` 查看官方 demo 日历时间设置。 调试官方 demo 代码里的 `firstVisibleDay` 找到 `localizer.startOfWeek()` 关键点。最终使用 `moment.updateLocale` 更新 week 设置生效。
 
+#### 2022-03-08
+Q: 一行容纳的事项条过少？
+A:搜索源码`getRowLimit`查看 `renderDummy()`生成的 rbc-row 元素的`getBoundingClientRect()`计算高度。给 className 为 `rbc-row-segment` 的元素设置 max-height 可解决。
+

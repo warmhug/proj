@@ -32,7 +32,7 @@ export default () => {
         return {
           id: item.id,
           title: item.name,
-          allDay: false,
+          allDay: item?.allDay || false,
           ...timeDatas,
           bizType: bizTypes[index],
           bizData: item,

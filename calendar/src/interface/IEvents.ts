@@ -1,9 +1,10 @@
 export interface IEventItem {
   id: number | string;
   title: string;
-  allDay: boolean;
   start: Date;
   end: Date;
+  allDay?: boolean;
+  _end?: Date;
   isCustom?: boolean;
   eventType?: string;
   bizType?: string;
