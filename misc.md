@@ -1,15 +1,6 @@
 
 # misc
 
-- [Most Starred](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)
-- [Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
-- [github-rank](http://github-rank.com/star)
-- [搜 issue](https://help.github.com/articles/searching-issues/)
-  - 搜索“某repo”里有“某个评论者”参与的包含的“某个词”的 issue: [warmhug + ant-design-mobile](https://github.com/search?utf8=%E2%9C%93&q=xxxx+commenter%3Awarmhug+repo%3Aant-design%2Fant-design-mobile&type=Issues)
-  - 搜索“某user”里有“某个评论者”参与的包含的“某个词”的 issue: [warmhug + xxxx](https://github.com/search?utf8=%E2%9C%93&q=xxxx+commenter%3Awarmhug+user%3Aant-design&type=Issues)
-  - 搜索“某人”创建的在“body”里包含“某个词”的 issue: [warmhug + xx](https://github.com/search?utf8=%E2%9C%93&q=xx+in%3Abody+author%3Awarmhug&type=Issues)
-
-
 Excel 模糊匹配 <http://club.excelhome.net/thread-1048885-1-1.html>
 
 ## python
