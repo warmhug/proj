@@ -1,8 +1,22 @@
 # cpp
 
+
+mac 安装 xcode 自动安装 c/c++ 编译器。
+
+```sh
+gcc file.c file1.c
+g++ file.cc file1.cc
+```
+
+使用 "Eclipse for c++" IDE + CDT (全称C/C++ Development Toolkit)
+另外搭配 cmake 的方法：<http://stackoverflow.com/a/38716337/2190503>
+
+> 不建议用 Clion (直接集成了 cmake 工具)，收费、开的时间长有内存泄露问题。
+
+- [值得推荐的C/C++框架和库](https://www.ezlippi.com/blog/2014/12/c-open-project.html)
 - [C++基础入门](http://study.163.com/course/courseMain.htm?courseId=1002981021): 1.学习纲要
-- [《面向对象程序设计-C++》](http://study.163.com/course/courseMain.htm?courseId=271005): 
-  - 1.第一个C++程序。如何使用 Eclipse 编写 cpp 
+- [《面向对象程序设计-C++》](http://study.163.com/course/courseMain.htm?courseId=271005):
+  - 1.第一个C++程序。如何使用 Eclipse 编写 cpp
   - 5.头文件。头文件里不该写什么？介绍编译过程
   - 8.成员变量的秘密。介绍 this 指针是什么（类似 js 的this/prototype）
   - 11.new & delete。动态内存申请和销毁，内存泄露
@@ -153,4 +167,3 @@ adapter（配接器） 可以修饰或套接 functor（仿函数）。
 泛型编程的通用化算法，是建立在各种抽象化基础之上的：
 利用参数化模版来达到数据类型的抽象化、利用容器和迭代器来达到数据结构的抽象化、
 利用分配器和适配器来达到存储分配和界面接口的抽象化。
-
