@@ -1,6 +1,0 @@
-node_modules
-coverage
-test
-args.json
-.autod.conf
-.eslint*

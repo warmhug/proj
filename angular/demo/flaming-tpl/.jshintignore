@@ -1,8 +1,0 @@
-node_modules
-spm_modules
-coverage
-dist
-static
-API
-tests
-gulp-tasks
