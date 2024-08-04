@@ -6,6 +6,9 @@
 
 ## lerna
 
+- https://lerna.js.org/docs/recipes/using-pnpm-with-lerna
+- https://pnpm.io/workspaces
+
 ```sh
 lerna publish prerelease --preid beta --yes
 ```
