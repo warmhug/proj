@@ -14,7 +14,7 @@
 ```sh
 lerna publish prerelease --dist-tag beta --preid beta --yes
 lerna publish patch --yes
-lerna publish from-package --yes  # 从 npm 包的最新版本号生成新版本再发布
+lerna publish from-package --yes  # 与 npm 包的最新版本号作对比
 ```
 
 ### 特殊场景
