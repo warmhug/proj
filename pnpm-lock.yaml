@@ -13,7 +13,10 @@ importers:
       yargs-parser: 21.1.1
 
   packages/demo:
-    specifiers: {}
+    specifiers:
+      '@huajs/lerna-demo': '*'
+    dependencies:
+      '@huajs/lerna-demo': link:../lerna-demo
 
   packages/lerna-demo:
     specifiers: {}
