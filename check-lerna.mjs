@@ -12,7 +12,7 @@ console.log('args: ', chalk.red(JSON.stringify(args)));
 // console.log('pkgFile: ', pkgFile);
 
 const pkgPath = join(cwd, 'packages', 'pkg'.replace('', ''));
-console.log('pkgPath: ', pkgPath);
+// console.log('pkgPath: ', pkgPath);
 
 // console.error('测试抛错');
 // process.exit(1);
