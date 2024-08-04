@@ -1,6 +1,6 @@
 {
   "name": "@huajs/lerna-demo",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "gitHead": "336001001d8dfaaecf5fc0675e187d998dda0d0b"
+  "license": "ISC"
 }
