@@ -5,7 +5,7 @@ import { join } from 'path';
 const args = parser(process.argv);
 const cwd = process.cwd();
 // console.log('args: ', args);
-console.log('args: ', chalk.red(args));
+console.log('args: ', chalk.red(JSON.stringify(args)));
 
 // __dirname is not defined in ES module scope
 // const pkgFile = join(__dirname, './packages');
