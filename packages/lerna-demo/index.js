@@ -1,1 +1,1 @@
-console.log('this is lerna demo, change3');
+console.log('this is lerna demo, change4');
