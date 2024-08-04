@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/warmhug/_archive/compare/@huajs/demo@0.1.9...@huajs/demo@0.1.10) (2024-08-04)
+
+
+### Features
+
+* 修改构建脚本2 ([29034f7](https://github.com/warmhug/_archive/commit/29034f7cc2ecadbef45a66d38a659c8d7b5b59d3))
+
+
+
+
+
 ## [0.1.9](https://github.com/warmhug/_archive/compare/@huajs/demo@0.1.8...@huajs/demo@0.1.9) (2024-08-04)
 
 
