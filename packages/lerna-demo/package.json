@@ -9,8 +9,11 @@
     "postversion": "node ./check-lerna.mjs --postversion",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "gitHead": "22396170b9272f936e1cc110a75cce9a70972a16"
+  "gitHead": "ee78d41e9ae3542f8031011fc27ea51f1f8bc83c"
 }
