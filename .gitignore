@@ -24,8 +24,8 @@ pnpm-lock.yaml
 build
 assembly/
 logs
+*.log
 tmp
-
 
 # c / c++
 *.out
