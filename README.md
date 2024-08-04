@@ -15,7 +15,7 @@
 lerna publish prerelease --dist-tag beta --preid beta --yes
 lerna publish patch --yes
 # from-package 参数会与 npm 包的最新版本号作对比：
-# 如果版本号一样 则返回 No changed packages to publish
+# 如果版本号一样(即使包的代码有改变) 则返回 No changed packages to publish
 # 如果某一个包的版本号有升级 则发这个包及依赖它的包
 lerna publish from-package --yes
 ```
