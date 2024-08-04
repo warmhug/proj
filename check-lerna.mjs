@@ -7,8 +7,9 @@ const cwd = process.cwd();
 // console.log('args: ', args);
 console.log('args: ', chalk.red(args));
 
-const pkgFile = join(__dirname, './packages');
-console.log('pkgFile: ', pkgFile);
+// __dirname is not defined in ES module scope
+// const pkgFile = join(__dirname, './packages');
+// console.log('pkgFile: ', pkgFile);
 
 const pkgPath = join(cwd, 'packages', pkg.replace('', ''));
 console.log('pkgPath: ', pkgPath);
