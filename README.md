@@ -12,11 +12,18 @@
 - https://pnpm.io/workspaces
 
 ```sh
+lerna version --exact --message '🎨 chore(release): Publish' --conventional-commits
+lerna version prerelease --preid beta --yes
+lerna version patch --yes
+
 lerna publish prerelease --dist-tag beta --preid beta --yes
 lerna publish patch --yes
+
 # from-package 参数会与 npm 包的最新版本号作对比：
 # 如果版本号一样(即使包的代码有改变) 则返回 No changed packages to publish
-# 如果某一个包的版本号有升级 则发这个包及依赖它的包
+# 如果某一个包的版本号有升级 则只发这个包 不会发依赖它的包
+# 所以，可以手动运行 lerna version 发相关所有包
+# 如果只发有改动的包 只用修改这个包的版本号，不需要 lerna version
 lerna publish from-package --yes
 ```
 
