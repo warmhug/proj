@@ -12,7 +12,7 @@
 - https://pnpm.io/workspaces
 
 ```sh
-lerna version --exact --message '🎨 chore(release): Publish' --conventional-commits
+lerna version patch --exact --message '🎨 chore(release): Publish' --conventional-commits
 lerna version prerelease --preid beta --yes
 lerna version patch --yes
 
