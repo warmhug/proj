@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "chalk": "^5.3.0",
+    "lerna": "^8.1.7",
+    "yargs-parser": "^21.1.1"
+  }
+}

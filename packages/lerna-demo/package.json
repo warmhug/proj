@@ -1,0 +1,15 @@
+{
+  "name": "@huajs/lerna-demo",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preversion": "node ./check-lerna.mjs --preversion",
+    "version": "node ./check-lerna.mjs --version",
+    "postversion": "node ./check-lerna.mjs --postversion",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
