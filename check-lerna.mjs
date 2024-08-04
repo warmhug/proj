@@ -12,3 +12,7 @@ console.log('pkgFile: ', pkgFile);
 
 const pkgPath = join(cwd, 'packages', pkg.replace('', ''));
 console.log('pkgPath: ', pkgPath);
+
+console.error('测试抛错');
+process.exit(1);
+console.log('process.exit(1): 后还会执行吗');
