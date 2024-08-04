@@ -12,6 +12,9 @@ importers:
       lerna: 8.1.7
       yargs-parser: 21.1.1
 
+  packages/demo:
+    specifiers: {}
+
   packages/lerna-demo:
     specifiers: {}
 
