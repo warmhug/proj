@@ -1,13 +1,13 @@
 {
   "name": "@huajs/demo",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@huajs/lerna-demo": "^0.1.2"
+    "@huajs/lerna-demo": "^0.1.3"
   },
   "publishConfig": {
     "access": "public"
