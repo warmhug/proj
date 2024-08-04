@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@huajs/lerna-demo": "workspace:*"
+    "@huajs/lerna-demo": "0.1.1"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "39cecc05aafa79cf7479486202e924383ca85cfb"
 }

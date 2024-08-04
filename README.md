@@ -10,5 +10,6 @@
 - https://pnpm.io/workspaces
 
 ```sh
-lerna publish prerelease --preid beta --yes
+lerna publish prerelease --dist-tag beta --preid beta --yes
+lerna publish patch --yes
 ```
