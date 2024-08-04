@@ -6,6 +6,8 @@
 
 ## lerna
 
+- https://github.com/lerna/lerna/tree/main/libs/commands/publish
+- https://github.com/lerna/lerna/tree/main/libs/commands/version
 - https://lerna.js.org/docs/recipes/using-pnpm-with-lerna
 - https://pnpm.io/workspaces
 
