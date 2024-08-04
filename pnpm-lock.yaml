@@ -14,7 +14,7 @@ importers:
 
   packages/demo:
     specifiers:
-      '@huajs/lerna-demo': '*'
+      '@huajs/lerna-demo': workspace:*
     dependencies:
       '@huajs/lerna-demo': link:../lerna-demo
 
