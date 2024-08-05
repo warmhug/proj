@@ -12,11 +12,13 @@
 - https://pnpm.io/workspaces
 
 ```sh
-lerna version patch --exact --message '🎨 chore(release): Publish' --conventional-commits
-lerna version prerelease --preid beta --yes
-lerna version patch --yes
+lerna list -l --graph
 
-lerna publish prerelease --dist-tag beta --preid beta --yes
+lerna version patch --exact --message '🎨 chore(release): Publish' --conventional-commits
+
+# 所有子包的版本 不管是不是正式版 都升级为 beta 版
+lerna version prerelease --preid beta
+
 lerna publish patch --yes
 
 # from-package 参数会与 npm 包的最新版本号作对比：
@@ -25,6 +27,13 @@ lerna publish patch --yes
 # 所以，可以手动运行 lerna version 发相关所有包
 # 如果只发有改动的包 只用修改这个包的版本号，不需要 lerna version
 lerna publish from-package --yes
+# 以下同时传入 from-package --canary 只有前者生效，参考 lerna publish 代码逻辑
+lerna publish from-package --canary --preid beta --dist-tag beta --no-push --no-git-tag-version
+
+# 在 beta 版本里，可以用以下发布命令
+lerna publish prerelease --preid beta --dist-tag beta --no-push --no-git-tag-version --yes
+# 如下 多了个 canary 则 生成的版本号带有 hash 原因参考 lerna publish 代码逻辑
+lerna publish --canary prerelease --preid beta --dist-tag beta
 ```
 
 ### 特殊场景
