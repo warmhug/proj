@@ -25,7 +25,6 @@ lerna publish patch --yes
 # 如果版本号一样(即使包的代码有改变) 则返回 No changed packages to publish
 # 如果某一个包的版本号有升级 则只发这个包 不会发依赖它的包
 # 所以，可以手动运行 lerna version 发相关所有包
-# 如果只发有改动的包 只用修改这个包的版本号，不需要 lerna version
 lerna publish from-package --yes
 # 以下同时传入 from-package --canary 只有前者生效，参考 lerna publish 代码逻辑
 lerna publish from-package --canary --preid beta --dist-tag beta --no-push --no-git-tag-version
