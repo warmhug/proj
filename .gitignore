@@ -23,8 +23,8 @@ package-lock.json
 build
 assembly/
 logs
+*.log
 tmp
-
 
 # c / c++
 *.out
@@ -71,4 +71,3 @@ tmp/
 
 velocity.log
 velocity.log.1
-
