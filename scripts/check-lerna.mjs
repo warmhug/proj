@@ -1,6 +1,10 @@
 import parser from 'yargs-parser';
 import chalk from 'chalk';
 import { join } from 'path';
+import exec from './exec';
+
+
+await exec('npm', ['run', 'build']);
 
 const args = parser(process.argv);
 const cwd = process.cwd();
