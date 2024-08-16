@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import { join } from 'path';
 import { spawn } from 'child_process';
 
-function exec(command, args, opts) {
+async function exec(command, args, opts) {
   return new Promise((resolve, reject) => {
     const child = spawn(command, args, {
       shell: true,
