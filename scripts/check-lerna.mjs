@@ -2,6 +2,7 @@ import parser from 'yargs-parser';
 import chalk from 'chalk';
 import { join } from 'path';
 import { spawn } from 'child_process';
+import semver from 'semver';
 
 async function exec(command, args, opts) {
   return new Promise((resolve, reject) => {
@@ -24,6 +25,13 @@ async function exec(command, args, opts) {
     });
   });
 }
+
+console.log('semver.valid', semver.valid('1.2.3-beta.20+aseds'));
+console.log('semver.inc', semver.inc('1.2.3', 'prerelease', 'beta'),
+semver.inc('1.2.3-beta.0', 'prerelease', 'beta'),
+semver.parse('1.2.3'),
+semver.parse('1.2.3-beta.0'),
+);
 
 await exec('npm', ['run', 'build']);
 
