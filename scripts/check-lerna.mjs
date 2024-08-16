@@ -27,11 +27,11 @@ async function exec(command, args, opts) {
 }
 
 console.log('semver.valid', semver.valid('1.2.3-beta.20+aseds'));
-console.log('semver.inc', semver.inc('1.2.3', 'prerelease', 'beta'),
-semver.inc('1.2.3-beta.0', 'prerelease', 'beta'),
-semver.parse('1.2.3'),
-semver.parse('1.2.3-beta.0'),
-);
+// console.log('semver.inc', semver.inc('1.2.3', 'prerelease', 'beta'),
+// semver.inc('1.2.3-beta.0', 'prerelease', 'beta'),
+// semver.parse('1.2.3'),
+// semver.parse('1.2.3-beta.0'),
+// );
 
 await exec('npm', ['run', 'build']);
 
