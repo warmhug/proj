@@ -6,13 +6,6 @@ package.json 加入
   "version": "node ./check-lerna.mjs --version",
   "postversion": "node ./check-lerna.mjs --postversion",
 }
-
-https://warmhug.github.io/2024/08/06/lerna-usage.html
-
-dev:
-npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
-prod:
-npx lerna version --conventional-commits --conventional-graduate --yes
 */
 import parser from 'yargs-parser';
 import chalk from 'chalk';
@@ -50,6 +43,9 @@ async function exec(command, args, opts) {
 
 testLerna();
 async function testLerna() {
+// https://warmhug.github.io/2024/08/06/lerna-usage.html
+// dev:  npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
+// prod: npx lerna version --conventional-commits --conventional-graduate --yes
   await exec('node', [
     [lernaCli],
     'version',
