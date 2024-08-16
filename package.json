@@ -5,7 +5,6 @@
     "packages/*"
   ],
   "scripts": {
-    "prepublish": "node ./scripts/check-lerna.mjs --prepublish",
     "preversion": "node ./scripts/check-lerna.mjs --preversion",
     "version": "node ./scripts/check-lerna.mjs --version",
     "postversion": "node ./scripts/check-lerna.mjs --postversion",
