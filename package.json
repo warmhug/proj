@@ -5,12 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "prepublish": "node ./scripts/check-lerna.mjs --prepublish",
-    "preversion": "node ./scripts/check-lerna.mjs --preversion",
-    "version": "node ./scripts/check-lerna.mjs --version",
-    "postversion": "node ./scripts/check-lerna.mjs --postversion",
     "build": "",
     "prettier": "",
+    "lerna": "node ./check-lerna.mjs --aaa",
     "createRelease": "node ./scripts/createRelease.js",
     "deploy": "cross-env SITE_DEPLOY='TRUE' npm run build && gh-pages -d ./dist",
     "sync:tnpm": "node -e 'require(\"./scripts/syncTNPM\")()'",
@@ -21,6 +18,7 @@
     "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
     "lerna": "^8.1.7",
+    "semver": "^7.6.3",
     "yargs-parser": "^21.1.1"
   }
 }
