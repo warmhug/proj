@@ -18,6 +18,11 @@ const require = createRequire(import.meta.url);
 const lernaCli = require.resolve('lerna/cli');
 // console.log('lernaCli: ', lernaCli);
 
+// 发布到 npm
+// await execa('npm', ['publish', '--tag', 'beta'], {
+//   cwd: path.join(packagesPath, pkg.replace(namePrefix, '')),
+// });
+
 async function exec(command, args, opts) {
   return new Promise((resolve, reject) => {
     const child = spawn(command, args, {
@@ -41,8 +46,16 @@ async function exec(command, args, opts) {
 }
 // await exec('npm', ['run', 'build']);
 
-testLerna();
-async function testLerna() {
+test();
+async function test() {
+  console.log('patch: ', semver.inc('1.2.3-beta.1', 'patch'));
+  console.log('semver.inc', semver.inc('1.2.3', 'prerelease', 'beta'));
+  console.log('beta: ', semver.inc('1.2.3-beta', 'prerelease', 'beta'));
+  console.log('beta: ', semver.inc('1.2.3-beta.0', 'prerelease', 'beta'));
+  console.log('semver.valid', semver.valid('1.2.3-beta.20+aseds'));
+  console.log('semver.parse: ', semver.parse('1.2.3'));
+
+  return;
 // https://warmhug.github.io/2024/08/06/lerna-usage.html
 // dev:  npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
 // prod: npx lerna version --conventional-commits --conventional-graduate --yes
@@ -56,16 +69,7 @@ async function testLerna() {
   // ], {});
   ], { shell: false });
 
-  console.log('semver.valid', semver.valid('1.2.3-beta.20+aseds'));
-  // console.log('semver.inc', semver.inc('1.2.3', 'prerelease', 'beta'),
-  // semver.inc('1.2.3-beta.0', 'prerelease', 'beta'),
-  // semver.parse('1.2.3'),
-  // semver.parse('1.2.3-beta.0'),
-  // );
-}
 
-test();
-function test() {
   const args = parser(process.argv);
   const cwd = process.cwd();
   // console.log('args: ', args);
