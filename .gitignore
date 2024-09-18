@@ -1,3 +1,7 @@
+*.iml
+.idea/
+.ipr
+.iws
 *~
 ~*
 *.diff
@@ -5,10 +9,10 @@
 *.bak
 .DS_Store
 Thumbs.db
+.project
 .*proj
 .svn/
 *.swp
-*.swo
 *.pyc
 *.pyo
 node_modules
@@ -20,54 +24,5 @@ dist
 *.pem
 yarn.lock
 package-lock.json
-build
-assembly/
-logs
-*.log
-tmp
-
-# c / c++
-*.out
-
-# https://github.com/github/gitignore/blob/master/CMake.gitignore
-CMakeCache.txt
-CMakeFiles
-cmake-build-debug
-
-# Eclipse for c++
-.metadata
-.settings
-.cproject
-.project
-Debug
-RemoteSystemsTempFiles
-
-
-# Eclipse
-.classpath
-.settings/
-
-# Intellij
-.idea/
-.idea.xml
-*.iml
-*.iws
-*.ipr
-
-# Maven
-log/
-target/
-
-# other
-out
-bin
-bak
-.metadata
-*.class
-*.bak
-tmp/
-.tmp
-.myeclipse/
-
-velocity.log
-velocity.log.1
+pnpm-lock.yaml
+.vscode
