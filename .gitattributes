@@ -1,0 +1,10 @@
+* text=auto
+*.js text eol=lf
+
+pnpm-lock.yaml               merge=binary
+shrinkwrap.yaml              merge=binary
+npm-shrinkwrap.json          merge=binary
+yarn.lock                    merge=binary
+
+# For more information, see this issue: https://github.com/microsoft/rushstack/issues/108
+*.json                       linguist-language=JSON-with-Comments
