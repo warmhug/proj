@@ -1,28 +1,42 @@
-*.iml
-.idea/
-.ipr
-.iws
-*~
-~*
-*.diff
-*.patch
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# system files / Vim backup files / Eclipse / IntelliJ IDEA
+*bak
 *.bak
 .DS_Store
 Thumbs.db
+*~
+~*
 .project
 .*proj
-.svn/
-*.swp
-*.pyc
-*.pyo
-node_modules
-bower_components/
-npm-debug.log
-.module-cache
-.*.sw*
-dist
-*.pem
-yarn.lock
-package-lock.json
-pnpm-lock.yaml
+*.iml
+.idea
+.idea/
+.ipr
+.iws
 .vscode
+/.vscode
+
+# log / git / misc
+.history
+*.log
+*.log*
+*.tmp
+tmp
+.temp/**
+*.diff
+*.patch
+.*.sw*
+*.pem
+cert
+cert/*
+
+# node
+**/node_modules
+node_modules
+
+# ignore build files
+**/dist
+dist
+out
+build

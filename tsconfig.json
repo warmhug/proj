@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@huajs/lerna-demo": ["./packages/lerna-demo/src/index.tsx"],
+    },
+    "baseUrl": "./",
+    "target": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["vitest/globals"]
+  },
+  "include": [
+    ".eslintrc.js",
+    "typings.d.ts",
+    "**/src/**/*",
+    "**/docs/**/*",
+    "**/demos",
+    "**/fixtures",
+    "scripts/**/*",
+    "vitest.config.ts",
+    "tests",
+    "./tests/setupTests.ts",
+    "./tests/no-duplicated.ts",
+    "shared/**/*.ts",
+  ]
+}

@@ -1,12 +1,11 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "build": "",
     "prettier": "",
+    "lint": "eslint '**/*/src/**/*.{js,jsx,ts,tsx}'",
+    "type-check": "tsc --noEmit",
     "deploy": "cross-env SITE_DEPLOY='TRUE' npm run build && gh-pages -d ./dist",
     "sync:tnpm": "node -e 'require(\"./scripts/syncTNPM\")()'"
   },
@@ -19,7 +18,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.0",
-    "pretty-quick": "^4.0.0"
+    "pretty-quick": "^4.0.0",
+    "typescript": "^5.4.5"
   },
   "gitHooks": {
     "pre-commit": "echo \"pre-commit: run...\" && exit 1"

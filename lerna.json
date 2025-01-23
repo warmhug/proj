@@ -12,6 +12,5 @@
     "**/lib/**",
     "**/es/**",
     "**/test/**"
-  ],
-  "packages": ["packages/*"]
+  ]
 }
