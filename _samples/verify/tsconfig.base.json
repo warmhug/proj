@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"jsx": "react-jsx",
+
+		"rootDir": "src",
+
+		"skipLibCheck": true,
+		"strict": false,
+		"noImplicitAny": false,
+
+		"noImplicitReturns": true,
+		"forceConsistentCasingInFileNames": true,
+		"experimentalDecorators": true
+	},
+	"include": [
+		"typings",
+		"src/**/*"
+	]
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <style>
+    .demo {margin: 10px; padding: 5px; max-width: 200px;}
+    .des { font-size: 13px; color: #666;}
+    .radius {border-radius: 5px;}
+
+    /* iOS 8+ */
+    .normal {
+      border-bottom: 1px solid red;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      .hairline {
+        border-width: 0.5px;
+      }
+    }
+
+    .shadow {
+      box-shadow:0 1px 1px -1px rgba(0, 0, 0, 0.5);
+    }
+
+    /* background-image */
+    .bg {
+      background-image: -webkit-linear-gradient(180deg, red, red 50%, transparent 50%),
+        -webkit-linear-gradient(270deg, red, red 50%, transparent 50%),
+        -webkit-linear-gradient(0deg, red, red 50%, transparent 50%),
+        -webkit-linear-gradient(90deg, red, red 50%, transparent 50%);
+      background-image: linear-gradient(180deg, red, red 50%, transparent 50%),
+        linear-gradient(270deg, red, red 50%, transparent 50%),
+        linear-gradient(0deg, red, red 50%, transparent 50%),
+        linear-gradient(90deg, red, red 50%, transparent 50%);
+      -webkit-background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+      background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+      background-repeat: no-repeat;
+      background-position: top, right top, bottom, left top;
+      padding: 10px;
+    }
+    
+    .tf {
+      position: relative;
+    }
+    .tf::before {
+      content: '';
+      position: absolute;
+      z-index: 15;
+      left: 0;
+      top: 0;
+      bottom: auto;
+      right: auto;
+      display: block;
+      width: 100%;
+      height: 1px; background-color: red;
+      transform-origin: 50% 0;
+      transform: scaleY(.5);
+    }
+    .tf::after {
+      content: '';
+      position: absolute;
+      z-index: 15;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      display: block;
+      width: 100%; /* or use `right: 0` to get it */
+      /* framework7 use height instead of border-height  */
+      height: 1px; background-color: red;
+      /* border-bottom: 1px solid red; */
+      transform-origin: 50% 100%;
+      transform: scaleY(.5); /* scale(1/dpr) */
+    }
+
+    .cover {
+      position: relative;
+    }
+    .cover::after {
+      content: "";
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* 三星Grand Prime 等需要 -webkit- 前缀  */
+      -webkit-transform: scale(.5);
+      -webkit-transform-origin: 0 0;
+      transform: scale(.5);
+      transform-origin: 0 0;
+      box-sizing: border-box;
+      border: 1px solid red;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  viewport: width=device-width, initial-scale=1.0 <br>
+  window.devicePixelRatio: <script>document.write(window.devicePixelRatio)</script>
+  documentElement.clientWidth: <script>document.write(document.documentElement.clientWidth)</script>
+
+  <h3>border-width: 0.5px <b class="des">Abandon</b></h3>
+  <div class="des">
+    iPhone 7plus device-pixel-ratio=3 最小也是 0.5px (即使设置为 0.1px 也不会变的更细) <br>
+    只在 iOS8+ 有效，但在一些 Android 上不能显示边线。
+  </div>
+  <div class="demo radius normal hairline">0.5px, Normal on iOS8+</div>
+
+  <h3>box-shadow <b class="des">Abandon</b></h3>
+  <div class="des">
+    box-shadow 会带来性能问题，颜色不好处理、有阴影。
+  </div>
+  <div class="demo radius shadow">box-shadow</div>
+
+  <h3>background-image</h3>
+  <div class="des">
+    <a href="http://antui.alipay.com/">alipay-antui</a> 的 
+    <a href="https://render.alipay.com/p/f/antui/demo.html#list">list</a> <br>
+    圆角不能实现，手机上查看(在 pc 上看不到效果) <br>
+  </div>
+  <div class="demo radius bg">background-image, Complex statement</div>
+
+  <h3>transform: scale <b class="des">Recommend</b></h3>
+  <div class="des">
+    <a href="https://github.com/nolimits4web/Framework7/blob/master/src/less/ios/_mixins.less">f7</a> / 
+    <a href="http://framework7.io/kitchen-sink-ios/">f7-demo</a> / 
+    <a href="https://weui.io/#button">weui button 用 伪元素 放大两倍再缩小</a> <br>
+    <b>Problem</b> 圆角只能在“全边框”先实现 ；当有滚动条时，部分 Android 浏览器不显示“底边线”；
+      高度为奇数值 在某些机型不显示（因为产生了小数？） <br>
+  </div>
+  <div class="demo radius tf">top bottom border</div>
+  <div class="demo radius tf" style="height:30px; overflow:scroll;">有滚动条<br><br></div>
+
+  <div class="demo radius cover">Normal</div>
+  <div class="demo radius cover" style="height: 31px;">高度为奇数值</div>
+  <div class="demo radius cover" style="display: inline-block;">inline-block</div>
+  <div class="demo radius cover" style="display: inline-block; overflow: hidden;">em</div>
+  <div class="demo radius cover" style="display: inline-block; overflow: hidden;">em</div>
+
+  <p>
+    <a href="https://github.com/nolimits4web/Framework7/issues/709">framework7 #709</a><br>
+    <a href="https://github.com/nolimits4web/Framework7/issues/635">framework7 #635</a><br>
+    <a href="https://github.com/nolimits4web/Framework7/pull/329#issuecomment-68859001">framework7 #329</a>
+  </p>
+  <p>
+    <b>猜想：</b> transform scale 缩放产生的边框、实际渲染像素都 小于1px ，
+    浏览器在处理这个小数值时、可能需要“舍弃”或“从邻近像素补充”颜色，导致有时候“仅仅因为”内容文字不同、
+    所占的像素宽度不同，而导致 scale 后的 小于1px 的边线不能显示。（Chrome 浏览器）
+  </p>
+</body>
+</html>

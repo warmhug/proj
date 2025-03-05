@@ -1,0 +1,408 @@
+{
+  "version": "0.0.1",
+  "name": "ext-hlv",
+  "displayName": "aa-ext-hlv",
+  "publisher": "warmhug",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warmhug/aa"
+  },
+  "scripts": {
+    "pack": "vsce package && code --install-extension ext-hlv-0.0.1.vsix",
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.92.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "eslint": "^8.57.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "figlet": "^1.7.0",
+    "filesize-calculator": "^4.0.1"
+  },
+  "main": "./dist/extension.js",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "views": {
+      "warmhugPanel": [
+        {
+          "id": "warmhugPanel",
+          "name": "warmhug panel",
+          "icon": "images/dark/viewBtn.svg"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "warmhug.minimizer.minAll",
+        "title": "warmhug-minimizer: minAll Editor Tabs"
+      },
+      {
+        "command": "warmhug.minimizer.restore",
+        "title": "warmhug-minimizer: Restore",
+        "icon": {
+          "light": "images/light/restore.svg",
+          "dark": "images/dark/restore.svg"
+        }
+      },
+      {
+        "command": "warmhug.minimizer.remove",
+        "title": "warmhug-minimizer: Remove",
+        "icon": {
+          "light": "images/light/clear.svg",
+          "dark": "images/dark/clear.svg"
+        }
+      },
+      {
+        "command": "warmhug.minimizer.rename",
+        "title": "warmhug-minimizer: Rename"
+      },
+      {
+        "command": "warmhug.minimizer.addToGroup",
+        "title": "warmhug-minimizer: Add to a Minimized Group"
+      },
+      {
+        "command": "warmhug.minimizer.addToDefaultGroup",
+        "title": "warmhug-minimizer: Add to defaultGroup"
+      },
+      {
+        "command": "warmhug.minimizer.removeFromGroup",
+        "title": "warmhug-minimizer: Remove from Group",
+        "icon": {
+          "light": "images/light/clear.svg",
+          "dark": "images/dark/clear.svg"
+        }
+      },
+      {
+        "command": "warmhug.minimizer.dispose",
+        "title": "warmhug-minimizer: dispose"
+      },
+      {
+        "command": "warmhug.simpleBookmark.add",
+        "title": "warmhug: Add Bookmark"
+      },
+      {
+        "command": "warmhug.simpleBookmark.list",
+        "title": "warmhug: List Bookmarks"
+      },
+      {
+        "command": "warmhug.autoHide.enable",
+        "title": "warmhug-autoHide: Toggle Auto Hide enabled"
+      },
+      {
+        "command": "warmhug.autoHide.hideSideBar",
+        "title": "warmhug-autoHide: Toggle Auto Hide Side Bar for Current Workspace"
+      },
+      {
+        "command": "warmhug.autoHide.hideAuxiliaryBar",
+        "title": "warmhug-autoHide: Toggle Auto Hide Auxiliary Bar for Current Workspace"
+      },
+      {
+        "command": "warmhug.autoHide.hidePanel",
+        "title": "warmhug-autoHide: Toggle Auto Hide Panel for Current Workspace"
+      },
+      {
+        "command": "warmhug.convert4to2",
+        "title": "warmhug: Convert indentation from tab or 4 spaces into 2 spaces"
+      },
+      {
+        "command": "warmhug.asciiArt",
+        "title": "warmhug-asciiArt: ascii art Convert"
+      },
+      {
+        "command": "warmhug.asciiArtFavFont",
+        "title": "warmhug-asciiArt: ascii art fav font"
+      },
+      {
+        "command": "warmhug.closeTag",
+        "title": "warmhug: Close Tag"
+      },
+      {
+        "command": "warmhug.toggleFilesizeInfo",
+        "title": "warmhug: Toggle filesize detailed information"
+      },
+      {
+        "command": "warmhug.insertLogStatement",
+        "title": "warmhug: Insert Log Statement"
+      },
+      {
+        "command": "warmhug.terminalInit",
+        "title": "warmhug: terminal init"
+      },
+      {
+        "command": "warmhug.demo",
+        "title": "warmhug: demo"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "group": "z_commands",
+          "command": "warmhug.demo"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "warmhug.demo.context",
+          "group": "z_commands"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "warmhug.minimizer.minAll"
+        },
+        {
+          "group": "z_commands",
+          "command": "warmhug.simpleBookmark.add"
+        },
+        {
+          "group": "z_commands",
+          "command": "warmhug.simpleBookmark.list"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "group": "myGroup@1",
+          "command": "warmhug.minimizer.addToDefaultGroup"
+        },
+        {
+          "group": "myGroup@2",
+          "command": "warmhug.minimizer.addToGroup"
+        }
+      ],
+      "editor/lineNumber/context": [
+        {
+          "group": "z_commands",
+          "command": "warmhug.simpleBookmark.add"
+        },
+        {
+          "group": "z_commands",
+          "command": "warmhug.simpleBookmark.list"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "warmhug.minimizer.dispose",
+          "when": "view == warmhugPanel"
+        },
+        {
+          "group": "z_commands",
+          "command": "warmhug.terminalInit"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "warmhug.minimizer.remove",
+          "when": "view == warmhugPanel && viewItem == editorGroup",
+          "group": "inline"
+        },
+        {
+          "command": "warmhug.minimizer.restore",
+          "when": "view == warmhugPanel && viewItem == editorGroup",
+          "group": "inline"
+        },
+        {
+          "command": "warmhug.minimizer.remove",
+          "when": "view == warmhugPanel && viewItem == editorGroup"
+        },
+        {
+          "command": "warmhug.minimizer.restore",
+          "when": "view == warmhugPanel && viewItem == editorGroup"
+        },
+        {
+          "command": "warmhug.minimizer.rename",
+          "when": "view == warmhugPanel && viewItem == editorGroup"
+        },
+        {
+          "command": "warmhug.minimizer.removeFromGroup",
+          "when": "view == warmhugPanel && viewItem == editorDocument"
+        }
+      ],
+      "extension/context": [
+        {
+          "group": "z_commands",
+          "command": "warmhug.demo"
+        }
+      ],
+      "warmhug.demo.context": [
+        {
+          "group": "z_commands",
+          "command": "warmhug.demo"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "warmhug.demo.context",
+        "label": "%warmhug.demo.context.label%"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "warmhug.asciiArtFav",
+        "key": "Ctrl+Alt+1",
+        "when": "editorHasSelection"
+      },
+      {
+        "command": "warmhug.closeTag",
+        "key": "alt+.",
+        "mac": "cmd+alt+."
+      },
+      {
+        "command": "warmhug.insertLogStatement",
+        "key": "shift+ctrl+l",
+        "mac": "shift+cmd+l",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "aa-ext-hlv",
+      "definitions": {
+        "terminalItem": {
+          "type": "object",
+          "required": ["cwd"],
+          "default": {
+            "cwd": "/Users/hua/"
+          },
+          "properties": {
+            "name":{
+              "type": "string",
+              "description": "terminal tab name",
+              "default": "~"
+            },
+            "icon": {
+              "type": "string",
+              "description": "terminal tab icon",
+              "default": "person"
+            },
+            "color": {
+              "type": "string",
+              "description": "terminal tab icon color",
+              "default": "terminal.ansiGreen"
+            },
+            "cwd": {
+              "type": "string",
+              "description": "terminal tab cwd",
+              "default": "/Users/hua/inner/"
+            },
+            "autoExecuteCommands": {
+              "type": "boolean",
+              "description": "terminal text auto execute",
+              "default": true
+            },
+            "commands": {
+              "type": "array",
+              "description": "terminal texts array",
+              "default": ["echo hello"],
+              "items": {
+                "type": "string",
+                "description": "terminal single text"
+              }
+            }
+          }
+        }
+      },
+      "properties": {
+        "warmhug.terminal": {
+          "anyOf": [
+            {
+              "type": "object",
+              "$ref": "#/definitions/terminalItem"
+            },
+            {
+              "type": "array",
+              "items": { "$ref": "#/definitions/terminalItem" }
+            }
+          ]
+        },
+        "warmhug.autoHide": {
+          "type": "object",
+          "default": {
+            "enable": true,
+            "hideSideBar": true,
+            "hideAuxiliaryBar": true,
+            "hidePanel": true
+          },
+          "description": "auto hide props."
+        },
+        "warmhug.asciiArtFavFont": {
+          "type": "string",
+          "default": "Standard",
+          "description": "Favorite ASCII font (case sensitive)."
+        },
+        "warmhug.autoCloseTag.excludedTags": {
+          "type": "array",
+          "default": [
+            "area",
+            "base",
+            "br",
+            "col",
+            "command",
+            "embed",
+            "hr",
+            "img",
+            "input",
+            "keygen",
+            "link",
+            "meta",
+            "param",
+            "source",
+            "track",
+            "wbr"
+          ],
+          "description": "Set the tag list that would not be auto closed.",
+          "scope": "resource"
+        },
+        "warmhug.autoCloseTag.insertSpaceBeforeSelfClosingTag": {
+          "type": "boolean",
+          "default": false,
+          "description": "Insert a space before the forward slash in a self-closing tag.",
+          "scope": "resource"
+        },
+        "warmhug.showGzipFilesizeInStatusBar": {
+          "type": "boolean",
+          "default": false,
+          "description": "Defaults to false, whether to show gzip size in the status bar."
+        },
+        "warmhug.npmDepRegistryUrl": {
+          "type": "string",
+          "default": "https://www.npmjs.com/package/",
+          "description": "Registry URL to be used for package link."
+        },
+        "warmhug.npmDepRegistryUrlPattern": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Registry URL pattern to be used for package link.\n Example: `http://myCustomRegistry/{{pkg}}/package?queryparams`. \nTakes priority over `#warmhug.npmDepRegistryUrl#` if set."
+        }
+      }
+    }
+  }
+}

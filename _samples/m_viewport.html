@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+  <!-- 以下设置都可以 (需要更多设置)
+  <meta name="viewport" content="width=750" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="viewport" content="initial-scale=0.5" />
+  -->
+  <!-- 设置了 scale 可以不设置 width=device-width -->
+  <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+
+  <!-- 设置已废弃的“target-densitydpi=device-dpi”，来兼容 小米2
+  <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5,user-scalable=no" />
+  -->
+
+  <!--
+    部分 vivo, 云os 等非主流设备，无法改变默认 980 viewport 宽度，
+    即 document.documentElement.clientWidth == 980
+    对此，设置 width=device-width, scale=1 不应用高清方案
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  -->
+
+  <!--
+    Taobao 高清脚本 效果 https://m.taobao.com ,
+    以下分别是在 Android / iOS dpr=2 / iOS dpr=3 设备下结果
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+  <meta name="viewport" content="initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no">
+  -->
+
+  <!-- Taobao 高清脚本 https://github.com/amfe/lib-flexible/blob/master/src/flexible.js -->
+  <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script> -->
+
+  <!-- Alipay 高清脚本 -->
+  <!--
+    vl模式; 不带viewport缩放, 用rem兼容了vw的单位, 用px做flex适配, 0.5px的单位做高清!
+    vl是iOS上最完美的适配, 既能flex, 又能vw, 又能高清. 缺点是安卓完全不支持高清!
+  <script src="https://as.alipayobjects.com/g/animajs/anima-hd/4.1.1/vl.js"></script>
+  <script>vl(100, 750);</script>
+  -->
+  <!-- vw 模式 是最简单的, 全部自动拉伸, 做页面无视屏幕适配，适合活动页开发。
+  <script src="https://as.alipayobjects.com/g/animajs/anima-hd/4.1.1/vw.js"></script>
+  <script>vw(100, 750);</script>
+  -->
+  <!-- flex 模式，高清兼容好. 安卓UC内核也兼容，当下项目开发最佳的选择。
+    antd-mobile@1 采用此方案。https://1x.mobile.ant.design/kitchen-sink/?lang=en-US
+  <script src="https://gw.alipayobjects.com/os/rmsportal/wvyABECOyfFcFuGWjLLA.js"></script>
+  -->
+  <!--
+  <script>
+    const _baseFontSize = 100;
+    const _psdWidth = 750;
+    const cw = document.documentElement.clientWidth;
+    document.documentElement.style.fontSize = `${_baseFontSize / _psdWidth * cw }px`; // 按 设计稿比例 缩放
+    // 设置 1rem = 100px (0.01rem = 1px)  但页面有 scale 缩放，最终 0.02rem = 1px 物理像素
+    document.addEventListener('DOMContentLoaded', () => document.body.style.fontSize = `${16 * 0.02}rem`);
+  </script>
+  -->
+
+  <!-- 业界“常用”设置方式，但在 HTC U-1w 页面会放大 -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <!-- 以下写全，页面能显示正常 -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" /> -->
+
+  <style>
+    body{ font-size: 32px; }
+    * {word-wrap: break-word;}
+    .secondary {color: gray; font-size: 13px;}
+  </style>
+  <script>
+    document.write('dpr: ' + window.devicePixelRatio + '<br>');
+    document.write('screenWidth: ' + window.screen.width + '<br>');
+    document.write('innerWidth (device-width): ' + window.innerWidth + '<br>');
+    document.write('clientWidth (viewport width): ' + document.documentElement.clientWidth + '<br>');
+    document.write('offsetWidth: ' + document.body.offsetWidth);
+  </script>
+</head>
+<body>
+  <div style="margin: 30px; padding: 20px; border: 1px solid #666; ">
+    viewport 的 width 没设置的话，默认是980px；
+    如果设置了 initial-scale 则 viewport = device-width / scale；
+    如果同时设置了 width 和 initial-scale，则取 min-width，即应用这 2 个的较小值 [ref](https://www.quirksmode.org/blog/archives/2013/10/preliminary_met.html)
+  </div>
+
+  <h2>查看效果（Chrome Devtool mobile Responsive mode dpr）</h2>
+  <p class="secondary">注意：Chrome 里最小 font-size 为 12, 所以在 iOS 真机上看到文字大小可能不一致</p>
+
+  <div style="font-size: 32px;">文字大小 32px</div>
+  <div style="font-size: 14px;">文字大小 14px</div>
+  <div style="font-size: 0.14rem;">文字大小 0.14rem</div>
+  <div style="margin:10px;width:80%; height: 100px; border: 1px solid red;">1px 边框</div>
+  <div style="margin:10px;width:80%; height: 1rem; border: 0.01rem solid red;">
+    0.01rem 边框（Android webview(支付宝)、原生浏览器不可见, Chrome 没问题）
+  </div>
+</body>
+</html>

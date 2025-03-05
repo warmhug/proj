@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+proxy html in domainA
+<script>
+  // 同源策略 会禁止"不同域"的 iframe 和 parent 互相访问 dom
+  // https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html
+  console.log('self.location.hash', self.location.hash);
+  console.log('parent.parent.hash', parent?.parent?.location.hash);
+  console.log('window.parent: ', parent?.location?.href);
+
+  // window.name
+  function changeWinName (name) {
+    self.name = name;
+    // 想要通过 window.name 传值，此处 需要改变域、实际页面不存在没关系
+    // location.href = 'http://localhost:3001/404.html';
+    console.log('window href', self.location.href);
+  }
+
+  // 代理 iframe 方法
+  function proxyMessage() {
+    const topWindow = parent?.parent;
+    if (!topWindow || topWindow.location.origin !== self.location.origin) {
+      // same-origin policy https://en.wikipedia.org/wiki/Same-origin_policy
+      // 如果当前页面不是 孙子window 或者 当前页面与爷爷window 不同源 则退出
+      return;
+    }
+    self.addEventListener('hashchange', function (evt) {
+      console.log('evt ifr: ', evt.newURL, evt.oldURL, location.hash);
+      // 把 hash 变更同步到 top 页面
+      topWindow.location.hash = self.location.hash;
+    });
+    changeWinName(topWindow.location.hash || self.location.hash);
+  }
+  proxyMessage();
+
+</script>
+</body>
+</html>

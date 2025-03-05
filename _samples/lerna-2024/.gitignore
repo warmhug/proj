@@ -40,15 +40,3 @@ node_modules
 dist
 out
 build
-
-# lock
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# vscode 测试和插件
-.vscode-test/
-*.vsix
-
-# 自定义
-z_*

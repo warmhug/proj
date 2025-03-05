@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>multi-touch</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style type="text/css">
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .spirit {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  }
+  </style>
+</head>
+<body>
+  <div id="canvas"></div>
+</body>
+<script type="text/javascript">
+  var canvas = document.getElementById("canvas"),
+    stacks = [{
+      color: "red"
+    }, {
+      color: "blue"
+    }, {
+      color: "green"
+    }, {
+      color: "black"
+    }, {
+      color: "yellow"
+    }, {
+      color: "orange"
+    }];
+
+  function getEmptyStack() {
+    var i = 0, s, l = stacks.length;
+    for (; i < l; i++) {
+      s = stacks[i];
+      if (!s.touchId)
+        return s;
+    }
+    return null;
+  }
+
+  function getStackByTouchId(touchId) {
+    var i = 0, s, l = stacks.length;
+    for (; i < l; i++) {
+      s = stacks[i];
+      if (s.touchId == touchId)
+        return s;
+    }
+    return null;
+  }
+
+  function touchStart(e) {
+    e.preventDefault();
+    var touches = e.changedTouches,
+      i = 0, l = touches.length, touch, stack;
+    for (; i < l; i++) {
+      touch = touches[i];
+      stack = getStackByTouchId(touch.identifier);
+      if (stack) return;
+      stack = getEmptyStack();
+      if (stack) {
+        stack.touchId = touch.identifier;
+        stack.spirit = document.createElement("div");
+        stack.spirit.className = "spirit";
+        stack.startX = touch.pageX;
+        stack.startY = touch.pageY;
+        stack.spirit.style.left = touch.pageX + "px";
+        stack.spirit.style.top = touch.pageY + "px";
+        stack.spirit.style.backgroundColor = stack.color;
+        canvas.appendChild(stack.spirit);
+      } else { // stack list is full
+        return;
+      }
+    }
+  }
+
+  function touchMove(e) {
+    e.preventDefault();
+    var touches = e.targetTouches,
+      i = 0, l = touches.length, touch, stack;
+    for (; i < l; i++) {
+      touch = touches[i];
+      stack = getStackByTouchId(touch.identifier);
+      if (stack) {
+        var x = touch.pageX - stack.startX,
+          y = touch.pageY - stack.startY,
+          spirit = stack.spirit;
+        spirit.style.webkitTransform = 'translate(' + x + 'px, ' + y + 'px)';
+      }
+    }
+  }
+
+  function touchEnd(e) {
+    var touches = e.changedTouches,
+      i = 0, l = touches.length, touch, stack;
+    for (;i < l; i++) {
+      touch = touches[i];
+      stack = getStackByTouchId(touch.identifier);
+      if (stack) {
+        stack.touchId = null;
+        canvas.removeChild(stack.spirit);
+        stack.spirit = null;
+      }
+    }
+  }
+
+  function touchCancel(e) {
+    var touches = e.changedTouches,
+      i = 0, l = touches.length, touch, stack;
+    for (;i < l; i++) {
+      touch = touches[i];
+      stack = getStackByTouchId(touch.identifier);
+      if (stack) {
+        stack.touchId = null;
+        canvas.removeChild(stack.spirit);
+        stack.spirit = null;
+      }
+    }
+  }
+
+  canvas.addEventListener("touchstart", touchStart, false);
+  canvas.addEventListener("touchmove", touchMove, false);
+  canvas.addEventListener("touchend", touchEnd, false);
+  canvas.addEventListener("touchCancel", touchCancel, false);
+</script>
+</html>

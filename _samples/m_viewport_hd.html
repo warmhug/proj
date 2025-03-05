@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+  <!-- Alipay 高清脚本 -->
+  <script src="https://gw.alipayobjects.com/os/rmsportal/wvyABECOyfFcFuGWjLLA.js"></script>
+  <style>
+    body {
+      font-size: 0.32rem;
+    }
+    /* iframe {
+      width: 50vw;
+      height: 50vh;
+      transform-origin: 0 0;
+      transform: scale(2);
+    } */
+  </style>
+</head>
+<body>
+  <h2>测试不支持高清方案的情况</h2>
+  iframe、canvas 都不支持高清方案！
+  <iframe src="http://localhost/samples/mobile/demo.html" frameborder="0"></iframe>
+  <!-- <iframe src="https://1x.mobile.ant.design/kitchen-sink/?lang=en-US" frameborder="0"></iframe> -->
+  <script>
+    const viewport = document.querySelector('meta[name=viewport]');
+    const vpContents = viewport.attributes.content.value.split(',');
+    let initScale;
+    vpContents.forEach(item => {
+      const kvs = item.split('=');
+      if (kvs[0] === 'initial-scale') {
+        initScale = kvs[1];
+      }
+    });
+    const rate = 1 / initScale;
+    const style = {
+      width: '50vw',
+      height: '50vh',
+      'transform-origin': '0 0',
+      transform: `scale(${rate})`,
+    };
+    const iframe = document.querySelector('iframe');
+    Object.assign(iframe.style, style);
+
+    console.log(initScale);
+  </script>
+</body>
+</html>

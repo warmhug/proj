@@ -1,0 +1,99 @@
+{
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvo8/0syQaGuBLCFOUJeqxIBFYYZBeje9Hx4HiOGUZiN59RL/TvXf6q6pkSJwrYNR/GYP84KsM80x7ydogyX+aV5Byip5m3lFvwoYlcR3K9m94a/+MLMLJsjzCP5Q4RzY+/CVpyxchQlZXOaXsJg6vEo9+gT+Vpan/aICcAyf1ZHiKlsszTZxBJD82PN/peG8bo2E715eEgsoEClFCs+0OqGzIGNHHY9yUfeTgGIe2SmDQED16ewTa5G/17/3I3yatv0UfetjzPJgmbZZx6FWtjpaRip6O+aHPPI074SN3UPSKs+UT95E6qIrAbGeC7Epz0dabAgFXqaL4i7qS8gZJwIDAQAB",
+  "name": "warmhug new tab",
+  "description": "Override the new tab page with a blank one",
+  "version": "1.0",
+  "manifest_version": 3,
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "action": {
+    "default_popup": "i-popup.html?context=popup",
+    "default_title": "popup"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      },
+      "description": "打开此扩展的 popup 页面"
+    },
+    "aiChat": {
+      "suggested_key": "Ctrl+Shift+V",
+      "description": "AI对话"
+    },
+    "openGoogTl": {
+      "global": true,
+      "suggested_key": "Ctrl+Shift+2",
+      "description": "打开Google翻译"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*", "<all_urls>"],
+      "js": ["common.js", "content_script.js"],
+      "all_frames": true,
+      "match_origin_as_fallback": false,
+      "run_at": "document_end"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+  "omnibox": { "keyword" : "tt" },
+  "icons": {
+    "16": "assets/favicon.png",
+    "32": "assets/favicon.png",
+    "128": "assets/favicon.png"
+  },
+  "permissions": [
+    "experimental",
+    "activeTab",
+    "alarms",
+    "bookmarks",
+    "cookies",
+    "clipboard",
+    "clipboardWrite",
+    "clipboardRead",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "favicon",
+    "history",
+    "management",
+    "nativeMessaging",
+    "notifications",
+    "power",
+    "processes",
+    "proxy",
+    "scripting",
+    "storage",
+    "tabs",
+    "topSites",
+    "webNavigation",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["*.js"],
+    "matches": ["<all_urls>"]
+  }],
+  "sandbox": {
+    "pages": [
+    ]
+  },
+  "content_security_policy": {
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals",
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

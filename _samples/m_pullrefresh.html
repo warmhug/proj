@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {margin: 0; padding: 0}
+    .top {height: 80px; border-bottom: 3px solid green; text-align: center; padding: 20px; }
+    .container {overflow: hidden;}
+    .indicator {text-align: center; height:30px; line-height: 30px; margin-top:-30px; background: rgba(0,0,0,.1)}
+    .indicator .release,
+    .indicator .loading {display: none;}
+    .indicator.active .pull {display: none;}
+    .indicator.active .release {display: block;}
+    .indicator.active.loading .pull,
+    .indicator.active.loading .release {display: none;}
+    .indicator.active.loading .loading {display: block;}
+  </style>
+</head>
+<body>
+  <div class="top"><h2>Pull Refresh</h2></div>
+  <div class="container">
+    <div class="indicator">
+      <div class="pull">Pull down</div>
+      <div class="release">Release immediately refresh</div>
+      <div class="loading">loading...</div>
+    </div>
+    <div class="content"></div>
+  </div>
+  <script>
+    const arr = len => Array.from(new Array(len), (x, i) => i);
+    const html = (c, ci) => `<div style="border:1px dotted rgb(${Math.round(Math.random() * ci)},10,20)">${c}</div>`;
+    document.querySelector('.content').innerHTML = arr(50).reduce((pv, cv, ii) => html(`${ii} ${pv}`, 50), '');
+
+    const indicator = document.querySelector('.indicator');
+    const container = document.querySelector('.container');
+    container.addEventListener('touchstart', start);
+    container.addEventListener('touchmove', move);
+    container.addEventListener('touchend', end);
+
+
+    function animate({
+      stepCallback = () => {}, 
+      completedCallback = () => {}, 
+      duration = 2000,
+      easingMethod
+    }) {
+      var start = +new Date();
+      var lastFrame = start;
+      var percent = 0;
+
+      function step() {
+        var now = +new Date();
+
+        if (duration) {
+          percent = (now - start) / duration;
+          if (percent > 1) {
+            percent = 1;
+          }
+        }
+
+        var value = easingMethod ? easingMethod(percent) : percent;
+
+        if (stepCallback(value, now) === false || percent === 1) {
+          completedCallback();
+        } else {
+          lastFrame = now;
+          requestAnimationFrame(step);
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    function _event(e) {
+      if (e.touches && e.touches.length) {
+        return e.touches[0];
+      }
+      if (e.changedTouches && e.changedTouches.length) {
+        return e.changedTouches[0];
+      }
+      return e;
+    }
+
+    let distanceToRefresh = 30; // same with the indicator's hidden height
+    let onLoad = () => new Promise((resolve, reject) => {
+      setTimeout(() => resolve(), 1500);
+    });
+
+    let animId;
+    let _pageY;
+    let _distY = 0;
+    function start(e) {
+      const _e = _event(e);
+      _pageY = _e.pageY;
+      _distY = 0;
+
+      // According to the scrollTop of body
+      if (document.body.scrollTop > 0) {
+        return;
+      }
+      if (indicator.className.indexOf('loading') > -1) {
+        return;
+      }
+      
+      _translate(_distY);
+      // e.preventDefault();
+    }
+    function move(e) {
+      const _e = _event(e);
+      const _diff = Math.round(_e.pageY - _pageY);
+      _pageY = _e.pageY;
+      _distY += _diff;
+      
+      // According to the scrollTop of body
+      if (document.body.scrollTop > 0) {
+        return;
+      }
+      if (indicator.className.indexOf('loading') > -1) {
+        return;
+      }
+
+      _translate(_distY);
+    }
+
+    function end(e) {
+      // According to the scrollTop of body
+      if (document.body.scrollTop > 0) {
+        // _distY = 0;
+        // return;
+      }
+      if (indicator.className.indexOf('loading') > -1) {
+        return;
+      }
+      if (_distY < 0) {
+        _distY = 0;
+        indicator.style.transform = `translate3d(0, 0, 0) scale(1)`;
+      }
+
+      const anim = () => animate({
+        duration: 1000,
+        easingMethod: t => 1+(--t)*t*t*t*t,
+        stepCallback: (value, now) => {
+          indicator.style.transform = `translate3d(0, ${_distY - _distY * value}px, 0) scale(1)`;
+        },
+        completedCallback: () => indicator.className = 'indicator',
+      });
+      
+      if (_distY >= distanceToRefresh) {
+        // _distY = distanceToRefresh;
+        indicator.style.transform = `translate3d(0, ${distanceToRefresh}px, 0) scale(1)`;
+        indicator.className = 'indicator active loading';
+        onLoad().then(() => {
+          anim();
+        })
+      } else {
+        anim();
+      }
+    }
+    
+    function _translate(y) {
+      if (y >= distanceToRefresh) {
+        indicator.className = 'indicator active';
+      } else {
+        indicator.className = 'indicator';
+      }
+        
+      indicator.style.transform = `translate3d(0, ${y < 0 ? 0 : y}px, 0) scale(1)`;
+    }
+  </script>
+</body>
+</html>

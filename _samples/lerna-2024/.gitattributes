@@ -8,3 +8,6 @@ yarn.lock                    merge=binary
 
 # For more information, see this issue: https://github.com/microsoft/rushstack/issues/108
 *.json                       linguist-language=JSON-with-Comments
+
+/.yarn/releases/** binary
+/.yarn/plugins/** binary

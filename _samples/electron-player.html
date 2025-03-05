@@ -1,0 +1,273 @@
+<!--
+## 视频“动态加速”功能 2017
+> 有字幕时 速度为 1x, 没字幕时 速度为 3x
+> 方便“高效”学英语！
+字幕文件 需和 视频文件放在`同目录`下、命名规则：`srt-videoName.srt`
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>player</title>
+<!-- bootstrap.css Bootstrap v3.3.7 -->
+<link rel="stylesheet" href="https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css">
+<link href="http://vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet">
+<!-- videojs-dock.css -->
+<link href="https://gw.alipayobjects.com/os/rmsportal/SunZxbEHhikrAUeyzSAs.css" rel="stylesheet">
+<style>
+  html, body { height: 100%; }
+  body { margin: 0; display: flex; align-items: center; justify-content: center; }
+  #mvideo {
+    /* margin: 0px auto; */
+    /* width: 1080px; height: 600px; */  /* 16:9 ~= 1080:600 主流视频尺寸 */
+    width: 100vw;
+    height: calc(100vw * 0.5625); /*16:9 aspect ratio*/
+    max-height: 688px;
+    max-width: calc(688px / 0.5625);
+  }
+  .vjs-paused .vjs-control-bar {
+    opacity: 0;
+  }
+
+  .rate, .list-container {
+    position: absolute; right: 20px; z-index: 999; color: white; font-size: 15px; }
+  .rate { top: 10px;  }
+  .list-container { top: 35px;  }
+  .list-container > span { cursor: pointer; color: #acd6ff; }
+  .list-container a { text-align: right; }
+  #playlist { width: 100%; max-height: 600px; overflow: auto; }
+  #playlist .item { background-color: rgba(99,99,99,.5); padding: 10px; border-bottom: 1px solid #fff; }
+  #playlist p { margin: 0; }
+  #playlist p .subtitle { padding: 1px; border: 1px solid red; border-radius: 3px; margin-right: 3px; }
+  #playlist p:first-child { margin-bottom: 10px; }
+  #playlist .playing { background-color: #6b6b56; }
+</style>
+</head>
+<body>
+<video id="mvideo"
+  class="video-js vjs-default-skin vjs-big-play-centered"
+  controls>
+</video>
+<template id="tmp">
+  <div class="rate"></div>
+  <div class="list-container">
+    <span data-toggle="collapse" href="#playlist">显/隐 播放列表</span>
+    <div class="collapse" id="playlist"></div>
+  </div>
+</template>
+<script src="http://vjs.zencdn.net/5.11.6/video.min.js"></script>
+<!-- videojs-dock.js -->
+<script src="https://gw.alipayobjects.com/os/rmsportal/EjmvXAeRayDABBQwzEQo.js"></script>
+<!-- videojs.hotkeys.min.js -->
+<script src="https://os.alipayobjects.com/rmsportal/ggQzhojOhUGULmwqXFKA.js"></script>
+<script src="https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js"></script>
+<!-- bootstrap.js Bootstrap v3.3.7 -->
+<script src="https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js"></script>
+<script>
+  function mkVideo(videoData = []) {
+    // http://docs.videojs.com/docs/api/player.html
+    // https://github.com/videojs/video.js/blob/master/docs/guides/components.md
+    var player = videojs('mvideo', {
+      playbackRates: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4],
+      inactivityTimeout: 1500,
+      aspectRatio: '16:9',
+      controlBar: {
+        muteToggle: true,
+        progressControl: {
+          keepTooltipsInside: true
+        }
+      }
+    }, function() {
+      console.log('Good to go!');
+      this.hotkeys();
+      // this.play(); // if you don't trust autoplay for some reason
+    });
+    // console.log(player.el())
+    // player.volume(0.5);
+    player.on('mouseout', function () { this.userActive(false) });
+    // var button = player.addChild('button');
+    // console.log(button.el()); // -> button element
+
+    var Component = videojs.getComponent('Component');
+    var Myc = videojs.extend(Component, {
+      constructor: function(player, options) {
+        Component.apply(this, arguments);
+      },
+      createEl: function() {
+        return videojs.createEl('div', { id: 'ratelist'});
+      }
+    });
+    videojs.registerComponent('Myc', Myc);
+    var ratelist = player.addChild('Myc');
+    // console.log(ratelist);
+    document.getElementById('ratelist').innerHTML = document.getElementById('tmp').innerHTML;
+
+    var subtitle;
+    var rateEle = $('.rate');
+    var initRateChange = false;
+    var startRateChange = false;
+    var endRateChange = false;
+    var playbackRateBig = 3;  // 加速度
+    var playbackRateNormal = 1.2;  // 正常速度
+    window.ad = function(val, p) {
+      console.log(val, p);
+      p ? (playbackRateBig = val) : (playbackRateNormal = val);
+    }
+    var rateTextFn = (p, n) => `
+    P: <input type="number" value=${p} style="width:40px;color:blue;" onchange="ad(this.value, 1)">,
+    N: <input type="number" value=${n} step="0.1" style="width:40px;color:blue;" onchange="ad(this.value)">,
+    动态加速度：`;
+    player.on('timeupdate', function() {
+      if (subtitle) {
+        var rateText = rateTextFn(playbackRateBig, playbackRateNormal);
+        // 一开始一般没字幕，就设置加速
+        if (!initRateChange) {
+          player.playbackRate(playbackRateBig);
+          rateEle.html(rateText + playbackRateBig);
+          initRateChange = true;
+          // console.log(player.currentTime(), player.playbackRate(), subtitle);
+        }
+        var curr = parseInt(player.currentTime() * 1000);
+        var len = subtitle.length;
+        for (var index = 0; index < len; index++) {
+          var sub = subtitle[index];
+          if (curr < sub.endTime && curr > sub.startTime) {
+            // console.log('> start', index)
+            endRateChange = false;
+            if (!startRateChange) {
+              player.playbackRate(playbackRateNormal);
+              rateEle.html(rateText + playbackRateNormal);
+              startRateChange = true;
+            }
+            break;
+          } else if (curr > sub.endTime &&
+            subtitle[index + 1] && curr < subtitle[index + 1].startTime) {
+            // console.log('> end', index, curr, sub.endTime, subtitle[index + 1].startTime)
+            startRateChange = false;
+            if (!endRateChange) {
+              player.playbackRate(playbackRateBig);
+              rateEle.html(rateText + playbackRateBig);
+              endRateChange = true;
+            }
+            break;
+          } else if (curr > sub.endTime) {
+            continue;
+          } else {
+            break;
+          }
+          // console.log('yep, not enter it!');
+        }
+      }
+    });
+
+    $('#playlist').html(videoData.map((item, index) => {
+      // console.log(item.info.subtitle);
+      return `<div class="item" index="${index}">
+        <p>${item.info.subtitle ? `<b class="subtitle">S</b>` : ''}${item.info.title}</p>
+        <p>${item.info.description}</p>
+      </div>`
+    })).delegate('.item', 'click', function () {
+      var index = $(this).attr('index');
+      subtitle = videoData[index].info.subtitle;
+      player.src(videoData[index].source);
+      player.dock(videoData[index].info);
+      player.play();
+      $(this).addClass('playing').siblings().removeClass('playing');
+    });
+  }
+
+  // https://www.npmjs.com/package/subtitles-parser
+  var parser = (function() {
+    var pItems = {};
+    pItems.fromSrt = function(data, ms) {
+      var useMs = ms ? true : false;
+      data = data.replace(/\r/g, '');
+      var regex = /(\d+)\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})/g;
+      data = data.split(regex);
+      data.shift();
+      var items = [];
+      for (var i = 0; i < data.length; i += 4) {
+        items.push({
+          id: data[i].trim(),
+          startTime: useMs ? timeMs(data[i + 1].trim()) : data[i + 1].trim(),
+          endTime: useMs ? timeMs(data[i + 2].trim()) : data[i + 2].trim(),
+          text: data[i + 3].trim()
+        });
+      }
+      return items;
+    };
+    pItems.toSrt = function(data) {
+      if (!data instanceof Array) return '';
+      var res = '';
+      for (var i = 0; i < data.length; i++) {
+        var s = data[i];
+        if (!isNaN(s.startTime) && !isNaN(s.endTime)) {
+          s.startTime = msTime(parseInt(s.startTime, 10));
+          s.endTime = msTime(parseInt(s.endTime, 10));
+        }
+        res += s.id + '\r\n';
+        res += s.startTime + ' --> ' + s.endTime + '\r\n';
+        res += s.text.replace('\n', '\r\n') + '\r\n\r\n';
+      }
+      return res;
+    };
+    var timeMs = function(val) {
+      var regex = /(\d+):(\d{2}):(\d{2}),(\d{3})/;
+      var parts = regex.exec(val);
+      if (parts === null) {
+        return 0;
+      }
+      for (var i = 1; i < 5; i++) {
+        parts[i] = parseInt(parts[i], 10);
+        if (isNaN(parts[i])) parts[i] = 0;
+      }
+      // hours + minutes + seconds + ms
+      return parts[1] * 3600000 + parts[2] * 60000 + parts[3] * 1000 + parts[4];
+    };
+    var msTime = function(val) {
+      var measures = [ 3600000, 60000, 1000 ];
+      var time = [];
+      for (var i in measures) {
+        var res = (val / measures[i] >> 0).toString();
+        if (res.length < 2) res = '0' + res;
+        val %= measures[i];
+        time.push(res);
+      }
+      var ms = val.toString();
+      if (ms.length < 3) {
+        for (i = 0; i <= 3 - ms.length; i++) ms = '0' + ms;
+      }
+      return time.join(':') + ',' + ms;
+    };
+    return pItems;
+  })();
+  // ignore exports for browser
+  // if (typeof exports === 'object') { module.exports = parser; }
+
+  var domain = 'http://localhost:3000/';
+  var enumExts = ['mp4', 'mkv', 'ogg'];
+  var videoNames = ['videoName', 'videoName1'];
+  var videoData = [];
+  var createData = (vName, ext) => {
+    const src = `${vName}`;
+    // const src = `file://Users/hua/Downloads/${vName}`;
+    const extFormat = ext === 'mkv' ? 'webm' : ext;
+    $.get(`${domain}srt-${vName}.srt`, srtFile => {
+      videoData.push({
+        info: {
+          title: vName,
+          description: '',
+          subtitle: parser.fromSrt(srtFile, true)
+        },
+        source: { src, type: `video/${extFormat}` }
+      });
+    });
+  }
+  mkVideo(videoData);
+
+  console.log('electron process.versions', process?.versions)
+
+</script>
+</body>
+</html>

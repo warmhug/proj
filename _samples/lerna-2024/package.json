@@ -7,7 +7,7 @@
     "lint": "eslint '**/*/src/**/*.{js,jsx,ts,tsx}'",
     "type-check": "tsc --noEmit",
     "deploy": "cross-env SITE_DEPLOY='TRUE' npm run build && gh-pages -d ./dist",
-    "sync:tnpm": "node -e 'require(\"./scripts/syncTNPM\")()'"
+    "postversion": "node build-update-alias.js $npm_package_version"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

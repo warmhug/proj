@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "aaabbbcccsews.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaa" },
+        { "header": "sec-ch-ua", "operation": "remove" },
+        { "header": "sec-ch-ua-mobile", "operation": "remove" },
+        { "header": "sec-ch-ua-platform", "operation": "remove" },
+        { "header": "sec-fetch-user", "operation": "set", "value": "?1" },
+        { "header": "sec-fetch-dest", "operation": "set", "value": "document" },
+        { "header": "sec-fetch-site", "operation": "set", "value": "same-origin" }
+      ]
+    },
+    "condition": { "urlFilter": "drive/me", "resourceTypes": ["sub_frame"] }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" }
+      ]
+    },
+    "condition": { "urlFilter": "baidu.com/s", "resourceTypes": ["sub_frame"] }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaae" },
+        { "header": "sec-fetch-user", "operation": "set", "value": "?1" },
+        { "header": "sec-fetch-dest", "operation": "set", "value": "document" },
+        { "header": "sec-fetch-site", "operation": "set", "value": "same-origin" }
+      ],
+      "responseHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaabb" },
+        { "header": "content-security-policy", "operation": "set", "value": "img-src 'self'"},
+        { "header": "x-frame-options", "operation": "remove" }
+      ]
+    },
+    "condition": { "urlFilter": "icloud.com.cn", "resourceTypes": ["sub_frame"] }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "chrome-extension://pbcjojjclbiihmponegploiehianebdk/test.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://www.xxxxx/main.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaa" },
+        { "header": "sec-fetch-user", "operation": "set", "value": "?1" },
+        { "header": "sec-fetch-dest", "operation": "set", "value": "document" },
+        { "header": "sec-fetch-site", "operation": "set", "value": "same-origin" }
+      ],
+      "responseHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaagg" },
+        { "header": "content-security-policy", "operation": "remove"},
+        { "header": "X-Frame-Options", "operation": "remove" }
+      ]
+    },
+    "condition": { "urlFilter": "translate.google.com", "resourceTypes": ["sub_frame"] }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaa" },
+        { "header": "sec-fetch-user", "operation": "set", "value": "?1" },
+        { "header": "sec-fetch-dest", "operation": "set", "value": "document" },
+        { "header": "sec-fetch-site", "operation": "set", "value": "same-origin" }
+      ],
+      "responseHeaders": [
+        { "header": "aaaa", "operation": "set", "value": "vaaagg" },
+        { "header": "content-security-policy", "operation": "remove"},
+        { "header": "X-Frame-Options", "operation": "remove" }
+      ]
+    },
+    "condition": { "urlFilter": "feishu.cn/messenger", "resourceTypes": ["sub_frame"] }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" }
+      ]
+    },
+    "condition": { "urlFilter": "en998.com", "resourceTypes": ["sub_frame"] }
+  }
+]

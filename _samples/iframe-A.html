@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  场景: A 页面使用 iframe 跨域包含B页面. A/B 页面不同域，A 页面无法获取并自适应 B 页面高度.
+
+<!--
+方案一：代理 iframe
+- 增加 C 页面，A/C 页面同域，A 包含 B，B 包含 C，B 通知 C 高度，C 调整 A 页面 iframe 高度。
+- 也可以 通过设置 iframe 页面的 window.name 传递信息
+- 问题: A和C页面虽然是同域, 但C页面因为是被不同域的B页面创建、导致请求C页面时无法携带cookie，后端服务就对C页面做拦截、并跳转到 sso登录页，这样C页面的代码无法执行了。
+
+示例如下：
+
+http://localhost:3000/A.html
+<iframe src="http://localhost:3001/B.html"></iframe>
+<script>
+  function resizeIframe() {}
+</script>
+
+http://localhost:3001/B.html
+<iframe id="proxyHtml" src=""></iframe>
+<script>
+document.getElementById('proxyHtml').src =
+  `http://localhost:3000/C.html?height=${document.body.scrollHeight}&v=random`;
+</script>
+
+http://localhost:3000/C.html  proxy.html
+<script>
+  const height = new URLSearchParams(self.location.search).get('height')
+  parent.parent.resizeIframe(height);
+</script>
+
+方案二：postMessage
+只需要 AB 页面即可，不需要 C 页面。
+-->
+
+client html in domainA, 尝试 url 后加上 #aa_0.7262653786992572
+<br>
+<iframe id="ifr" src="http://localhost:3001/iframe-B.html"></iframe>
+<script>
+  const ele = document.querySelector('#ifr');
+  const iframeWindow = (ele)?.contentWindow || window.frames[0];
+  if (ele && iframeWindow) {
+    // 发消息太早，需等 iframe 加载完成
+    // iframeWindow?.postMessage({ hashValue: window.location.hash }, '*');
+    ele.addEventListener('load', () => {
+      // 等 iframe 加载完成、其内监听消息的事件才会注册、才会开始接收消息
+      console.log('sync url: ele iframe onload: ');
+      iframeWindow?.postMessage({ hashValue: window.location.hash }, '*');
+      // 注册事件，接收来自 iframe 内的消息。
+      window.addEventListener('message', () => {
+        console.log('同 iframe 内的 message 事件代码类似');
+      }, false);
+    }, false);
+  }
+
+</script>
+
+<br>
+<iframe
+  sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals allow-top-navigation allow-top-navigation-by-user-activation"
+  src="https://www.baidu.com/"
+>
+</iframe>
+</body>
+</html>

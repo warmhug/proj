@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  /* Or use `html` insead of `:root` */
+  :root {
+    font-size: 16px;
+  }
+  body {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 0.875rem;
+    padding: .5em 1em;
+    border: .125em solid #e3e3e3;
+  }
+  @media (min-width: 48rem){ /* min-width: 768px */
+    button { font-size: 1.125rem; }
+  }
+  @media (min-width: 62rem){ /* min-width: 992px */
+    button { font-size: 1.375rem; }
+  }
+  .container {
+    /*font-size: 14px;*/
+    font-size: .875rem;
+    width: 20rem;
+  }
+  button {
+    font-size: .875rem;  /* Still use font-size: 14px*/
+    padding: .5em 1em;
+    border: .125em solid #e3e3e3;
+  }
+  </style>
+</head>
+<body>
+  <button>outer btn</button>
+  <div class="container">
+    <button>inner btn</button> <br />
+    1rem 等于 html 元素的 font-size 大小 (大多数浏览器默认 html 字号都是 16px, 所以默认 1rem=16px) <br>
+    注意：在 Chrome 上最终合成显示的最小的字号为 12px，所以小于此值会被放大显示为此值。
+  </div>
+</body>
+</html>

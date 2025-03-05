@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+data html in server domainB
+<button>setHash</button>
+<div class="hash"></div>
+<script>
+
+  // window.postMessage 方法
+  window.addEventListener('message', function(evt) {
+    console.log('get message', evt.data.hashValue, evt);
+    if (
+      evt.data.hashValue &&
+      evt.data.hashValue !== location.hash &&
+      // 排除掉来自同一个域的可能干扰信息 (比如当前页面又创建的iframe或浏览器插件发送的信息)
+      evt.origin !== location.origin
+    ) {
+      document.querySelector('.hash').innerHTML = evt.data.hashValue;
+      location.hash = evt.data.hashValue;
+    }
+  }, false);
+
+  function postMessage (msg) {
+    // 注意 拿到接收消息窗口的引用
+    // 指定域、可能会报 Failed to execute 'postMessage' on 'DOMWindow' 错误，改为 * 即可。
+    self.parent.postMessage({ hashValue: msg }, 'http://localhost:3000');
+    // self.parent.postMessage({ hashValue: msg }, '*');
+  }
+
+
+  /*
+  在没有 cors 之前，利用 iframe 获取跨域数据 的方法中：
+  这个页面就是 data.html 页面，和 后端服务的接口 同域、但和用户看到的 前端页面 client.html 不同域。
+  这个页面能直接使用 xhr 获取后端数据 xhrData，再通过类似如下的 hash拼接
+    const proxyHash = `${Math.floor(Math.random() * 100)}-${xhrData}`;
+  再传给与 用户看到的 前端页面 client.html 相同域的 client-proxy.html 页面 的 url hash 上。
+  再在 client-proxy.html 里、监听 hash 变化，把内容同步给与它同域的前端页面 client.html 里。
+  */
+
+  // window.name 方法
+  window.name = 'aaaa';
+  setInterval(() => {
+    return;
+    console.log('interval window.name: ', window.name);
+    const proxyIframe = document.getElementById('proxyIframe');
+    console.log('ifa window.name: ', proxyIframe?.name);
+    // proxyIframe 域名修改为和当前页面 同域，才能获取到 contentWindow 属性
+    console.log('ifa window.name: ', proxyIframe.contentWindow?.name);
+    // const ifaDom = proxyIframe.contentDocument || proxyIframe.contentWindow.document;
+    // console.log('ifaDom: ', ifaDom);
+  }, 5000);
+  console.log('window.parent: ', window.parent?.location?.href);
+  console.log('window.parentName: ', window.parent?.name);
+
+  // 代理 iframe 方法
+  function createProxyIframe(hash = '') {
+    // iframe 的 src 里只有 hash 改变时, 页面的 hashchange 监听会执行，其他外层代码还会不会再执行？
+    const proxyPageUrl = `http://localhost:3000/iframe-proxy.html?${hash}`
+    let proxyIframe = document.getElementById('proxyIframe');
+    if (!proxyIframe) {
+      proxyIframe = document.createElement('iframe');
+      proxyIframe.id = 'proxyIframe';
+      proxyIframe.style.display = 'none';
+      proxyIframe.src = proxyPageUrl;
+      document.body.appendChild(proxyIframe);
+    } else {
+      proxyIframe.src = proxyPageUrl;
+    }
+  }
+  createProxyIframe();
+
+  document.querySelector('button').addEventListener('click', () => {
+    location.hash = `#aa_${Math.random()}`;
+    postMessage(location.hash);
+    createProxyIframe(location.hash);
+  });
+</script>
+</body>
+</html>

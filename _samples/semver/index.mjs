@@ -50,6 +50,8 @@ async function test() {
   console.log('major: ', semver.major('1.2.3-beta.0'));
   console.log('minor: ', semver.minor('1.2.3-beta.0'));
   console.log('semver.valid', semver.valid('1.2.3-beta.20+aseds'));
+  console.log('semver.parse ', semver.parse('^1.2.3'));
+  console.log('semver.minVersion ', semver.minVersion('^1.2.3'));
   console.log('semver.parse build: ', semver.parse('1.2.3-beta.20+aseds'));
   console.log('semver.parse build: ', semver.parse('1.2.3+xxbuild'));
   console.log('semver.parse build inc: ', semver.inc('1.2.3+xxbuild', 'patch'));

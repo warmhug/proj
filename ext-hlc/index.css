@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  /* background-image: url(https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg); */
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  /* background-color: #EFFACE; */
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+.ce-wrapper {
+  display: flex;
+  position: relative;
+  margin: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 32px);
+}
+
+.iframe-wrap {
+  position: relative;
+}
+.iframe-wrap .iframe-title {
+  position: absolute;
+  top: -1px;
+  left: 10px;
+  opacity: .3;
+}
+.iframe-wrap .tip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #bbb;
+}
+.iframe-wrap iframe {
+  border: none;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-wrap {
+  /* height: 300px; */
+  &.google {
+    height: 450px;
+  }
+}
+
+.ce-wrapper > .iframe-wrap {
+  height: 100%;
+  padding-right: 4px;
+}
+
+.ce-wrapper .major {
+  flex: 1;
+  background-color: #fff;
+  .urls-wrap {
+    padding: 4px 0;
+    margin-bottom: 4px;
+    background-color: #cddc39;
+  }
+}
+
+#bookmarks ul {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: #fff;
+  font-size: 12px;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  li a {
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+    img {
+      max-width: 16px;
+      margin-right: 4px;
+    }
+  }
+
+  li {
+    list-style: none;
+    position: relative;
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+
+  li > ul {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 1px -1px 0px 2px rgba(0, 0, 0, 0.2);
+  }
+  li:hover > ul {
+    display: block;
+  }
+}

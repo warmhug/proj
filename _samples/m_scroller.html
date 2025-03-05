@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet/less" type="text/css" href="./m_scroller.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+  <title>scroll demo</title>
+</head>
+<body>
+  <div class="login-container">
+    <div class="header">
+      <div class="bg"></div>
+      <div class="des">
+        <div class="title">这是标题</div>
+        <div class="brief">这是简介，这是简介，这是简介，这是简介</div>
+        <div id="log"></div>
+      </div>
+    </div>
+    <div class="scroller-container">
+      <div class="scroller">
+        <div id="main"></div>
+      </div>
+    </div>
+    <ul id="J_list" class="list">
+      <li class="J_listitem active">
+        aaaaa
+      </li>
+      <li class="J_listitem active">
+        <span><div><b>测试 parentNode</b></div></span>
+      </li>
+      <li class="J_listitem">
+        测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>
+      </li>
+      <li class="J_listitem">
+        测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>
+      </li>
+    </ul>
+    <div class="footer">
+      <button class="button button-primary" type="submit">确认</button>
+      <button class="button">取消</button>
+    </div>
+  </div>
+  <script src="./m_scroller.js"></script>
+  <script>
+    const container = document.querySelector('.scroller-container');
+    const scroller = document.querySelector('.scroller');
+
+    const arr = len => Array.from(new Array(len), (x, i) => i);
+    const html = (c, ci) => `<div style="border:1px dotted rgb(${Math.round(Math.random() * ci)},10,20)">${c}</div>`;
+    document.querySelector('#main').innerHTML = arr(10).reduce((previousValue, currentValue, index) => `${html(
+        arr(20).reduce((pv, cv, ii) => html(`${index}-${ii} ${pv}`, 50), ''),
+        255
+      )}${previousValue}`, '');
+    simulatedScroller(container, scroller);
+  </script>
+  <script>
+    var listContainer = document.getElementById('J_list');
+    function getTarget(node) {
+      var isTarget = function(ele) {
+        return ele.tagName.toLocaleLowerCase() === 'li' && ele.className.indexOf('J_listitem') > -1;
+      }
+      if (isTarget(node)) {
+        return node;
+      }
+      do {
+        node = node.parentNode;
+      } while(!isTarget(node));
+      return node;
+    }
+    function removeClass(ele, cls) {
+      var clsArr = ele.className.split(' ');
+      for (var index = 0; index < clsArr.length; index++) {
+        var cl = clsArr[index];
+        if (cl === cls) {
+          clsArr.splice(index--, 1);
+        }
+      }
+      ele.className = clsArr.join(' ');
+      return ele;
+    }
+    listContainer.addEventListener('click', function(ev) {
+      var ele = ev.target || ev.srcElement;
+      ele = ele !== this && getTarget(ele);
+      var items = Array.prototype.slice.call(this.getElementsByClassName('J_listitem'))
+      for (var index = 0; index < items.length; index++) {
+        removeClass(items[index], 'active');
+      }
+      if (ele) {
+        ele.className = ele.className + ' active';
+      }
+    });
+  </script>
+</body>
+</html>
