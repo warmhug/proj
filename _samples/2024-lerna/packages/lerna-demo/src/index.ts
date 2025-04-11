@@ -1,6 +1,5 @@
 import { IsBoolean, IsOptional } from 'class-validator';
 
-import { get, post } from './http';
 
 export namespace offStyleDTO {
   export const Res = Boolean();
@@ -12,5 +11,5 @@ export namespace offStyleDTO {
 }
 
 export const offStyle: SApi.offStyle.Fn = (params, options) => {
-  return post('/proxy/off', params, options);
+
 };

@@ -20,34 +20,31 @@ permalink: /
 [时代周刊](https://time.com)  [纽约时报](https://nytimes.com)
 [华尔街日报](https://www.wsj.com)  https://youtube.com
 https://instagram.com  https://whatsapp.com
+
 [科技周刊](https://www.ruanyifeng.com/blog/2024/10/weekly-issue-322.html)
-
-
-[codesandbox](https://codesandbox.io/s/zpjo211yp) [codepen](https://codepen.io)  GitHub登录
-[JavaScript risingstars](https://risingstars.js.org)
-[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
-[chromestatus](https://www.chromestatus.com/features)、[webkit](https://webkit.org/)
-[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
 [chrome-experiments](https://experiments.withgoogle.com/collection/chrome)
+[chromestatus](https://www.chromestatus.com/features)、[webkit](https://webkit.org/)
+https://coolshell.cn
 
-[react-next](https://www.react-next.com/)
+GitHub登录 https://codesandbox.io  https://codepen.io
+[JavaScript risingstars](https://risingstars.js.org)
+[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
+[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
 [stateofreact](https://2023.stateofreact.com)
 [awesome-react](https://github.com/enaqx/awesome-react)
 [awesome-react-components](https://github.com/brillout/awesome-react-components)
+[react-next](https://www.react-next.com/)
+2025 react-libraries https://www.robinwieruch.de/react-libraries/
 
-https://npmtrends.com/lint-staged-vs-pre-commit-vs-pretty-quick
 [设计工具排名](https://uxtools.co/tools/design)
-[2019中国开源软件榜](https://www.oschina.net/project/top_cn_2019)
-[2018前端技术清单](https://juejin.im/post/5bdfb387e51d452c8e0aa902)
-https://coolshell.cn
+https://npmtrends.com/lint-staged-vs-pre-commit-vs-pretty-quick
 
 
 ## AI 场景
 
+https://huggingface.co/  https://openrouter.ai/rankings
 https://lmarena.ai/  https://openlm.ai/chatbot-arena/
-https://huggingface.co/
 https://app.slack.com/client/T053EMGBEEN/C05BVLPE885?geocode=zh-cn
-https://openrouter.ai/rankings
 2025-01 大模型竞技场
 
 综合/模型厂商
@@ -57,6 +54,7 @@ https://www.doubao.com/chat/  https://kimi.moonshot.cn
 https://www.meta.ai/  https://llama3.dev/
 
 套壳
+https://metaso.cn/
 https://onionai.so/
 https://poe.com/
 https://aichatru.ru/en
@@ -67,6 +65,7 @@ https://duckduckgo.com/?q=DuckDuckGo&ia=chat
 https://mp.weixin.qq.com/s/qdXnBoMV4u2r-abUSnFReA
 
 代码
+比较 https://zhuanlan.zhihu.com/p/708820713
 字节 https://www.trae.ai/ https://www.trae.com.cn/
 https://www.cursor.com/  Windsurf https://codeium.com/
 支付宝 https://tbox.alipay.com/  蚂蚁 https://weavefox.ai/
@@ -75,7 +74,9 @@ https://bolt.new/  https://githubnext.com/projects/github-spark
 字节 编程助手 https://www.marscode.com 海外 https://www.coze.com
 网易-海豹D2C https://music.163.com/st/seal
 https://www.ancodeai.com  https://github.com/abi/screenshot-to-code
+
 生成 AI 应用
+https://github.com/rag-web-ui/rag-web-ui
 https://www.wordware.ai/
 https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
 自然语言命令行 https://github.com/guoriyue/LangCommand
@@ -94,35 +95,135 @@ https://github.com/cs-lazy-tools/ChatGPT-On-CS
 阿里 B2B 个人采购代理 https://www.accio.com/
 音乐 https://lamucal.ai/
 
----
-
-AI Design: Google [AutoDraw](https://www.autodraw.com/) (原理[介绍](https://research.googleblog.com/2017/04/teaching-machines-to-draw.html))、鲁班、[sketch-rnn](https://github.com/tensorflow/magenta/blob/master/magenta/models/sketch_rnn/README.md)、[机器作艺术画](https://robotart.org/artworks/)、设计与人工智能[系列报告](http://sheji.ai/#/?_k=twxxpk)、[lobe.ai 生成表情](https://lobe.ai/)。
-
-AI 编码/代码推荐: [为什么难](https://www.outsystems.com/blog/posts/ai-machine-learning-future-low-code/)、Facebook [Aroma](https://code.fb.com/developer-tools/aroma/)、[Would-AI-be-able-to-write-code](https://www.quora.com/Would-AI-be-able-to-write-code)。
-imgcook(控件识别) / dumbo / 闲鱼UI2Code / 视觉稿还原比对-蒙娜丽莎。
-
-JS 实现神经网络、[天猫精灵](https://open.bot.tmall.com/)、机器人工厂、阿里文娱 [AI 视频智能](https://ailab.youku.com/#/)、JS IM / [botui](https://github.com/moinism/botui)
 知识图谱 https://github.com/ownthink/KnowledgeGraphData / https://www.ownthink.com/
+Facebook [Aroma](https://code.fb.com/developer-tools/aroma/)
 2019
-
-西安交大[设计图转代码](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247489854&idx=1&sn=4828d5d36c3becdf8b1f46490b5ce708)、
-[Microsoft Sketch2Code](https://github.com/Microsoft/ailab/tree/master/Sketch2Code)、[sketch2code](https://azure.microsoft.com/en-us/blog/turn-your-whiteboard-sketches-to-working-code-in-seconds-with-sketch2code)、
-[pix2code](https://github.com/tonybeltramelli/pix2code)、
-[Screenshot-to-code](https://github.com/emilwallner/Screenshot-to-code)。
-2018 AI图转码
-
-百度大脑 http://ai.baidu.com/ 微软 https://azure.microsoft.com/en-us/services/cognitive-services/ 、阿里 PAI (数据采集，数据处理，特征工程，建模，预测服务) xNN、AliNN
-蚂蚁：分布式学习和系统：智能客服；Parameter Server架构；美国组：自然语言处理；推荐营销；小助手；商业产品架构：金融类，量化理财因子发现，金融知识图谱；AI 平台部：达尔文测试系统；底层的GPU，FPGA开发调度系统阿尔卑斯。
+百度大脑 http://ai.baidu.com/  设计与人工智能[系列报告](http://sheji.ai/#/?_k=twxxpk)
+Google [AutoDraw](https://www.autodraw.com/) (原理[介绍](https://research.googleblog.com/2017/04/teaching-machines-to-draw.html))
+2017
 2016-09 Google Allo
+
 
 
 
 ## AI 使用
 
-https://github.com/luban-agi/Awesome-AIGC-Tutorials
+
+git rebase squash 后, 还能找到 squash 前的 commit ID 内容吗?
+不同的 chrome 窗口, 怎么也能像 vscode 的 window.nativeTabs 一样合并到一起.
+2025-04-09
+
+npm 和 pnpm 在 .npmrc 文件里 可通用的配置项 都有哪些?
+怎么让 pnpm 保持和 npm 一样的 模块安装方式, 不要有 node_modules/.pnpm 目录.
+2025-04-08
+
+vscode 有个内置插件, 能检测 typescript 的语法, 不小心关掉了怎么重开?
+国内有哪些 AI 产品 能看, 当日 当周 当月 最热门的 20 条新闻?
+2025-04-07
+
+lerna + pnpm 的 monorepo 项目, 在子包里单独引入 TS 的版本, 怎么能不受 根目录的 @types/react 版本影响?
+2025-04-06
+
+对于公司内部署的 CI 构建平台, Docker资源参数(cpus/memory等)应该怎么设置, 详细解答下.
+2025-04-02
+
+js java go 等编程语言在 CI 阶段, 有哪些 优化性能和减少资源消耗 的方法, 有什么通用的工具可以使用吗?
+https://gemini.google.com/app/cc075eb2e9e4dff8
+...
+有办法绕过 chrome extension manifest v3 禁止内联 script 的限制吗?
+https://chat.deepseek.com/a/chat/s/edb9092f-5c97-461c-a2e9-0d362a2c3180
+2025-04-01
 
 
---- 2025-03
+crontab 脚本里能使用 环境变量 吗, 怎么使用?
+在 .gitconfig 里能使用环境变量吗?
+在 .gitconfig 里 怎么写注释?
+在 .zshrc 里 的变量 需要 export 导出吗?
+把 环境变量 设置在 .zshrc 里, 怎么根据目录自动使用 git 账号?
+在 ~/.zshrc 里 export 了 git_user 但在 .gitconfig 里 使用不了, 怎么了?
+2025-03-31
+
+使用 gitlab  或 github 的 monorepo 项目, 怎么能在 目录或文件级别 做文件可见性的权限控制, 或者怎么监控文件是否被下载和转存到其他地方去过?
+Git子模块（git submodule）或子树（git subtree）的使用区别?
+https://chatgpt.com/share/67e401da-969c-8008-bb41-ad633ded15e8
+https://chat.deepseek.com/a/chat/s/0b84021f-9c40-416f-8203-cde1b0009754
+git submodule 示例 https://github.com/eclipse-ecal/fineftp-server
+2025-03-26
+
+在 feature 分支打了 tag, 又进行了 git rebase master 导致 feature 分支的 tag 对应的 commit_id 不存在. 这种情况, 怎么更新 tag 对应的 commit_id? 要求能集成到 bash 脚本里.
+...
+在 feature 分支打了 tag 并推送到了远程 同名的 feature 分支, 发布后 remote feature 分支会被自动删除, 并把代码 Merge 到了 master 分支. 但 本地同名的 feature 分支仍然存在, 继续在此分支上开发, 并打了新的 tag, 那么当前 feature 分支关联了多少 tag? 远程的 feature 分支虽然被删了 但远程 tag 仍然存在, 远程 tag 对应的 commit_id 已经被合并到 master 分支, 还能查到 远程 tag 最初的 feature 分支来源吗?
+...
+使用 bash 实现以下功能:
+检查 feature 分支 以及其对应的本地 commit_id 与 remote 的 commit_id 是否一样, 不一样则报错.
+只检查当前 feature 分支相对 master 分支新产生的 git tags 和 commits 的情况.
+...
+怎么用 bash 判断本地feature分支 包含了 同名远程分支 的所有 commit ?
+如果本地 feature 分支有过 git rebase 操作, 有哪些方法能识别出来?
+https://chat.deepseek.com/a/chat/s/a1b458c9-36b5-49a0-aed4-ac8e03361407
+https://chat.deepseek.com/a/chat/s/09b782e5-cb72-425f-9ade-40dce19f84cf
+https://chatgpt.com/share/67e0fcfd-65d0-8008-8176-c4e7c00af263
+https://gemini.google.com/app/9fe03b92a9586011
+2025-03-24
+
+运行 git pull (不是 git pull origin develop ) 会把 remote 所有分支的 tags 也拉下来吗? 不会.
+...
+当远程的 git tags 有更新时, 本地的 tags 怎么和远程保持一致?
+有些标签对应的 commit_id 已经没有在 remote 仓库里, 这些标签应该也删掉吗?
+2025-03-23
+
+lerna publish from-git from-package 详解?
+为什么 from-git 适合 自动化 cicd 场景?
+使用 from-package 时, --ignore-changes 为什么不起作用?
+https://chat.deepseek.com/a/chat/s/f8b25b55-f0f0-4851-a901-0156ddd8f5d8
+2025-03-19
+
+单独的 npm 包 execa 里的 sync 和 child_process 里的 execSync 的区别?
+https://chat.deepseek.com/a/chat/s/9af55d01-f490-46bc-b8a5-677cd1a2a3bc
+2025-03-17
+
+使用 pnpm 安装了依赖, 但在 package.json 的 scripts 里使用 npm run lint, 这样有问题吗?
+如果是 monorepo 项目, 在子包里运行, 怎么查找 bin 下的二进制文件?
+https://chat.deepseek.com/a/chat/s/133eb6d1-d73f-4457-b92a-8a725cad3d1d
+2025-03-13
+
+pnpm workspace 获取各个子包之间的依赖关系, 包含 npm alias 的依赖.
+2025-03-12
+
+lerna 运行完 根目录的 version 钩子后, 虽然提示了要修改文件的版本号, 但程序那一刻 看起来还没有改动完成相应文件, 什么时候文件内容会被实际改掉? 改成 postversion 也不行.
+2025-03-11
+
+lerna 在 preversion 阶段会执行 package.json 里的 scripts, 但不希望明确写这个 scripts, 而是想由另一个脚本 动态设置 scripts 后传递给 lerna , 这样能实现吗?
+https://chat.deepseek.com/a/chat/s/aaea4f5c-0d71-4b54-b8f0-a6fc1d771ef1
+https://chatgpt.com/c/67ce9933-a260-8008-8046-cff83664fe40
+2025-03-10
+
+lerna 在更新版本时候, 有什么钩子函数, 能打印出来新旧版本号吗?
+现在是 lerna 结合 pnpm 的 monorepo 项目, 不想在每个子包都重复写 scripts 怎么能统一解决?
+2025-03-09
+
+在 monorepo node 项目里, 存在 nx.json 怎么能本地 不安装 nx 也能使用?
+...
+使用 pnpm 为了避免在 package.json 里声明, 在 postinstall 或 prepare 阶段 安装一个依赖, 怎么能避免自动修改 lock 文件.
+... 结果
+"scripts": {
+"postinstall": "pnpm install nx@latest --lockfile=false --ignore-workspace --dir ./tmp",
+}
+https://chatgpt.com/c/67cd4e89-f4a4-8008-b5e1-89bfe0c831a8
+https://chat.deepseek.com/a/chat/s/3c5acb32-1b6b-4e8c-9808-25ebc8f419d8
+https://gemini.google.com/app/9f8cca7169306de3
+2025-03-09
+
+pnpm monorepo 怎么查看除了内部 link 包之外的其他包依赖, 在 registry 是否存在?
+如果没有直接的命令, 写一个 node js 脚本来实现.
+...
+内部链接的版本号, 可以以 workspace: 或 file: 开头, 但也可以不是以它们开头.
+因为 pnpm 提供了 prefer-workspace-packages 和 link-workspace-packages 设置, 能够自动匹配引用 monorepo 内部有相同包名的其他 package. 怎么识别并处理这种情况?
+...
+包所在不一定只是 packages 目录内, 而是在 pnpm-workspace.yaml 配置中指定的, 可以通过 pnpm list --json -r 来获取所有内部包, 基于此再做过滤.
+...
+https://chat.deepseek.com/a/chat/s/f2241a08-daf7-4c21-b266-ef53b3d836e6
+2025-03-06
 
 node-semver 怎么获取 Tilde 或 Caret 标记?
 代码依赖里一般都写 Tilde 或 Caret 标记, 怎么用 node-semver 做解析?
@@ -143,10 +244,6 @@ https://chatgpt.com/share/67c6c45a-cc9c-8008-86c7-60b6ef688619
 https://grok.com/share/bGVnYWN5_a947bd4d-8829-4cbe-af01-0e9dbcef16c3
 https://gemini.google.com/app/95b09bd5710e389f
 2025-03-03
-
-pnpm -r run build 怎么先构建被依赖的包?
-对于 npm alias 形式的依赖, 没有先构建 dependencies 是怎么了?
-2025-02-28
 
 lerna version 不能自动更改 npm alias 的版本号, 怎么解决这个问题? 怎么解决?
 除了 lerna 有其他类似工具能解决这个问题吗?
@@ -184,34 +281,35 @@ npm yarn 和 pnpm 的 lock 文件内容结构详细解释?
 在 monorepo 项目, 怎么用 npm shrinkwrap 收集到所有子项目依赖, 并给 pnpm 使用?
 需要在 monorepo 里存在 同名包的 不同版本, 怎么实现?
 lerna 和 pnpm 支持 通过 project.json 能让存在 同名包的 不同版本, 使用 npm 能做到吗?
+2025-01 https://chatgpt.com/c/677fbce1-c1d8-8008-ba11-f56bad58fa80
 
 最近 deepseek 火热, 新闻不断, 用什么成语或习语形容 比较有趣?
 - 万众瞩目 人气爆棚 一鸣惊人 如日中天 家喻户晓 后来居上 异军突起
 - 技惊四座 炙手可热 风头正劲 抢尽风头 风头无两 声名鹊起 崭露头角
 - 独领风骚 独占鳌头 势如破竹 满城风雨 名声大噪 平地一声雷
-
+...
 deepseek 比 Gemini 豆包和kimi 优秀吗? 哪个技术实力最强? 哪个最有长期潜力和优势?
-
+...
 - DeepSeek、Gemini、豆包和 Kimi 各有千秋，没有绝对的优劣之分。选择哪个模型取决于你的具体需求和偏好。
   如果你注重技术创新和垂直领域优势，DeepSeek 或许更适合你。
   如果你需要强大的多模态能力和完善的生态系统，Gemini 或许是更好的选择。
   如果你更看重本土化服务和社交属性，豆包可能更符合你的需求。
   如果你喜欢创新功能和个性化服务，Kimi 或许能给你带来惊喜。
-
+...
 - DeepSeek 在技术研发方面投入巨大，尤其在强化学习和模型训练效率方面有独到之处。其 DeepSeek-R1 模型在海外 AI 圈引起轰动，获得大量“自来水”，甚至有博主将其誉为“开源 AGI 和文明的未来”。DeepSeek 还开源了一系列模型，并披露了所有训练秘密，这在业内是比较罕见的。
   DeepSeek： 凭借其在技术创新和成本控制方面的优势，以及开源策略，DeepSeek在技术社区中获得了良好声誉。其低成本高性能的模型有助于广泛应用，具有较大的长期潜力。
   如果你关注 多模态能力 和 国际化技术实力，Gemini 是目前最强的选择。
   如果你更看重 长上下文理解、高效推理 和 开源生态，DeepSeek 是最具潜力的模型。
   如果你主要关注 中文场景，豆包是最优选择。
   如果你需要处理 超长文本任务，Kimi 是一个不错的选择。
-
---- 2025-01
+2025-01
 
 前端或 node 项目, 引用A包的时候，比如A引用了B，B里面有overrides/resolutions，最终会装 overrides / resolutions 指向的包吗?
 主项目的 overrides/resolutions 优先级最高，覆盖所有依赖。
 如果主项目没有定义，子依赖的 overrides/resolutions 只会影响其自己的依赖树。
-
+...
 怎么在运行 npm start / build 之前, 确保 node_modules 里的依赖有被重新 Insall 过
+2025-01
 
 --- 2024-12
 
@@ -2277,351 +2375,6 @@ Widget.prototype.constructor = Widget
 ```
 
 
-### TS / node.js
-> 2024
-
-```ts
-export type * as xTypes from 'x-editor'
-export type { default as xTypes } from 'x-editor'
-
-export type ProFormListItemProps = {
-  onAfterAdd?: (...params: any) => any;
-}
-
-// next _document.tsx example
-import Document, { Head, Main, NextScript } from "next/document";
-export default class MyDocument extends Document<{ env: string; }> {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    const { env } = await getXxxConfig(ctx);
-    return { ...initialProps, env };
-  }
-  render() {
-    const { __NEXT_DATA__, env, dangerousAsPath } = this.props;
-    return (
-      <html lang="zh">
-        <Head>
-          <meta charSet="utf-8" />
-        </Head>
-        <body id="cavalvy-container">
-          <Main />
-          <NextScript />
-          body content
-        </body>
-      </html>
-    );
-  }
-}
-```
-
-基本用法
-
-```ts
-const enum StateEnum {
-  TO_BE_DONE = 0,
-  DOING = 1,
-}
-
-// Arrow function returning an array of numbers
-const getArr2 = (): (string | number)[] => {
-  return [1, '2', 3];
-};
-// arrow function
-const getObj2 = async (): Promise<{ name: string; age: number: [key: string]: any; }> => {
-  return { name: 'Bobby Hadz', age: 30, xx: 'any' };
-};
-// Readonly
-function getTuple(): Readonly<[number, number]> {
-  return [10, 100];
-  // return [10, 100] as const;
-}
-
-// 泛型
-interface GenericInterface<T> {
-  (arg: T): T
-}
-function foo<T> (arg: T): T {
-  return arg
-}
-let output = foo('string') // type of output will be 'string'
-let myFoo: GenericInterface<number> = foo
-myFoo(123)
-
-// 命名空间 types/ajax.d.ts
-declare namespace Ajax {
-  export interface AxiosResponse {
-    data: AjaxResponse
-  }
-  export interface AjaxResponse {
-    code: number,
-    data: object | null | Array<any>,
-    message: string
-  }
-}
-this.axiosRequest({ key: 'idc' }).then((res: Ajax.AjaxResponse) => {
-  console.log(res)
-})
-```
-
-
------- node.js
-
-2024 mjs 文件
-
-```js
-// const fs = require('fs');
-import path from 'path';
-
-// __dirname is not defined in ES module scope
-// const pkgFile = path.join(__dirname, './packages');
-// console.log('pkgFile: ', pkgFile);
-const cwd = process.cwd();
-const pkgPath = path.join(cwd, 'packages', 'pkg');
-console.log('pkgPath: ', pkgPath);
-console.log('resolve: ', path.resolve(__dirname, './package.json'));
-```
-
-2024 js 文件 import mjs 文件方式
-
-```js
-async function loadModule() {
-  const module = await import('./xx.mjs');
-  console.log('module: ', module);
-}
-loadModule();
-
-const asyncExec = () => {
-  // 注意，不支持 await child_process.exec
-  return new Promise((resolve, reject) => {
-    child_process.exec(
-      // `git name-rev --name-only HEAD`,
-      'git log --pretty=format:"%h - %an - %s" -n 5',
-      { encoding: 'utf-8' },
-      (error, stdout, stderr) => {
-        console.log('exec stdout: ', error, stdout, stderr);
-        error ? reject(error) : resolve(stdout)
-      }
-    );
-  });
-};
-const asyncSpawn = () => {
-  // 如果输出量非常大，exec 的缓冲区可能会溢出。在这种情况下，child_process.spawn 更适合处理大文件或长输出。
-  return new Promise((resolve, reject) => {
-    const child = child_process.spawn(
-      // 使用字符串会报错
-      // 'git log --pretty=format:"%h - %an - %s" -n 5',
-      // 出错提示 Your git status is not clean. Aborting.
-      // 'git', ['status', '--porcelain'],
-      'git', ['log', '--pretty=format:"%h - %an - %s"'],
-      { encoding: 'utf-8' },
-    );
-    // console.log('child: ', child);
-    child.stdout.on('data', (data) => {
-      console.log('data: ', data.toString());
-      resolve();
-      // 处理标准输出并将其转换为字符串
-      // process.stdout.write(data.toString());
-    });
-    child.once('error', (err) => {
-      console.log('err: ', err);
-      reject(err);
-    });
-    // child.on('close', (code) => {
-    child.once('close', (code) => {
-      console.log('close: ', code);
-    });
-  });
-};
-await asyncExec();
-await asyncSpawn();
-
-const execa = require('execa');
-execa.sync('npm', ['version', 'prerelease', '--preid', 'rc', '--no-git-tag-version']);
-execa.sync('cd', ['../../']);
-
-import chalk from 'chalk';
-function printErrorAndExit(message) {
-  console.error(chalk.blue(message));
-  console.log("\x1b[31m This text will be red \x1b[0m");
-  console.log('this is log');
-  process.exit(1);
-}
-printErrorAndExit('直接 node bash-node.mjs 执行此文件、会显示颜色');
-printErrorAndExit('被 bash 直接调用、会显示颜色');
-printErrorAndExit('被 bash 这样 $(node bash-node.mjs) 调用、不会显示颜色');
-
-console.log(os.homedir());
-console.log(process.env.HOME, process.env.HOMEPATH);
-console.log(process.argv, process.execPath, process.uptime());
-process.nextTick(function () {
-  console.log('nextTick callback');
-});
-process.on('exit', function () {
-  process.emit('cleanup');
-});
-// catch ctrl+c event and exit normally
-process.on('SIGINT', function () {
-  process.exit(2);
-});
-```
-
-2024 对 某个目录下 的文件进行索引， 并生成文件名的 html a 标签
-
-```js
-async function createFileIndex(dirPath) {
-  async function getFiles(dir) {
-    const dirents = await readdir(dir, { withFileTypes: true });
-    const files = await Promise.all(dirents.map((dirent) => {
-      const res = resolve(dir, dirent.name);
-      return dirent.isDirectory() ? getFiles(res) : res;
-    }));
-    return Array.prototype.concat(...files);
-  }
-  getFiles(dirPath).then(results => {
-    const html = `<ul>` +
-    results.filter(item => extname(item) === '.html').map(fileOrDirectory =>
-      `<li style="margin: 5px 0;">
-        <a href="https://warmhug.github.io/${fileOrDirectory.replace(__dirname, '')}" target="_top">
-          https://warmhug.github.io/${fileOrDirectory.replace(__dirname, '')}
-        </a>
-      </li>
-      `).join('\n') + `</ul>`;
-
-    writeFile('index.html', `
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samples</title>
-  </head>
-  <body>
-    <div style="margin: 5px;">
-      GitHub 地址 <a href="https://github.com/warmhug/" target="_top">https://github.com/warmhug/</a>
-    </div>
-    ${html}
-  </body>
-  </html>`, 'utf8', (err) => {
-      if (err) throw err;
-      console.log('The file has been saved!');
-    });
-  });
-}
-createFileIndex('./samples/');
-```
-
-2022 node server
-
-```js
-var http = require('http');
-var url = require('url');
-var fs = require('fs-extra');
-var path = require('path');
-var port = 9998;
-var jsonContentType = 'application/json; charset=utf-8';
-
-var enumExts = ['jpg', 'jpeg', 'gif', 'png'];
-var local2 = '/Users/hua/Downloads/';
-function handleJoke2(res) {
-  var items = [];
-  var dName;
-  fs.walk(local2).on('data', function (item) {
-    if (item.stats.isDirectory()) {
-      dName = item.path;
-    }
-    var extname = path.extname(dName);
-    // path.basename(fileDir)
-    var ext = extname && extname.substr(1);
-    if (ext && enumExts.indexOf(ext) > -1) {
-    }
-  }).on('end', function () {
-    if (items.length) {
-      res.writeHead(200, {'Content-Type': jsonContentType});
-      res.end(JSON.stringify(items));
-    } else {
-      res.writeHead(404, {'Content-Type': 'text/plain'});
-      res.end('Not found');
-    }
-  })
-}
-http.createServer(function (request, response) {
-  var parsedUrl = url.parse(request.url, true);
-  // var query = require('url').parse(req.url).query;
-  // var parm1 = require('querystring').parse(query).parm1
-  var query = parsedUrl.query;
-  if (query.joke == '1') {
-    var content = fs.readFileSync().toString().split('\n\n');
-    response.writeHead(200, {'Content-Type': jsonContentType});
-    response.end(JSON.stringify(content));
-  }
-  if (query.joke == '2') {
-    handleJoke2(response);
-  }
-}).listen(port);
-console.log('> main server running on port ' + port);
-```
-
-2021 webpack 检测 node_modules 里某个包的 实际路径，并拷贝文件到项目 src 里
-
-```js
-const CopyPlugin = require('copy-webpack-plugin');
-const fs = require('fs')
-const path = require('path')
-const mxgraph = path.resolve(__dirname, 'node_modules/mxgraph')
-// console.log('xxx1', mxgraph);
-let mxReal
-try {
-  mxReal = fs.realpathSync(mxgraph)
-} catch (error) {
-}
-
-// webpack 里 plugin 设置增加 copy 插件
-new CopyPlugin(
-  // [{ from: mxReal + '/javascript/src/', to: 'dest' }]
-  [
-    mxReal + '/javascript/src/',
-    { from: __dirname + '/src/routes/Designer/Editor/images', to: 'images' },
-    { from: __dirname + '/src/routes/Designer/Editor/resources', to: 'resources' }
-  ]
-);
-
-function walk(dir, filter) {
-  var results = []
-  fs.readdirSync(dir).forEach(function(file) {
-    file = dir + '/' + file;
-    var stat = fs.statSync(file)
-    if (stat && stat.isDirectory()) {
-      results = results.concat(walk(file, filter))
-    } else {
-      filter(file) && results.push(file)
-    }
-  });
-  return results
-}
-var temp = walk('/Users/hua/Downloads', function(file) {
-  return /\.html$/.test(file)
-});
-console.log('temp: ', temp);
-
-fs.stat(parm1, function (err, stats) {
-  if (stats.isFile()) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.statusCode = 200;
-
-    // 创建文件流读取，替代fs.readFile方法
-    var file = fs.createReadStream(parm1);
-    file.on('open', function () {
-      return file.pipe(res);
-    });
-    return file.on('error', function (err) {
-      return console.log(err);
-    });
-  }
-});
-```
-
-
-
 ### algorithm
 > 2018 2022 2024
 
@@ -3941,885 +3694,6 @@ export default class Demo extends React.Component {
 
 
 
-## ts/js html/css 小程序/RN
-
---- 2023
-
-! 是 typescript 非空断言符，解决 ts 类型空提示问题。
-
-void promise 函数返回值类型 `() => Promise<void>`。
-
-ts高级用法 Omit Pick
-```ts
-import { INameProps } from './Name';
-type IDashboardNameProps = {
-  className?: string;
-  style: React.CSSProperties;
-} & Pick<INameProps, 'id' | 'onSaved'>;
-```
-
-[TypesSript 装饰器源码分析](https://github.com/frontend9/fe9-library/issues/226)
-
-[使用 TypeScript 实现依赖注入](https://github.com/frontend9/fe9-library/issues/225)
-
-[如何实现一个 TypeScript 的宏](https://github.com/frontend9/fe9-library/issues/186)
-
-[让 babel 帮你编译 typescript](https://github.com/frontend9/fe9-library/issues/23)
-
-https://github.com/zzj3720 (github/toeverything)
-[conditional type 中的联合类型与 never](https://github.com/frontend9/fe9-library/issues/135)
-[TypeScript专栏](https://www.zhihu.com/column/c_206498766)
-
-
------- js
-
-- https://evertpot.com/using-top-level-await-is-bc-break/
-
-- 33-js-concepts https://github.com/leonardomso/33-js-concepts
-- 只在行首字符是 `+ - [ ( /` 这5种情况下，加前置分号即可
-- 原型链/闭包(匿名函数)？实现继承？new的原理实现？this指向改变(call/apply/bind)？null/undefined区别？事件代理(委托)？减少事件注册 节省内存。
-- es6 常用哪些特性？ 变量最小作用域 es5 function, es6 let 块级。 var 变量提升(Hoisting)。 Map 和 WeakMap 区别。 Symbol generator。
-- promise 跟 async/await 关系？ async 方法返回 promise 、是 promise 的语法糖。
-- es6 generator？ es6 和 node 的 module 的区别？ fetch、xhr 优劣势
-- ES 与 CommonJS modules 的区别
-- 内存泄漏的几种情况？ https://blog.logrocket.com/escape-memory-leaks-javascript/
-- WeakRef 的用处 https://www.reddit.com/r/Frontend/comments/1ato11w/will_the_event_listeners_be_removed_automatically/
-- 在 es class 中的 箭头函数 比较慢，而且不在 原型链 上  https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1
-- es6 modules 父子 module 的代码执行顺序、class 内外代码执行顺序。
-
-- shim、sham 和 polyfill 之间的区别？ https://github.com/es-shims/es5-shim
-  - es5-shim 完美模拟了所有 ES5 中可以被完美模拟的方法。就是说 ES5 中有些方法，是可以在旧 JS 引擎中完美模拟了，那么 shim 就完美模拟了它们。shim 不局限与浏览器环境，只要 JavaScript 引擎支持，代码即可运行。
-  - es5-sham 只承诺你用的时候代码不会崩溃，至于对应的方法是不是起作用它就不保证了。如果你要用的方法在 shim 中都包含了，那么就不需要 sham。sham 能不引用就不引用。sham 依赖 shim。 IE8：只支持 ES3。
-
-库/框架
-
-- React16 / 17 / 18版本新特性 https://blog.csdn.net/momei1942/article/details/129699873
-- React18: 并发控制的更好更灵活，定时器等异步函数setState批处理、Suspense 流式 html SSR、useTransition 延迟/过渡更新。
-- 看过 框架或库 源码？ react 使用注意事项 https://github.com/mithi/react-philosophies  React 技术揭秘 https://react.iamkasong.com/
-
-- react diff 原理？生命周期？受控组件和非受控组件？父组件和子组件的通信方式？render-props 高阶组件 (代替mixin及ref问题)？
-- react 应用性能优化？列表 key / shouldComponentUpdate / PureComponent (父子组件 props state 不变时不render 为什么不建议用?) / memoization
-- react setState 是同步的还是异步的? 异步。 子组件和父组件 componentDidMount 哪一个先执行？子组件先。
-- prop 的变化 同步到 state 的方法？
-
-- react 渲染器了解一下？ https://juejin.cn/post/6844903753242378248
-- React Fiber 架构 https://xueshiming.cn/2021/05/08/React%20%E4%B9%8B%20Fiber%20%E6%9E%B6%E6%9E%84/
-- React-Fiber 并发模式、区分任务优先级、调度协调 中断/恢复任务，浏览器60fps渲染 10毫秒自己执行 5毫秒空闲时间。
-
-- react 需要遍历或修改 children，要使用`React.Children.forEach / React.Children.map` 方法，而不要用`Array.isArray(children) / children.forEach`等方法。
-- setState 是异步的 [示例](https://stackoverflow.com/a/45249445/2190503) 会引起不必要的 render。
-- [真实 DOM 和 react 虚 dom 讨论](http://www.zhihu.com/question/31809713)
-  - dom 对象是很庞大的（上边有很多属性），其创建的开销比较大，已有的 dom 对象上做更新开销并不大，众多框架都在围绕此做优化，比如用`key`是否变化来判断对 dom 的操作是 “更新” 还是 “销毁重建”。 dom批量更新：dom操作如，1.删除一个元素，2.增加一个元素，3.在增加的元素上改变一个属性。如果用 dom-api，会有多次 repaints reflows 比较耗性能。 如果放到「虚拟 dom」上操作，会把这三个过程最终的结果，一次更新到实际 dom 树上，只用操作一次实际 dom。 virtual-dom 里一次 digest 中的 diff 只需一次，但是会随着 ui 的规模复杂度，性能损耗严重。
-
-react hooks
-- https://github.com/frontend9/fe9-library/issues/257
-- 不优雅的 React Hooks https://zhuanlan.zhihu.com/p/455317250
-- React Hooks 使用误区 https://zhuanlan.zhihu.com/p/450513902
-- React Hooks 陷阱 https://mp.weixin.qq.com/s?__biz=MzIzMjcxNzE5MA==&mid=2247488097&idx=1&sn=e8a6d71d1c05c8be04c25b32af43fb09
-- useLayoutEffect 和 useEffect 的区别 https://zhuanlan.zhihu.com/p/348701319
-- [useReducer callback](https://github.com/facebook/react/issues/15344)
-
-- react hooks 怎么把 props 里复杂对象（数据请求结果）的实时变化、”完全同步/只是初始化“ 更新到 state 中？
-- react hooks useRef 用途？和“函数组件”外定义的变量区别？(类全局变量) 分别的执行时机？
-- react hooks useMemo useCallback useReducer/redux 应用场景？
-- react hooks useEffect 及其 return 函数的执行时机？子组件先执行？多个时执行顺序？怎么确保 dom 先增加成功 (setTimeout)？
-
-[redux](https://redux.js.org/) 概念
-- 为什么是 企业级前端开发框架？ 实现 双向绑定 的原理？
-- 单双向数据流区别？https://pomb.us/build-your-own-react
-- data-flow, 不可变的数据更新模式 immutable-update-patterns.
-- actions 其实就是 mutations，即 ui 或者 server 的 response.
-- action creator 调用 dispatcher (passive pub-sub systems) 传递 mutations.
-- store 监听 actions 再去 mutate data (只有store能决定怎么更新数据).
-- component 监听 store, 获取需要的数据.
-redux 基本流程
-- 为什么用单一的 store? 子组件 connect 后可使用 store 了？ context。 immutable-js ？ immerjs
-- redux-saga 典型流程:  form 表单提交，触发 FORM_POST action，saga 里 `yield put` POST_SUCCESS 触发 action，改变页面状态或拉取新数据，触发 UI CHANGE 的 action，过程中用 `yield select` 从 state 里选取需要的参数。
-[Reactive programming vs Passive programming](https://vaibhavgupta.me/2017/12/31/reactive-programming-vs-passive-programming/)
-
-
------- html css
-
-cssinjs https://mp.weixin.qq.com/s/cepGi8Jhe4RnyfNaoN_zfw
-react19 cssinjs 问题 https://juejin.cn/post/7359876671137071156
-探索：业务中推行 tailwindcss 和 emotion，设计上 design token 抽象。
-2024-10 cssinjs
-
-- html 规则检测 https://validator.w3.org 、 http://infohound.net/tidy
-- html head 里的 js css 如何放置  head 里能放什么 https://github.com/joshbuchea/HEAD
-- iframe 有哪些问题 https://afantasy.ninja/2018/07/15/dive-into-iframe
-  - 高度改变麻烦、弹框、iframe 里再嵌套 ifr。
-  - 移动端页面、打开(全屏)嵌入的 iframe 页面，点浏览器返回、返回不到业务页面、需要销毁 iframe。
-  - 浏览器刷新 iframe url 状态丢失、后退前进按钮无法使用。
-  - 里边 弹出框 的位置、难居中，浏览器 resize 时自动居中 更难处理。
-  - 主文档和 iframe 文档如果不同域、免登录处理麻烦，涉及 cookie 透传。
-  - 需要完全重新加载，比较慢。
-  - iframe 自适应高度：给定高度、内部滚动
-- div/span 都是容器元素， p dt 标签里不能有块(block)标签， button 里面不要嵌套 a 标签。
-- img script 的 src、css 的 href 都不能为空。 DOM 的 attribute 和 property 区别。
-- a 伪类需遵循 css2 规范中的 L-V-H-A (a:link visited hover active) 顺序。
-- 没有 css-parent-selector 。 BEM命名方式。  如何提升 CSS 选择器性能 http://www.jianshu.com/p/268c7f3dd7a6
-
-- [anchor-positioning-api](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn)
-- CSS 选择器优先级(id>class>标签>伪类)？伪类和伪元素区别？BFC/IFC 介绍？
-- 浮动以及清除浮动？页面布局方法？flex一维 CSS Grid 二维。元素垂直居中方法？
-- border-box 作用？display/position 作用(absolute会变为块元素)？z-index 在节点 position 值是什么生效(relative/absolute/fixed)？
-- 子元素的 margin-top 设置影响父元素位置？页面兼容性问题？响应式布局怎么实现？
-- CSS优化方法？减少DOM操作，减少重绘和重排，合理使用选择器，减少@import使用。
-- h5高清方案(rem) 优缺点？ css 实现 loading，三角形？ css-module 的作用？ css 样式初始化为了什么？
-- https://www.iconfont.cn/
-- css 时间函数 http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions
-- css 长度 https://css-tricks.com/the-lengths-of-css
-  - 绝对长度: px inch cm mm。 rem: 相对 root 的 font-size 大小  em: 基于大写字母 M 的尺寸  ex: 基于 x 字母高度  1vh 等于 1/100 的视口高度
-
-
-browser
-
-- [URL 编码，为什么要编码？](http://anjia.github.io/2015/04/15/jsURIEncode/)
-- 浏览器在自动选择编码方式的时候不会优先根据 html 源码中的所展示的`<meta charset="utf-8" />`代码来决定选择什么编码方式，而是优先根据“响应标头-response header”中的键为“Content-Type”的值来自动选择判断。
-- [ua 检测](https://github.com/ded/bowser) / [特性检测](https://github.com/barisaydinoglu/Detectizr)
-- 浏览器解析和CSS（GPU）动画优化 https://segmentfault.com/a/1190000008015671
-  - css 动画中尽量只使用 transform 和 opacity ，这不会发生重排和重绘。
-  - 有动画的元素样式，给定尺寸、设置为 display block（如果设置 display flex 子元素尺寸会动态变化、影响动画效果）
-- [WebAssembly](https://juejin.im/entry/5b20d09d6fb9a01e242490b1)
-  - 不是一门编程语言，而是一份字节码标准。 各种复杂的计算：图像处理、3D运算(大型 3D 网页游戏)、语音识别、音视频编码解码。区块链合约。
-  - [madewithwebassembly](https://madewithwebassembly.com/)、eBay 的[条形码扫描](https://www.infoq.cn/article/vc*q7psQqWMaVU8igJeD)、 [Google earth web](https://earth.google.com/web/) 版、 [autocad](https://web.autocad.com/login) web 版
-- [PWA](https://developers.google.com/web/progressive-web-apps/)
-  - Service Worker 需要运行于 HTTPS 或本地 localhost 环境，是继 Web Worker 后又一个新的线程。来实现离线页面功能。 Service Worker 是独立于页面的一个运行环境，它在页面关闭后仍可以运行。Web Worker 在页面关闭后不再运行。
-- https://developer.chrome.com/blog/introducing-popover-api/   Web Authentication 在Web上使用Touch ID 和 Windows Hello 登录
-- xss/csrf 原理和防御方法。CORS 的 POST 跨域如何带cookie https://www.jianshu.com/p/13d53acc124f
-- 浏览器 eventLoop 机制 microtask marcotask 执行顺序？setTimeout 宏队列先执行，promise 微队列。
-- 优化：压缩资源、异步加载、预加载、缓存、使用gzip、减少cookie、减少重定向、减少请求数。
-
-- JSONP 的原理以及 cors 怎么设置？跨域的方法有哪些？jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面。
-- web worker 突破同源限制？importScripts。 不好地方:(协程)解决并行计算，数据共享和精确控制线程生命周期方面存在缺陷。
-- SPA 实现方法？产生的问题：切换路由后会把上个路由状态生成的html全部销毁掉，再切回来恢复不到原来的样子。客户端渲染和服务端渲染，哪个快？
-- 移动: 点击穿透/300ms延迟？Fastclick。首频渲染、网络性能？手势库？有没有用过RN PWA？
-- 数据可视化: 3d 编辑器功能？技术点 svg 3dgis canvas webgl，svg 转 webgl 怎么实现？
-
-drag-drop
-- drag 事件 不支持 ie8、Safari 5.1  ie<=9 只能对 a href="" 、img、文本 添加drag事件。 ie9上通过 selectstart hack方法对任何元素添加事件。 在ie<=8版本上，需要把dragenter/drageover/drop事件绑定到具体的元素上，而不能绑定到document做委托处理。
-- 使用 drag-drop API的优势（相对于用mousedown/mousemove）： 如果拖动元素所在的容器尺寸小，拖动过程产生滚动条、会自动触发滚动条移动。 不用再 clone 出一个要拖动的元素； 不用计算涉及到的元素的位置和尺寸。
-传统拖动做法
-- 在 touchstart / mousedown 中记录起始位置，并开始监听 touchmove touchend / mousemove mouseup
-- 在 touchmove mousemove 中计算当前位置和起始位置之间的 offset，并进行拖拽操作
-- 在 touchend mouseup 中取消监听 touchmove 和 touchstart，并进行释放操作
-
-
-简易编辑器
-
-```html
-<div class="toolbar">
-  <button class="select">选择</button>
-  <button class="bold">加粗</button>
-</div>
-<div style="height: 200px; border: 1px solid gray;" contenteditable="true">
-  <p>richEditor富文本简化版，这是可编辑的</p>
-  <p contenteditable="false">这是不可编辑的</p>
-</div>
-<script>
-  document.querySelector('.bold').addEventListener('click', () => {
-    let range = window.getSelection().getRangeAt(0);
-    console.log('bold', range);
-    document.execCommand('bold', false, null);
-  });
-</script>
-```
-
-
------- 小程序/RN
-
-小程序的渲染层和逻辑层分别由2个线程管理：渲染层的界面使用了 WebView 进行渲染；逻辑层采用 JsCore 线程运行JS脚本。一个小程序存在多个界面，所以渲染层存在多个 WebView 线程，这两个线程的通信会经由微信客户端做中转，逻辑层发送网络请求也经由 Native 转发。
-目的：安全可控，沙箱隔离，限制 DOM 和 BOM 能力。逻辑层和渲染层是独立的，二者不会互相阻塞，因此性能更优（小程序限制了 JS 操作 DOM 的能力，因此不用担心二者的不同步问题）在浏览器网页中，虽然 JS 执行和 UI 渲染也是处于两个线程，但是 JS 线程和 UI 线程是互斥的。
-
-小程序采用的是混合架构，可通过 html 里的 a 标签启动新的 webview 窗口、调用 popWindow 关闭窗口。基本页面元素是 html 渲染，弹窗类 loading toast ActionSheet 和 本地存储、系统或用户信息，使用客户端原生实现。
-
-而 react-native 只是采用 js/html 写法，背后完全是 客户端原生 渲染。
-微信小程序和 RN 的区别：双线程架构，渲染层一个主要是 webview 一个完全 native。
-微信的支付 小程序云等开放API、小程序安全管控。
-
-小程序框架
-- [taro](https://taro.aotu.io/)、[remax](https://github.com/remaxjs/remax)、[alibaba/rax](https://github.com/alibaba/rax)、[flutter](https://github.com/flutter/flutter)。
-- 编译时：约定了一套自己的 DSL ，在编译打包的过程中，利用 babel 工具通过 AST 进行转译，生成符合小程序规则的代码。
-  - 容易出现 BUG、开发限制过多、跟不上 react vue 更新。早期的 Taro 1/2 采用的这种方案。
-- 运行时：在小程序的逻辑层中运行起来 React 或 Vue 的运行时，然后通过适配层，实现自定义渲染器。
-  - 有天然优势，remax taro3 这样实现。
-
-React component -> React Reconciler(调和器、实现了 Diff/Fiber 算法) -> React Renderer(可以是dom也可以是js对象等)。
-跨端小程序框架 remax taro3 自己实现了一套可以在 React 中用的，且能渲染到小程序页面的自定义渲染器。
-在 react reconciler resetAfterCommit 函数中、调用小程序的 setData 方法。
-小程序环境中，不支持直接创建DOM、仅支持模板渲染，用递归模板的方式，用相对静态的小程序模板语言实现了动态的模板渲染的特性。
-
-小程序 API
-```js
-const { Ali } = window;
-const { isAlipay } = Ali;
-window.AlipayJSBridge;
-document.addEventListener('AlipayJSBridgeReady', callback, false);
-Ali.httpRequest({ url: '', method: 'POST' }, (result) => {});
-Ali.rpc({ operationType: '', requestData: [] }, (result) => {});
-Ali.call('imageViewer', { enablesavephoto: true, images: [], init: index });
-Ali.showLoading(param);
-Ali.showToast({ content: '' });
-Ali.showActionSheet({ content: '' }, (result) => {});
-AlipayJSBridge.call('popWindow');
-AlipayJSBridge.call('setTitle', { title: 'xxx' });
-AlipayJSBridge.call('getSystemInfo', { }, (result) => {});
-```
-
-
-## 监控 性能 质量 测试
-
-https://httparchive.org/reports/page-weight
-语言性能 jsperf / benchmarks https://jsben.ch/browse
-[heavy tasks on the main thread](https://github.com/astoilkov/main-thread-scheduling)
-
-Headless BI https://cube.dev/
-https://github.com/GoogleChromeLabs/quicklink
-https://superset.apache.org/
-
-ICBU前端性能度量 https://mp.weixin.qq.com/s/XAdNOovCQxh5xuGVOSEz3w
-
-https://web.dev/articles/vitals?hl=zh-cn
-[Web vitals](https://www.cnblogs.com/constantince/p/15237915.html)、
-[thresholds](https://web.dev/i18n/en/defining-core-web-vitals-thresholds/)、
-[Chrome的First Paint触发的时机探究](https://cloud.tencent.com/developer/article/1124484)、
-[window.onload vs document.onload](https://stackoverflow.com/questions/40193553/load-event-on-script-with-async-and-or-defer)
-
-[如何根治 Script Error.](https://mp.weixin.qq.com/s/6v_X0vtM5EZThF0odwJmTw)
-[JavaScript Errors Handbook](https://github.com/mknichel/javascript-errors/blob/master/README.md)、
-[如何捕获前端错误](https://mp.weixin.qq.com/s/E51lKQOojsvhHvACIyXwhw)、[搞定前端错误捕获和上报](https://juejin.cn/post/7031876097390149645)、[错误监控总结](https://segmentfault.com/a/1190000014672384)
-
-为什么大厂前端监控都在用GIF做埋点？ https://mp.weixin.qq.com/s?__biz=MzAxODE4MTEzMA==&mid=2650099077&idx=1&sn=813d2c96cd940dc95b0f47585b989c2f
-
-AEM [表单分析](https://img.alicdn.com/imgextra/i3/O1CN01x1xSNj26XMy1xUikf_!!6000000007671-0-tps-2934-1678.jpg)
-AEM: 稳定性(脚本/接口/资源异常)、流畅性(加载/卡顿/动画掉帧)、用户流量(pv uv 活跃用户 新用户/点击率 点击热点 / 停留黏性/来源去向/设备)、行为分析(页面流/操作流/留存跳失率/访问链路/表单分析)、满意度(问卷/反馈/录屏/主观分析)。告警/多维指标(用户纬度年龄性别籍贯)/自定义看板/乐高搭建报表页。
-
-[chrome-performance-devtool](https://github.com/Sanotsu/web-beginner/blob/master/documents/11-others/web-base-chrome-performance-devtool.md)
-Google [lighthouse](https://developers.google.com/web/tools/lighthouse/)、类似服务 [web.dev/measure](https://web.dev/measure)、[webpagetest](https://www.webpagetest.org/)、[pagespeed insights](https://developers.google.com/speed/pagespeed/insights/)
-
-arms / quick a+ / spm / aplus / retcode / clue。
-
-性能和体验 2020
-弹窗 modal 里高度需要设置、内容长时“内滚动”。
-一行多列 card 卡片，每个卡片 高度需要设置成一样。
-某个操作 触发多次 ajax 请求、再 setState 页面，导致卡顿？
-一个页面有多个“富文本实例”同时初始化、比较耗时？导致页面卡顿？
-
------- 质量
-
-[iceworks-doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor)
-[vscode-codemetrics](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-codemetrics)
-
-[jsinspect](https://github.com/danielstjules/jsinspect)、
-[jscpd](https://github.com/kucherenko/jscpd)
-[代码圈复杂度Cyclomatic Complexity](http://kaelzhang81.github.io/2017/06/18/%E8%AF%A6%E8%A7%A3%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/)
-
-[研发效能度量引发的血案](https://mp.weixin.qq.com/s/h9zIg2e8iHn3qgxlUGObbQ)、
-[10 倍程序员神话](https://www.simplethread.com/the-10x-programmer-myth/)、
-[代码质量](https://stackoverflow.blog/2021/10/18/code-quality-a-concern-for-businesses-bottom-lines-and-empathetic-programmers/)
-
-
------- 测试
-
-https://lightpanda.io/
-
-CI/CD、JS 覆盖率工具 [istanbul](https://istanbul.js.org/)。
-测试-漏测率。 阿里MTC无线测试中心、蚂蚁云测平台[Solomon]
-
-基础理论:
-[前端测试体系建设与最佳实践](https://mp.weixin.qq.com/s?__biz=MzI5MjYyODYyNQ==&mid=2247483987&idx=1&sn=132aea5d5185a1e4fa2fab5037a2fb3e)、
-[测试金字塔](https://martinfowler.com/bliki/TestPyramid.html)
-
-[codecov.io](https://codecov.io/) 覆盖率分析对比工具 支持所有语言，对 GitHub commit 的覆盖率做记录、前后对比。
-
-[代码测试覆盖率分析](https://blog.rsuitejs.com/2017/08/20/test-coverage/)
-Statements 与 Lines 的区别：一行可能有多个语句
-
-[百分百测试覆盖率真的有意义吗？](https://www.zhihu.com/question/29528349)
-各种 corner cases(比如除0、IO error handling) 很难做到 100% 覆盖。 覆盖率数据只能代表你测试过哪些代码，不能代表你是否测试好这些代码。 不能盲目追求代码覆盖率，而应该想办法设计更多更好的案例，哪怕多设计出来的案例对覆盖率一点影响也没有。
-
-
-
-## 生成 搭建 文档/图
-
------- 生成 搭建
-
-[去哪儿网前端代码自动生成技术实践](https://mp.weixin.qq.com/s/Jhs2dAvFHbaaP1OKjB0c6w)
-https://docmost.com/
-
-[阿里低代码引擎LowCodeEngine正式开源](https://mp.weixin.qq.com/s/rQ-X9OBFRvhI16KrWwIT6w)
-[官网](https://lowcode-engine.cn/)、[github](https://github.com/alibaba/lowcode-engine)
-
-https://www.wix.com/
-https://soloist.ai/
-
-[无代码nocobase](https://cn.nocobase.com/) [博客](https://blog-cn.nocobase.com/posts/nocobase-opensource-income-3years/)
-
-[网易云音乐低代码体系建设思考与实践](https://mp.weixin.qq.com/s/9yo-Au3wwsWErBJfFjhxUg)
-
-[从实现原理看LowCode](https://zhuanlan.zhihu.com/p/452251297)
-
-https://github.com/imcuttle/mometa
-[百度amis](https://baidu.github.io/amis/)
-https://aisuda.bce.baidu.com/amis
-
-AECP 开发平台架构 https://img.alicdn.com/imgextra/i2/O1CN01VFIoNq1E0PCIklFol_!!6000000000289-2-tps-2482-1410.png
-
-[2020/01/13/the-no-code-delusion](https://www.alexhudson.com/2020/01/13/the-no-code-delusion/)、[无代码编程介绍](https://mp.weixin.qq.com/s/eKvSxOvSyEZEr3BLloCXdw)
-[antd-lowcode](http://g.alicdn.com/code/npm/@ali/antd-lowcode/0.5.1/example/index.html)
-
-Markdown + 卡片 [可视化搭建](https://zhuanlan.zhihu.com/p/164558106)、
-宜搭、[云凤蝶](https://www.yunfengdie.com/home)、[阿里云外网建站](https://ac.aliyun.com/jianzhan)。微软 Power [Platform](https://yuque.antfin-inc.com/chenyu/articles/skei6i)。AWS [honeycode](https://www.honeycode.aws/)、[mendix](https://www.mendix.com/)。
-
-[SaaS（科技）行业导航](http://www.allsaas.cn/)、SaaS 平台：[氚云](https://h3yun.com/index.php?g=Chuanyun&m=Scene&a=index)、[搭搭云](https://www.dadayun.cn/)、[明道云](https://blog.mingdao.com/13061.html)、[appsheet](https://www.appsheet.com/)、[fibery](https://fibery.io)、[openchakra](https://openchakra.app/)、[tumult](https://tumult.com/)(YC投资)、
-[grapesjs](https://grapesjs.com/)、[noflojs](https://noflojs.org/)、[pagedraw](https://pagedraw.io/)、Google Web Designer (类似 Dreamweaver) 2013 发布 2017 停止更新。
-
-[What's Salesforce?](https://tryretool.com/blog/salesforce-for-engineers/) 、Salesforce [Lightning](https://www.salesforce.com/cn/campaign/lightning)
-
-云上[编排](https://blog.csdn.net/devcloud/article/details/93175186)([cloudcraft](https://app.cloudcraft.co/)/阿里[ros](https://cn.aliyun.com/product/ros)/华为云[aos](https://www.jianshu.com/p/2301a1729fcc)/[Terraform](https://blog.csdn.net/yejingtao703/article/details/80574363)/[PAD图](https://baike.baidu.com/item/PAD%E5%9B%BE))、[图编排(](https://www.atatech.org/articles/170866)[相关](https://www.atatech.org/articles/174875/))
-
-GUI 研发：[umi-ui](https://umijs.org/guide/umi-ui.html)、[angular-console](https://angularconsole.com/)
-
-表单: [formily](https://github.com/alibaba/formily)、[build forms from JSON Schema](https://github.com/mozilla-services/react-jsonschema-form)、[react-final-form](https://github.com/final-form/react-final-form)、[AForm模型驱动生成表单](http://xiehuiqi220.github.io/AForm/doc/book/index.html)。
-
-
------- 低代码 2021
-
-低代码平台：源码不可维护 git diff 不起作用。
-
-物料(模板、页面、区块、基础组件、业务组件、布局组件)
-
-区块（Block）：一系列业务组件、布局组件等组合而成的代码片段，不对外提供可配置的属性；区块内部具备完整的内部样式、事件、生命周期管理、状态管理、数据流转机制，能独立存在和运行，通过代码片段的复制实现跨页面、跨应用的快速复用，保障功能和数据的正常。
-模板（Template）：特定垂直业务领域内的业务组件、区块可组合为单个页面，或者是再配合路由组合为多个页面集，统称为模板。
-
-Microsoft Power Apps 中，页面的生产过程是由字段的布局来决定的，字段对应的组件可以切换。在 Mendix、OutSystems 中。页面虽然是基于模型来生产的，但整体开发体验，依然是面向页面和组件视角的。组件可以绑定字段。
-从前端对低代码提效本质的分析来看，可视化搭建本质上是通过可视化手段降低了前端开发的上手门槛，但开发思路和源码开发基本是一样的。其提高开发效率的主要手段是，通过丰富的静态模板让页面开发少写一些代码。没有元数据的支持，其对开发效率的提升至多是线性的，而我们需要的是数量级的提升。
-由于模型元数据驱动和可视化搭建在本质思路上的不同，在可视化搭建基础上，集成模型驱动的能力，会让整个产品的复杂性增加，产品定位不清晰，扩展性差。与其这样，不如从0开始打造一个纯净的模型驱动低代码开发工具。
-
-[阿里低代码引擎LowCodeEngine正式开源](https://mp.weixin.qq.com/s/rQ-X9OBFRvhI16KrWwIT6w)
-[官网](https://lowcode-engine.cn/)、[github](https://github.com/alibaba/lowcode-engine)
-
-[总体](https://img.alicdn.com/imgextra/i4/O1CN01z4bl431OOoSsB0Fgl_!!6000000001696-0-tps-2647-1048.jpg)
-
-[引擎图](https://img.alicdn.com/imgextra/i1/O1CN01rYYbMH1KKSEUlOB3B_!!6000000001145-2-tps-1196-736.png):
-- 入料引擎（Materialin Engine）Material for Schema [架构图](https://img.alicdn.com/imgextra/i3/O1CN01ySybed1u7TAlCEmgI_!!6000000005990-2-tps-1698-467.png)
-- 编排引擎（Choreography Engine）Schema to Schema [架构图](https://img.alicdn.com/imgextra/i1/O1CN01BV9MmX26om0c3PECA_!!6000000007709-2-tps-1542-829.png)
-- 渲染引擎（Rendering Engine）Schema to UI [架构图](https://img.alicdn.com/imgextra/i3/O1CN01u0oISH1tUXVQ8V8Wu_!!6000000005905-2-tps-1834-536.png)
-- 出码引擎（Codeout Engine）Schema to Code [架构图](https://img.alicdn.com/imgextra/i1/O1CN01rvvk6H1X433D49JOc_!!6000000002869-2-tps-1382-690.png)。
-
-schema 基础协议规范
-
-```js
-{
-  "version": "1.0.0",      //当前协议版本号
-  "componentsMap": [{      //组件描述
-    "componentName": "Button",
-    "package": "alife/next",
-    "version": "1.0.0",
-    "destructuring": true,
-    "exportName": "Select",
-    "subName": "Button",
-  }],
-  "componentsTree": [{
-    "componentName": "Page",   //单个页面。枚举类型 Page|Block|Component
-    "fileName": "Page1",
-    "meta": {          //页面元信息
-      "title": "首页",    //页面标题描述
-      "router": "/",     //页面路由
-      "spmb": "abef21",  //spm B位
-    },
-    "props": {},
-    "defaultProps": {   // 默认props：  选填 仅用于定义低代码业务组件的默认属性 固定对象
-      "name": "xxx"
-    },
-    "css": "body {font-size: 12px;} .table { width: 100px;}",
-    "state": {                       // 初始state： 选填 对象类型/变量表达式
-      "btnText": "submit",                     // 默认数据值： 选填 变量表达式
-      "num": 8,
-    },
-    "lifeCycles": {                   //生命周期:          选填 对象类型
-      "didMount": {
-        "type": "JSExpression",
-        "value": "function() {        //生命周期方法：      选填 函数类型\
-            console.log('did mount');\
-        }",
-      },
-      "willUnmount": {
-        "type": "JSExpression",
-        "value": "function() {\
-          console.log('will unmount');\
-        }"
-      }
-    },
-    "methods": {                     // 自定义方法对象：     选填 对象类型
-      "getNum": {
-        "type": "JSExpression",
-        "value": "function(a, b){\
-                return a + b;\
-              }"
-      }
-    },
-    "dataSource": {                  // 数据源对象：选填  对象类型
-      "list": [{                          // 数据请求列表    必填  数组类型
-        "id": "list",                // 单个数据请求id标识    必填  字符串类型
-        "isInit": true,              // 是否为初始数据             必填     布尔类型/变量表达式
-        // 建议改个名字，比如 auto | loadOnInit
-        "type": "fetch/mtop/jsonp",  //请求类型   必填    字符串类型
-        "options": {                //请求类型对应参数  必填  对象类型
-          "uri": "",                      //请求地址        必填  字符串/变量表达式
-          "params": {},                //请求参数       选填   字符串/变量表达式
-          "method": "GET",             //请求方法              必填   字符串/变量表达式
-          "isCors": true,              //是否支持跨域,   对应credentials = 'include'     选填  布尔
-          "timeout": 5000,             //超时时间单位ms     选填   数字类型 单位ms
-          "headers": {}                //请求header参数  选填   请求头信息
-        },
-        "dataHandler": { //异步请求回调： 选填  函数类型
-          "type": "JSExpression",
-          "value": "function(data, err) {} "
-        }
-      }],
-      "dataHandler": {  // 所有初始异步数据接口执行完成后的回调   选填 函数类型
-        "type": "JSExpression",
-        "value": "function(dataMap) { }",
-      }
-    },
-    "children": [{
-      "componentName": "Button",
-      "props": {
-        "text": {
-          "type": "JSExpression",
-          "value": "getNum(state.num, state.num2) + '万'"
-        }
-      },
-      "condition": {
-        "type": "JSExpression",
-        "value": "state.num > state.num2"
-      }
-    },{
-      "componentName": "Div",
-      "props": {
-        "className": "",
-        "text": {
-          "type": "JSExpression",
-          "value": "i18n['i18n-jwg27yo4']"
-        }
-      },
-      "condition": {                     // 函数类型属性：选填 函数类型
-        "type": "JSExpression",
-        "value": "!!this.state.isshow",  // 渲染条件： 选填 根据表达式结果判断是否渲染物料 默认值true
-      },
-      "loop": [],                        // 循环渲染数据：选填 根据数据循环渲染物料 默认不进行循环渲染；
-      "loopArgs": ["item", "index"],     // 循环迭代对象、索引名称 选填
-      "children": [{
-        "componentName": "Button",
-        "props": {
-          "prop1": 1234, // 简单 json 数据
-          "prop2": [{   // 简单 json 数据
-            "label": "选项1",
-            "value": 1
-          }],
-          "prop3": [{
-            "name": "myName",
-            "rule": {
-              "type": "JSExpression",
-              "value": "/\w+/i"
-            }
-          }],
-          "valueBind": { // 变量绑定
-            "type": "JSExpression",
-            "value": "this.state.user.name"
-          },
-          "onClick": { // 动作绑定
-            "type": "JSExpression",
-            "value": "function(e) { console.log(e.target.innerText) }",
-          },
-          "onClick2": { // 动作绑定2
-            "type": "JSExpression",
-            "value": "this.submit",
-          },
-        },
-      }]
-    }],
-  }],
-  "utils": [{
-    "name": "clone",
-    "type": "npm",
-    "content": {
-      "package": "lodash",
-      "version": "0.0.1",
-      "exportName": "clone",
-      "subName": "",
-      "destructuring": false,
-      "main": "/lib/clone"
-    }
-  }, {
-    "name": "beforeRequestHandler",
-    "type": "function",
-    "content": {
-      "type": "JSFunction",
-      "value": "function(){\n ... \n}"
-    }
-  }],
-  "constants": {
-    "ENV": "prod",
-    "DOMAIN": "xxx.alibab.com"
-  },
-  "config": {  //当前应用配置信息
-    "sdkVersion": "1.0.3",  //渲染模块版本
-    "historyMode": "hash",  // 浏览器路由：brower  哈希路由：hash
-    "targetRootID": "J_Container",
-    "layout": {
-      "componentName": "BasicLayout",
-      "props": {
-      	"logo": "...",
-        "name": "测试网站"
-      },
-    },
-    "theme": {
-      "package": "@alife/theme-fusion",
-      "version": "^0.1.0",
-      "primary": "#ff9966"
-    }
-  },
-  "i18n": {
-    "zh-CN": {
-      "i18n-jwg27yo4": "你好",
-    },
-    "en-US": {
-      "i18n-jwg27yo4": "Hello",
-    }
-  }
-}
-```
-
-区块级API（实现区块级内部的上下文，数据流，状态管理）
-
-```js
-this.state
-this.setState()
-this.dataSourceMap[oneRequest.id]: {
-  load(params), status, data, error
-}
-this.reloadDataSource()
-this.xxx()
-```
-
-页面级api（实现页面级内部的上下文，数据流，状态管理，从而实现区块之间的通信）
-
-```js
-this.page
-this.page.state
-this.page.setState()
-this.page.props
-this.page.xxx()
-this.page.dataSourceMap
-this.page.reloadDataSource()
-```
-
-低代码业务组件 API (开发一个低代码业务组件需要用到的API，实现内部的上下文，数据流，状态管理)
-
-```js
-this.component
-this.component.state
-this.component.setState()
-this.component.props
-this.component.xxx()
-this.component.dataSourceMap
-this.component.reloadDataSource()
-```
-
-获取循环数据对象 api (获取在循环场景下的数据对象)
-
-```js
-this.item
-this.index
-```
-
-《低代码开发会是未来吗？》https://mp.weixin.qq.com/s/M0vrPskxg0SZeQ6cmso7Qw
-2019-12-03 @玉伯
-
-
-
------- 文档 / 图
-
-https://affine.pro/ (字节刘义)
-
-2020-11 孟方(游圣) [aliyun/cadt](https://www.aliyun.com/product/developerservices/cadt)
-
-Roam Research [介绍](https://www.zhihu.com/question/384453977)、[介绍1](https://baijiahao.baidu.com/s?id=1669749949965240303)、[foam](https://foambubble.github.io/foam/)
-
-https://github.com/thinkerchan/notion2md
-​[Notion 编辑器原理](https://zhuanlan.zhihu.com/p/359122473)、[腾讯在线 Excel 技术](https://mp.weixin.qq.com/s/f1vwzuPryc8ag6nd5Ngr5A)
-[语雀 实时保存 方案](https://klab.yuque.com/docs/share/0e3ee249-d977-492b-82f2-6b44d26bd4af) (平侠/遇春 2021-01)、[语雀后端技术](https://mp.weixin.qq.com/s/VM61gkZuYYqE4pVhpba3nQ)、[隆昊《富文本编辑器的技术演进》](https://myslide.cn/slides/21863)、[有道云笔记富文本编辑器技术演进](https://mp.weixin.qq.com/s/9gDI1r9aAu6dHJhXg34eIg)。
-
-[飞书在线文档协同](https://mp.weixin.qq.com/s?__biz=MzkzNTIwNTAwOA==&mid=2247496795&idx=1&sn=5edf65ebf8609ada7981a9a804b072d3)、
-实时协作技术 [ot-vs-crdt](https://www.tiny.cloud/blog/real-time-collaboration-ot-vs-crdt/) / [xi-editor-CRDTs](https://xi-editor.io/docs/rope_science_08.html) / [are-crdts-suitable](https://blog.kevinjahns.de/are-crdts-suitable-for-shared-editing/)、[vs code 多人协作](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/connectivity)、[CKEditor 多人协作](https://ckeditor.com/collaborative-editing/)、[automerge](https://github.com/automerge/automerge)、[crdt](https://wiki.nikitavoloboev.xyz/distributed-systems/crdt)。
-
-[文档协同的三元结构-浩初](https://www.yuque.com/docs/share/92faca9c-2162-4fe2-974d-193164650b11)、[resume生成](https://github.com/visiky/resume)
-
-- 阿里云[媒体管理](https://help.aliyun.com/document_detail/63273.html)、[微软](https://support.microsoft.com/en-us/office/embed-a-presentation-in-a-web-page-or-blog-19668a1d-2299-4af3-91e1-ae57af723a60)、[Google/微软](https://gist.github.com/tzmartin/1cf85dc3d975f94cfddc04bc0dd399be)、Google [示例](https://docs.google.com/viewer?embedded=true&url=http%3A%2F%2Fhomepages.inf.ed.ac.uk%2Fneilb%2FTestWordDoc.doc)、转换 [sheetson](https://sheetson.com/)
-- 生成/查看 PPT: [PptxGenJS](https://github.com/gitbrent/PptxGenJS)、[apache_poi_ppt](https://www.w3cschool.cn/apache_poi_ppt/apache_poi_ppt_presentation.html)(java)、[nodeppt](https://github.com/ksky521/nodeppt)。[ViewerJS](https://github.com/webodf/ViewerJS)、[office sdk](https://www.pdftron.com/office-sdk/office-document-viewer/)。
-
-微软: [office](https://products.office.com/zh-cn/home) ([task](https://techcommunity.microsoft.com/t5/microsoft-365-blog/connecting-tasks-experiences-across-microsoft-365/ba-p/1522069))、[teams](https://teams.microsoft.com/)
-
-Google: [gsuite](https://gsuite.google.com/) ([google-forms](https://docs.google.com/forms/u/0/)/[教程](https://youtu.be/RoA65-vLV_0)) [alerts](https://www.google.com/alerts) [classroom](https://classroom.google.com/h)
-
-[notion](https://www.notion.so/)、[craft.do](https://www.craft.do/)、[airtable](https://airtable.com/)、[quip](https://quip.com/about/product)、[coda.io](https://coda.io/t/Welcome-to-Coda_tvbBdpE72Lq#)、slack。 [wolai](https://www.wolai.com/) ([介绍](https://www.zhihu.com/question/407132273/answer/1352638849))。 [mathigon](https://mathigon.org/)(互动教程)。
-
-腾讯文档 [docs.qq.com](https://docs.qq.com/desktop/)、头条 [larksuite](https://www.larksuite.com/) ([lark 出海](https://zhuanlan.zhihu.com/p/58585005))、[teambition](https://www.teambition.com/)、[wps](https://www.wps.cn/) (稻壳模板[docer](http://www.docer.com/))、[xiezuocat](https://xiezuocat.com/#/)(AI纠错)、[sheetui](https://sheetui.com/)(表格转网页)、[Luckysheet](https://github.com/mengshukeji/Luckysheet)、[handsontable](https://handsontable.com/)、[prezi](https://prezi.com/dashboard/next/#/presentations)、[milanote](https://app.milanote.com/1KeUXu1ElqNVrw/home)、
-
-产品设计工具: 白板([mural](https://mural.co/)、[miro](https://miro.com/))、原型([xiaopiu](https://www.xiaopiu.com)、[xiaopiu/prd](https://www.xiaopiu.com/prd)、[justinmind](https://www.justinmind.com/))、[知乎](https://www.zhihu.com/question/23004570)([invision](https://www.invisionapp.com/)、[modao](https://modao.cc/)、[会议桌](https://www.huiyizhuo.com/))、[流程图和图表](https://zhuanlan.zhihu.com/p/111990866)、在线[培训工具](https://segmentfault.com/a/1190000021793283)。
-
-其他: [mubu](https://mubu.com/)、[slides.com](https://slides.com/)、[ppt.baomitu](https://ppt.baomitu.com/)、[zoho](https://www.zoho.com/)、[visme](https://www.visme.co/templates/)、[deckdeckgo](https://deckdeckgo.com/)、[witeboard](https://witeboard.com/)、[wireflow](https://wireflow.co/)、[presenta](https://play.presenta.cc/#s0)。
-[batnoter](https://github.com/batnoter/batnoter)
-https://evernote.com
-
-
---- 画图 (web/客户端)
-
-如何画好一张架构图？ https://www.atatech.org/articles/173778
-流程图  https://baike.baidu.com/item/%E6%B5%81%E7%A8%8B%E5%9B%BE
-八种常见的业务设计和架构模型 https://www.sohu.com/a/384776040_246648
-B端产品设计3大流程图 http://www.woshipm.com/pd/3873765.html
-海兔设计系统 DSM https://yuque.antfin-inc.com/afx-es/data-ai/weekly-2020-05-16
-https://online.visual-paradigm.com/diagrams/templates/brainstorming/
-软件设计/业务设计/流程图/架构图/UX设计/BPMN/脑图
-
-https://tldraw.dev/
-[SVG-to-Canvas (canvas-to-SVG) Parser](https://github.com/fabricjs/fabric.js)
-
-[skeditor](https://github.com/skeditor/skeditor) [canvaskit-wasm](https://zhuanlan.zhihu.com/p/432454443)
-
-[figma](https://www.figma.com/) ([FigmaToCode](https://github.com/bernaferrari/FigmaToCode))
-[figma 技术](https://madebyevan.com/figma/) / [figma c++](https://madebyevan.com/figma/building-a-professional-design-tool-on-the-web/) / [figma 插件技术](https://zhuanlan.zhihu.com/p/357724347)
-
-[react-sketchapp](https://github.com/airbnb/react-sketchapp)
-
-[drawio](https://github.com/jgraph/drawio)([mxgraph](https://github.com/jgraph/mxgraph))、[cloudskew](https://www.cloudskew.com/)、[diagram-js](https://github.com/bpmn-io/diagram-js)、[excalidraw](https://github.com/excalidraw/excalidraw)、[draw2d](https://github.com/freegroup/draw2d)([demo](http://freegroup.github.io/draw2d_js.app.shape_designer/))、[plantuml](https://plantuml.com/zh/)、[planttext](https://www.planttext.com/)、[diagram.codes](https://www.diagram.codes/)、[jsplumb](https://github.com/jsplumb/jsplumb)([jsplumb-vs-mxgraph](https://www.npmtrends.com/jsplumb-vs-mxgraph))、[mermaid-js](https://github.com/mermaid-js/mermaid)、[nomnoml](https://github.com/skanaar/nomnoml)、[visjs](https://github.com/visjs)([timeline](https://visjs.github.io/vis-timeline/examples/timeline/))、[react-diagrams](https://github.com/projectstorm/react-diagrams)、[roughjs](https://roughjs.com/)、[rete.js/](https://rete.js.org/#/)[flume](https://flume.dev/)/[nodered](https://nodered.org/)(可视化节点)、[diagrams](https://github.com/mingrammer/diagrams)([graphviz](https://www.graphviz.org/))、[vscode-drawio](https://github.com/hediet/vscode-drawio)、[text-to-diagram](https://smusamashah.github.io/text-to-diagram)、[isoflow](https://isoflow.io/)、[reactflow](https://reactflow.dev/)、[diagram-maker](https://github.com/awslabs/diagram-maker)。
-
-平台/端: [processon](https://www.processon.com/)、visio、mindnode lite、[visual-paradigm](https://online.visual-paradigm.com/diagrams/features/aws-architecture-diagram-tool/)、[ithoughts](https://www.toketaware.com/ithoughts-osx)、[gliffy](https://www.gliffy.com/)、[terrastruct](https://terrastruct.com/)、[edrawsoft](https://www.edrawsoft.cn/)、[freedgo](https://www.freedgo.com/)、[websequencediagrams](https://www.websequencediagrams.com/)、[chartmage](http://chartmage.com/intro.html)、[thebrain](https://www.thebrain.com/)、[asciiflow](https://asciiflow.com/#/)([textik](https://textik.com/#9fe9a0bacdcf4a9a))、[omnigraffle](https://www.omnigroup.com/omnigraffle/)、[flowchart](https://flowchart.fun/)、[photopea](https://www.photopea.com/)​、[PPTist](https://github.com/pipipi-pikachu/PPTist)
-
-收费: [gojs](https://gojs.net/latest/samples/index.html)、[jointjs](https://www.jointjs.com/)、[jsplumbtoolkit](https://jsplumbtoolkit.com/)、[yworks](https://www.yworks.com/products/yfiles/demos)、[mindfusion-diagram](https://mindfusion.eu/javascript-diagram.html)
-
-系统: [drawio-aws-cloudcraft](https://www.diagrams.net/blog/drawio-aws-cloudcraft)、([placeholder](https://www.diagrams.net/blog/placeholder-scope)、[mermaid](https://www.diagrams.net/blog/mermaid-diagrams)、[network](https://www.diagrams.net/blog/network-diagrams)、[org](https://www.diagrams.net/blog/org-charts))
-
-
-
-
-## 工程化
-
-https://github.com/web-infra-dev
-
-
-业务脚手架 2021
-- 研发平台: 阿里def / 蚂蚁雨燕 / [DevOps平台-onedev](https://github.com/theonedev/onedev) / 大禹
-- 内置含 BU 特色的组件，基于“开源脚手架”定制，既提升效率又有开放性，是较好的选择。
-- 微前端: 微应用注册、路由管控(统一菜单/权限)、发布版本管控、发布灰度控制、多环境(日常/预发/线上)、预加载、应用组件。 子应用样式丢失。
-- request 组件: csrf-token 处理、gateway domain 网关域名、登录、返回异常、返回json结果格式化、上传/下载。
-- jwt https://www.zhihu.com/question/301253397/answer/547887208  http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/
-- API 管理平台 生成工具, 提高前后端联调效率. [google 的 API 设计指南](https://google.aip.dev/general) RESTful GraphQL.
-- API 数据mock/前后端: [postman](https://www.getpostman.com/) [paw](https://paw.cloud/) [hoppscotch](https://hoppscotch.io/)  [mockjs](https://github.com/nuysoft/Mock)  [swagger](https://swagger.io/) / [json-server](https://github.com/typicode/json-server)  [miragejs](https://miragejs.com/).
-- BFF: 多端适配/聚合裁剪数据，额外的部署资源及运维成本，集合 GraphQL https://insights.thoughtworks.cn/use-graphql-build-bff-in-microservices
-
-
-### SLO/SLI 标准化体系
-
-> 2024-06 ~ 12
-
-AI 判断: 工作量 工作难度 工作能力
-浑水摸鱼 产出不足
-
-研发流程
-- 敏捷迭代, 交付管理 WBS, 并行需求 都想先做自己的, 部分需求 后端全栈.
-- 优化: 仓库 monorepo 改造(基建+部分业务), 统一流水线.
-- 监控
-  - 性能体系化: 3s体验战役, 技术方案统一(js大小), 性能指标.
-  - 监控体系化智能化: 埋点和用户分析, 线上(sdk)线下(lighthouse)错误和性能监控一体化, AIOps/LLM, SLO体系, 自动指定代码cr人, 组织视图.
-
-研发平台
-- brook 需求管理, 流水线, 研发效能度量.
-- 工程化程度: 单测 CI/CD git 工具, GitHub action 协作方式。
-- 质量工具: [jscpd/重复代码](https://github.com/chinanf-boy/copy-paste-check/blob/master/src/duplicated-code.ts) 检测, deadcode, 单测, e2e.
-
-研发资源
-- 效率工具: [代码定位插件](https://github.com/zh-lx/code-inspector), 接口代理自动配置.
-- 标准Prd文档生成器(原型设计工具), 组件自动生成. 拼图 imgcook lowcode 插件.
-- [云原生应用市场](https://hub.grapps.cn/)
-
-工具成熟度
-- 看起来单点零散 增强体系化 产品化程度 开箱即用.
-- 工具的易用和完善度: 业务团队的基础工具，很难按 文档说明 一次性 的就能做好跑起来。 产物不一致、本地没问题 线上有问题。
-
-技术成熟度 / 架构
-- 组件设计经验？ 弹窗的 visible 应该在哪儿维护？
-- 代码可维护性提升方法？ 与优秀代码的差距？ 重复代码。 编程范式？(函数式与OO)  S.O.L.I.D 原则：S：单一职责 O：开闭 L：里氏替换 I：接口隔离 D：依赖倒置。
-- 设计模式：工厂模式、观察者模式、MVC。
-
-参考
-> [研发阶段](https://gw.alipayobjects.com/mdn/security_c/afts/img/A*z-C8SpqQo08AAAAAAAAAAABjARQnAQ) [蚂蚁](https://gw.alipayobjects.com/mdn/security_c/afts/img/A*jRrGSYNyLqIAAAAAAAAAAABjARQnAQ)
-> https://developer.apple.com/icloud/telemetry/
-
-
-### monorepo
-
-优势
-- 快速解决公共问题: 构建工具问题, 合规治理问题, 统一发布, 统一多环境同步.
-- 共享: 代码直接调用/复制粘贴/AI自动生成(饼), 踩坑经验共享, 一次性项目配置 甚至不需要脚手架.
-- 研发基准: 更高效促进依赖的 工具和组件升级, 更容易制定标准 推行和实践标准, 拔高下限 提升上限.
-- 研发可观测(指标/日志/跟踪): 技术栈分布/研发效能/SLO-SLI. 通过统一工具更智能地兜底或测试, review环节更严格.
-
-收益: 效率提升 >20%, 研发质量和稳定性提升 >30%, 跨团队协作更容易 SRE 进行专项支持.
-
-顾虑点
-- 误改动问题: 工具可解决,可分配人和改动的目录文件权限,在流水线里做卡点.
-- 版本关联升级问题: 能提醒改动带来的影响, 只有极特殊情况不需要关联 也能轻松解除.
-- 权限问题: 保密项目/代码 仍按传统多仓库做法, 其他情况以 monorepo 思维优先.
-- 代码泄露问题: 不管什么形式 都不能彻底解决 故意的泄露问题 (防君子不防小人).
-- 已有项目迁移问题: npm包几乎无额外工作量, 项目node版本区别 能兼容 但建议改造.
-
----
-
-使用 pnpm 未把 dependencies 构建完成,而导致 dependent 构建失败的问题
-https://stackoverflow.com/questions/72216431/how-to-control-pnpm-workspace-build-order
-2025-02
-
-npm v7(2020-10发布) 支持 Workspaces
-
-[Turborepo](https://github.com/vercel/turborepo) (类似nx) 解决了 Monorepo 的问题。我们的远程缓存存储您所有任务的结果，这意味着您的 CI 永远不需要做同样的工作两次。 任务调度可能是困难的，想象 yarn build 需要运行前 yarn test ，在所有的工作空间。Turborepo 可以调度您的任务，以最大的速度，在所有可用的核心。
-
-在 2022/05 的时候 Next.js 在这个 [PR#37259](https://github.com/vercel/next.js/pull/37259) 从yarn 转移到了pnpm，原因是使用pnpm 帮助他们降低了下载套件的大小，而且找到了一些幽灵依赖，并在 CI 上安装套件的速度从 4 分钟降低到了 2 分钟。
-
-monorepo 大版本同步开发，bugfix/feature 代码复用、git checkout cherry-pick 、git 冲突。
-
-[bit 介绍](https://juejin.cn/post/6844903872108953607) https://github.com/mcuking/blog/issues/88
-[将 50 万个文件放在一个 Git 存储库中](https://www.infoq.cn/article/tomhtgpmuy4oqhpvf0w1)
-https://www.51cto.com/article/759432.html
-
-https://github.com/changesets/changesets  https://juejin.cn/post/7024827345059971080
-
-2022 monorepo (one code base)
-* [monorepo.tools](https://monorepo.tools/)
-* [monorepo-vs-polyrepo](https://github.com/joelparkerhenderson/monorepo-vs-polyrepo)
-* [Awesome-monorepo](https://github.com/korfuri/awesome-monorepo)
-* [advantages of monorepo](https://medium.com/@suman.maity112/is-it-the-era-of-mono-repo-671e6dee387)
-* [Misconceptions about Monorepos](https://blog.nrwl.io/misconceptions-about-monorepos-monorepo-monolith-df1250d4b03c)
-https://github.com/facebook/react/
-https://github.com/vuejs/core/
-https://github.com/angular/angular
-
-
-
-### 基本库
-
-
-[JPlag](https://github.com/jplag/JPlag) 相似度检查 原理
-https://chatgpt.com/share/677e48dd-63b8-8008-b7d2-83c00c030fe8
-不可行
-- 完全不修改
-- 修改了注释内容
-- 修改了函数名和部分变量名
-- 交换了部分函数调用的顺序
-- 更改代码逻辑中的部分条件判断
-- 改变代码结构，将主函数分解成多个小函数
-- 调整部分使用的数据结构
-- 彻底更换实现方式，使用不同的数据结构和逻辑
-- 功能完全不相关的其它代码
-可行:
-- 改变代码结构，将主函数分解成多个小函数
-
-
-misc
-
-- 代码转换
-[convert react class based apps to functional/hooks?](https://www.reddit.com/r/reactjs/comments/o6djp7/is_there_any_automatic_tool_to_convert_react/)
-https://transform.tools/
-https://github.com/airbnb/ts-migrate
-https://github.com/reactjs/react-codemod
-https://github.com/facebook/jscodeshift
-https://astexplorer.net/
-- 图表: [amcharts](http://www.amcharts.com/demos/) / antv [L7地图](https://l7.antv.vision/zh)
-- 编辑器/IDE: [awesome editors](https://github.com/JefMari/awesome-wysiwyg)
-  - IDE: [coding.腾讯](https://coding.net/) / [stackblitz](https://stackblitz.com/) / [gitpod](https://www.gitpod.io/) https://bi.cool/bi
-  - web-Excel / [sheetjs Excel 解析](https://sheetjs.com/) / [moveable](https://github.com/daybrush/moveable)
-  - [slate](https://github.com/ianstormtaylor/slate) / [trix](https://github.com/basecamp/trix) / [tui-editor](https://ui.toast.com/tui-editor/) / [craft.js](https://github.com/prevwong/craft.js) / [stylojs](https://stylojs.com/)
-- 截图: dom-to-image / html2canvas / [各设备截图服务](https://screendump.techulus.com/) / 录制回放 [rrweb](https://github.com/rrweb-io/rrweb)
-- 日历: [react-big-calendar](https://github.com/jquense/react-big-calendar) / [fullcalendar](https://fullcalendar.io/) / [webix/scheduler](https://webix.com/scheduler/) / [tui.calendar](https://github.com/nhn/tui.calendar)
-- 文件管理器: [file-manager](https://js.plus/products/file-manager) / [dhtmlxFileManager](https://dhtmlx.com/docs/products/dhtmlxFileManager/) / [syncfusion/file-manager](https://www.syncfusion.com/blogs/post/introducing-new-javascript-file-manager-control.aspx) / [webix/filemanager](https://webix.com/filemanager/) https://github.com/filebrowser/filebrowser
-- 营销/游戏/大屏[多媒体](https://www.yuque.com/books/share/6487738a-085c-4a82-98b3-834f87859a2a)
-- 垂直: https://togetherjs.com  [wiki.js](https://wiki.js.org/)  UA 检测 https://github.com/Lissy93/web-check
-
-
-框架 (2021)
-
-[umijs](https://github.com/umijs/umi)
-[蚂蚁前端框架和工程化](https://github.com/sorrycc/blog/issues/85)
-[qiankun 子应用嵌套](https://github.com/umijs/qiankun/issues/960)
-
-
-构建工具 (2024)
-
-- webpack babel
-  - [Babel 插件原理](https://github.com/frontend9/fe9-library/issues/154)
-  - [webpack sideEffect](https://github.com/frontend9/fe9-library/issues/33)
-  - Webpack 5 module federationtion 联邦模块 https://juejin.cn/post/6844904187147321352
-- https://github.com/umijs/father
-- lint & actions
-  - lint 工具: ESLint Prettier pretty-quick husky. 使用 ESLint 检查代码逻辑错误。使用 Prettier 格式化代码. eslint-config-prettier：关闭 ESLint 中与 Prettier 冲突的格式规则。 eslint-plugin-prettier：将 Prettier 的格式检查集成到 ESLint 中.
-  - https://github.com/ant-design/ant-design/blob/master/.github/PULL_REQUEST_TEMPLATE_CN.md
-  - https://github.com/react-component/rc-test/blob/main/.github/workflows/main.yml
-  - dependabot vercel [coderabbitai](https://github.com/apps/coderabbitai)(Summary by CodeRabbit) socket-security codecov github-actions cloudflare-workers-and-pages
-    - https://github.com/react-component/select/pull/1080
-    - https://github.com/react-component/select/pull/1074
-    - https://github.com/react-component/select/pull/1079
-    - https://github.com/react-component/segmented/pull/242
-    - https://github.com/react-component/tree-select/pull/586
-    - https://github.com/react-component/picker/pull/886
-    - https://github.com/ant-design/ant-design-mobile/pull/6776
-- changelog & compatible upgrade
-  - [Changelog Generator](https://github.com/orhun/git-cliff)
-  - https://github.com/ant-design/compatible
-  - https://github.com/ant-design/codemod-v4
-- 工具
-  - 获取浏览器 cookie https://github.com/thewh1teagle/rookie
-  - [代理库](https://www.npmjs.com/package/https-proxy-agent)
-  - [翻译api](https://github.com/matheuss/google-translate-api)
-  - [各种 web-servers](https://gist.github.com/willurd/5720255)
-  - [isomorphic-git](https://isomorphic-git.org/en/)
-  - [jsfuck 代码混淆](http://www.jsfuck.com/)
-  - [frNatural language detectionanc](https://github.com/wooorm/franc)
-  -
-  - https://www.rspack.dev  https://modernjs.dev/guides/get-started/tech-stack.html
-  - gulp 手册 http://p.tb.cn/rmsportal_127_gulp_E6_89_8B_E5_86_8C1.pdf  http://p.tb.cn/rmsportal_127_gulp_E6_89_8B_E5_86_8C2.pdf
-  - https://github.com/ant-tool/atool-build
-  - [解读](https://github.com/frontend9/fe9-library/issues/32)
-
-
-功能库 (2024)
-
-- react hooks
-  - [zeit/swr](https://github.com/zeit/swr)
-  - [react-use](https://github.com/streamich/react-use)
-  - https://usehooks.com/
-- form/table
-  - [react-hook-form](https://react-hook-form.com/) 和 [zod](https://zod.dev/)
-  - [tanstack/table](https://tanstack.com/table), [react-data-grid](https://github.com/adazzle/react-data-grid) / [react-grid-layout](https://github.com/STRML/react-grid-layout)
-- pop弹窗: https://github.com/floating-ui/floating-ui  https://popper.js.org/react-popper/v2/ 被 material-ui 和 shadcn 等多个库依赖.
-- 独立功能: [react-virtualized](https://github.com/bvaughn/react-virtualized) / 分步指引 tour [shepherd](https://github.com/shipshapecode/shepherd) / [driver.js](https://github.com/kamranahmedse/driver.js) / form-builder FormRender.
-
-基础 UI 组件 (2024)
-
-- [tailwindcss](https://github.com/tailwindcss/tailwindcss)
-  - [shadcn/ui](https://ui.shadcn.com/)(2023-05开源)
-  - [Chakra UI](https://v2.chakra-ui.com/)(2019-09开源) / [Mantine](https://mantine.dev/)(2021-03开源)
-  - [Adobe](https://react-spectrum.adobe.com/) / [上海 geist-ui](https://github.com/geist-org/geist-ui)
-- [material-ui](https://mui.com/material-ui) [base-ui](https://mui.com/base-ui/)
-- [github-primer](https://primer.style/) / [Semantic UI](https://semantic-ui.com/)
-- https://ant.design
-  - https://github.com/react-component / 字节 arco-design semi-design
-  - https://procomponents.ant.design/
-
-[antd tree-shaking](https://github.com/ant-design/ant-design/issues/23988)
 
 
 
@@ -4829,7 +3703,42 @@ https://astexplorer.net/
 
 ### pro-components 2024-07 ~ 2025
 
------- 流水线(pipeline/ci/cd)
+------ git 冲突
+
+
+预期是 feature 流水线 如果是成功状态, 可以 直接合并代码到 master 分支. 问题:
+- 一天前 feature 分支流水线 运行成功, 半天前 master 有改动, 因为时差 导致 feature 分支的一些检查: rebase master 过期, feature代码本身无问题.
+- feature 分支和 master 有 git 冲突, 会在 release 分支产生 conflict 需要手动解决.
+  - feature 分支 及时 rebase master 的更新, 可提前在 feature 分支解决冲突.
+feature 分支和 master 无 git 冲突, 但可能有 增删代码 的 逻辑冲突.
+自动合并示例 (比如对 配置文件 .npmrc 的第12行 做修改. 或 package.json 的 dependencies 里):
+- feature分支 此文件 的第3行 后只有 2行 内容。
+- origin/master分支 此文件 的第3行 后有 5行 内容，并和 feature分支 的 后2行 内容完全不同。
+此时合并结果为: 前两行(相同) + origin/master分支后5行 + feature分支后2行. 没有冲突 但结果不符合预期.
+怎么解决?
+- feature 分支 及时 rebase master 的更新. rebase 时冲突可能解错.
+- 需要合并进 master 的多个 feature 分支, 按顺序 一个挨一个 合并. 不能解决.
+- 发布负责人 负责 review 逻辑冲突. 防止 误修改 问题.
+2025-03-29
+
+Git 中的标准合并冲突检测通常依赖于识别相对于共同祖先提交在相似时间范围内发生的重叠修改. Git 的底层三向合并算法比较合并点处的文件状态及其最近的共同祖先。虽然这种机制通常对于同一行或近距离的并发更改有效，但它可能无法始终捕获由于分支历史中在明显不同时间执行的操作而出现的语义冲突。  
+例如，如果在一个分支中添加了一个函数，而稍后，另一个分支中删除了包含该函数的文件，尤其是在中间有提交的情况下，Git 可能不会将此标记为需要手动解决的冲突。这是因为，从 Git 的角度来看，在被比较的特定提交级别上，更改可能看起来不重叠。代码修改缺乏直接的时间重叠可能会导致语义差异，而 Git 的纯文本比较可能会忽略这种差异。
+长期存在的功能分支虽然是某些开发工作流程中的常见做法，但可能会加剧此问题分支存在的时间越长而未合并回主线，其历史偏差就越大。必须承认 Git 冲突检测的固有局限性。它主要关注文本冲突，识别文件内容中的重叠修改. Git 本身并不具备对代码更改语义含义或它们之间的时间关系的理解。因此，在具有众多相互关联的项目和可能错综复杂的提交历史的复杂 monorepo 环境中，仅依靠 Git 的自动冲突检测通常不足以保证代码完整性并防止用户遇到的延迟冲突情况。
+...
+git 的合并冲突检测主要基于文本更改，即当同一行代码在不同分支中有不同修改时才会触发冲突。然而，逻辑冲突——即更改在文本上不冲突但合并后可能导致功能错误的场景——往往不会被 git 自动检测。例如，一个开发者添加了一个依赖某个变量的新函数，而另一个开发者删除了该变量，git 可能不会提示冲突，但合并后的代码会出错。
+2025-03-25
+
+Git 合并出现冲突的原因在于 两个分支版本对一个文件的同一区域 做了修改。行级冲突提示.
+如果是不同区域，Git 会尝试自动合并（auto-merge，默认策略）解决冲突, 但这可能引起逻辑错误。
+
+不同大版本 不能通过 git合并代码 因为无法解决冲突：
+- 代码差异过大：1.x 和 master 在文件结构、功能模块等方面差异较多。
+- 历史变更未同步：master 分支的某些改动未在 1.x 中体现。
+- 文件删除或重命名：1.x 和 master 对同一文件的操作不同步。
+- 如果 1.x 和 master 需要长期共存，定期同步两者的改动，避免分支差异积累到难以处理的程度。
+
+
+------ pipeline ci/cd 平台
 
 问题：现在的方案、针对“单包/单项目”的开发，没有考虑到这种大型联合开发的场景，另外在功能的扩展性和产品细节等方面、存在不少优化空间。
 需求：解决 monorepo 组件开发，对每个子包 有统一规范并需要强制Check的 情况。
@@ -4865,12 +3774,56 @@ https://astexplorer.net/
 - 右上角新建按钮、只能建项目 不能建任务直接，希望能基于 已有的项目、直接能 新建任务。
 
 
+------ npm 版本
+
+确保依赖版本始终同步的一种常用方法是，在 package.json 中为工作区包的依赖项指定严格的版本号，而不是 ^ 或 ~ 这样的语义版本号范围。这样做可以避免依赖更新时出现的意外问题。
+
+lockfile 出现合并冲突，主流的包管理工具都支持运行依赖安装命令（npm install/yarn/pnpm install）来自动解决冲突。
+在 主分支 上合入 开发分支（git merge feat-branch），theirs 指的就是开发分支，ours 指的是主分支，如果两个分支同时更新同一模块的版本号、对 lockfile 进行合并的策略:
+- npm：深合并，并以当前分支（ ours ）的为准
+- yarn：浅合并，并以目标分支（theirs）的为准
+- pnpm：深合并，以版本号大的为准 (认为 新版本出现的问题会比旧版本更少)
+  - 关注直接依赖 搜素 specifiers 的版本变更，对于直接依赖引入的间接依赖，自动升级出错的概率较小（一旦出错影响的不只一个项目），且 review 成本太高，选择信任社区。
+  - 支持在每个分支中生成锁文件 https://github.com/pnpm/pnpm/pull/4475 。
+  - [@types/react 18.3.5 bug](https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/70418) 在 package.json 设置 resolutions 锁定版本。
+
+对于应用项目来说，可以直接使用固定版本；但是对于类库项目，不推荐固定版本，有以下原因：
+- 依赖该类库的应用项目无法充分复用依赖：比如 ^1.0.0 和 ^1.1.0 可以合并成 ^1.1.0）
+- 类库项目的间接依赖出现安全漏洞时，无法通过重新安装依赖直接修复
+- 锁定直接依赖的版本也不完全有效，丢失 lock 后，直接依赖的间接依赖还是会进行升级，进而导致 BREAKING CHANGE
+- 锁版本 就得信任其他依赖不会出现问题（听天由命）
+- 尽量由开发流程保证，有冲突就复测，并做好充足的人工 review
+
+在开发一个 npm包 时，你的 npm包 是需要被其他仓库依赖的，由于扁平安装机制，如果你锁定了依赖包版本，你的依赖包就不能和其他依赖包共享同一 semver 范围内的依赖包，这样会造成不必要的冗余。所以我们不应该把package-lock.json 文件发布出去（ npm 默认也不会把 package-lock.json 文件发布出去）。
+
+npm 包的主版本号为 0 时，会被认为是一个不稳定版本，主版本号和次版本号都为 0: ^0.0.z、~0.0.z 都被当作固定版本，主版本号为 0: ^0.y.z 表现和 ~0.y.z 相同，只保持修订号为最新版本。
+1.0.0 的版本号用于界定公共 API，对外部发布一个正式版本的npm包时，把它的版本标为1.0.0。
+
+pre-release 预发布版本号的排序规则是：
+不同预发布版本类型之间 alpha < beta < rc < release（即稳定版本，没有预发布标识符）。
+同一预发布版本类型下，数字越大，版本越新，例如 1.0.0-alpha.1 < 1.0.0-alpha.2。
+比如 rc-0..n > beta-0..n > alpha-2..
+
+
 ------ lerna
 
+
+lerna.json 配置项 https://github.com/lerna/lerna/blob/main/libs/core/src/lib/project/index.ts#L28
+使用 lerna@8.0.2 在 /usr/local/lib/node_modules/lerna/dist/index.js 文件的 10480 行, 调试:
+`console.log('log concurrency: ', this.concurrency, Object.keys(this));` this 对象的 keys 为:
+[
+  'options', 'concurrency', 'toposort', 'execOpts', 'argv', 'name',
+  'composed','runner', 'script', 'projectsWithScript', '_project','logger',
+  'projectGraph',  'projectFileMap', 'args', 'npmClient', 'bail', 'prefix',
+  'count', 'packagePlural', 'joinedCommand'
+]
+2025-03-31
+
 [lerna commands](https://lerna.js.org/docs/api-reference/commands)
-[lerna实践](https://warmhug.github.io/2024/08/06/lerna-usage.html)
+
 lerna version 命令除了能 自动升级版本号，还能 自动生成 changelog 文档，自动给 gitlab 打 tag。
 使用 lerna version 前必读 https://docs.npmjs.com/cli/v10/commands/npm-version
+
 
 ```sh
 # --loglevel silly --yes --no-commit-hooks
@@ -4907,6 +3860,12 @@ lerna exec --scope @ant-design/pro-form -- pnpm version 0.1.5-alpha.0 --no-git-t
 
 总结
 
+- lerna publish 参数 from-git from-package
+  - 设置 from-git 或 from-package 后不会运行 lerna version 也不检测文件变更.
+  - 设置 --ignore-changes 只对 lerna version 或默认的 lerna publish（包含版本生成阶段）有效。
+- lerna tag 与 commit 关系
+  - 如果 tag 对应的 commit_id 不在 git 历史里 (比如被 rebase 修改了). lerna version 就不会基于这个 tag 的版本号 来升级版本.
+  - 解法: 修改 tag 对应到新的 commit_id , 强推覆盖远程的已有 tag. (尽管这不是一个好的做法, 但是方便).
 - lerna 根据什么检测变更
   - 命令 lerna changed --include-merged-tags 背后做了什么事, 对应的 git 命令是什么?
   - 如果你的项目使用了规范化的提交信息（例如，使用 commitizen 和 cz-lerna-changelog），Lerna 可以更准确地检测变更，因为它会根据提交信息中的标签来识别影响的包。
@@ -4926,13 +3885,14 @@ lerna exec --scope @ant-design/pro-form -- pnpm version 0.1.5-alpha.0 --no-git-t
   - https://lerna.js.org/docs/troubleshooting#publish-command
   - https://github.com/lerna/lerna/issues/1357#issuecomment-438162152
   - 如果是 annotated 使用 git show tag_name 会看到包含 tagger 标记
-  - 或者使用 git tag -v tag_name 不出现 error: cannot verify a non-tag object
 - lerna version 不支持 dry-run、lerna lite 支持 https://github.com/lerna/lerna/issues/51#issuecomment-2293358836
 - lerna ERR! EUNCOMMIT Working tree has uncommitted changes, please commit or remove the following changes before continuing: lerna ERR! EUNCOMMIT  M pnpm-lock.yaml
   - 如果是 M pnpm-lock.yaml 则确保开发阶段使用的 pnpm 版本一致
   - 如果是其他文件，使用 from-git 或 git commit https://github.com/lerna/lerna/issues/1591
 - lerna 项目存在 相同的 pkgName 不同的大版本 1x 2x 3x 怎么管理
-  - 加入 project.json 文件, 内容为 { "name": "pkgName@1.x" } 或 { "name": "pkgName@2.x" }
+  - 加入 project.json 文件, 内容为 { "name": "pkgName@1.x" } 或 { "name": "pkgName@2.x" } 利用了 nx 的特性.
+  - nx 报错: lerna ERR! lerna To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+
 
 更新 “有变更的包” 自身版本号 & 依赖的其他子包的版本号，修改 package.json 文件
 
@@ -4978,64 +3938,76 @@ await exec('node',[
 ```
 
 
------- 版本问题
+------ pnpm i 报错
 
-确保依赖版本始终同步的一种常用方法是，在 package.json 中为工作区包的依赖项指定严格的版本号，而不是 ^ 或 ~ 这样的语义版本号范围。这样做可以避免依赖更新时出现的意外问题。
-
-lockfile 出现合并冲突，主流的包管理工具都支持运行依赖安装命令（npm install/yarn/pnpm install）来自动解决冲突。
-在 主分支 上合入 开发分支（git merge feat-branch），theirs 指的就是开发分支，ours 指的是主分支，如果两个分支同时更新同一模块的版本号、对 lockfile 进行合并的策略:
-- npm：深合并，并以当前分支（ ours ）的为准
-- yarn：浅合并，并以目标分支（theirs）的为准
-- pnpm：深合并，以版本号大的为准 (认为 新版本出现的问题会比旧版本更少)
-  - 关注直接依赖 搜素 specifiers 的版本变更，对于直接依赖引入的间接依赖，自动升级出错的概率较小（一旦出错影响的不只一个项目），且 review 成本太高，选择信任社区。
-  - 支持在每个分支中生成锁文件 https://github.com/pnpm/pnpm/pull/4475 。
-  - [@types/react 18.3.5 bug](https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/70418) 在 package.json 设置 resolutions 锁定版本。
-
-对于应用项目来说，可以直接使用固定版本；但是对于类库项目，不推荐固定版本，有以下原因：
-- 依赖该类库的应用项目无法充分复用依赖：比如 ^1.0.0 和 ^1.1.0 可以合并成 ^1.1.0）
-- 类库项目的间接依赖出现安全漏洞时，无法通过重新安装依赖直接修复
-- 锁定直接依赖的版本也不完全有效，丢失 lock 后，直接依赖的间接依赖还是会进行升级，进而导致 BREAKING CHANGE
-- 锁版本 就得信任其他依赖不会出现问题（听天由命）
-- 尽量由开发流程保证，有冲突就复测，并做好充足的人工 review
-
-在开发一个 npm包 时，你的 npm包 是需要被其他仓库依赖的，由于扁平安装机制，如果你锁定了依赖包版本，你的依赖包就不能和其他依赖包共享同一 semver 范围内的依赖包，这样会造成不必要的冗余。所以我们不应该把package-lock.json 文件发布出去（ npm 默认也不会把 package-lock.json 文件发布出去）。
-
-npm 包的主版本号为 0 时，会被认为是一个不稳定版本，主版本号和次版本号都为 0: ^0.0.z、~0.0.z 都被当作固定版本，主版本号为 0: ^0.y.z 表现和 ~0.y.z 相同，只保持修订号为最新版本。
-1.0.0 的版本号用于界定公共 API，对外部发布一个正式版本的npm包时，把它的版本标为1.0.0。
-
-pre-release 预发布版本号的排序规则是：
-不同预发布版本类型之间 alpha < beta < rc < release（即稳定版本，没有预发布标识符）。
-同一预发布版本类型下，数字越大，版本越新，例如 1.0.0-alpha.1 < 1.0.0-alpha.2。
-比如 rc-0..n > beta-0..n > alpha-2..
-
-
------- git 冲突
-
-Git 合并出现冲突的原因在于 两个分支版本对一个文件的同一区域 做了修改。
-如果是不同区域，Git 会尝试自动合并（auto-merge，默认策略）解决冲突。
-
-自动合并规则 (比如对 配置文件A(.npmrc) 的第12行 做修改):
-> origin 和 origin1 是只有 .npmrc 等配置文件 有差异的 两个代码库 (用于部署到不同环境)，除了配置文件外 其他文件内容相同。
-- origin/master 文件A 的第3行 后只有 2行 内容。
-- origin1/master 文件A 的第3行 后有 5行 内容，并和 origin/master 文件A 的 后2行 内容完全不同。
-- 当前在 origin/master 分支，需要合并 origin1/master 分支，运行 `git merge -X ours origin1/master --no-commit` 后 自动解决了冲突。
-- 此时合并结果为：前两行(相同) + origin1文件A后5行 + origin文件A的第三行(有改动)和后2行。会发现 origin文件A后2行 不是想要的内容。
-
-由此看来 git 自动合并冲突的方法是“不安全”的。还有比如 package.json 的 dependencies 里,
+pnpm install 时 esbuild 报错
 
 ```sh
-# 操作 https://stackoverflow.com/a/930495/2190503
-git stash push lock.yaml  # 暂存 lock 文件，使用当前 lock 文件
-git checkout --ours "*lock*" # 使用 当前或目标(--theirs) 的 lock 文件
-# 在 .gitattributes 文件里配置 当 pnpm-lock.yaml 出现冲突时，将以当前分支为准
-pnpm-lock.yaml merge=ours
+.../esbuild@0.21.5/node_modules/esbuild postinstall$ node install.js
+xxx/node_modules/.pnpm/esbuild@0.21.5/node_modules/esbuild/install
+throw new Error(`Expected ${JSON.stringify(versionFromPackageJSON)}
+Error: Expected "0.21.5" but got "0.23.1"
+at xxx/node_modules/.pnpm/esbuild@0.21.5/node_modules/esbuild
+Node.js v18.20.4
+node_modules/.pnpm/node-sass@4.14.1/node_modules/node-sass: Running install script...
+ELIFECYCLE Command failed with exit code 1.
 ```
 
-多分支合并冲突原因：
-- 代码差异过大：1.x 和 master 在文件结构、功能模块等方面差异较多。
-- 历史变更未同步：master 分支的某些改动未在 1.x 中体现。
-- 文件删除或重命名：1.x 和 master 对同一文件的操作不同步。
-- 如果 1.x 和 master 需要长期共存，定期同步两者的改动，避免分支差异积累到难以处理的程度。
+在 package.json 里对 esbuild 包设置 pnpm resolutions/overrides 都没用 https://github.com/evanw/esbuild/issues/3800 ，
+发现 k.j 源的包信息、缺少了 `optionalDependencies` 部分 (原因猜测是 esbuild 这一个版本号有问题 修复后覆盖发包 而不是正常的升级版本号)，实际原因是 k.j 源“限制了字段长度”，把 optionalDependencies 字段删除了。负责的同学去掉了这个限制、这个问题被解决。但又出现以下新的报错:
+
+```sh
+.../node_modules/node-sass postinstall$ node scripts/build.js
+node_modules/.pnpm/node-gyp@3.8
+gyp ERR! configure error
+gyp ERR! stack Error: Command failed: /usr/local/bin/python3.10 -c import sys; print "&s.%s.&s"
+gyp ERR! cwd .../node_modules/.pnpm/node-sass@4.14.1/
+gyp ERR! node -v v18.20.4
+gyp ERR! node-gyp -v 3.8.0
+gyp ERR! not ok
+Build failed with error code: 1
+```
+
+这个错跟 [node-sass](https://www.npmjs.com/package/node-sass/v/8.0.0) 有关:
+sass-loader需要用node-gyp构建，node18需要最低node-sass 8.0 版本。
+
+在项目根目录使用 `npm ls node-sass` 查到 `style-loader@2.0.0 -> sass-loader@8.0.2 -> node-sass@4.14.1` 即 style-loader 依赖的依赖 含有 node-sass 4 版本，和 node18 环境不搭配。
+
+解决方法: 在 package.json 里对 node-sass 包设置 resolutions/overrides 为固定的 `node-sass@8.x` 。
+
+另外解决方法: 在 install 时 ignore-scripts 绕过，但这个方法无法在 npmrc 文件里做配置。
+
+```sh
+pnpm i --ignore-scripts esbuild@0.21.4
+pnpm i --ignore-scripts node-sass@4.14.1
+```
+
+
+------ 打包构建库
+
+[father](https://github.com/umijs/father) 和 dumi
+- father 4 Bundle 模式使用 Webpack 作为构建核心，Bundless 模式支持 esbuild、Babel 及 SWC 三种构建核心。
+- father 4 打包成 umd 产物时，lessLoader 设置 `math: 'always'` 配置项 https://github.com/umijs/father/issues/514#issuecomment-2222842879
+  - [webpack chain 用法](https://juejin.cn/post/6947851867422621733)
+- [father 2.x](https://github.com/umijs/father/tree/v2.9.0) 基于 [rollupjs](https://rollupjs.org/) 构建，采用 babel插件 编译 js/ts、采用 [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss) 编译 less/css (不支持less配置项)。利用 [docz](https://www.docz.site/) 生成网站。
+- dumi 设置非根目录 [publicPath](https://github.com/umijs/dumi/issues/849)
+
+[rollup，vite以及webpack比较与介绍](https://juejin.cn/post/7097493230572273700)
+- rollup 与 webpack 都是基于JavaScript依赖系统的一个打包构建工具，他们的共同点很多。 Rollup 默认打包为 ES6 格式、依靠插件生成 CommonJS 和 AMD 代码，静态分析代码中的 import 并排除任何未实际使用的代码。 Rollup 构建速度明显快于 webpack，生成的代码量很小。
+- 不过在应用开发层面讲，如果开发一个Web应用webpack要比rollup有更大的优势，因为其天然继承了devServer以及hmr，这使得开发者可以快速的对应用进行调试开发。 Rollup 更加适合插件开发，而webpack更加适合应用开发。
+- vite 号称是下一代的打包构建工具，主要体现在他从开发环境到生产环境的构建速度都能比webpack提升很多倍，原因就在于基于 rollup 和 esbuild 两个基础构建工具上。利用浏览器对ESM模块的支持，通过babel解决兼容性。将应用中的模块区分为 依赖 和 源码 两类，Vite使用esbuild预构建依赖、构建速度快 10-100 倍。在浏览器请求源码时、根据 router 按需以 原生 ESM方式提供 源码。利用 HTTP 头来加速整个页面的重新加载，源码模块的请求会根据 304 Not Modified 进行协商缓存，而依赖模块请求则会通过 Cache-Control: max-age=31536000,immutable 进行强缓存，因此一旦被缓存它们将不需要再次请求。
+- vite 在生产环境打包也使用的 rollup，在预购建依赖的时候使用 esbuild。
+- esbuild 使用 go 编写，发挥多线程多核优势，不使用 AST。所以一些通过 AST 处理代码的 babel插件没有很好的方法过渡到 esbuild 中。
+
+概述
+- 转译器：将一门高级语音转译为另一种高级语言，如 ts 转译为 js、es6 转译为 es5 等等。 用js/ts实现的 babel、tsc 其他语言实现的 esbuild（go）、swc（rust）。
+  - [esbuild](https://esbuild.github.io/) 不提供 AST 操作能力，一些需要操作 AST 的 babel 插件无法与之兼容。有两大功能，分别是 bundler 与 minifier，其中 bundler 用于代码编译，类似 babel-loader、ts-loader；minifier 用于代码压缩，类似 terser。
+  - SWC 设计为与 babel 插件体系相兼容，因此可以在许多现有的 babel 配置下无缝替换，提升构建速度。
+- 打包器：将项目中的各种文件如 png、sass、json 等等打包成想要的结果。
+  - 一类是通过监听源代码变化然后重新构建项目将打包后的代码推送到浏览器的传统模式 如 Webpack、 rollup、 [parcel](https://parceljs.org/) 。
+  - 另一类是通过浏览器的原生 module 来实现动态打包的 bundleless 模式 如 [vite](https://vite.dev/) 、 [snowpack](https://www.snowpack.dev/) 他们都依赖 esbuild 。
+  - Bundle vs Bundleless（代表就是webpack VS vite）。 webpack 等工具会把代码打包成 Bundle 文件，而 vite 则是依赖原生的 ESM 来实现，虽然在生产环境仍然要打包。 在生产环境中发布未打包的 ESM 仍然效率低下（即使使用 HTTP/2）。为了在生产环境中获得最佳的加载性能，最好还是将代码进行 tree-shaking、懒加载和 chunk 分割（以获得更好的缓存）。
+- gulp 强调的是前端开发的工作流程，通过配置一系列的task，定义执行顺序，来让gulp执行。 webpack 侧重模块打包，我们可以把开发中的所有资源（图片、js文件、css文件等）都看成模块，通过loader（加载器）和plugins（插件）对资源进行处理，打包成符合生产环境部署的前端资源。 对于 gulp 来说模块化不是他强调的东西，而 webpack 更强调模块化开发，而文件压缩合并、预处理等功能，不过是他附带的功能。
 
 
 ------ iframe 内页面操作父页面dom (不同域名)
@@ -5093,76 +4065,6 @@ antd4 [发布日志](https://github.com/ant-design/ant-design/issues/21656)
 }
 ```
 
------- pnpm i 报错
-
-pnpm install 时 esbuild 报错
-
-```sh
-.../esbuild@0.21.5/node_modules/esbuild postinstall$ node install.js
-xxx/node_modules/.pnpm/esbuild@0.21.5/node_modules/esbuild/install
-throw new Error(`Expected ${JSON.stringify(versionFromPackageJSON)}
-Error: Expected "0.21.5" but got "0.23.1"
-at xxx/node_modules/.pnpm/esbuild@0.21.5/node_modules/esbuild
-Node.js v18.20.4
-node_modules/.pnpm/node-sass@4.14.1/node_modules/node-sass: Running install script...
-ELIFECYCLE Command failed with exit code 1.
-```
-
-在 package.json 里对 esbuild 包设置 pnpm resolutions/overrides 都没用 https://github.com/evanw/esbuild/issues/3800 ，
-发现 k.j 源的包信息、缺少了 `optionalDependencies` 部分 (原因猜测是 esbuild 这一个版本号有问题 修复后覆盖发包 而不是正常的升级版本号)，实际原因是 k.j 源“限制了字段长度”，把 optionalDependencies 字段删除了。负责的同学去掉了这个限制、这个问题被解决。但又出现以下新的报错:
-
-```sh
-.../node_modules/node-sass postinstall$ node scripts/build.js
-node_modules/.pnpm/node-gyp@3.8
-gyp ERR! configure error
-gyp ERR! stack Error: Command failed: /usr/local/bin/python3.10 -c import sys; print "&s.%s.&s"
-gyp ERR! cwd .../node_modules/.pnpm/node-sass@4.14.1/
-gyp ERR! node -v v18.20.4
-gyp ERR! node-gyp -v 3.8.0
-gyp ERR! not ok
-Build failed with error code: 1
-```
-
-这个错跟 [node-sass](https://www.npmjs.com/package/node-sass/v/8.0.0) 有关:
-sass-loader需要用node-gyp构建，node18需要最低node-sass 8.0 版本。
-
-在项目根目录使用 `npm ls node-sass` 查到 `style-loader@2.0.0 -> sass-loader@8.0.2 -> node-sass@4.14.1` 即 style-loader 依赖的依赖 含有 node-sass 4 版本，和 node18 环境不搭配。
-
-解决方法: 在 package.json 里对 node-sass 包设置 resolutions/overrides 为固定的 `node-sass@8.x` 。
-
-另外解决方法: 在 install 时 ignore-scripts 绕过，但这个方法无法在 npmrc 文件里做配置。
-
-```sh
-pnpm i --ignore-scripts esbuild@0.21.4
-pnpm i --ignore-scripts node-sass@4.14.1
-```
-
-
------- 打包构建
-
-[father](https://github.com/umijs/father) 和 dumi
-- father 4 Bundle 模式使用 Webpack 作为构建核心，Bundless 模式支持 esbuild、Babel 及 SWC 三种构建核心。
-- father 4 打包成 umd 产物时，lessLoader 设置 `math: 'always'` 配置项 https://github.com/umijs/father/issues/514#issuecomment-2222842879
-  - [webpack chain 用法](https://juejin.cn/post/6947851867422621733)
-- [father 2.x](https://github.com/umijs/father/tree/v2.9.0) 基于 [rollupjs](https://rollupjs.org/) 构建，采用 babel插件 编译 js/ts、采用 [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss) 编译 less/css (不支持less配置项)。利用 [docz](https://www.docz.site/) 生成网站。
-- dumi 设置非根目录 [publicPath](https://github.com/umijs/dumi/issues/849)
-
-[rollup，vite以及webpack比较与介绍](https://juejin.cn/post/7097493230572273700)
-- rollup 与 webpack 都是基于JavaScript依赖系统的一个打包构建工具，他们的共同点很多。 Rollup 默认打包为 ES6 格式、依靠插件生成 CommonJS 和 AMD 代码，静态分析代码中的 import 并排除任何未实际使用的代码。 Rollup 构建速度明显快于 webpack，生成的代码量很小。
-- 不过在应用开发层面讲，如果开发一个Web应用webpack要比rollup有更大的优势，因为其天然继承了devServer以及hmr，这使得开发者可以快速的对应用进行调试开发。 Rollup 更加适合插件开发，而webpack更加适合应用开发。
-- vite 号称是下一代的打包构建工具，主要体现在他从开发环境到生产环境的构建速度都能比webpack提升很多倍，原因就在于基于 rollup 和 esbuild 两个基础构建工具上。利用浏览器对ESM模块的支持，通过babel解决兼容性。将应用中的模块区分为 依赖 和 源码 两类，Vite使用esbuild预构建依赖、构建速度快 10-100 倍。在浏览器请求源码时、根据 router 按需以 原生 ESM方式提供 源码。利用 HTTP 头来加速整个页面的重新加载，源码模块的请求会根据 304 Not Modified 进行协商缓存，而依赖模块请求则会通过 Cache-Control: max-age=31536000,immutable 进行强缓存，因此一旦被缓存它们将不需要再次请求。
-- vite 在生产环境打包也使用的 rollup，在预购建依赖的时候使用 esbuild。
-- esbuild 使用 go 编写，发挥多线程多核优势，不使用 AST。所以一些通过 AST 处理代码的 babel插件没有很好的方法过渡到 esbuild 中。
-
-概述
-- 转译器：将一门高级语音转译为另一种高级语言，如 ts 转译为 js、es6 转译为 es5 等等。 用js/ts实现的 babel、tsc 其他语言实现的 esbuild（go）、swc（rust）。
-  - [esbuild](https://esbuild.github.io/) 不提供 AST 操作能力，一些需要操作 AST 的 babel 插件无法与之兼容。有两大功能，分别是 bundler 与 minifier，其中 bundler 用于代码编译，类似 babel-loader、ts-loader；minifier 用于代码压缩，类似 terser。
-  - SWC 设计为与 babel 插件体系相兼容，因此可以在许多现有的 babel 配置下无缝替换，提升构建速度。
-- 打包器：将项目中的各种文件如 png、sass、json 等等打包成想要的结果。
-  - 一类是通过监听源代码变化然后重新构建项目将打包后的代码推送到浏览器的传统模式 如 Webpack、 rollup、 [parcel](https://parceljs.org/) 。
-  - 另一类是通过浏览器的原生 module 来实现动态打包的 bundleless 模式 如 [vite](https://vite.dev/) 、 [snowpack](https://www.snowpack.dev/) 他们都依赖 esbuild 。
-  - Bundle vs Bundleless（代表就是webpack VS vite）。 webpack 等工具会把代码打包成 Bundle 文件，而 vite 则是依赖原生的 ESM 来实现，虽然在生产环境仍然要打包。 在生产环境中发布未打包的 ESM 仍然效率低下（即使使用 HTTP/2）。为了在生产环境中获得最佳的加载性能，最好还是将代码进行 tree-shaking、懒加载和 chunk 分割（以获得更好的缓存）。
-- gulp 强调的是前端开发的工作流程，通过配置一系列的task，定义执行顺序，来让gulp执行。 webpack 侧重模块打包，我们可以把开发中的所有资源（图片、js文件、css文件等）都看成模块，通过loader（加载器）和plugins（插件）对资源进行处理，打包成符合生产环境部署的前端资源。 对于 gulp 来说模块化不是他强调的东西，而 webpack 更强调模块化开发，而文件压缩合并、预处理等功能，不过是他附带的功能。
 
 
 ### 基础组件库 调研 2024-11 ~ 12
@@ -6288,19 +5190,1133 @@ es6 WeakMap 解决类似问题。
 
 
 
+
+## .
+
+
+
+## js html css 小程序/RN
+
+------ js
+
+- https://evertpot.com/using-top-level-await-is-bc-break/
+
+- 33-js-concepts https://github.com/leonardomso/33-js-concepts
+- 只在行首字符是 `+ - [ ( /` 这5种情况下，加前置分号即可
+- 原型链/闭包(匿名函数)？实现继承？new的原理实现？this指向改变(call/apply/bind)？null/undefined区别？事件代理(委托)？减少事件注册 节省内存。
+- es6 常用哪些特性？ 变量最小作用域 es5 function, es6 let 块级。 var 变量提升(Hoisting)。 Map 和 WeakMap 区别。 Symbol generator。
+- promise 跟 async/await 关系？ async 方法返回 promise 、是 promise 的语法糖。
+- es6 generator？ es6 和 node 的 module 的区别？ fetch、xhr 优劣势
+- ES 与 CommonJS modules 的区别
+- 内存泄漏的几种情况？ https://blog.logrocket.com/escape-memory-leaks-javascript/
+- WeakRef 的用处 https://www.reddit.com/r/Frontend/comments/1ato11w/will_the_event_listeners_be_removed_automatically/
+- 在 es class 中的 箭头函数 比较慢，而且不在 原型链 上  https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1
+- es6 modules 父子 module 的代码执行顺序、class 内外代码执行顺序。
+
+- shim、sham 和 polyfill 之间的区别？ https://github.com/es-shims/es5-shim
+  - es5-shim 完美模拟了所有 ES5 中可以被完美模拟的方法。就是说 ES5 中有些方法，是可以在旧 JS 引擎中完美模拟了，那么 shim 就完美模拟了它们。shim 不局限与浏览器环境，只要 JavaScript 引擎支持，代码即可运行。
+  - es5-sham 只承诺你用的时候代码不会崩溃，至于对应的方法是不是起作用它就不保证了。如果你要用的方法在 shim 中都包含了，那么就不需要 sham。sham 能不引用就不引用。sham 依赖 shim。 IE8：只支持 ES3。
+
+库/框架
+
+- React16 / 17 / 18版本新特性 https://blog.csdn.net/momei1942/article/details/129699873
+- React18: 并发控制的更好更灵活，定时器等异步函数setState批处理、Suspense 流式 html SSR、useTransition 延迟/过渡更新。
+- 看过 框架或库 源码？ react 使用注意事项 https://github.com/mithi/react-philosophies  React 技术揭秘 https://react.iamkasong.com/
+
+- react diff 原理？生命周期？受控组件和非受控组件？父组件和子组件的通信方式？render-props 高阶组件 (代替mixin及ref问题)？
+- react 应用性能优化？列表 key / shouldComponentUpdate / PureComponent (父子组件 props state 不变时不render 为什么不建议用?) / memoization
+- react setState 是同步的还是异步的? 异步。 子组件和父组件 componentDidMount 哪一个先执行？子组件先。
+- prop 的变化 同步到 state 的方法？
+
+- react 渲染器了解一下？ https://juejin.cn/post/6844903753242378248
+- React Fiber 架构 https://xueshiming.cn/2021/05/08/React%20%E4%B9%8B%20Fiber%20%E6%9E%B6%E6%9E%84/
+- React-Fiber 并发模式、区分任务优先级、调度协调 中断/恢复任务，浏览器60fps渲染 10毫秒自己执行 5毫秒空闲时间。
+
+- react 需要遍历或修改 children，要使用`React.Children.forEach / React.Children.map` 方法，而不要用`Array.isArray(children) / children.forEach`等方法。
+- setState 是异步的 [示例](https://stackoverflow.com/a/45249445/2190503) 会引起不必要的 render。
+- [真实 DOM 和 react 虚 dom 讨论](http://www.zhihu.com/question/31809713)
+  - dom 对象是很庞大的（上边有很多属性），其创建的开销比较大，已有的 dom 对象上做更新开销并不大，众多框架都在围绕此做优化，比如用`key`是否变化来判断对 dom 的操作是 “更新” 还是 “销毁重建”。 dom批量更新：dom操作如，1.删除一个元素，2.增加一个元素，3.在增加的元素上改变一个属性。如果用 dom-api，会有多次 repaints reflows 比较耗性能。 如果放到「虚拟 dom」上操作，会把这三个过程最终的结果，一次更新到实际 dom 树上，只用操作一次实际 dom。 virtual-dom 里一次 digest 中的 diff 只需一次，但是会随着 ui 的规模复杂度，性能损耗严重。
+
+react hooks
+- https://github.com/frontend9/fe9-library/issues/257
+- 不优雅的 React Hooks https://zhuanlan.zhihu.com/p/455317250
+- React Hooks 使用误区 https://zhuanlan.zhihu.com/p/450513902
+- React Hooks 陷阱 https://mp.weixin.qq.com/s?__biz=MzIzMjcxNzE5MA==&mid=2247488097&idx=1&sn=e8a6d71d1c05c8be04c25b32af43fb09
+- useLayoutEffect 和 useEffect 的区别 https://zhuanlan.zhihu.com/p/348701319
+- [useReducer callback](https://github.com/facebook/react/issues/15344)
+
+- react hooks 怎么把 props 里复杂对象（数据请求结果）的实时变化、”完全同步/只是初始化“ 更新到 state 中？
+- react hooks useRef 用途？和“函数组件”外定义的变量区别？(类全局变量) 分别的执行时机？
+- react hooks useMemo useCallback useReducer/redux 应用场景？
+- react hooks useEffect 及其 return 函数的执行时机？子组件先执行？多个时执行顺序？怎么确保 dom 先增加成功 (setTimeout)？
+
+[redux](https://redux.js.org/) 概念
+- 为什么是 企业级前端开发框架？ 实现 双向绑定 的原理？
+- 单双向数据流区别？https://pomb.us/build-your-own-react
+- data-flow, 不可变的数据更新模式 immutable-update-patterns.
+- actions 其实就是 mutations，即 ui 或者 server 的 response.
+- action creator 调用 dispatcher (passive pub-sub systems) 传递 mutations.
+- store 监听 actions 再去 mutate data (只有store能决定怎么更新数据).
+- component 监听 store, 获取需要的数据.
+redux 基本流程
+- 为什么用单一的 store? 子组件 connect 后可使用 store 了？ context。 immutable-js ？ immerjs
+- redux-saga 典型流程:  form 表单提交，触发 FORM_POST action，saga 里 `yield put` POST_SUCCESS 触发 action，改变页面状态或拉取新数据，触发 UI CHANGE 的 action，过程中用 `yield select` 从 state 里选取需要的参数。
+[Reactive programming vs Passive programming](https://vaibhavgupta.me/2017/12/31/reactive-programming-vs-passive-programming/)
+
+
+------ html css
+
+cssinjs https://mp.weixin.qq.com/s/cepGi8Jhe4RnyfNaoN_zfw
+react19 cssinjs 问题 https://juejin.cn/post/7359876671137071156
+探索：业务中推行 tailwindcss 和 emotion，设计上 design token 抽象。
+2024-10 cssinjs
+
+- html 规则检测 https://validator.w3.org 、 http://infohound.net/tidy
+- html head 里的 js css 如何放置  head 里能放什么 https://github.com/joshbuchea/HEAD
+- iframe 有哪些问题 https://afantasy.ninja/2018/07/15/dive-into-iframe
+  - 高度改变麻烦、弹框、iframe 里再嵌套 ifr。
+  - 移动端页面、打开(全屏)嵌入的 iframe 页面，点浏览器返回、返回不到业务页面、需要销毁 iframe。
+  - 浏览器刷新 iframe url 状态丢失、后退前进按钮无法使用。
+  - 里边 弹出框 的位置、难居中，浏览器 resize 时自动居中 更难处理。
+  - 主文档和 iframe 文档如果不同域、免登录处理麻烦，涉及 cookie 透传。
+  - 需要完全重新加载，比较慢。
+  - iframe 自适应高度：给定高度、内部滚动
+- div/span 都是容器元素， p dt 标签里不能有块(block)标签， button 里面不要嵌套 a 标签。
+- img script 的 src、css 的 href 都不能为空。 DOM 的 attribute 和 property 区别。
+- a 伪类需遵循 css2 规范中的 L-V-H-A (a:link visited hover active) 顺序。
+- 没有 css-parent-selector 。 BEM命名方式。  如何提升 CSS 选择器性能 http://www.jianshu.com/p/268c7f3dd7a6
+
+- [anchor-positioning-api](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn)
+- CSS 选择器优先级(id>class>标签>伪类)？伪类和伪元素区别？BFC/IFC 介绍？
+- 浮动以及清除浮动？页面布局方法？flex一维 CSS Grid 二维。元素垂直居中方法？
+- border-box 作用？display/position 作用(absolute会变为块元素)？z-index 在节点 position 值是什么生效(relative/absolute/fixed)？
+- 子元素的 margin-top 设置影响父元素位置？页面兼容性问题？响应式布局怎么实现？
+- CSS优化方法？减少DOM操作，减少重绘和重排，合理使用选择器，减少@import使用。
+- h5高清方案(rem) 优缺点？ css 实现 loading，三角形？ css-module 的作用？ css 样式初始化为了什么？
+- https://www.iconfont.cn/
+- css 时间函数 http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions
+- css 长度 https://css-tricks.com/the-lengths-of-css
+  - 绝对长度: px inch cm mm。 rem: 相对 root 的 font-size 大小  em: 基于大写字母 M 的尺寸  ex: 基于 x 字母高度  1vh 等于 1/100 的视口高度
+
+
+browser
+
+- [URL 编码，为什么要编码？](http://anjia.github.io/2015/04/15/jsURIEncode/)
+- 浏览器在自动选择编码方式的时候不会优先根据 html 源码中的所展示的`<meta charset="utf-8" />`代码来决定选择什么编码方式，而是优先根据“响应标头-response header”中的键为“Content-Type”的值来自动选择判断。
+- [ua 检测](https://github.com/ded/bowser) / [特性检测](https://github.com/barisaydinoglu/Detectizr)
+- 浏览器解析和CSS（GPU）动画优化 https://segmentfault.com/a/1190000008015671
+  - css 动画中尽量只使用 transform 和 opacity ，这不会发生重排和重绘。
+  - 有动画的元素样式，给定尺寸、设置为 display block（如果设置 display flex 子元素尺寸会动态变化、影响动画效果）
+- [WebAssembly](https://juejin.im/entry/5b20d09d6fb9a01e242490b1)
+  - 不是一门编程语言，而是一份字节码标准。 各种复杂的计算：图像处理、3D运算(大型 3D 网页游戏)、语音识别、音视频编码解码。区块链合约。
+  - [madewithwebassembly](https://madewithwebassembly.com/)、eBay 的[条形码扫描](https://www.infoq.cn/article/vc*q7psQqWMaVU8igJeD)、 [Google earth web](https://earth.google.com/web/) 版、 [autocad](https://web.autocad.com/login) web 版
+- [PWA](https://developers.google.com/web/progressive-web-apps/)
+  - Service Worker 需要运行于 HTTPS 或本地 localhost 环境，是继 Web Worker 后又一个新的线程。来实现离线页面功能。 Service Worker 是独立于页面的一个运行环境，它在页面关闭后仍可以运行。Web Worker 在页面关闭后不再运行。
+- https://developer.chrome.com/blog/introducing-popover-api/   Web Authentication 在Web上使用Touch ID 和 Windows Hello 登录
+- xss/csrf 原理和防御方法。CORS 的 POST 跨域如何带cookie https://www.jianshu.com/p/13d53acc124f
+- 浏览器 eventLoop 机制 microtask marcotask 执行顺序？setTimeout 宏队列先执行，promise 微队列。
+- 优化：压缩资源、异步加载、预加载、缓存、使用gzip、减少cookie、减少重定向、减少请求数。
+
+- JSONP 的原理以及 cors 怎么设置？跨域的方法有哪些？jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面。
+- web worker 突破同源限制？importScripts。 不好地方:(协程)解决并行计算，数据共享和精确控制线程生命周期方面存在缺陷。
+- SPA 实现方法？产生的问题：切换路由后会把上个路由状态生成的html全部销毁掉，再切回来恢复不到原来的样子。客户端渲染和服务端渲染，哪个快？
+- 移动: 点击穿透/300ms延迟？Fastclick。首频渲染、网络性能？手势库？有没有用过RN PWA？
+- 数据可视化: 3d 编辑器功能？技术点 svg 3dgis canvas webgl，svg 转 webgl 怎么实现？
+
+drag-drop
+- drag 事件 不支持 ie8、Safari 5.1  ie<=9 只能对 a href="" 、img、文本 添加drag事件。 ie9上通过 selectstart hack方法对任何元素添加事件。 在ie<=8版本上，需要把dragenter/drageover/drop事件绑定到具体的元素上，而不能绑定到document做委托处理。
+- 使用 drag-drop API的优势（相对于用mousedown/mousemove）： 如果拖动元素所在的容器尺寸小，拖动过程产生滚动条、会自动触发滚动条移动。 不用再 clone 出一个要拖动的元素； 不用计算涉及到的元素的位置和尺寸。
+传统拖动做法
+- 在 touchstart / mousedown 中记录起始位置，并开始监听 touchmove touchend / mousemove mouseup
+- 在 touchmove mousemove 中计算当前位置和起始位置之间的 offset，并进行拖拽操作
+- 在 touchend mouseup 中取消监听 touchmove 和 touchstart，并进行释放操作
+
+
+------ 小程序/RN
+
+小程序的渲染层和逻辑层分别由2个线程管理：渲染层的界面使用了 WebView 进行渲染；逻辑层采用 JsCore 线程运行JS脚本。一个小程序存在多个界面，所以渲染层存在多个 WebView 线程，这两个线程的通信会经由微信客户端做中转，逻辑层发送网络请求也经由 Native 转发。
+目的：安全可控，沙箱隔离，限制 DOM 和 BOM 能力。逻辑层和渲染层是独立的，二者不会互相阻塞，因此性能更优（小程序限制了 JS 操作 DOM 的能力，因此不用担心二者的不同步问题）在浏览器网页中，虽然 JS 执行和 UI 渲染也是处于两个线程，但是 JS 线程和 UI 线程是互斥的。
+
+小程序采用的是混合架构，可通过 html 里的 a 标签启动新的 webview 窗口、调用 popWindow 关闭窗口。基本页面元素是 html 渲染，弹窗类 loading toast ActionSheet 和 本地存储、系统或用户信息，使用客户端原生实现。
+
+而 react-native 只是采用 js/html 写法，背后完全是 客户端原生 渲染。
+微信小程序和 RN 的区别：双线程架构，渲染层一个主要是 webview 一个完全 native。
+微信的支付 小程序云等开放API、小程序安全管控。
+
+小程序框架
+- [taro](https://taro.aotu.io/)、[remax](https://github.com/remaxjs/remax)、[alibaba/rax](https://github.com/alibaba/rax)、[flutter](https://github.com/flutter/flutter)。
+- 编译时：约定了一套自己的 DSL ，在编译打包的过程中，利用 babel 工具通过 AST 进行转译，生成符合小程序规则的代码。
+  - 容易出现 BUG、开发限制过多、跟不上 react vue 更新。早期的 Taro 1/2 采用的这种方案。
+- 运行时：在小程序的逻辑层中运行起来 React 或 Vue 的运行时，然后通过适配层，实现自定义渲染器。
+  - 有天然优势，remax taro3 这样实现。
+
+React component -> React Reconciler(调和器、实现了 Diff/Fiber 算法) -> React Renderer(可以是dom也可以是js对象等)。
+跨端小程序框架 remax taro3 自己实现了一套可以在 React 中用的，且能渲染到小程序页面的自定义渲染器。
+在 react reconciler resetAfterCommit 函数中、调用小程序的 setData 方法。
+小程序环境中，不支持直接创建DOM、仅支持模板渲染，用递归模板的方式，用相对静态的小程序模板语言实现了动态的模板渲染的特性。
+
+小程序 API
+```js
+const { Ali } = window;
+const { isAlipay } = Ali;
+window.AlipayJSBridge;
+document.addEventListener('AlipayJSBridgeReady', callback, false);
+Ali.httpRequest({ url: '', method: 'POST' }, (result) => {});
+Ali.rpc({ operationType: '', requestData: [] }, (result) => {});
+Ali.call('imageViewer', { enablesavephoto: true, images: [], init: index });
+Ali.showLoading(param);
+Ali.showToast({ content: '' });
+Ali.showActionSheet({ content: '' }, (result) => {});
+AlipayJSBridge.call('popWindow');
+AlipayJSBridge.call('setTitle', { title: 'xxx' });
+AlipayJSBridge.call('getSystemInfo', { }, (result) => {});
+```
+
+
+## 监控 性能 质量 测试
+
+https://httparchive.org/reports/page-weight
+语言性能 jsperf / benchmarks https://jsben.ch/browse
+[heavy tasks on the main thread](https://github.com/astoilkov/main-thread-scheduling)
+
+Headless BI https://cube.dev/
+https://github.com/GoogleChromeLabs/quicklink
+https://superset.apache.org/
+
+ICBU前端性能度量 https://mp.weixin.qq.com/s/XAdNOovCQxh5xuGVOSEz3w
+
+https://web.dev/articles/vitals?hl=zh-cn
+[Web vitals](https://www.cnblogs.com/constantince/p/15237915.html)、
+[thresholds](https://web.dev/i18n/en/defining-core-web-vitals-thresholds/)、
+[Chrome的First Paint触发的时机探究](https://cloud.tencent.com/developer/article/1124484)、
+[window.onload vs document.onload](https://stackoverflow.com/questions/40193553/load-event-on-script-with-async-and-or-defer)
+
+[如何根治 Script Error.](https://mp.weixin.qq.com/s/6v_X0vtM5EZThF0odwJmTw)
+[JavaScript Errors Handbook](https://github.com/mknichel/javascript-errors/blob/master/README.md)、
+[如何捕获前端错误](https://mp.weixin.qq.com/s/E51lKQOojsvhHvACIyXwhw)、[搞定前端错误捕获和上报](https://juejin.cn/post/7031876097390149645)、[错误监控总结](https://segmentfault.com/a/1190000014672384)
+
+为什么大厂前端监控都在用GIF做埋点？ https://mp.weixin.qq.com/s?__biz=MzAxODE4MTEzMA==&mid=2650099077&idx=1&sn=813d2c96cd940dc95b0f47585b989c2f
+
+AEM [表单分析](https://img.alicdn.com/imgextra/i3/O1CN01x1xSNj26XMy1xUikf_!!6000000007671-0-tps-2934-1678.jpg)
+AEM: 稳定性(脚本/接口/资源异常)、流畅性(加载/卡顿/动画掉帧)、用户流量(pv uv 活跃用户 新用户/点击率 点击热点 / 停留黏性/来源去向/设备)、行为分析(页面流/操作流/留存跳失率/访问链路/表单分析)、满意度(问卷/反馈/录屏/主观分析)。告警/多维指标(用户纬度年龄性别籍贯)/自定义看板/乐高搭建报表页。
+
+[chrome-performance-devtool](https://github.com/Sanotsu/web-beginner/blob/master/documents/11-others/web-base-chrome-performance-devtool.md)
+Google [lighthouse](https://developers.google.com/web/tools/lighthouse/)、类似服务 [web.dev/measure](https://web.dev/measure)、[webpagetest](https://www.webpagetest.org/)、[pagespeed insights](https://developers.google.com/speed/pagespeed/insights/)
+
+arms / quick a+ / spm / aplus / retcode / clue。
+
+性能和体验 2020
+弹窗 modal 里高度需要设置、内容长时“内滚动”。
+一行多列 card 卡片，每个卡片 高度需要设置成一样。
+某个操作 触发多次 ajax 请求、再 setState 页面，导致卡顿？
+一个页面有多个“富文本实例”同时初始化、比较耗时？导致页面卡顿？
+
+------ 质量
+
+[iceworks-doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor)
+[vscode-codemetrics](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-codemetrics)
+
+[jsinspect](https://github.com/danielstjules/jsinspect)、
+[jscpd](https://github.com/kucherenko/jscpd)
+[代码圈复杂度Cyclomatic Complexity](http://kaelzhang81.github.io/2017/06/18/%E8%AF%A6%E8%A7%A3%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/)
+
+[研发效能度量引发的血案](https://mp.weixin.qq.com/s/h9zIg2e8iHn3qgxlUGObbQ)、
+[10 倍程序员神话](https://www.simplethread.com/the-10x-programmer-myth/)、
+[代码质量](https://stackoverflow.blog/2021/10/18/code-quality-a-concern-for-businesses-bottom-lines-and-empathetic-programmers/)
+
+
+------ 测试
+
+https://github.com/mobile-dev-inc/Maestro
+https://lightpanda.io/
+
+CI/CD、JS 覆盖率工具 [istanbul](https://istanbul.js.org/)。
+测试-漏测率。 阿里MTC无线测试中心、蚂蚁云测平台[Solomon]
+
+基础理论:
+[前端测试体系建设与最佳实践](https://mp.weixin.qq.com/s?__biz=MzI5MjYyODYyNQ==&mid=2247483987&idx=1&sn=132aea5d5185a1e4fa2fab5037a2fb3e)、
+[测试金字塔](https://martinfowler.com/bliki/TestPyramid.html)
+
+[codecov.io](https://codecov.io/) 覆盖率分析对比工具 支持所有语言，对 GitHub commit 的覆盖率做记录、前后对比。
+
+[代码测试覆盖率分析](https://blog.rsuitejs.com/2017/08/20/test-coverage/)
+Statements 与 Lines 的区别：一行可能有多个语句
+
+[百分百测试覆盖率真的有意义吗？](https://www.zhihu.com/question/29528349)
+各种 corner cases(比如除0、IO error handling) 很难做到 100% 覆盖。 覆盖率数据只能代表你测试过哪些代码，不能代表你是否测试好这些代码。 不能盲目追求代码覆盖率，而应该想办法设计更多更好的案例，哪怕多设计出来的案例对覆盖率一点影响也没有。
+
+
+
+## 生成 搭建 文档/图
+
+------ 生成 搭建
+
+[去哪儿网前端代码自动生成技术实践](https://mp.weixin.qq.com/s/Jhs2dAvFHbaaP1OKjB0c6w)
+https://docmost.com/
+
+[阿里低代码引擎LowCodeEngine正式开源](https://mp.weixin.qq.com/s/rQ-X9OBFRvhI16KrWwIT6w)
+[官网](https://lowcode-engine.cn/)、[github](https://github.com/alibaba/lowcode-engine)
+
+https://www.wix.com/
+https://soloist.ai/
+
+[无代码nocobase](https://cn.nocobase.com/) [博客](https://blog-cn.nocobase.com/posts/nocobase-opensource-income-3years/)
+
+[网易云音乐低代码体系建设思考与实践](https://mp.weixin.qq.com/s/9yo-Au3wwsWErBJfFjhxUg)
+
+[从实现原理看LowCode](https://zhuanlan.zhihu.com/p/452251297)
+
+https://github.com/imcuttle/mometa
+[百度amis](https://baidu.github.io/amis/)
+https://aisuda.bce.baidu.com/amis
+
+AECP 开发平台架构 https://img.alicdn.com/imgextra/i2/O1CN01VFIoNq1E0PCIklFol_!!6000000000289-2-tps-2482-1410.png
+
+[2020/01/13/the-no-code-delusion](https://www.alexhudson.com/2020/01/13/the-no-code-delusion/)、[无代码编程介绍](https://mp.weixin.qq.com/s/eKvSxOvSyEZEr3BLloCXdw)
+[antd-lowcode](http://g.alicdn.com/code/npm/@ali/antd-lowcode/0.5.1/example/index.html)
+
+Markdown + 卡片 [可视化搭建](https://zhuanlan.zhihu.com/p/164558106)、
+宜搭、[云凤蝶](https://www.yunfengdie.com/home)、[阿里云外网建站](https://ac.aliyun.com/jianzhan)。微软 Power [Platform](https://yuque.antfin-inc.com/chenyu/articles/skei6i)。AWS [honeycode](https://www.honeycode.aws/)、[mendix](https://www.mendix.com/)。
+
+[SaaS（科技）行业导航](http://www.allsaas.cn/)、SaaS 平台：[氚云](https://h3yun.com/index.php?g=Chuanyun&m=Scene&a=index)、[搭搭云](https://www.dadayun.cn/)、[明道云](https://blog.mingdao.com/13061.html)、[appsheet](https://www.appsheet.com/)、[fibery](https://fibery.io)、[openchakra](https://openchakra.app/)、[tumult](https://tumult.com/)(YC投资)、
+[grapesjs](https://grapesjs.com/)、[noflojs](https://noflojs.org/)、[pagedraw](https://pagedraw.io/)、Google Web Designer (类似 Dreamweaver) 2013 发布 2017 停止更新。
+
+[What's Salesforce?](https://tryretool.com/blog/salesforce-for-engineers/) 、Salesforce [Lightning](https://www.salesforce.com/cn/campaign/lightning)
+
+云上[编排](https://blog.csdn.net/devcloud/article/details/93175186)([cloudcraft](https://app.cloudcraft.co/)/阿里[ros](https://cn.aliyun.com/product/ros)/华为云[aos](https://www.jianshu.com/p/2301a1729fcc)/[Terraform](https://blog.csdn.net/yejingtao703/article/details/80574363)/[PAD图](https://baike.baidu.com/item/PAD%E5%9B%BE))、[图编排(](https://www.atatech.org/articles/170866)[相关](https://www.atatech.org/articles/174875/))
+
+GUI 研发：[umi-ui](https://umijs.org/guide/umi-ui.html)、[angular-console](https://angularconsole.com/)
+
+表单: [formily](https://github.com/alibaba/formily)、[build forms from JSON Schema](https://github.com/mozilla-services/react-jsonschema-form)、[react-final-form](https://github.com/final-form/react-final-form)、[AForm模型驱动生成表单](http://xiehuiqi220.github.io/AForm/doc/book/index.html)。
+
+《低代码开发会是未来吗？》https://mp.weixin.qq.com/s/M0vrPskxg0SZeQ6cmso7Qw
+2019-12-03 @玉伯
+
+
+------ 文档 / 图
+
+https://github.com/yshavit/mdq
+
+https://affine.pro/ (字节刘义)
+
+2020-11 孟方(游圣) [aliyun/cadt](https://www.aliyun.com/product/developerservices/cadt)
+
+Roam Research [介绍](https://www.zhihu.com/question/384453977)、[介绍1](https://baijiahao.baidu.com/s?id=1669749949965240303)、[foam](https://foambubble.github.io/foam/)
+
+https://github.com/thinkerchan/notion2md
+​[Notion 编辑器原理](https://zhuanlan.zhihu.com/p/359122473)、[腾讯在线 Excel 技术](https://mp.weixin.qq.com/s/f1vwzuPryc8ag6nd5Ngr5A)
+[语雀 实时保存 方案](https://klab.yuque.com/docs/share/0e3ee249-d977-492b-82f2-6b44d26bd4af) (平侠/遇春 2021-01)、[语雀后端技术](https://mp.weixin.qq.com/s/VM61gkZuYYqE4pVhpba3nQ)、[隆昊《富文本编辑器的技术演进》](https://myslide.cn/slides/21863)、[有道云笔记富文本编辑器技术演进](https://mp.weixin.qq.com/s/9gDI1r9aAu6dHJhXg34eIg)。
+
+[飞书在线文档协同](https://mp.weixin.qq.com/s?__biz=MzkzNTIwNTAwOA==&mid=2247496795&idx=1&sn=5edf65ebf8609ada7981a9a804b072d3)、
+实时协作技术 [ot-vs-crdt](https://www.tiny.cloud/blog/real-time-collaboration-ot-vs-crdt/) / [xi-editor-CRDTs](https://xi-editor.io/docs/rope_science_08.html) / [are-crdts-suitable](https://blog.kevinjahns.de/are-crdts-suitable-for-shared-editing/)、[vs code 多人协作](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/connectivity)、[CKEditor 多人协作](https://ckeditor.com/collaborative-editing/)、[automerge](https://github.com/automerge/automerge)、[crdt](https://wiki.nikitavoloboev.xyz/distributed-systems/crdt)。
+
+[文档协同的三元结构-浩初](https://www.yuque.com/docs/share/92faca9c-2162-4fe2-974d-193164650b11)、[resume生成](https://github.com/visiky/resume)
+
+- 阿里云[媒体管理](https://help.aliyun.com/document_detail/63273.html)、[微软](https://support.microsoft.com/en-us/office/embed-a-presentation-in-a-web-page-or-blog-19668a1d-2299-4af3-91e1-ae57af723a60)、[Google/微软](https://gist.github.com/tzmartin/1cf85dc3d975f94cfddc04bc0dd399be)、Google [示例](https://docs.google.com/viewer?embedded=true&url=http%3A%2F%2Fhomepages.inf.ed.ac.uk%2Fneilb%2FTestWordDoc.doc)、转换 [sheetson](https://sheetson.com/)
+- 生成/查看 PPT: [PptxGenJS](https://github.com/gitbrent/PptxGenJS)、[apache_poi_ppt](https://www.w3cschool.cn/apache_poi_ppt/apache_poi_ppt_presentation.html)(java)、[nodeppt](https://github.com/ksky521/nodeppt)。[ViewerJS](https://github.com/webodf/ViewerJS)、[office sdk](https://www.pdftron.com/office-sdk/office-document-viewer/)。
+
+微软: [office](https://products.office.com/zh-cn/home) ([task](https://techcommunity.microsoft.com/t5/microsoft-365-blog/connecting-tasks-experiences-across-microsoft-365/ba-p/1522069))、[teams](https://teams.microsoft.com/)
+
+Google: [gsuite](https://gsuite.google.com/) ([google-forms](https://docs.google.com/forms/u/0/)/[教程](https://youtu.be/RoA65-vLV_0)) [alerts](https://www.google.com/alerts) [classroom](https://classroom.google.com/h)
+
+[notion](https://www.notion.so/)、[craft.do](https://www.craft.do/)、[airtable](https://airtable.com/)、[quip](https://quip.com/about/product)、[coda.io](https://coda.io/t/Welcome-to-Coda_tvbBdpE72Lq#)、slack。 [wolai](https://www.wolai.com/) ([介绍](https://www.zhihu.com/question/407132273/answer/1352638849))。 [mathigon](https://mathigon.org/)(互动教程)。
+
+腾讯文档 [docs.qq.com](https://docs.qq.com/desktop/)、头条 [larksuite](https://www.larksuite.com/) ([lark 出海](https://zhuanlan.zhihu.com/p/58585005))、[teambition](https://www.teambition.com/)、[wps](https://www.wps.cn/) (稻壳模板[docer](http://www.docer.com/))、[xiezuocat](https://xiezuocat.com/#/)(AI纠错)、[sheetui](https://sheetui.com/)(表格转网页)、[Luckysheet](https://github.com/mengshukeji/Luckysheet)、[handsontable](https://handsontable.com/)、[prezi](https://prezi.com/dashboard/next/#/presentations)、[milanote](https://app.milanote.com/1KeUXu1ElqNVrw/home)、
+
+产品设计工具: 白板([mural](https://mural.co/)、[miro](https://miro.com/))、原型([xiaopiu](https://www.xiaopiu.com)、[xiaopiu/prd](https://www.xiaopiu.com/prd)、[justinmind](https://www.justinmind.com/))、[知乎](https://www.zhihu.com/question/23004570)([invision](https://www.invisionapp.com/)、[modao](https://modao.cc/)、[会议桌](https://www.huiyizhuo.com/))、[流程图和图表](https://zhuanlan.zhihu.com/p/111990866)、在线[培训工具](https://segmentfault.com/a/1190000021793283)。
+
+其他: [mubu](https://mubu.com/)、[slides.com](https://slides.com/)、[ppt.baomitu](https://ppt.baomitu.com/)、[zoho](https://www.zoho.com/)、[visme](https://www.visme.co/templates/)、[deckdeckgo](https://deckdeckgo.com/)、[witeboard](https://witeboard.com/)、[wireflow](https://wireflow.co/)、[presenta](https://play.presenta.cc/#s0)。
+[batnoter](https://github.com/batnoter/batnoter)
+https://evernote.com
+
+
+--- 画图 (web/客户端)
+
+如何画好一张架构图？ https://www.atatech.org/articles/173778
+流程图  https://baike.baidu.com/item/%E6%B5%81%E7%A8%8B%E5%9B%BE
+八种常见的业务设计和架构模型 https://www.sohu.com/a/384776040_246648
+B端产品设计3大流程图 http://www.woshipm.com/pd/3873765.html
+海兔设计系统 DSM https://yuque.antfin-inc.com/afx-es/data-ai/weekly-2020-05-16
+https://online.visual-paradigm.com/diagrams/templates/brainstorming/
+软件设计/业务设计/流程图/架构图/UX设计/BPMN/脑图
+
+https://tldraw.dev/
+[SVG-to-Canvas (canvas-to-SVG) Parser](https://github.com/fabricjs/fabric.js)
+
+[skeditor](https://github.com/skeditor/skeditor) [canvaskit-wasm](https://zhuanlan.zhihu.com/p/432454443)
+
+[figma](https://www.figma.com/) ([FigmaToCode](https://github.com/bernaferrari/FigmaToCode))
+[figma 技术](https://madebyevan.com/figma/) / [figma c++](https://madebyevan.com/figma/building-a-professional-design-tool-on-the-web/) / [figma 插件技术](https://zhuanlan.zhihu.com/p/357724347)
+
+[react-sketchapp](https://github.com/airbnb/react-sketchapp)
+
+[drawio](https://github.com/jgraph/drawio)([mxgraph](https://github.com/jgraph/mxgraph))、[cloudskew](https://www.cloudskew.com/)、[diagram-js](https://github.com/bpmn-io/diagram-js)、[excalidraw](https://github.com/excalidraw/excalidraw)、[draw2d](https://github.com/freegroup/draw2d)([demo](http://freegroup.github.io/draw2d_js.app.shape_designer/))、[plantuml](https://plantuml.com/zh/)、[planttext](https://www.planttext.com/)、[diagram.codes](https://www.diagram.codes/)、[jsplumb](https://github.com/jsplumb/jsplumb)([jsplumb-vs-mxgraph](https://www.npmtrends.com/jsplumb-vs-mxgraph))、[mermaid-js](https://github.com/mermaid-js/mermaid)、[nomnoml](https://github.com/skanaar/nomnoml)、[visjs](https://github.com/visjs)([timeline](https://visjs.github.io/vis-timeline/examples/timeline/))、[react-diagrams](https://github.com/projectstorm/react-diagrams)、[roughjs](https://roughjs.com/)、[rete.js/](https://rete.js.org/#/)[flume](https://flume.dev/)/[nodered](https://nodered.org/)(可视化节点)、[diagrams](https://github.com/mingrammer/diagrams)([graphviz](https://www.graphviz.org/))、[vscode-drawio](https://github.com/hediet/vscode-drawio)、[text-to-diagram](https://smusamashah.github.io/text-to-diagram)、[isoflow](https://isoflow.io/)、[reactflow](https://reactflow.dev/)、[diagram-maker](https://github.com/awslabs/diagram-maker)。
+
+平台/端: [processon](https://www.processon.com/)、visio、mindnode lite、[visual-paradigm](https://online.visual-paradigm.com/diagrams/features/aws-architecture-diagram-tool/)、[ithoughts](https://www.toketaware.com/ithoughts-osx)、[gliffy](https://www.gliffy.com/)、[terrastruct](https://terrastruct.com/)、[edrawsoft](https://www.edrawsoft.cn/)、[freedgo](https://www.freedgo.com/)、[websequencediagrams](https://www.websequencediagrams.com/)、[chartmage](http://chartmage.com/intro.html)、[thebrain](https://www.thebrain.com/)、[asciiflow](https://asciiflow.com/#/)([textik](https://textik.com/#9fe9a0bacdcf4a9a))、[omnigraffle](https://www.omnigroup.com/omnigraffle/)、[flowchart](https://flowchart.fun/)、[photopea](https://www.photopea.com/)​、[PPTist](https://github.com/pipipi-pikachu/PPTist)
+
+收费: [gojs](https://gojs.net/latest/samples/index.html)、[jointjs](https://www.jointjs.com/)、[jsplumbtoolkit](https://jsplumbtoolkit.com/)、[yworks](https://www.yworks.com/products/yfiles/demos)、[mindfusion-diagram](https://mindfusion.eu/javascript-diagram.html)
+
+系统: [drawio-aws-cloudcraft](https://www.diagrams.net/blog/drawio-aws-cloudcraft)、([placeholder](https://www.diagrams.net/blog/placeholder-scope)、[mermaid](https://www.diagrams.net/blog/mermaid-diagrams)、[network](https://www.diagrams.net/blog/network-diagrams)、[org](https://www.diagrams.net/blog/org-charts))
+
+
+
+## 基本库
+
+
+[JPlag](https://github.com/jplag/JPlag) 相似度检查 原理
+https://chatgpt.com/share/677e48dd-63b8-8008-b7d2-83c00c030fe8
+不可行
+- 完全不修改
+- 修改了注释内容
+- 修改了函数名和部分变量名
+- 交换了部分函数调用的顺序
+- 更改代码逻辑中的部分条件判断
+- 改变代码结构，将主函数分解成多个小函数
+- 调整部分使用的数据结构
+- 彻底更换实现方式，使用不同的数据结构和逻辑
+- 功能完全不相关的其它代码
+可行:
+- 改变代码结构，将主函数分解成多个小函数
+
+
+misc
+
+- 代码转换
+[convert react class based apps to functional/hooks?](https://www.reddit.com/r/reactjs/comments/o6djp7/is_there_any_automatic_tool_to_convert_react/)
+https://transform.tools/
+https://github.com/airbnb/ts-migrate
+https://github.com/reactjs/react-codemod
+https://github.com/facebook/jscodeshift
+https://astexplorer.net/
+- 图表: [amcharts](http://www.amcharts.com/demos/) / antv [L7地图](https://l7.antv.vision/zh)
+- 编辑器/IDE: [awesome editors](https://github.com/JefMari/awesome-wysiwyg)
+  - https://typist.doist.dev/
+  - IDE: [coding.腾讯](https://coding.net/) / [stackblitz](https://stackblitz.com/) / [gitpod](https://www.gitpod.io/) https://bi.cool/bi
+  - web-Excel / [sheetjs Excel 解析](https://sheetjs.com/) / [moveable](https://github.com/daybrush/moveable)
+  - [slate](https://github.com/ianstormtaylor/slate) / [trix](https://github.com/basecamp/trix) / [tui-editor](https://ui.toast.com/tui-editor/) / [craft.js](https://github.com/prevwong/craft.js) / [stylojs](https://stylojs.com/)
+- 截图: dom-to-image / html2canvas / [各设备截图服务](https://screendump.techulus.com/) / 录制回放 [rrweb](https://github.com/rrweb-io/rrweb)
+- 日历: [react-big-calendar](https://github.com/jquense/react-big-calendar) / [fullcalendar](https://fullcalendar.io/) / [webix/scheduler](https://webix.com/scheduler/) / [tui.calendar](https://github.com/nhn/tui.calendar)
+- 文件管理器: [file-manager](https://js.plus/products/file-manager) / [dhtmlxFileManager](https://dhtmlx.com/docs/products/dhtmlxFileManager/) / [syncfusion/file-manager](https://www.syncfusion.com/blogs/post/introducing-new-javascript-file-manager-control.aspx) / [webix/filemanager](https://webix.com/filemanager/) https://github.com/filebrowser/filebrowser
+- 营销/游戏/大屏[多媒体](https://www.yuque.com/books/share/6487738a-085c-4a82-98b3-834f87859a2a)
+- 垂直: https://togetherjs.com  [wiki.js](https://wiki.js.org/)  UA 检测 https://github.com/Lissy93/web-check  https://github.com/beilunyang/moepush
+
+
+业务脚手架 2021
+- 研发平台: 阿里def / 蚂蚁雨燕 / [DevOps平台-onedev](https://github.com/theonedev/onedev) / 大禹
+- 内置含 BU 特色的组件，基于“开源脚手架”定制，既提升效率又有开放性，是较好的选择。
+- 微前端: 微应用注册、路由管控(统一菜单/权限)、发布版本管控、发布灰度控制、多环境(日常/预发/线上)、预加载、应用组件。 子应用样式丢失。
+- request 组件: csrf-token 处理、gateway domain 网关域名、登录、返回异常、返回json结果格式化、上传/下载。
+- jwt https://www.zhihu.com/question/301253397/answer/547887208  http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/
+- API 管理平台 生成工具, 提高前后端联调效率. [google 的 API 设计指南](https://google.aip.dev/general) RESTful GraphQL.
+- API 数据mock/前后端: https://github.com/usebruno/bruno [postman](https://www.getpostman.com/) [paw](https://paw.cloud/) [hoppscotch](https://hoppscotch.io/)  [mockjs](https://github.com/nuysoft/Mock)  [swagger](https://swagger.io/) / [json-server](https://github.com/typicode/json-server)  [miragejs](https://miragejs.com/).
+- BFF: 多端适配/聚合裁剪数据，额外的部署资源及运维成本，集合 GraphQL https://insights.thoughtworks.cn/use-graphql-build-bff-in-microservices
+
+
+框架 (2021)
+
+[umijs](https://github.com/umijs/umi)
+[蚂蚁前端框架和工程化](https://github.com/sorrycc/blog/issues/85)
+[qiankun 子应用嵌套](https://github.com/umijs/qiankun/issues/960)
+
+
+构建工具 (2024)
+
+- webpack babel
+  - [Babel 插件原理](https://github.com/frontend9/fe9-library/issues/154)
+  - [webpack sideEffect](https://github.com/frontend9/fe9-library/issues/33)
+  - Webpack 5 module federationtion 联邦模块 https://juejin.cn/post/6844904187147321352
+- https://github.com/umijs/father
+- lint & actions
+  - lint 工具: ESLint Prettier pretty-quick husky. 使用 ESLint 检查代码逻辑错误。使用 Prettier 格式化代码. eslint-config-prettier：关闭 ESLint 中与 Prettier 冲突的格式规则。 eslint-plugin-prettier：将 Prettier 的格式检查集成到 ESLint 中.
+  - https://github.com/ant-design/ant-design/blob/master/.github/PULL_REQUEST_TEMPLATE_CN.md
+  - https://github.com/react-component/rc-test/blob/main/.github/workflows/main.yml
+  - dependabot vercel [coderabbitai](https://github.com/apps/coderabbitai)(Summary by CodeRabbit) socket-security codecov github-actions cloudflare-workers-and-pages
+    - https://github.com/react-component/select/pull/1080
+    - https://github.com/react-component/select/pull/1074
+    - https://github.com/react-component/select/pull/1079
+    - https://github.com/react-component/segmented/pull/242
+    - https://github.com/react-component/tree-select/pull/586
+    - https://github.com/react-component/picker/pull/886
+    - https://github.com/ant-design/ant-design-mobile/pull/6776
+- changelog & compatible upgrade
+  - [Changelog Generator](https://github.com/orhun/git-cliff)
+  - https://github.com/ant-design/compatible
+  - https://github.com/ant-design/codemod-v4
+- 工具
+  - 获取浏览器 cookie https://github.com/thewh1teagle/rookie
+  - [代理库](https://www.npmjs.com/package/https-proxy-agent)
+  - [翻译api](https://github.com/matheuss/google-translate-api)
+  - [各种 web-servers](https://gist.github.com/willurd/5720255)
+  - [isomorphic-git](https://isomorphic-git.org/en/)
+  - [jsfuck 代码混淆](http://www.jsfuck.com/)
+  - [frNatural language detectionanc](https://github.com/wooorm/franc)
+  -
+  - https://www.rspack.dev  https://modernjs.dev/guides/get-started/tech-stack.html
+  - gulp 手册 http://p.tb.cn/rmsportal_127_gulp_E6_89_8B_E5_86_8C1.pdf  http://p.tb.cn/rmsportal_127_gulp_E6_89_8B_E5_86_8C2.pdf
+  - https://github.com/ant-tool/atool-build
+  - [解读](https://github.com/frontend9/fe9-library/issues/32)
+
+
+功能库 (2024)
+
+- react hooks
+  - [zeit/swr](https://github.com/zeit/swr)
+  - [react-use](https://github.com/streamich/react-use)
+  - https://usehooks.com/
+- form/table
+  - [react-hook-form](https://react-hook-form.com/) 和 [zod](https://zod.dev/)
+  - [tanstack/table](https://tanstack.com/table), [react-data-grid](https://github.com/adazzle/react-data-grid) / [react-grid-layout](https://github.com/STRML/react-grid-layout)
+- pop弹窗: https://github.com/floating-ui/floating-ui  https://popper.js.org/react-popper/v2/ 被 material-ui 和 shadcn 等多个库依赖.
+- 独立功能: [react-virtualized](https://github.com/bvaughn/react-virtualized) / 分步指引 tour [shepherd](https://github.com/shipshapecode/shepherd) / [driver.js](https://github.com/kamranahmedse/driver.js) / form-builder FormRender.
+
+基础 UI 组件 (2024)
+
+- [tailwindcss](https://github.com/tailwindcss/tailwindcss)
+  - [shadcn/ui](https://ui.shadcn.com/)(2023-05开源)
+  - [Chakra UI](https://v2.chakra-ui.com/)(2019-09开源) / [Mantine](https://mantine.dev/)(2021-03开源)
+  - [Adobe](https://react-spectrum.adobe.com/) / [上海 geist-ui](https://github.com/geist-org/geist-ui)
+- [material-ui](https://mui.com/material-ui) [base-ui](https://mui.com/base-ui/)
+- [github-primer](https://primer.style/) / [Semantic UI](https://semantic-ui.com/)
+- https://ant.design
+  - https://github.com/react-component / 字节 arco-design semi-design
+  - https://procomponents.ant.design/
+
+[antd tree-shaking](https://github.com/ant-design/ant-design/issues/23988)
+
+
+
+
+## 工程化
+
+
+软件配置管理(SCM)是指通过执行版本控制、变更控制的规程，以及使用合适的配置管理软件，来保证所有配置项的完整性和可跟踪性。
+
+https://github.com/web-infra-dev
+
+
+### SLO/SLI 标准化体系
+
+
+静态分析与代码质量工具：SonarQube、CodeClimate 等，有助于在构建前发现问题，减少后续测试和修复时间。
+2025-04
+
+> 2024-06 ~ 12
+
+AI 判断: 工作量 工作难度 工作能力
+
+浑水摸鱼 产出不足, 磨洋工, 夸大工作复杂度和工作量 拒绝接更多任务.
+尺度之大 匪夷所思, 每天工时限制了12h 在工作上总时间1h都不到, 国企员工都不敢这样.
+扪心自问 凭良心做事 严打骗工资 拉低团队风气.
+逐步减少 事务性沟通性工作 (自动化流程和工程代替), 增加 业务性创造性工作.
+任何代码和非代码产出 必须都能被追溯(尽量有明确记录) 产出量和耗时可被评审.
+git提交记录 文档 聊天记录 浏览器记录, 如果是 学习的东西 理解程度.
+发现作弊, 零容忍.
+
+研发流程
+- 敏捷迭代, 交付管理 WBS, 并行需求 都想先做自己的, 部分需求 后端全栈.
+- 优化: 仓库 monorepo 改造(基建+部分业务), 统一流水线.
+- 监控
+  - 性能体系化: 3s体验战役, 技术方案统一(js大小), 性能指标.
+  - 监控体系化智能化: 埋点和用户分析, 线上(sdk)线下(lighthouse)错误和性能监控一体化, AIOps/LLM, SLO体系, 自动指定代码cr人, 组织视图.
+
+研发平台
+- brook 需求管理, 流水线, 研发效能度量.
+- 工程化程度: 单测 CI/CD git 工具, GitHub action 协作方式。
+- 质量工具: [jscpd/重复代码](https://github.com/chinanf-boy/copy-paste-check/blob/master/src/duplicated-code.ts) 检测, deadcode, 单测, e2e.
+
+研发资源
+- 效率工具: [代码定位插件](https://github.com/zh-lx/code-inspector), 接口代理自动配置.
+- 标准Prd文档生成器(原型设计工具), 组件自动生成. 拼图 imgcook lowcode 插件.
+- [云原生应用市场](https://hub.grapps.cn/)
+
+工具成熟度
+- 看起来单点零散 增强体系化 产品化程度 开箱即用.
+- 工具的易用和完善度: 业务团队的基础工具，很难按 文档说明 一次性 的就能做好跑起来。 产物不一致、本地没问题 线上有问题。
+
+技术成熟度 / 架构
+- 组件设计经验？ 弹窗的 visible 应该在哪儿维护？
+- 代码可维护性提升方法？ 与优秀代码的差距？ 重复代码。 编程范式？(函数式与OO)  S.O.L.I.D 原则：S：单一职责 O：开闭 L：里氏替换 I：接口隔离 D：依赖倒置。
+- 设计模式：工厂模式、观察者模式、MVC。
+
+参考
+> [研发阶段](https://gw.alipayobjects.com/mdn/security_c/afts/img/A*z-C8SpqQo08AAAAAAAAAAABjARQnAQ) [蚂蚁](https://gw.alipayobjects.com/mdn/security_c/afts/img/A*jRrGSYNyLqIAAAAAAAAAAABjARQnAQ)
+> https://developer.apple.com/icloud/telemetry/
+
+
+### monorepo
+
+优势
+- 快速解决公共问题: 构建工具问题, 合规治理问题, 统一发布, 统一多环境同步.
+- 共享: 代码直接调用/复制粘贴/AI自动生成(饼), 踩坑经验共享, 一次性项目配置 甚至不需要脚手架.
+- 研发基准: 更高效促进依赖的 工具和组件升级, 更容易制定标准 推行和实践标准, 拔高下限 提升上限.
+- 研发可观测(指标/日志/跟踪): 技术栈分布/研发效能/SLO-SLI. 通过统一工具更智能地兜底或测试, review环节更严格.
+
+收益: 效率提升 >20%, 研发质量和稳定性提升 >30%, 跨团队协作更容易 SRE 进行专项支持.
+
+顾虑点
+- 误改动问题: 工具可解决,可分配人和改动的目录文件权限,在流水线里做卡点.
+- 版本关联升级问题: 能提醒改动带来的影响, 只有极特殊情况不需要关联 也能轻松解除.
+- 权限问题: 保密项目/代码 仍按传统多仓库做法, 其他情况以 monorepo 思维优先.
+- 代码泄露问题: 不管什么形式 都不能彻底解决 故意的泄露问题 (防君子不防小人).
+- 已有项目迁移问题: npm包几乎无额外工作量, 项目node版本区别 能兼容 但建议改造.
+
+---
+
+nx implicitDependencies 怎么理解和使用?
+pnpm build 有类似 nx implicitDependencies 的功能吗? 或者怎么能实现这样的效果, 特别是在处理 npm alias 这种场景时.
+https://chatgpt.com/c/67f8cedd-9b20-8008-b596-daa0e9c3bb7c
+https://gemini.google.com/app/c5def5cfe22d8825
+https://chat.deepseek.com/a/chat/s/bfe64f5d-98e5-4481-8332-b738c1926eb6
+2025-04-11
+
+不同子包依赖了不同的 ts react react-router 版本, 在 pnpm 下会互相影响?
+源码存在 `import { Route, StaticRouter } from 'react-router-dom';` 时, ts 会报错
+Route, StaticRouter 不存在.
+2025-04-09
+
+monorepo 工具 lerna changesets rushjs 功能详细对比?
+lerna 配合 nx 能实现 rush.js 的 增量构建、并行化、分布式缓存 功能吗?
+Rushjs 提供了构建缓存（build cache）功能，还支持阶段构建（phased builds）这些优化, 能节省公司使用云构建的机器成本吗? 比传统多仓库模式能节省多少成本?
+https://gemini.google.com/app/8f758441dfbc2494
+https://chatgpt.com/share/67e3ee41-856c-8008-acea-945ed9ba627b
+https://chat.deepseek.com/a/chat/s/84c31b44-3b08-4cde-921f-01f077639dca
+2025-03-26
+
+在 monorepo 项目中 别人误改代码, 特别是 增删 代码时间差, 不会出现 git 合并冲突提示. 这些问题怎么解决?
+https://grok.com/share/bGVnYWN5_4183142b-9444-44e5-a1bf-8df9eaab4eb0
+https://chat.deepseek.com/a/chat/s/95cd77b8-83cc-4d77-b070-f01354419422
+https://chatgpt.com/c/67e2730c-bfb4-8008-804a-c72b94bd9469
+https://github.com/Wilfred/difftastic
+[SonarQube](https://docs.sonarsource.com/)
+Codeowners
+2025-03-25
+
+使用 Nx 进行构建时，.nx 目录用于存储与构建相关的缓存和数据 .nx/cache/ .nx/installation/ .nx/workspace-data/ 这些目录包含特定于本地环境的临时文件，不适合纳入版本控制。在 .gitignore 里忽略掉.
+使用 Nx 提供的分布式缓存功能，在团队内部共享缓存.
+2025-03-13
+
+运行 pnpm -r run build 构建问题.
+在 monorepo 里运行 pnpm run build 时, 因为有对 build 出的目录删除操作, 如果不设置 workspace-concurrency=1 就会报错, 但设置后速度就很慢. 应该怎么解决?
+https://gemini.google.com/app/f37076c19be3c895
+2025-04-11
+在 npmrc 里设置 `workspace-concurrency=1` (注意与`--parallel`区别) 的用途:
+- 避免并发引发的竞态问题: 各个子项目在构建、清理或其他任务中可能存在共享资源（比如同一个目录、文件或网络资源）的写入冲突，强制串行执行可以防止由于并发操作带来的竞态条件和文件锁冲突。
+- 任务之间存在依赖或副作用: 当某些任务必须按照严格的顺序完成，或者前一个任务的产物会影响下一个任务的执行.
+在设置 pnpm 的 workspace-concurrency = 1  时候, 怎么利用 nx 能缓存构建结果加速构建过程?
+2025-03-13
+pnpm -r run build 怎么先构建被依赖的包?
+对于 npm alias 形式的依赖, 没有先构建 dependencies 是怎么了?
+2025-02-28
+使用 pnpm 未把 dependencies 构建完成,而导致 dependent 构建失败的问题
+https://stackoverflow.com/questions/72216431/how-to-control-pnpm-workspace-build-order
+2025-02
+
+
+https://nx.dev/concepts/decisions/why-monorepos
+
+npm v7(2020-10发布) 支持 Workspaces
+
+[Turborepo](https://github.com/vercel/turborepo) (类似nx) 解决了 Monorepo 的问题。我们的远程缓存存储您所有任务的结果，这意味着您的 CI 永远不需要做同样的工作两次。 任务调度可能是困难的，想象 yarn build 需要运行前 yarn test ，在所有的工作空间。Turborepo 可以调度您的任务，以最大的速度，在所有可用的核心。
+
+在 2022/05 的时候 Next.js 在这个 [PR#37259](https://github.com/vercel/next.js/pull/37259) 从yarn 转移到了pnpm，原因是使用pnpm 帮助他们降低了下载套件的大小，而且找到了一些幽灵依赖，并在 CI 上安装套件的速度从 4 分钟降低到了 2 分钟。
+
+monorepo 大版本同步开发，bugfix/feature 代码复用、git checkout cherry-pick 、git 冲突。
+
+[bit 介绍](https://juejin.cn/post/6844903872108953607) https://github.com/mcuking/blog/issues/88
+[将 50 万个文件放在一个 Git 存储库中](https://www.infoq.cn/article/tomhtgpmuy4oqhpvf0w1)
+https://www.51cto.com/article/759432.html
+
+https://github.com/changesets/changesets  https://juejin.cn/post/7024827345059971080
+
+2022 monorepo (one code base)
+* [monorepo.tools](https://monorepo.tools/)
+* [monorepo-vs-polyrepo](https://github.com/joelparkerhenderson/monorepo-vs-polyrepo)
+* [Awesome-monorepo](https://github.com/korfuri/awesome-monorepo)
+* [advantages of monorepo](https://medium.com/@suman.maity112/is-it-the-era-of-mono-repo-671e6dee387)
+* [Misconceptions about Monorepos](https://blog.nrwl.io/misconceptions-about-monorepos-monorepo-monolith-df1250d4b03c)
+https://github.com/facebook/react/
+https://github.com/vuejs/core/
+https://github.com/angular/angular
+https://github.com/nrwl/nx-examples
+
+
+
+
+
+## git
+
+[git](https://github.com/git/git) .git/hooks/query-watchman
+
+```sh
+# https://github.com/paulirish/git-open
+# https://gitlab.com/warmhug/test
+
+# git 删除 Untracked files  -f: 强制运行。-d: 同时考虑子目录。-x: 清理忽略文件。-n 模拟删除操作.
+git clean -fdxn
+# 代替在新目录 clone 功能 切换到 other-branch，并将其内容导出到某目录
+git --work-tree=/tmp/other checkout other_branch -- .
+
+git remote [-v add | set-url] origin git@xxx.git
+git ls-remote --heads origin
+git ls-remote --tags  # 查看远程仓库所有 tags
+git config -l  # --list
+
+git commit --amend  # 修改提交信息
+git commit --no-edit  # 使用上一次的提交信息进行提交 (未进行过提交会失败)
+# 压缩 commit 保留压缩前的所有commit信息 其中的 hash 修改记录 也会被保留
+git merge --squash feature-branch
+git add . && git commit --no-verify
+
+git pull --rebase
+git pull   # 仅拉取与当前分支相关的标签 只有当标签指向的提交是由于拉取特定分支而下载到本地时，这些标签才会被自动下载。
+git pull --tags   # 拉取所有分支的更新 + 所有 tags .  注意: 远程仓库可能包含大量历史 tags（如版本发布标签），全量拉取会占用额外存储和网络资源.
+git pull --prune	# 更新所有远程分支引用，并删除本地已失效的远程分支引用
+git fetch --prune --prune-tags  # 删除本地已被远程删除的标签 Git 2.20 及以上版本
+git fetch --tags -f  # 强制覆盖本地 tags
+git fetch   # 获取 当前origin的远程 所有分支 信息
+git fetch --all  # 获取 当前origin和设置的其他origin的 所有分支 信息
+git fetch --all --tags  # 额外获取所有 tags 信息
+git fetch origin master
+git branch -m newBranchName  # 重命名分支
+git checkout HEAD~1 -- file1 dir1
+git reset HEAD~1 file1 dir1
+
+git log master..feat-xx --oneline
+git log -n 10
+git log origin/master -- .npmrc package.json
+git log --name-status # 显示文件增删状态
+git log --graph
+git log --oneline --decorate
+git log --oneline --first-parent --reverse | tail -1
+git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all
+git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+
+# HEAD = HEAD~0 = HEAD^0 当前提交
+# HEAD~1 = HEAD^ 主线的上一次提交  HEAD~3 = HEAD^^^ 主线的上三次提交
+# HEAD^1 主线提交（第一个父提交） HEAD^2 第2个并入的分支的最近一次的提交
+# HEAD^2~3 第2个并入的分支 的最近第 4 次的提交
+git diff HEAD^  # 比较 最新提交 和 其父提交 的差异
+git diff master..feat-xx
+git diff origin/master..origin/master -- .npmrc
+git diff --name-only version1/branch1 version2/branch2
+# 比较当前分支和 master 分支的实际不同的内容
+git diff --name-only master..HEAD
+git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space -p --stat [file/dir]
+git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space --name-only
+git diff @{upstream}
+# 创建和 apply 补丁
+# 当前为 branch-a 分支，想应用 branch-b 相对于 branch-a 的更改
+git diff branch-a..branch-b > changes.patch
+git diff branch-a..branch-b -- path/to/file > changes.patch
+git apply changes.patch
+
+# git merge 会产生重复无用的 Merge pull request pull_id from xx_branch 或者 Merge branch “branch_name” 信息，不利于 review 提交记录。
+# git rebase 需要经常 reapply 其他提交的改动，commit 的时间顺序也会乱掉。只对自己的分支 commit 做 rebase，公共的分支不要 rebase. 其后续的 commit hash 将全部改变
+git rebase -i [commit_id] # hash 换成 master
+git rebase -i --root # 删除第一个提交
+git rebase origin/master
+git push --force-with-lease  # 强制提交 比 -f 安全
+
+# cherry-pick 和 rebase 最终都会在操作完之后、修改同样提交的 commit hash 值
+# 场景: 比如要 pick 的 来源分支的 commit 只是 HADE~1, 但 来源分支的 HEAD~5 和 目标分支的 HEAD~1 有相同的 commit_hash (即来源分支同步了最新的 master commit 但目标分支没有同步), 此时来源分支的 HADE~1到4 (而不是预期的只是HADE~1) 的 commit 都会 apply 到 目标分支, 并且在目标分支 同步过来的 HADE~1到4 的 commit hash 都会被重新修改。
+git cherry-pick src_branch_commit_hash  # 切换到 目标分支
+# 从另一个仓库的分支 pick 先 git fetch <other-repo-url> <other-branch>
+git cherry-pick commit_hash # commit_hash 可以是其他仓库的hash
+
+# --soft 不修改本地文件 --hard 本地的文件修改都被丢弃
+git reset --[soft | hard] [origin/master | file | 057d]
+git reset --hard && git clean --force -dfx # pristine
+git reset --hard && git clean --force -df # wipe
+git revert commit_id # 回滚代码 不抹掉 提交记录 产生新纪录
+# git reflog 的记录只会保存在本地，不会推送到远程仓库。
+git reflog  # 撤销 reset 时 找到撤销前的 commit_id 再 git reset 即可
+
+
+# Git 标签是与特定的提交关联的，而不是直接与分支关联 。
+# 标签是提交的别名，只要标签存在，它所指向的提交（以及该提交的历史）就会被保留 。 删除标签只会移除这个标签的“标签”本身，而不会影响代码或提交 。同样地，删除分支也不会删除其指向的提交 。
+# tag 只附在一个 commit 上、如果这个 commit 被 squash，但 tag 仍然存在。
+# https://stackoverflow.com/questions/54281360/what-happens-to-tags-of-squashed-commits
+# 在 git rebase 之后，标签可能会指向新的历史中任何分支都无法访问的提交。在 rebase 后的历史中，这些标签有时被称为“悬空的”或“孤立的”。然而，标签本身仍然存在于仓库中。
+git tag v1.0  # 给当前分支最新 commit 打 tag
+git tag v1.0 commit_id  # 给当前分支 某个 commit_id 打 tag
+# 打 annotated tags
+git tag -a 0.0.1 -m 'Release version 0.0.1'
+git tag -a @pkg/xx@0.1.16 -m '@pkg/xx@0.1.16' 4da6c3d4 -f
+# 推送 tags
+git push [origin] --tags    # 推送所有标签到服务器
+git push --follow-tags --no-verify origin f-i18n-xx
+git push origin tag_name
+git push origin --delete tag_name
+git push origin :refs/tags/tag_name
+# 删除 tags
+git tag -d tag_name
+git tag -d $(git tag -l)  # 删除 本地所有 tags
+# 搜索本地的某个 tag_name
+git tag -l '*tag_name*'
+git tag | grep tag_name
+# 按时间排序的最近 5 个 tag (再转为 json 数组)
+git tag --sort=-creatordate | head -n 5
+git tag --sort=-creatordate | head -n 5 | awk 'BEGIN{printf "["} {printf "%s\"%s\"", sep, $0; sep=", "} END{print "]"}'
+git for-each-ref --sort=-creatordate --count=5 --format='%(refname:short) %(objectname)' refs/tags
+git for-each-ref refs/tags/ --format='%(refname:short) %(objectname)'
+# 查看 tag 信息
+git show-ref --tags
+git describe --tags
+git tag -v xx@0.1.1  # 非 annotated tags 会报错 error: cannot verify a non-tag object
+
+# 查看当前分支上有哪些 tags
+git tag --merged HEAD / feat1 # 所有直接打在该分支的 commit 上的 tag (无论新旧)
+git tag --no-contains master  # 获取那些不包含在 master 中的标签
+git tag --contains HEAD  # 查看直接指向当前分支 最新 commit 的 tag
+git tag --points-at HEAD  # 查看直接指向当前分支 最新 commit 的 tag
+git tag --points-at 6627f6  # 查看直接指向 某个 commit_id 的 tag
+
+# 遍历所有本地的 tag，检查每个 tag 指向的提交是否是当前分支（HEAD）的祖先, 即在当前分支的历史中。
+for tag in $(git tag); do if git merge-base --is-ancestor "$tag" HEAD; then echo "$tag"; fi; done
+
+# 操作 https://stackoverflow.com/a/930495/2190503
+# 在 .gitattributes 文件里配置 当 pnpm-lock.yaml 出现冲突时，将以当前分支为准
+pnpm-lock.yaml merge=ours
+
+# 其他
+git rev-list --left-right --count origin/branch1..branch1
+git reflog show branch1 -n5 | grep 'rebase'
+
+
+# GitHub stars topics/javascript
+# https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
+# https://github.com/topics/javascript
+
+# 搜索 issues
+# https://help.github.com/articles/searching-issues/
+# https://github.com/search?type=Issues&q=xx+in:body+author:warmhug
+# https://github.com/search?type=Issues&q=xx+commenter:warmhug+user:ant-design
+# https://github.com/search?type=Issues&q=xx+commenter:warmhug+repo:ant-design/ant-design-mobile
+
+# GitHub commit 或合并 MR 时，可以自动修改 issue 状态、关闭关联的 issue。
+# 业内成熟的 GIT 分支模型 https://cloud.githubusercontent.com/assets/36899/7315642/015f534c-eaa2-11e4-9882-b7cc7535fb72.png
+# GitHub Issues blog https://gitblog.io/
+```
+
+
+
+本地 git tag tag_v1 commit_id1 后, 运行了 git rebase 导致 commit_id1 不存在了, 那么 tag_v1 能通过哪些方法获取到? git show tag_v1 可查看, tag_v1和commit_id1都还在仓库里.
+如果运行 git push --tags 那么 这个 commit_id1 也会被推送到 remote 仓库里吗? 会的, 但这个 commit 不再由任何分支引用 不可达 (dangling objects) . 如果引用它的 tag 也被删除, 那么一段时间后（经过垃圾回收）该 commit 就会被清理掉.
+...
+远程仓库有些 tags 的 commit 是通过分支 不可达 的, 怎么检查出这样的 tag和 commit, 并删除他们?
+2025-03-24
+
+https://github.com/orgs/community/discussions/70144
+https://stackoverflow.com/questions/33283350/what-happen-to-git-tags-pointing-to-a-removed-commit
+悬空提交是指无法从任何分支或标签访问的提交. Git 定期执行垃圾收集来清理这些无法访问的对象，这最终可能导致从存储库中永久删除这些原始提交。但是，标签的存在，即使是指向旧提交的标签，也可以防止该提交被立即视为垃圾，因此可能会将其保留一段时间。如果在重新定基之前暂时需要访问存储库的状态，则这可能很重要。最终，指向不存在的提交的标签将充当无效引用，虽然它可能会暂时阻止相关提交立即进行垃圾收集，但它不符合使用标签进行可靠历史引用的预期目的。
+2025-03-24 GitHub上删除的分支是否保证不会泄漏数据？
+
+Git操作你还在用merge吗？字节一面：讲讲你对rebase的理解！
+先说结论：不是merge不行，是rebase更优雅！
+你以为git merge就够了？字节大佬教我：commit记录也是代码质量的一部分！
+血泪教训1：分支历史混乱
+merge的痛点：分支历史像盘面条 commit信息难追踪 代码回溯困难 合并冲突频繁.
+rebase的优势：历史记录线性干净 commit信息清晰 方便代码review 减少无效commit记录.
+暴击伤害2：合并冲突地狱
+字节实战翻车案例：
+某项目上线前夕，多分支合并导致：解决冲突花了3小时 丢失部分代码改动 紧急回滚3次 项目延期2天.
+merge vs rebase 核心区别
+merge方式：保留完整历史 分支结构复杂 适合长期分支 操作相对简单.
+rebase方式：重写提交历史 分支结构线性 适合短期分支 需要谨慎操作.
+最佳实践总结
+1. 适合用rebase的场景：个人功能分支 短期特性分支 同步远程代码 提交PR/MR前
+2. 适合用merge的场景：长期维护分支 发布分支 多人协作分支 紧急修复分支
+rebase进阶技巧
+1. 交互式rebase：合并多个commit 修改commit信息 调整commit顺序 删除无用commit
+2. 黄金法则：不要rebase公共分支 及时同步远程代码 解决冲突要谨慎 保持commit原子性 团队规范建议
+面试官最爱问
+技术深度：rebase原理 解决冲突策略 分支管理方案 Git工作流
+实战经验：大型项目协作 冲突处理经验 分支管理实践 团队规范制定
+记住一句话：用merge还是rebase，不是个人喜好，而是团队协作效率的保证！
+2025-02-16 git 操作 https://m.toutiao.com/is/JG7lVw39SZU/
+
+
+- 一板基础斧 add，commit，pull/push，checkout，revert
+- 二板合作斧 merge，rebase，stash，cherry-pick
+- 三板优雅斧 commit --amend，rebase -i
+2018 git 三板斧
+
+
+
+
+
+## p/npm
+
+https://docs.npmjs.com/cli/v10/using-npm/config
+https://pnpm.io/npmrc
+pnpm v7 文档 https://github.com/pnpm/pnpm.io/blob/v7/docs/npmrc.md
+
+.npmrc 文件:
+```sh
+ignore-scripts=true
+legacy-peer-deps=true
+# pnpm
+node-linker
+verify-deps-before-run
+resolution-mode
+```
+
+```sh
+# https://docs.npmjs.com/cli/v10/commands/npm
+rm -rf node_modules **/node_modules
+npm install --verbose > install.log
+# 别名安装 package.json 文件 "dependencies": { "@aa/yy": "npm:@bb/yy@^2.0.1" }
+npm install axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
+# 设置 dist-tag
+npm dist-tag add @huajs/demo latest
+npm root -g
+npm ls -g node-sass
+npm ls --long node-sass
+npm ls --all --json --loglevel silent
+
+# 发包 登录账号
+npm whoami --registry https://registry.npmjs.org
+npm profile get --registry https://registry.npmjs.org
+npm access list packages --registry https://registry.npmjs.org
+npm config ls
+npm config set -g registry https://registry.npmmirror.com
+npm config get //registry.npmjs.org/:_authToken
+# [npm源](http://registry.npmjs.org/esbuild/0.21.4)
+# [腾讯源](https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4)
+npm search @ant-design --searchlimit=100 --json  # 搜索组织下的包
+
+# npx 用法: 会自动在项目的 node_modules/.bin 目录中查找可执行文件
+npx ls  # 等同于 ls
+npx mocha --version
+npx http-server --ignore-existing # 忽略本地的同名模块
+# https://code.visualstudio.com/api/get-started/your-first-extension
+npx --package yo --package generator-code -- yo code
+
+# npm monorepo 在根目录运行
+npm version 0.1.5 --workspaces --no-git-tag-version --allow-same-version=true
+npm version patch --workspace=packages/button --workspace=packages/card --no-git-tag-version --allow-same-version=true -f
+# 如果只改某个子包版本号，进入到子包 设置 --workspaces=false
+npm version patch --workspaces=false --no-git-tag-version
+npm version prerelease --preid rc --no-git-tag-version
+
+# ====== pnpm
+
+# 分析 /node_modules/.modules.yaml 文件
+# pnpm(v7+) 的 Isolated 即通过 node-linker=hoisted 设置 每个子包的 node_modules 只存自己依赖的软链接  没有 hoist 到顶层
+ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
+
+pnpm install --frozen-lockfile  # 流水线里安装
+
+pnpm ls  # 列出 package.json 中声明的直接依赖
+pnpm ls --long react  # 列出 react 依赖
+pnpm ls --json
+pnpm ls --depth 2 -r ts-jest
+pnpm ls --depth Infinity fast-glob  # 等效于 pnpm why fast-glob -r
+pnpm ls --depth Infinity -r  # 显示完整的依赖树
+pnpm ls -r -P --only-projects  # 查看 内部 互相依赖的包
+# 包之间互相依赖时, 查看哪个包需要先被 build
+pnpm ls --recursive --parseable --only-projects
+
+# pnpm 处理 workspaces ( pnpm>9.0 link-workspace-packages 默认为 false )
+pnpm run script-name --filter workspace-name
+pnpm add package-name --filter workspace-name --link-workspace-packages=true
+
+# 注意 pnpm outdated 是检测 lock文件(不是package.json) 里的依赖版本号 是否过时
+pnpm outdated -r
+pnpm outdated "@ant-design/pro-*" --filter "@ant-design/pro-form" --json
+# pnpm up package-name --filter workspace-name
+pnpm up "@ant-design/pro-*" --filter "@ant-design/pro-form" --latest
+pnpm up -r @ant-design/pro-form@0.2.0  # 更新不存在的版本号会报错
+# 更新 包的版本号为 "@ant-design/pro-form": "workspace:0.1.3"
+pnpm up -r "@ant-design/pro-*"  # 加 --workspace 作用一样
+# 升级到 npm latest 指定的版本
+# 如果 workspace 内部包 版本号大于npm最新版 则使用内部包版本号
+pnpm up -r "@ant-design/pro-*" --latest
+pnpm up -r "@ant-design/pro-*@beta"  # 升级到 beta rc
+
+# 对于 pnpm 项目 应该使用 pnpx nx graph 或 pnpm dlx nx graph
+pnpx create-react-app@next ./my-app
+pnpm dlx create-react-app@next ./my-app
+pnpm --package cowsay --package lolcatjs -c dlx 'echo "hi pnpm" | cowsay | lolcatjs'
+```
+
+在 pnpm(v7) + lerna 的 monorepo 项目, 为了能让各个子包 使用各自不同的 react 版本,
+在子包 package.json 的 devDependencies 里安装 @types/react 包,
+在子包 tsconfig.json 配置 "paths": { "react": ["./node_modules/@types/react"] } 只解析当前目录安装的 @types/react 内容.
+但 @types/react 本身依赖的 csstype 等包, 是被安装在 **根目录的 node_modules 里**, 如果子包 有源码 调用 React.CSSProperties 类型, 就会报错 TS2339: Property 'position' does not exist on type 'CSSProperties'.
+解法:
+在子包 package.json 的 devDependencies 里, 加入 @types/react 包依赖的 csstype 等包. 使其都能在当前目录的 node_modules 里被找到, 问题解决.
+2025-04-09
+
+场景: 项目的 build工具(依赖ts@3), 但项目本身(依赖ts@4), 在使用 npm(@9) 构建时候 无报错, 但使用 pnpm(@7) 构建时 对源码的 ts 语句解析报错.
+npm 和 pnpm 分别这么处理:
+- npm: 直接使用 根目录 node_modules 的 ts@4 来解析 build工具+项目 的源码, 虽然 build工具 是依赖的 ts@3 但使用 ts@4 来解析 "凑巧"也没有错误.
+- pnpm: 会使用 build工具的ts@3 来解析 项目源码, 导致解析报错, 因为项目源码需要 ts@4 来解析.
+参考: [lerna@8](https://www.npmjs.com/package/lerna?activeTab=code) 的 dependencies 里这么声明 ts 依赖 `"typescript": ">=3 < 6"`, 确保使用方 不受其版本锁定的影响.
+...
+npm(@9) 依赖提升Hoisting, 默认会将所有依赖提升到 根目录 node_modules.
+pnpm(@7) 严格依赖隔离, 默认不会提升依赖, 每个子包的 node_modules 仅包含其显式声明的依赖, 使用 硬链接和符号链接.
+pnpm 不会默认进行大规模的提升。它使用符号链接（symlinks）的方式，在项目的 node_modules 里只精确地链接项目直接依赖的包。而这些包自身的依赖，则位于一个集中的内容寻址存储区（通常是项目根目录下的 .pnpm 文件夹内），并通过符号链接按需链接到对应包的 node_modules 目录下。
+https://gemini.google.com/app/c1b7c1ac21903ab2
+...
+[moduleResolution 总结](https://zhuanlan.zhihu.com/p/621795173)
+2025-04-08
+
+npm install --legacy-peer-deps
+npm v7+ 默认 自动安装各个包的 peerDependencies 但使用了 --legacy-peer-deps 则不会安装,
+需要 包使用者(比如业务仓库) 在 dependencies 或 devDependencies 中自行安装.
+使用 --legacy-peer-deps 的主要风险是运行时兼容性问题。由于忽略了 peer 依赖检查，安装的包可能在运行时无法正常工作。例如，某个组件库可能依赖 react@16 的特定 API，而项目使用 react@17，可能导致功能异常。
+2025-02
+
+https://www.npmjs.com/package/npm-check
+https://www.npmjs.com/package/depcheck
+2025-01
+
+
+
+## TypeScript
+
+
+@types/node @types/react 版本 需要和 typescript react 版本匹配.
+2025-04
+
+https://github.com/microsoft/typescript-go/discussions/411
+2025-03
+
+[TypesSript 装饰器源码分析](https://github.com/frontend9/fe9-library/issues/226)
+[使用 TypeScript 实现依赖注入](https://github.com/frontend9/fe9-library/issues/225)
+[如何实现一个 TypeScript 的宏](https://github.com/frontend9/fe9-library/issues/186)
+[让 babel 帮你编译 typescript](https://github.com/frontend9/fe9-library/issues/23)
+https://github.com/zzj3720 (github/toeverything)
+[conditional type 中的联合类型与 never](https://github.com/frontend9/fe9-library/issues/135)
+[TypeScript专栏](https://www.zhihu.com/column/c_206498766)
+2019
+
+
+```sh
+# 查看当前项目 typescript 版本
+npx tsc -v
+npx tsc --showConfig
+# 输出 resolution 日志
+npx tsc --traceResolution
+# 如果遇到 react 问题, 搜 Resolving module 'react' from
+npx tsc -p tsconfig.json --traceResolution
+```
+
+TypeScript 的模块解析机制, 查找类型声明的顺序是：
+- 当前包的 node_modules/@types
+- 往上级目录递归找 node_modules/@types
+- global 的类型（如果 tsconfig 配置了）
+如果只限制在当前包查找, 在 tsconfig.json compilerOptions 配置 paths.
+
+https://www.typescriptlang.org/tsconfig/
+tsconfig.json 配置 paths 示例
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "strictBindCallApply": false,
+    "importHelpers": true,
+    // debug
+    "explainFiles": true,
+    "traceResolution": true,
+    //
+    "typeRoots": ["./typings", "./vendor/types"],
+    "types": ["node", "jest", "express"],
+    //
+    "paths": {
+      "tslib": ["node_modules/tslib/tslib.d.ts"],
+      "*": ["./node_modules/*", "*"],
+      "@/*": ["src/*"],
+      "@@/*": ["src/.space/*"],
+      "@xx/yy": ["src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "tests/**/*"]
+}
+```
+
+基本语法
+
+```ts
+// @ts-nocheck  // 忽略整个文件
+// @ts-ignore  // 忽略一行
+
+export type * as xTypes from 'x-editor'
+export type { default as xTypes } from 'x-editor'
+
+export type ProFormListItemProps = {
+  onAfterAdd?: (...params: any) => any;
+}
+
+// Arrow function returning an array of numbers
+const getArr2 = (): (string | number)[] => {
+  return [1, '2', 3];
+};
+// arrow function
+const getObj2 = async (): Promise<{ name: string; age: number: [key: string]: any; }> => {
+  return { name: 'Bobby Hadz', age: 30, xx: 'any' };
+};
+// Readonly
+function getTuple(): Readonly<[number, number]> {
+  return [10, 100];
+  // return [10, 100] as const;
+}
+
+// 泛型
+interface GenericInterface<T> {
+  (arg: T): T
+}
+function foo<T> (arg: T): T {
+  return arg
+}
+let output = foo('string') // type of output will be 'string'
+let myFoo: GenericInterface<number> = foo
+myFoo(123)
+
+// 命名空间 types/ajax.d.ts
+declare namespace Ajax {
+  export interface AxiosResponse {
+    data: AjaxResponse
+  }
+  export interface AjaxResponse {
+    code: number,
+    data: object | null | Array<any>,
+    message: string
+  }
+}
+this.axiosRequest({ key: 'idc' }).then((res: Ajax.AjaxResponse) => {
+  console.log(res)
+})
+
+
+// ! 是 typescript 非空断言符，解决 ts 类型空提示问题
+
+// void promise 函数返回值类型
+() => Promise<void>
+
+// ts高级用法 Omit Pick
+import { INameProps } from './Name';
+type IDashboardNameProps = {
+  className?: string;
+  style: React.CSSProperties;
+} & Pick<INameProps, 'id' | 'onSaved'>;
+```
+
+
+
+
+
+
 # .
-# 装机/工具
-
-> 2021 ~ 2024 自动化 work and life !
-
-https://apps.apple.com  https://music.apple.com
-
-[Run shortcuts from the command line](https://support.apple.com/en-gb/guide/shortcuts-mac/apd455c82f02/mac)
-`shortcuts run 获取时间/list`
-
-[Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
-- https://make-bookmarklets.com/
-- 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
 
 
 ## 软件
@@ -6354,6 +6370,7 @@ macOS 软件
 - 欧路词典: 修改 ~/Library/Preferences/ com.eusoft.eudic.plist 修改 MAIN_TimesLeft：允许使用次数(任意改) 10000000 重启 （更新 [notion](https://www.notion.so/Eudic-Mac-0b5e993809794576868714f613f637ff)、百度网盘下载 再升级）
 - [测网速](https://fast.com)  https://archive.org/web
 - [vpn检测](https://proxy.incolumitas.com/proxy_detect.html)
+- https://github.com/tonghohin/screen-sharing
 
 安装 git gcc `xcode-select --install`
 允许安装”任何来源“的软件，解决 xx.app已损坏 `sudo spctl --master-disable`
@@ -6361,7 +6378,7 @@ macOS 软件
 关闭 sip 关机、按住电源键(非m1按下`Cmd R`)
 选择实用工具->终端 `csrutil disable` 查看状态 `csrutil status`
 
-图片批量修改 宽或高 最大值 保持宽高比 `sips -Z 2000 *.jpg`
+图片批量修改 宽或高 最大值 保持宽高比 `sips -Z 1600 *.jpg`
 或指定宽高 `sips -z height width [file]`
 
 文件传输
@@ -6388,7 +6405,11 @@ tplink-WR720N(迷你型无线路由器) 默认管理IP: 192.168.1.253 子网掩�
 
 ------ vscode chrome
 
-- 按`cmd shift p` 输入 code zoom reload(未知错误) diplay(修改语言) 等命令。
+https://code.visualstudio.com/updates/
+
+- 按`cmd shift p` 输入
+  - code zoom reload(未知错误) diplay(修改语言).
+  - 显示内置插件: Show Built-in Extensions
 - 在查找(替换)框里按 ctrl + enter 支持多行，或者 复制多行文本 粘贴。
 - 查找中文，启用正则表达式 搜索 [\u4e00-\u9fa5]+
 - 使用 macOS native tabs https://stackoverflow.com/a/55470186/2190503
@@ -6810,7 +6831,68 @@ Charles
    - （点击配置框的问号、发现是使用的 Perl-style regular expressions）
 
 
+
+
+------ 图片
+
+- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
+- [颜色选择](https://htmlcolorcodes.com/zh/)
+- [flickr](https://flickr.com)
+
+文字图
+
+- [asciiart](https://asciiart.website) [figlet](http://www.figlet.org/examples.html) [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
+[生成logo](https://www.logo.surf/)
+
+markdown 表情 :+1: :smile: :smiley: :laughing:
+- [emojispark](https://emojispark.com/)
+- [emoji8](https://emoji8.com/zh-hans/)
+- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+网页版微信 https://wx.qq.com/ 能收到的表情包拖到电脑桌面保存.
+
+
+------ cdn
+
+https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
+https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
+https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
+https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
+
+[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
+https://unpkg.com  https://cdnjs.com  https://jshub.com  https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org  https://upcdn.b0.upaiyun.com
+https://cdn.bytedance.com  https://www.webcache.cn
+http://cdn.staticfile.org/angular.js/1.2.16/angular.js
+http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
+http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
+https://code.jquery.com/ui/1.13.0/jquery-ui.js
+jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
+https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
+https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
+qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
+less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
+bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
+bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
+
+
+
+
+
+
 ## Automate
+> 2021 ~ 2025 自动化 work and life !
+
+https://apps.apple.com  https://music.apple.com
+
+[Run shortcuts from the command line](https://support.apple.com/en-gb/guide/shortcuts-mac/apd455c82f02/mac)
+`shortcuts run 获取时间/list`
+
+[Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
+- https://make-bookmarklets.com/
+- 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
+
 
 [hammerspoon](https://www.hammerspoon.org/)
 
@@ -6836,6 +6918,40 @@ LaunchAgents
 - https://gist.github.com/fadhlirahim/78fefdfdf4b96d9ea9b8
 - https://gist.github.com/Pezhvak/297b058d9c449b39d321409cd041899c
 - https://github.com/Supervisor/supervisor/issues/1514
+
+
+------ cron 定时任务
+
+系统任务在 /etc/crontab 或 /etc/cron.d/ 目录，需要管理员权限.
+crontab 文件一般位于 /var/at/tabs/<username> 或 /var/cron/tabs/<username> 不建议直接改.
+
+通过 vi 编辑器修改, 使用 :wq 保存.
+crontab -l  # 查看当前的 crontab 内容
+crontab -e  # 编辑 cron 配置 保存后 cron 会自动加载和应用
+sudo launchctl list | grep cron  # 检查 cron 服务是否正常运行
+
+如果未启动
+sudo launchctl load -w /System/Library/LaunchDaemons/com.vix.cron.plist
+
+crontab -e 脚本内容示例
+
+```sh
+# 接下来的 每1分钟 每2分钟 每10分钟 执行. 后面的四个 * 分别表示小时、日期、月份和星期几
+* * * * * env > /tmp/cron_log
+* * * * * zsh -ic 'echo "time: $(date) $var" >> /tmp/cron_log; env >> /tmp/cron_log'
+*/2 * * * * env > /tmp/cron_log
+*/10 * * * * env > /tmp/cron_log
+# 每天 上午11:50 下午14:30 执行备份
+50 11 * * * zsh -ic 'scheduled_tasks backup >> "$hl_ext_log"' 2>&1
+30 14 * * * zsh -ic 'scheduled_tasks backup >> "$hl_ext_log"' 2>&1
+# 每隔三天上午 11:49 清空日志文件
+49 11 */3 * * zsh -ic 'scheduled_tasks clear_logs >> "$hl_ext_log"' 2>&1
+```
+
+crontab 里的默认 env 为 SHELL=/bin/sh 等.
+但 macOS 默认使用 zsh 如果使用 sh 或 bash 则 .zshrc 里的变量 不可读取.
+sh -c 'source ~/.zshrc; echo "var: $var"'
+/bin/bash -c 'source ~/.zshrc; fn_name fn_arg'
 
 
 ------ scrcpy adb
@@ -6979,7 +7095,18 @@ EOD
 
 
 
------- Android
+------ Android kwgt
+> 2025
+
+KWGT 默认刷新间隔为每分钟一次，可在 全局设置 中，将 更新间隔 调整为 1秒, 但会导致 手机耗电 过度.
+所以 小组件的 秒数 不能直接显示出来, 能怎么做?
+https://chat.deepseek.com/a/chat/s/fc16fdf3-c934-4446-9e30-91f821899648
+https://www.douban.com/group/topic/243177384
+
+
+
+
+------ Android automate
 > 2023 2024
 
 https://llamalab.com/automate/
@@ -7309,336 +7436,30 @@ if (quote.length > 80) {
 
 
 
-## .
-
-> antd-mobile 旧 demo 备份
-> - antd_custom_ui move from https://github.com/warmhug/__/tree/master/_react/antd_custom_ui to > https://github.com/ant-design/antd-mobile-samples/tree/master/web-custom-ui
-> - antd-mobile + TypeScript move from https://github.com/warmhug/__/tree/master/_react/antd-ts > to https://github.com/ant-design/antd-mobile-samples/tree/master/web-typescript
-> - antd-mobile demo move to https://github.com/ant-design/antd-mobile-samples/tree/master/web-webpack
 
 
-## git 操作
+## 命名 / prd / plantuml
 
-[git](https://github.com/git/git) .git/hooks/query-watchman
+aids / facilities / Misc / Vendor / shared / base / core
+data-commons / data-utils / http-utils / json-helper
+integration / integrate / legacy
 
-git 三板斧
-
-- 一板基础斧 add，commit，pull/push，checkout，revert
-- 二板合作斧 merge，rebase，stash，cherry-pick
-- 三板优雅斧 commit --amend，rebase -i
-
-Git操作你还在用merge吗？字节一面：讲讲你对rebase的理解！
-先说结论：不是merge不行，是rebase更优雅！
-你以为git merge就够了？字节大佬教我：commit记录也是代码质量的一部分！
-血泪教训1：分支历史混乱
-merge的痛点：分支历史像盘面条 commit信息难追踪 代码回溯困难 合并冲突频繁.
-rebase的优势：历史记录线性干净 commit信息清晰 方便代码review 减少无效commit记录.
-暴击伤害2：合并冲突地狱
-字节实战翻车案例：
-某项目上线前夕，多分支合并导致：解决冲突花了3小时 丢失部分代码改动 紧急回滚3次 项目延期2天.
-merge vs rebase 核心区别
-merge方式：保留完整历史 分支结构复杂 适合长期分支 操作相对简单.
-rebase方式：重写提交历史 分支结构线性 适合短期分支 需要谨慎操作.
-最佳实践总结
-1. 适合用rebase的场景：个人功能分支 短期特性分支 同步远程代码 提交PR/MR前
-2. 适合用merge的场景：长期维护分支 发布分支 多人协作分支 紧急修复分支
-rebase进阶技巧
-1. 交互式rebase：合并多个commit 修改commit信息 调整commit顺序 删除无用commit
-2. 黄金法则：不要rebase公共分支 及时同步远程代码 解决冲突要谨慎 保持commit原子性 团队规范建议
-面试官最爱问
-技术深度：rebase原理 解决冲突策略 分支管理方案 Git工作流
-实战经验：大型项目协作 冲突处理经验 分支管理实践 团队规范制定
-记住一句话：用merge还是rebase，不是个人喜好，而是团队协作效率的保证！
-2025-02-16 git 操作 https://m.toutiao.com/is/JG7lVw39SZU/
-
-```sh
-# https://github.com/paulirish/git-open
-# https://gitlab.com/warmhug/test
-
-# git 删除 Untracked files  -f: 强制运行。-d: 同时考虑子目录。-x: 清理忽略文件。-n 模拟删除操作.
-git clean -fdxn
-# 代替在新目录 clone 功能 切换到 other-branch，并将其内容导出到某目录
-git --work-tree=/tmp/other checkout other_branch -- .
-
-git remote [-v add | set-url] origin git@xxx.git
-git ls-remote --heads origin
-
-git config -l  # --list
-git pull --rebase
-git fetch   # 获取当前 origin远程仓库 的所有分支 分支 信息
-git fetch --all  # 获取 origin和其他远程仓库 的所有分支 分支 信息
-git fetch --all --tags  # 额外获取所有 tags 信息
-git fetch origin master
-git branch -m newBranchName  # 重命名分支
-git checkout HEAD~1 -- file1 dir1
-git reset HEAD~1 file1 dir1
-
-# 创建和 apply 补丁
-# 当前为 branch-a 分支，想应用 branch-b 相对于 branch-a 的更改
-git diff branch-a..branch-b > changes.patch
-git diff branch-a..branch-b -- path/to/file > changes.patch
-git apply changes.patch
-
-git log master..feat-xx --oneline
-git log -n 10
-git log origin/master -- .npmrc package.json
-git log --name-status # 显示文件增删状态
-git log --graph
-git log --oneline --decorate
-git log --oneline --first-parent --reverse | tail -1
-git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all
-git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
-
-git diff master..feat-xx
-git diff origin/master..origin/master -- .npmrc
-git diff --name-only version1/branch1 version2/branch2
-# 比较当前分支和 master 分支的实际不同的内容
-git diff --name-only master..HEAD
-git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space -p --stat [file/dir]
-git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space --name-only
-git diff @{upstream}
-
-# HEAD = HEAD~0 = HEAD^0 当前提交
-# HEAD~1 = HEAD^ 主线的上一次提交  HEAD~3 = HEAD^^^ 主线的上三次提交
-# HEAD^1 主线提交（第一个父提交） HEAD^2 第2个并入的分支的最近一次的提交
-# HEAD^2~3 第2个并入的分支 的最近第 4 次的提交
-git diff HEAD^  # 比较 最新提交 和 其父提交 的差异
-
-git show commitId:filepath
-git cherry -v master feat-xx
-git commit --amend  # 修改提交信息
-# 压缩 commit
-git merge --squash feature-branch
-# 保留压缩前的所有commit信息 其中的 hash 修改记录 也会被保留
-git add .
-git commit --no-verify
-
-# git merge 会产生重复无用的 Merge pull request pull_id from xx_branch 或者 Merge branch “branch_name” 信息，不利于 review 提交记录。
-# git rebase 需要经常 reapply 其他提交的改动，commit 的时间顺序也会乱掉。只对自己的分支 commit 做 rebase，公共的分支不要 rebase. 其后续的 commit hash 将全部改变
-git rebase -i [commit_id] # hash 换成 master
-git rebase -i --root # 删除第一个提交
-git rebase origin/master
-git push --force-with-lease  # 强制提交 比 -f 安全
-
-# cherry-pick 和 rebase 最终都会在操作完之后、修改同样提交的 commit hash 值
-# 场景: 比如要 pick 的 来源分支的 commit 只是 HADE~1, 但 来源分支的 HEAD~5 和 目标分支的 HEAD~1 有相同的 commit_hash (即来源分支同步了最新的 master commit 但目标分支没有同步), 此时来源分支的 HADE~1到4 (而不是预期的只是HADE~1) 的 commit 都会 apply 到 目标分支, 并且在目标分支 同步过来的 HADE~1到4 的 commit hash 都会被重新修改。
-git cherry-pick src_branch_commit_hash  # 切换到 目标分支
-# 从另一个仓库的分支 pick 先 git fetch <other-repo-url> <other-branch>
-git cherry-pick commit_hash # commit_hash 可以是其他仓库的hash
-
-# --soft 不修改本地文件 --hard 本地的文件修改都被丢弃
-git reset --[soft | hard] [origin/master | file | 057d]
-git reset --hard && git clean --force -dfx # pristine
-git reset --hard && git clean --force -df # wipe
-git revert commit_id # 回滚代码 不抹掉 提交记录 产生新纪录
-git reflog  # 撤销 reset 时 找到撤销前的 commit_id 再 git reset 即可
-
-git tag v1.0  # 给当前分支最新 commit 打 tag
-git tag v1.0 commit_id  # 给当前分支 某个 commit_id 打 tag
-# 打 annotated tags
-git tag -a 0.0.1 -m 'Release version 0.0.1'
-git tag -a @xx/rich-editor@0.1.16 4da6c3d4 -m '@xx/rich-editor@0.1.16' -f
-# 删除 推送 tags
-git tag -d tag_name
-git push [origin] --tags    # 推送所有标签到服务器
-git push --follow-tags --no-verify origin f-i18n-xx
-git push origin tag_name
-git push origin --delete tag_name
-git push origin :refs/tags/tag_name
-# 搜索本地的某个 tag_name
-git tag -l '*tag_name*'
-git tag | grep tag_name
-# 查看 tag 信息
-git tag -v xx@0.1.1
-git show-ref --tags
-git describe --tags
-# 查看当前分支上有哪些 tags
-git tag --contains HEAD
-git tag --points-at HEAD
-for tag in $(git tag); do if git merge-base --is-ancestor "$tag" HEAD; then echo "$tag"; fi; done
-# tag 只附在一个 commit 上、如果这个 commit 被 squash，但 tag 仍然存在。
-# https://stackoverflow.com/questions/54281360/what-happens-to-tags-of-squashed-commits
-
-
-#
-# 其他
-#
-# pre-merge-commit.sample
-. git-sh-setup
-test -x "$GIT_DIR/hooks/pre-commit" &&
-        exec "$GIT_DIR/hooks/pre-commit"
-:
-
-# GitHub stars topics/javascript
-# https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
-# https://github.com/topics/javascript
-
-# 搜索 issues
-# https://help.github.com/articles/searching-issues/
-# https://github.com/search?type=Issues&q=xx+in:body+author:warmhug
-# https://github.com/search?type=Issues&q=xx+commenter:warmhug+user:ant-design
-# https://github.com/search?type=Issues&q=xx+commenter:warmhug+repo:ant-design/ant-design-mobile
-
-# GitHub commit 或合并 MR 时，可以自动修改 issue 状态、关闭关联的 issue。
-# 业内成熟的 GIT 分支模型 https://cloud.githubusercontent.com/assets/36899/7315642/015f534c-eaa2-11e4-9882-b7cc7535fb72.png
-# GitHub Issues blog https://gitblog.io/
-```
-
-
-## node npm
-
-https://docs.npmjs.com/cli/v10/commands/npm  (version publish query)
-https://pnpm.io/cli/add  (workspaces patch )
-https://pnpm.io/npmrc Settings (.npmrc) `verify-deps-before-run / resolution-mode`
-pnpm v7 文档 https://github.com/pnpm/pnpm.io/blob/v7/docs/workspaces.md
-
-[npm源](http://registry.npmjs.org/esbuild/0.21.4)
-[腾讯源](https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4)
-
-https://www.npmjs.com/package/npm-check
-https://www.npmjs.com/package/depcheck
-
-`npm install --legacy-peer-deps`
-npm v7+ 默认 自动安装各个包的 peerDependencies 但使用了 --legacy-peer-deps 则不会安装,
-需要 包使用者(比如业务仓库) 在 dependencies 或 devDependencies 中自行安装.
-使用 --legacy-peer-deps 的主要风险是运行时兼容性问题。由于忽略了 peer 依赖检查，安装的包可能在运行时无法正常工作。例如，某个组件库可能依赖 react@16 的特定 API，而项目使用 react@17，可能导致功能异常。
-
-
-```sh
-
-# 别名安装
-npm install axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
-npm install --verbose > install.log
-pnpm install --loglevel debug | tee install.log
-npx pnpm install
-npx npm install
-
-# 根目录是 monorepo 在根目录运行
-npm version 0.1.5 --workspaces --no-git-tag-version --allow-same-version=true
-npm version patch --workspace=packages/button --workspace=packages/card --no-git-tag-version --allow-same-version=true -f
-# 如果只改某个子包版本号，进入到子包 设置 --workspaces=false
-npm version patch --workspaces=false --no-git-tag-version
-npm version prerelease --preid rc --no-git-tag-version
-
-# pnpm 处理 workspaces ( pnpm>9.0 link-workspace-packages 默认为 false )
-pnpm run script-name --filter workspace-name
-pnpm add package-name --filter workspace-name --link-workspace-packages=true
-
-# 注意 pnpm outdated 是检测 lock文件(不是package.json) 里的依赖版本号 是否过时
-pnpm outdated -r
-pnpm outdated "@ant-design/pro-*" --filter "@ant-design/pro-form" --json
-# pnpm up package-name --filter workspace-name
-pnpm up "@ant-design/pro-*" --filter "@ant-design/pro-form" --latest
-
-pnpm up -r @ant-design/pro-form@0.2.0  # 更新不存在的版本号会报错
-# 更新 包的版本号为 "@ant-design/pro-form": "workspace:0.1.3"
-pnpm up -r "@ant-design/pro-*"  # 加 --workspace 作用一样
-# 升级到 npm latest 指定的版本
-# 如果 workspace 内部包 版本号大于npm最新版 则使用内部包版本号
-pnpm up -r "@ant-design/pro-*" --latest
-pnpm up -r "@ant-design/pro-*@beta"  # 升级到 beta rc
-pnpm Patching dependencies
-
-pnpm install --ignore-engines --ignore-platform
-pnpm view @huajs/demo --json --registry https://registry.npmjs.org
-pnpm dist-tag add @huajs/demo latest --registry=https://registry.npmjs.org
-
-pnpm -r --if-present --stream --aggregate-output --report-summary run build
-
-pnpm ls  # 列出 package.json 中声明的直接依赖
-pnpm ls --json
-pnpm ls fast-glob --depth Infinity
-pnpm ls --depth Infinity  # 显示完整的依赖树
-pnpm ls react  # 列出 react 依赖
-
-# 查看 内部 互相依赖的包
-pnpm ls -r -P --only-projects
-# 包之间互相依赖时, 查看哪个包需要先被 build
-pnpm ls --parseable --recursive --only-projects
-
-npm ls node-sass  # 换 pnpm 不行
-npm ls --all --json --loglevel silent
-npm ls --all -g
-npm ls -g
-npm update package1 package2 --save
-npm root -g
-which npm/node  # 查看本地安装的模块
-
-# npx 用法
-# npx 会自动在项目的 node_modules/.bin 目录中查找可执行文件
-npx ls  # 等同于 ls
-npx mocha --version
-npx http-server
-# 忽略本地的同名模块 --no-install 强制使用本地模块
-npx --ignore-existing http-server
-# https://code.visualstudio.com/api/get-started/your-first-extension
-npx --package yo --package generator-code -- yo code
-
-pnpx create-react-app@next ./my-app
-pnpm dlx create-react-app@next ./my-app
-pnpm --package=yo --package=generator-webapp dlx yo webapp --skip-install
-pnpm --package cowsay --package lolcatjs -c dlx 'echo "hi pnpm" | cowsay | lolcatjs'
-
-npm exec -- node -e 'console.log(process.env)'
-
-# 搜索组织下的包 https://www.npmjs.com/org/ant-design
-npm search @ant-design --searchlimit=100 --json
-npm config ls
-npm config set registry https://registry.npmmirror.com -g
-npm i --registry https://registry.npmmirror.com
-npm i --registry https://registry.npmjs.org
-```
-
-
-
-## 图片/cdn/命名
-
-- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
-- [颜色选择](https://htmlcolorcodes.com/zh/)
-- [flickr](https://flickr.com)
-
-文字图
-
-- [asciiart](https://asciiart.website) [figlet](http://www.figlet.org/examples.html) [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
-[生成logo](https://www.logo.surf/)
-
-markdown 表情 :+1: :smile: :smiley: :laughing:
-- [emojispark](https://emojispark.com/)
-- [emoji8](https://emoji8.com/zh-hans/)
-- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-网页版微信 https://wx.qq.com/ 能收到的表情包拖到电脑桌面保存.
-
-
------- cdn
-
-https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
-https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
-https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
-https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
-
-[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
-https://unpkg.com  https://cdnjs.com  https://jshub.com  https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org  https://upcdn.b0.upaiyun.com
-https://cdn.bytedance.com  https://www.webcache.cn
-http://cdn.staticfile.org/angular.js/1.2.16/angular.js
-http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
-http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
-https://code.jquery.com/ui/1.13.0/jquery-ui.js
-jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
-https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
-https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
-qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
-less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
-bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
-bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
-
-
------- 命名
-
-Helpers - 帮助函数或模块，用于简化代码。
+lib - Library（库）：通常包含一系列可重用的代码模块或函数集合。
+common - Common（公共）：存放项目中多个部分都会用到的通用函数或组件。
+commons - 公共组件/方法：项目中多个部分都会用到的通用逻辑和功能。
+aux 或 auxiliary - 辅助，与 helper 类似，指辅助性代码模块。
 Assistants - 辅助类，帮助主程序执行操作。
+helper - Helper（助手）：这类文件或模块提供一些辅助性的功能函数。
+Helpers - 帮助函数或模块，用于简化代码。
+extensions / ext - 扩展方法：扩展已有对象或类型的额外功能函数。
+tools - 工具集：各种杂项但实用的功能函数合集。
+utility utilities (完整形式) - 同样指代工具函数，与 utils 含义一致
+support - 支持模块：为其它主要模块提供支持性功能的代码块。
+tasks / jobs - 任务/作业：用于定时任务或其他异步工作流程的模块。
+
+logger / logging - 日志记录：用于处理日志生成和管理的模块。
+core_utils - 核心工具：专用于项目核心模块的一组工具方法。
+funcs / functions - 函数集：用来存储独立、非特定业务逻辑的函数。
 Components - 组件类，用于构建更大的系统。
 Modules - 模块类，包含一组相关的功能。
 Libraries - 库，提供预定义的功能集合。
@@ -7647,154 +7468,23 @@ Addons - 插件或附加组件，扩展主程序的功能。
 Plugins - 插件，用于扩展软件的功能。
 Scripts - 脚本，一系列自动化命令或程序。
 Snippets - 代码片段，用于快速插入常用代码。
-aids / facilities / Misc / Vendor / shared / base / core
-
-data-commons / data-utils / http-utils / json-helper
-
-lib - Library（库）：通常包含一系列可重用的代码模块或函数集合。
-helper - Helper（助手）：这类文件或模块提供一些辅助性的功能函数。
-common - Common（公共）：存放项目中多个部分都会用到的通用函数或组件。
-aux 或 auxiliary - 辅助，与helper类似，指辅助性代码模块。
-funcs / functions - 函数集：用来存储独立、非特定业务逻辑的函数。
 services - 服务层：在某些架构中，这一层封装了应用程序的核心业务逻辑和数据处理操作。
-consts / constants - 常量：存放程序中不会改变的值。
-models - 模型：在MVC（Model-View-Controller）架构或其他框架中，模型通常代表数据结构及相关的业务逻辑。
-middlewares - 中间件：在像Express.js这样的Node.js框架中，中间件是指处理HTTP请求的函数序列。
+services_utils - 服务层工具：在服务层内部使用的通用功能模块。
+models - 模型：在 MVC（Model-View-Controller）架构中，模型代表数据结构及相关的业务逻辑。
+middlewares - 中间件：在像Express.js这样的Node框架中，中间件是指处理HTTP请求的函数序列。
 io - Input/Output（输入/输出）：与数据读取、写入等I/O操作相关的模块。
 config - 配置：存放应用程序配置信息的模块或文件夹。
-logger / logging - 日志记录：用于处理日志生成和管理的模块。
 cache - 缓存：提供缓存功能，如数据缓存、HTTP请求缓存等的模块。
 validators / validation - 校验器/验证：包含数据校验逻辑的模块。
 exceptions - 异常处理：用来定义和处理自定义异常的模块。
-tasks / jobs - 任务/作业：用于定时任务或其他异步工作流程的模块。
+consts / constants - 常量：存放程序中不会改变的值。
 enums - 枚举：存储枚举类型的模块。
 templates / views - 模板/视图：在Web开发中，存放HTML模板或其他类型视图文件的目录。
-extensions / ext - 扩展方法：扩展已有对象或类型的额外功能函数。
 primitives - 基础工具：包含一些基础且常用的处理数据、字符串等的基础方法。
-tools - 工具集：各种杂项但实用的功能函数合集。
-commons - 公共组件/方法：项目中多个部分都会用到的通用逻辑和功能。
-utility utilities (完整形式) - 同样指代工具函数，与 utils 含义一致
-support - 支持模块：为其它主要模块提供支持性功能的代码块。
-services_utils - 服务层工具：在服务层内部使用的通用功能模块。
-core_utils - 核心工具：专用于项目核心模块的一组工具方法。
-legacy
 
 
 
-## PRD/系分 模板
-> 2019-11
-
-PRD有三种状态：Draft、 Review、Ready,  其中起草人为产品或研发团队，相关人 review 通过。
-
-修订记录/更新日志
-修改日期	修改版本	修改内容	备注
-
-前后端测试负责人、工作量评估。
-
-一、需求背景
-1.1 需求来源
-1.2 需求描述
-概念对齐/名词定义/关键术语
-目标对齐
-竞品调研/同类产品调研
-使用场景/主要用户/试点用户
-
-二、需求目标
-产品定位
-产品目标
-产品能力
-业务问题(业务需求)现存问题
-功能一览表格
-业务流程
-
-三、结构/流程图
-3.1 功能结构图
-3.2 需求流程图
-业务流程 -> 任务流程 -> 页面流程
-3.3 交互设计图
-
-四、需求范围
-模块 功能 优先级
-
-五、功能性需求
-详细需求
-详细方案
-
-六、非功能性需求
-上线/灰度/回滚方案、兼容性、AB实验、高可用、性能、监控、权限、运维 等。
-
-七、附录
-数据分析报告、用户调研报告
-
-
-
------- 系分
-
-系分(系统设计+业务分析)的本质其实就是将技术推演的过程前置，所带来的好处就是：问题可以在第一时间发现，第一时间解决，从而最大化的降低了需求变更、方案变更 所带来的沉没成本。
-
---- 修订历史
-| 版本号 | 作者 | 内容提要 | 发布日期 |
-|  ----  | ----  | ---- | ---- |
-| V1.0 | XX | 初稿 | 2020-10-24 |
-
---- 需求背景
-xxxx
-
---- 需求目标
-xxxx
-
---- 相关资源
-- prd(@xx): XXX  交互稿(@xx): XXX  视觉稿(@xx): XXX
-- 后端系分: XXX、API 列表
-
---- 功能分析
-> 1.模块交互截图 2.展示要素分析 3.时序图（包含系统交互、用户行为交互）
-
-模块A
-xxxx
-模块B
-xxxx
-
-特殊模块分析(可选)
-1.特殊功能描述
-2.实现思路流程图？依赖的框架、类库？
-3.性能表现，是否需要降级？降级的维度：钱包版本、系统版本、小程序版本?
-4.兼容性，稳定性方案
-
---- 监控设计
-核心业务数据监控。异常监控告警。
-
---- 灰度方案
-服务端、客户端、配置项灰度方案。
-
---- 应急方案
-写操作熔断方案、核心模块熔断、应急提示（小黄条）
-
---- 埋点方案
-1.页面访问埋点 2.链路行动点曝光+点击 3.特殊业务埋点
-
---- 技术沉淀
-1.沉淀一个组件？ 2.沉淀一个模板？ 3.沉淀一套解决方案？
-
---- 项目管理
-
-工作量评估
-
-| 功能点 | 工作量 | 需求优先级 | 责任人 |
-|  ----  | ----  | ---- | ---- |
-| 模块A | X天 | P0 | 小马 |
-| 模块B | X天 | P0 | 小马 |
-| 模块C | X天 | P1 | 小马 |
-
-项目风险点
-
-项目详细计划表
-
-发布checkList
-
-
-
-## plantuml
+------ plantuml
 > 2022
 
 ```plantuml
@@ -7974,29 +7664,281 @@ then [首页 3d] lasts 3 days
 ```
 
 
+------ PRD 模板
+> 2019-11
+
+PRD有三种状态：Draft、 Review、Ready,  其中起草人为产品或研发团队，相关人 review 通过。
+
+修订记录/更新日志
+修改日期	修改版本	修改内容	备注
+
+前后端测试负责人、工作量评估。
+
+一、需求背景
+1.1 需求来源
+1.2 需求描述
+概念对齐/名词定义/关键术语
+目标对齐
+竞品调研/同类产品调研
+使用场景/主要用户/试点用户
+
+二、需求目标
+产品定位
+产品目标
+产品能力
+业务问题(业务需求)现存问题
+功能一览表格
+业务流程
+
+三、结构/流程图
+3.1 功能结构图
+3.2 需求流程图
+业务流程 -> 任务流程 -> 页面流程
+3.3 交互设计图
+
+四、需求范围
+模块 功能 优先级
+
+五、功能性需求
+详细需求
+详细方案
+
+六、非功能性需求
+上线/灰度/回滚方案、兼容性、AB实验、高可用、性能、监控、权限、运维 等。
+
+七、附录
+数据分析报告、用户调研报告
+
+
+------ 系分 模版
+> 2019-11
+
+系分(系统设计+业务分析)的本质其实就是将技术推演的过程前置，所带来的好处就是：问题可以在第一时间发现，第一时间解决，从而最大化的降低了需求变更、方案变更 所带来的沉没成本。
+
+--- 修订历史
+| 版本号 | 作者 | 内容提要 | 发布日期 |
+|  ----  | ----  | ---- | ---- |
+| V1.0 | XX | 初稿 | 2020-10-24 |
+
+--- 需求背景
+xxxx
+
+--- 需求目标
+xxxx
+
+--- 相关资源
+- prd(@xx): XXX  交互稿(@xx): XXX  视觉稿(@xx): XXX
+- 后端系分: XXX、API 列表
+
+--- 功能分析
+> 1.模块交互截图 2.展示要素分析 3.时序图（包含系统交互、用户行为交互）
+
+模块A
+xxxx
+模块B
+xxxx
+
+特殊模块分析(可选)
+1.特殊功能描述
+2.实现思路流程图？依赖的框架、类库？
+3.性能表现，是否需要降级？降级的维度：钱包版本、系统版本、小程序版本?
+4.兼容性，稳定性方案
+
+--- 监控设计
+核心业务数据监控。异常监控告警。
+
+--- 灰度方案
+服务端、客户端、配置项灰度方案。
+
+--- 应急方案
+写操作熔断方案、核心模块熔断、应急提示（小黄条）
+
+--- 埋点方案
+1.页面访问埋点 2.链路行动点曝光+点击 3.特殊业务埋点
+
+--- 技术沉淀
+1.沉淀一个组件？ 2.沉淀一个模板？ 3.沉淀一套解决方案？
+
+--- 项目管理
+
+工作量评估
+
+| 功能点 | 工作量 | 需求优先级 | 责任人 |
+|  ----  | ----  | ---- | ---- |
+| 模块A | X天 | P0 | 小马 |
+| 模块B | X天 | P0 | 小马 |
+| 模块C | X天 | P1 | 小马 |
+
+项目风险点
+
+项目详细计划表
+
+发布checkList
+
+
+
+
 
 
 
 
 # .
-# BE / other
 
 
-2022-04 《美国公布：长达35页的2045年新兴科技趋势报告》 https://mp.weixin.qq.com/s/ox6NHtK4usvKJ1gpk8uY8A
+> antd-mobile 旧 demo 备份
+> - antd_custom_ui move from https://github.com/warmhug/__/tree/master/_react/antd_custom_ui to > https://github.com/ant-design/antd-mobile-samples/tree/master/web-custom-ui
+> - antd-mobile + TypeScript move from https://github.com/warmhug/__/tree/master/_react/antd-ts > to https://github.com/ant-design/antd-mobile-samples/tree/master/web-typescript
+> - antd-mobile demo move to https://github.com/ant-design/antd-mobile-samples/tree/master/web-webpack
 
-2021 《Tubi 工程师文化》 https://mp.weixin.qq.com/s/p_em5wfzhnZGnH4cd16pcQ
 
-2021-12《CEM如何助力企业流量新增长？》https://mp.weixin.qq.com/s/aNT3V-zPTbVWHh4s-njyRg 安道全
+# BE
 
-中台与平台的区别是什么？
-平台模式下，业务的差异逻辑由平台的人开发；中台模式下，业务的差异逻辑由业务方来开发和维护，中台做通用逻辑的沉淀以及为业务预留扩展的能力。平台提供的是完整的能力，中台提供的更多的是能力的使用方式和结构化展示，由业务来定制。
-中台模式，相当于把业务差异逻辑这部分的工作量，从平台开发转移到了业务开发。理想情况下可以减少平台侧的工作量，让平台可以并行承接更多的业务。
-<中台，我信了你的邪> https://36kr.com/p/5286443
-建设完成汽车零售行业业务中台解决方案之后，未来系统集成工作只需要与业务中台对接，不需要与上层应用对接，减少了系统集成的复杂度。
-2020-01~02
 
-数据中台机会对创业公司意味着什么？
-2019-10-30 https://36kr.com/p/5260774
+## 架构/云
+> Architecture / cloud
+
+
+------ 2025-04 构建 Docker
+
+CI/CD 平台: GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Azure DevOps, Bitbucket Pipelines: 这些是执行 CI 流程的核心平台，它们提供了缓存、并行、条件执行等基础能力。
+CI 平台缓存: 可以将构建输出目录（如 dist, build, target）也纳入 CI 平台的缓存机制，但这需要更精细的缓存键策略，通常结合代码变更来判断。
+容器化工具 Docker 层缓存: 如果你使用 Docker 构建镜像，优化 Dockerfile 的指令顺序，将不经常变动的步骤（如下载依赖）放在前面，充分利用 Docker 的层缓存。
+多阶段构建 (Multi-stage Builds): 使用一个阶段安装依赖和编译代码，然后将最终产物复制到一个干净、轻量的基础镜像中，减小最终镜像体积和构建时间。
+使用 BuildKit: Docker 的下一代构建引擎 BuildKit 提供了更优的并行构建和缓存管理。
+通过容器化技术（如 Docker）创建隔离环境，并设置 CPU 和内存限制，防止 CI 作业过度消耗资源。云端 CI/CD 平台（如 CircleCI）还支持自动扩展，根据需求动态调整资源分配，优化成本和性能。
+内存文件系统: 对于大量临时文件读写的操作，如果 Runner 环境允许，可以考虑使用内存文件系统（如 tmpfs）来加速。
+条件化执行 (Conditional Execution):
+原理: 根据分支、标签、变更的文件路径等条件，选择性地运行某些耗时或资源消耗大的 Job（如端到端测试、部署到预生产环境）。
+方法: CI/CD 平台通常提供条件执行的语法（如 GitHub Actions 的 if 条件, GitLab CI 的 rules 或 only/except）。
+
+并行执行 (Parallelization):
+将可以独立运行的任务（如不同模块的编译、单元测试、集成测试、代码检查）分配到不同的执行单元（线程、进程或 CI runner）上同时运行。
+CI 平台支持: GitHub Actions (matrix strategy, jobs), GitLab CI (parallel keyword), Jenkins (parallel steps) 等都支持并行执行 Job 或 Stage。
+构建工具支持: Maven (-T 参数), Gradle (--parallel 参数), golangci-lint (内部并行), Jest (--maxWorkers) 等测试框架都支持并行。
+测试分片 (Test Sharding): 将测试套件分割成多个部分，在不同的并行 Job 中运行。
+
+依赖缓存 (Dependency Caching):
+缓存策略可避免重复下载或编译未更改的依赖和工件，从而加快构建速度。对于 JavaScript 项目，缓存 node_modules 目录；对于 Java，使用 Maven 或 Gradle 的依赖缓存；对于 Go，利用 Go 模块的内置缓存机制。
+大多数 CI/CD 平台（如 GitHub Actions, GitLab CI, Jenkins）都提供缓存机制。你需要配置 CI 脚本，将下载的依赖目录（如 node_modules, ~/.m2/repository, ~/.gradle/caches, GOMODCACHE 或 GOPATH/pkg/mod）缓存起来，并在后续运行中恢复。
+关键: 确保缓存键 (cache key) 的策略合理，通常基于依赖锁文件（package-lock.json, yarn.lock, pom.xml, build.gradle, go.mod, go.sum）的内容。当锁文件变化时，缓存才失效并重新下载。
+
+构建缓存 (Build Caching):
+利用 Docker 镜像层缓存或 CI 平台自带的构建缓存功能，减少重复编译的开销。
+使用支持增量编译的构建工具，只重建受更改部分代码。这在编译型语言如 Java 和 Go 中尤为重要，工具如 Bazel 和 Gradle 提供此功能。对于 JavaScript，工具如 Vite 或 Turbopack 也支持快速增量构建。
+Gradle 有强大的构建缓存 (--build-cache)，Go 默认开启构建缓存 (GOCACHE)，一些 JS 构建工具（如 Nx, Turborepo）也提供高级缓存。
+
+分布式构建/缓存系统:
+Bazel, Pants: 对于超大型代码库 (Monorepos)，这些工具提供更高级的远程缓存和分布式构建能力，但学习曲线较陡峭。
+
+JavaScript (Node.js):
+包管理器: 使用 npm ci 而不是 npm install，它更快、更可靠，基于 package-lock.json。对于 yarn，使用 yarn install --frozen-lockfile。考虑使用 pnpm，它通过硬链接和符号链接共享依赖，可以显著节省磁盘空间和安装时间。
+构建工具: 选择速度更快的构建工具，如 esbuild 或 Vite (底层使用 esbuild/Rollup)。优化 Webpack/Rollup 配置，启用持久化缓存。
+测试: 配置 Jest 等测试框架的缓存 (--cache)。根据需要调整并行工作进程数 (--maxWorkers)。
+Linting/Formatting: 将 Linting (ESLint) 和 Formatting (Prettier) 步骤与测试并行执行。
+
+
+
+------ 2020
+
+系统初期既不能过度设计，又不能没有设计。
+系统设计 https://github.com/donnemartin/system-design-primer
+[我在系统设计上犯过的14个错](https://mp.weixin.qq.com/s?__biz=MjM5MzYzMzkyMQ==&mid=2649826281&idx=1&sn=9c80215f5ee4b9fcf3be91012ad13608#rd)
+
+如何画出一张合格的技术架构图？ https://yq.aliyun.com/articles/697661
+让你的程序更可读 - node / java AOP https://github.com/frontend9/fe9-library/issues/36
+[egg 早期架构图手绘图](https://gw.alipayobjects.com/mdn/security_content/afts/img/A*M3XeTKo_eAUAAAAAAAAAAABjATonAQ/original)
+
+[Serverless：云时代的软件架构核心思想](https://www.atatech.org/articles/131723)
+
+BaaS、FaaS、Serverless:
+BaaS后端即服务 - 概念篇 <https://yq.aliyun.com/articles/8521>
+BaaS、FaaS、Serverless都是什么馅儿？ <https://yq.aliyun.com/articles/224403>
+对Serverless架构的一点体验和思考: <https://www.jianshu.com/p/51a19ef5f8cf>
+LeanCloud 与阿里云到底有什么区别？ <https://blog.leancloud.cn/4645/>
+AWS Lambda: <https://aws.amazon.com/cn/lambda/>
+
+微服务
+[微服务架构的几种模式](http://microservices.io/patterns/index.html)、
+[浅谈命令查询职责分离(CQRS)模式](http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html)、
+[DDD CQRS架构和传统架构的优缺点比较](http://www.cnblogs.com/netfocus/archive/2016/02/06/5184182.html)、
+什么是微服务架构：<https://os.alipayobjects.com/rmsportal/OzCkwPWAvRGwqXv.png>、
+
+Matt 在对微服务的总体介绍中是这样说的：经过分离的组件可以各自拥有独立的生命周期，并且按需进行扩展。不仅如此，这种方式也打破了组件之间的技术依赖，这就允许每个服务各自选择最适合的技术进行实现。
+
+soa 是 Service-Oriented Architecture 的首字母简称，面向服务架构。开发人员很容易理解为是一个 Web Service，但是这绝对不是 SOA，那顶多只能算是 SOA 的一种实现方法。
+微服务只是一种为经过良好架构设计的 SOA 解决方案、实现面向服务的交付方案。SOA 提供了上下文的框架，同时也提供了微服务所坚持的大部分规则。
+
+当前业界比较成熟的微服务框架有 Netflix 的 Karyon/Ribbon，Spring 的 Spring Boot/Cloud，阿里的 Dubbo 等。配置中心比较成熟的开源方案有百度的 Disconf，360 的 QConf，Spring 的 Cloud Config 和阿里的 Diamond 等。
+
+通常来说，RESTful 服务最适合于为某个数据模型提供 CRUD 操作，而微服务架构中的服务往往能够被轻易地分解为这些 CRUD 类型的服务，因此它与 RESTful 就能够很好地结合在一起。而对于其他类型的服务来说，类 RESTful 风格的服务通常也是一种良好的选择，这种类 RESTful 的风格也会使用 HTTP 作为传输协议，但服务本身并不一定要 100% 地符合 RESTful 的原则。
+
+
+------ 2019 DDD 与 事件风暴
+
+《识别领域事件》https://insights.thoughtworks.cn/recognize-domain-event
+对问题域有深刻见解的主题专家称为领域专家，在大多数组织中没有这个角色，当DDD建模需要领域专家支持时，组织往往找业务部门的业务人员，BA，产品经理或在这个领域有多年开发经验的DEV来充当。
+这些一线业务人员和开发团队都清楚有什么功能，但往往不清楚为什么有这些功能。举个例子：如果我们的问题是打开一瓶红酒，你去调研每天都会打开酒瓶的waiter, 给你的答案是：开瓶器。但换做领域专家的视角来看，会回归问题的本质，如果我们希望打开酒瓶，需要把瓶塞移除，移除瓶塞的方式有多种，包括推，撬与拉拽，对于拉拽可能基于吸力或螺旋拉拽，下面右图的开瓶器只不过是螺旋拉拽的一种解决方案。领域专家应该对问题域及其中的各种可行方案有更深入的理解。
+
+《DDD、EventStorming与业务中台》https://insights.thoughtworks.cn/ddd-eventstorming-zhongtai
+提到中台（尤其是业务中台）的构建方法论，就不得不提另两个同样伴随着微服务和中台概念兴起的工具：Domain-Driven Design（DDD，领域驱动设计）和EventStorming（事件风暴）。
+在各种讲中台落地规划，尤其是业务中台的共性能力识别和微服务划分的时候，总是能看到这两位的身影。不过相信好多朋友对于这两个相对陌生的面孔还是感觉云里雾里，搞不清楚到底是什么，以及与中台的关系。
+
+事件风暴（Event Storming）于2013年首次被提出，2015年被ThoughtWorks技术雷达添加到“实验”阶段，2018年被ThoughtWorks技术雷达添加到“采纳”阶段。事件风暴[案例](https://juejin.im/post/5dde595a5188256ea364efbf)。
+
+《事件风暴将掀起一场新革命》https://www.jdon.com/artichect/eventstorm.html
+DDD 是静态结构分析，主要以产出类图为主、顺序图或状态图。是将一个动态的流程活生生切割成不同静态的状态。如果用这种方法去分析设计一个复杂大型系统，大量间接的模拟表达会造成系统过于复杂晦涩，如果一个程序员在未完全掌握状态切换规则情况下，却更改了状态数据，就会影响一大片流程功能。
+使用静态方法去分析动态事物，是方法论出现了误用。
+积累事件驱动系统的分析设计开发经验，状态和事件其实是有内在因果关系的，状态为什么会发生变化，那是因为发生了事件，过去我们是把状态作为主角，事件才是背后真正的英雄啊。比如，你的手机正在处于播放音乐状态，那是因为你之前按了播放键，本质是由于动作事件的发生。
+事件建模本质就是要抓住一系列事件动作，寻找贯穿业务领域中的事件流向。这是一种动态建模方式，这种动态方式能够直截了当地反映业务流程，无需借助状态来间接表达。
+发布者-订阅者(pub-sub)模型其实代表对象之间调用的新模式，会迅速渗透进业务分析设计领域，而事件则可以说是发布者-订阅者模型的抽象体现，当我们使用多个事件来表达复杂业务流程时，事件之间的联系是通过发布者-订阅者模型实现先后流程节点连接，从另外一个角度看，发布者-订阅者模型实际被隐含在事件流背后了。
+事件建模为什么称为事件风暴建模呢？这是取自于头脑风暴，意味着参与者需要在一起通过头脑风暴才能实现较为成功的事件建模。
+事件风暴建模从组织形式上看很简单，相关专家和技术人员集中到一个会议室，在一面墙上贴上白纸，然后使用不同颜色的便签表达不同事件，以此表达各种业务流程，事件风暴的价值是沟通，而不仅仅是粘贴在墙上的便条。
+事件建模不是对所有事件都进行关注建模，而只是关注领域事件。
+领域事件的重要特征是能够引起反应，不是所有事件都值得我们关注或记录，最引人注目的是那些引起反应的事件。由此，领域事件将事件与事件反应或者称事件响应联系起来了，这种方式符合我们前面讨论的发布者-订阅者(pub-sub)模型，所以，事件风暴不只是找出孤立的一个事件，而是要找出“事件/响应”这样的组合，唯有如此，我们才能拼凑出一个事件发生的序列因果集合，从而完整地表达业务流程。
+
+
+
+------ 2016 基础
+
+[正向代理与反向代理有什么区别](http://mp.weixin.qq.com/s/ikrI3rmSYs83wdSWqq2QIg)
+
+CDN 工作机制：CDN = 镜像（Mirror）+ 缓存（Cache）+ 整体负载均衡（GSLB），主要缓存网站中的静态数据。
+
+三种负载均衡架构：链路负载均衡、集群负载均衡、操作系统负载均衡。
+- 链路负载均衡就是通过 DNS 解析成不同的 IP，用户根据这个 IP 来访问不同的目标服务器。
+- 集群负载均衡分为硬件和软件负载均衡。硬件负载均衡设备昂贵、如 F5，性能非常好，但访问量超出极限时不能进行动态扩容。软件负载均衡成本低，缺点是一般一次访问请求要经过多次代理服务器，会增加网络延时，如 LVS、HAProxy。
+- 操作系统负载均衡，是利用操作系统级别的软中断或硬中断，设置多队列网卡等来实现。
+
+- QPS、RT、CPU 性能监控
+- 阿里云OSS：文件存储系统（避免把文件存到数据库里、占用IO资源）
+- tair：内存缓存服务器 开源：memcached / redis
+- F5：硬件负载均衡，LVS替代(软负载)
+  - 即为name server（configServer），名字服务器，存放各个机器名，能知道有哪些机器。
+- HSF(High Speed FrameWork)：远程服务调用框架
+  - non-blocking IO.可以减少CPU切换开销，留更多CPU资源给业务代码。类比渔夫钓鱼，鱼竿有灯，钓起来灯亮，渔夫遍历查看鱼竿的等是否亮，亮了通知订阅者。一个渔夫可以看更多鱼竿，但如果鱼竿很多，一个渔夫看不过来，会造成延迟增加。
+  - IO连接多路复用。一个连接上维持多个会话。
+  - 序列化协议，hessian序列化。
+  - 同类开源的rpc框架：dubbo或thrift等
+- osgi：用于进行类库隔离的组件，允许组件动态热部署
+- hbase、hive
+- DRM：分布式资源管理，DRM框架即提供了这样一种能力，可以在运行时动态、即时地改变应用系统内存中的资源值，并且已经解决多机房问题。
+- zookeeper：可以充当一个服务注册表（Service Registry），让多个服务提供者形成一个集群，让服务消费者通过服务注册表获取具体的服务访问地址（ip+端口）去访问具体的服务提供者。zookeeper提供了“心跳检测”功能，它会定时向各个服务提供者发送一个请求（实际上建立的是一个 socket 长连接），如果长期没有响应，服务中心就认为该服务提供者已经“挂了”，并将其剔除
+
+- DAL(数据访问层)、IDAL(接口层)、BLL(业务逻辑层)
+- PO(Persisent Object)持久对象，和VO一样都是由一组属性和属性的 get 和 set 方法组成。PO 的属性是跟数据库表的字段一一对应的。PO 对象需要实现序列化接口。
+- VO(value object)值对象，通常用于业务层之间的数据传递，和 PO 一样也是仅仅包含数据而已。但应是抽象出的业务对象 ,可以和表对应 ,也可以不 ,这根据业务的需要。
+- DAO(data access object) 数据访问对象，它负持久层的操作，为业务层提供接口。此对象用于访问数据库。通常和 PO 结合使用， DAO 中包含了各种数据库的操作方法。通过它的方法 , 结合 PO 对数据库进行相关的操作。
+- DTO(Data Transfer Object) 数据传输对象，主要用于远程调用等需要大量传输对象的地方。
+
+比如我们一张表有 100 个字段，那么对应的 PO 就有 100 个属性。
+但是我们界面上只要显示 10 个字段，客户端用 WEB service 来获取数据，没有必要把整个 PO 对象传递到客户端，这时我们就可以用只有这 10 个属性的 DTO 来传递结果到客户端，这样也不会暴露服务端表结构 . 到达客户端以后，如果用这个对象来对应界面显示，那此时它的身份就转为 VO。
+
+- BO(business object) 业务对象，从业务模型的角度看 , 见 UML 元件领域模型中的领域对象。封装业务逻辑的 java 对象 , 通过调用 DAO 方法 , 结合 PO,VO 进行业务操作。主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。比如一个简历，有教育经历、工作经历、社会关系等等。我们可以把教育经历对应一个 PO ，工作经历对应一个 PO ，社会关系对应一个 PO 。建立一个对应简历的 BO 对象处理简历，每个 BO 包含这些 PO 。这样处理业务逻辑时，我们就可以针对 BO去处理。
+
+
+
+
+
 
 
 ## 网络
@@ -8076,6 +8018,10 @@ Cookie可以让服务端程序跟踪每个客户端的访问，但是每次客�
 跨域名共享Cookie问题，Cookie是有域名限制的，一个域名下的Cookie不能被另一个域名访问。所以，如果在一个域名下已经登陆成功，如何访问到另外一个域名的应用且保证登陆状态仍然有效呢？
 
 
+
+
+
+
 ## 安全
 
 
@@ -8118,107 +8064,131 @@ IFAA 生物认证 https://tech.antfin.com/products/IFAA
 
 
 
-## 架构/云
-> Architecture / cloud
-
------- 2020
-
-系统初期既不能过度设计，又不能没有设计。
-系统设计 https://github.com/donnemartin/system-design-primer
-[我在系统设计上犯过的14个错](https://mp.weixin.qq.com/s?__biz=MjM5MzYzMzkyMQ==&mid=2649826281&idx=1&sn=9c80215f5ee4b9fcf3be91012ad13608#rd)
-
-如何画出一张合格的技术架构图？ https://yq.aliyun.com/articles/697661
-让你的程序更可读 - node / java AOP https://github.com/frontend9/fe9-library/issues/36
-[egg 早期架构图手绘图](https://gw.alipayobjects.com/mdn/security_content/afts/img/A*M3XeTKo_eAUAAAAAAAAAAABjATonAQ/original)
-
-[Serverless：云时代的软件架构核心思想](https://www.atatech.org/articles/131723)
-
-BaaS、FaaS、Serverless:
-BaaS后端即服务 - 概念篇 <https://yq.aliyun.com/articles/8521>
-BaaS、FaaS、Serverless都是什么馅儿？ <https://yq.aliyun.com/articles/224403>
-对Serverless架构的一点体验和思考: <https://www.jianshu.com/p/51a19ef5f8cf>
-LeanCloud 与阿里云到底有什么区别？ <https://blog.leancloud.cn/4645/>
-AWS Lambda: <https://aws.amazon.com/cn/lambda/>
-
-微服务
-[微服务架构的几种模式](http://microservices.io/patterns/index.html)、
-[浅谈命令查询职责分离(CQRS)模式](http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html)、
-[DDD CQRS架构和传统架构的优缺点比较](http://www.cnblogs.com/netfocus/archive/2016/02/06/5184182.html)、
-什么是微服务架构：<https://os.alipayobjects.com/rmsportal/OzCkwPWAvRGwqXv.png>、
-
-Matt 在对微服务的总体介绍中是这样说的：经过分离的组件可以各自拥有独立的生命周期，并且按需进行扩展。不仅如此，这种方式也打破了组件之间的技术依赖，这就允许每个服务各自选择最适合的技术进行实现。
-
-soa 是 Service-Oriented Architecture 的首字母简称，面向服务架构。开发人员很容易理解为是一个 Web Service，但是这绝对不是 SOA，那顶多只能算是 SOA 的一种实现方法。
-微服务只是一种为经过良好架构设计的 SOA 解决方案、实现面向服务的交付方案。SOA 提供了上下文的框架，同时也提供了微服务所坚持的大部分规则。
-
-当前业界比较成熟的微服务框架有 Netflix 的 Karyon/Ribbon，Spring 的 Spring Boot/Cloud，阿里的 Dubbo 等。配置中心比较成熟的开源方案有百度的 Disconf，360 的 QConf，Spring 的 Cloud Config 和阿里的 Diamond 等。
-
-通常来说，RESTful 服务最适合于为某个数据模型提供 CRUD 操作，而微服务架构中的服务往往能够被轻易地分解为这些 CRUD 类型的服务，因此它与 RESTful 就能够很好地结合在一起。而对于其他类型的服务来说，类 RESTful 风格的服务通常也是一种良好的选择，这种类 RESTful 的风格也会使用 HTTP 作为传输协议，但服务本身并不一定要 100% 地符合 RESTful 的原则。
 
 
------- 2019 DDD 与 事件风暴
+## DB 2016
 
-《识别领域事件》https://insights.thoughtworks.cn/recognize-domain-event
-对问题域有深刻见解的主题专家称为领域专家，在大多数组织中没有这个角色，当DDD建模需要领域专家支持时，组织往往找业务部门的业务人员，BA，产品经理或在这个领域有多年开发经验的DEV来充当。
-这些一线业务人员和开发团队都清楚有什么功能，但往往不清楚为什么有这些功能。举个例子：如果我们的问题是打开一瓶红酒，你去调研每天都会打开酒瓶的waiter, 给你的答案是：开瓶器。但换做领域专家的视角来看，会回归问题的本质，如果我们希望打开酒瓶，需要把瓶塞移除，移除瓶塞的方式有多种，包括推，撬与拉拽，对于拉拽可能基于吸力或螺旋拉拽，下面右图的开瓶器只不过是螺旋拉拽的一种解决方案。领域专家应该对问题域及其中的各种可行方案有更深入的理解。
+时间序列数据的数据库选型思考 https://j-coder.com/2021/11/12/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B%E6%80%9D%E8%80%83/
+ClickHouse vs Elasticsearch谁更胜一筹 https://www.zhihu.com/question/472389514
+2024-05-28
 
-《DDD、EventStorming与业务中台》https://insights.thoughtworks.cn/ddd-eventstorming-zhongtai
-提到中台（尤其是业务中台）的构建方法论，就不得不提另两个同样伴随着微服务和中台概念兴起的工具：Domain-Driven Design（DDD，领域驱动设计）和EventStorming（事件风暴）。
-在各种讲中台落地规划，尤其是业务中台的共性能力识别和微服务划分的时候，总是能看到这两位的身影。不过相信好多朋友对于这两个相对陌生的面孔还是感觉云里雾里，搞不清楚到底是什么，以及与中台的关系。
+- [数据库深度解析 | 从NoSQL历史看未来](https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=209753217&idx=1&sn=d3a021a7bd959cbf92ffc658336b2387)
 
-事件风暴（Event Storming）于2013年首次被提出，2015年被ThoughtWorks技术雷达添加到“实验”阶段，2018年被ThoughtWorks技术雷达添加到“采纳”阶段。事件风暴[案例](https://juejin.im/post/5dde595a5188256ea364efbf)。
+MapReduce 是一种分布式的程序设计模型，专门用来在集群里处理大量的数据。主要由两部分组成：mapper 和 reducer。mapper 读取一部分数据，运算后输出成一系列的中间（intermediate）数据；而 reducer 将 mapper 的输出数据查核、合并，产生最后输出。最常被使用的就是Hadoop。Hadoop 是以 Java 实现的，但是可以支持许多其他语言写成的 mapper 和 reducer。
+Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量数据时，就会比关系型数据库还要慢了。
 
-《事件风暴将掀起一场新革命》https://www.jdon.com/artichect/eventstorm.html
-DDD 是静态结构分析，主要以产出类图为主、顺序图或状态图。是将一个动态的流程活生生切割成不同静态的状态。如果用这种方法去分析设计一个复杂大型系统，大量间接的模拟表达会造成系统过于复杂晦涩，如果一个程序员在未完全掌握状态切换规则情况下，却更改了状态数据，就会影响一大片流程功能。
-使用静态方法去分析动态事物，是方法论出现了误用。
-积累事件驱动系统的分析设计开发经验，状态和事件其实是有内在因果关系的，状态为什么会发生变化，那是因为发生了事件，过去我们是把状态作为主角，事件才是背后真正的英雄啊。比如，你的手机正在处于播放音乐状态，那是因为你之前按了播放键，本质是由于动作事件的发生。
-事件建模本质就是要抓住一系列事件动作，寻找贯穿业务领域中的事件流向。这是一种动态建模方式，这种动态方式能够直截了当地反映业务流程，无需借助状态来间接表达。
-发布者-订阅者(pub-sub)模型其实代表对象之间调用的新模式，会迅速渗透进业务分析设计领域，而事件则可以说是发布者-订阅者模型的抽象体现，当我们使用多个事件来表达复杂业务流程时，事件之间的联系是通过发布者-订阅者模型实现先后流程节点连接，从另外一个角度看，发布者-订阅者模型实际被隐含在事件流背后了。
-事件建模为什么称为事件风暴建模呢？这是取自于头脑风暴，意味着参与者需要在一起通过头脑风暴才能实现较为成功的事件建模。
-事件风暴建模从组织形式上看很简单，相关专家和技术人员集中到一个会议室，在一面墙上贴上白纸，然后使用不同颜色的便签表达不同事件，以此表达各种业务流程，事件风暴的价值是沟通，而不仅仅是粘贴在墙上的便条。
-事件建模不是对所有事件都进行关注建模，而只是关注领域事件。
-领域事件的重要特征是能够引起反应，不是所有事件都值得我们关注或记录，最引人注目的是那些引起反应的事件。由此，领域事件将事件与事件反应或者称事件响应联系起来了，这种方式符合我们前面讨论的发布者-订阅者(pub-sub)模型，所以，事件风暴不只是找出孤立的一个事件，而是要找出“事件/响应”这样的组合，唯有如此，我们才能拼凑出一个事件发生的序列因果集合，从而完整地表达业务流程。
+读写并行，锁和并行，读写锁，隔离，死锁检测：碰撞检测。
+数据一致性，数据完整性。单机事务，分布式事务。一致性hash。数据库连接利用率低。
+
+orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
+
+Hibernate 联合主键构成类时，需要重写类的equal hashcode，实现序列化接口。
+
+MyBatis是支持普通SQL查询，存储过程和高级映射的优秀持久层框架。MyBatis消除了几乎所有的JDBC代码和参数的手工设置以及对结果集的检索。MyBatis可以使用简单的XML或注解用于配置和原始映射，将接口和Java的POJO（Plain Old Java Objects，普通的Java对象）映射成数据库中的记录。
+
+对象之间的关系：一对一、一对多、多对多。
+- 一对一：一个学生对应一个学生证（可以记录到一张表里，不需要中间表）。
+- 一对多(多对一)：一个组对应多个用户，每个用户只能属于一个组。表设计：在多方加外键。
+- 多对多：一个老师对应多个学生，但每个学生可被多个老师教。多对多比较少用。
+  - 表设计：加中间表。例如：学生、课程、分数表设计，分数表作为中间表，里边有学生id/课程id、分数，中间表的主键可以为：联合主键(学生id和课程id)、并且不能是自动生成的(需要从学生表id和课程表id获得)。问题：操作不方便 也可单独设置分数表id作为主键。分数表和学生或课程表是多对一的关系。比联合主键简单
+
+表设计 三范式：
+- 要有主键，列不可分。
+- 联合主键，不能存在部分依赖。
+- 不能存在传递依赖。
+
+事务 ACID 原子性Atomicity、一致性Consistency、隔离性Isolation和持久性Durability
+事务隔离级别：1 read-uncommitted，2 read-committed，4 repeatable read，8 serializable 。级别越高，越安全但效率越低 一般设置为 read-committed。用悲观锁或乐观锁。
+- 悲观锁：获取到数据后加锁，防止别人更新。使用的是数据库的锁。
+- 乐观锁：所有对数据的更新带上版本号，对照不同版本判断是否被更新过。不在获取数据后加锁。
+
+mysql 约束: https://gw.alipayobjects.com/zos/rmsportal/PDMVJVKZwvVWWGNaKvsK.png
+
+从存储上来说，数据库主要分为几类：
+
+- Key/Value形式，典型的产品如tair。NoSql数据库，在NoSql分类中，有一种基于键值对（key/value pairs）的结构化数据类型，它通常被存储在内存中以支持快速访问。三种最流行的基于内存键值对的存储系统是：Memcached，Cassandra和Redis。
+- Schema-free, 典型的如mongoDB，阿里云的OTS，这一类产品的特点是使用灵活简单，但如果有二级索引的需求，会比较麻烦。
+- SQL,关系型数据库，比如MySQL、OceanBase，特点是有较高的使用成本，schema变更较为麻烦，但功能强大，特别是OceanBase解决了扩展性和性能问题。
+
+对数据库进行读写分离。 让主数据库处理事务性的增，删，改操作(Insert,Update,Delete)操作，让从数据库处理查询操作(Select操作)，数据库复制被用来将事务性操作导致的变更同步到集群中的从数据库。
+
+当访问量大的时候（数据库连接数不够）：
+- 业务垂直拆分，拆分后就需要远程服务调用框架hsf
+    - 淘宝业务类型：商品、交易、评价、属性
+    - 拆分为“商品中心、用户中心”等，不同团队分别负责
+- 中间加一层，这层下边的机器要减少，作为proxy
+- 数据库切分：单个商品库切分为多个
+
+除了数字、字符串和日期之外，许多数据库还可以存储大对象，例如图片或其他数据。在sql中，二进制大对象称为BLOB，字符型大对象称为CLOB。
+
+存储过程是在数据库中执行的用数据库相关的语言编写的过程。
+
+可以将多个语句(sql语句？)组合成「事务(transaction)」。当所有语句都顺利执行之后，事务可以被提交。否则，如果其中某个语句遇到错误，事务将被回滚，就好像没有任何语句被执行过一样。
+
+建立与数据库的连接很耗时（花接近一秒），实质是建立了socket连接，用“连接池”来解决。
+数据库连接是有限的资源，如果用户要离开应用一段时间，那么他占用的连接就不应该保持开放状态；另一方面，每次查询都获取连接并在随后关闭它的代价也是相当高的。
+解决办法是建立「数据库连接池（pool）」。这意味着数据库连接在物理上并未被关闭，而是保留在一个队列中并被反复重用。连接池是一种非常重要的服务，web容器和应用服务器的开发商通常会提供连接池服务的实现。
+连接池的使用对程序员来说是「完全透明的」，可以通过获取数据源并调用getConnection方法来得到连接池中的连接。使用完连接后，需要调用close方法。该方法并不在物理上关闭连接，而只是告诉连接池已经使用完该连接。
 
 
-## 基础
+------ JDBC、Hibernate、iBATIS 使用区别
+Java应用传统上使用JDBC（Java Database Connectivity）API来把数据持久到关系数据库中。JDBC API使用SQL语句来完成创建（create）、读取（read）、更新（update）和删除（delete）（CRUD）操作。JDBC代码内嵌在Java类中——换句话说，这类代码与业务逻辑紧密耦合在一起。这类代码还在很大程度上依赖于SQL，而SQL并非是跨数据库的标准；这使得从一种数据库移植到另一种数据库变得困难起来。
 
------- 2016
+对象-关系映射（ORM）使用直接映射来生成内部的JDBC或是SQL代码。然而对于一些应用场景来说，你需要对SQL查询做更加直接的控制。在编写涉及了一系列更新查询的应用时，直接编写自己的SQL查询比依赖于ORM生成的SQL来得更有效一些。另外，在对象模型和数据模型之间存在失配时，ORM是不能够使用的。
 
-[正向代理与反向代理有什么区别](http://mp.weixin.qq.com/s/ikrI3rmSYs83wdSWqq2QIg)
+iBATIS最好是用在你需要全面地控制SQL的时候，在需要对SQL查询做微调的时候也很有用。当你在应用和数据库设计两方面都有完全的控制权的时候，就不应该使用iBATIS，因为在这样的情况下，应用可能会做出修改以适应数据库，或是反过来。
 
-CDN 工作机制：CDN = 镜像（Mirror）+ 缓存（Cache）+ 整体负载均衡（GSLB），主要缓存网站中的静态数据。
+在ORM的领域中，看来JPA已经是王道，规范就是规范。在各大厂商的支持下，JPA的使用开始变得广泛。
 
-三种负载均衡架构：链路负载均衡、集群负载均衡、操作系统负载均衡。
-- 链路负载均衡就是通过 DNS 解析成不同的 IP，用户根据这个 IP 来访问不同的目标服务器。
-- 集群负载均衡分为硬件和软件负载均衡。硬件负载均衡设备昂贵、如 F5，性能非常好，但访问量超出极限时不能进行动态扩容。软件负载均衡成本低，缺点是一般一次访问请求要经过多次代理服务器，会增加网络延时，如 LVS、HAProxy。
-- 操作系统负载均衡，是利用操作系统级别的软中断或硬中断，设置多队列网卡等来实现。
+总是会存在精通Java的人和更信任SQL的人这样的一种划分，对于一个熟练的Java程序员来说，他想使用一个无需与SQL有太多交互的持久性框架，那么Hibernate是最好的选择，因为它会在运行时生成高效率的SQL查询。但是，如果你想要使用存储过程来对数据库查询做各方面的控制的话，则iBATIS是推荐的解决方案。iBATIS大力支持SQL，而Hibernate和JPA则是使用它们自己的查询语言（分别是HQL和JPQL），这些语言与SQL类似。
 
-- QPS、RT、CPU 性能监控
-- 阿里云OSS：文件存储系统（避免把文件存到数据库里、占用IO资源）
-- tair：内存缓存服务器 开源：memcached / redis
-- F5：硬件负载均衡，LVS替代(软负载)
-  - 即为name server（configServer），名字服务器，存放各个机器名，能知道有哪些机器。
-- HSF(High Speed FrameWork)：远程服务调用框架
-  - non-blocking IO.可以减少CPU切换开销，留更多CPU资源给业务代码。类比渔夫钓鱼，鱼竿有灯，钓起来灯亮，渔夫遍历查看鱼竿的等是否亮，亮了通知订阅者。一个渔夫可以看更多鱼竿，但如果鱼竿很多，一个渔夫看不过来，会造成延迟增加。
-  - IO连接多路复用。一个连接上维持多个会话。
-  - 序列化协议，hessian序列化。
-  - 同类开源的rpc框架：dubbo或thrift等
-- osgi：用于进行类库隔离的组件，允许组件动态热部署
-- hbase、hive
-- DRM：分布式资源管理，DRM框架即提供了这样一种能力，可以在运行时动态、即时地改变应用系统内存中的资源值，并且已经解决多机房问题。
-- zookeeper：可以充当一个服务注册表（Service Registry），让多个服务提供者形成一个集群，让服务消费者通过服务注册表获取具体的服务访问地址（ip+端口）去访问具体的服务提供者。zookeeper提供了“心跳检测”功能，它会定时向各个服务提供者发送一个请求（实际上建立的是一个 socket 长连接），如果长期没有响应，服务中心就认为该服务提供者已经“挂了”，并将其剔除
 
-- DAL(数据访问层)、IDAL(接口层)、BLL(业务逻辑层)
-- PO(Persisent Object)持久对象，和VO一样都是由一组属性和属性的 get 和 set 方法组成。PO 的属性是跟数据库表的字段一一对应的。PO 对象需要实现序列化接口。
-- VO(value object)值对象，通常用于业务层之间的数据传递，和 PO 一样也是仅仅包含数据而已。但应是抽象出的业务对象 ,可以和表对应 ,也可以不 ,这根据业务的需要。
-- DAO(data access object) 数据访问对象，它负持久层的操作，为业务层提供接口。此对象用于访问数据库。通常和 PO 结合使用， DAO 中包含了各种数据库的操作方法。通过它的方法 , 结合 PO 对数据库进行相关的操作。
-- DTO(Data Transfer Object) 数据传输对象，主要用于远程调用等需要大量传输对象的地方。
+------ 视图 事务 索引
+SQL 内连接inner join、外连接outer join、左外连接left outer join、右外连接right outer join、全外连接full outer join。外连接实际上产生了两个关系(表)的笛卡尔积。
 
-比如我们一张表有 100 个字段，那么对应的 PO 就有 100 个属性。
-但是我们界面上只要显示 10 个字段，客户端用 WEB service 来获取数据，没有必要把整个 PO 对象传递到客户端，这时我们就可以用只有这 10 个属性的 DTO 来传递结果到客户端，这样也不会暴露服务端表结构 . 到达客户端以后，如果用这个对象来对应界面显示，那此时它的身份就转为 VO。
+SQL允许通过查询来定义“虚关系”，它在概念上包含查询的结果。但虚关系并不预先计算并存储，而是在使用虚关系的时候才通过执行查询被计算出来。像这种不是逻辑模型的一部分，但作为虚关系对用户可见的关系称为「视图」(view)。
 
-- BO(business object) 业务对象，从业务模型的角度看 , 见 UML 元件领域模型中的领域对象。封装业务逻辑的 java 对象 , 通过调用 DAO 方法 , 结合 PO,VO 进行业务操作。主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。比如一个简历，有教育经历、工作经历、社会关系等等。我们可以把教育经历对应一个 PO ，工作经历对应一个 PO ，社会关系对应一个 PO 。建立一个对应简历的 BO 对象处理简历，每个 BO 包含这些 PO 。这样处理业务逻辑时，我们就可以针对 BO去处理。
+特定数据库系统允许存储视图关系，它们保证，如果用于定义视图的实际关系改变，视图也跟着修改，这样的视图被称为物化视图（materialized view）。
 
+对查询而言，视图是一个有用的工具，但如果我们用它们来表达更新、插入或删除，它们可能带来严重的问题。困难在于，用视图表达的数据库修改必须被翻译为对数据库逻辑模型中实际关系的修改。就像对上边的`faculty`视图插入数据，实际数据表中还必须要插入 salary 列的数据，此时 salary 列就不能为非空约束，不然修改视图会失败。
+
+一般来说，如果定义视图的查询对下列条件都能满足，我们称SQL视图是可更新的（即视图上可以执行插入、更新或删除）：1. from子句中只有一个数据库关系。 2. select子句中只包含关系的属性名，不包含任何表达式、聚集或 distinct 声明。 3. 任何没有出现在select子句中的属性可以取空值；即这些属性上没有not null约束，也不构成主键的一部分。 4. 查询中不含有group by或having子句。
+
+事务（transaction）由查询或更新语句的序列组成。SQL标准规定当一条SQL语句被执行，就隐式地开始了一个事务。但事务被提交（commit）或被回滚（rollback）时，该事务结束。在很多SQL实现中，默认方式下每个SQL语句自成一个事务，且一执行完就提交。如果一个事务要执行多条SQL语句，就必须关闭单独SQL语句的自动提交。如何关系自动提交也依赖于特定的SQL实现，在诸如JDBC或ODBC那样的应用编程接口中存在标准化方式来完成这项工作。
+数据库系统保证在发生诸如某条SQL语句错误、断电、系统崩溃这些故障的情况下，如果一个事务还没有完成commit work，其影响将被回滚。在断电和系统崩溃情况下，回滚会在系统重启后执行。
+
+许多查询只涉及少量记录，例如找出id为221的学生的tot_cred值，只涉及学生记录中的一小部分。如果数据库读取每条记录并一一检查，这样是很低效的。
+在关系的属性上所创建的「索引(index)」是一种数据结构，它允许数据库系统高效地找到关系中那些在索引属性上取给定值的元组，而不用扫描关系中的所有元组。很多数据库支持这样创建索引：`create index studentID_index on student(ID);` 在 student 关系的属性 ID 上创建了一个名为 studentID_index 的索引。
+
+触发器（trigger）是一条语句，当对数据库作修改时，他自动被系统执行。触发器可以用来实现未被SQL约束机制指定的某些完整性约束，用来当满足特定条件时对用户发警报或自动开始执行某项任务。创建方式：`create trigger xx after update ...`。 触发器是很有用的工具，但是如果有其他候选方法就最好别用触发器。很多触发器的应用都可以用适当的存储过程来替换。
+
+联机分析处理（OLAP）工具帮助分析人员用不同的方式查看汇总数据，使他们能够洞察一个组织的运行。OLAP工具工作在以维属性和度量属性为特性的多维数据之上。数据立方体由以不同方式汇总的多维数据构成，预先计算数据立方体有助于提高汇总数据的查询速度。交叉表的显示允许用户一次查看多维数据的两个维及其汇总数据。下钻、上卷、切片和切块是用户使用OLAP工具时执行的一些操作。从SQL1999标准开始，SQL提供了一系列的用于数据分析的操作符，其中包括cube和rollup操作，有些系统还支持pivot子句，可以很方便地生成交叉表。
+
+关系代数（relational algebra）定义了一套在表上运算且输出结果也是表的代数运算。这些运算可以混合使用来得到表达所希望查询的表达式。关系代数定义了关系查询语言中使用的基本运算。
+
+
+------ 数据存储和查询
+绝大多数数据库将数据存储在磁盘上（越来越多地在闪存上），并将数据取入内存用于处理。存储设备的物理特性影响很大，磁盘上随机数据片段的访问比内存访问慢得多：磁盘访问需要几十毫秒，而内存访问只需十分之一微秒。
+
+缓冲区（buffer）：缓冲区管理，被钉住的块，块的强制写出。缓冲区替换策略：最近最少使用（LRU），立即丢弃，最近最常使用（MRU）。
+
+当数据库系统中的程序需要磁盘上的块(数据)时，它向缓冲区管理器发出请求（即调用），如果这个块已经在缓冲区中，缓冲区管理器将这个块在主存储器中的地址传给请求者。如果这个块不在缓冲区中，缓冲区管理器首先在缓冲区中为这个块分配空间，如果需要的话，会把其他块移出主存储器，为这个新块腾出空间。然后缓冲区管理器把请求的块从磁盘读入缓冲区，并将这个块在主存储器中的地址传给请求者。
+
+如果你熟悉操作系统的概念，你会发现缓冲区管理器几乎和大多数操作系统中的虚拟存储管理器是一样的它们的一点区别是数据库的大小会比机器的硬件地址空间大得多，因此存储器地址不足以对所有磁盘块进行寻址。此外为了更好地为数据库系统服务，缓冲区管理器必须使用比典型的虚拟存储器管理策略更加复杂的技术：缓冲区替换策略（buffer replacement strategy）；被钉住的块（pinned block）；块的强制写出（forced output of block）。
+
+因为数据以块为单位在磁盘存储器和主存储器之间传输，所以采取用一个单独的块包含相关联的记录的方式，将文件记录分配到不同的块中是可取的。如果我们能够仅使用一次块访问就可以存取我们想要的多个记录，就能节省磁盘访问次数。
+
+数据字典也称为系统目录，用于记录元数据，即关于数据的数据，例如关系名、属性名和类型、存储信息、完整性约束和用户信息。
+
+减少磁盘访问数量的一种方法是在主存储器中保留尽可能多的块。因为在主存储器中保留所有的块是不可能的，所以需要为块的存储而管理主存储器中可用空间的分配。缓冲区是主存储器的一部分，可用于存储磁盘块的拷贝。负责分配缓冲区空间的子系统称为缓冲区管理器。
+
+
+
+
+
+
+
+## Java / cpp
 
 
 ------ Java 2015-2016
@@ -8527,464 +8497,3 @@ STL 是泛型编程思想的产物。 STL 是最新的 C++ 标准函数库中的
 泛型编程是一种面向算法的多态技术，STL 是它的一种具体实现。 与针对问题和数据的面向对象的方法不同，泛型编程中强调的是算法。 是一类通用的参数化算法，它们对各种数据类型和各种数据结构都能以相同的方式进行工作，从而实现源代码级的软件重用。
 例如，不管（容器）是数组、队列、链表、还是堆栈，不管里面的元素（类型）是字符、整数、浮点数、还是对象，都可以使用同样的（迭代器）方法来遍历容器内的所有元素、获取指定元素的值、添加或删除元素，从而实现排序、检索、复制、合并等各种操作和算法。
 泛型编程的通用化算法，是建立在各种抽象化基础之上的：利用参数化模版来达到数据类型的抽象化、利用容器和迭代器来达到数据结构的抽象化、利用分配器和适配器来达到存储分配和界面接口的抽象化。
-
-
-
-
-
-
-## DB 2016
-
-时间序列数据的数据库选型思考 https://j-coder.com/2021/11/12/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B%E6%80%9D%E8%80%83/
-ClickHouse vs Elasticsearch谁更胜一筹 https://www.zhihu.com/question/472389514
-2024-05-28
-
-- [数据库深度解析 | 从NoSQL历史看未来](https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=209753217&idx=1&sn=d3a021a7bd959cbf92ffc658336b2387)
-
-MapReduce 是一种分布式的程序设计模型，专门用来在集群里处理大量的数据。主要由两部分组成：mapper 和 reducer。mapper 读取一部分数据，运算后输出成一系列的中间（intermediate）数据；而 reducer 将 mapper 的输出数据查核、合并，产生最后输出。最常被使用的就是Hadoop。Hadoop 是以 Java 实现的，但是可以支持许多其他语言写成的 mapper 和 reducer。
-Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量数据时，就会比关系型数据库还要慢了。
-
-读写并行，锁和并行，读写锁，隔离，死锁检测：碰撞检测。
-数据一致性，数据完整性。单机事务，分布式事务。一致性hash。数据库连接利用率低。
-
-orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
-
-Hibernate 联合主键构成类时，需要重写类的equal hashcode，实现序列化接口。
-
-MyBatis是支持普通SQL查询，存储过程和高级映射的优秀持久层框架。MyBatis消除了几乎所有的JDBC代码和参数的手工设置以及对结果集的检索。MyBatis可以使用简单的XML或注解用于配置和原始映射，将接口和Java的POJO（Plain Old Java Objects，普通的Java对象）映射成数据库中的记录。
-
-对象之间的关系：一对一、一对多、多对多。
-- 一对一：一个学生对应一个学生证（可以记录到一张表里，不需要中间表）。
-- 一对多(多对一)：一个组对应多个用户，每个用户只能属于一个组。表设计：在多方加外键。
-- 多对多：一个老师对应多个学生，但每个学生可被多个老师教。多对多比较少用。
-  - 表设计：加中间表。例如：学生、课程、分数表设计，分数表作为中间表，里边有学生id/课程id、分数，中间表的主键可以为：联合主键(学生id和课程id)、并且不能是自动生成的(需要从学生表id和课程表id获得)。问题：操作不方便 也可单独设置分数表id作为主键。分数表和学生或课程表是多对一的关系。比联合主键简单
-
-表设计 三范式：
-- 要有主键，列不可分。
-- 联合主键，不能存在部分依赖。
-- 不能存在传递依赖。
-
-事务 ACID 原子性Atomicity、一致性Consistency、隔离性Isolation和持久性Durability
-事务隔离级别：1 read-uncommitted，2 read-committed，4 repeatable read，8 serializable 。级别越高，越安全但效率越低 一般设置为 read-committed。用悲观锁或乐观锁。
-- 悲观锁：获取到数据后加锁，防止别人更新。使用的是数据库的锁。
-- 乐观锁：所有对数据的更新带上版本号，对照不同版本判断是否被更新过。不在获取数据后加锁。
-
-mysql 约束: https://gw.alipayobjects.com/zos/rmsportal/PDMVJVKZwvVWWGNaKvsK.png
-
-从存储上来说，数据库主要分为几类：
-
-- Key/Value形式，典型的产品如tair。NoSql数据库，在NoSql分类中，有一种基于键值对（key/value pairs）的结构化数据类型，它通常被存储在内存中以支持快速访问。三种最流行的基于内存键值对的存储系统是：Memcached，Cassandra和Redis。
-- Schema-free, 典型的如mongoDB，阿里云的OTS，这一类产品的特点是使用灵活简单，但如果有二级索引的需求，会比较麻烦。
-- SQL,关系型数据库，比如MySQL、OceanBase，特点是有较高的使用成本，schema变更较为麻烦，但功能强大，特别是OceanBase解决了扩展性和性能问题。
-
-对数据库进行读写分离。 让主数据库处理事务性的增，删，改操作(Insert,Update,Delete)操作，让从数据库处理查询操作(Select操作)，数据库复制被用来将事务性操作导致的变更同步到集群中的从数据库。
-
-当访问量大的时候（数据库连接数不够）：
-- 业务垂直拆分，拆分后就需要远程服务调用框架hsf
-    - 淘宝业务类型：商品、交易、评价、属性
-    - 拆分为“商品中心、用户中心”等，不同团队分别负责
-- 中间加一层，这层下边的机器要减少，作为proxy
-- 数据库切分：单个商品库切分为多个
-
-除了数字、字符串和日期之外，许多数据库还可以存储大对象，例如图片或其他数据。在sql中，二进制大对象称为BLOB，字符型大对象称为CLOB。
-
-存储过程是在数据库中执行的用数据库相关的语言编写的过程。
-
-可以将多个语句(sql语句？)组合成「事务(transaction)」。当所有语句都顺利执行之后，事务可以被提交。否则，如果其中某个语句遇到错误，事务将被回滚，就好像没有任何语句被执行过一样。
-
-建立与数据库的连接很耗时（花接近一秒），实质是建立了socket连接，用“连接池”来解决。
-数据库连接是有限的资源，如果用户要离开应用一段时间，那么他占用的连接就不应该保持开放状态；另一方面，每次查询都获取连接并在随后关闭它的代价也是相当高的。
-解决办法是建立「数据库连接池（pool）」。这意味着数据库连接在物理上并未被关闭，而是保留在一个队列中并被反复重用。连接池是一种非常重要的服务，web容器和应用服务器的开发商通常会提供连接池服务的实现。
-连接池的使用对程序员来说是「完全透明的」，可以通过获取数据源并调用getConnection方法来得到连接池中的连接。使用完连接后，需要调用close方法。该方法并不在物理上关闭连接，而只是告诉连接池已经使用完该连接。
-
-
------- JDBC、Hibernate、iBATIS 使用区别
-Java应用传统上使用JDBC（Java Database Connectivity）API来把数据持久到关系数据库中。JDBC API使用SQL语句来完成创建（create）、读取（read）、更新（update）和删除（delete）（CRUD）操作。JDBC代码内嵌在Java类中——换句话说，这类代码与业务逻辑紧密耦合在一起。这类代码还在很大程度上依赖于SQL，而SQL并非是跨数据库的标准；这使得从一种数据库移植到另一种数据库变得困难起来。
-
-对象-关系映射（ORM）使用直接映射来生成内部的JDBC或是SQL代码。然而对于一些应用场景来说，你需要对SQL查询做更加直接的控制。在编写涉及了一系列更新查询的应用时，直接编写自己的SQL查询比依赖于ORM生成的SQL来得更有效一些。另外，在对象模型和数据模型之间存在失配时，ORM是不能够使用的。
-
-iBATIS最好是用在你需要全面地控制SQL的时候，在需要对SQL查询做微调的时候也很有用。当你在应用和数据库设计两方面都有完全的控制权的时候，就不应该使用iBATIS，因为在这样的情况下，应用可能会做出修改以适应数据库，或是反过来。
-
-在ORM的领域中，看来JPA已经是王道，规范就是规范。在各大厂商的支持下，JPA的使用开始变得广泛。
-
-总是会存在精通Java的人和更信任SQL的人这样的一种划分，对于一个熟练的Java程序员来说，他想使用一个无需与SQL有太多交互的持久性框架，那么Hibernate是最好的选择，因为它会在运行时生成高效率的SQL查询。但是，如果你想要使用存储过程来对数据库查询做各方面的控制的话，则iBATIS是推荐的解决方案。iBATIS大力支持SQL，而Hibernate和JPA则是使用它们自己的查询语言（分别是HQL和JPQL），这些语言与SQL类似。
-
-
------- 视图 事务 索引
-SQL 内连接inner join、外连接outer join、左外连接left outer join、右外连接right outer join、全外连接full outer join。外连接实际上产生了两个关系(表)的笛卡尔积。
-
-SQL允许通过查询来定义“虚关系”，它在概念上包含查询的结果。但虚关系并不预先计算并存储，而是在使用虚关系的时候才通过执行查询被计算出来。像这种不是逻辑模型的一部分，但作为虚关系对用户可见的关系称为「视图」(view)。
-
-特定数据库系统允许存储视图关系，它们保证，如果用于定义视图的实际关系改变，视图也跟着修改，这样的视图被称为物化视图（materialized view）。
-
-对查询而言，视图是一个有用的工具，但如果我们用它们来表达更新、插入或删除，它们可能带来严重的问题。困难在于，用视图表达的数据库修改必须被翻译为对数据库逻辑模型中实际关系的修改。就像对上边的`faculty`视图插入数据，实际数据表中还必须要插入 salary 列的数据，此时 salary 列就不能为非空约束，不然修改视图会失败。
-
-一般来说，如果定义视图的查询对下列条件都能满足，我们称SQL视图是可更新的（即视图上可以执行插入、更新或删除）：1. from子句中只有一个数据库关系。 2. select子句中只包含关系的属性名，不包含任何表达式、聚集或 distinct 声明。 3. 任何没有出现在select子句中的属性可以取空值；即这些属性上没有not null约束，也不构成主键的一部分。 4. 查询中不含有group by或having子句。
-
-事务（transaction）由查询或更新语句的序列组成。SQL标准规定当一条SQL语句被执行，就隐式地开始了一个事务。但事务被提交（commit）或被回滚（rollback）时，该事务结束。在很多SQL实现中，默认方式下每个SQL语句自成一个事务，且一执行完就提交。如果一个事务要执行多条SQL语句，就必须关闭单独SQL语句的自动提交。如何关系自动提交也依赖于特定的SQL实现，在诸如JDBC或ODBC那样的应用编程接口中存在标准化方式来完成这项工作。
-数据库系统保证在发生诸如某条SQL语句错误、断电、系统崩溃这些故障的情况下，如果一个事务还没有完成commit work，其影响将被回滚。在断电和系统崩溃情况下，回滚会在系统重启后执行。
-
-许多查询只涉及少量记录，例如找出id为221的学生的tot_cred值，只涉及学生记录中的一小部分。如果数据库读取每条记录并一一检查，这样是很低效的。
-在关系的属性上所创建的「索引(index)」是一种数据结构，它允许数据库系统高效地找到关系中那些在索引属性上取给定值的元组，而不用扫描关系中的所有元组。很多数据库支持这样创建索引：`create index studentID_index on student(ID);` 在 student 关系的属性 ID 上创建了一个名为 studentID_index 的索引。
-
-触发器（trigger）是一条语句，当对数据库作修改时，他自动被系统执行。触发器可以用来实现未被SQL约束机制指定的某些完整性约束，用来当满足特定条件时对用户发警报或自动开始执行某项任务。创建方式：`create trigger xx after update ...`。 触发器是很有用的工具，但是如果有其他候选方法就最好别用触发器。很多触发器的应用都可以用适当的存储过程来替换。
-
-联机分析处理（OLAP）工具帮助分析人员用不同的方式查看汇总数据，使他们能够洞察一个组织的运行。OLAP工具工作在以维属性和度量属性为特性的多维数据之上。数据立方体由以不同方式汇总的多维数据构成，预先计算数据立方体有助于提高汇总数据的查询速度。交叉表的显示允许用户一次查看多维数据的两个维及其汇总数据。下钻、上卷、切片和切块是用户使用OLAP工具时执行的一些操作。从SQL1999标准开始，SQL提供了一系列的用于数据分析的操作符，其中包括cube和rollup操作，有些系统还支持pivot子句，可以很方便地生成交叉表。
-
-关系代数（relational algebra）定义了一套在表上运算且输出结果也是表的代数运算。这些运算可以混合使用来得到表达所希望查询的表达式。关系代数定义了关系查询语言中使用的基本运算。
-
-
------- 数据存储和查询
-绝大多数数据库将数据存储在磁盘上（越来越多地在闪存上），并将数据取入内存用于处理。存储设备的物理特性影响很大，磁盘上随机数据片段的访问比内存访问慢得多：磁盘访问需要几十毫秒，而内存访问只需十分之一微秒。
-
-缓冲区（buffer）：缓冲区管理，被钉住的块，块的强制写出。缓冲区替换策略：最近最少使用（LRU），立即丢弃，最近最常使用（MRU）。
-
-当数据库系统中的程序需要磁盘上的块(数据)时，它向缓冲区管理器发出请求（即调用），如果这个块已经在缓冲区中，缓冲区管理器将这个块在主存储器中的地址传给请求者。如果这个块不在缓冲区中，缓冲区管理器首先在缓冲区中为这个块分配空间，如果需要的话，会把其他块移出主存储器，为这个新块腾出空间。然后缓冲区管理器把请求的块从磁盘读入缓冲区，并将这个块在主存储器中的地址传给请求者。
-
-如果你熟悉操作系统的概念，你会发现缓冲区管理器几乎和大多数操作系统中的虚拟存储管理器是一样的它们的一点区别是数据库的大小会比机器的硬件地址空间大得多，因此存储器地址不足以对所有磁盘块进行寻址。此外为了更好地为数据库系统服务，缓冲区管理器必须使用比典型的虚拟存储器管理策略更加复杂的技术：缓冲区替换策略（buffer replacement strategy）；被钉住的块（pinned block）；块的强制写出（forced output of block）。
-
-因为数据以块为单位在磁盘存储器和主存储器之间传输，所以采取用一个单独的块包含相关联的记录的方式，将文件记录分配到不同的块中是可取的。如果我们能够仅使用一次块访问就可以存取我们想要的多个记录，就能节省磁盘访问次数。
-
-数据字典也称为系统目录，用于记录元数据，即关于数据的数据，例如关系名、属性名和类型、存储信息、完整性约束和用户信息。
-
-减少磁盘访问数量的一种方法是在主存储器中保留尽可能多的块。因为在主存储器中保留所有的块是不可能的，所以需要为块的存储而管理主存储器中可用空间的分配。缓冲区是主存储器的一部分，可用于存储磁盘块的拷贝。负责分配缓冲区空间的子系统称为缓冲区管理器。
-
-
-
-
-
-
-
-
-
-
-# 产品 运营 市场
-
-- 抖音KOL https://kolranking.com/
-- 阿拉丁指数-小程序指数平台 http://m.aldzs.com/?s=ct#/
-- Top Sites in China - Alexa https://www.alexa.com/topsites/countries/CN
-- 全球TOP10热门国家特点 https://www.atatech.org/articles/87311
-- 艾媒咨询 https://www.iimedia.cn/、 中国互联网络发展状况统计报告 http://www.cac.gov.cn/sjfw/hysj/A091601index_1.htm
-2022 黄金圈法则：WHY、HOW、WHAT https://www.yunyingpai.com/brand/462388.html
-2019-10-08 赛迪顾问-中国国家级产业园区发展竞争力百强研究
-2019-10-09 艾瑞咨询-2019年中国基础云服务行业发展洞察
-2019-10-10 艾瑞咨询-2019年中国营销云市场研究报告
-2019-10-14 德勤中国 唤醒教育 转机中把握先机
-
-产品
-- 产品即营销，用户即媒体，用户即渠道。先创造价值，理解产品、不能脱离产品。
-- 越是反人性、帮助用户克服自身弱点或者看似能帮助用户克服自身弱点的产品，用户反而愿意为其付费。健身、医美都是同一道理。
-- 社交带来的“焦虑”成为知识付费的动力之一，群体性焦虑引发强烈学习动机 ，焦虑的人群又恰恰是上文提到的“高学历、白领、平时喜欢买书的人群”。
-
-运营
-- 运营分类：用户运营、产品运营、商家商品运营和内容运营。
-- 运营工具：Excel数据处理能力、SQL能力、P图基础技能、调研技巧。
-- 新媒体：微信公众号/小程序、微博、抖音、小红书；个人微博运营；自媒体：李叫兽、咪蒙。
-  - 新媒体运营，运营的是新媒体渠道。产品运营，运营的是产品。如果把新媒体账号当成一个产品呢？你既是产品经理，也是产品运营。
-  - 老媒介：营销、广告/策划公司。
-- 增长黑客：Hack的详细定义主要有三点：马上动手、快速搞定和持续迭代。而 Growth Hack 本质上即，在增长方面用 Hack 的方法解决。在Facebook 是技术驱动、数据为王。做了一个东西之后先发给用户，看一下用户的反馈或者搞一批测试的用户，最后看多少用户觉得你这个好，通过数据的采集方式来论证是否可行。
-  - https://www.growingio.com/  、 https://learn.growthhackers.com.cn/ 会爬虫，AARRR模型，RARRA模型，用户生命周期，A/B test，会投放，衡量核算ROI，懂心理学，上瘾模型的设计(抖音)，社群裂变，AHA时刻，北极星指标、漏斗分析、留存分析。 获客成本：当季营销费用 / 当季新增用户。
-- 了解用户，喜怒哀乐、喜好与特征。懂传播，形式变、方法论不变，传播的逻辑，引爆点。
-  - 三四五线消费者、不信广告、信身边有没有人在用。
-  - 期望获得长期商业成功，而不是赚取短期收益。运营是四两拨千斤。
-
-品牌
-- 品牌建设：技术会过时，业务有生命周期，品牌愿景是久远的。
-- 商品从生产开始，经历物流后到达终端消费者手中，这种最简单的品牌，就是供应链品牌，常见的如各种直营店（ZARA 优衣库等）。
-- 渠道品牌：一个最好的例子就是屈臣氏，屈臣氏里的商品有很多品牌，但是我们只知道屈臣氏，而且冲着屈臣氏这个品牌去的。商品生产后，经过物流到达各种渠道，例如经销商、批发商、零售商等，最后再到达终端消费者手中，在中国大陆这个“渠道为王”的商业环境中，多数商品都是这样流通到你我手中，这都是渠道品牌。
-- 品牌溢价。amazon的品牌溢价能力强。品质商品是趋势。
-
-
-国内用户强调功能，美国用户强调用户体验；国内用户喜欢贴身服务，随叫随到，美国用户喜欢自己捣鼓，手册要求极高。这些差异在过去几年的实践中，非常的明显。借用我们美国同事的原话：“美国用户都是被宠坏了的富孩子，咱们国内还在给个糖吃就很开心，哪里管包装好不好看”。
-我们遇到过非常多的需要对接数据源、SaaS 服务的需求，实践中一个非常大的区别是，美国的大部分软件都有 API/SDK，甚至很多现在都有非常好用的 webhook，非常便于和各种其他系统互相整合。
-2024-05-19
-
-49%的受访者表示如果缺少有价值的客户反馈，他们就不知道如何优先考虑新功能和产品。换句话说，产品经理不确定他们是否在做正确的事情。
-7大产品优先级管理模型：价值与复杂性象限， Kano 模型， 加权评分优先级， RICE 框架， ICE 评分模型， MoSCoW 方法， 机会评分。
-德尔菲法：本质上是一种反馈匿名函询法。其大致流程是：在对所要预测的问题征得专家的意见之后，进行整理、归纳、统计，再匿名反馈给各专家，再次征求意见，再集中，再反馈，直至得到一致的意见。
-2023-08 项目管理模型 https://www.zhihu.com/question/304673495
-
-
-产品经理是一门经验科学。产品经理需要综合运用逻辑学、心理学、经济学、管理学等多门学科的知识，也因此产品经理的工作不应该只是写需求画原型，而是应该像医生一样，识别问题所在并开出处方，这个处方可能是一个产品，也可能是一些运营手段。
-需求分析能力，用户调研、竞品分析、产品设计、项目管理、数据分析等产品技能。产品经理要解决的是“Why”和“What”，“How”则由工程师解决。
-白天忙沟通，晚上忙写需求。
-2021-11
-
-伪需求、缺少差异化和强价值点。
-产品真的能解决用户的问题，要先守正再出奇。有些创业团队会绕着这些守正的功能走，试图出奇制胜，往往就会沦为奇技淫巧，用户根本不会买单。要想清楚产品本来要完成的任务。
-有了产品，没有销售能力，就会把货砸在自己手里，被活活憋死。不少传统品牌公司，只会做线下层层铺货分销这一套，不懂得电商和流量的新打法。用户的时间在哪里，流量就在哪里，你要跟上流量的变化，直播、短视频、小红书、B站，这些新流量平台，你都要尽早入局。
-2021-06
-
-
-好的产品都会带比较强的“偏见”（opionated），偏见是一个好产品的灵魂。会到白雁，虽然用户层有PM、PD、研发等不同角色，但白雁最重要的用户群体，我觉得还是一线产研同学，界面设计里最重要的是默认设置，白雁的默认设置一定是对一线产研同学最好用的。这可能是一种偏见，但如果我们能坚持去做到，就能慢慢让白雁有灵魂。
-2020-07-12 @玉伯
-
-2020-04 《所有人问俞军》https://mp.weixin.qq.com/s/tD13z9FLzVyMxvAvrEEPeA
-
-有人曾问张小龙先生，为何不在微信开机画面放一个广告，每天数亿人会看到，轻松就可以赚到不错的收入。小龙用了一个比喻来回答：因为用户每天打开微信的次数和时间都很多，微信就相当于用户的一位很亲密的朋友，你会希望亲密朋友的脸上有一张广告，看完后才能和他对话吗？这个比喻很形象，也是一种很朴素但很高效的取舍方法。
-2019-11《用户为本，就是把用户当朋友》https://mp.weixin.qq.com/s/zjRW_B83ec_0F-q9jJWq0w
-
-2019-09 杭州云栖大会 https://yunqi.youku.com/2019/hangzhou/review
-2019云栖大会-程序员吐槽大会 https://www.bilibili.com/video/av69171100
-<全球生态峰会> <智能数据中台专场> <5G边缘计算专场> <阿里云大学专场> <全面上云企业敏捷创新之道>
-<新零售行业峰会> <新零售生态峰会> <蚂蚁区块链生态峰会> <SaaS加速器专场>(宜搭/RPA等介绍)
-<企业协作与研发效能专场>(teambition/云效/小米OKR) <创新创业专场> <技术服务专场>(本部门)
-技术拓展业务边界。 现在不缺产品，而是缺服务。 推荐的个性化：不管 70 后 80 后、以前是一群一群的，现在 00 后是一个一个的。
-90 后 p9 李响。 交付一个实体东西时、也附带一个数字孪生体，比如仿真、变压器仿真。 只用手机，不用带各种卡的 愿景 已经实现了。
-改革开放以来有7次改变阶层的机会，如果你抓住三次，那就成国民级的励志故事了。 绝不是互相抄袭，而是大家看到了共同的未来。
-我们有任何的抱怨，是因为我们对它有更好的期待。 不是云效有多好，而是整个数字化转型势头很猛烈，感到非常幸运。
-甲方视角、总集视角、ISV 视角。 提升职业化水平，传统行业比我们职业化水平高、不要小瞧。 结硬寨，打呆账。 体系化的安排，碎片化的学习，也需要连续的学习。
-站在未来看今天，而不是站在今天看未来。 除了一线城市和省会城市外，我们都认识是下沉城市。 在学校可以不学习知识，但一定要多思考。
-2019-11 杭州云栖大会
-
-跨境电商的过程远比一般贸易复杂，需要与品牌方、渠道方、政府机构、消费者等多方面沟通。但对于货源的把控更为重要。非标品在中国市场有着极长的长尾，甚至有些货品一个月只销售了一单。这对于平台中介型的电商影响不大，但对于采购自营下的平台则会占用大量的资金和库存。事实上，即使大规模出货的爆款商品也可能会成为负担。刘一曼对这件事记忆犹新。她曾告诉媒体，刚上手做跨境电商直营的第一年，阿里巴巴交了很多学费。其团队曾在日本谈下一笔很大的无硅油洗发水订单，但这款网红产品很快就不再流行，而团队花了两年时间才清完库存。
-2019-09-06 <阿里收购网易考拉>
-
-产品经理：热爱生活，思考问题的本职是什么，数据驱动、逻辑性突出。
-2019-09
-
-做产品的人一定要清楚，使用产品的人是用户，为产品付费的人是客户。ToB 和 ToC 最大的区别是用户和客户是分离的。
-产品灵魂是什么？自己有基础，未来能越做越好，并且是符合痛点的，最 XXX 的产品，这个 XXX 就是产品灵魂，抓住这个灵魂才能做最牛逼的产品。
-无法量化产品灵魂：如果你在行业里做产品，所有竞争对手的产品都是不可量化的，那么恭喜你，你在蓝海里。只要你可量化，可对比，那么你就可以把他们全部秒杀了。因此，核心产品灵魂必须要可度量。
-做 ToB 的产品经理特别辛苦，五马分尸模型，需要同时满足用户需求、客户需求、企业需求、销售线需求、研发线需求。平衡的艺术主要有几点：
-1、只关心核心客户的需求，尤其是审批前路径上关键决策人的需求；2、用户需求不重要，除非客户关心这个用户需求；3、不管自来客需求；4、产品要有差异化、可量化和核心竞争力；5、让销售卖出去的成本最低，让销售最快拿到提成；6、销售出去产品，需要给予研发人员激励。
-https://www.infoq.cn/article/KY2wijmVaOC5TquOH-f8
-2019-08 《技术人 ToB 成功的样子千篇一律，失败的样子却各有不同》
-
-如果一个产品人不能把你的想法这件事情的东西说明白，就是能力很差，不存在表达能力很差的产品经理。有人说张小龙的表达能力就不好，那是你们没见过他讲产品逻辑和思考的时候表达能力有多好。（“不善”演讲不代表表达能力不好，要的是把自己的思考清晰表达出来的能力，而非煽动能力）。
-2019-08 《有赞产品设计原则》 https://mp.weixin.qq.com/s/-kLQPDU-9337mN1ebjuYqA
-
-企业为了解决客户的问题和需求，我们发明了产品去满足，同时我们用营销手段让客户更高效的知道我们的产品，然后铺设渠道使产品让客户触手可及并且购买。想象一下，一个人正在推巨石上山。做产品，就是把这块千钧之石推上万仞之巅，获得尽可能大的势能，然后在最高点一把推下去，用营销和渠道减小阻力，把势能转化为最大的动能，获得尽可能深远的用户覆盖。
-- 第一，把产品这块巨石，推得越高越好。产品的创意、科技、独特性、品质，或者说它积蓄的势能，决定了它最高可以达到的销售量级。没有势能的产品，是卖不出去的。就算能卖几件，其实卖的不是产品，卖的是销售员的的技巧。小米的生态链的产品，充电宝，电饭锅，吸尘器……全部都是高势能的产品所以产品一上线就创下行业第一，很高兴我家的家电全部都是小米生态链的产品。
-- 第二，然后你在山顶一推，巨石开始下滑，势能转化为动能。营销，就是用来减小下滑的阻力。广告、公关、线下活动、热点营销、加入行业协会，去拿各种奖项，都是为了提高客户对你的优先选择概率。
-- 第三，巨石开始水平滚动。这时，你用渠道继续减小阻力，通过大量铺设渠道的方式，线上、线下，电话、互联网、上门推销，让消费者一旦有了购买欲望，你的商品就触手可及。
-超级品牌核心理念。首先要了解几个概念什么是符号、标识、商标、品牌。而我们讲的超级品牌指的是一种更加让人容易识别、更加容易传播、承载着更大信息量且最终服务于最终目的的符号。
-- 1、超级品牌也就是超级符号。什么是超级符号？就是人人都熟悉，并且人人都按照他的指示行动的符号。比如“今年过节不收礼，收礼只收老白金”、“怕上火就喝王老吉”。
-- 2、所有的事是一件事。企业战略、产品开发、品牌战略、广告创意、宣传设计全是一件事，因为这些东西不全都体现在一张小小的宣传单页上么？
-- 3、始终服务于最终目的。我们听烂了的不忘初心就是这个道理，我们容易把手段当作目标，比如我们说品牌营销重点讲的是品牌重复和积累，可是我们的品牌部每年总想搞点新花样，不然觉得没有干事，把干点新鲜事这个手段当作品牌营销的目标了。而最终的目的是“多赚钱、少干事”
-孔子讲“述而不作”我也只叙述和阐明各家观点学说，不敢随意创作，用这样的方式倒逼自己学习，接受各位前辈及同学批评。前人的经验、我们的阶梯。奔跑吧，兄弟！
-2019-07 前人的经验，我们的阶梯。如何从零开始打造超级品牌？---企业能量模型。
-
-只有能让用户成长的产品才是长青的，产品要引领用户往上走，而不是向下迎合客户，一众以算法为内核的娱乐化APP只能让你短期陷入娱乐陷阱。
-2019-01-18 @莘羽
-
-产品经理的核心能力有两个：深度思考和用户洞察。
-做产品的方法 找到痛点，数据支撑，通过数据表现出来，做一些减法，快速的将功能做实现，然后通过迭代来完善。
-
-对2B产品来说，可以复制的东西，才叫做模式。
-2C的模式2B玩不起，假如通过烧钱->引流->做大规模->讲故事->考虑商业模式的思维，做2B是玩不起的。2C是百米赛，唯快不破；2B是马拉松，每走一步离终点就进了一步。
-因此，对于2B产品来说，续约率比用户增长更重要。
-
-对项目提出建议没有反馈, 或任何建议都能改变PD的想法都不是一个合格的PD. PD的一部分工作, 其实就是"转化"别人的需求。
-对需求有收拢, 有延展. 优秀的产品不会是一记重拳就结束了, 更多的是需要更多的需求的延展和想象. 更多的组合拳.
-PD是游走于各种角色的高情商物种, 需要能文能武, 争地盘,撒娇卖萌,请客吃饭. 要能兼容各种低情商的开发的直接猛烈攻击.且保持微笑. 这些都是基础.
-
-产品仅仅是产品，不应该担负太多道义，但产品的确会引发人的向上或向下。这一点特别佩服张小龙，无论是小程序倡导的用完即走、花更多时间去陪家人，还是小游戏倡导的人生需要完全放松的一小段休闲，以及朋友圈晒的其实是大家对生活的向往，微信整体倡导的是高效的工具与健康的生活。抖音则有如麻将，好与坏，更多取决于人本身。我们的社会还极其落后，绝大部分人都有着大把空闲时间。不要去苛求群体的向上，人生短暂，己所欲或不欲，都不应强施于人。麻将与抖音，能让大家日子多些笑声，就是挺不错的休闲方式。
-一个产品，在用户用完退出时，如果有舒畅感或成就感，这个产品就是引人向上的。如果用完退出时，用户心里涌出的是后悔、是疲惫、是空虚等感觉，则这个产品是中性的，好或坏取决于用户本身。
-
-张小龙的四小时演讲没有用哪些词？https://new.qq.com/omn/TEC2019011001230700
-微信的不同并不是刻意的，只是因为它所坚守的底线不同。举例说，快要过年了，很多 APP 都会更改图标，就像是番茄炒蛋一样；但是微信不会变。
-微信的初心是什么？
-这是我第一次用“初心”这个词，因为我觉得它很平庸，我更想用“源动力”来形容，但你们可以用初心来理解。初心很泛滥，很容易找到。源动力是很强大、要克服很多困难才能达到的一种东西。
-很多人会说朋友圈为什么不能直接发书写的文字？因为这种方式打造人设的方式是困难的，很多人不会写好的文字，而几乎所有人都会拍照。少数清醒的人，都会问自己，要表现什么样的人设——当我想到这个点的时候，我就会删除自己想要表达的文字——因为想到这里，我就不想表现了。
-我解释一下，三天可见。作为设置开关，用的人不多，但是三天可见，是我见过的人用过的最多的开关，超过 1 亿人都用了这个开关。说明需求很大。
-一个好的产品是不需要很多口舌来解释的，但是我花了这么多时间，说明我们的产品做得还不够好。
-我们的卡包做得不够好。我们认为卡包是人常带的东西，但是目前我们感觉还没有做好，目前我们打算做一些改变，实现通过消费行为实现用户与店之间的关联。
-朋友圈是一个推广人设的地方。
-阅读本质上还是一个小众的产品。我们找到一个机会，希望用户专心看文章，这也是“看一看”的来源。
-我是作为一个做产品的人在跟大家聊天。
-我们在研发 AI 的微信，但我认为 AI 应该是默默发展，躲在产品之后。我可能也是对 AI 的未来表示担忧的人之一，我也在思考 AI。
-我很少在公开课提到微信支付。其实它不需要被提到，因为它已经做得特别好了。
-红包来说，虽然特别成功，但还是有改进的空间。我们意识到，发红包越来越成为一个金钱的交易，但是缺乏感情。这是不对的。
-我做决定，经常思考最这个事情的意义是什么；微信从来没有围绕 KPI 工作过。
-作为一个产品经理，带领大家做出一个十亿级的产品，我很自豪。但更重要的是，我可以通过产品分享我的价值观。
-2019-01 《微信之夜》张小龙 https://mp.weixin.qq.com/s/FgKpY62OceBAPpz5MklS_g
-
-关于产品，我这四年都说了什么？ https://mp.weixin.qq.com/s/PS5uS9rwMDyM-5RuzMGNKg
-为什么不建议把大佬当榜样 https://mp.weixin.qq.com/s?__biz=MjM5NDkyNTUzOA==&mid=2657921684&idx=1&sn=339109025a720694b77b52cd929ed6c0
-Ant Design 设计工具 Kitchen 获客增长实践 https://zhuanlan.zhihu.com/p/68707241
-2019
-
-
-产品经理的七层修炼
-第一层，需求细化与研发跟进。
-第二层，主动挖掘与项目管理。
-第三层，完整产品与大局观。
-第四层，产品线与带团队。
-第五层，成功案例与影响力。
-第六层，商业闭环与全职能管理。
-第七层，自己成功到助人成功。
-这七层，又可以分为三个阶段，分别对应这各个阶段能创造的价值 —— 用户价值、商业价值、社会价值。
-- 第一阶段
-   - 主要是前三层的产品经理，最多包含部分第四层，其价值是用户价值，做有用的东西。
-   - 理性决定下限，要面对的是目标、逻辑和解法。因为是术的层面，可以通过训练达到。
-- 第二阶段，开始创造商业价值，开始给别人发工资了
-   - 感性决定上线，要做到“向内看，第一无二”
-- 第三阶段，讲情怀
-   - 人性空间无限，讲求“通过内心看到宇宙”
-产品经理的技术必修课 https://www.yuque.com/weis/exp/db3i1s
-
-猫眼郑志昊：为什么说产品思维已“死”？https://mp.weixin.qq.com/s?__biz=MzUyMDQ5NzI5Mg==&mid=2247493798&idx=1&sn=6b223a2eed45c99fcd922c5262b4be1e
-
-在美国互联网，几乎闻所未闻——在美国，大家都更倾向于通过技术手段+创意+循规蹈矩的广告投放来实现增长和流量变现。在美国互联网最受推崇的用户增长方式——依靠数据驱动增长。为什么这样的增长方式在国内从未成为主流？
-如果你关注互联网，你应该知道，在过去2-3年时间内，一种叫做“增长黑客”的方法正在风靡互联网，在国内开始受到巨大追捧。其背后的核心理念，恰恰就是要依靠数据和技术手段来驱动增长。然而，迄今为止，这样的方法在国内能够得到成功应用的案例，仍然少之有少。
-数据驱动增长背后的关键，一定在于你需要找到一些用户行为与增长之间的关系模型或者叫做线索。
-“数据驱动增长”这样的理想，在中国，可能只有对于用户体量足够大，能够明确基于数据对于用户进行划分的产品来说才会更有效效率更高，而对于很多初创期或早期的产品，可能依靠人为动作和资源来驱动的效率要远胜过依靠数据。
-美国的用户差异、需求多样性等较为单一，而中国则极度丰富。这导致了美国互联网往往是技术创新驱动的，而中国互联网则是商业应用创新驱动的，纯粹依靠技术力量而获得成功的互联网公司在中国很少见。而在商业应用创新驱动的土壤上，“运营”一定拥有更高更大的权重；
-美国人天然尊重规则，而中国的商业世界中，大家天然习惯于通过在一些规则边界的模糊地带进行探索而获利，且中国也拥有更多集中的大型流量生态。这导致了，大量中国互联网公司会愿意把资源和精力投入在对于大型流量生态的规则边界地带进行探索和尝试，且手段方法也更加草莽、粗暴和多样。
-(所以，很多互联网公司的现状就是：低级运营=廉价劳动力。做运营的，必须向管理路线发展。)
-2018-08《为什么美国互联网没有“运营”岗？》https://www.huxiu.com/article/256119.html
-
-「石墨文档」这个名字是吴洁起的，寓意是古代人们用石墨进行文字的书写、记录、交流，而现在我们就用石墨文档去进行沟通，去进行信息的交流，这个名字是对古代文化的一种致敬。logo 字体的灵感来自于活字印刷， 北宋年间，活字印刷被发明，最终取代了手工抄写，其实是文字历史上的一次颠覆。而石墨也是摒弃了复杂、沉重的操作方式，让整个书写的体验回归简朴，我们觉得这也是一种颠覆。
-说一个从建筑上汲取的灵感吧。中国古建筑有一个特点，就是四平八稳、对称式的布局。大到整个建筑群体的规划，比如北京故宫的建筑群规划，小到一间房的布局，全部都是居中对称的。中国人是非常崇尚自然的，在自然里有很多对称的东西，对称蕴含着平衡、稳定，天生就会带给人安静的严肃感。所以我们在文档编辑页里使用了对称式的布局，比如工具栏就是居中对称的。而无论是微软、Google 还是 WPS，90%的工具栏都是靠左对齐的，因为靠左对齐空间会更大一些。但是我们觉得居中对齐感觉比较安静、平稳，给人仪式感，所以一直延续着这种布局。
-每篇文档的底端会有一个「编写于石墨文档」，这个是借鉴了古代的书信。古代书信的信纸末尾会有一个印戳作为落款，我们借鉴了这一点，设计了这样一个自动署名。
-石墨的设计原则是自然、安静、简洁、易用，这八个字是怎么定出来的呢？
-我们在总结设计美学的时候找了很多参考，我们会去看苏州博物馆、苏州园林，还有一些明式家具，还会去北京的胡同还有故宫里逛，还会读古诗词，去找我们觉得「很石墨」的东西，把这些东西集合到一起，去归纳、提取他们的共性，才慢慢总结出来这八个字。
-《长物志》里有一句对中国古典家具和园林的描述，「宁古无时」，就是宁可古典也不要去赶时髦，「宁朴无巧」，宁可朴素也不要去追求精巧，「宁俭无俗」，宁可简洁也不要追求庸俗。那个房间就是这样，安安静静、非常简单。我觉得石墨就像是一个布满了明式家具的房间。
-2018-07-31 《回过头看，我很感恩自己做出了这样的选择：石墨文档产品总监罗颖》 https://www.uisdc.com/shimo-product-director-interview
-
-我个人认为产品的基因就是解决特定场景下的特定需求，需求催生产品，而好的产品能通过 “重构利益链和规模化” 来反向改变该特定场景的商业模式。
-互联网作为打破时空限制的信息渠道，不管产品形态如何，本质都是流量变现。而这些流量就来源更高效率的解决方案，以节约用户的时间成本，即所谓的用户体验。
-生命周期：针对单个产品，生命周期包括【萌芽期 > 规模期 > 分化期】如何衡量和区分这三个时期，之前俞永福给过一个标准，对应产品的三个属性变迁【工具 > 平台 > 品牌(孵化)】。他当时拿高德来打比喻，说如果高德DAU小于1千万则只算个工具，如果介于1千万到1亿之间则是平台，大于1亿则是品牌，由此也催生了0-1和1-100的产品经理之说。
-N:N到N:1:N网络重构，1就是平台效应，即所谓的交易场。如果聚焦到零售行业，对标线下零售就是集市、百货、商超等等。平台效应是规模化后的产物，是互联网流量变现的原动力所在。N:1:N是双边市场，N:1:N:1:N 则是多边市场，用个时髦的词来说，就是生态。
-曾鸣教授说，我们的未来是C2B，但C2B真的存在吗？从目前看T恤定制、淘宝众筹只是按需生产而已，本质还是B2C。C2B比较难驱动的是，有些时候连C自己想要什么都不知道，所以肯定不是单纯的N:1:N双边平台模式，而是有新的角色进场的多边市场，还有很长的路要走。但目前看，以C为中心的会员之战，确实是制胜关键之一。
-二八原则：20%的前端工作需要80%的后端工作做支撑，但20%的前端能带来80%的规模效应，而80%的后端只作为一种基础设施服务存在。
-产品落地，明确产品目标，建立产品原则。
-产品目标：在落地的时候，已经细化到单个产品了，在整个大的模式下，每个产品其实是有其特定的使命的，即产品的核心目标。例如，服饰直奔订单量，打复购率；家装直奔成单量，打转化率。所落的产品形态不一样，但模式都是B2C，目标都是规模化。
-上下游关系：明确了上下游关系，思考如何和上下游产品进行联动，以达到自己的产品目标，最好能设计一个双赢的方案来反向驱动上下游产品完成其目标，从而达共赢，以驱动整个大模式的发展进化。
-产品原则：围绕你的目标，指定产品原则，用来评判需求优先级。剩下的，开会讨论方案，写PRD，处理异常问题，撸起袖子干！
-2018-07-30 内部
-
-今天，大家每天用微信基本上还是用来聊天、发文字、发图片、发语音。从版本发展来看，1.0 到 2.0，微信围绕聊天工具完善了基本功能。2.0 之后的 2.1、2.2、2.5、3.0、3.5 全都在干一件事情：让大家加更多的好友。
-当时还有很多别的聊天工具：阿里有来往，运营商有飞聊翼聊沃聊，360 有 “口信”，这些产品都完成了微信在 1.0 和 2.0 版本时期做的事情。不同的是，微信在 2.1 – 3.5 版本中完成了关系链的奠定，树立了今日的护城河：用户关系链。
-4.0 版本，微信迎来了朋友圈和公众号，整个生态初具模型。
-5.0 版本，微信加入了游戏中心、微信支付、表情商店。这三件事情的目标都是赚钱。5.4 版本微信开始支持全局搜索，6.1 版本微信红包诞生，6.5.2 版本小程序正式发布。
-微信在推广 “按住说话” 上也经历了一些波折。前几年大家走在路上看到一个人对着手机说话，说一句停一下，说一句停一下，会觉得非常奇怪。这说明对讲机是一种需要被教育的使用习惯。
-今天大家都觉得移动化理所当然，但不要忘了在 2011 年的时候，电脑端才是大家的主战场，李彦宏还说过移动互联网只是互联网的延伸。
-如果微信也这么想，语音功能这种费流量的功能可能就没有了，但团队相信了技术进步会使得流量价格下降，才会 all in 在手机端。
-网页、PC、Mac 版本全都不允许账号密码登录，因为微信账号体系背后有一个哲学：手机就是你，你就是手机，人在手机在，手机在人在。如果手机没了，聊天记录全部清空。如果微信允许 PC 端通过账号密码登录。用户离开电脑，有别人替代你收发微信，怎么办？
-做不做多账号同时登录？微信认为账号就是你，你就是账号。这是它的背后的哲学，由着这条哲学都能去理解微信很多事情。
-做不做滤镜？一开始做了，后来删掉了。小龙希望大家以真实的面孔来面对所有人，美颜是个没完没了的事情。小龙有这个执念，让世界还原真实。
-微信纠结了这么多事情，大家还觉得只是简单的抄袭那么简单吗？乔布斯引用毕加索的名言，好的艺术家模仿，伟大的艺术家偷窃 (Good artists copy. Great artists steal.) 。所谓 “偷”，实际上是学习对方好的 idea，找到精髓。并且不断探究这个功能是否可取并可为我所用。
-支付宝原来有登录密码、支付密码、淘宝密码，要用小写字母、大写字母、数字组成。这种设计加上支付宝的银行卡、余额账户、优惠券、红包、集分宝，对用户的门槛非常高。微信全都不要。卡就是默认一张银行卡，没有优惠券，密码改成 6 位数字。支付宝的早期用户来自淘宝，是全体网民中比较先进的。但微信要面对爸爸妈妈、爷爷奶奶。他们怎么可能记一个非常复杂的密码呢？但 6 位数总是能记住的吧。
-作为内容生态的微信 80% 的公众号文章是在朋友圈被打开的，粉丝看到公众号文章之后，分享到朋友圈。粉丝的朋友看到进行二次转发，然后回来关注这个公众号，基本上是这么一个闭环。
-我们不要老是考虑微信是不是要赚钱，是不是有商业化压力了，是不是受竞争对手刺激。你完全不用管这件事情，你就去想想微信对它的用户在做什么事情就好了，这就是它的思维方式。
-回到商业化本身。微信最想要的商业模式不是广告，因为广告会破坏聊天体验。在请了许多战略专家一起分析后，微信得出这么一套完美的商业化策略，就是游戏+表情+电商。
-小程序、服务号、订阅号三者形成了矩阵。订阅号的推送功能最强，但小程序获得了开发权限的多样性。由微信定义的 “App”，可能就是若干个订阅号，一个服务号，一个小程序，基本就能满足创业者的需要。小程序左手赋能商家、右手提升用户体验，希望取得一个平衡。小程序的成功，可以让中国的大部分线下商业实现线上化。
-再强大的个体都在摸着石头过河。微信的发展周期看上去很清晰，其实也是边走边看的。我有一个理论：不要从战略和技术出发做产品。
-你站得更高一点，想得更远一点，你会有更晚却更大的回报。“慢就是快”，讲的就是这样一个道理。
-2018-07 《微信的操作系统之路》 https://mp.weixin.qq.com/s?__biz=MjM5NzYxMzk4MQ==&mid=2649331233&idx=1&sn=bfa719f584315a047b4a4d68a5efa4c1
-
-增长（Growth）指的是用程序员的思维做大众互联网产品的市场营销（Marketing）。第一波互联网公司雇佣的是传统的广告公司和市场总监，2000年超级碗的广告有多一半来自硅谷，后来泡沫的时候几乎都倒闭了。马云2003年推广淘宝的时候，一开始也是用电视广告、纸媒和户外广告。
-传统广告行业有一句名言：“我知道这条广告有50%是浪费的，但我永远不知道是哪50%”。逐渐地，大家发现互联网产品可以用新的方法来做，让工程师担纲，用产品迭代、AB测试这些思维来减少浪费，提高转化率，杜绝“自嗨广告”。国内管这个叫流量打法。慢慢大家都醒悟过来，开掉自己曾经的市场总监，招来替代他们的都是产品经理、产品运营和程序员了。
-2018 《用户增长怎么做 - 我在Uber和摩拜的实战经验》 https://zhuanlan.zhihu.com/p/33905485
-
-
-
-对一个产品的理解程度：PD > 后端 > 前端。所以，后端能更轻松的转做PD、他们在策划总体技术实现的同时、对产品策略有了全面深入的了解。但前端呢、一直作为支持角色存在，对产品的理解程度非常不够。
-往前走一步。从系统的owner转变成产品的owner。具备更多的产品意识。不再是响应需求，而是和pd一起规划和设计产品。更多的关注，参与到用户界面，用户体验，流程设计中。
-往上走一层。具备更高的抽象能力，能够区分共性需求和个性化需求；能够从个性化需求识别出共性需求；能够把暂时的个性化需求，抽象成共性需求做通用支撑。
-放弃掉自己熟悉的东西。不要以我为主，想我有什么；而要站在用户的角度，想用户真正要的是什么。
-2017 青云：称工程师为「产品工程师」。
-
-淘宝的用户增长、越来越依靠支付宝的引流、实现消费者在线下(支付宝)和线上(淘宝)的闭环，而这使用小程序来承载。
-还能进一步建立跟口碑、饿了么、高德的连接，阿里全域消费场景化连接。
-阿里妈妈的淘客生态覆盖了大量消费者，但供需转化缺乏平台系统性引导和管控、模式比较分散。今天有了小程序以后可以把平台营销和会员能力组装起来，让淘客生态有效的基于我们管控下的小程序模式做商品的玩法、裂变，同时规避数据风险的问题，甚至进一步把会员权益结合商品输出出去。
-新的业态，比如说分销者，线下的小铺小店，比如说网红、主播这样的角色，过去必须有个淘宝店的身份，今天有了小程序可以把货品、分销、金融等服务以更轻量的方式组装成更简单的店铺类产品，输出给这些角色，并沉淀到一套统一的工作台和自运营产品体系内进行经营，孵化出新的前后台自运营模式。
-《小程序的价值体现》
-
-也有不少同学在入行时，比较困惑，到底应该去做产品，还是运营？运营解决的是 How To 的问题，而产品解决的是 Why 的问题。
-一个产品经理既要有产品设计的能力、又要有运营的经验，才算是一个 CEO 式的产品经理。所以从这个角度来讲，不妨尝试这两类工作都去尝试一下，体会两者之间的关系和配合方式，从顺序上来讲，产品设计的技能要求更多，建议先扎实地学习这些技能，抱着对产品的理解，再转运营就更容易去发挥产品本身的优势了。
-知乎的周源曾经在一篇文章里讲到，很多同规模的公司对商业缺乏常识。要不看低了商业化，觉得产品做好了，挣钱是水到渠成的；要不把商业化看得很高，必须有创新，不能落俗套。我很赞同文中的一句话，「广告都做不了的话，就不用想其他的了」。广告模式是最常用，也最成熟的一种商业模式。同时也是一个商业产品经理最应具备的基本功。
-很多人以为广告是策划、运营甚至销售主导的事情，跟产品经理关系似乎不大。的确，广告模式需要一个比较强大的销售体系支撑，需要有客户资源，需要有很强的策划执行能力，这点很像广告公司。例如知乎之前对广告的尝试，是外包给一家前豆瓣的团队，就是做这样的事情，解决了自建销售、策划执行团队等问题。
-广告产品经理，最重要的一步不是卖多少广告位、广告形式做成什么样，而是要弄清楚一个网站或者 app 有多少可以售卖的资源、这些资源的价值是多少、以及目前这些价值都变成钱了吗？
-产品经理不仅要知道有多少可卖资源，还要将资源分为三六九等，每个等级的资源有多少，单价是多少（CPM），售出率是多少，如何去处理不同等级资源的关系。
-一个公司最核心的盈利模式，一定要掌握在自己手中，这也是知乎此前在外包团队之外，一直想找人做自己的商业化的原因之一。因为最好的变现方式，一定需要和自身的资源与产品深度结合，无论是所谓的原生广告，还是其他和问答相关的信息服务，都不是销售主导的了的。而是需要产品去计算，去把握潜在的需求。
-说明需要商业化团队独立于销售团队，甚至有给销售分配资源的权限。这里不是「帮助」销售去出主意，而是要管理销售。实际上，这类公司的商业化团队设置会比较尴尬，因为毕竟一分一厘的收入，最终都是靠一线销售挣回来的，听一个整天坐在办公室纸上谈兵的人说大道理，恐怕很难服从。所以合理的商业化负责人职位，应该是具有产品能力的人选作为 VP，除了管理商业的产品、技术团队外，同时听取销售总监的汇报。
-《解密商业产品经理：让他们去改变世界，让我们来赚钱》 https://36kr.com/p/5068912
-
-需求应该怎么挖？ https://mp.weixin.qq.com/s/O7ymtcjz8Yayz1DkTOJnJA
-产品经理的时代过去了？ https://mp.weixin.qq.com/s?__biz=MjM5NDkyNTUzOA==&mid=409560127&idx=1&sn=1be914bc1cd70e6c079a85374019c836
-应该接近的三类人 https://mp.weixin.qq.com/s?__biz=MjM5NDkyNTUzOA==&mid=2657921732&idx=1&sn=2a0ab74e03b445a06a15efda53091ad9
-
-随着消费者对信息的了解越来越容易、越来越多，企业应该将大量的精力、注意力和金钱投入到构建优质的产品或服务中，而将更少的精力投入到产品或服务的营销中。 - 杰夫·贝佐斯（Jeff Bezos）
-
-《从锤子手机谈产品的逼格》https://www.cnblogs.com/know/p/3758773.html
-
-产品带有一些恶趣味功能，如使用天猫精灵放屁等。
-平台产品经理大多完全不懂 ued 的东西。
-
-知乎创办的前两年，严格邀请制把关社区入口。最早的话题聚焦在互联网跟创业相关领域。最早的一批用户也是开复老师所代表的创新工场体系，以及这个体系所能够影响到的许多互联网和创投圈的老板＋高管级人物。按周源一直在网上的说法，他最初是没打算把知乎做大，2 万人差不多。社区的特性大家都清楚，人少质量好管控，人多，各种灌水之类问题会出来。
-微博、朋友圈是要告诉大家“我在干什么、我关心什么、我在想什么……”，微博的slogan现在还是“随时随地发现新鲜事儿”。知乎想法强调“我在想什么”，鼓励大家分享自己的想法，以及就此进行讨论。微博、微头条就像是一个人头攒动的广场，朋友圈是一个像家一样的小房间，知乎想法则是一个讨论特定内容的会议室。
-
-简书：
-“人总有AB面，当年轻人大多数时间是在看直播、玩游戏，或者其它无意义的消磨时间的A面，总有一个B面是创作和表达。”优质的表达社区依然是稀缺的，除老牌的豆瓣、估值走高的知乎之外，简书可能是第三个选项。这是资本投资简书的基本逻辑。
-2014 年简书获得戈壁投资500万元天使投资。年底公司转型社区方向。公司的Slogan也从「找回文字的力量」更换至「交流故事，沟通想法」。17 年完成 4200万元 B轮融资。简书为了进一步扩大群体，开始了民主和自由，高逼格的主编和编辑们开始慢慢放权，哪些文章得到的赞多，被读者喜欢多，就会上首页。整个平台也逐渐成了年轻的文艺青年们写文字的地方。
-社区和在线出版的公司和行业要做好最需要的核心因素是：优质的目标人群，源源不断的产出优质的内容。
-如何实现优质的目标人群源源不断的产出优质的内容？通常有几种做法：
-通过目标人群中的核心种子人群，先产出内容，形成良好的氛围和沉淀，再扩大源源不断的带入其他目标人群。比如：知乎  等很多社区的玩法。
-通过别的方式本身就拥有了目标人群，可以直接引导分享沉淀。比如人人都是产品经理，本来是做培训，沉淀了一群产品运营目标人群。
-通过签约 IP，生产内容。比如：阿里文学、得到 之类。
-通过别的方式（工具好用等），沉淀了很多好的内容以及用户，再引导聚合人群形成氛围，产出更聚焦的内容，吸引更多的人。比如：简书在第二阶段做的事情。
-
-产品经理最好的能力并不是偏执，或者逻辑思维清晰什么的。在日常工作中，我深刻感受到了沟通能力和预判能力才是产品经理最需要的。前者是驱动产品实现，后者是驱动产品往着正确的方向跑，两种能力组合起来就是“让正确的事情相继的发生”。
-
-更多的看到技术背后产品的价值，那个时候我开始思考这些问题：我们产品的用户是谁，业务为何这么设计，产品体验这样是不是更好，也看了很多产品经理的书。我发现，其实产品才是影响生活的形态，产品才能真正探测人性本身出发形成的产物。于是我决定要走产品之路。
-8月份我开始接手淘宝网运动行业做垂直市场。在做垂直市场的过程中，对我产生一个比较大的困惑跟影响。其中我们也走访了一些这个行业的商家，我突然发现，做为这个行业的PD，没有任何行业背景跟行业理解的情况下很难为这个行业的用户去打造市场提供产品，在这个项目中的我非常痛苦，痛苦的是垂直行业的产品经理竟然飘在了半空中，下面的东西模糊不清。运营同学又会给你灌输很多他的理解，但对于自己来说，那个时候是没有任何的行业知识让我去做判断的，于是我又开始焦虑了，我不应该在看不清行业的情况下去设计所谓的互联网产品去坑害用户。内心出来一个念头，想深入行业去了解，从运营的角度来看这个行业的本质，从而更好的服务于我们的消费者。13年8月我来到了天猫，在天猫行业做起了行业运营。
-
-真正想做好一件事情，出发点要很纯粹，这样才能做深，也只有做深，才能真正做到不一样。很多评论文章里会提到个观点，叫「产品的细节决定了产品的成败」，很多人自己不做产品，听着觉得好像有点道理，就到处传播这种观点。我觉得这就是典型的胡扯。细节根本不会决定产品的成败，甚至很多成功产品在早期的时候产品体验和各种细节都是一塌糊涂。准确来讲，是深度决定了产品的成败。包括了技术的深度、对行业对客户理解的深度等等。这些东西最后可能有一小部分会反应在一些产品细节上，但细节永远只是表面功夫，真正重要的是对细节背后的理解。人云亦云之害亦在于此。
-《【创业维艰】只有偏执狂才能真正成功》 http://www.sohu.com/a/125857064_503214
-2017
-
-
-[如何提炼产品亮点，卖点及竞争点?](https://www.zhihu.com/question/36529737)
-《新媒体运营编辑的出路在哪里？》 https://mp.weixin.qq.com/s?__biz=MzAwNzEzNzU0Ng==&mid=400604334&idx=1&sn=475d5e3a1c3bc09f55cf8ffe654c6465
-2016
-
-有人说做产品的核心是找到痛点，有痛点就会有机会。这句话我曾经信了十年，后来发现不是。很多痛点的机会不属于你。
-做产品要从一个更大的格局出发，站在更宏观的观点看自己的产品和创业，然后站在微观的观点，把每一个细节做好。只在一个点上的争执和思考往往是无效的。
-渐进改良不是颠覆式创新，过去有个词叫微创新，把别人没做好的事情做好一些，但这件事本质上不靠谱，你花了很多的力气，但是你的对手很快就可以跟上。
-我们做产品的时候，容易把好多点放在一起，认为这就是创新。真正好的创新是一个最基本的核心点，找到这么一个点，让用户一听就懂，一看就明白，这个点在不断地深入。
-《傅盛：痛点不一定就是机会 创业需要更大的格局》 https://www.chinaventure.com.cn/cmsmodel/news/detail/285969.html
-
-如果你的需求也是开创性的，也无做调研的必要，因为调研来的数据会让你失望，但是不代表它没有市场，与此相反，它甚至可能成为一款爆品，用心理学角度分析就是：用户都有其隐性需求，这是连用户自己都不清楚的，在其隐性需求被挖掘出来之前，他们大多数会拒绝这样的需求，一旦有人做出这样的产品，用户的隐性需求便会被刺激到，形成难以想象的蝴蝶效应，苹果就是这样崛起的，乔布斯深谙人性精髓，洞察到群体隐性心理的重要性，而不相信用户说的话，用户提供的数据，这是对产品经理启示意义重大的一个桥段。
-《学点产品心理学 | 张小龙和乔布斯的产品境界》 http://www.woshipm.com/pmd/264606.html
-
-一般产品经理只有两只眼，他们看到的只有需求，却看不到人们为何有这样的需求，也就是说他们缺一种对问题探索的欲望，这种欲望在张小龙那里是对人性的思考，在乔布斯那里是上帝般的视野和勇气，在你这里又是什么？需求只是产品最表象的东西，你是不是一个只能看到表象的产品经理？而不能找到需求背后的因果关系？
-
-《我是如何从技术转向产品的》 https://weibo.com/renrentang
-
-产品经理负责商业战略的落地实施，负责定义产品、设计产品，协调各方资源在一定的条件下完成产品的研发和上线以及上线后的运营和维护。
-
-- 功能思维：站在用户的角度去设计产品，将一个业务需求转化为一个技术能实现的功能，围绕功能而思考，从功能角度入手，如何让用户更好用，应该展现哪些信息等等。会为了完成一个需求开始考虑功能体验上的各种可能性，重点都是关注产品功能本身，而忽略了其业务目标和业务价值。产品应该始终与业务并行发展，真正好的产品应该做到产品驱动业务，在产品设计过程中我忽视了与业务的互动，包括产品上线后产品运营和业务运营。
-- 产品思维：关注的更多的是业务价值和业务目标，在充分理解商业战略的前提下来完成产品定义和产品设计，通过充分了解产品所围绕的业务场景去提升产品的可用性和易用性，改善业务体验和产品体验，提升整体的用户体验。
-
-定义产品战略需要基于商业战略，我理解的商业战略和产品战略还是略有不同的，商业战略的目标是实现组织利益最大化，而产品战略的目标是实现用户利益的最大化，在确保围绕商业战略的前提下落实到产品战略。
-
-产品原型设计包括信息架构设计、功能设计、交互设计和视觉设计。产品经理首先需要对产品信息架构进行定义，产出完整的产品信息结构图，接下来基于对业务流程的理解开始进行功能设计，功能设计的目的是为了满足业务流程的设计，所以是先有业务流程设计后有功能设计。产品功能设计时确保采用最小化原则，我们采用的是最小化可行性原则，也就是 MVP（Minimum Viable Product）原则，这是精益创业中的一个概念。
-
-功能定义完后就是交互设计和视觉设计了，在大公司可能有专门的交互设计师和视觉设计师，但我认为，产品经理还是需要有比较强的交互设计能力和视觉审美能力的。作为创业公司来说，我是极力倡导产品经理需要进行功能和交互设计，最后产出产品功能交互图，这个过程称之为低保真设计。当然这个过程可以和设计师一起沟通进行，吸取专业建议。之所以说产品经理需要视觉审美能力，就是最后由视觉设计师完善高保真设计，但是一个好的产品经理我认为是能分辨出什么是好的设计和不好的设计。
-
-完成产品战略定义、业务流程梳理、产品原型设计后，就进入设计实施落地阶段了，这个阶段主要是沟通和资源协调工作。同时需要对设计产出进行微调和优先级处理。这个阶段是考验产品经理优先级处理和沟通协调能力的阶段。团队里每个人的思维方式和角度不同，如何使大家在理解上达成一致本来就是一个浩大的工程，沟通技巧在中间就起到了非常关键的作用。与业务的沟通不能完全用产品技术思维，与技术沟通不能完全用业务思维，所以，产品经理起到承上启下进行信息传递的关键作用。
-
-监测业务和产品的实际运转情况，深入现场了解问题，回来后及时总结并制定改进方案。这是精益创业中的验证环节，前期的设计在某种程度上都可以说是先验的设计，上线后就需要根据实际运转情况来反向验证业务和产品，这也是之前为什么要做 MVP 设计的原因，因为前期设计越简单后期验证改进的成本就越小，好产品是在不断验证和改进的过程中打磨出来的，没有一次性完整的设计。
-
-过去这一年，我完成了一次转型，从一个专业技术人员转型到产品人员，技术让我入门，看到这个行业的细节，产品让我出门，让我看到更广阔的空间。这个过程中没少走过弯路，经历过开始的好奇、憧憬，到中途的迷茫、自我否定，过度到现在的慢慢开悟和真正理解产品。人的成长本来就是一个过程，春天播种秋天才能收获，回想这个过程感受到更多的是收获和成长。我的产品生涯才刚刚开始，路还很长，我会坚持在这条路上走下去，走好，走漂亮！以上说的这些都是我个人的一些总结，不代表任何观点。放下，是一种修行，对过去的珍重和告别，拿起，是一种历练，是对未来的信心和期待。
-
-- 像素眼，细节 细节 细节
-  - 人是懒惰、没有耐心、不爱学习、跟风的
-  - 不让用户选择，只提供最通用的一种模式
-  - 宁愿损失功能，也不损失体验
-  - 只抓主场景，不做全功能；做大而全容易，做少难，化繁为简。
-- 换肤是不自信的体现。专注做好默认皮肤。全球只做一个版本
-- 欢迎页，讲故事，表达情感，有灵魂
-2016
-
-产品的招聘门槛很高，一般来说应该说高于工程师。所以他们很多人真的很优秀，在能力上深得工程师的认可和尊重。很多工程师和”产品”的关系不好，其实是因人而异的，产品的能力/历史的成绩能够证明他的想法的合理性，工程师接受的程度能够高很多。
-产品的压力比较大。他们主要的工作就是: “做梦”。说得好听点就是讲愿景，画大饼。但是他需要两头忽悠，既让工程师相信这个产品的重要性和影响力，也要说服老板继续投入资源。
-产品对技术的理解力。写点简单的统计脚本，小工具很多人不在话下，不懂也愿意去学。基本的技术概念清楚，不会完全的”缺乏常识，没有逻辑还不讲道理”。
-我并不是想为“产品”开脱，随着”人人都是产品经理”热销再加上很多公司”响应国家提高就业率的号召”基本阿猫阿狗摇身一变，都成了产品经理，据说有的公司产品经理和程序的比例能够直逼1:1。
-突破”技术思维”。技术人的定位更多应该是工程师，而不是程序员，更不能只是PHP程序员。前者的定位是”解决问题”, 除了解决代码的问题，当然也要解决产品本身的问题，领导预期的问题。。。永远不能只做一个不需要思考的，”产品决策”到代码的翻译器。
-留住好产品，别招”传声筒”。
-https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=401460975&idx=1&sn=8e39520929d2b06c20739d54baf7c2f3
-2016 工程师文化的思考

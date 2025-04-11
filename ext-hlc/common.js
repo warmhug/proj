@@ -384,7 +384,7 @@ const hl_uiUtils = {
     // console.log('[res, rej]: ', [res, rej]);
     const container = document.createElement('div');
     container.id = 'hl_alert';
-    container.style.cssText = 'display:block; position:fixed; z-index:999; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; border:1px solid black;';
+    container.style.cssText = 'display:block; position:fixed; z-index:999; top:50%; left:50%; transform:translate(-50%, -50%); max-width: 90%; background-color:white; padding:20px; border:1px solid black;';
     container.style.display = 'block';
     const content = document.createElement('div');
     content.innerHTML = html;
@@ -686,42 +686,53 @@ const hl_commonUtils = {
     return text;
   },
   requestPersistentStorage: async function () {
-    navigator.storage.estimate().then(estimate => {
-      console.log(`已使用存储空间: ${estimate.usage}`);
-      console.log(`可用存储空间: ${estimate.quota}`);
-    });
-    const isPersisted = await navigator.storage.persisted();
-    if (!isPersisted) {
-      const result = await navigator.storage.persist();
-      if (result) {
-        console.log("持久化权限已授予");
+    try {
+      navigator.storage.estimate().then(estimate => {
+        console.log(`已使用存储空间: ${estimate.usage}`);
+        console.log(`可用存储空间: ${estimate.quota}`);
+      }).catch((promiseError) => {
+        // promise error 不会被外边 try catch 拦截
+        console.log('log promiseError: ', promiseError);
+      });
+      const isPersisted = await navigator.storage.persisted();
+      if (!isPersisted) {
+        const result = await navigator.storage.persist();
+        if (result) {
+          console.log("持久化权限已授予");
+        } else {
+          console.log("持久化权限请求被拒绝");
+        }
       } else {
-        console.log("持久化权限请求被拒绝");
+        console.log("持久化权限已经启用");
       }
-    } else {
-      console.log("持久化权限已经启用");
+    } catch (error) {
+      console.log('log error navigator.storage: ', error);
     }
   },
   // 打开或创建一个 IndexedDB 数据库
   openDatabase: async function (dbName = 'fileHandlesDB', dbTable = 'fileHandles') {
     return new Promise((resolve, reject) => {
-      const request = indexedDB.open(dbName, 1);
-      request.onupgradeneeded = (event) => {
-        const db = event.target.result;
-        db.createObjectStore(dbTable, { keyPath: "id" });
-      };
-      request.onsuccess = (event) => {
-        const db = event.target.result;
-        const transaction = db.transaction(dbTable, 'readwrite');
-        const objectStore = transaction.objectStore(dbTable);
-        resolve([objectStore, transaction, db]);
-        // transaction.oncomplete = function() {
-        // }
-      };
-      request.onerror = (event) => {
-        console.error('打开数据库出错：', event.target.error);
-        reject(event.target.error);
-      };
+      try {
+        const request = indexedDB.open(dbName, 1);
+        request.onupgradeneeded = (event) => {
+          const db = event.target.result;
+          db.createObjectStore(dbTable, { keyPath: "id" });
+        };
+        request.onsuccess = (event) => {
+          const db = event.target.result;
+          const transaction = db.transaction(dbTable, 'readwrite');
+          const objectStore = transaction.objectStore(dbTable);
+          resolve([objectStore, transaction, db]);
+          // transaction.oncomplete = function() {
+          // }
+        };
+        request.onerror = (event) => {
+          console.error('打开数据库出错：', event.target.error);
+          reject(event.target.error);
+        };
+      } catch (error) {
+        console.log('log error indexedDB: ', error);
+      }
     });
   },
   // FileHandle 需要通过 IndexedDB 来存储
@@ -781,6 +792,21 @@ const hl_commonUtils = {
         ({ done, value } = await reader.read());
       }
     }
+  },
+  ajax: function (url, { success }) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 400) {
+        const resp = xhr.responseText;
+        // console.log('log resp: ', resp);
+        success?.(resp);
+        const tuiInst = new toastui.Editor.factory({
+          el, initialValue: resp, viewer: true,
+        });
+      }
+    };
+    xhr.open('GET', url, true);
+    xhr.send();
   },
 };
 

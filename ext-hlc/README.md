@@ -22,14 +22,6 @@ http://localhost/a/_proj/ext-hlc/a_localFileEditor.html
     ["https://*.google.com/*", "https://*.bing.com/*", "https://*.baidu.com/*"],
     "https://www.zhihu.com/",
     "https://i.mi.com/note/h5#/"
-  ],
-  "hl_inject_blankpage": [
-    ["https://ai-bot.cn/daily-ai-news/", "AI新闻"],
-    ["https://www.baidu.com/s?wd=%E6%97%A5%E5%8E%86", "日历"],
-    ["https://uutool.cn/", "uutool"],
-  ],
-  "hl_tabs_rebuild": [
-    "https://i.mi.com/note/h5#/"
   ]
 }
 ```

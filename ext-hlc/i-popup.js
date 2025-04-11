@@ -73,7 +73,7 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
 
   const operateTabs = (storage) => {
     const wrapper = document.createElement('div');
-    wrapper.appendChild(createBtn('restore-tab', async () => {
+    wrapper.appendChild(createBtn('恢复tab', async () => {
       var tabsAll = async () => await chrome.tabs.query({});
       // 情况: url 相同或只是 origin-pathname 相同，相同 tab 有多个
       // 粗暴处理: 删掉已存在的 origin-pathname 相同的 tab (多个)
@@ -91,7 +91,7 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
         chrome.tabs.create({ url, index: tabsLength + idx });
       });
     }));
-    wrapper.appendChild(createBtn('选中的tab', async () => {
+    wrapper.appendChild(createBtn('选中/保存tab', async () => {
       const tabs = await chrome.tabs.query({ highlighted: true });
       const saveVal = tabs.map(tab => tab.url);
       const html = `
@@ -99,8 +99,13 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
       <pre>${JSON.stringify(saveVal, null, 2)}</pre>
       上次存储的
       <pre>${JSON.stringify(storage.hl_tabs_saved, null, 2)}</pre>
+      是否更新已存储的 tab 为新选中的?
       `;
       const confirmResult = await hl_utils.confirm(html);
+      console.log('log confirmResult: ', confirmResult);
+      if (confirmResult) {
+        await hl_utils.setStorage({ hl_tabs_saved: saveVal });
+      }
     }));
     wrapper.appendChild(createBtn('del-ungroup-tab', async () => {
       // 如果 url 里含有 #xxx 则 匹配不到
@@ -109,9 +114,6 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
       console.log('tabsAll: ', tabsAll);
       const dTabs = tabsAll.filter(tab => tab.groupId == -1 && !tab.pinned);
       await chrome.tabs.remove(dTabs.map(tab => tab.id));
-    }));
-    wrapper.appendChild(createBtn('重建pin-tab', async () => {
-      dealResponse(await chrome.runtime.sendMessage({ action: 'reCreateTabs' }));
     }));
     wrapper.appendChild(createBtn('重载tab', async () => {
       dealResponse(await chrome.runtime.sendMessage({ action: 'reloadTabs' }));

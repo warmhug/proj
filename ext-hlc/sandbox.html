@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <base target="_blank" />
+  <link rel="stylesheet" href="./assets/toastui-editor.min.css">
+</head>
+<body>
+  <div id="tuiEditor"></div>
+  <script src="./assets/toastui-editor-all.js"></script>
+  <script src="common.js"></script>
+  <script>
+    console.log("Sandboxed script");
+    const el = document.querySelector('#tuiEditor');
+    hl_utils.ajax('./sandbox-eng.md', {
+      success: (resp) => {
+        const tuiInst = new toastui.Editor.factory({
+          el, initialValue: resp, viewer: true,
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -29,7 +29,14 @@ npm run pack
 
 
 # vscode
-> 2020 ~ 2024
+> 2020 ~ 2025
+
+## API
+
+有什么 vscode 内置的 api 能临时禁用启用所有插件?
+workbench.extensions.action.disableAllInstalledExtensions
+workbench.extensions.action.enableAllInstalledExtensions
+
 
 ## extension
 

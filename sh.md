@@ -2,25 +2,33 @@
 
 - Unix 遵循的原则是 KISS (Keep it simple, stupid) do one thing and do it well。
 - Linux 严格区分大小写。所有内容以文件形式保存，包括硬件。如：键盘 /dev/stdin 显示器 /dev/stdout
-- Linux 不靠扩展名区分文件类型，靠权限区分。（.gz .tgz .sh等文件扩展名只是为了方便管理员查看）
-- shell 是一个命令行解释器。shell 是壳，kernel 是内核。shell 把用户敲进去的命令、翻译为 linux 内核能识别的语言。
-- sh: Bourne Shell 的缩写，可以说是目前所有 Shell 的祖先。 bash : Bourne Again Shell 的缩写，是 sh 的一个进阶版本。[Zsh 和 Bash 的不同](https://xshell.net/shell/bash_zsh.html)
+- Linux 不靠扩展名区分文件类型，靠权限区分。（ .gz .tgz .sh 等文件扩展名只是为了方便管理员查看 ）
+  - bash 文件 想在 mac 上双击可执行(调用系统terminal)，需要去掉文件后缀名。
+- shell 是一个命令行解释器。shell 是壳，kernel 是内核。shell 把用户敲进去的命令、翻译为 linux 内核能识别的语言。 sh: Bourne Shell 的缩写，可以说是目前所有 Shell 的祖先。 bash : Bourne Again Shell 的缩写，是 sh 的一个进阶版本。
 - [vim 键盘图](https://zos.alipayobjects.com/rmsportal/MOPJrAnojdFvAToZkESi.gif) vi编辑器使用color-scheme `:colo desert` 或者 配置 `~/.vimrc` 为 `colo desert` + `syntax on` 。
-- 不同平台安装包 macOS `brew install jq` Ubuntu/Debian `sudo apt-get install jq` CentOS/Fedora `sudo yum install jq`
-- bash 文件 想在 mac 上双击可执行(调用系统terminal)，需要去掉文件后缀名。
+- 不同平台安装包
+  - macOS `brew install jq`
+  - Ubuntu/Debian `sudo apt-get install jq`
+  - CentOS/Fedora `sudo yum install jq`
+- 在 Windows 上 哪些流行的 terminal 能和 macOS Linux 的 terminal 兼容?
+  - Windows Terminal / WSL（Windows Subsystem for Linux）/ Git Bash
 
-## 基础
+[Zsh 和 Bash 的不同](https://xshell.net/shell/bash_zsh.html)
 
 bash 脚本 env 优先级
 - node: 命令行的 environment 配置 > 文件 `/path/to/my/project/.npmrc` > 文件 `~/.npmrc` > 文件 `/etc/npmrc` 逐级覆盖
 - 其他: zshrc / bashrc 同理
 
-```sh
-env / w / who / whoami / tty / last / nettop / nslookup / mtr -r
-echo "system: $HOME $PATH $SHELL"
-printenv HOME  # 打印环境变量
-printenv | grep npm_config  # 查看所有 npm 设置的 env
+bash 语句中的符号:
+- 分号(;) 无论前一个命令是否成功，都会执行下一个命令。
+- 双与号(&&) 只有当前一个命令执行成功 (返回值 0) 时，才会执行下一个命令。
+- 双管道(||) 成功时执行 A，失败时执行 B `mkdir mydir && echo "创建成功" || echo "创建失败"`
 
+
+## 基础
+
+```sh
+export TMP_VAR='tmp'  # 在 terminal 里临时设置环境变量
 unset npm_config_registry  # 删除特定 env
 unset npm_config_userconfig  # 删除特定 env
 
@@ -28,6 +36,11 @@ unset npm_config_userconfig  # 删除特定 env
 export PATH=/usr/bin:/bin
 export HOME=/home/username
 export TERM=xterm-256color
+
+env / w / who / whoami / tty / last / mtr -r
+echo "system: $HOME $PATH $SHELL"
+printenv HOME  # 打印环境变量
+printenv | grep npm_config  # 查看所有 npm 设置的 env
 ```
 
 一个脚本调用另一个脚本里的函数
@@ -99,13 +112,27 @@ eval "ls -l" 2>&1 | tee -a "/tmp/a_log.txt"
 eval "$command" >> "$file" 2>&1
 
 # 读取用户输入
-read -n1 -rsp $'Press any key to exit...\n'
-read answer
-if [[ $answer = "" ]] || [[ $answer = "y" ]]; then
- echo "do sth"
+read -p "继续吗？ (y/n): " answer
+answer=${answer:-y}  # 如果用户直接按回车，默认值为 'y'
+if [[ $answer =~ ^[Yy]$ ]]; then
+  echo "执行操作"
 else
- echo You quite
+  echo "已退出"
 fi
+
+confirm_action() {
+  local prompt_message="$1"
+  local user_input
+
+  read -p "$prompt_message (y/n): " user_input
+  user_input=${user_input:-y}  # 默认值为 'y'，如果用户直接按回车
+
+  if [[ $user_input =~ ^[Yy]$ ]]; then
+    return 0  # 表示确认，返回成功状态
+  else
+    return 1  # 表示取消，返回失败状态
+  fi
+}
 
 # 兼容 bash 和 zsh 颜色和换行
 # 依赖特定 Shell 的转义序列  (Zsh 的一些插件和配置 可能会影响换行的显示效果)
@@ -321,30 +348,8 @@ pmset noidle # 阻止电脑睡眠 同时按住 shift、control、电源键，关
 
 timeout 3600 some-command
 zip -e output.zip ~/xx.txt  # zip加解密
-
-# 系统任务在 /etc/crontab 或 /etc/cron.d/ 目录，需要管理员权限
-# crontab 文件一般位于 /var/at/tabs/<username> 或 /var/cron/tabs/<username> 不建议直接改
-crontab -l  # 查看当前的 crontab 内容
-crontab -e  # 编辑 cron 配置 保存后 cron 会自动加载和应用
-sudo launchctl list | grep cron  # 检查 cron 服务是否正常运行
-# 如果未启动
-sudo launchctl load -w /System/Library/LaunchDaemons/com.vix.cron.plist
 ```
 
-crontab -e 脚本内容示例
-
-```sh
-# 立即运行任务
-* * * * * zsh -ic 'scheduled_tasks backup' >> ~/cron_test.log 2>&1
-# 接下来的 1 分钟和 2 分钟执行
-* * * * * zsh -ic 'scheduled_tasks backup' >> ~/cron_test.log 2>&1
-*/2 * * * * zsh -ic 'scheduled_tasks clear_logs' >> ~/cron_test.log 2>&1
-# 50 11 * * * /bin/bash -c 'source ~/.zshrc; scheduled_tasks backup'
-# 每天上午 11:50 执行备份
-50 11 * * * zsh -ic 'scheduled_tasks backup' >> xxx/z_log 2>&1
-# 每隔三天上午 11:49 清空日志文件
-49 11 */3 * * zsh -ic 'scheduled_tasks clear_logs' >> xxx/z_log 2>&1
-```
 
 
 ## 文件 目录
@@ -718,6 +723,48 @@ search_dep
 
 ## git
 
+
+在 ~/.zshrc 里 根据目录动态切换 git user
+
+```sh
+# 定义 Git 账号信息
+WORK_GIT_NAME="Alice Work"
+WORK_GIT_EMAIL="alice@work.com"
+
+PERSONAL_GIT_NAME="Alice Personal"
+PERSONAL_GIT_EMAIL="alice@personal.com"
+
+# 定义目录匹配规则
+WORK_DIR="$HOME/work"
+PERSONAL_DIR="$HOME/personal"
+
+# 监听目录变更并自动切换 Git 账号
+autoload -Uz add-zsh-hook
+
+chpwd() {
+  if [[ $PWD == $WORK_DIR* ]]; then
+    export GIT_USER_NAME="$WORK_GIT_NAME"
+    export GIT_USER_EMAIL="$WORK_GIT_EMAIL"
+  elif [[ $PWD == $PERSONAL_DIR* ]]; then
+    export GIT_USER_NAME="$PERSONAL_GIT_NAME"
+    export GIT_USER_EMAIL="$PERSONAL_GIT_EMAIL"
+  else
+    unset GIT_USER_NAME
+    unset GIT_USER_EMAIL
+  fi
+
+  # 更新 Git 配置
+  if [[ -n $GIT_USER_NAME ]]; then
+    git config --global user.name "$GIT_USER_NAME"
+    git config --global user.email "$GIT_USER_EMAIL"
+  fi
+}
+
+# 立即执行一次（防止刚打开终端时未生效）
+chpwd
+```
+
+
 /.git/hooks/pre-commit 脚本
 
 ```sh
@@ -860,17 +907,16 @@ while read -r line; do
 done < tags.txt
 ```
 
-git 修改 master~当前分支，所有commit里面非合规 email username
+git 修改 master~当前分支，所有commit里面 email username
 
 ```sh
 git fetch origin master:master
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 echo "正在处理当前分支: $CURRENT_BRANCH"
 git update-ref -d refs/original/refs/heads/$CURRENT_BRANCH 2>/dev/null || true
-# 使用git filter-branch来修改历史
-git filter-branch -f --msg-filter 'sed -e "s/pinduoduo//g" -e "s/pdd//g"' -- master..HEAD
+git filter-branch -f --msg-filter 'sed -e "s/pxx//g" -e "s/pxx//g"' -- master..HEAD
 git filter-branch -f --env-filter '
-    OLD_EMAIL_PATTERN="pinduoduo|pdd_waterdrop_bot"  # 要替换的邮箱的正则表达式
+    OLD_EMAIL_PATTERN="pxx|pxx_w_bot"  # 要替换的邮箱的正则表达式
     NEW_EMAIL=""        # 新的邮箱地址
     NEW_NAME=""        # 新的邮箱地址
     if echo "$GIT_AUTHOR_EMAIL" | grep -q -E "$OLD_EMAIL_PATTERN"

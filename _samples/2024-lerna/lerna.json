@@ -1,7 +1,6 @@
 {
   "version": "independent",
   "npmClient": "pnpm",
-  "changelog": true,
   "ignoreChanges": [
     "**/*.md",
     "**/*.test.ts",

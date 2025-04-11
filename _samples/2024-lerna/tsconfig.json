@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@shared/*": ["shared/*"],
-      "@huajs/lerna-demo": ["./packages/lerna-demo/src/index.tsx"],
-    },
     "baseUrl": "./",
     "target": "esnext",
     "module": "ESNext",
@@ -16,7 +12,11 @@
     "declaration": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@huajs/lerna-demo": ["./packages/lerna-demo/src/index.tsx"],
+    }
   },
   "include": [
     ".eslintrc.js",
@@ -31,5 +31,6 @@
     "./tests/setupTests.ts",
     "./tests/no-duplicated.ts",
     "shared/**/*.ts",
+    "packages/demo/index.ts",
   ]
 }

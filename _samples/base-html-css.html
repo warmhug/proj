@@ -330,5 +330,25 @@ var element = document.getElementById("animate");
   <div class="circle circle3"></div>
   <div class="circle circle4"></div>
 </div>
+
+
+简易编辑器
+
+<div class="toolbar">
+  <button class="select">选择</button>
+  <button class="bold">加粗</button>
+</div>
+<div style="height: 200px; border: 1px solid gray;" contenteditable="true">
+  <p>richEditor富文本简化版，这是可编辑的</p>
+  <p contenteditable="false">这是不可编辑的</p>
+</div>
+<script>
+  document.querySelector('.bold').addEventListener('click', () => {
+    let range = window.getSelection().getRangeAt(0);
+    console.log('bold', range);
+    document.execCommand('bold', false, null);
+  });
+</script>
+
 </body>
 </html>

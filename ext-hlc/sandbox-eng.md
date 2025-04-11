@@ -4,10 +4,35 @@
 - [english news inlevels](https://englishnewsinlevels.com/)
 - [en998](https://www.en998.com/sentence/) [earthworm](https://earthworm.cuixueshe.com/)
 
-再见：sa you na la  是吗：soga    什么：nani   awesome 牛逼
 
+## 2025-H1
 
-## 2025-01 ~ 03
+再见: sa you na la
+是吗: soga
+什么: nani
+牛逼: awesome
+
+Do you speak Japanese? A little.
+I can't speak Japanese at all. I know (everyday) conversational Japanese.
+Do you know his background?
+I went to Meiji University.
+Where did you go to college?
+What school do you go to?
+I'm a government employee. I'm self-employed.
+Do you have a part-time job? I work at a bookstore as a cashier once a week.
+How long have you been in Japan? About four months. Are you used to life in Japan?
+How long have you been doing that job?
+How long have you been skiing?
+How long will you be in Japan? Until December.
+Have you ever done aerobics?
+Have you ever traveled abroad?
+Where have you been? I've been to the U.S. and Germany.
+I've never done that.
+It looks like we are going to have a thunder shower.
+
+Task - an invocation of an npm script (e.g., header:build).
+
+A task, from Lerna's perspective, is a target running on a project. i.e. The target test running on the project shared-product-ui is a task.
 
 Are you feeling okay?
 I don't feel well. ...... ...... You don't look well.

@@ -49,12 +49,30 @@ async function test() {
   console.log('prerelease alpha: ', semver.inc('1.2.3-beta.0', 'prerelease', 'alpha'));
   console.log('major: ', semver.major('1.2.3-beta.0'));
   console.log('minor: ', semver.minor('1.2.3-beta.0'));
+  console.log('patch: ', semver.patch('1.2.3-beta.0'));
   console.log('semver.valid', semver.valid('1.2.3-beta.20+aseds'));
-  console.log('semver.parse ', semver.parse('^1.2.3'));
-  console.log('semver.minVersion ', semver.minVersion('^1.2.3'));
   console.log('semver.parse build: ', semver.parse('1.2.3-beta.20+aseds'));
   console.log('semver.parse build: ', semver.parse('1.2.3+xxbuild'));
   console.log('semver.parse build inc: ', semver.inc('1.2.3+xxbuild', 'patch'));
   console.log('semver.parse build inc: ', semver.inc('1.2.3-beta+xxbuild', 'patch'));
   console.log('semver.parse canary build inc: ', semver.inc('1.2.3-canary.20240924.1', 'patch'));
+
+  console.log('semver.validRange ', semver.validRange('1.2.3'));
+  console.log('semver.validRange ', semver.validRange('^1.2.3'));
+  console.log('semver.validRange ', semver.validRange('>=3.0.0'));
+  console.log('semver.parse ', semver.parse('^1.2.3'));
+  console.log('semver.minVersion ', semver.minVersion('^1.2.3'));
+  const tildeRange = new semver.Range('~1.2.3');
+  console.log('log tildeRange: ', tildeRange);
+  const caretRange = new semver.Range('^1.2.3');
+  const caretRange1 = new semver.Range('^0.2.3');
+  console.log('log caretRange: ', caretRange);
+  console.log('log caretRange1: ', caretRange1.set);
+  const range = new semver.Range('^4.24.15 || ^5.11.2');
+  console.log('log range: ', range);
+  const comparators = semver.toComparators('^1.2.3');
+  console.log('log comparators: ', comparators);
+
+  console.log('semver.eq ', semver.eq('1.2.3', '1.2.3'));
+  console.log('semver.eq loose', semver.eq('1.2.3', 'v1.2.3', true));
 }

@@ -1,12 +1,13 @@
 {
   "private": true,
-  "name": "semver",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "root",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@rookie-rs/api": "^0.5.6",
+    "blessed": "^0.1.81",
+    "glob": "^11.0.1",
     "semver": "^7.6.3"
   }
 }

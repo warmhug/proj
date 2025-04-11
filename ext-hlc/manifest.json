@@ -90,6 +90,7 @@
   }],
   "sandbox": {
     "pages": [
+      "sandbox.html", "sandbox_localFileEditor.html"
     ]
   },
   "content_security_policy": {

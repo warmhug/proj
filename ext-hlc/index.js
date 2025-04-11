@@ -131,33 +131,32 @@ async function content() {
 
   hl_utils.resizer();
 
-  const { hl_other_sideWidth, hl_inject_blankpage = [] } = await hl_utils.getStorage();
+  const pages = [
+    [
+      "sandbox_localFileEditor.html",
+      "本地文件编辑器"
+    ],
+    [
+      "https://ai-bot.cn/daily-ai-news/",
+      "AI新闻"
+    ],
+    [
+      "https://www.baidu.com/s?wd=%E6%97%A5%E5%8E%86",
+      "日历"
+    ],
+  ];
+
+  const { hl_other_sideWidth } = await hl_utils.getStorage();
   const sideIframe = document.querySelector('#sideIframe');
   sideIframe.style.width = hl_other_sideWidth ?? '40%';
 
   const sideIframeWrap = sideIframe.querySelector('.iframe-wrap');
-  // sideIframeWrap.innerHTML = createIfr('https://warmhug.github.io');
-  // 手动创建 iframe
-  const { ifrElement, writeContent } = hl_utils.createIframe();
-  sideIframeWrap.appendChild(ifrElement);
-  writeContent(`<!DOCTYPE html><html>
-    <head>
-    <meta charset="utf-8" />
-    <base target="_blank" />
-    <link rel="stylesheet" href="./assets/toastui-editor.min.css">
-    </head>
-    <body>
-    <div id="tuiEditor"></div>
-    <script src="./assets/toastui-editor-all.js"></script>
-    <script src="./index-left.js"></script>
-    </body>
-    </html>`
-  );
+  sideIframeWrap.innerHTML = createIfr('sandbox.html');
 
   const majorContent = document.querySelector('.major');
   majorContent.insertAdjacentHTML('beforeend', `
     <div class="urls-wrap">
-    ${hl_inject_blankpage.map(item => {
+    ${pages.map(item => {
       return `<a class="urls" style="margin:4px 8px;" href="${item[0]}">${item[1]}</a>`;
     }).join('')}
     </div>
@@ -166,7 +165,7 @@ async function content() {
     </div>
   `);
   const majorIframe = document.querySelector('.major .iframe-wrap');
-  majorIframe.innerHTML = createIfr(hl_inject_blankpage[0][0]);
+  majorIframe.innerHTML = createIfr(pages[0][0]);
   document.querySelectorAll('.major .urls-wrap a').forEach(item => {
     item.addEventListener('click', evt => {
       evt.preventDefault();
