@@ -74,6 +74,8 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
   const operateTabs = (storage) => {
     const wrapper = document.createElement('div');
     wrapper.appendChild(createBtn('恢复tab', async () => {
+      // 如果 url 里含有 #xxx 则 匹配不到
+      // const savedTabs = await chrome.tabs.query({ url: storage.hl_tabs_saved });
       var tabsAll = async () => await chrome.tabs.query({});
       // 情况: url 相同或只是 origin-pathname 相同，相同 tab 有多个
       // 粗暴处理: 删掉已存在的 origin-pathname 相同的 tab (多个)
@@ -107,15 +109,7 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
         await hl_utils.setStorage({ hl_tabs_saved: saveVal });
       }
     }));
-    wrapper.appendChild(createBtn('del-ungroup-tab', async () => {
-      // 如果 url 里含有 #xxx 则 匹配不到
-      // const savedTabs = await chrome.tabs.query({ url: storage.hl_tabs_saved });
-      var tabsAll = await chrome.tabs.query({});
-      console.log('tabsAll: ', tabsAll);
-      const dTabs = tabsAll.filter(tab => tab.groupId == -1 && !tab.pinned);
-      await chrome.tabs.remove(dTabs.map(tab => tab.id));
-    }));
-    wrapper.appendChild(createBtn('重载tab', async () => {
+    wrapper.appendChild(createBtn('重载(删建)tab', async () => {
       dealResponse(await chrome.runtime.sendMessage({ action: 'reloadTabs' }));
     }));
     wrapper.appendChild(createBtn('刷新所有tabs', async () => {

@@ -10,6 +10,7 @@ permalink: /
 网易 [科技](https://tech.163.com/)  [财经](https://money.163.com/) [国际](https://news.163.com/world/)
 [pmbaobao](https://www.pmbaobao.com/) [人人PD](http://www.woshipm.com)
 [热榜](https://tophub.today/) [36kr热榜](https://www.36kr.com/hot-list/catalog)
+AI新闻 https://ai-bot.cn/daily-ai-news/
 
 [oschina](https://www.oschina.net) [yuque](https://www.yuque.com/iscott)
 [极客公园](https://www.geekpark.net) [少数派](https://sspai.com)
@@ -109,20 +110,23 @@ Google [AutoDraw](https://www.autodraw.com/) (原理[介绍](https://research.go
 ## AI 使用
 
 
+pnpm workspaces 怎么检查内部包的版本号, 是否不存在于 registry 上?
+2025-04-28
+
+使用 nodejs 删除 pnpm-lock.yaml 里的 resolution 下的 tarball 字段, 其他内容保持不变.
+2025-04-27
+
+service eu us 不同大区, dr 含义? 其中 r 是 region 的意思, dr 可能是什么?
+https://chat.deepseek.com/a/chat/s/fdaa9566-f02a-4d9e-b719-3c98b7733741
+2025-04-15
+
 git rebase squash 后, 还能找到 squash 前的 commit ID 内容吗?
 不同的 chrome 窗口, 怎么也能像 vscode 的 window.nativeTabs 一样合并到一起.
 2025-04-09
 
-npm 和 pnpm 在 .npmrc 文件里 可通用的配置项 都有哪些?
-怎么让 pnpm 保持和 npm 一样的 模块安装方式, 不要有 node_modules/.pnpm 目录.
-2025-04-08
-
 vscode 有个内置插件, 能检测 typescript 的语法, 不小心关掉了怎么重开?
 国内有哪些 AI 产品 能看, 当日 当周 当月 最热门的 20 条新闻?
 2025-04-07
-
-lerna + pnpm 的 monorepo 项目, 在子包里单独引入 TS 的版本, 怎么能不受 根目录的 @types/react 版本影响?
-2025-04-06
 
 对于公司内部署的 CI 构建平台, Docker资源参数(cpus/memory等)应该怎么设置, 详细解答下.
 2025-04-02
@@ -134,7 +138,6 @@ https://gemini.google.com/app/cc075eb2e9e4dff8
 https://chat.deepseek.com/a/chat/s/edb9092f-5c97-461c-a2e9-0d362a2c3180
 2025-04-01
 
-
 crontab 脚本里能使用 环境变量 吗, 怎么使用?
 在 .gitconfig 里能使用环境变量吗?
 在 .gitconfig 里 怎么写注释?
@@ -142,13 +145,6 @@ crontab 脚本里能使用 环境变量 吗, 怎么使用?
 把 环境变量 设置在 .zshrc 里, 怎么根据目录自动使用 git 账号?
 在 ~/.zshrc 里 export 了 git_user 但在 .gitconfig 里 使用不了, 怎么了?
 2025-03-31
-
-使用 gitlab  或 github 的 monorepo 项目, 怎么能在 目录或文件级别 做文件可见性的权限控制, 或者怎么监控文件是否被下载和转存到其他地方去过?
-Git子模块（git submodule）或子树（git subtree）的使用区别?
-https://chatgpt.com/share/67e401da-969c-8008-bb41-ad633ded15e8
-https://chat.deepseek.com/a/chat/s/0b84021f-9c40-416f-8203-cde1b0009754
-git submodule 示例 https://github.com/eclipse-ecal/fineftp-server
-2025-03-26
 
 在 feature 分支打了 tag, 又进行了 git rebase master 导致 feature 分支的 tag 对应的 commit_id 不存在. 这种情况, 怎么更新 tag 对应的 commit_id? 要求能集成到 bash 脚本里.
 ...
@@ -172,58 +168,9 @@ https://gemini.google.com/app/9fe03b92a9586011
 有些标签对应的 commit_id 已经没有在 remote 仓库里, 这些标签应该也删掉吗?
 2025-03-23
 
-lerna publish from-git from-package 详解?
-为什么 from-git 适合 自动化 cicd 场景?
-使用 from-package 时, --ignore-changes 为什么不起作用?
-https://chat.deepseek.com/a/chat/s/f8b25b55-f0f0-4851-a901-0156ddd8f5d8
-2025-03-19
-
 单独的 npm 包 execa 里的 sync 和 child_process 里的 execSync 的区别?
 https://chat.deepseek.com/a/chat/s/9af55d01-f490-46bc-b8a5-677cd1a2a3bc
 2025-03-17
-
-使用 pnpm 安装了依赖, 但在 package.json 的 scripts 里使用 npm run lint, 这样有问题吗?
-如果是 monorepo 项目, 在子包里运行, 怎么查找 bin 下的二进制文件?
-https://chat.deepseek.com/a/chat/s/133eb6d1-d73f-4457-b92a-8a725cad3d1d
-2025-03-13
-
-pnpm workspace 获取各个子包之间的依赖关系, 包含 npm alias 的依赖.
-2025-03-12
-
-lerna 运行完 根目录的 version 钩子后, 虽然提示了要修改文件的版本号, 但程序那一刻 看起来还没有改动完成相应文件, 什么时候文件内容会被实际改掉? 改成 postversion 也不行.
-2025-03-11
-
-lerna 在 preversion 阶段会执行 package.json 里的 scripts, 但不希望明确写这个 scripts, 而是想由另一个脚本 动态设置 scripts 后传递给 lerna , 这样能实现吗?
-https://chat.deepseek.com/a/chat/s/aaea4f5c-0d71-4b54-b8f0-a6fc1d771ef1
-https://chatgpt.com/c/67ce9933-a260-8008-8046-cff83664fe40
-2025-03-10
-
-lerna 在更新版本时候, 有什么钩子函数, 能打印出来新旧版本号吗?
-现在是 lerna 结合 pnpm 的 monorepo 项目, 不想在每个子包都重复写 scripts 怎么能统一解决?
-2025-03-09
-
-在 monorepo node 项目里, 存在 nx.json 怎么能本地 不安装 nx 也能使用?
-...
-使用 pnpm 为了避免在 package.json 里声明, 在 postinstall 或 prepare 阶段 安装一个依赖, 怎么能避免自动修改 lock 文件.
-... 结果
-"scripts": {
-"postinstall": "pnpm install nx@latest --lockfile=false --ignore-workspace --dir ./tmp",
-}
-https://chatgpt.com/c/67cd4e89-f4a4-8008-b5e1-89bfe0c831a8
-https://chat.deepseek.com/a/chat/s/3c5acb32-1b6b-4e8c-9808-25ebc8f419d8
-https://gemini.google.com/app/9f8cca7169306de3
-2025-03-09
-
-pnpm monorepo 怎么查看除了内部 link 包之外的其他包依赖, 在 registry 是否存在?
-如果没有直接的命令, 写一个 node js 脚本来实现.
-...
-内部链接的版本号, 可以以 workspace: 或 file: 开头, 但也可以不是以它们开头.
-因为 pnpm 提供了 prefer-workspace-packages 和 link-workspace-packages 设置, 能够自动匹配引用 monorepo 内部有相同包名的其他 package. 怎么识别并处理这种情况?
-...
-包所在不一定只是 packages 目录内, 而是在 pnpm-workspace.yaml 配置中指定的, 可以通过 pnpm list --json -r 来获取所有内部包, 基于此再做过滤.
-...
-https://chat.deepseek.com/a/chat/s/f2241a08-daf7-4c21-b266-ef53b3d836e6
-2025-03-06
 
 node-semver 怎么获取 Tilde 或 Caret 标记?
 代码依赖里一般都写 Tilde 或 Caret 标记, 怎么用 node-semver 做解析?
@@ -233,55 +180,11 @@ kwgt kustom 能用 JavaScript 编程的方式做小组件吗?
 哪里有比较丰富的 widgets 市场或集合, 可以直接下载使用?
 2025-03-04
 
-使用 pnpm Install 的库, 存在 ./node_modules/.pnpm 目录, 再使用 npm ls xx 会把这个目录里的依赖展示出来, 不符合预期. 但使用 pnpm ls xx 结果是空. 应该怎么处理?
-https://gemini.google.com/app/720af5db3d7cb736
-2025-03-04
-
-前端组件库 monorepo 包含 50 个组件, 都位于一个 git 仓库里. 而传统的组件库 50 个组件分别位于 50 个 git 仓库里.
-使用 云服务器 对 monorepo 仓库一次性构建 50 个组件, 和对传统的 50 个 git 仓库的组件分别进行构建.
-能节省哪方面资源, 节省多少?
-https://chatgpt.com/share/67c6c45a-cc9c-8008-86c7-60b6ef688619
-https://grok.com/share/bGVnYWN5_a947bd4d-8829-4cbe-af01-0e9dbcef16c3
-https://gemini.google.com/app/95b09bd5710e389f
-2025-03-03
-
-lerna version 不能自动更改 npm alias 的版本号, 怎么解决这个问题? 怎么解决?
-除了 lerna 有其他类似工具能解决这个问题吗?
-https://grok.com/chat/8e0fc14a-3f17-40a2-b7c5-99463c153087
-https://grok.com/share/bGVnYWN5_2285de9a-750d-409c-a6a1-0c33cd067f1e
-https://chat.deepseek.com/a/chat/s/e1bbf052-b8a7-4064-81f9-b7fc3bfc426f
-2025-02-26
-
 代码项目的目录命名 common 和 commons 哪个更好?
 https://gemini.google.com/app/fd0ec4b35523c91f
 https://chat.deepseek.com/a/chat/s/f32465b1-6753-4abf-be2b-1edb5ea56f26
 https://chatgpt.com/share/67bdc47e-88b4-8008-9094-399b0a78b555
 2025-02-25
-
-monorepo same package name multiple version coexist
-除了使用 npm alias 功能外, 还有其他办法吗? 使用中文回复.
-...
-通过以上提到的哪种方法, 能够解决如下报错
-npm ERR! code EDUPLICATEWORKSPACE
-npm ERR! must not have multiple workspaces with the same name
-...
-使用 lerna 和 pnpm 并加入 project.json 文件, 可以让多个子包 package.json 有相同的 name 和不同的 version. 除此之外,还有更多的实现办法吗?
-...
-参考 https://stackoverflow.com/questions/26414587/how-to-install-multiple-versions-of-package-using-npm
-回复最好 https://gemini.google.com/app/4c2ea1e657922b90
-2025-02-24
-
-npm 的 dependencies 写了 latest, 是怎么解析版本的?
-如果 最新发布的版本 是个 alpha 但不是 latest 标签, 会对它做解析吗?
-这个最新的 alpha 版本的依赖有缺失, npm install 包的 latest 版本时, 实际不应安装这个 alpha 版本, 但 先对这个 alpha 版本 报错 No matching version found, 导致 安装失败. 是为什么?
-2025-02-13 https://chatgpt.com/share/67ad9bcd-913c-8008-aa33-1edb177b7203
-
-npm yarn 和 pnpm 的 lock 文件内容结构详细解释?
-现在使用 pnpm 工具, 有两个环境, 比如 A 环境 registry 是 https://ra.com 生成了 lock 文件. 但 B 环境 registry 是 https://rb.com , 希望复用 A 环境生成的 lock 文件, 怎么做到? pnpm-lock.yaml 文件里的 tarball 地址, 怎么能不区分 ra rb 的域名?
-在 monorepo 项目, 怎么用 npm shrinkwrap 收集到所有子项目依赖, 并给 pnpm 使用?
-需要在 monorepo 里存在 同名包的 不同版本, 怎么实现?
-lerna 和 pnpm 支持 通过 project.json 能让存在 同名包的 不同版本, 使用 npm 能做到吗?
-2025-01 https://chatgpt.com/c/677fbce1-c1d8-8008-ba11-f56bad58fa80
 
 最近 deepseek 火热, 新闻不断, 用什么成语或习语形容 比较有趣?
 - 万众瞩目 人气爆棚 一鸣惊人 如日中天 家喻户晓 后来居上 异军突起
@@ -304,21 +207,8 @@ deepseek 比 Gemini 豆包和kimi 优秀吗? 哪个技术实力最强? 哪个最
   如果你需要处理 超长文本任务，Kimi 是一个不错的选择。
 2025-01
 
-前端或 node 项目, 引用A包的时候，比如A引用了B，B里面有overrides/resolutions，最终会装 overrides / resolutions 指向的包吗?
-主项目的 overrides/resolutions 优先级最高，覆盖所有依赖。
-如果主项目没有定义，子依赖的 overrides/resolutions 只会影响其自己的依赖树。
-...
-怎么在运行 npm start / build 之前, 确保 node_modules 里的依赖有被重新 Insall 过
-2025-01
 
 --- 2024-12
-
-utils.ts 文件内容为
-export function getChangedPkgNames() {}
-export async function get1() {}
-index.ts 文件内容为
-export * from './utils';
-不能把 utils 里的函数正确导出来, 是什么问题?
 
 monorepo 项目根目录 tsconfig 里已配置 "paths": { "@xx/monoaid": ["./common/monoaid/src/index.ts"] }
 根目录有个 build.mjs 文件,内容有 import { xx } from '@xx/monoaid';
@@ -334,18 +224,17 @@ antd 还有其他的 api 一样的版本吗?
 应该基于哪个新的组件库来做呢?
 有人用 Material UI 做兼容 antd 的 api 的中间层库吗?
 
-monorepo 忽略了 samples 子目录, 但在 samples/xx 里运行 pnpm install 还是会根据根目录的 pnpm-lock 安装依赖, 怎么避免这个问题?
-
 学习 tailwind 应该要理解哪些重点和难点地方
 tailwind variants vs cva
 
 基于 React Hook Form 和 Zod 做一个新的 react form 组件, 使其功能和 antd 4 的 Form 组件一样, api 用法也一样.
 
-一个 position: absolute; 的元素, 被很多个  position: relative; 的外围元素包裹, 怎么让这个 absolute 的元素在最顶层显示?
+一个 position: absolute; 的元素, 被很多个 position: relative; 的外围元素包裹, 怎么让这个 absolute 的元素在最顶层显示?
 
 利用 GitHub 当存储的笔记软件 有哪些?
 
 macOS 使用 快捷指令 制作一个功能, 能触发 ctrl+. 快捷键.
+
 
 --- 2024-11
 
@@ -366,18 +255,8 @@ https://chatgpt.com/share/674539a5-4d50-8008-9cce-a950f4a2354b
 在macOS用户目录下的 .zshrc 里写一个函数，判断是否已运行命令 ttyd -W -a zsh >> "$z_log" 2>&1 & 如果未运行过、则运行一次，如果已运行、则进一步判断：如果调用者是 ttyd 、则根据 http://localhost:7681/?arg=/Users/hua/.zshrc&arg='echo "aa"' 这个 URL 运行 arg 参数里的 echo 等任意自定义命令。
 https://chatgpt.com/share/6742e267-f3a0-8008-bda3-6b1b6bbce601
 
-js工具库代码最新版本是 3.x，但需要修复很久之前的 1.x 版本的 bug，当前只有 master 分支，怎么用 git 管理老版本的代码升级？
-LTS（长期支持）策略 详解。
-如果是 monorepo 项目，应该采用什么策略？
-在老的 1.x 分支上拉了代码做改动，合并到 master 产生了大量冲突，怎么解决？
-怎么在 git 提交历史中插入一个提交？
-怎么把 某个 commit 改动的文件，应用到另一个分支上、但不携带改动之前的历史信息。
-以上合并方式是什么？把改动的文件内容全覆盖，还是对改动的某些行进行交集合并，删除的文件或内容怎么处理？
-`git checkout <commit-hash> -- <file-path>` 如果有多个 file 需要分别添加吗，有更快的方法吗？
-https://chatgpt.com/share/673dd191-0d74-8008-a826-16844c0b9bb5
 
-
---- 2024-06~09
+--- 2024-06 ~ 09
 
 git 有很多 commit，一次性合并所有提交记录
 git rebase autosquash 更详细用法
@@ -392,7 +271,6 @@ https://chatgpt.com/share/674ab45e-27a8-8008-b1bb-04c8bf5e444e
 
 clash 配置指定域名用指定 dns 解析
 https://chatgpt.com/share/671762b0-e55c-8008-bf27-b762cf930059
-
 
 bash 查找 packages 目录下二级 目录里存在的所有 config.ts congfig.tsx config.js 和 config 目录，排除掉 node_modules 目录。不查找子路径。查找结果 存放到数组里。
 ```sh
@@ -1450,6 +1328,24 @@ var genArr = Array(10).fill(0).map((e, i) => i + 1);
 ------ 对象 函数 原型
 
 ```js
+
+export const jsonParse = (
+  text: string | unknown,
+  reviver?: ((this: any, key: string, value: any) => any) | undefined
+) => {
+  if (typeof text !== 'string') {
+    return text;
+  }
+
+  let value;
+  try {
+    value = JSON.parse(text, reviver);
+  } catch (error) {
+    console.log('jsonParse: ', text, error);
+  }
+  return value;
+};
+
 // switch 取巧写法
 switch (true) {
   case location.hostname == "www.amazon.com" && !true:
@@ -3745,6 +3641,9 @@ Git 合并出现冲突的原因在于 两个分支版本对一个文件的同一
 
 流水线问题
 
+- 错误处理
+  - 只要有一个地方抛出错误, 整个流水线就应该停止.
+  - 如果不想抛错 各个阶段自行捕获处理错误.
 - 自定义
   - 不能像是 GitHub action 一样，能完全自定义流水线。不支持自动生成 PR 供合并。
   - 默认运行 npm i，没考虑 pnpm 等工具，node 版本可选的少。
@@ -3808,6 +3707,10 @@ pre-release 预发布版本号的排序规则是：
 ------ lerna
 
 
+lerna 的 libs/core/src/lib/command/index.ts 里的 configureProperties 里的 execOpts 怎么修改? 怎么在调用 lerna 命令时传入这个参数?
+怎么使用 lerna 的 ChangedCommand 类?
+2025-04-22
+
 lerna.json 配置项 https://github.com/lerna/lerna/blob/main/libs/core/src/lib/project/index.ts#L28
 使用 lerna@8.0.2 在 /usr/local/lib/node_modules/lerna/dist/index.js 文件的 10480 行, 调试:
 `console.log('log concurrency: ', this.concurrency, Object.keys(this));` this 对象的 keys 为:
@@ -3830,14 +3733,23 @@ lerna version 命令除了能 自动升级版本号，还能 自动生成 change
 # --include-merged-tags --no-push --no-git-tag-version
 lerna ls --graph # 等效 pnpm ls -r --json
 lerna ls --long # 等效 pnpm ls -r --depth -1 --json 换成 npm 不行
-lerna list --json
-# 比较自上次发布以来的所有包或单个包的差异。依赖 Git 标签来确定上次发布的版本。
-lerna diff
-lerna diff package-name
-# 自上次标记版本以来已更改的。它通过比较当前工作树与最近的标签之间的差异来识别哪些包有改动。
+lerna ls --since master
+lerna ls --since="master" --loglevel=verbose
+lerna ls --since --include-merged-tags
+lerna list --scope=my --include-dependencies --ndjson
+lerna list --since=origin/master -include-dependents --loglevel=verbose
+lerna list --scope=package-A --include-dependencies --since=main
+
+# changed 比较当前工作树与最近的标签之间的差异 不支持 since scope 参数
 lerna changed
 lerna changed --include-merged-tags
 lerna changed --include-merged-tags --loglevel debug
+
+# 比较自上次发布以来的所有包或单个包的差异。依赖 Git 标签来确定上次发布的版本。
+lerna diff
+lerna diff package-name
+
+# lerna version / publish 不支持 --scope 参数
 lerna version patch --exact
 lerna version patch --include-merged-tags --no-push --no-git-tag-version --no-commit-hooks --exact
 lerna version patch --exact --message '🎨 chore(release): Publish' --conventional-commits
@@ -3846,13 +3758,12 @@ lerna publish prerelease --preid rc --dist-tag rc
 lerna publish from-git --preid rc --dist-tag rc
 lerna publish from-package
 
-# 需要 nx
+# 构建时需包含依赖  使用 concurrency 不要使用 parallel 参数
+lerna run build --include-dependencies --concurrency 4
+
 lerna watch -- echo \$LERNA_PACKAGE_NAME \$LERNA_FILE_CHANGES
 lerna watch -- lerna run build --scope=\$LERNA_PACKAGE_NAME
 
-lerna ls --since="master" --loglevel=verbose
-lerna ls --include-merged-tags
-lerna ls --since --include-merged-tags
 lerna exec --since --include-merged-tags -- ls -la
 lerna exec --include-merged-tags --concurrency 1 -- "pwd && ls -la"
 lerna exec --scope @ant-design/pro-form -- pnpm version 0.1.5-alpha.0 --no-git-tag-version
@@ -3860,38 +3771,28 @@ lerna exec --scope @ant-design/pro-form -- pnpm version 0.1.5-alpha.0 --no-git-t
 
 总结
 
-- lerna publish 参数 from-git from-package
-  - 设置 from-git 或 from-package 后不会运行 lerna version 也不检测文件变更.
-  - 设置 --ignore-changes 只对 lerna version 或默认的 lerna publish（包含版本生成阶段）有效。
-- lerna tag 与 commit 关系
-  - 如果 tag 对应的 commit_id 不在 git 历史里 (比如被 rebase 修改了). lerna version 就不会基于这个 tag 的版本号 来升级版本.
-  - 解法: 修改 tag 对应到新的 commit_id , 强推覆盖远程的已有 tag. (尽管这不是一个好的做法, 但是方便).
-- lerna 根据什么检测变更
-  - 命令 lerna changed --include-merged-tags 背后做了什么事, 对应的 git 命令是什么?
-  - 如果你的项目使用了规范化的提交信息（例如，使用 commitizen 和 cz-lerna-changelog），Lerna 可以更准确地检测变更，因为它会根据提交信息中的标签来识别影响的包。
-  - `lerna ls --since master` [since文档](https://lerna.js.org/docs/api-reference/commands#--since-ref) changed 不支持 since 参数
-  - 如果 lerna publish 失败，使用 lerna publish from-git 重新发布，不用改版本号。
-  - [lerna 发包原理浅析](https://zhuanlan.zhihu.com/p/392438222) lerna changed 判断如果没有 tag，则认为全部的包都需要发布。
-- lerna 子包之间互相依赖
-  - 配置文件 lerna.json 的 `"version": "independent"` 模式，不强制同步所有子包的版本:比如 A子包依赖B子包 B没有更新 A有更新，A子包的 package.json 不会修改 它依赖的B子包的版本号。
-  - 利用了 pnpm 的 `--link-workspace-packages=true` 设置，比如 A子包依赖B子包 B子包本地版本号为1.1.1(npm上不存在此版本号) 如果A子包dep里的B子包版本号也写死为1.1.1，则B子包如果有变更、使用 `lerna changed` 就会显示 B A 子包都会有变化，默认都会升级版本号。
-  - 在 lerna publish / version / changed 设置 `--include-merged-tags` 会检测 master 外的其他分支发布的 release tags。公司通常为 feature / test / pre-release / release 研发模式、在分支上发布很常见，建议加上。
-  - 在 lerna publish / version / changed 设置 `--scope` 不起作用 https://github.com/lerna/lerna/issues/1556
-  - 构建时需包含依赖 `lerna run build --include-dependencies --concurrency 4` (最大并发数为4) 要使用 concurrency 不要使用 parallel 参数 会忽略 dependencies 之间的构建先后顺序 导致构建出错。
-  - 子包怎么更新自身依赖 https://github.com/lerna/lerna/issues/2142
-- lerna 仅支持 git annotated tags:
-  - [tag问题](https://juejin.cn/post/7114538970339344420)
-  - 如果 lerna publish 打 tag 的 commit 被 squash，但 tag 仍然存在，会导致 lerna changed 检测错误。 pro-components commit/f3900b2e89dda3186223fbd09330d8306dd46576
-  - https://lerna.js.org/docs/troubleshooting#publish-command
-  - https://github.com/lerna/lerna/issues/1357#issuecomment-438162152
-  - 如果是 annotated 使用 git show tag_name 会看到包含 tagger 标记
-- lerna version 不支持 dry-run、lerna lite 支持 https://github.com/lerna/lerna/issues/51#issuecomment-2293358836
-- lerna ERR! EUNCOMMIT Working tree has uncommitted changes, please commit or remove the following changes before continuing: lerna ERR! EUNCOMMIT  M pnpm-lock.yaml
-  - 如果是 M pnpm-lock.yaml 则确保开发阶段使用的 pnpm 版本一致
-  - 如果是其他文件，使用 from-git 或 git commit https://github.com/lerna/lerna/issues/1591
 - lerna 项目存在 相同的 pkgName 不同的大版本 1x 2x 3x 怎么管理
   - 加入 project.json 文件, 内容为 { "name": "pkgName@1.x" } 或 { "name": "pkgName@2.x" } 利用了 nx 的特性.
   - nx 报错: lerna ERR! lerna To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+- lerna tag 与 commit 关系
+  - 仅支持 annotated tags: https://lerna.js.org/docs/troubleshooting#publish-command  https://github.com/lerna/lerna/issues/1357#issuecomment-438162152
+  - [tag问题](https://juejin.cn/post/7114538970339344420) 如果 lerna publish 打 tag 的 commit 被 squash，但 tag 仍然存在，会导致 lerna changed 检测错误。
+  - 如果 tag 对应的 commit_id 不在 git 历史里 (比如被 rebase 修改了). lerna version 就不会基于这个 tag 的版本号 来升级版本.
+  - 解法: 修改 tag 对应到新的 commit_id , 强推覆盖远程的已有 tag. (尽管这不是一个好的做法, 但是方便).
+- lerna changed 检测变更
+  - [lerna 发包原理浅析](https://zhuanlan.zhihu.com/p/392438222) lerna changed 判断如果没有 tag，则认为全部的包都需要发布.
+  - 核心是 git describe --first-parent --always --dirty (搜源码 describeRefSync) 和 git diff --name-only lastTagName pkg_path (搜源码 diffSinceIn)
+  - lerna changed 和 list 行为不一致: https://github.com/lerna/lerna/issues/1909#issuecomment-459548676  https://github.com/lerna/lerna/issues/1377
+  - 如果你的项目使用了规范化的提交信息（例如，使用 commitizen 和 cz-lerna-changelog），Lerna 可以更准确地检测变更，因为它会根据提交信息中的标签来识别影响的包. https://github.com/lerna/lerna/issues/2437  https://github.com/lerna/lerna/issues/1569
+- lerna publish 参数 from-git from-package
+  - 如果 lerna publish 失败，使用 lerna publish from-git 重新发布，不用改版本号。
+  - 设置 from-git 或 from-package 后不会运行 lerna version 也不检测文件变更.
+  - 设置 --ignore-changes 只对 lerna version 或默认的 lerna publish（包含版本生成阶段）有效。
+  - uncommitted changes 阻止发布 https://github.com/lerna/lerna/issues/2329
+- lerna ERR! EUNCOMMIT Working tree has uncommitted changes, please commit or remove the following changes before continuing: lerna ERR! EUNCOMMIT  M pnpm-lock.yaml
+  - 如果是 M pnpm-lock.yaml 则确保开发阶段使用的 pnpm 版本一致
+  - 如果是其他文件，使用 from-git 或 git commit https://github.com/lerna/lerna/issues/1591
+- lerna version 不支持 dry-run、lerna lite 支持 https://github.com/lerna/lerna/issues/51#issuecomment-2293358836
 
 
 更新 “有变更的包” 自身版本号 & 依赖的其他子包的版本号，修改 package.json 文件
@@ -5760,56 +5661,6 @@ git提交记录 文档 聊天记录 浏览器记录, 如果是 学习的东西 �
 - 代码泄露问题: 不管什么形式 都不能彻底解决 故意的泄露问题 (防君子不防小人).
 - 已有项目迁移问题: npm包几乎无额外工作量, 项目node版本区别 能兼容 但建议改造.
 
----
-
-nx implicitDependencies 怎么理解和使用?
-pnpm build 有类似 nx implicitDependencies 的功能吗? 或者怎么能实现这样的效果, 特别是在处理 npm alias 这种场景时.
-https://chatgpt.com/c/67f8cedd-9b20-8008-b596-daa0e9c3bb7c
-https://gemini.google.com/app/c5def5cfe22d8825
-https://chat.deepseek.com/a/chat/s/bfe64f5d-98e5-4481-8332-b738c1926eb6
-2025-04-11
-
-不同子包依赖了不同的 ts react react-router 版本, 在 pnpm 下会互相影响?
-源码存在 `import { Route, StaticRouter } from 'react-router-dom';` 时, ts 会报错
-Route, StaticRouter 不存在.
-2025-04-09
-
-monorepo 工具 lerna changesets rushjs 功能详细对比?
-lerna 配合 nx 能实现 rush.js 的 增量构建、并行化、分布式缓存 功能吗?
-Rushjs 提供了构建缓存（build cache）功能，还支持阶段构建（phased builds）这些优化, 能节省公司使用云构建的机器成本吗? 比传统多仓库模式能节省多少成本?
-https://gemini.google.com/app/8f758441dfbc2494
-https://chatgpt.com/share/67e3ee41-856c-8008-acea-945ed9ba627b
-https://chat.deepseek.com/a/chat/s/84c31b44-3b08-4cde-921f-01f077639dca
-2025-03-26
-
-在 monorepo 项目中 别人误改代码, 特别是 增删 代码时间差, 不会出现 git 合并冲突提示. 这些问题怎么解决?
-https://grok.com/share/bGVnYWN5_4183142b-9444-44e5-a1bf-8df9eaab4eb0
-https://chat.deepseek.com/a/chat/s/95cd77b8-83cc-4d77-b070-f01354419422
-https://chatgpt.com/c/67e2730c-bfb4-8008-804a-c72b94bd9469
-https://github.com/Wilfred/difftastic
-[SonarQube](https://docs.sonarsource.com/)
-Codeowners
-2025-03-25
-
-使用 Nx 进行构建时，.nx 目录用于存储与构建相关的缓存和数据 .nx/cache/ .nx/installation/ .nx/workspace-data/ 这些目录包含特定于本地环境的临时文件，不适合纳入版本控制。在 .gitignore 里忽略掉.
-使用 Nx 提供的分布式缓存功能，在团队内部共享缓存.
-2025-03-13
-
-运行 pnpm -r run build 构建问题.
-在 monorepo 里运行 pnpm run build 时, 因为有对 build 出的目录删除操作, 如果不设置 workspace-concurrency=1 就会报错, 但设置后速度就很慢. 应该怎么解决?
-https://gemini.google.com/app/f37076c19be3c895
-2025-04-11
-在 npmrc 里设置 `workspace-concurrency=1` (注意与`--parallel`区别) 的用途:
-- 避免并发引发的竞态问题: 各个子项目在构建、清理或其他任务中可能存在共享资源（比如同一个目录、文件或网络资源）的写入冲突，强制串行执行可以防止由于并发操作带来的竞态条件和文件锁冲突。
-- 任务之间存在依赖或副作用: 当某些任务必须按照严格的顺序完成，或者前一个任务的产物会影响下一个任务的执行.
-在设置 pnpm 的 workspace-concurrency = 1  时候, 怎么利用 nx 能缓存构建结果加速构建过程?
-2025-03-13
-pnpm -r run build 怎么先构建被依赖的包?
-对于 npm alias 形式的依赖, 没有先构建 dependencies 是怎么了?
-2025-02-28
-使用 pnpm 未把 dependencies 构建完成,而导致 dependent 构建失败的问题
-https://stackoverflow.com/questions/72216431/how-to-control-pnpm-workspace-build-order
-2025-02
 
 
 https://nx.dev/concepts/decisions/why-monorepos
@@ -5839,6 +5690,153 @@ https://github.com/vuejs/core/
 https://github.com/angular/angular
 https://github.com/nrwl/nx-examples
 
+
+---
+
+
+使用 lerna@8 和 pnpm@7 , 在 lerna version 时, 因为搭配了 pnpm  就算不使用workspace: 协议, 也能自动关联升级版本号. 是怎么实现的?
+https://chatgpt.com/share/6809e167-f024-8008-983a-3d3429470081
+https://gemini.google.com/app/1660bddbb4205ab5
+https://github.com/lerna/lerna/issues/718
+https://github.com/lerna/lerna/issues/2326
+2025-04-24
+
+怎么让 lerna changed 命令忽略 Merge branch带来的代码变化?
+2025-04-22
+
+nx 能解析或者使用 pnpm workspaces 的 dependencies graph 吗?
+2025-04-21
+
+在 lerna@8 + pnpm@7 的 monorepo 项目里, 因为存在两个相同的包名, 虽然通过 project.json 做了区分, 但 lerna 背后的 nx 对于内部包之间的 依赖解析 仍然有问题.
+https://gemini.google.com/app/f2ce6aaf2219c618
+...
+使用 pnpx nx graph 分析内部包之间的依赖, 发现部分内部依赖缺失?
+因为 lerna 背后实际是 nx 在检测依赖. 写死版本号, 或使用工作区协议(workspace: 或 file: 协议) 会被检测到. 但如果依赖版本号是 ^ 开头 则检测不到, 因为 SemVer ^ 范围并不是“协议” 只是 NPM 在安装时的解析策略，Nx 的项目图器并不去解析 SemVer 范围，它只信任显式的工作区协议或基于代码的导入。
+https://chatgpt.com/c/6804b4b9-bc04-8008-b378-803e803e9f9e
+2025-04-20
+
+当前 master 分支 最新的commit 关联了 tag a b c, 此时有新的 feature 分支合并进 master, 就在 master 最新commit 之上新增了 2个commit 变为了 master 的最新 commit, 同时在 master 第 10 条 commit 位置, 插入了一周前的 feature 分支的多个 commit 进来.
+这时候, lerna change 认为 master 上的 tag a b c 疑似失效, 显示这些 tag 对应的文件有变更, 实际上这些文件已经在 master 的 commit 里, 并且没有变更.
+继续提问: 是使用 git merge --no-ff 合并的 feature 分支到 master. 也没有改变 master 已有的 commit hash , 只是把 feature 分支上一周前的几个 commit 合到了 master commit 时间线里, hash 也都没有变化.
+https://chatgpt.com/c/68021519-6b6c-8008-832d-e82255a913ba
+2025-04-18
+
+在 pnpm monorepo 项目中 pnpm install 之后, 生成了 lock 文件. 再修改几个有关联关系的子包版本号, 再运行 pnpm -r run build, 此时包之间的依赖关系 是根据什么确定?
+2025-04-14
+
+nx implicitDependencies 怎么理解和使用?
+pnpm build 有类似 nx implicitDependencies 的功能吗? 或者怎么能实现这样的效果, 特别是在处理 npm alias 这种场景时.
+https://chatgpt.com/c/67f8cedd-9b20-8008-b596-daa0e9c3bb7c
+https://gemini.google.com/app/c5def5cfe22d8825
+https://chat.deepseek.com/a/chat/s/bfe64f5d-98e5-4481-8332-b738c1926eb6
+2025-04-11
+
+不同子包依赖了不同的 ts react react-router 版本, 在 pnpm 下会互相影响?
+源码存在 `import { Route, StaticRouter } from 'react-router-dom';` 时, ts 会报错
+Route, StaticRouter 不存在.
+2025-04-09
+
+lerna + pnpm 的 monorepo 项目, 在子包里单独引入 TS 的版本, 怎么能不受 根目录的 @types/react 版本影响?
+2025-04-06
+
+monorepo 工具 lerna changesets rushjs 功能详细对比?
+lerna 配合 nx 能实现 rush.js 的 增量构建、并行化、分布式缓存 功能吗?
+Rushjs 提供了构建缓存（build cache）功能，还支持阶段构建（phased builds）这些优化, 能节省公司使用云构建的机器成本吗? 比传统多仓库模式能节省多少成本?
+https://gemini.google.com/app/8f758441dfbc2494
+https://chatgpt.com/share/67e3ee41-856c-8008-acea-945ed9ba627b
+https://chat.deepseek.com/a/chat/s/84c31b44-3b08-4cde-921f-01f077639dca
+2025-03-26
+
+使用 gitlab  或 github 的 monorepo 项目, 怎么能在 目录或文件级别 做文件可见性的权限控制, 或者怎么监控文件是否被下载和转存到其他地方去过?
+Git子模块（git submodule）或子树（git subtree）的使用区别?
+https://chatgpt.com/share/67e401da-969c-8008-bb41-ad633ded15e8
+https://chat.deepseek.com/a/chat/s/0b84021f-9c40-416f-8203-cde1b0009754
+git submodule 示例 https://github.com/eclipse-ecal/fineftp-server
+2025-03-26
+
+在 monorepo 项目中 别人误改代码, 特别是 增删 代码时间差, 不会出现 git 合并冲突提示. 这些问题怎么解决?
+https://grok.com/share/bGVnYWN5_4183142b-9444-44e5-a1bf-8df9eaab4eb0
+https://chat.deepseek.com/a/chat/s/95cd77b8-83cc-4d77-b070-f01354419422
+https://chatgpt.com/c/67e2730c-bfb4-8008-804a-c72b94bd9469
+https://github.com/Wilfred/difftastic
+[SonarQube](https://docs.sonarsource.com/)
+Codeowners
+2025-03-25
+
+lerna publish from-git from-package 详解?
+为什么 from-git 适合 自动化 cicd 场景?
+使用 from-package 时, --ignore-changes 为什么不起作用?
+https://chat.deepseek.com/a/chat/s/f8b25b55-f0f0-4851-a901-0156ddd8f5d8
+2025-03-19
+
+使用 Nx 进行构建时，.nx 目录用于存储与构建相关的缓存和数据 .nx/cache/ .nx/installation/ .nx/workspace-data/ 这些目录包含特定于本地环境的临时文件，不适合纳入版本控制。在 .gitignore 里忽略掉.
+使用 Nx 提供的分布式缓存功能，在团队内部共享缓存.
+2025-03-13
+
+lerna 运行完 根目录的 version 钩子后, 虽然提示了要修改文件的版本号, 但程序那一刻 看起来还没有改动完成相应文件, 什么时候文件内容会被实际改掉? 改成 postversion 也不行.
+2025-03-11
+
+lerna 在 preversion 阶段会执行 package.json 里的 scripts, 但不希望明确写这个 scripts, 而是想由另一个脚本 动态设置 scripts 后传递给 lerna , 这样能实现吗?
+https://chat.deepseek.com/a/chat/s/aaea4f5c-0d71-4b54-b8f0-a6fc1d771ef1
+https://chatgpt.com/c/67ce9933-a260-8008-8046-cff83664fe40
+2025-03-10
+
+lerna 在更新版本时候, 有什么钩子函数, 能打印出来新旧版本号吗?
+现在是 lerna 结合 pnpm 的 monorepo 项目, 不想在每个子包都重复写 scripts 怎么能统一解决?
+2025-03-09
+
+前端组件库 monorepo 包含 50 个组件, 都位于一个 git 仓库里. 而传统的组件库 50 个组件分别位于 50 个 git 仓库里.
+使用 云服务器 对 monorepo 仓库一次性构建 50 个组件, 和对传统的 50 个 git 仓库的组件分别进行构建.
+能节省哪方面资源, 节省多少?
+https://chatgpt.com/share/67c6c45a-cc9c-8008-86c7-60b6ef688619
+https://grok.com/share/bGVnYWN5_a947bd4d-8829-4cbe-af01-0e9dbcef16c3
+https://gemini.google.com/app/95b09bd5710e389f
+2025-03-03
+
+运行 pnpm -r run build 构建问题.
+在 monorepo 里运行 pnpm run build 时, 因为有对 build 出的目录删除操作, 如果不设置 workspace-concurrency=1 就会报错, 但设置后速度就很慢. 应该怎么解决?
+https://gemini.google.com/app/f37076c19be3c895
+2025-04-11
+在 npmrc 里设置 `workspace-concurrency=1` (注意与`--parallel`区别) 的用途:
+- 避免并发引发的竞态问题: 各个子项目在构建、清理或其他任务中可能存在共享资源（比如同一个目录、文件或网络资源）的写入冲突，强制串行执行可以防止由于并发操作带来的竞态条件和文件锁冲突。
+- 任务之间存在依赖或副作用: 当某些任务必须按照严格的顺序完成，或者前一个任务的产物会影响下一个任务的执行.
+在设置 pnpm 的 workspace-concurrency = 1  时候, 怎么利用 nx 能缓存构建结果加速构建过程?
+2025-03-13
+pnpm -r run build 怎么先构建被依赖的包?
+对于 npm alias 形式的依赖, 没有先构建 dependencies 是怎么了?
+2025-02-28
+使用 pnpm 未把 dependencies 构建完成,而导致 dependent 构建失败的问题
+https://stackoverflow.com/questions/72216431/how-to-control-pnpm-workspace-build-order
+2025-02
+
+lerna version 不能自动更改 npm alias 的版本号, 怎么解决这个问题? 怎么解决?
+除了 lerna 有其他类似工具能解决这个问题吗?
+https://grok.com/chat/8e0fc14a-3f17-40a2-b7c5-99463c153087
+https://grok.com/share/bGVnYWN5_2285de9a-750d-409c-a6a1-0c33cd067f1e
+https://chat.deepseek.com/a/chat/s/e1bbf052-b8a7-4064-81f9-b7fc3bfc426f
+2025-02-26
+
+monorepo same package name multiple version coexist
+除了使用 npm alias 功能外, 还有其他办法吗? 使用中文回复.
+...
+通过以上提到的哪种方法, 能够解决如下报错
+npm ERR! code EDUPLICATEWORKSPACE
+npm ERR! must not have multiple workspaces with the same name
+...
+使用 lerna 和 pnpm 并加入 project.json 文件, 可以让多个子包 package.json 有相同的 name 和不同的 version. 除此之外,还有更多的实现办法吗?
+...
+参考 https://stackoverflow.com/questions/26414587/how-to-install-multiple-versions-of-package-using-npm
+回复最好 https://gemini.google.com/app/4c2ea1e657922b90
+2025-02-24
+
+npm yarn 和 pnpm 的 lock 文件内容结构详细解释?
+现在使用 pnpm 工具, 有两个环境, 比如 A 环境 registry 是 https://ra.com 生成了 lock 文件. 但 B 环境 registry 是 https://rb.com , 希望复用 A 环境生成的 lock 文件, 怎么做到? pnpm-lock.yaml 文件里的 tarball 地址, 怎么能不区分 ra rb 的域名?
+需要在 monorepo 里存在 同名包的 不同版本, 怎么实现?
+lerna 和 pnpm 支持 通过 project.json 能让存在 同名包的 不同版本, 使用 npm 能做到吗?
+2025-01 https://chatgpt.com/c/677fbce1-c1d8-8008-ba11-f56bad58fa80
+
+monorepo 忽略了 samples 子目录, 但在 samples/xx 里运行 pnpm install 还是会根据根目录的 pnpm-lock 安装依赖, 怎么避免这个问题?
+2024-12
 
 
 
@@ -5939,8 +5937,9 @@ git reflog  # 撤销 reset 时 找到撤销前的 commit_id 再 git reset 即可
 # 在 git rebase 之后，标签可能会指向新的历史中任何分支都无法访问的提交。在 rebase 后的历史中，这些标签有时被称为“悬空的”或“孤立的”。然而，标签本身仍然存在于仓库中。
 git tag v1.0  # 给当前分支最新 commit 打 tag
 git tag v1.0 commit_id  # 给当前分支 某个 commit_id 打 tag
-# 打 annotated tags
+# 打 annotated tags  使用 git show tag_name 会看到包含 tagger 标记
 git tag -a 0.0.1 -m 'Release version 0.0.1'
+git tag -a -m '@pkg/xx@0.1.16' @pkg/xx@0.1.16
 git tag -a @pkg/xx@0.1.16 -m '@pkg/xx@0.1.16' 4da6c3d4 -f
 # 推送 tags
 git push [origin] --tags    # 推送所有标签到服务器
@@ -5960,8 +5959,12 @@ git tag --sort=-creatordate | head -n 5 | awk 'BEGIN{printf "["} {printf "%s\"%s
 git for-each-ref --sort=-creatordate --count=5 --format='%(refname:short) %(objectname)' refs/tags
 git for-each-ref refs/tags/ --format='%(refname:short) %(objectname)'
 # 查看 tag 信息
-git show-ref --tags
+git describe --first-parent
+git describe --all  # 查找所有分支上的标签
 git describe --tags
+git describe --tags HEAD
+git describe --tags --match "xx"  # 仅匹配名称包含 "xx" 的标签
+git show-ref --tags
 git tag -v xx@0.1.1  # 非 annotated tags 会报错 error: cannot verify a non-tag object
 
 # 查看当前分支上有哪些 tags
@@ -5998,7 +6001,12 @@ git reflog show branch1 -n5 | grep 'rebase'
 # GitHub Issues blog https://gitblog.io/
 ```
 
+git 出现合并冲突时候, ff 和 no-ff 等操作过程和原理是什么? 图示演示一下.
+2025-04-23
 
+当前 head 的 commit 是 Merge branch , 前一个 commit 也是 Merge branch, 而 tag_name 是在第三个 commit 上. git diff tag_name 是空, 为什么?
+是因为 当前工作目录或暂存区与标签对应的提交之间没有文件内容差异。
+2025-04-22
 
 本地 git tag tag_v1 commit_id1 后, 运行了 git rebase 导致 commit_id1 不存在了, 那么 tag_v1 能通过哪些方法获取到? git show tag_v1 可查看, tag_v1和commit_id1都还在仓库里.
 如果运行 git push --tags 那么 这个 commit_id1 也会被推送到 remote 仓库里吗? 会的, 但这个 commit 不再由任何分支引用 不可达 (dangling objects) . 如果引用它的 tag 也被删除, 那么一段时间后（经过垃圾回收）该 commit 就会被清理掉.
@@ -6036,6 +6044,15 @@ rebase进阶技巧
 2025-02-16 git 操作 https://m.toutiao.com/is/JG7lVw39SZU/
 
 
+js工具库代码最新版本是 3.x，但需要修复很久之前的 1.x 版本的 bug，当前只有 master 分支，怎么用 git 管理老版本的代码升级？  LTS（长期支持）策略 详解。
+如果是 monorepo 项目，应该采用什么策略？
+在老的 1.x 分支上拉了代码做改动，合并到 master 产生了大量冲突，怎么解决？
+怎么在 git 提交历史中插入一个提交？
+怎么把 某个 commit 改动的文件，应用到另一个分支上、但不携带改动之前的历史信息。
+以上合并方式是什么？把改动的文件内容全覆盖，还是对改动的某些行进行交集合并，删除的文件或内容怎么处理？
+https://chatgpt.com/share/673dd191-0d74-8008-a826-16844c0b9bb5
+2024-11
+
 - 一板基础斧 add，commit，pull/push，checkout，revert
 - 二板合作斧 merge，rebase，stash，cherry-pick
 - 三板优雅斧 commit --amend，rebase -i
@@ -6048,22 +6065,39 @@ rebase进阶技巧
 ## p/npm
 
 https://docs.npmjs.com/cli/v10/using-npm/config
-https://pnpm.io/npmrc
+https://docs.npmjs.com/cli/v10/configuring-npm/package-json
+https://pnpm.io/settings
 pnpm v7 文档 https://github.com/pnpm/pnpm.io/blob/v7/docs/npmrc.md
 
 .npmrc 文件:
 ```sh
+update-notifier=false
 ignore-scripts=true
 legacy-peer-deps=true
-# pnpm
-node-linker
-verify-deps-before-run
-resolution-mode
+package-lock=false
+omit-lockfile-registry-resolved=true  # npm 特有
+engine-strict=true  # 对 package.json 里的 "engines": { "node": ">=18" } 这个起作用
+# package.json 里设置 "packageManager": "pnpm@7.33.7" 会使得 在当前目录运行 pnpm -v 始终是 7.33.7 而忽略系统安装的 不同 pnpm 版本. 原因是 https://github.com/nodejs/corepack
+
+# pnpm 特有配置:
+link-workspace-packages=deep
+reporter=append-only
+verify-deps-before-run=install  # verifyDepsBeforeRun
+workspace-concurrency=1  # default: Infinity
+# enable-pre-post-scripts=true
+# package-manager-strict=true  # since v9 默认 true , v10 packageManagerStrict
+# resolution-mode=lowest-direct
+# lockfile-include-tarball-url=false
+# public-hoist-pattern[]=@types*
+# hoist-pattern[]=*
+# hoist-pattern[]=!@types/react-dom
+# hoist-pattern[]=!@types/react
 ```
 
 ```sh
 # https://docs.npmjs.com/cli/v10/commands/npm
 rm -rf node_modules **/node_modules
+# install 时除了 可选依赖 (optionalDependencies) 其他遇到 404 会报错退出.
 npm install --verbose > install.log
 # 别名安装 package.json 文件 "dependencies": { "@aa/yy": "npm:@bb/yy@^2.0.1" }
 npm install axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
@@ -6084,6 +6118,8 @@ npm config get //registry.npmjs.org/:_authToken
 # [npm源](http://registry.npmjs.org/esbuild/0.21.4)
 # [腾讯源](https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4)
 npm search @ant-design --searchlimit=100 --json  # 搜索组织下的包
+# npm publish 时使用的 registry 与 npmrc 里的 registry 和 @scope/registry 哪个起作用?
+# 命令行 --registry > @scope:registry > 全局/项目级 registry > npm 官方 registry
 
 # npx 用法: 会自动在项目的 node_modules/.bin 目录中查找可执行文件
 npx ls  # 等同于 ls
@@ -6105,6 +6141,7 @@ npm version prerelease --preid rc --no-git-tag-version
 # pnpm(v7+) 的 Isolated 即通过 node-linker=hoisted 设置 每个子包的 node_modules 只存自己依赖的软链接  没有 hoist 到顶层
 ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
 
+pnpm store prune
 pnpm install --frozen-lockfile  # 流水线里安装
 
 pnpm ls  # 列出 package.json 中声明的直接依赖
@@ -6115,7 +6152,8 @@ pnpm ls --depth Infinity fast-glob  # 等效于 pnpm why fast-glob -r
 pnpm ls --depth Infinity -r  # 显示完整的依赖树
 pnpm ls -r -P --only-projects  # 查看 内部 互相依赖的包
 # 包之间互相依赖时, 查看哪个包需要先被 build
-pnpm ls --recursive --parseable --only-projects
+pnpm ls -r -P --only-projects --parseable
+pnpm ls -r -P --only-projects --filter "@xx/yy"
 
 # pnpm 处理 workspaces ( pnpm>9.0 link-workspace-packages 默认为 false )
 pnpm run script-name --filter workspace-name
@@ -6138,7 +6176,31 @@ pnpm up -r "@ant-design/pro-*@beta"  # 升级到 beta rc
 pnpx create-react-app@next ./my-app
 pnpm dlx create-react-app@next ./my-app
 pnpm --package cowsay --package lolcatjs -c dlx 'echo "hi pnpm" | cowsay | lolcatjs'
+# 导入 npm lock 为 pnpm lock 文件
+pnpm import package‑lock.json / npm-shrinkwrap.json
 ```
+
+
+为什么使用 ^2.2.12-alpha.3 在 npm install 时候安装的不是指定的这个版本?
+2025-04-21
+
+pnpm 里没有和 npm 的 omit-lockfile-registry-resolved 一样作用的配置吗?
+pnpm 能生成和使用 npm-shrinkwrap 文件, 代替 lock 文件使用吗?
+2025-04-16
+
+项目 package.json 里的 packageManager 作用, 为什么能让系统安装的 pnpm 版本不生效?
+2025-04-15
+
+npm install 时生成的 lock 文件里每个包的 integrity 字段用于确保包文件的完整性，其值通过特定算法计算文件内容的哈希值生成。包内容相同则 integrity 相同，与不同的 registry 无关 与 yarn pnpm 等包管理器无关. 若内容有差异（如恶意篡改、非官方修改版 即使版本号相同），则 integrity 不同。
+是 npm 利用 integrity 防止包被恶意篡改的核心机制。
+怎么能不生成 package-lock.json 文件里的 resolved 和 pnpm-lock.json 文件里的 tarball 字段?
+https://github.com/npm/npm/issues/16849
+2025-04-15
+
+pnpm install 后的 lock 文件里的 tarball 字段的生成规则是什么?
+生成的结果是 tarball: npm/@types/babel__traverse/-/babel__traverse-7.20.7.tgz 但实际多了 npm/ 前缀, 是什么原因? 这个前缀导致下载这个包时报了 404 错误.
+虽然有 npm/ 前缀, 在本地电脑运行 pnpm install 不会报错, 但在流水线里会报 404 错误. 什么原因?
+2025-04-14
 
 在 pnpm(v7) + lerna 的 monorepo 项目, 为了能让各个子包 使用各自不同的 react 版本,
 在子包 package.json 的 devDependencies 里安装 @types/react 包,
@@ -6162,6 +6224,45 @@ https://gemini.google.com/app/c1b7c1ac21903ab2
 [moduleResolution 总结](https://zhuanlan.zhihu.com/p/621795173)
 2025-04-08
 
+npm 和 pnpm 在 .npmrc 文件里 可通用的配置项 都有哪些?
+怎么让 pnpm 保持和 npm 一样的 模块安装方式, 不要有 node_modules/.pnpm 目录.
+2025-04-08
+
+使用 pnpm 安装了依赖, 但在 package.json 的 scripts 里使用 npm run lint, 这样有问题吗?
+如果是 monorepo 项目, 在子包里运行, 怎么查找 bin 下的二进制文件?
+https://chat.deepseek.com/a/chat/s/133eb6d1-d73f-4457-b92a-8a725cad3d1d
+2025-03-13
+
+使用 pnpm 为了避免在 package.json 里声明, 在 postinstall 或 prepare 阶段 安装一个依赖, 怎么能避免自动修改 lock 文件.
+... 结果
+"scripts": {
+"postinstall": "pnpm install nx@latest --lockfile=false --ignore-workspace --dir ./tmp",
+}
+https://chatgpt.com/c/67cd4e89-f4a4-8008-b5e1-89bfe0c831a8
+https://chat.deepseek.com/a/chat/s/3c5acb32-1b6b-4e8c-9808-25ebc8f419d8
+https://gemini.google.com/app/9f8cca7169306de3
+2025-03-09
+
+pnpm monorepo 怎么查看除了内部 link 包之外的其他包依赖, 在 registry 是否存在?
+如果没有直接的命令, 写一个 node js 脚本来实现.
+...
+内部链接的版本号, 可以以 workspace: 或 file: 开头, 但也可以不是以它们开头.
+因为 pnpm 提供了 prefer-workspace-packages 和 link-workspace-packages 设置, 能够自动匹配引用 monorepo 内部有相同包名的其他 package. 怎么识别并处理这种情况?
+...
+包所在不一定只是 packages 目录内, 而是在 pnpm-workspace.yaml 配置中指定的, 可以通过 pnpm list --json -r 来获取所有内部包, 基于此再做过滤.
+...
+https://chat.deepseek.com/a/chat/s/f2241a08-daf7-4c21-b266-ef53b3d836e6
+2025-03-06
+
+使用 pnpm install 的库, 存在 ./node_modules/.pnpm 目录, 再使用 npm ls xx 会把这个目录里的依赖展示出来, 不符合预期. 但使用 pnpm ls xx 结果是空. 应该怎么处理?
+https://gemini.google.com/app/720af5db3d7cb736
+2025-03-04
+
+npm 的 dependencies 写了 latest, 是怎么解析版本的?
+如果 最新发布的版本 是个 alpha 但不是 latest 标签, 会对它做解析吗?
+这个最新的 alpha 版本的依赖有缺失, npm install 包的 latest 版本时, 实际不应安装这个 alpha 版本, 但 先对这个 alpha 版本 报错 No matching version found, 导致 安装失败. 是为什么?
+2025-02-13 https://chatgpt.com/share/67ad9bcd-913c-8008-aa33-1edb177b7203
+
 npm install --legacy-peer-deps
 npm v7+ 默认 自动安装各个包的 peerDependencies 但使用了 --legacy-peer-deps 则不会安装,
 需要 包使用者(比如业务仓库) 在 dependencies 或 devDependencies 中自行安装.
@@ -6171,6 +6272,15 @@ npm v7+ 默认 自动安装各个包的 peerDependencies 但使用了 --legacy-p
 https://www.npmjs.com/package/npm-check
 https://www.npmjs.com/package/depcheck
 2025-01
+
+前端或 node 项目, 引用A包的时候，比如A引用了B，B里面有overrides/resolutions，最终会装 overrides / resolutions 指向的包吗?
+主项目的 overrides/resolutions 优先级最高，覆盖所有依赖。
+如果主项目没有定义，子依赖的 overrides/resolutions 只会影响其自己的依赖树。
+...
+怎么在运行 npm start / build 之前, 确保 node_modules 里的依赖有被重新 insall 过
+2025-01
+
+
 
 
 
@@ -6312,6 +6422,121 @@ type IDashboardNameProps = {
 ```
 
 
+文件示例
+
+types.ts
+
+```ts
+export interface Config {
+  dr: 'cn' | 'us' | undefined;
+  env: 'prod' | 'testing' | 'local';
+  serviceName?: string;
+  [property: string]: any;
+}
+```
+
+css-modules.d.ts
+scss.d.ts
+
+```ts
+// declare module '*.module.scss' {
+declare module '*.module.css' {
+  const classes: { [key: string]: string };
+  export default classes;
+}
+
+declare module '*.scss';
+declare module '*.less';
+```
+
+declare.d.ts
+
+```ts
+declare namespace DApi {
+  namespace dStyle {
+    interface Req {
+      id?: number;
+    }
+    type Res = typeof import('./dStyleDTO').dStyleDTO.Res;
+    type Fn = TFN<Req, Res>;
+  }
+}
+```
+
+dStyleDTO.ts
+
+```ts
+import { IsBoolean, IsOptional } from 'class-validator';
+export namespace dStyleDTO {
+  export const Res = Boolean();
+  export class Response {
+    @IsBoolean()
+    @IsOptional()
+    res?: typeof Res;
+  }
+}
+export const dStyle: DApi.dStyle.Fn = (params, options) => {
+};
+```
+
+typings.d.ts
+
+```ts
+declare module 'classnames';
+declare module 'uuid';
+
+interface Window {
+  DarkReader: any;
+}
+
+declare module '*.html' {
+  const rawHtmlFile: string;
+  export = rawHtmlFile;
+}
+
+declare module '*.jpeg' {
+  const src: string;
+  export default src;
+}
+
+declare module '*.webp' {
+  const src: string;
+  export default src;
+}
+
+declare module '*.module.css' {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module '*.module.less';
+declare module '*.module.less' {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare namespace modalManageType {
+  interface ModalConfigObj {
+    isModalManager?: boolean;
+    promise: ModalPromiseObj;
+    onCancel?(): void;
+  }
+
+  interface OpenConfigProps {
+    componentProps: ComponentProps;
+    component: any;
+  }
+
+  interface ModalPromiseObj {
+    resolve(data?: any): void;
+    reject(error?: any): void;
+  }
+
+  interface ComponentProps {
+    [key: string]: any;
+  }
+}
+```
 
 
 
@@ -6321,20 +6546,12 @@ type IDashboardNameProps = {
 
 ## 软件
 
-手机/Windows
 
-- 小米桌面 https://hyperos.mi.com/continuity/abilities/ab0016
-- Android软件: MX播放器(VLC不能播放加密文件)  微动手势(允许后台弹出界面和显示悬浮窗), automate, quick cursor, kwgt, popup widget, macrodroid, tasker(收费), easytouch, anywhere。
-- Android 反编译 apk 工具：apktool / dex2jar / jd-gui / http://www.javadecompilers.com
-- iOS 快捷指令
-  - 同步: Apple ID -> iCloud -> 使用iCloud的APP -> 显示全部 找到 快捷指令 勾选同步。
-  - 朗读的 声音大小和siri一样，不受设置里声音大小的控制，通过设置 Siri 的声音来控制。
-- 小米多看电纸书[一代](https://item.jd.com/100010633100.html)、安装app[方法](https://www.bilibili.com/video/av893445949/)
-- 支持 Mac + Win 读写的U盘格式: exFAT FAT32 NTFS(软件 ntfstool / ParagonNTFS )
-- 2024-04 [Win系统安装盘](https://zhuanlan.zhihu.com/p/273305963)、系统[下载地址](https://hellowindows.cn/)，电脑开机(按F12)设置U盘优先启动。
-- 2023-11 尝试了 百度/腾讯/中国移动 等网盘，因为广告多 文件支持度不够 放弃，最终使用 微软云盘。
-- 2022-09 iPhone 恢复出厂设置后，系统软件版本是 iOS 最新版 不是出厂时旧版本。 连接数据线恢复备份的文件后，各个第三方app仍然需要重新下载、如有卡死状态 用手机网络 先下载重要app 其他暂停.
-- 2022-05 惠普z27k显示器 typec 100w 输出功率 能给电脑充电
+Android 软件: MX播放器(VLC不能播放加密文件) AirDroid 微动手势(允许后台弹出界面和显示悬浮窗), automate,, kwgt, popup widget, macrodroid, tasker(收费), easytouch, anywhere . 反编译apk: apktool/dex2jar/jd-gui/javadecompilers
+
+iOS 快捷指令
+- 同步: Apple ID -> iCloud -> 使用iCloud的APP -> 显示全部 找到 快捷指令 勾选同步。
+- 朗读的 声音大小和siri一样，不受设置里声音大小的控制，通过设置 Siri 的声音来控制。
 
 macOS 设置
 
@@ -6390,9 +6607,22 @@ Mac smb 文件共享(速度约1M/s较慢): 在需要共享文件的 Mac 上打�
 谷歌账号在注册的时候就确定了关联的国家与地区，属于哪个国家地区和当时注册ip手机环境有关系。以下是查看当前 Google 账号的归属地方法：登录 Google 账号，打开 Google 搜索首页 点击 首页右下角 条款  在新页面显示出 国家/地区版本：香港
 2024-11-14
 
+2024-04 [Win系统安装盘](https://zhuanlan.zhihu.com/p/273305963)、系统[下载地址](https://hellowindows.cn/)，电脑开机(按F12)设置U盘优先启动。
+
+2023-11 尝试 百度/腾讯/中国移动 网盘，广告多 文件格式支持少，最终使用 微软云盘。
+
+小米多看电纸书[一代](https://item.jd.com/100010633100.html)、安装app[方法](https://www.bilibili.com/video/av893445949/)
+2022-09
+
+2022-09 iPhone 恢复出厂设置后，系统软件版本是 iOS 最新版 不是出厂时旧版本。 连接数据线恢复备份的文件后，各个第三方app仍然需要重新下载、如有卡死状态 用手机网络 先下载重要app 其他暂停.
+
+2022-05 惠普z27k显示器 typec 100w 输出功率 能给电脑充电
+
 光猫设置：电脑先连上网线(Mac需要USB转网线接口)，打开“网络偏好设置”确认“Apple USB以太网转接器”已连接，可以打开百度测试。浏览器打开 192.168.1.1 填写 username=useradmin userpwd=p4!3nkGM 登录成功，找到“网络”打开“WLAN2.4G网络配置”打开“功能开关”选中“广播取消”不选“WPS使能”，则开启了无线网并隐藏了WiFi名字。ssid1=CMCC-iheD&wifipwd=GVuhSxC2
 破解移动宽带光猫 GS3101 超级管理员密码：brew install telnet  ->  telnet 192.168.1.1  ->  账号密码 admin s2@We3%Dc#  ->  输入cat /tmp/ctromfile.cfg | grep 'Admin'  ->  打开 http://192.168.1.1/cgi-bin/getGateWay.cgi 输入超级账密 CMCCAdmin  CMCCAdminSz8Zv6*q (参考 https://www.cnblogs.com/scoluo/p/13945175.html ) 最终发现 usb 口仍然不能当U盘使用。
 2020-11 / 2023-12-10
+
+2019 支持 Mac + Win 读写的U盘格式: exFAT FAT32 NTFS(软件 ntfstool / ParagonNTFS )
 
 MacBookPro (Retina, 13-inch, Late 2013) 处理器 2.4 GHz 双核Intel Core i5 内存 8 GB 1600 MHz DDR3 图形卡 Intel Iris 1536 MB  序列号 C02LL67AFH00  Designed by Apple in California Assembled in China Model A1502 EMC 2678 Rated 16.5V === 3.65A max. Contains FCC ID: QDS-BRCM1069 and IC: 4324A-BRCM1069 CAN ICES-3 (B)/NMB-3(B)
 2013-11 自己电脑
@@ -6403,7 +6633,7 @@ tplink-WR720N(迷你型无线路由器) 默认管理IP: 192.168.1.253 子网掩�
 2012 小路由器
 
 
------- vscode chrome
+------ vscode / chrome
 
 https://code.visualstudio.com/updates/
 
@@ -6833,48 +7063,117 @@ Charles
 
 
 
------- 图片
-
-- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
-- [颜色选择](https://htmlcolorcodes.com/zh/)
-- [flickr](https://flickr.com)
-
-文字图
-
-- [asciiart](https://asciiart.website) [figlet](http://www.figlet.org/examples.html) [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
-[生成logo](https://www.logo.surf/)
-
-markdown 表情 :+1: :smile: :smiley: :laughing:
-- [emojispark](https://emojispark.com/)
-- [emoji8](https://emoji8.com/zh-hans/)
-- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-网页版微信 https://wx.qq.com/ 能收到的表情包拖到电脑桌面保存.
 
 
------- cdn
+## 常用命令
 
-https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
-https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
-https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
-https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
+- Unix 遵循的原则是 KISS (Keep it simple, stupid) do one thing and do it well。
+- Linux 严格区分大小写。所有内容以文件形式保存，包括硬件。如：键盘 /dev/stdin 显示器 /dev/stdout
+- Linux 不靠扩展名区分文件类型，靠权限区分。（ .gz .tgz .sh 等文件扩展名只是为了方便管理员查看 ）
+  - bash 文件 想在 mac 上双击可执行(调用系统terminal)，需要去掉文件后缀名。
+- shell 是一个命令行解释器。shell 是壳，kernel 是内核。shell 把用户敲进去的命令、翻译为 linux 内核能识别的语言。 sh: Bourne Shell 的缩写，可以说是目前所有 Shell 的祖先。 bash : Bourne Again Shell 的缩写，是 sh 的一个进阶版本。
+- [vim 键盘图](https://zos.alipayobjects.com/rmsportal/MOPJrAnojdFvAToZkESi.gif) vi编辑器使用color-scheme `:colo desert` 或者 配置 `~/.vimrc` 为 `colo desert` + `syntax on` 。
+- 不同平台安装包
+  - macOS `brew install jq`
+  - Ubuntu/Debian `sudo apt-get install jq`
+  - CentOS/Fedora `sudo yum install jq`
+- 在 Windows 上 哪些流行的 terminal 能和 macOS Linux 的 terminal 兼容?
+  - Windows Terminal / WSL（Windows Subsystem for Linux）/ Git Bash
 
-[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
-https://unpkg.com  https://cdnjs.com  https://jshub.com  https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org  https://upcdn.b0.upaiyun.com
-https://cdn.bytedance.com  https://www.webcache.cn
-http://cdn.staticfile.org/angular.js/1.2.16/angular.js
-http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
-http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
-https://code.jquery.com/ui/1.13.0/jquery-ui.js
-jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
-https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
-https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
-qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
-less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
-bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
-bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
+[Zsh 和 Bash 的不同](https://xshell.net/shell/bash_zsh.html)
+
+bash 脚本 env 优先级
+- node: 命令行的 environment 配置 > 文件 `/path/to/my/project/.npmrc` > 文件 `~/.npmrc` > 文件 `/etc/npmrc` 逐级覆盖
+- 其他: zshrc / bashrc 同理
+
+bash 语句中的符号:
+- 分号(;) 无论前一个命令是否成功，都会执行下一个命令。
+- 双与号(&&) 只有当前一个命令执行成功 (返回值 0) 时，才会执行下一个命令。
+- 双管道(||) 成功时执行 A，失败时执行 B `mkdir mydir && echo "创建成功" || echo "创建失败"`
+
+
+```sh
+
+env / w / who / whoami / tty / last / mtr -r
+echo "system: $HOME $PATH $SHELL"
+printenv HOME  # 打印环境变量
+printenv | grep npm_config  # 查看所有 npm 设置的 env
+
+# Process status
+ps -ax
+ps aux | grep xx.sh  # 列出正在运行的脚本进程
+ps aux | grep "xx" | grep -v grep  # 排除 grep 本身的进程
+ps -ef | grep ttyd
+ps -ef | grep adb  # 有时候 adb devices 没反应 需要杀掉进程重启
+
+pgrep -x 'ClashX'  # 获取应用的 pid
+pgrep -f "ttyd zsh"  # -f 匹配完整的命令行
+pgrep -f "ttyd -t disableLeaveAlert=true zsh"  # 参数解析后不一样 这里匹配不到
+pgrep -f "ttyd zsh"> /dev/null  # 只返回输出码
+pgrep -fx "ttyd -p 9999 -W -a zsh"
+pgrep -u "$USER" -f "ttyd"
+pgrep -u "$USER" -fx "ttyd -p 9999 -W -a zsh"
+
+lsof "$z_log"
+# z_log 文件正被进程 ttyd 打开, 文件描述符 1w 和 2w 表明它正在被用作标准输出和标准错误的重定向.
+# 这时候 z_log 文件不能被其他进程 以 > 方式 写入内容, 改为 truncate -s 0 "$z_log" 处理.
+# COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+# ttyd    1245  hua    1w   REG    1,6  16 65909077 /Users/hua/xx/z_log
+# ttyd    1245  hua    2w   REG    1,6  16 65909077 /Users/hua/xx/z_log
+
+lsof -i :8087   # 查找出占用了某个端口的程序和其对应的PID
+kill 3747  # 杀掉 进程id
+kill -9 *pid*  # 强制杀掉进程
+pkill -P $$  # 杀掉当前 shell 启动的所有子进程
+# 用 tmux 或 screen 可以让你在一个 shell 中开多个会话
+
+
+top #  man top
+top -l 1 -o cpu | head -n 20
+top -l 1 -stats pid,cpu | head -n 20
+say hello
+open -a Activity\ Monitor # 打开活动监视器 或者 "Activity Monitor"
+
+# defaults read 查看系统设置
+defaults write com.apple.screencapture type jpg
+defaults write com.apple.screencapture location ~/Downloads/
+defaults write com.apple.Music autoPlay -bool false
+
+ifconfig  # 查看本机内网IP
+curl ipinfo.io/json  # curl ifconfig.me  查看本机公网IP
+traceroute baidu.com  # 查看域名路由 或 `ping baidu.com`
+
+sudo mount -uw /  # 挂载系统分区为可写
+/sbin/mount -uw /
+mount | grep /  # 查看系统挂载状态
+
+pmset noidle # 阻止电脑睡眠 同时按住 shift、control、电源键，关闭显示器
+
+timeout 3600 some-command
+zip -e output.zip ~/xx.txt  # zip加解密
+
+
+history 10 # 列出10条
+
+# ls 命令默认只显示文件名
+ls /usr/bin  # 有 env
+ls /usr/local/bin  # 有 node npm npx
+ls -d $PWD/*
+ls -la
+ls -l "$z_log"  # 查看文件是否有 读写权限，如无 运行 chmod u+rw "$z_log"
+ls /Volumes/Macintosh\ HD/Applications
+
+cat -n fname
+mv fname rename
+more filename # 一页一页的显示档案内容.
+head/tail -n 20 ~/.zsh_history  # 只看 头/尾 几行(默认10行)
+
+mkdir -p ~/inner/aa && touch $_/file.txt  # 创建目录并能生成文件
+rm -rf xx # rm 删除不存在的文件或目录 加上 -f 不会报错
+ln -s source_file dist
+```
+
+
 
 
 
@@ -7438,9 +7737,10 @@ if (quote.length > 80) {
 
 
 
-## 命名 / prd / plantuml
 
-aids / facilities / Misc / Vendor / shared / base / core
+## 命名 / 图片 / prd plantuml
+
+aids / facilities / Misc / Vendor / base / core
 data-commons / data-utils / http-utils / json-helper
 integration / integrate / legacy
 
@@ -7481,6 +7781,72 @@ consts / constants - 常量：存放程序中不会改变的值。
 enums - 枚举：存储枚举类型的模块。
 templates / views - 模板/视图：在Web开发中，存放HTML模板或其他类型视图文件的目录。
 primitives - 基础工具：包含一些基础且常用的处理数据、字符串等的基础方法。
+
+
+2024-lerna
+
+|- packages/
+│  |─ demo/
+│  |─ demo1/
+|- shared/
+│  |─ utils.ts
+|- tests/
+│  |─ setupTests.ts
+|- typings/
+│  |─ css-modules.d.ts
+│  |─ scss.d.ts
+|- .gitignore
+|- .npmrc
+|- tsconfig.json
+|- typings.d.ts
+|- vitest.config.ts
+
+
+------ 图片
+
+- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
+- [颜色选择](https://htmlcolorcodes.com/zh/)
+- [flickr](https://flickr.com)
+
+文字图
+
+https://ascii-tree-generator.com/
+- [asciiart](https://asciiart.website) [figlet](http://www.figlet.org/examples.html) [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
+[生成logo](https://www.logo.surf/)
+
+markdown 表情 :+1: :smile: :smiley: :laughing:
+- [emojispark](https://emojispark.com/)
+- [emoji8](https://emoji8.com/zh-hans/)
+- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+网页版微信 https://wx.qq.com/ 能收到的表情包拖到电脑桌面保存.
+
+
+
+------ cdn
+
+https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
+https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
+https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
+https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
+
+[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
+https://unpkg.com  https://cdnjs.com  https://jshub.com  https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org  https://upcdn.b0.upaiyun.com
+https://cdn.bytedance.com  https://www.webcache.cn
+http://cdn.staticfile.org/angular.js/1.2.16/angular.js
+http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
+http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
+https://code.jquery.com/ui/1.13.0/jquery-ui.js
+jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
+https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
+https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
+qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
+less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
+bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
+bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
+
 
 
 

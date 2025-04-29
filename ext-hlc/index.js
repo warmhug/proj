@@ -137,10 +137,6 @@ async function content() {
       "本地文件编辑器"
     ],
     [
-      "https://ai-bot.cn/daily-ai-news/",
-      "AI新闻"
-    ],
-    [
       "https://www.baidu.com/s?wd=%E6%97%A5%E5%8E%86",
       "日历"
     ],

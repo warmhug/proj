@@ -33,6 +33,8 @@ npm run pack
 
 ## API
 
+https://github.com/microsoft/vscode-extension-samples/tree/main/shell-integration-sample
+
 有什么 vscode 内置的 api 能临时禁用启用所有插件?
 workbench.extensions.action.disableAllInstalledExtensions
 workbench.extensions.action.enableAllInstalledExtensions

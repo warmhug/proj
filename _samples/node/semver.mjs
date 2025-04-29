@@ -20,6 +20,12 @@ async function test() {
 
   const gtMinors = testVersions.filter(v => semver.gte(v, '0.9.0-beta.4') && v.startsWith('0.9'));
   console.log('gtMinors: ', gtMinors);
+  console.log('log semver.gte: ', semver.gte('1.2.3-beta.0', semver.minVersion('^1.2.2').version));
+  console.log('log semver.gte: ', semver.gte('1.2.3-beta.0', semver.minVersion('^1.2.3').version));
+  console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.2', { includePrerelease: true }));
+  console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.2'));
+  console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.3', { includePrerelease: true }));
+  console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.3'));
   console.log('semver.maxSatisfying: ', semver.maxSatisfying(testVersions, '0.9.*'));
   console.log('semver.maxSatisfying: ', semver.maxSatisfying(testVersions, '0.9.*', { includePrerelease: true }));
   console.log('semver.maxSatisfying: ', semver.maxSatisfying(testVersions, '0.10.*'));
