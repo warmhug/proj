@@ -21,6 +21,10 @@
     "pretty-quick": "^4.0.0",
     "typescript": "^5.4.5"
   },
+  "peerDependencies": {
+    "antd": "^4.24.15 || ^5.11.2",
+    "react": ">=17.0.0"
+  },
   "prettier": {
     "semi": true,
     "singleQuote": true,

@@ -1,38 +1,20 @@
 #!/usr/bin/env bash
 # #!/bin/bash
 # /bin/zsh
-
-# export PATH="/usr/local/bin:/usr/bin:$PATH"
-# export PATH="$PATH:/usr/local/bin:/usr/local"
-
-# bash 处理复杂数据: 在 Bash 3 中 不能直接在函数内部引用或修改外部数组
+#!/usr/bin/env -i bash   # 重置所有环境变量
 
 # 使用 set -e 会使脚本在任何命令返回非零状态时立即退出
 set -e
 
-export TMP_VAR='tmp'  # 在 terminal 里临时设置环境变量
-unset npm_config_registry  # 删除特定 env
-unset npm_config_userconfig  # 删除特定 env
-
-#!/usr/bin/env -i bash   # 重置所有环境变量
+# export PATH="/usr/local/bin:/usr/bin:$PATH"
+# export PATH="$PATH:/usr/local/bin:/usr/local"
 export PATH=/usr/bin:/bin
 export HOME=/home/username
 export TERM=xterm-256color
 
-sh -c "top -l 1 -pid 1234"
-sh -c 'while true; do (ls -la); echo "---- $(date +%H:%M:%S) ----"; sleep 1; done'
-sh -c 'while true; do (top -l 1 -stats pid,cpu,mem,command | grep -v " 0.0 " | head -n 20); sleep 1; done'
-
-bash ./scripts/script.sh # 这么做无效
-[ -s "./scripts/script.sh" ] && \. "./scripts/script.sh"
-
-# 命令行 或 npm script 执行 bash 脚本里的函数
-source script.sh && fn_name
-bash script.sh && fn_name
-bash script.sh fn_name  # 需要在脚本里 $1 为 fn_name 时手动执行一下
-bash -c '. script.sh && fn_name'
-zsh -c "source script.sh; fn_name"
-
+export TMP_VAR='tmp'  # 在 terminal 里临时设置环境变量
+unset npm_config_registry  # 删除特定 env
+unset npm_config_userconfig  # 删除特定 env
 
 type fn_name
 type -a node / pwd
@@ -63,7 +45,7 @@ default_value="default"
 # 使用参数扩展来获取值，若无则用默认值
 value="${1:-$default_value}"
 
-# 数组
+# 数组  # 在 Bash 3 中 不能直接在函数内部引用或修改外部数组
 myArray=("apple" "banana" "cherry")
 myArray+=("element1" "element2" "element3")
 newMyArray=("${myArray[@]}")
@@ -186,8 +168,8 @@ add_blank_lines() {
 
 get_special_files() {
   special_files=(".pnpmfile.cjs" ".npmrc" "pnpm-lock.yaml" ".git")
-  # ignore config
-  # special_files+=($(find packages/*/src -maxdepth 1 -type f \( -name "config.ts" -o -name "config.tsx" -o -name "config.js" \) -o -type d -name "config"))
+  # 2024-08 bash 查找 packages 目录下二级 目录里存在的所有 config.ts congfig.tsx config.js 和 config 目录，排除掉 node_modules 目录。不查找子路径。查找结果 存放到数组里。
+  # special_files+=($(find packages/*/src -maxdepth 1 -type f \( -name "config.ts" -o -name "config.tsx" -o -name "config.js" \) -not -path "*/node_modules/*" -o -type d -name "config" -not -path "*/node_modules/*"))
   # for item in "${special_files[@]}"; do echo "$item"; done
 }
 # get_special_files
@@ -213,14 +195,6 @@ if [[ $string =~ [\u4e00-\u9fa5] ]]; then
 else
   echo "字符串不包含中文"
 fi
-
-# 使用 Node.js 检查字符串是否包含中文字符
-if node -e "let s = process.argv[1]; process.exit(s.match(/[\u4e00-\u9fa5]/) ? 0 : 1)" "$string"; then
-  echo "字符串包含中文字符。"
-else
-  echo "字符串不包含中文字符。"
-fi
-
 
 pnpm i 2>&1 | tee "$sync_log"
 # PIPESTATUS 必须在主 shell 中使用，不能在子 shell 中（包括 {}、() 等）。

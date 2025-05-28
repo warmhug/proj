@@ -1,16 +1,18 @@
 # ext-hlv
 
 文档
-- https://code.visualstudio.com/api/get-started/your-first-extension
-- [configuration](https://code.visualstudio.com/api/references/contribution-points#Configuration-property-schema)
-- [schema](http://json-schema.org/draft-07/schema#)
+- 内置变量 https://code.visualstudio.com/docs/reference/variables-reference
 - 所有内置命令(built-in commands)
   - https://code.visualstudio.com/api/references/commands
   - https://code.visualstudio.com/docs/getstarted/keybindings
   - https://gist.github.com/skfarhat/4e88ef386c93b9dceb98121d9457edbf
+开发
+- https://code.visualstudio.com/api/get-started/your-first-extension
+- [contribution-points](https://code.visualstudio.com/api/references/contribution-points#Configuration-property-schema)
 发布
 - https://dev.azure.com/warmhug
 - https://marketplace.visualstudio.com/manage/publishers/warmhug
+
 
 ```sh
 # 使用 node@16 和 pnpm 会报错，使用 node@18 npm
@@ -40,77 +42,24 @@ workbench.extensions.action.disableAllInstalledExtensions
 workbench.extensions.action.enableAllInstalledExtensions
 
 
-## extension
+## tasks.json
 
-```json
+```js
 {
-  "version": "0.0.1",
-  "name": "ext-hlv",
-  "displayName": "aa-ext-hlv",
-  "publisher": "warmhug",
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "warmhug.demo",
-        "title": "warmhug: demo"
-      }
-    ],
-    "menus": {
-      "editor/title": [
-        {
-          "when": "editorLangId == markdown",
-          "menuPath": "navigation/jumptobookmark",
-          "group": "z_commands",
-          "command": "warmhug.simpleBookmark.list",
-          "title": "%(arrow-right) Jump To Bookmark"
-        }
-      ]
-    },
-    "keybindings": [],
-    "definitions": {
-      "terminalItem": {
-        "type": "object",
-        "required": ["cwd"],
-        "default": {
-          "cwd": "/Users/hua/"
-        },
-        "properties": {
-          "cwd": {
-            "type": "string",
-            "description": "terminal tab cwd",
-            "default": "/Users/hua/inner/"
-          },
-          "name":{
-            "type": "string",
-            "description": "terminal tab name",
-            "default": "~"
-          }
-        }
-      }
-    },
-    "configuration": {
-      "type": "object",
-      "title": "aa-ext-hlv",
-      "properties": {
-        "refDemo": {
-          "anyOf": [
-            {
-              "type": "object",
-              "$ref": "#/definitions/terminalItem"
-            },
-            {
-              "type": "array",
-              "items": { "$ref": "#/definitions/terminalItem" }
-            }
-          ]
-        }
-      }
+  // See https://code.visualstudio.com/docs/editor/tasks
+  // 变量 https://code.visualstudio.com/docs/editor/variables-reference#_input-variables
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run-my-shell",
+      "type": "shell",
+      "problemMatcher": [],
+      "command": "echo  ${workspaceFolder} ${fileDirname} ${file} ",
+      // "command": "./scripts/test.sh",
+      // 命令面板 reload 即可运行
+      // "runOptions": { "runOn": "folderOpen" },
     }
-  }
+  ]
 }
 ```
 
@@ -155,6 +104,25 @@ workbench.extensions.action.enableAllInstalledExtensions
       "command": "workbench.action.toggleAuxiliaryBar",
       // "command": "workbench.action.togglePanel",
     },
+    "Search for selected text": {
+      "command": "commands.openExternal",
+      "args": "https://www.google.com/search?q=${selectedText}",
+      // "args": "https://duckduckgo.com/?q=%21+${selectedText}",
+      // "args": {
+      //   "target": "https://x.com",
+      //   "target": "file:///Users/hua/.zsh_history",
+      //   "app": "google chrome", // Or absolute path
+      // },
+      "statusBar": {
+        "text": "google",
+      },
+    },
+    // "Workspace folder": {
+    //   "command": "workbench.action.openRecent",
+    //   "statusBar": {
+    //     "text": "${workspaceFolderBasename}",
+    //   },
+    // },
     // "Terminal: Run start": {
     //   "command": "workbench.action.terminal.sendSequence",
     //   "args": {
@@ -177,27 +145,6 @@ workbench.extensions.action.enableAllInstalledExtensions
 }
 ```
 
-## tasks.json
-
-```js
-{
-  // See https://code.visualstudio.com/docs/editor/tasks
-  // 变量 https://code.visualstudio.com/docs/editor/variables-reference#_input-variables
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "run-my-shell",
-      "type": "shell",
-      "problemMatcher": [],
-      "command": "echo  ${workspaceFolder} ${fileDirname} ${file} ",
-      // "command": "./scripts/test.sh",
-      // 命令面板 reload 即可运行
-      // "runOptions": { "runOn": "folderOpen" },
-    }
-  ]
-}
-```
-
 ## my.code-snippets
 
 ```js
@@ -213,6 +160,15 @@ workbench.extensions.action.enableAllInstalledExtensions
 		],
 		"description": "Log output to console"
 	},
+  "Multi-line Comment": {
+    "prefix": "comm",
+    "body": [
+      "/*",
+      "$0",
+      "*/"
+    ],
+    "description": "Insert multi-line comment"
+  },
   "import": {
     "prefix": "imp",
     "body": [

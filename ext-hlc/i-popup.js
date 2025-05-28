@@ -49,6 +49,13 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
     chrome.tabs.create({ url, index: tab.index + 1 });
   });
 
+  hl_utils.getLocalIPs(function (ips) {
+    localIP = 'http://' + ips[0] + '';
+    const ipEle = document.querySelector('#ipEle');
+    ipEle.setAttribute('href', localIP);
+    ipEle.innerHTML = localIP;
+  });
+
   chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     // console.log(`Command "${command}" triggered`, window, location.href);
     const clipText = await hl_utils.readClipboardText();
@@ -277,13 +284,6 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
   };
 
   await renderText();
-
-  hl_utils.getLocalIPs(function (ips) {
-    localIP = 'http://' + ips[0] + '';
-    const ipEle = document.querySelector('#ipEle');
-    ipEle.setAttribute('href', localIP);
-    ipEle.innerHTML = localIP;
-  });
 
   const localStorage = await hl_utils.getStorage(null, false);
   const syncStorage = await hl_utils.getStorage(null);

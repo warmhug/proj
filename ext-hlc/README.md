@@ -178,6 +178,21 @@ main();
 ```
 
 
+帮我写 Chrome 插件代码，实现这样的功能：选中一些标签页、把他们的 URL以有序数组形式 存储到 chrome storage 里、同时关闭这些标签页，通过 popup 页面的一个按钮、从数组里恢复打开标签页，并把这些标签页移动到其他已存在标签页的后边。
+2024-07
+
+Chrome Native Messaging 使用 bash 文件的 shebang 地址有问题，怎么让 /usr/local/bin 和 /usr/bin 都能互相调用
+2024-06
+
+豆包+通义千问: 使用 yq 判断 如果rules 里不存在 aaa，则前置插入aaa
+2024-06
+
+
+
+
+
+
+
 ### 2023
 
 [消息通信](https://developer.chrome.com/docs/extensions/develop/concepts/messaging?hl=zh-cn)

@@ -3,11 +3,6 @@
   "name": "ext-hlv",
   "displayName": "aa-ext-hlv",
   "publisher": "warmhug",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/warmhug/aa"
-  },
   "scripts": {
     "pack": "vsce package && code --install-extension ext-hlv-0.0.1.vsix",
     "vscode:prepublish": "npm run package",
@@ -404,5 +399,9 @@
         }
       }
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warmhug"
   }
 }
