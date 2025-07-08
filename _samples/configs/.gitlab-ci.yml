@@ -1,0 +1,29 @@
+stages:
+  - install
+  - lint
+  - test
+  - compile
+
+cache:
+  paths:
+    - node_modules
+
+install:
+  stage: install
+  script:
+    - npm install
+
+lint:
+  stage: lint
+  script:
+    - npm run lint-gitlab
+
+test:
+  stage: test
+  script:
+    - npm run coverage
+
+compile:
+  stage: compile
+  script:
+    - npm run build

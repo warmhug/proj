@@ -2,20 +2,36 @@
 <head>
   <meta charset="UTF-8" />
   <title>我的Tab</title>
+  <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./assets/toastui-editor.min.css">
 </head>
 <body>
   <div id="bookmarks"></div>
 
-  <div class="ce-wrapper">
+  <div class="mynotes">
+    <div class="mynotesMain"></div>
+    <button id="importBtn">load</button>
+  </div>
+
+  <div class="main">
     <div id="sideIframe">
       <div class="iframe-wrap"></div>
     </div>
     <div id="resizerX" style="width: 5px; height:100%; background: red; cursor: col-resize;"></div>
-    <div class="major"></div>
+    <div class="major">
+      <div id="tuiEditor"></div>
+      <div id="iframes"></div>
+    </div>
   </div>
 
   <script src="common.js"></script>
+  <!--
+  // 压缩地址 https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js
+  // api 地址 https://nhn.github.io/tui.editor/latest/
+  -->
+  <script src="./assets/toastui-editor-all.js"></script>
   <script src="index.js"></script>
  </body>
 </html>

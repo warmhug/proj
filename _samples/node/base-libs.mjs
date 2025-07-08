@@ -1,13 +1,35 @@
 #!/usr/bin/env node
-const fs = require('fs');
-import _ from 'lodash';
-import chalk from 'chalk';
-const execa = require('execa');
-const YAML = require('yaml');
+
+// const fs = require('fs');
+// const path = require('path');
+// const execa = require('execa');
+// const YAML = require('yaml');
 // const { chrome } = require('@rookie-rs/api');
+
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+import path from 'path';
+import execa from 'execa';
+import YAML from 'yaml';
+import _ from 'lodash';
+import {glob} from 'glob';
+import chalk from 'chalk';
 import { chrome, brave } from "@rookie-rs/api";
 
-console.error(chalk.blue(message));
+const jss = glob.sync('**/*.js');
+console.log('log jss: ', jss);
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+console.log('log __dirname: ', __dirname);
+console.log('resolve: ', path.resolve(__dirname, '../../'));
+// glob 默认以当前目录开始匹配. 指定 cwd 修改目录
+// 隐藏文件夹匹配 必须显式包含点号：.* 而不是 * 或使用 { dot: true } 选项
+const files = glob.sync(`./_samples/**/[!_]*.mjs`, {
+  cwd: path.resolve(__dirname, '../../'), dot: true
+});
+console.log('log files: ', files);
+
+console.error(chalk.blue('message'));
 
 function lodashMerge() {
   const obj1 = {

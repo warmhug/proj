@@ -1,0 +1,177 @@
+// js处理本地文件
+// https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file-in-the-browser
+// https://developer.chrome.com/docs/capabilities/web-apis/file-system-access
+
+// https://vscode.dev/ 编辑本地文件
+// https://insiders.vscode.dev/ chrome129 新增 FileSystemObserver
+// 调试 readFileStream 函数，使用了 FileSystemDirectoryHandle FileSystemFileHandle
+// 注意：
+// showOpenFilePicker() getFile() createWritable()
+// 这几个函数、都需要调用， chrome 才会弹出授权操作文件的弹框
+
+let fileHandles = [];
+let currentFileIndex = -1;
+// 不能用 ~ 表示用户
+const filePaths = [
+  ['ss.yaml', '/Users/hua/.config/clash.meta/ss.yaml'],
+  ['nm_sh.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/nm_sh.json'],
+  ['.zshrc', '/Users/hua/.zshrc'],
+  ['.npmrc', '/Users/hua/.npmrc'],
+  ['.zsh_history', '/Users/hua/.zsh_history'],
+  ['.gitconfig', '/Users/hua/.gitconfig'],
+  ['.gitconfig-github', '/Users/hua/.gitconfig-github'],
+  ['apache', '/etc/apache2/httpd.conf'],
+];
+const nativeCmds = [
+  ['nvm', 'code --new-window /Users/hua/.nvm/versions/node'],
+];
+
+document.querySelector('#editLocalFiles').innerHTML = `
+<h3>编辑保存本地文件</h3>
+<div class="links">
+  <span>local vscode links: </span>
+  <span>
+    ${filePaths.map(([fileName, filePath]) => (
+      `<a href="vscode://file${filePath}" target="_blank">${fileName}</a>`
+        )).join('')}
+  </span>
+</div>
+<div class="links">
+  <span>native cmds:</span>
+  <span id="cmds">
+    ${nativeCmds.map(([label]) => (
+    `<a href="">${label}</a>`)).join('')}
+  </span>
+</div>
+<div>
+  <button id="openFile">打开新文件</button>
+  <button id="saveFile">保存文件</button>
+  <button id="clearAll">清空</button>
+</div>
+<div>文件列表: <span id="fileList"></span></div>
+<div class="editor">
+  <div id="filePath"></div>
+  <textarea id="fileContent" placeholder="文件内容将显示在此处"></textarea>
+</div>
+`;
+document.querySelector('#cmds').addEventListener('click', async (evt) => {
+  evt.preventDefault();
+  const label = evt.target.innerHTML;
+  const cmd = nativeCmds.find(item => item[0] === label)?.[1];
+  if (cmd) {
+    await hl_utils.sendNativeMessage('nativeCmd', cmd);
+  }
+});
+document.querySelector('#openFile').addEventListener('click', openFile);
+document.querySelector('#saveFile').addEventListener('click', saveCurrentFile);
+document.querySelector('#clearAll').addEventListener('click', clearAll);
+
+await hl_utils.requestPersistentStorage();
+const { saveFileHandle, getFileHandle, deleteFileHandle } = hl_utils.fileHandleOpt();
+await readStorage();
+updateFileList();
+
+async function readStorage() {
+  const allFiles = await getFileHandle();
+  console.log('log allFiles: ', allFiles);
+  fileHandles = await Promise.all(allFiles.map(async ({ id, fileHandle, filePath }) => {
+    return {
+      name: id,
+      handle: fileHandle,
+      filePath,
+    };
+  }));
+}
+async function writeStorage() {
+  await deleteFileHandle();
+  const fileData = await Promise.all(fileHandles.map(async ({ name, handle, filePath }) => {
+    await saveFileHandle(name, handle, filePath);
+    return name
+  }));
+}
+
+async function clearAll() {
+  if (window.confirm('确认清空吗')) {
+    await deleteFileHandle();
+    fileHandles = [];
+    updateFileList();
+  }
+}
+
+async function openFile() {
+  try {
+    // 文件路径属于用户系统的敏感信息 获取不到
+    const picker = await window.showOpenFilePicker();
+    const [fileHandle] = picker;
+    if (!fileHandles.some(fh => fh.name === fileHandle.name)) {
+      const filePath = filePaths.find(item => item[0] === fileHandle.name)?.[1];
+      fileHandles.push({
+        name: fileHandle.name,
+        handle: fileHandle,
+        filePath,
+      });
+    } else {
+      hl_utils.confirm('已存在同名文件，可以先删除再添加', 3000);
+    }
+    await writeStorage();
+    updateFileList();
+  } catch (err) {
+    console.error('无法打开文件:', err);
+  }
+}
+function updateFileList() {
+  const ulListDate = fileHandles.map(item => ({
+    text: item.name,
+    onClick: async (index) => {
+      currentFileIndex = index;
+      await loadFileContent(index);
+    },
+    onClose: async (index) => {
+      fileHandles.splice(index, 1);
+      await writeStorage();
+      updateFileList();
+    },
+  }));
+  const fileList = document.querySelector('#fileList');
+  fileList.innerHTML = '';
+  hl_utils.ulList(ulListDate, fileList);
+}
+async function loadFileContent(index) {
+  if (index < 0 || index >= fileHandles.length) return;
+  const { handle, filePath } = fileHandles[index] || {};
+  if (!handle) {
+    alert('该文件不可用');
+    return;
+  }
+  try {
+    document.getElementById('fileContent').value =
+      await hl_utils.fileReader(await handle.getFile());
+    if (filePath) {
+      // vscode://vscode-remote/path/to/file
+      document.getElementById('filePath').innerHTML = `
+      <a href="vscode://file${filePath}" target="_blank">${filePath}</a>
+      `;
+    }
+  } catch (err) {
+    console.error('无法加载文件内容:', err);
+  }
+}
+async function saveCurrentFile() {
+  if (currentFileIndex < 0 || currentFileIndex >= fileHandles.length) {
+    alert('请选择要保存的文件');
+    return;
+  }
+  const handle = fileHandles[currentFileIndex].handle;
+  if (!handle) {
+    alert('该文件不可用');
+    return;
+  }
+  try {
+    const writable = await handle.createWritable();
+    await writable.write(document.getElementById('fileContent').value);
+    await writable.close();
+    hl_utils.confirm('文件已保存', 3000);
+  } catch (err) {
+    console.error('无法保存文件:', err);
+  }
+}

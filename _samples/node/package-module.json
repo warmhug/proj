@@ -1,0 +1,36 @@
+{
+  "name": "root",
+  "version": "0.1.0",
+  "types": "index.d.ts",
+  "module": "es/index.esm.js",
+  "main": "lib/server.js",
+  "browser": "es/index.js",
+  "browser1": {
+    "fs": false,
+    "./src/index-node.js": "./src/index-browser.js"
+  },
+  "exports": {
+    "import": "./es/index.esm.js",
+    "require": "./lib/index.cjs.js",
+    "browser": "./ es | lib /index.js"
+  },
+  "exports1": {
+    ".": {
+      "import": "./es/index.esm.js",
+      "require": "./lib/index.js",
+      "browser": "./es/index.js"
+    }
+  },
+  "exports2": {
+    "import": {
+      "node": "./lib/index.js",
+      "default": "./es/index.esm.js"
+    },
+    "require": {
+      "node": "./lib/index.js",
+      "default": "./es/index.esm.js"
+    }
+  },
+  "scripts": {},
+  "dependencies": {}
+}

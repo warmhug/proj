@@ -1,5 +1,16 @@
 // 设置 display: flex 后，元素本身变成 block 元素，其子元素的 float、clear、vertical-align 失效。
 
+// https://lesscss.org/less-preview
+
+// dumi dark theme
+@dark-selector: ~[data-prefers-color="dark"];
+.some-container {
+  color: #fff;
+  @{dark-selector} & {
+    color: #000;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;

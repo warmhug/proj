@@ -5,9 +5,6 @@
   "version": "1.0",
   "manifest_version": 3,
   "incognito": "split",
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  },
   "action": {
     "default_popup": "i-popup.html?context=popup",
     "default_title": "popup"
@@ -90,7 +87,7 @@
   }],
   "sandbox": {
     "pages": [
-      "sandbox.html", "sandbox_localFileEditor.html"
+      "sandbox.html"
     ]
   },
   "content_security_policy": {

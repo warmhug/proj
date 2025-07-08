@@ -62,8 +62,7 @@ const hl_inject_ai_fns = [
 ];
 
 const hl_inject_auto_params = [
-  // https://cn.bing.com  https://www.bing.com
-  // https://www.google.com  https://www.baidu.com
+  // https://cn.bing.com  https://www.bing.com https://www.google.com  https://www.baidu.com
   {
     func: () => {
       hl_utils.createSearchSwitch();
@@ -107,7 +106,7 @@ const hl_inject_auto_params = [
       }, 800);
     },
   },
-  // comp note
+  // company note
   {
     css: `
       #main-root [data-testid="beast-core-resize-area"] {
@@ -212,11 +211,11 @@ chrome.tabs.onCreated.addListener(async (tabInfo) => {
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   // console.log('onUpdated tabs: ', tabId, changeInfo, tab.url);
   const { hl_inject_auto = [] } = await hl_utils.getStorage();
-  // 自动注入代码
   const result = hl_utils.asyncMap(hl_inject_auto, async (url, idx) => {
     const queryTabs = await chrome.tabs.query({ url: url });
     return await hl_utils.asyncMap(queryTabs, async (qTab) => {
       if (qTab.id = tabId) {
+        // 自动注入的内容
         const { css = '', ...rest } = hl_inject_auto_params[idx];
         await chrome.scripting.insertCSS({ target: { tabId }, css });
         const injectionResults = await chrome.scripting.executeScript({

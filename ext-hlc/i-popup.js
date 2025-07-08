@@ -1,42 +1,5 @@
-// 在 popup 页面右键 查看元素 看控制台
-// console.log('when exec?');
 
-async function renderText() {
-  const notesEle = document.querySelector('.mynotesMain');
-  const renderItem = () => {
-    const getRndInteger = (min, max) => Math.floor(Math.random() * (max - min) ) + min;
-    const randomIndex = getRndInteger(2, resArray.length - 1);
-    notesEle.innerHTML = `
-      ${resArray[randomIndex] || ''}<br>
-      ${resArray[randomIndex + 1] || ''}
-    `;
-  };
-  const { hl_text_import = '' } = await hl_utils.getStorage(undefined, false);
-  var resArray = hl_text_import.split('\n').filter(item => item && item != '\r');
-  renderItem();
-  document.querySelector('#importBtn').addEventListener('click', async () => {
-    if (resArray?.length && window.confirm('使用缓存的内容？')) {
-      return;
-    }
-    const filesHandle = await window.showOpenFilePicker({
-      types: [{ description: 'Text Files', accept: { 'text/plain': ['.txt'] } }],
-      multiple: true
-    });
-    const fileContents = await Promise.all(filesHandle.map(async (fileHandle) => {
-      const file = await fileHandle.getFile();
-      const contents = await file.text();
-      // console.log('ccc', contents);
-      return contents;
-    }));
-    await hl_utils.setStorage({ hl_text_import: fileContents.join() }, false);
-    alert('写入本地存储成功');
-  });
-  notesEle.addEventListener('dblclick', () => {
-    renderItem();
-  });
-}
-
-const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
+const { createBtn, createDomByStr, openUrl } = hl_utils;
 
 (async function popup () {
   hl_utils.getCookies();
@@ -150,7 +113,13 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
         const chromeProxy = createDomByStr(
           '<a href="chrome://settings/system">chrome-proxy</a>'
         );
-        chromeProxy.addEventListener('click', openChromeUrl);
+        chromeProxy.addEventListener('click', async (evt) => {
+          evt.preventDefault();
+          await openUrl({
+            href: evt.target.getAttribute('href'),
+            target: evt.target.getAttribute('target'),
+          });
+        });
         wrapper.appendChild(createDomByStr(`<span>
   代理服务已启动 &nbsp;
   <a href="http://127.0.0.1:8899" target="_blank">规则配置</a> &nbsp;
@@ -283,8 +252,6 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
     dealResponse(response);
   };
 
-  await renderText();
-
   const localStorage = await hl_utils.getStorage(null, false);
   const syncStorage = await hl_utils.getStorage(null);
   console.log('localStorage: ', localStorage);
@@ -310,7 +277,9 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
 
   // 获取快捷键
   const manifest = chrome.runtime.getManifest()
-  document.querySelector('#cmds').innerHTML = JSON.stringify(manifest.commands, null, 2);
+  document.querySelector('#cmds').innerHTML = `
+  <pre>${JSON.stringify(manifest.commands, null, 2)}</pre>
+  `;
 
   // 电源模式
   // 防止休眠或屏幕关闭 https://chrome.google.com/webstore/detail/keep-computer-awake-for-a/imbpigcghoambmanjekibelfjemnnool
@@ -336,62 +305,5 @@ const { createBtn, createDomByStr, openChromeUrl } = hl_utils;
     // chrome.power.reportActivity(() => {
     //   console.log('reportActivity');
     // });
-  });
-})();
-
-// 压缩地址 https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js
-// api 地址 https://nhn.github.io/tui.editor/latest/
-(async function tuiEditor() {
-  const { index: idx } = await hl_utils.getCurTab();
-  const inPopup = await hl_utils.isPopup();
-  // console.log('log inPopup: ', inPopup);
-
-  async function getsetNote(content) {
-    if (content) {
-      await hl_utils.sendNativeMessage('setNote', content);
-      await hl_utils.setStorage({ hl_text_note: content }, false);
-    } else {
-      // return (await hl_utils.sendNativeMessage('getNote')).content;
-      return (await hl_utils.getStorage(undefined, false)).hl_text_note;
-    }
-  }
-  const initialValue = await getsetNote();
-
-  const el = document.querySelector('#tuiEditor');
-  const tuiInst = inPopup ? new toastui.Editor.factory({
-    el, initialValue, viewer: true,
-  }) : new toastui.Editor({
-    el, extendedAutolinks: true, autofocus: false, previewStyle: 'tab',
-    linkAttributes: { target: '_blank' },
-    toolbarItems: [['italic', 'strike', 'hr', 'ul', 'ol'], ['table', 'image', 'link']],
-    initialValue,
-    // height: inPopup ? '450px' : '800px',
-    height: '800px',
-    initialEditType: 'wysiwyg', // markdown
-    events: {
-      // change keyup 区别
-      keyup: async () => {
-        let content = tuiInst.getMarkdown();
-        await getsetNote(content);
-      }
-    },
-  });
-
-  setTimeout(() => {
-    tuiInst.blur?.();
-    tuiInst.setScrollTop?.(0);
-  }, 100);
-
-  // 双击打开链接
-  el.addEventListener('dblclick', async (evt) => {
-    console.log('log tuiInst.isWysiwygMode(): ', tuiInst.isWysiwygMode?.());
-    if (evt?.target?.tagName === 'A' && evt?.target?.href) {
-      // evt?.target?.href 里的 & 号被转义
-      // window.open();  window.location.href = ; 都不行
-      chrome.tabs.create({
-        url: evt?.target?.innerText,
-        index: idx + 1
-      });
-    }
   });
 })();

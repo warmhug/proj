@@ -67,7 +67,7 @@ const hl_uiUtils = {
       console.log('unable to copy');
     }
   },
-  // 用于 Chrome 浏览器插件里，检测并等待飞书文档的标题出现
+  // 检测并等待飞书文档的标题出现
   feishuDocsJs: function () {
     const checkEle = (selector, cb = () => {}) => {
       let ele, timeout = 8000, startTime = Date.now();
@@ -656,20 +656,13 @@ const hl_commonUtils = {
     });
     let text = '';
     try {
-      /**
-        // need to add clipboard/clipboardWrite/clipboardRead to manifest
-        // https://developer.chrome.com/docs/extensions/reference/clipboard/
-        console.log('chrome.clipboard', chrome.clipboard);
-        chrome.clipboard.onClipboardDataChanged.addListener(() => {
-          const success = document.execCommand('paste');
-          console.log('document.execCommand result1: ', success);
-        });
-      */
       if (chrome?.clipboard) {
+        // https://developer.chrome.com/docs/extensions/reference/clipboard/
         // https://developer.chrome.com/docs/apps/reference/clipboard
         // chrome app 里可以获取 clipboard 但插件里不支持
+        // chrome.clipboard.onClipboardDataChanged.addListener
         text = await chrome.clipboard.readText();
-        console.log('clipboard from chrome: ', text);
+        console.log('clipboard: ', text);
       }
       if (!text) {
         // DOMException: Document is not focused.
@@ -811,6 +804,21 @@ const hl_commonUtils = {
 };
 
 const hl_chromeUtils = {
+  // 判断 popup.html 页面是在 浏览器扩展弹窗里打开 or 是独立的 tab 页面打开
+  isPopup: async function () {
+    // 通过 outerWidth outerHeight 可以判断
+    // console.log('log window: ', window.opener, window.location.href);
+    // console.log('log window: ', window.outerWidth, window.outerHeight);
+    // 通过 manifest.json 里设置参数 可以判断
+    // "action": {
+    //   "default_popup": "i-popup.html?context=popup",
+    // },
+    const urlParams = new URLSearchParams(window.location.search);
+    const context = urlParams.get('context');
+    // console.log('log context: ', context);
+    const inPopup = context === 'popup';
+    return inPopup;
+  },
   sendNativeMessage: (() => {
     let port = null;
     function connect(name) {
@@ -843,41 +851,9 @@ const hl_chromeUtils = {
     }
     return sendMessage;
   })(),
-  // <a href="chrome://settings/system">chrome-proxy</a>
-  // aEle.addEventListener('click', openChromeUrl);
-  openChromeUrl: function (evt) {
-    evt.preventDefault();
-    const url = evt.target.getAttribute('href');
-    if (url) {
-      chrome.tabs.create({ url });
-    }
-  },
   getCurTab: async function () {
     const [curTab] = await chrome.tabs.query({ active: true });
     return { ...curTab };
-  },
-  getCookies: async function (domain) {
-    if (!domain) {
-      const curTab = await this.getCurTab();
-      domain = new URL(curTab.url).hostname;
-    }
-    const cookies = await chrome.cookies.getAll({ domain });
-    console.log('log cookies: ', cookies);
-  },
-  // 判断 popup.html 页面是在 浏览器扩展弹窗里打开 or 是独立的 tab 页面打开
-  isPopup: async function () {
-    // 通过 outerWidth outerHeight 可以判断
-    // console.log('log window: ', window.opener, window.location.href);
-    // console.log('log window: ', window.outerWidth, window.outerHeight);
-    // 通过 manifest.json 里设置参数 可以判断
-    // "action": {
-    //   "default_popup": "i-popup.html?context=popup",
-    // },
-    const urlParams = new URLSearchParams(window.location.search);
-    const context = urlParams.get('context');
-    // console.log('log context: ', context);
-    const inPopup = context === 'popup';
-    return inPopup;
   },
   // 检测 url 对应的 tab ，如果不存在 则创建，如果存在 则 reload 激活，并轮询获得网页 loaded 状态
   createOrUpdateTab: async (targetUrl, strictMatch = fasle) => {
@@ -981,6 +957,120 @@ const hl_chromeUtils = {
         chrome.tabs.reload(tab.id);
       });
     }
+  },
+  // <a href="https://x.com">x</a>
+  // <a href="chrome://settings/system">chrome-proxy</a>
+  // aEle.addEventListener('click', openUrl);
+  // 协议是 chrome 开头 使用 chrome api 打开, 否则是否 window.open
+  openUrl: async function ({ href, target }) {
+    if (!href || !target) {
+      return;
+    }
+    // target="_blank|_self|_parent|_top|framename"
+    // 如果 href 里的 & 号被转义, 使用 window.open();  window.location.href = ; 都不行 chrome.tabs.create 可行
+    const url = href;
+    if (url.startsWith('chrome')) {
+      const curTab = await this.getCurTab();
+      target === '_blank' ?
+        // chrome.tabs.create({ url })
+        chrome.tabs.create({ index: curTab.index + 1, url })
+        : chrome.tabs.update({ url });
+    } else {
+      target === '_blank' ? window.open(url) : location.href = url;
+    }
+  },
+  getCookies: async function (domain) {
+    if (!domain) {
+      const curTab = await this.getCurTab();
+      domain = new URL(curTab.url).hostname;
+    }
+    const cookies = await chrome.cookies?.getAll({ domain });
+    console.log('log cookies: ', cookies);
+  },
+  // 获取 chrome 收藏夹数据
+  getBookmarks: async function () {
+    const bookmarkTreeNodes = await chrome.bookmarks?.getTree();
+    const topSites = await chrome.topSites?.get();
+    console.log('chrome bookmarkTreeNodes', bookmarkTreeNodes);
+    console.log('chrome topSites', topSites);
+    return { bookmarkTreeNodes, topSites };
+  },
+  // 使用 chrome 收藏夹数据, 生成 dom 元素
+  createTreeDom: function () {
+    /*
+    dumpTreeNodes([
+      { "id": "21", "parentId": "1", "title": "Bookmarks", "url": "chrome://bookmarks/"
+      },
+      { "id": "8", "index": 1, "parentId": "1", "title": "Gmail", "url": "https://mail.google.com/mail/u/0/#inbox"
+      },
+      {
+        "children": [
+          {
+            "id": "29", "parentId": "28", "title": "搜索 - Microsoft 必应",
+            "url": "https://cn.bing.com/?scope=web"
+          },
+          {
+            "id": "30", "parentId": "28", "title": "明日高考，志在必赢 - 搜索",
+            "url": "https://cn.bing.com"
+          }
+        ],
+        "id": "28", "parentId": "1", "title": "aa"
+      },
+      { "id": "18", "parentId": "1", "title": "需求·x", "url": "https://baidu.com" }
+    ]);
+    */
+    // 2022-01-16 from https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/mv2-archive/api/bookmarks/basic/popup.js
+    function dumpNode(bookmarkNode, clsArg = '') {
+      if (bookmarkNode.title) {
+        // html 0宽字符: U+200B  U+200C  U+200D   U+FEFF  &zwnj;&ZeroWidthSpace;&#xFEFF
+        let formatTitle = bookmarkNode.title
+          // todo 有问题
+          // .replace(/[\u200B-\u200D\uFEFF]/g, '')
+        // console.log('unicode', formatTitle, formatTitle.length, formatTitle.charAt(0));
+        // formatTitle = $('<div />').html(formatTitle).html().replace(/\u200C/g, '');
+        // formatTitle.split('').forEach(console.log);
+        formatTitle = [...formatTitle].map((item, idx) => {
+          // console.log(formatTitle.charCodeAt(idx))
+          const unicodeZeroSpaces = [8203, 8204, 8205, 8236, 8288, 8289, 8290, 8291, 8292, 65279];
+          if (unicodeZeroSpaces.includes(formatTitle.charCodeAt(idx))) {
+            return '';
+          }
+          return item;
+        }).join('');
+        // console.log('formatTitle', formatTitle);
+        if (formatTitle.length > 60) {
+          formatTitle = formatTitle.substring(0, 60) + '...';
+        }
+        var anchor = document.createElement('a');
+        let iconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzQyODVGNCI+PHBhdGggZD0iTTIwIDZoLThsLTItMkg0Yy0xLjEgMC0xLjk5LjktMS45OSAyTDIgMThjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY4YzAtMS4xLS45LTItMi0yem0wIDEySDRWOGgxNnYxMHoiLz48L3N2Zz4=';
+        if (bookmarkNode.url) {
+          anchor.setAttribute('href', bookmarkNode.url);
+          // chrome://bookmarks 打开控制台 查找文件夹图标 chrome://bookmarks/images/folder_open.svg
+          iconUrl = chrome?.runtime?.getURL(`_favicon/?pageUrl=${bookmarkNode.url}`);
+        }
+        anchor.setAttribute('title', bookmarkNode.title);
+        // anchor.setAttribute('target', '_blank');
+        anchor.innerHTML = `<img src="${iconUrl}" />${formatTitle}`;
+      }
+      // console.log('bookmarkNode.title', bookmarkNode.title, bookmarkNode.children);
+      var li = document.createElement(bookmarkNode.title ? 'li' : 'div');
+      li.append(anchor);
+      if (bookmarkNode?.children?.length) {
+        const cls = `${clsArg}-${bookmarkNode.parentId}-${bookmarkNode.id}`;
+        li.append(dumpTreeNodes(bookmarkNode.children, cls));
+      }
+      return li;
+    }
+    function dumpTreeNodes(bookmarkNodes, cls = 'root') {
+      const ulEle = document.createElement('ul');
+      ulEle.className = cls;
+      var i;
+      for (i = 0; i < bookmarkNodes.length; i++) {
+        ulEle.append(dumpNode(bookmarkNodes[i], cls));
+      }
+      return ulEle;
+    }
+    return { dumpTreeNodes };
   },
   /*
   // pacRule.pac 文件内容

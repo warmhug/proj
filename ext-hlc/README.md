@@ -6,27 +6,66 @@
 2. manifest -> background -> scripts 打开 `chrome://extensions/` 相应的插件名、点“背景页”。
 3. manifest -> content_scripts 设置的 js 位置：“控制台 -> Sources -> Content scripts”
 
-配置
+https://developer.chrome.com/docs/chromedriver/extensions?hl=zh-cn
 
-http://localhost/a/_proj/ext-hlc/a_localFileEditor.html
+配置
 
 ```json
 {
   "hl_inject_ai": [
-    "https://www.doubao.com/chat/",
-    "https://chatgpt.com/",
     "https://gemini.google.com/",
-    "https://kimi.moonshot.cn/"
+    "https://chatgpt.com/"
   ],
   "hl_inject_auto": [
     ["https://*.google.com/*", "https://*.bing.com/*", "https://*.baidu.com/*"],
     "https://www.zhihu.com/",
-    "https://i.mi.com/note/h5#/"
+    "https://i.mi.com/note/h5#/",
+    "https://note.txxx.tea/"
+  ],
+  "hl_tabs_saved": [
+    "https://x.com",
+    "http://warmhug.github.io/"
   ]
 }
 ```
 
+2025-06-27 由于公司禁用本地 chrome 插件, 删除 manifest.json 里的如下字段
+
+```json
+"chrome_url_overrides": {
+  "newtab": "index.html"
+},
+```
+
+
+
+
 ## 记录
+
+
+帮我写 Chrome 插件代码，实现这样的功能：选中一些标签页、把他们的 URL以有序数组形式 存储到 chrome storage 里、同时关闭这些标签页，通过 popup 页面的一个按钮、从数组里恢复打开标签页，并把这些标签页移动到其他已存在标签页的后边。
+2024-07
+
+Chrome Native Messaging 使用 bash 文件的 shebang 地址有问题，怎么让 /usr/local/bin 和 /usr/bin 都能互相调用
+...
+豆包+通义千问: 使用 yq 判断 如果rules 里不存在 aaa，则前置插入aaa
+2024-06
+
+
+### 2025-06 企业策略
+
+https://chatgpt.com/c/685d4921-5b5c-8008-bec3-038cf84564d8
+
+是因为 什么企业策略, 导致 打开公司内部网站, 本地加载的插件 会不可用. 打开公司外的网站, 插件可用.
+
+企业策略文件配置 `chrome://policy` `chrome://management`
+`/Library/Managed Preferences/hua/com.google.Chrome.plist`
+ExtensionInstallAllowlist: ["<extension_id>"]
+另参考配置文件: `~/Library/Preferences/com.google.Chrome.plist`
+
+chrome extension crx 加载错误: Package is invalid: 'CRX_HEADER_INVALID'.  使用 chrome://extensions/ 里的 pack extension 按钮打包.
+又 报错 [CRX_REQUIRED_PROOF_MISSING](https://www.plasmo.com/blog/posts/crx-required-proof-missing)
+
 
 ### 2024-09~10
 
@@ -60,6 +99,7 @@ const views = chrome.extension.getViews();
 console.log('chrome.processes: ', chrome.processes);
 console.log('chrome.processes: ', chrome?.experimental, chrome?.experimental?.processes);
 ```
+
 
 ### 2024-06~07 Native messaging
 
@@ -176,20 +216,6 @@ async function main() {
 }
 main();
 ```
-
-
-帮我写 Chrome 插件代码，实现这样的功能：选中一些标签页、把他们的 URL以有序数组形式 存储到 chrome storage 里、同时关闭这些标签页，通过 popup 页面的一个按钮、从数组里恢复打开标签页，并把这些标签页移动到其他已存在标签页的后边。
-2024-07
-
-Chrome Native Messaging 使用 bash 文件的 shebang 地址有问题，怎么让 /usr/local/bin 和 /usr/bin 都能互相调用
-2024-06
-
-豆包+通义千问: 使用 yq 判断 如果rules 里不存在 aaa，则前置插入aaa
-2024-06
-
-
-
-
 
 
 

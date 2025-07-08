@@ -148,6 +148,8 @@ dealMsg() {
   networksetup -setsocksfirewallproxystate Wi-Fi off
   elif [[ "$msg_command" == "openMacConfig" ]]; then
   open "x-apple.systempreferences:com.apple.Network-Settings.extension?Proxies"
+  elif [[ "$msg_command" == "nativeCmd" ]]; then
+  log_command "$msg_content"
   fi
   echo $hl_output
 }
