@@ -2,11 +2,9 @@
   "private": true,
   "name": "root",
   "bin": {
-    "mynode": "bin/index.js"
+    "mynode": "bin.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "dependencies": {
     "@npmcli/arborist": "^7.5.4",
     "@pnpm/lockfile-file": "^7.0.6",
@@ -19,13 +17,15 @@
     "commander": "^2.20.0",
     "debug": "^4.3.4",
     "execa": "^5.1.1",
+    "ignore": "^7.0.0",
     "ini": "^5.0.0",
     "escape-string-regexp": "4.0.0",
+    "gaxios": "^6.1.1",
     "glob": "^11.0.1",
-    "lerna": "^8",
     "lodash": "^4.17.21",
     "package-json": "^6.5.0",
     "psl": "^1.15.0",
+    "strip-json-comments": "^3.1.1",
     "semver": "^7.6.3",
     "yaml": "^2.7.1"
   }

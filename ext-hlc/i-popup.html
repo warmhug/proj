@@ -15,7 +15,7 @@
       cursor: pointer;
     }
   }
-  .controls button {
+  .controls button, .controls span {
     margin-left: 10px;
     font-size: 12px;
   }
@@ -45,21 +45,19 @@
 <!-- popup 页面 浏览器限制的 最大宽度：800px 最大高度：600px -->
 <body style="min-width: 700px;">
   <div>
-    <a id="ipEle" target="_blank" style="margin-right: 20px;"></a>
-    <span id="openPopup">openPopup</span>
-  </div>
-
-  <div>
     <div class="controls" data-field="hl_ctrl_misc">
-      <!-- <button id="snapshot">截图</button> -->
       <button id="operateTabs">Tabs</button>
       <button id="top">top</button>
-      <button id="ai">AI</button>
+      <!-- <button id="AIChat">AIChat</button> -->
+      <span id="snapshot">截图</span>
     </div>
     <div class="msg"></div>
     <div class="controls" data-field="hl_ctrl_proxy">
-      <!-- <button id="resizeWindow">resize</button> -->
-      <button id="openMacConfig">查看系统代理设置</button>
+      <span id="index">openIndex</span>
+      <span id="i-popup">openPopup</span>
+      <span id="createWindow">创建窗口</span>
+      <span id="openMacConfig">系统代理</span>
+      &nbsp;&nbsp; |
     </div>
     <div class="msg"></div>
   </div>

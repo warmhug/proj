@@ -1,0 +1,14 @@
+{
+  "name": "check-deps",
+  "version": "1.0.0",
+  "bin": {
+    "checkdeps": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "semver": "^7.7.2"
+  }
+}

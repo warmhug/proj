@@ -1,23 +1,7 @@
 
-const { createBtn, createDomByStr, openUrl } = hl_utils;
 
 (async function popup () {
   hl_utils.getCookies();
-
-  const openPopup = document.querySelector('#openPopup');
-  openPopup.addEventListener('click', async () => {
-    const tab = await hl_utils.getCurTab();
-    const url = chrome.runtime.getURL('i-popup.html');
-    // console.log('log url: ', url);
-    chrome.tabs.create({ url, index: tab.index + 1 });
-  });
-
-  hl_utils.getLocalIPs(function (ips) {
-    localIP = 'http://' + ips[0] + '';
-    const ipEle = document.querySelector('#ipEle');
-    ipEle.setAttribute('href', localIP);
-    ipEle.innerHTML = localIP;
-  });
 
   chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     // console.log(`Command "${command}" triggered`, window, location.href);
@@ -41,6 +25,7 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
     console.log('chrome.proxy.settings.onChange: ', evt);
   });
 
+  const createBtn = hl_utils.createBtn;
   const operateTabs = (storage) => {
     const wrapper = document.createElement('div');
     wrapper.appendChild(createBtn('恢复tab', async () => {
@@ -102,7 +87,7 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
   }
 
   const proxyListPrefix = 'hl_ctrl_proxy';
-  const proxyList = ['whistle', 'comp', 'no', 'clash'];
+  const proxyList = ['whistle', 'company', 'no_proxy', 'clash'];
 
   const activeSelect = async (ctrlEle, isInit = false, btnEle) => {
     const storage = await hl_utils.getStorage(null);
@@ -110,33 +95,21 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
     const tips = {
       hl_ctrl_proxy_whistle: () => {
         const wrapper = document.createElement('div');
-        const chromeProxy = createDomByStr(
-          '<a href="chrome://settings/system">chrome-proxy</a>'
-        );
-        chromeProxy.addEventListener('click', async (evt) => {
-          evt.preventDefault();
-          await openUrl({
-            href: evt.target.getAttribute('href'),
-            target: evt.target.getAttribute('target'),
-          });
-        });
-        wrapper.appendChild(createDomByStr(`<span>
-  代理服务已启动 &nbsp;
+        wrapper.appendChild(hl_utils.createDomByStr(`<span>
+  whistle系统级代理已启动 &nbsp;
   <a href="http://127.0.0.1:8899" target="_blank">规则配置</a> &nbsp;
   <a href="https://wproxy.org/whistle/install.html" target="_blank">文档</a>
   &nbsp;
 </span>`));
-        wrapper.appendChild(chromeProxy);
         return wrapper;
       },
       hl_ctrl_proxy_clash: () => {
-        const btn = createBtn('addRule', async () => {
-          dealResponse(await hl_utils.sendNativeMessage('addRule',
-            new URL((await hl_utils.getCurTab()).url).host));
+        const btn = createBtn('操作', async () => {
+          dealResponse(await hl_utils.sendNativeMessage('clash_opt'));
         });
         setTimeout(() => {
           btn.insertAdjacentHTML('afterend',
-          `<a style="margin-left:8px" href="http://127.0.0.1:58147/ui/#/rules" target="_blank">监控</a>`);
+          `<a style="margin-left:8px" href="http://127.0.0.1:9090/ui/#/rules" target="_blank">监控</a>`);
         }, 100);
         return btn;
       },
@@ -174,7 +147,7 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
     } else if (btnEle) {
       ctrlEle.querySelectorAll('button').forEach(item => item.classList.remove('active'));
       btnEle.classList.add('active');
-      setTips(btnEle?.id);
+      setTips(btnEle.id);
       if (
         storageField === proxyListPrefix
         && btnEle.id?.startsWith(proxyListPrefix)
@@ -184,6 +157,18 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
         // 只记忆 proxyList 的按钮
         await hl_utils.setStorage({ [storageField]: btnEle?.id });
       }
+      let response;
+      switch (btnEle.id) {
+        case 'AIChat':
+          const clipText = await hl_utils.readClipboardText();
+          response = await chrome.runtime.sendMessage({ action: 'AIChat', clipText });
+          break;
+        case 'top':
+        case 'operateTabs':
+          response = await hl_utils.sendNativeMessage(btnEle.id);
+          break;
+      }
+      dealResponse(response);
     }
   };
 
@@ -195,30 +180,29 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
       ctrl.insertAdjacentHTML('beforeend', htmlStr);
     }
     activeSelect(ctrl, true);
-    ctrl.addEventListener('click', (evt) => {
-      clickHandle(evt, ctrl);
+    ctrl.addEventListener('click', async (evt) => {
+      const ele = evt.target;
+      switch (ele.tagName) {
+        case 'BUTTON':
+          activeSelect(ctrl, false, ele);
+          const field = ele.id?.replace(`${proxyListPrefix}_`, '');
+          if (proxyList.includes(field)) {
+            // proxy 控制直接调用 native 命令
+            dealResponse(await hl_utils.sendNativeMessage(field));
+          }
+          break;
+        case 'SPAN':
+        case 'A':
+          clickHandle(ele.id);
+          break;
+      }
     });
   });
-  async function clickHandle(evt, ctrlEle) {
-    const btn = evt.target.tagName === 'BUTTON' ? evt.target : '';
-    activeSelect(ctrlEle, false, btn);
-    const field = btn?.id?.replace(`${proxyListPrefix}_`, '');
-    if (proxyList.includes(field)) {
-      // proxy 控制直接调用 native 命令
-      dealResponse(await hl_utils.sendNativeMessage(field));
-      return;
-    }
-    const storage = await hl_utils.getStorage(null);
+  async function clickHandle(eleId) {
     let response;
-    // response = await chrome.runtime.sendMessage({ action: 'test' });
-    switch (field) {
-      case 'ai':
-        const clipText = await hl_utils.readClipboardText();
-        response = await chrome.runtime.sendMessage({ action: 'aiChat', clipText });
-        break;
-      case 'top':
+    switch (eleId) {
       case 'openMacConfig':
-        response = await hl_utils.sendNativeMessage(field);
+        response = await hl_utils.sendNativeMessage(eleId);
         break;
       case 'snapshot':
         chrome.tabs.captureVisibleTab((dataUrl) => {
@@ -226,7 +210,13 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
           hl_utils.downloadBase64File(url);
         });
         break;
-      case 'resizeWindow':
+      case 'index':
+      case 'i-popup':
+        const tab = await hl_utils.getCurTab();
+        const url = chrome.runtime.getURL(`${eleId}.html`);
+        chrome.tabs.create({ url, index: tab.index + 1 });
+        break;
+      case 'createWindow':
         const winds = await chrome.windows.getAll();
         winds.forEach(win => {
           if (win.type === 'popup') {
@@ -235,18 +225,23 @@ const { createBtn, createDomByStr, openUrl } = hl_utils;
         });
         console.log('log winds: ', winds);
         const wind = await chrome.windows.create({
-          url: 'i-topmost.html', type: 'popup', focused: true,
-          left: 20, top: 20, width: 400, height: 600,
+          // url: ['https://google.com', 'https://x.com'],
+          url: 'https://google.com',
+          type: 'popup', focused: true,
+          left: 120, top: 20, width: 400, height: 600,
           // state: 'fullscreen',
         });
         console.log('log wind: ', wind);
-        // const windup = await chrome.windows.update(wind.id, { drawAttention: true });
-        // console.log('log windup: ', windup);
-        response = await hl_utils.sendNativeMessage('topmost');
-        return;
-        chrome.windows.getCurrent((windc) => {
-          chrome.windows.update(windc.id, { width: 1728 });
+        await hl_utils.sleep(200);
+        // 在 macOS 上, 延时修改 窗口位置 才能有效.
+        const windup = await chrome.windows.update(wind.id, {
+          drawAttention: true,
+          top: 0, left: 0,
         });
+        // console.log('log windup: ', windup);
+        // chrome.windows.getCurrent((windc) => {
+        //   chrome.windows.update(windc.id, { width: 1728 });
+        // });
         break;
     }
     dealResponse(response);

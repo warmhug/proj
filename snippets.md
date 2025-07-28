@@ -2825,6 +2825,7 @@ var EasingFunctions = {
 
 
 
+## Libs
 
 ### react
 
@@ -3292,262 +3293,721 @@ export default class Demo extends React.Component {
 
 
 
-## 低代码 2021
 
-低代码平台：源码不可维护 git diff 不起作用。
-
-物料(模板、页面、区块、基础组件、业务组件、布局组件)
-
-区块（Block）：一系列业务组件、布局组件等组合而成的代码片段，不对外提供可配置的属性；区块内部具备完整的内部样式、事件、生命周期管理、状态管理、数据流转机制，能独立存在和运行，通过代码片段的复制实现跨页面、跨应用的快速复用，保障功能和数据的正常。
-模板（Template）：特定垂直业务领域内的业务组件、区块可组合为单个页面，或者是再配合路由组合为多个页面集，统称为模板。
-
-Microsoft Power Apps 中，页面的生产过程是由字段的布局来决定的，字段对应的组件可以切换。在 Mendix、OutSystems 中。页面虽然是基于模型来生产的，但整体开发体验，依然是面向页面和组件视角的。组件可以绑定字段。
-从前端对低代码提效本质的分析来看，可视化搭建本质上是通过可视化手段降低了前端开发的上手门槛，但开发思路和源码开发基本是一样的。其提高开发效率的主要手段是，通过丰富的静态模板让页面开发少写一些代码。没有元数据的支持，其对开发效率的提升至多是线性的，而我们需要的是数量级的提升。
-由于模型元数据驱动和可视化搭建在本质思路上的不同，在可视化搭建基础上，集成模型驱动的能力，会让整个产品的复杂性增加，产品定位不清晰，扩展性差。与其这样，不如从0开始打造一个纯净的模型驱动低代码开发工具。
-
-[阿里低代码引擎LowCodeEngine正式开源](https://mp.weixin.qq.com/s/rQ-X9OBFRvhI16KrWwIT6w)
-[官网](https://lowcode-engine.cn/)、[github](https://github.com/alibaba/lowcode-engine)
-
-[总体](https://img.alicdn.com/imgextra/i4/O1CN01z4bl431OOoSsB0Fgl_!!6000000001696-0-tps-2647-1048.jpg)
-
-[引擎图](https://img.alicdn.com/imgextra/i1/O1CN01rYYbMH1KKSEUlOB3B_!!6000000001145-2-tps-1196-736.png):
-- 入料引擎（Materialin Engine）Material for Schema [架构图](https://img.alicdn.com/imgextra/i3/O1CN01ySybed1u7TAlCEmgI_!!6000000005990-2-tps-1698-467.png)
-- 编排引擎（Choreography Engine）Schema to Schema [架构图](https://img.alicdn.com/imgextra/i1/O1CN01BV9MmX26om0c3PECA_!!6000000007709-2-tps-1542-829.png)
-- 渲染引擎（Rendering Engine）Schema to UI [架构图](https://img.alicdn.com/imgextra/i3/O1CN01u0oISH1tUXVQ8V8Wu_!!6000000005905-2-tps-1834-536.png)
-- 出码引擎（Codeout Engine）Schema to Code [架构图](https://img.alicdn.com/imgextra/i1/O1CN01rvvk6H1X433D49JOc_!!6000000002869-2-tps-1382-690.png)。
-
-schema 基础协议规范
+### antdm-umi 2018
 
 ```js
-{
-  "version": "1.0.0",      //当前协议版本号
-  "componentsMap": [{      //组件描述
-    "componentName": "Button",
-    "package": "alife/next",
-    "version": "1.0.0",
-    "destructuring": true,
-    "exportName": "Select",
-    "subName": "Button",
-  }],
-  "componentsTree": [{
-    "componentName": "Page",   //单个页面。枚举类型 Page|Block|Component
-    "fileName": "Page1",
-    "meta": {          //页面元信息
-      "title": "首页",    //页面标题描述
-      "router": "/",     //页面路由
-      "spmb": "abef21",  //spm B位
-    },
-    "props": {},
-    "defaultProps": {   // 默认props：  选填 仅用于定义低代码业务组件的默认属性 固定对象
-      "name": "xxx"
-    },
-    "css": "body {font-size: 12px;} .table { width: 100px;}",
-    "state": {                       // 初始state： 选填 对象类型/变量表达式
-      "btnText": "submit",                     // 默认数据值： 选填 变量表达式
-      "num": 8,
-    },
-    "lifeCycles": {                   //生命周期:          选填 对象类型
-      "didMount": {
-        "type": "JSExpression",
-        "value": "function() {        //生命周期方法：      选填 函数类型\
-            console.log('did mount');\
-        }",
-      },
-      "willUnmount": {
-        "type": "JSExpression",
-        "value": "function() {\
-          console.log('will unmount');\
-        }"
-      }
-    },
-    "methods": {                     // 自定义方法对象：     选填 对象类型
-      "getNum": {
-        "type": "JSExpression",
-        "value": "function(a, b){\
-                return a + b;\
-              }"
-      }
-    },
-    "dataSource": {                  // 数据源对象：选填  对象类型
-      "list": [{                          // 数据请求列表    必填  数组类型
-        "id": "list",                // 单个数据请求id标识    必填  字符串类型
-        "isInit": true,              // 是否为初始数据             必填     布尔类型/变量表达式
-        // 建议改个名字，比如 auto | loadOnInit
-        "type": "fetch/mtop/jsonp",  //请求类型   必填    字符串类型
-        "options": {                //请求类型对应参数  必填  对象类型
-          "uri": "",                      //请求地址        必填  字符串/变量表达式
-          "params": {},                //请求参数       选填   字符串/变量表达式
-          "method": "GET",             //请求方法              必填   字符串/变量表达式
-          "isCors": true,              //是否支持跨域,   对应credentials = 'include'     选填  布尔
-          "timeout": 5000,             //超时时间单位ms     选填   数字类型 单位ms
-          "headers": {}                //请求header参数  选填   请求头信息
-        },
-        "dataHandler": { //异步请求回调： 选填  函数类型
-          "type": "JSExpression",
-          "value": "function(data, err) {} "
-        }
-      }],
-      "dataHandler": {  // 所有初始异步数据接口执行完成后的回调   选填 函数类型
-        "type": "JSExpression",
-        "value": "function(dataMap) { }",
-      }
-    },
-    "children": [{
-      "componentName": "Button",
-      "props": {
-        "text": {
-          "type": "JSExpression",
-          "value": "getNum(state.num, state.num2) + '万'"
-        }
-      },
-      "condition": {
-        "type": "JSExpression",
-        "value": "state.num > state.num2"
-      }
-    },{
-      "componentName": "Div",
-      "props": {
-        "className": "",
-        "text": {
-          "type": "JSExpression",
-          "value": "i18n['i18n-jwg27yo4']"
-        }
-      },
-      "condition": {                     // 函数类型属性：选填 函数类型
-        "type": "JSExpression",
-        "value": "!!this.state.isshow",  // 渲染条件： 选填 根据表达式结果判断是否渲染物料 默认值true
-      },
-      "loop": [],                        // 循环渲染数据：选填 根据数据循环渲染物料 默认不进行循环渲染；
-      "loopArgs": ["item", "index"],     // 循环迭代对象、索引名称 选填
-      "children": [{
-        "componentName": "Button",
-        "props": {
-          "prop1": 1234, // 简单 json 数据
-          "prop2": [{   // 简单 json 数据
-            "label": "选项1",
-            "value": 1
-          }],
-          "prop3": [{
-            "name": "myName",
-            "rule": {
-              "type": "JSExpression",
-              "value": "/\w+/i"
-            }
-          }],
-          "valueBind": { // 变量绑定
-            "type": "JSExpression",
-            "value": "this.state.user.name"
-          },
-          "onClick": { // 动作绑定
-            "type": "JSExpression",
-            "value": "function(e) { console.log(e.target.innerText) }",
-          },
-          "onClick2": { // 动作绑定2
-            "type": "JSExpression",
-            "value": "this.submit",
-          },
-        },
-      }]
-    }],
-  }],
-  "utils": [{
-    "name": "clone",
-    "type": "npm",
-    "content": {
-      "package": "lodash",
-      "version": "0.0.1",
-      "exportName": "clone",
-      "subName": "",
-      "destructuring": false,
-      "main": "/lib/clone"
-    }
-  }, {
-    "name": "beforeRequestHandler",
-    "type": "function",
-    "content": {
-      "type": "JSFunction",
-      "value": "function(){\n ... \n}"
-    }
-  }],
-  "constants": {
-    "ENV": "prod",
-    "DOMAIN": "xxx.alibab.com"
+// antd-mobile@2 模版
+// head 标签
+// 不需要设置 meta name="viewport" content=""
+// 高清方案脚本 https://os.alipayobjects.com/rmsportal/lvEQQbNgHsIxVfXLkmuX.js
+// body 标签
+// /dist/shared.js
+// /dist/file_name.js
+// https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js
+if ('addEventListener' in document) {
+  window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+  }, false);
+}
+
+import React from 'react';
+// import js and css modularly, parsed by babel-plugin-antd
+import { Button } from 'antd-mobile';
+// import pc antd
+import { Button as ButtonPc } from 'antd';
+// import 'antd/lib/button/style/index.css';
+// import ButtonPc from 'antd/lib/button';
+export default class Antd extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button onClick={(e) => console.log('mobile', e) }>Start</Button> <br />
+        <ButtonPc onClick={(e) => console.log(e)}>Start</ButtonPc>
+      </div>
+    );
+  }
+}
+
+
+// umi.js config
+export default {
+  // appType 标记为 h5, 就会官方植入 hd, fastclick 等移动研发相关解决方案;
+  appType: 'h5 | console',
+  // deployMode: 'assets | custom',
+  deployMode: {
+    mode: 'online',
   },
-  "config": {  //当前应用配置信息
-    "sdkVersion": "1.0.3",  //渲染模块版本
-    "historyMode": "hash",  // 浏览器路由：brower  哈希路由：hash
-    "targetRootID": "J_Container",
-    "layout": {
-      "componentName": "BasicLayout",
-      "props": {
-      	"logo": "...",
-        "name": "测试网站"
+  favicon: false,
+  title: '标题',
+  targets: {
+    ios: 8,
+    android: 4,
+    chrome: 33,
+  },
+  // 是否关掉 cssModule;
+  disableCSSModules: true,
+  deer: {
+    // 埋点位
+    spma: 'a1153',
+  },
+  // 异常搜集
+  clue: { pid: '12345' },
+  dynamicImport: {
+    webpackChunkName: false,
+    loadingComponent: '../src/component/Loading',
+  },
+  theme: {
+    // 'brand-primary': '#108ee9',
+  },
+  locale: {
+    enable: true,
+  }
+  // 去除默认加上的 .html 后缀
+  exportStatic: null,
+  // 解决对于 node_modules 有 es6 会在 build 报错
+  es5ImcompatibleVersions: true,
+  // Android 4 里 Set Promise 未定义错误
+  // 如果是 assets 应用，没有用到 bigfish 构建出来的 HTML, script 配置无效，需手动修改后端 html 文件添加
+  script: [
+    'https://a.alipayobjects.com/g/component/??es6-shim/0.35.1/es6-sham.min.js,es6-shim/0.35.1/es6-shim.min.js',
+  ],
+  proxy: {
+    dev: {
+      'eworkcard/api/': {
+        target: 'http://xx.alipay.net',
       },
     },
-    "theme": {
-      "package": "@alife/theme-fusion",
-      "version": "^0.1.0",
-      "primary": "#ff9966"
-    }
-  },
-  "i18n": {
-    "zh-CN": {
-      "i18n-jwg27yo4": "你好",
+    test: {},
+    pre: {},
+  }
+  routes: [{
+    path: '/',
+    indexRoute: {
+      title: 'ww',
+      spmb: 'b9903',
+      component: 'index',
     },
-    "en-US": {
-      "i18n-jwg27yo4": "Hello",
+    component: '../layout',
+    routes: [
+      {
+        path: 'index',
+        spmb: 'b9903',
+        component: 'index',
+      },
+      {
+        path: 'guide',
+        spmb: 'b9901',
+        title: 'xx',
+        component: 'guide',
+      },
+    ],
+  }],
+}
+
+// umi.js / bigfish.js model
+// from 2018-2019 云游 @pofeng
+import axios from 'axios';
+import { Action } from 'redux';
+type ModelState = {
+  params: object;
+};
+type SetStateAction = Action & { payload: Partial<ModelState> };
+
+function setState(payload: Partial<ModelState>) {
+  const action: SetStateAction = { type: 'setState', payload };
+  return action;
+}
+const getInitialState = (): ModelState => {
+  return {
+    architecture: [],
+  };
+};
+const namespace = 'xxx';
+export default {
+  namespace,
+  state: getInitialState(),
+  reducers: {
+    setState(state: ModelState, { payload }) {
+      return { ...state, ...payload };
+    },
+  },
+  effects: {
+    *fetchData(_, effectMap: EffectsCommandMap) {
+      const { call, put, fork, select } = effectMap;
+      yield fork(() => fetch_deploymentUnitWhiteList(_, effectMap));
+      try {
+        const modelState: ModelState = yield select(state => state[namespace]);
+        const rsp: IServiceResponse = yield call(() => axios.get(`/api/envs/${envId}`));
+        yield put(setState({ architecture: rsp.data.data }));
+      } catch (e) {
+        yield put(setState({ architecture: getInitialState().architecture }));
+      }
+    },
+  },
+};
+
+// umi.js / bigfish.js  page
+import React, { PureComponent } from '@alipay/bigfish/react';
+import { Divider, Icon, Layout, Menu } from '@alipay/bigfish/antd';
+import { List, WingBlank, Button, Flex } from '@alipay/bigfish/antd-mobile';
+import { connect } from '@alipay/bigfish/sdk';
+import history from '@alipay/bigfish/sdk/history';
+import { Link } from '@alipay/bigfish/sdk/router';
+import { formatMessage } from '@alipay/bigfish/locale';
+import { replace, map, indexOf } from "@alipay/bigfish/util/lodash";
+import qs from '@alipay/bigfish/util/query-string';
+'@alipay/bigfish/eslint'
+'@alipay/bigfish/stylelint'
+@connect(({ page, guide }) => ({ page, guide }))
+@NavWrapper
+export default class App extends PureComponent {
+  componentDidMount() {
+  }
+  goBack = (ev) => {}
+  render() {}
+}
+```
+
+
+### less
+
+```less
+/*
+<link rel="stylesheet/less" type="text/css" href="./base.less" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+*/
+// https://lesscss.org/less-preview
+// 设置 display: flex 后，元素本身变成 block 元素，其子元素的 float、clear、vertical-align 失效。
+
+// dumi dark theme
+@dark-selector: ~[data-prefers-color="dark"];
+.some-container {
+  color: #fff;
+  @{dark-selector} & {
+    color: #000;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.media{
+  display: none;
+  position:relative;
+  margin: 10px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+@media screen and (max-width: 320px) {
+  .s0{
+    display: block;
+  }
+}
+@media screen and (device-width: 320px) {
+  .s1{
+    display: block;
+  }
+}
+@media screen and (device-width: 768px){
+  .s2{
+    display: block;
+  }
+}
+@media screen and (orientation:portrait){
+  .s3{
+    display: block;
+  }
+}
+@media screen and (orientation:landscape){
+  .s4{
+    display: block;
+  }
+}
+@media only screen and (min-device-width: 320px){
+  /*  iPhone 3 */
+}
+@media only screen and (min-device-width: 320px)and (-webkit-min-device-pixel-ratio: 2) {
+  /* iPhone 4, 5c,5s, 所有iPhone6的放大模式，个别iPhone6的标准模式 */
+}
+@media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 2) {
+  /* 大多数iPhone6的标准模式 */
+}
+@media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 3) {
+  /* 所有 iPhone6+ 的放大模式 */
+}
+@media only screen and (min-device-width:412px) and (-webkit-min-device-pixel-ratio: 3) {
+  /* 所有iPhone6+的标准模式,414px写为412px是由于三星Nexus 6为412px，可一并处理 */
+}
+
+.holygrail {
+  padding-left: 200px;  padding-right: 150px;
+  .column { position: relative; float: left; }
+  .center { width: 100%; background: #DDD; }
+  .left { width: 200px;  right: 200px;  margin-left: -100%; background: #66F; }
+  .right { width: 150px;  margin-right: -150px; background: #F66; }
+}
+
+.flex-container {
+  height: 50%;
+  width: 50%;
+  background-color: rgb(124, 233, 233);
+  display: flex;
+  flex-direction: column;
+  header {
+    background-color: gray;
+  }
+  article {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0px;
+  }
+  footer {
+    background-color: gray;
+  }
+}
+
+.aspect-ratio(@width; @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ((@height / @width) * 100%);
+  }
+  > *:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.aspect-container {
+  width: 800px;
+  div {
+    margin-bottom: 20px;
+  }
+  .aspect {
+    width: 100%;
+    border: 1px solid gray;
+    .aspect-ratio(750, 210);  // 设计稿为750，稿中元素高度为210
+  }
+  .aspect1 {
+    position: relative;
+    width: 10vw; /* 100% < 100vw (if have body's default margin) */
+    height: calc(10vw * 0.5625); /*16:9 aspect ratio*/
+    box-sizing: border-box;
+    border: 1px solid blue;
+    .text {
+      height: 1vh;
+    }
+  }
+  .aspect2 {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    padding-top: 66.66%; /* 3:2 Aspect Ratio */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    box-sizing: border-box;
+    border: 1px solid blue;
+    .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
     }
   }
 }
-```
 
-区块级API（实现区块级内部的上下文，数据流，状态管理）
-
-```js
-this.state
-this.setState()
-this.dataSourceMap[oneRequest.id]: {
-  load(params), status, data, error
+.steps-horizontal {
+  & * {
+    box-sizing: border-box; // 重要
+  }
+  display: flex;
+  .steps-item {
+    flex: 1;
+    position: relative;
+    &:last-child {
+      flex: none;
+    }
+    &-icon, &-icon img {
+      width: 24px;
+      height: 24px;
+    }
+    &-icon {
+      background-color: white;
+    }
+    &-line {
+      position: absolute;
+      top: 12px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      padding: 0 4px 0 27px;
+      &:after {
+        content: '';
+        display: block;
+        z-index: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #108ee9;
+      }
+    }
+  }
 }
-this.reloadDataSource()
-this.xxx()
+// 参考 antd / antd-mobile Steps 组件
+.steps-vertical {
+  .steps-item, .steps-item * {
+    box-sizing: border-box;
+  }
+  .steps-item {
+    position: relative;
+    padding-left: 40px;
+    min-height: 50px;
+  }
+  .steps-item-line {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    padding: 27px 0 4px;
+  }
+  .steps-item-icon {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
+  }
+  .steps-item-icon, .steps-item-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  .steps-item-line:after {
+    display: block;
+    content: '';
+    z-index: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #108ee9;
+  }
+  .steps-item-content {
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes mymove {
+  from { left: 0px; }
+  to { left:200px; }
+}
+.css_animate {
+  position: relative;
+  animation: mymove 5s infinite;
+  background-color: #ccc;
+  width: 200px;
+  transition-property: transform, width, background-color;
+  transition-duration: 0.5s, 3s, 5s;
+  transition-timing-function: linear, ease-in;
+  &:hover {
+    background-color: #486AAA;
+    width: 300px;
+    transform: rotate(750deg) skew(0deg, 0deg) scale(0.6);
+    /* transform: rotateX(360deg); */
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes sploosh {
+  0% {
+    width: 120px;
+    height: 120px;
+    background: rgba(255,212,48,0.7);
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    background: rgba(255,212,48,0);
+  }
+}
+.ofo_unlock {
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: sploosh 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  .circle1 {
+    animation-delay: 0;
+  }
+  .circle2 {
+    animation-delay: 0.5s;
+  }
+  .circle3 {
+    animation-delay: 1s;
+  }
+  .circle4 {
+    animation-delay: 1.5s;
+  }
+  .round {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    z-index: 1;
+    text-align: center;
+    color: #000;
+  }
+}
+
 ```
 
-页面级api（实现页面级内部的上下文，数据流，状态管理，从而实现区块之间的通信）
-
-```js
-this.page
-this.page.state
-this.page.setState()
-this.page.props
-this.page.xxx()
-this.page.dataSourceMap
-this.page.reloadDataSource()
-```
-
-低代码业务组件 API (开发一个低代码业务组件需要用到的API，实现内部的上下文，数据流，状态管理)
-
-```js
-this.component
-this.component.state
-this.component.setState()
-this.component.props
-this.component.xxx()
-this.component.dataSourceMap
-this.component.reloadDataSource()
-```
-
-获取循环数据对象 api (获取在循环场景下的数据对象)
-
-```js
-this.item
-this.index
-```
+###
 
 
 
 
-## mobile 2012-2013
+## .
+
+
+
+### cdn
+
+国外图片站点
+https://www.pexels.com/zh-cn/
+https://pixabay.com/
+
+https://gw.alipayobjects.com/os/lib/react/16.13.0/umd/react.production.min.js
+https://gw.alipayobjects.com/os/lib/react-dom/16.13.0/umd/react-dom.production.min.js
+https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
+https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
+https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
+https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
+https://os.alipayobjects.com/rmsportal/EylTaSCtqXQRiTK.jpg
+http://images.cnblogs.com/cnblogs_com/bluedream2009/201609/o_mm.jpg
+
+[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
+https://unpkg.com  https://cdnjs.com  https://jshub.com  https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org  https://upcdn.b0.upaiyun.com
+https://cdn.bytedance.com  https://www.webcache.cn
+
+http://cdn.staticfile.org/angular.js/1.2.16/angular.js
+http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
+http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
+https://code.jquery.com/ui/1.13.0/jquery-ui.js
+jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
+https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
+https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
+qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
+less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
+bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
+bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
+
+
+
+### 命名
+
+bash 英语术语: Redirection Pipes
+
+aids / facilities / Misc / Vendor / base / core
+data-commons / data-utils / http-utils / json-helper
+integration / integrate / legacy
+
+lib - Library（库）：通常包含一系列可重用的代码模块或函数集合。
+common - Common（公共）：存放项目中多个部分都会用到的通用函数或组件。
+commons - 公共组件/方法：项目中多个部分都会用到的通用逻辑和功能。
+aux 或 auxiliary - 辅助，与 helper 类似，指辅助性代码模块。
+Assistants - 辅助类，帮助主程序执行操作。
+helper - Helper（助手）：这类文件或模块提供一些辅助性的功能函数。
+Helpers - 帮助函数或模块，用于简化代码。
+extensions / ext - 扩展方法：扩展已有对象或类型的额外功能函数。
+tools - 工具集：各种杂项但实用的功能函数合集。
+utility utilities (完整形式) - 同样指代工具函数，与 utils 含义一致
+support - 支持模块：为其它主要模块提供支持性功能的代码块。
+tasks / jobs - 任务/作业：用于定时任务或其他异步工作流程的模块。
+
+logger / logging - 日志记录：用于处理日志生成和管理的模块。
+core_utils - 核心工具：专用于项目核心模块的一组工具方法。
+funcs / functions - 函数集：用来存储独立、非特定业务逻辑的函数。
+Components - 组件类，用于构建更大的系统。
+Modules - 模块类，包含一组相关的功能。
+Libraries - 库，提供预定义的功能集合。
+Frameworks - 框架，提供应用程序的基本结构。
+Addons - 插件或附加组件，扩展主程序的功能。
+Plugins - 插件，用于扩展软件的功能。
+Scripts - 脚本，一系列自动化命令或程序。
+Snippets - 代码片段，用于快速插入常用代码。
+services - 服务层：在某些架构中，这一层封装了应用程序的核心业务逻辑和数据处理操作。
+services_utils - 服务层工具：在服务层内部使用的通用功能模块。
+models - 模型：在 MVC（Model-View-Controller）架构中，模型代表数据结构及相关的业务逻辑。
+middlewares - 中间件：在像Express.js这样的Node框架中，中间件是指处理HTTP请求的函数序列。
+io - Input/Output（输入/输出）：与数据读取、写入等I/O操作相关的模块。
+config - 配置：存放应用程序配置信息的模块或文件夹。
+cache - 缓存：提供缓存功能，如数据缓存、HTTP请求缓存等的模块。
+validators / validation - 校验器/验证：包含数据校验逻辑的模块。
+exceptions - 异常处理：用来定义和处理自定义异常的模块。
+consts / constants - 常量：存放程序中不会改变的值。
+enums - 枚举：存储枚举类型的模块。
+templates / views - 模板/视图：在Web开发中，存放HTML模板或其他类型视图文件的目录。
+primitives - 基础工具：包含一些基础且常用的处理数据、字符串等的基础方法。
+
+
+http://json-schema.org/draft-07/schema
+2025-04
+
+2024-lerna
+|- packages/
+│  |─ demo/
+│  |─ demo1/
+|- shared/
+│  |─ utils.ts
+|- tests/
+│  |─ setupTests.ts
+|- typings/
+│  |─ css-modules.d.ts
+│  |─ scss.d.ts
+|- .gitignore
+|- .npmrc
+|- tsconfig.json
+|- typings.d.ts
+|- vitest.config.ts
+
+
+
+
+### PRD 系分 2019-11
+
+PRD有三种状态：Draft、 Review、Ready,  其中起草人为产品或研发团队，相关人 review 通过。
+
+修订记录/更新日志
+修改日期	修改版本	修改内容	备注
+
+前后端测试负责人、工作量评估。
+
+一、需求背景
+1.1 需求来源
+1.2 需求描述
+概念对齐/名词定义/关键术语
+目标对齐
+竞品调研/同类产品调研
+使用场景/主要用户/试点用户
+
+二、需求目标
+产品定位
+产品目标
+产品能力
+业务问题(业务需求)现存问题
+功能一览表格
+业务流程
+
+三、结构/流程图
+3.1 功能结构图
+3.2 需求流程图
+业务流程 -> 任务流程 -> 页面流程
+3.3 交互设计图
+
+四、需求范围
+模块 功能 优先级
+
+五、功能性需求
+详细需求
+详细方案
+
+六、非功能性需求
+上线/灰度/回滚方案、兼容性、AB实验、高可用、性能、监控、权限、运维 等。
+
+七、附录
+数据分析报告、用户调研报告
+
+
+------ 系分 模版
+> 2019-11
+
+系分(系统设计+业务分析)的本质其实就是将技术推演的过程前置，所带来的好处就是：问题可以在第一时间发现，第一时间解决，从而最大化的降低了需求变更、方案变更 所带来的沉没成本。
+
+--- 修订历史
+| 版本号 | 作者 | 内容提要 | 发布日期 |
+|  ----  | ----  | ---- | ---- |
+| V1.0 | XX | 初稿 | 2020-10-24 |
+
+--- 需求背景
+xxxx
+
+--- 需求目标
+xxxx
+
+--- 相关资源
+- prd(@xx): XXX  交互稿(@xx): XXX  视觉稿(@xx): XXX
+- 后端系分: XXX、API 列表
+
+--- 功能分析
+> 1.模块交互截图 2.展示要素分析 3.时序图（包含系统交互、用户行为交互）
+
+模块A
+xxxx
+模块B
+xxxx
+
+特殊模块分析(可选)
+1.特殊功能描述
+2.实现思路流程图？依赖的框架、类库？
+3.性能表现，是否需要降级？降级的维度：钱包版本、系统版本、小程序版本?
+4.兼容性，稳定性方案
+
+--- 监控设计
+核心业务数据监控。异常监控告警。
+
+--- 灰度方案
+服务端、客户端、配置项灰度方案。
+
+--- 应急方案
+写操作熔断方案、核心模块熔断、应急提示（小黄条）
+
+--- 埋点方案
+1.页面访问埋点 2.链路行动点曝光+点击 3.特殊业务埋点
+
+--- 技术沉淀
+1.沉淀一个组件？ 2.沉淀一个模板？ 3.沉淀一套解决方案？
+
+--- 项目管理
+
+工作量评估
+
+| 功能点 | 工作量 | 需求优先级 | 责任人 |
+|  ----  | ----  | ---- | ---- |
+| 模块A | X天 | P0 | 小马 |
+| 模块B | X天 | P0 | 小马 |
+| 模块C | X天 | P1 | 小马 |
+
+项目风险点
+
+项目详细计划表
+
+发布checkList
+
+
+
+
+
+### mobile 2012-2013
 
 ------ scroll
 
@@ -3727,9 +4187,8 @@ if (navigator.platform.substr(0,2) === 'iP') {
 
 
 
-## .
 
-## 常用 shell
+## bash / shell
 
 - Unix 遵循的原则是 KISS (Keep it simple, stupid) do one thing and do it well。
 - Linux 严格区分大小写。所有内容以文件形式保存，包括硬件。如：键盘 /dev/stdin 显示器 /dev/stdout
@@ -3845,6 +4304,686 @@ head/tail -n 20 ~/.zsh_history  # 只看 头/尾 几行(默认10行)
 mkdir -p ~/inner/aa && touch $_/file.txt  # 创建目录并能生成文件
 rm -rf xx # rm 删除不存在的文件或目录 加上 -f 不会报错
 ln -s source_file dist
+
+
+# 后台运行命令 & 和 nohup
+# 注意  & 会随着 terminal 的关闭 而自动停止运行
+/path/to/xx.sh >> /path/to/log.txt 2>&1 &
+ttyd -W -a zsh >> log.txt 2>&1 &
+
+nohup sleep 100 &
+# 最后一个后台运行进程的 PID
+echo $!
+echo $! > "flag_file.log"
+
+# nohup 不会随着 terminal 的关闭而停止、会在 系统关闭 时停止运行
+nohup echo "Hello World"
+my_command='echo "Hello World" && sleep 30'
+nohup bash -c "$my_command" > output.log
+nohup bash -c 'echo "Hello World" && sleep 30' > output.log
+# 临时文件
+echo 'echo "Hello World" && sleep 30' > /tmp/my_script.sh
+chmod +x /tmp/my_script.sh
+nohup /tmp/my_script.sh > output.log
+# 如果不需要输出日志，可以将其重定向到 /dev/null
+nohup bash -c 'your_command_here' > /dev/null 2>&1 &
+
+```
+
+
+
+### file/dir
+
+```sh
+# 同步文件和目录
+# 报错 cp: --exclude=a.txt is not a directory
+cp -r test/* test1 --exclude=a --exclude='a.txt'
+# 加引号 避免路径中间有空格
+# 报错 cp: illegal option -- -
+cp -r --exclude=a --exclude='a.txt' test/* test1
+
+# 会排除掉 所有子目录 含有的同名 a.txt 文件
+rsync -av --exclude='a.txt' --exclude='a/' test/ test1
+# 在目标端删除源端不存在的文件
+rsync -av --exclude='a.txt' --delete --dry-run test/ test1
+rsync --version  # v2 不支持通配符
+# 使用 .rsync-filter 文件配置
+rsync -avF .rsync-filter test/ test1
+
+# 创建一个临时目录用于存储 other-branch 的文件
+mkdir /tmp/other
+diff -r . /tmp/other
+diff -rq . /tmp/other  # -q 只报告哪些文件不同
+diff -r --exclude=".git" . /tmp/other
+# 使用 --exclude="{.git,.svn}" 好像不正确
+diff -r --exclude=".git" --exclude=".svn" dir1 dir2
+diff -r --exclude=".git" dir1 dir2 dir3 > diff_output.txt
+diff -r --exclude=".git" --exclude="node_modules" pro-components pro-componentsk > diff_output.txt
+
+grep -rn 'grep' *  # 以 字符串 grep 来搜索 当前目录及子目录 的所有文件内容
+grep grep$ she*.md  # 以 正则表达式 grep$ 来搜索 当前目录下 文件名匹配 she*.md 的内容
+grep -r --include=\*.{cpp,h} pattern ./
+grep -r --exclude-dir=node_modules pattern ~/
+
+find . -name '*bash*'
+find . -name "*.js" -not -path "*node_modules*" -not -path "*js-css-html*"
+find . -name '*.DS_Store' -type f -delete   # 删除某目录及子目录下的 .DS_Store 文件
+# find / -mmin -5   # 查找在系统中最后5分钟里修改过的文件(modify time)
+
+# 如果文件存在则追加内容，否则创建并写入内容
+# [ -f "$file" ] && echo "$content" >> "$file" || echo "$content" > "$file"
+printf '\n%.0s' {1..10} >> $file
+
+# unix diff 使用
+function diff_gitignore() {
+  gitignore=()
+  GITIGNORE_FILE=".gitignore"
+  if [ ! -f "$GITIGNORE_FILE" ]; then
+    echo ".gitignore file not found in the current directory!"
+    exit 1
+  fi
+  while IFS= read -r line; do
+    # 移除行首尾的空白字符
+    stripped_line=$(echo "$line" | tr -d '[:space:]')
+    # 跳过空行和以 '#' 开头的注释行
+    if [ -n "$stripped_line" ] && [ "${stripped_line:0:1}" != "#" ]; then
+      # echo "$stripped_line"
+      gitignore+=("--exclude=$line")
+    fi
+  done < "$GITIGNORE_FILE"
+  # echo "${gitignore[@]}"
+  for item in "${gitignore[@]}"; do echo "$item"; done
+  # diff 的 exclude 参数 不认识 .gitignore 文件里的 **/**/es/** 这种写法
+  # diff -rq --exclude=.git --exclude=**/**/es/** . /tmp/pro-components > diff.txt
+}
+
+# 获取当前路径和父路径
+# echo "$(dirname $(/bin/pwd))"
+# echo "$(basename $(/bin/pwd))"
+current_path=$(/bin/pwd)
+get_parent_dir() {
+  local current_dir=$(basename "$current_path")
+  local parent_dir="${current_path%$current_dir}"
+  echo $parent_dir
+}
+parent_dir=$(get_parent_dir)
+
+
+# 使用 yq 操作 yaml
+dealYaml() {
+  log_file="./z_log"
+  clash_file="./clash.yaml"
+  hl_input='{message:"aa", content: "www.cont cc"}'
+  hl_input=${hl_input/#*'{'/'{'}
+  local msg_command=$(echo "$hl_input" | yq '.message')
+  local msg_content=$(echo "$hl_input" | yq '.content')
+  if [[ $msg_content =~ ^www\. ]]; then
+    msg_content=${msg_content#www.}
+  fi
+  new_str=DOMAIN-SUFFIX,"${msg_content}",Proxy
+  rules_value=$(yq '.rules' $clash_file)
+  if [[ "$rules_value" != *$new_str* ]]; then
+    echo $new_str >> $log_file
+    yq e '.rules |= [ "'"$new_str"'" ] +.' $clash_file -i
+  fi
+}
+```
+
+
+
+### npm
+
+```sh
+# 使用 pnpm 更新 workspaces 下所有 pkgs 的 outdated dependencies
+function update_workspace_packages() {
+  local update_pkgs="@ant-design/pro-*"
+  # local workspace_packages=$(pnpm ls -r --depth -1 --json | jq -r '.[] | select(.private == false) | .name')
+  # echo $workspace_packages
+  local filter_ws_pkgs=()
+  local workspace_packages=$(pnpm ls -r --depth -1)
+  while IFS= read -r line; do
+    if [[ $line =~ ^[^[:space:]]+ ]] && [[ $line != *"(PRIVATE)"* ]]; then
+      # Filter out the content before @ in each line
+      filter_ws_pkgs+=(${line%@*})
+    fi
+  done <<< "$workspace_packages"
+  for pkg in "${filter_ws_pkgs[@]}"; do
+    outdated=$(pnpm outdated "$update_pkgs" --filter "$pkg" --json)
+    if [ "$outdated" != "{}" ]; then
+      echo "$pkg has outdated dependencies $outdated"
+      pnpm up "$update_pkgs" --filter "$pkg" --latest
+    else
+      echo "$pkg's $update_pkgs dependencies is up to date."
+    fi
+  done
+  echo "Workspace packages finish update"
+}
+# update_workspace_packages
+
+# 查找某个 npm group 下所有包的 dependencies 里包含的指定依赖
+function search_dep() {
+  # 先运行 sudo npm cache clean --force 能避免 npm error code EEXIST 错误
+  local result_file="log.txt"
+
+  local default_group="@ant-design"
+  local default_registry="https://registry.npmmirror.com"
+  local default_search_name="react"
+  local default_search_size=300
+  local group="${1:-$default_group}"
+  local registry="${2:-$default_registry}"
+  local search_name="${3:-$default_search_name}"
+  local search_size="${4:-$default_search_size}"
+
+  local pkgs=$(npm search $group --json --registry=$registry --searchlimit=$search_size)
+  # echo "pkgs: $pkgs"
+  local all_deps=$(echo "$pkgs" | jq -r '[.[] | {(.name): .["dist-tags"].latest}] | add')
+  create_package_json "$all_deps"
+  # return
+
+  local pkg_names=$(npm search $group --json --registry=$registry --searchlimit=$search_size | jq -r '.[].name')
+  echo "list: $pkg_names"
+  for pkg_name in $pkg_names; do
+    local deps=$(npm view $pkg_name dependencies --json --registry=$registry)
+    # search_result=$(jq --arg name "$search_name" -r '.[$name]' <<< "$deps")
+    search_result=$(jq -r '."'$search_name'"' <<< "$deps")
+    echo "
+pkg_name: $pkg_name
+dependencies: $deps" >> $result_file
+    if [ -n "$search_result" ]; then
+      echo "search_result: $search_name $search_result
+      " >> $result_file
+    fi
+  done
+}
+# search_dep
+```
+
+### git
+
+```sh
+misc() {
+# 检查是否在 Git 仓库中
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  echo "错误：当前不在 Git 仓库中"
+  exit 2
+fi
+
+# 检测 HEAD 状态
+# if git symbolic-ref --quiet HEAD; then
+if git symbolic-ref HEAD > /dev/null 2>&1; then
+  echo "HEAD 已附加到分支: $(git symbolic-ref --short HEAD)"
+  exit 0
+else
+  commit_hash=$(git rev-parse --short HEAD)
+  echo "HEAD 处于分离状态，当前提交: $commit_hash"
+  exit 1
+fi
+
+# 先 git tag -l > tags.txt
+# 再运行本脚本
+while read -r line; do
+  git tag -d "$line"
+  # git push origin --delete "$line"
+done < tags.txt
+
+remote_tags=$(git ls-remote --tags origin)
+remote_tags=$(git ls-remote --tags origin | awk '{print $2}' | sed 's#refs/tags/##')
+remote_tags=$(git ls-remote --tags origin | sed 's/.*refs\/tags\/\(.*\)/\1/')
+local_tags=$(git tag -l)
+
+# 2024-07 获取分支名
+cd "$(git rev-parse --show-toplevel || echo .)"
+branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD) && echo ${branch}
+
+}
+
+# 在 ~/.zshrc 里 根据目录动态切换 git user
+chpwd() {
+  WORK_GIT_NAME="Alice Work"
+  WORK_GIT_EMAIL="alice@work.com"
+  PERSONAL_GIT_NAME="Alice Personal"
+  PERSONAL_GIT_EMAIL="alice@personal.com"
+  WORK_DIR="$HOME/work"
+  PERSONAL_DIR="$HOME/personal"
+  if [[ $PWD == $WORK_DIR* ]]; then
+    export GIT_USER_NAME="$WORK_GIT_NAME"
+    export GIT_USER_EMAIL="$WORK_GIT_EMAIL"
+  elif [[ $PWD == $PERSONAL_DIR* ]]; then
+    export GIT_USER_NAME="$PERSONAL_GIT_NAME"
+    export GIT_USER_EMAIL="$PERSONAL_GIT_EMAIL"
+  else
+    unset GIT_USER_NAME
+    unset GIT_USER_EMAIL
+  fi
+}
+
+# 获取 git log 的 第一条 最后一条 总数 等信息，放到 bash 数组里
+get_git_log() {
+  # current_branch
+  branch_name=$(git symbolic-ref --short HEAD)
+  all_commits_num=$(git rev-list --count HEAD)
+  all_commits=$(git log $branch_name --format=%H:%an:%s)
+  latest_commit=$(git log $branch_name -1 --pretty=%H)
+  skip_latest_commit=$(git log --skip=1 --pretty=%H)
+  first_commit=$(git log $branch_name --reverse --skip=1 $latest_commit --pretty=%H | head -n 1)
+  first_commit=$(git rev-list --max-parents=0 HEAD)
+  echo $latest_commit
+  echo $first_commit
+
+  declare -a commits_info
+
+  # 使用 while 循环读取 git log 输出，并将信息追加到数组中
+  while IFS= read -r line; do
+    commits_info+=("$line")
+  done < <(echo "$all_commits")
+
+  echo "commits count: "${#commits_info[@]}
+
+  for info in "${commits_info[@]}"; do
+    if [[ "$info" != "$first_commit" ]]; then
+      echo "$info"
+      # echo "${info%%:*}, ${info#*:}"
+      # do sth
+      # git cherry-pick $info
+    else
+      echo first_commit: "$first_commit"
+    fi
+  done
+}
+
+# 备份分支
+function backup_branch() {
+  if [ -z "$1" ]; then
+    echo "请输入要备份的分支名"
+    return 1
+  fi
+  local bk_branch_name=backup-$1
+  local branch_exists=$(git branch | grep "$bk_branch_name")
+  if [ -n "$branch_exists" ]; then
+    echo -e "
+    备份分支名 $bk_branch_name 已存在 请运行命令删除或改名
+      git branch -D $bk_branch_name
+    "
+    return 1
+  else
+    # 做备份
+    git checkout -b "${bk_branch_name}"
+  fi
+}
+# 压缩分支的提交  使用 /bin/zsh 执行，不然显示有问题
+function commits_squash() {
+  local feature_branch="$1"
+  local base_branch="$2"
+  if [ -z "$1" ]; then
+    local feature_branch=$(git symbolic-ref --short HEAD)
+  fi
+  if [ -z "$2" ]; then
+    local base_branch="origin/master"
+  fi
+  # echo "参数 $1 $2 , $feature_branch $base_branch"
+
+  local gitStatus=$(git status --porcelain)
+  if [ "$gitStatus" != "" ]; then
+    echo "Your git status is not clean"
+    return 1
+  fi
+
+  backup_branch $feature_branch || return 1
+  git pull
+
+  echo "\033[32m
+  合并 ${feature_branch} 成一个 commit，并归集所有待合并 commit 的 messages
+  \033[0m"
+  git checkout "${feature_branch}"
+
+  calc_commits_num $base_branch $feature_branch
+  local commits_num=$calc_commits_num_result
+  echo $commits_num
+
+  # 如果只有一个 commit，则无需合并
+  if [ $commits_num -lt 2 ]; then
+    echo "\033[32m
+    只有一个提交，不需要压缩
+    \033[0m"
+    return 0
+  fi
+
+  # 收集所有待合并 commits 的 message
+  local commits_message=""
+  for ((i = commits_num - 1 ; i >= 0 ; i--)); do
+    # MESSAGE=$(git log --format=%s HEAD~${i} -1)
+    MESSAGE=$(git log --format='%h - %an - %ad %n %s' HEAD~${i} -1)
+    commits_message+="${MESSAGE}
+  "
+  done
+  local new_message="📦 chore: Squashed ${commits_num} commits:
+
+  ${commits_message}"
+
+  echo -e "\033[32m 请确认是否合并这些commits (y/n) : \033[0m"
+  printf $new_message
+
+  read answer
+  [[ $answer = "n" ]] && return 1
+
+  # 恢复到 base 分支的 最后一次提交
+  git reset --soft $(git rev-parse HEAD~$commits_num)
+  git add --all
+  git commit -am "${new_message}"
+
+  echo "
+  建议再手动运行 git commit --amend 额外添加 commit 注释
+  提交 git push --force-with-lease
+  "
+  # git log
+  # git push origin "${feature_branch}" --force-with-lease
+}
+
+# 2016 自动 commit push
+function commit() {
+  # printf "\n"
+  echo "\033[32m git op (y/n)?  \033[0m"
+  read git_op
+  [[ $git_op = "n" ]] && exit
+  BASEDIR=$(dirname $0)
+  ## echo $BASEDIR
+  cd $BASEDIR
+  echo "\033[32m git status \033[0m"
+  git status
+  read -p "Press Return to Close..."
+}
+```
+
+
+
+### base
+
+```sh
+#!/usr/bin/env bash
+# #!/bin/bash
+# /bin/zsh
+#!/usr/bin/env -i bash   # 重置所有环境变量
+
+# 使用 set -e 会使脚本在任何命令返回非零状态时立即退出
+set -e
+
+# export PATH="/usr/local/bin:/usr/bin:$PATH"
+# export PATH="$PATH:/usr/local/bin:/usr/local"
+export PATH=/usr/bin:/bin
+export HOME=/home/username
+export TERM=xterm-256color
+
+export TMP_VAR='tmp'  # 在 terminal 里临时设置环境变量
+unset npm_config_registry  # 删除特定 env
+unset npm_config_userconfig  # 删除特定 env
+
+type fn_name
+type -a node / pwd
+
+# 用双引号包括变量，能保留换行
+str="{
+"a": "b"
+}"
+
+local str="long...\
+实际不换行"
+local str1="第一行
+第二行"
+local num=1
+local num="$num"2  # 或 num=${num}2
+local new_msg="Merged $(($num-1)) $((${num}-1)) commits"
+echo $str $str1 $num $new_msg
+
+local blank_path="/Applications/Google\" \"Chrome.app/Contents/MacOS/Google\" \"Chrome"
+local blank_path=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+local blank_path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+local escaped_blank_path=${blank_path////\\/}
+echo $escaped_blank_path
+printf "这是要写入文件的内容\n"
+
+# 设置默认值
+default_value="default"
+# 使用参数扩展来获取值，若无则用默认值
+value="${1:-$default_value}"
+
+# 数组  # 在 Bash 3 中 不能直接在函数内部引用或修改外部数组
+myArray=("apple" "banana" "cherry")
+myArray+=("element1" "element2" "element3")
+newMyArray=("${myArray[@]}")
+echo "${myArray[0]}"
+echo "${myArray[1]}"
+echo "${myArray[@]}"
+# 遍历输出
+for item in "${myArray[@]}"; do echo "$item"; done
+
+cd /path/to/dir || { echo "路径无效"; exit 1; }
+data_str="master-"$(date +"%Y%m%d-%H%M%S")
+
+# 输入输出  使用 eval 不安全，也难解决命令参数 含有空格和引号 的情况
+eval "ls -l" >> "/tmp/a_log.txt"
+eval "ls -l" 2>&1 | tee -a "/tmp/a_log.txt"
+(exec eval "ls -l" 2>&1 | tee -a "/tmp/a_log.txt") >/dev/null
+eval "$command" >> "$file" 2>&1
+
+# 兼容 bash 和 zsh 颜色和换行
+# 依赖特定 Shell 的转义序列  (Zsh 的一些插件和配置 可能会影响换行的显示效果)
+echo -e "\033[31mRed text\033[0m"
+echo -e "Line 1\nLine 2"
+
+# 使用 tput 命令，不依赖特定 Shell 的转义序列
+RED=$(tput setaf 1)
+RESET=$(tput sgr0)
+echo "${RED}Red text${RESET}"
+# 检测不同的 shell 分别设置
+if [ -n "$BASH_VERSION" ]; then
+  RED='\033[31m'
+  RESET='\033[0m'
+elif [ -n "$ZSH_VERSION" ]; then
+  RED='%F{red}'
+  RESET='%f'
+fi
+echo "${RED}Red text${RESET}"
+
+
+function hl() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: $0 xx"
+    return 1
+  fi
+}
+second_function() {
+  return $?  # 直接返回 first_function 的状态码
+}
+echo $? # 获取 函数 return 返回值
+if [ $? -ne 0 ]; then
+  echo "Error: Function failed!"
+  exit 1  # 或者根据需要退出脚本
+fi
+# command && success_action: 当 command 成功时执行 success_action
+# command || failure_action: 当 command 失败时执行 failure_action
+my_function || echo "Function failed!"
+
+# 错误处理
+trap 'echo "Error occurred on line $LINENO"; exit 1' ERR
+
+
+
+# /.git/hooks/ yorkie 2.0.0
+command_exists () {
+  command -v "$1" >/dev/null 2>&1
+}
+if command_exists forever; then
+  echo 'MY_Info: forever has been installed'
+fi
+
+has_hook_script () {
+  [ -f package.json ] && cat package.json | grep -q "\"$1\"[[:space:]]*:"
+}
+has_hook_script pre-commit || exit 0
+
+# OS X and Linux only
+load_nvm () {
+  command_exists nvm || {
+    export NVM_DIR="$1"
+    [ -s "$1/nvm.sh" ] && . "$1/nvm.sh"
+  }
+}
+run_nvm () {
+  # If nvm has been loaded correctly, use project .nvmrc
+  command_exists nvm && [ -f .nvmrc ] && nvm use
+}
+load_nvm /Users/hua/.nvm
+run_nvm
+
+
+# 读取用户输入
+confirm_action() {
+  local prompt_message="$1"
+  local user_input
+
+  read -p "$prompt_message (y/n): " user_input
+  user_input=${user_input:-y}  # 默认值为 'y'，如果用户直接按回车
+
+  if [[ $user_input =~ ^[Yy]$ ]]; then
+    return 0  # 表示确认，返回成功状态
+  else
+    return 1  # 表示取消，返回失败状态
+  fi
+}
+
+datef() {
+  local fmt="${1:-"%Y_%m_%d-%H_%M_%S"}"
+  local output=$(date "+$fmt")
+  echo "[$output]"
+  # date "+$fmt"
+}
+# datef "%Y-%m-%d"
+
+add_blank_lines() {
+  # return 1
+  # echo -e "\n" >> $sync_log
+  printf '\n%.0s' {1..5} >> $sync_log
+}
+
+get_special_files() {
+  special_files=(".pnpmfile.cjs" ".npmrc" "pnpm-lock.yaml" ".git")
+  # 2024-08 bash 查找 packages 目录下二级 目录里存在的所有 config.ts congfig.tsx config.js 和 config 目录，排除掉 node_modules 目录。不查找子路径。查找结果 存放到数组里。
+  # special_files+=($(find packages/*/src -maxdepth 1 -type f \( -name "config.ts" -o -name "config.tsx" -o -name "config.js" \) -not -path "*/node_modules/*" -o -type d -name "config" -not -path "*/node_modules/*"))
+  # for item in "${special_files[@]}"; do echo "$item"; done
+}
+# get_special_files
+
+
+input_string="your string to encode"
+encoded_string=$(echo -n "$input_string" | base64)
+decoded_string=$(echo -n "$encoded_string" | base64 --decode)
+
+
+# 识别字符串包含的中文
+string="Hello，世界！"
+# string="Hello"
+# 使用 printf 将每个字符转换为 Unicode 编码
+for ((i=0; i<${#string}; i++)); do
+  char="${string:i:1}"
+  unicode=$(printf "%04X" "'$char")
+  echo "字符: $char, Unicode 编码: \\u$unicode"
+done
+# 使用 bash 语句, 在 macOS 里不正常
+if [[ $string =~ [\u4e00-\u9fa5] ]]; then
+  echo "字符串包含中文"
+else
+  echo "字符串不包含中文"
+fi
+
+pnpm i 2>&1 | tee "$sync_log"
+# PIPESTATUS 必须在主 shell 中使用，不能在子 shell 中（包括 {}、() 等）。
+if [ ${PIPESTATUS[0]} -ne 0 ]; then
+  echo "pnpm i failed with an error. Terminating execution."
+  exit 1
+fi
+# 检查日志中是否有 ERR_PNPM_FETCH_404
+if grep -q 'ERR_PNPM_FETCH_404' "$sync_log"; then
+  echo "Found ERR_PNPM_FETCH_404, displaying error details:"
+  grep --before-context=5 --after-context=5 'ERR_PNPM_FETCH_404' "$sync_log"
+  exit 1
+fi
+
+if [ "$1" -eq 1 ]; then
+  return 0  # 成功
+fi
+
+if [[ "${a}" != "${b}" ]]; then
+  echo "a"
+fi
+
+if [ -s "./lib/sh/sync.sh" ]; then
+  \. "./lib/sh/sync.sh"
+  fn xx
+fi
+
+if [ -z "$1" ]; then
+  echo "Please input the repo name"
+  exit 1
+fi
+
+if [[ -n $GIT_USER_NAME ]]; then
+  git config --global user.name "$GIT_USER_NAME"
+  git config --global user.email "$GIT_USER_EMAIL"
+fi
+
+if [[ $PACKMAN_PUBLISH_BRANCH =~ ^release- ]]; then
+  echo "release branch pipeline"
+fi
+
+if [[ "$NPM_TAG" =~ ^(alpha|beta|rc|latest)$ ]]; then
+  # node ./build-publish.mjs
+  npx tsx ./build-publish.mjs
+else
+  echo "Local release is prohibited!"
+fi
+
+
+while true; do
+  ls -l
+  echo "
+  ---- last update: $(date '+%H:%M:%S') ----
+  "
+  sleep 1
+done
+
+# 持续显示进程信息
+while true; do
+  clear
+  ps aux | awk '{print $2, $3, $11}' | sort -k2 -nr | head -n 10
+  sleep 2
+done
+
+sync_code() {
+  unset npm_config_registry
+  echo "===== start clean ====="
+}
+case $1 in
+  "sync_code") sync_code $2 ;;
+  # "two") functionTwo ;;
+esac
+
+
+# 2014 ssh 登录 ssh & scp
+scp -r ~/Downloads/build/ root@118.31.47.xx:/home/admin/nginx/
+ssh root@118.31.47.xx xyxyxy
+cd /home/admin/nginx/
+cp -r ./build ./build-back1
+
+echo "进行 xx 操作 \n\r" \
+&& cd ~/my/work/project/xx \
+&& spm build && spm deploy \
+# 对引号进行转义
+expect -c "spawn ssh admin@xx.net
+expect \"password:\"
+send \"password22\r\"
+send \"cd ccbin && ./ccupdate.sh \n\"
+interact "
+
 ```
 
 
@@ -4017,6 +5156,14 @@ osascript -e 'display notification "Test message" with title "Test Notification"
 osascript -e 'tell application "Safari" to activate'
 osascript -e 'activate app "Safari"'
 osascript -e 'quit app "Safari"'
+
+osascript -e 'tell application "System Events" to tell process "ClashX"
+  tell menu bar item 1 of menu bar 2
+    click
+    key code 15 using command down
+  end tell
+end tell
+'
 
 # https://apple.stackexchange.com/questions/103621/run-applescript-from-bash-script
 osascript <<EOD
@@ -4387,7 +5534,7 @@ if (quote.length > 80) {
 
 
 
-## plantuml
+### plantuml
 
 2022
 

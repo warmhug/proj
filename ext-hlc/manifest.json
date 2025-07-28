@@ -20,7 +20,7 @@
       },
       "description": "打开此扩展的 popup 页面"
     },
-    "aiChat": {
+    "AIChat": {
       "suggested_key": "Ctrl+Shift+V",
       "description": "AI对话"
     },

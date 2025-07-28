@@ -1,12 +1,8 @@
 {
   "name": "root",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
-    "build": "echo \"run build\"",
-    "version": "echo $npm_package_version && exit 1",
     "lint": "eslint '**/*/src/**/*.{js,jsx,ts,tsx}'",
-    "deploy": "cross-env SITE_DEPLOY='TRUE' npm run build && gh-pages -d ./dist",
     "prettier": ""
   },
   "devDependencies": {
@@ -14,16 +10,10 @@
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "gh-pages": "^5.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.0",
-    "pretty-quick": "^4.0.0",
-    "typescript": "^5.4.5"
-  },
-  "peerDependencies": {
-    "antd": "^4.24.15 || ^5.11.2",
-    "react": ">=17.0.0"
+    "pretty-quick": "^4.0.0"
   },
   "prettier": {
     "semi": true,
@@ -50,8 +40,5 @@
   },
   "gitHooks": {
     "pre-commit": "echo \"pre-commit: run...\" && exit 1"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   }
 }

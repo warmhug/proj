@@ -195,7 +195,7 @@ chrome.tabs.onCreated.addListener(async (tabInfo) => {
   console.log('onCreated tabInfo: ', tabInfo);
   // 如果上一次活动标签页的索引已知，将新标签页放在该标签页的右边
   if (lastActiveTabIndex !== null) {
-    await chrome.tabs.move(tabInfo.id, { index: lastActiveTabIndex + 1 });
+    // await chrome.tabs.move(tabInfo.id, { index: lastActiveTabIndex + 1 });
   }
   // 在 地址栏搜索 并按住 CMD+Enter 后打开的 tab 移动到在当前 tab 右边
   const [curTab] = await chrome.tabs.query({ active: true });
@@ -282,7 +282,7 @@ async function onMessageCb(request) {
     const [curTab] = await chrome.tabs.query({ active: true });
     await hl_utils.reloadTabs(request?.reloadTabsAll ? undefined : curTab);
   }
-  if (request?.action === 'aiChat') {
+  if (request?.action === 'AIChat') {
     await aiChat(request.clipText);
   }
   if (request.action === 'openPopup') {
@@ -314,7 +314,7 @@ async function openPopup(text = 'popup', cb = async () => {}, delay = 1000) {
 // chrome://extensions/shortcuts
 chrome.commands.onCommand.addListener((command) => {
   openPopup(command, async () => {
-    if (command === 'aiChat') {
+    if (command === 'AIChat') {
       response = await chrome.runtime.sendMessage(
         { _bg: true, action: command },
       );

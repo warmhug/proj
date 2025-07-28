@@ -39,28 +39,6 @@ log_command() {
 # log_command "echo Hello, World!"
 # log_command "echo 'Hello'"
 
-run_osascript() {
-  # osascript -e 'activate app "Safari"'
-  if [[ "$1" == "addRule" ]]; then
-    # osascript "./nm_ss.scpt"
-    osascript -e 'tell application "System Events" to tell process "ClashX"
-      tell menu bar item 1 of menu bar 2
-        click
-        key code 15 using command down
-      end tell
-    end tell
-    '
-  elif [[ "$1" == "topmost" ]]; then
-    while true; do
-      log_command echo "$1: test while"
-    sleep 1
-    done
-  else
-    log_command "echo 'arg is wrong'"
-  fi
-  # log_command "echo 'run_osascript_success'"
-}
-
 dealMsg() {
   hl_input=${hl_input/#*'{'/'{'}
   # hl_input=${hl_input%'"}'}
@@ -97,20 +75,9 @@ dealMsg() {
   elif [[ "$msg_command" == "getNote" ]]; then
     note_cont=$(cat $note_file)
     hl_output='{"code": "200", "content": '$note_cont'}'
-  elif [[ "$msg_command" == "addRule" ]]; then
-    if [[ $msg_content =~ ^www\. ]]; then
-      msg_content=${msg_content#www.}
-    fi
-    new_str=DOMAIN-SUFFIX,"${msg_content}",Proxy
-    rules_value=$(yq '.rules' $clash_file)
-    if [[ "$rules_value" != *$new_str* ]]; then
-      echo $new_str >> $log_file
-      yq e '.rules |= [ "'"$new_str"'" ] +.' $clash_file -i
-      run_osascript "addRule"
-    fi
-  elif [[ "$msg_command" == "topmost" ]]; then
-    # run_osascript "addRule"
-    run_osascript "topmost"
+  elif [[ "$msg_command" == "clash_opt" ]]; then
+    echo "aa"
+    osascript -e 'activate app "Safari"'
   elif [[ "$msg_command" == "clash" ]]; then
   # bypassdomains 和 clash rule 哪个优先？
   local bypassdomains="127.0.0.1,localhost,gateway.icloud.com,gateway.icloud.com.cn,\
@@ -125,7 +92,12 @@ dealMsg() {
   networksetup -setwebproxystate Wi-Fi on
   networksetup -setsecurewebproxystate Wi-Fi on
   networksetup -setsocksfirewallproxystate Wi-Fi on
-  elif [[ "$msg_command" == "comp" ]]; then
+  elif [[ "$msg_command" == "no_proxy" ]]; then
+  networksetup -setproxyautodiscovery Wi-Fi off
+  networksetup -setwebproxystate Wi-Fi off
+  networksetup -setsecurewebproxystate Wi-Fi off
+  networksetup -setsocksfirewallproxystate Wi-Fi off
+  elif [[ "$msg_command" == "company" ]]; then
   networksetup -setproxyautodiscovery Wi-Fi on
   networksetup -setwebproxystate Wi-Fi off
   networksetup -setsecurewebproxystate Wi-Fi off
@@ -141,11 +113,6 @@ dealMsg() {
   networksetup -setsecurewebproxystate Wi-Fi on
   networksetup -setsocksfirewallproxystate Wi-Fi off
   networksetup -setproxybypassdomains Wi-Fi Empty
-  elif [[ "$msg_command" == "no" ]]; then
-  networksetup -setproxyautodiscovery Wi-Fi off
-  networksetup -setwebproxystate Wi-Fi off
-  networksetup -setsecurewebproxystate Wi-Fi off
-  networksetup -setsocksfirewallproxystate Wi-Fi off
   elif [[ "$msg_command" == "openMacConfig" ]]; then
   open "x-apple.systempreferences:com.apple.Network-Settings.extension?Proxies"
   elif [[ "$msg_command" == "nativeCmd" ]]; then

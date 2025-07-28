@@ -14,6 +14,7 @@ let currentFileIndex = -1;
 // 不能用 ~ 表示用户
 const filePaths = [
   ['ss.yaml', '/Users/hua/.config/clash.meta/ss.yaml'],
+  ['ss.yaml(clash)', '/Users/hua/.config/clash/ss.yaml'],
   ['nm_sh.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/nm_sh.json'],
   ['.zshrc', '/Users/hua/.zshrc'],
   ['.npmrc', '/Users/hua/.npmrc'],
@@ -21,9 +22,10 @@ const filePaths = [
   ['.gitconfig', '/Users/hua/.gitconfig'],
   ['.gitconfig-github', '/Users/hua/.gitconfig-github'],
   ['apache', '/etc/apache2/httpd.conf'],
+  ['tmp', '/var/folders/xk/tpmztqjx0gldhvryd_mh60_80000gn/T/'],
 ];
 const nativeCmds = [
-  ['nvm', 'code --new-window /Users/hua/.nvm/versions/node'],
+  ['~/.nvm/versions/node', 'code --new-window /Users/hua/.nvm/versions/node'],
 ];
 
 document.querySelector('#editLocalFiles').innerHTML = `

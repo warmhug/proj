@@ -608,7 +608,7 @@ const hl_commonUtils = {
     return ua = ub;
   },
   // get local ip https://github.com/dlo83/local-ip-chrome-extension
-  getLocalIPs: (callback) => {
+  getLocalIPs: () => new Promise((resolve, reject) => {
     var ips = [];
     var RTCPeerConnection = window.RTCPeerConnection || window.webkitRTCPeerConnection;
     var pc = new RTCPeerConnection({ iceServers: [] });
@@ -616,7 +616,7 @@ const hl_commonUtils = {
     pc.onicecandidate = function (e) {
       if (!e.candidate) { // Candidate gathering completed.
         pc.close();
-        callback(ips);
+        resolve(ips);
         return;
       }
       var ip = /^candidate:.+ (\S+) \d+ typ/.exec(e.candidate.candidate)[1];
@@ -625,8 +625,8 @@ const hl_commonUtils = {
     };
     pc.createOffer(function (sdp) {
       pc.setLocalDescription(sdp);
-    }, function onerror() { });
-  },
+    }, function onerror() { reject('getLocalIPs error') });
+  }),
   readClipboardText: async () => {
     // https://github.com/extend-chrome/clipboard/blob/master/src/index.ts
     const readText = () => new Promise((resolve, reject) => {
@@ -730,25 +730,26 @@ const hl_commonUtils = {
   },
   // FileHandle 需要通过 IndexedDB 来存储
   fileHandleOpt: function () {
+    const self = this;
     const saveFileHandle = async (id, fileHandle, filePath) => {
       if (!id || !fileHandle) {
         return;
       }
-      const [store] = await this.openDatabase();
+      const [store] = await self.openDatabase();
       const request = store.put({ id, fileHandle, filePath });
       return new Promise((resolve, reject) => {
         request.onsuccess = () => resolve(request.result);
       });
     }
     const getFileHandle = async (id) => {
-      const [store] = await this.openDatabase();
+      const [store] = await self.openDatabase();
       const request = id ? (await store.get(id)) : (await store.getAll());
       return new Promise((resolve, reject) => {
         request.onsuccess = () => resolve(request.result);
       });
     }
     const deleteFileHandle = async (id) => {
-      const [store] = await this.openDatabase();
+      const [store] = await self.openDatabase();
       const request = id ? (await store.delete(id)) : (await store.clear());
       return new Promise((resolve, reject) => {
         request.onsuccess = () => resolve(request.result);
@@ -959,11 +960,11 @@ const hl_chromeUtils = {
     }
   },
   // <a href="https://x.com">x</a>
-  // <a href="chrome://settings/system">chrome-proxy</a>
+  // <a href="chrome://settings/system">chrome</a>
   // aEle.addEventListener('click', openUrl);
   // 协议是 chrome 开头 使用 chrome api 打开, 否则是否 window.open
   openUrl: async function ({ href, target }) {
-    if (!href || !target) {
+    if (!href) {
       return;
     }
     // target="_blank|_self|_parent|_top|framename"
@@ -1042,12 +1043,12 @@ const hl_chromeUtils = {
           formatTitle = formatTitle.substring(0, 60) + '...';
         }
         var anchor = document.createElement('a');
-        let iconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzQyODVGNCI+PHBhdGggZD0iTTIwIDZoLThsLTItMkg0Yy0xLjEgMC0xLjk5LjktMS45OSAyTDIgMThjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY4YzAtMS4xLS45LTItMi0yem0wIDEySDRWOGgxNnYxMHoiLz48L3N2Zz4=';
         if (bookmarkNode.url) {
           anchor.setAttribute('href', bookmarkNode.url);
-          // chrome://bookmarks 打开控制台 查找文件夹图标 chrome://bookmarks/images/folder_open.svg
-          iconUrl = chrome?.runtime?.getURL(`_favicon/?pageUrl=${bookmarkNode.url}`);
         }
+        const folderSvg = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzQyODVGNCI+PHBhdGggZD0iTTIwIDZoLThsLTItMkg0Yy0xLjEgMC0xLjk5LjktMS45OSAyTDIgMThjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY4YzAtMS4xLS45LTItMi0yem0wIDEySDRWOGgxNnYxMHoiLz48L3N2Zz4=';
+        // chrome://bookmarks 打开控制台 查找文件夹图标 chrome://bookmarks/images/folder_open.svg
+        const iconUrl = bookmarkNode.url ? chrome?.runtime?.getURL(`_favicon/?pageUrl=${bookmarkNode.url}`) ?? folderSvg : folderSvg;
         anchor.setAttribute('title', bookmarkNode.title);
         // anchor.setAttribute('target', '_blank');
         anchor.innerHTML = `<img src="${iconUrl}" />${formatTitle}`;
@@ -1157,11 +1158,12 @@ const hl_utils = {
   // getStorage(null, false);
   // getStorage(['hl_savedData'], false);
   getStorage: async function (keys = null, isSync = true) {
+    const self = this;
     if (!chrome?.storage?.local) {
       const res = {};
       Object.keys(localStorage).forEach(key => {
         const resItem = localStorage.getItem(key);
-        const parseItem = this.jsonParse(resItem);
+        const parseItem = self.jsonParse(resItem);
         if (parseItem) {
           res[key] = parseItem;
         } else {

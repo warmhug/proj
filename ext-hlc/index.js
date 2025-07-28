@@ -1,29 +1,4 @@
 
-async function dumpBookmarks({ bookmarkTreeNodes, topSites }) {
-  if (!bookmarkTreeNodes) {
-    return;
-  }
-  const [favBar = [], ...others] = bookmarkTreeNodes[0].children;
-  // 收藏夹栏内容 直接显示
-  const newChilds = [...favBar.children, ...others, {
-    id: 'top',
-    parentId: 'root',
-    title: 'topSite',
-    children: topSites.map((item, idx) => ({ id: `t${idx}`, ...item })),
-  }];
-  const { dumpTreeNodes } = hl_utils.createTreeDom();
-  document.querySelector('#bookmarks').append(dumpTreeNodes(newChilds));
-  document.querySelector('#bookmarks').addEventListener('click', async (evt) => {
-    if (evt.target?.tagName === 'A') {
-      evt.preventDefault();
-      await hl_utils.openUrl({
-        href: evt.target.getAttribute('href'),
-        target: evt.target.getAttribute('target'),
-      });
-    }
-  });
-}
-
 async function renderMyNote() {
   const notesEle = document.querySelector('.mynotesMain');
   const renderItem = () => {
@@ -120,7 +95,7 @@ async function tuiEditor({ el }) {
     linkAttributes: { target: '_blank' },
     toolbarItems: [['italic', 'strike', 'hr', 'ul', 'ol'], ['table', 'image', 'link']],
     // height: readonly ? '450px' : '800px',
-    height: '600px',
+    height: '800px',
     events: {
       // change keyup 区别
       keyup: async () => {
@@ -150,9 +125,40 @@ async function tuiEditor({ el }) {
   });
 }
 
-;(async function main() {
+async function renderBookmarks(bsData = [], topSites, extraData = []) {
+  const finalData = [];
+  if (bsData[0]?.children) {
+    finalData.push(...bsData[0].children, bsData[1]);
+  }
+  if (topSites) {
+    finalData.push({
+      // id: 'top', parentId: 'root',
+      title: 'topSite',
+      children: topSites.map((item, idx) => ({ id: `t${idx}`, ...item })),
+    });
+  }
+  finalData.push(...extraData);
+  const { dumpTreeNodes } = hl_utils.createTreeDom();
+  document.querySelector('#bookmarks').append(dumpTreeNodes(finalData));
+  document.querySelector('#bookmarks').addEventListener('click', async (evt) => {
+    if (evt.target?.tagName === 'A') {
+      evt.preventDefault();
+      await hl_utils.openUrl({
+        href: evt.target.getAttribute('href'),
+        target: evt.target.getAttribute('target') || '_blank',
+      });
+    }
+  });
+}
 
-  await dumpBookmarks(await hl_utils.getBookmarks());
+;(async function main() {
+  const { bookmarkTreeNodes, topSites } = await hl_utils.getBookmarks();
+  const ips = await hl_utils.getLocalIPs();
+  renderBookmarks(bookmarkTreeNodes?.[0].children, topSites, [{
+    title: `http://${ips[0]}`,
+    url: `http://${ips[0]}`,
+  }]);
+
   await renderMyNote();
   await tuiEditor({ el: document.querySelector('#tuiEditor') })
   googleTranslate();
@@ -170,7 +176,11 @@ async function tuiEditor({ el }) {
 
   const pages = [
     [
-      "index-localFileEditor.html",
+      'sandbox.html',
+      'eng'
+    ],
+    [
+      "sandbox-localEditor.html",
       "本地文件编辑器"
     ],
     [
@@ -180,14 +190,9 @@ async function tuiEditor({ el }) {
   ];
 
   const { hl_other_sideWidth } = await hl_utils.getStorage();
-  const sideIframe = document.querySelector('#sideIframe');
-  sideIframe.style.width = hl_other_sideWidth ?? '30%';
-
-  const sideIframeWrap = sideIframe.querySelector('.iframe-wrap');
-  sideIframeWrap.innerHTML = createIfr('sandbox.html');
-
-  const majorContent = document.querySelector('.major #iframes');
-  majorContent.insertAdjacentHTML('beforeend', `
+  const ifrContainer = document.querySelector('#iframes');
+  ifrContainer.style.width = hl_other_sideWidth ?? '30%';
+  ifrContainer.insertAdjacentHTML('beforeend', `
     <div class="urls-wrap">
     ${pages.map(item => {
       return `<a class="urls" style="margin:4px 8px;" href="${item[0]}">${item[1]}</a>`;
@@ -197,9 +202,9 @@ async function tuiEditor({ el }) {
       ${createIfr()}
     </div>
   `);
-  const majorIframe = document.querySelector('.major .iframe-wrap');
+  const majorIframe = document.querySelector('#iframes .iframe-wrap');
   majorIframe.innerHTML = createIfr(pages[0][0]);
-  document.querySelectorAll('.major .urls-wrap a').forEach(item => {
+  document.querySelectorAll('#iframes .urls-wrap a').forEach(item => {
     item.addEventListener('click', evt => {
       evt.preventDefault();
       // const iframeWrap = evt.target.closest('.urls-wrap');

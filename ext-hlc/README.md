@@ -6,7 +6,7 @@
 2. manifest -> background -> scripts 打开 `chrome://extensions/` 相应的插件名、点“背景页”。
 3. manifest -> content_scripts 设置的 js 位置：“控制台 -> Sources -> Content scripts”
 
-https://developer.chrome.com/docs/chromedriver/extensions?hl=zh-cn
+https://developer.chrome.com/docs/extensions?hl=zh-cn
 
 配置
 

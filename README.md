@@ -12,6 +12,7 @@ permalink: /
 
 ------ js
 
+- console.log(1_048_576) 这是 Numeric Separators 的语法，是 ECMAScript 2021（ES12）中的一部分
 - https://evertpot.com/using-top-level-await-is-bc-break/
 
 - 33-js-concepts https://github.com/leonardomso/33-js-concepts
@@ -290,7 +291,10 @@ Google: [gsuite](https://gsuite.google.com/) ([google-forms](https://docs.google
 [teambition](https://www.teambition.com/)、[wps](https://www.wps.cn/) (稻壳模板[docer](http://www.docer.com/))、
 [xiezuocat](https://xiezuocat.com/#/)(AI纠错)、[sheetui](https://sheetui.com/)(表格转网页)、[Luckysheet](https://github.com/mengshukeji/Luckysheet)、[handsontable](https://handsontable.com/)、[prezi](https://prezi.com/dashboard/next/#/presentations)、[milanote](https://app.milanote.com/1KeUXu1ElqNVrw/home)、
 
-产品设计工具: 白板([mural](https://mural.co/)、[miro](https://miro.com/))、原型([xiaopiu](https://www.xiaopiu.com)、[xiaopiu/prd](https://www.xiaopiu.com/prd)、[justinmind](https://www.justinmind.com/))、[知乎](https://www.zhihu.com/question/23004570)([invision](https://www.invisionapp.com/)、[modao](https://modao.cc/)、[会议桌](https://www.huiyizhuo.com/))、[流程图和图表](https://zhuanlan.zhihu.com/p/111990866)、在线[培训工具](https://segmentfault.com/a/1190000021793283)。
+产品设计工具:
+白板([mural](https://mural.co/)、[miro](https://miro.com/))、
+原型([xiaopiu](https://www.xiaopiu.com)、[xiaopiu/prd](https://www.xiaopiu.com/prd)、[justinmind](https://www.justinmind.com/))、[知乎](https://www.zhihu.com/question/23004570)([invision](https://www.invisionapp.com/)、[modao](https://modao.cc/)、
+[会议桌](https://www.huiyizhuo.com/))、[流程图和图表](https://zhuanlan.zhihu.com/p/111990866)、在线[培训工具](https://segmentfault.com/a/1190000021793283)。
 
 其他: [mubu](https://mubu.com/)、[slides.com](https://slides.com/)、[ppt.baomitu](https://ppt.baomitu.com/)、[zoho](https://www.zoho.com/)、[visme](https://www.visme.co/templates/)、[deckdeckgo](https://deckdeckgo.com/)、[witeboard](https://witeboard.com/)、[wireflow](https://wireflow.co/)、[presenta](https://play.presenta.cc/#s0)。
 [batnoter](https://github.com/batnoter/batnoter)
@@ -309,21 +313,28 @@ https://online.visual-paradigm.com/diagrams/templates/brainstorming
 
 https://tldraw.dev/
 [SVG-to-Canvas (canvas-to-SVG) Parser](https://github.com/fabricjs/fabric.js)
-
 [skeditor](https://github.com/skeditor/skeditor) [canvaskit-wasm](https://zhuanlan.zhihu.com/p/432454443)
 
 [figma](https://www.figma.com/) ([FigmaToCode](https://github.com/bernaferrari/FigmaToCode))
 [figma 技术](https://madebyevan.com/figma/) /
 [figma c++](https://madebyevan.com/figma/building-a-professional-design-tool-on-the-web/) /
 [figma 插件技术](https://zhuanlan.zhihu.com/p/357724347)
-
 [react-sketchapp](https://github.com/airbnb/react-sketchapp)
 
-[drawio](https://github.com/jgraph/drawio)([mxgraph](https://github.com/jgraph/mxgraph))、[cloudskew](https://www.cloudskew.com/)、[diagram-js](https://github.com/bpmn-io/diagram-js)、[excalidraw](https://github.com/excalidraw/excalidraw)、[draw2d](https://github.com/freegroup/draw2d)([demo](http://freegroup.github.io/draw2d_js.app.shape_designer/))、[plantuml](https://plantuml.com/zh/)、[planttext](https://www.planttext.com/)、[diagram.codes](https://www.diagram.codes/)、[jsplumb](https://github.com/jsplumb/jsplumb)([jsplumb-vs-mxgraph](https://www.npmtrends.com/jsplumb-vs-mxgraph))、[mermaid-js](https://github.com/mermaid-js/mermaid)、[nomnoml](https://github.com/skanaar/nomnoml)、[visjs](https://github.com/visjs)([timeline](https://visjs.github.io/vis-timeline/examples/timeline/))、[react-diagrams](https://github.com/projectstorm/react-diagrams)、[roughjs](https://roughjs.com/)、[rete.js/](https://rete.js.org/#/)[flume](https://flume.dev/)/[nodered](https://nodered.org/)(可视化节点)、[diagrams](https://github.com/mingrammer/diagrams)([graphviz](https://www.graphviz.org/))、[vscode-drawio](https://github.com/hediet/vscode-drawio)、[text-to-diagram](https://smusamashah.github.io/text-to-diagram)、[isoflow](https://isoflow.io/)、[reactflow](https://reactflow.dev/)、[diagram-maker](https://github.com/awslabs/diagram-maker)。
+[excalidraw](https://github.com/excalidraw/excalidraw)、
+[drawio](https://github.com/jgraph/drawio)([mxgraph](https://github.com/jgraph/mxgraph))、[vscode-drawio](https://github.com/hediet/vscode-drawio)、
+[plantuml](https://plantuml.com/zh/)、[planttext](https://www.planttext.com/)、
+[cloudskew](https://www.cloudskew.com/)、[diagram-js](https://github.com/bpmn-io/diagram-js)、
+[diagram.codes](https://www.diagram.codes/)、[mermaid-js](https://github.com/mermaid-js/mermaid)、[nomnoml](https://github.com/skanaar/nomnoml)、
+[visjs](https://github.com/visjs)([timeline](https://visjs.github.io/vis-timeline/examples/timeline/))、[react-diagrams](https://github.com/projectstorm/react-diagrams)、
+[roughjs](https://roughjs.com/)、[rete.js/](https://rete.js.org/#/)[flume](https://flume.dev/)/[nodered](https://nodered.org/)(可视化节点)、[diagrams](https://github.com/mingrammer/diagrams)([graphviz](https://www.graphviz.org/))、
+[text-to-diagram](https://smusamashah.github.io/text-to-diagram)、
+[reactflow](https://reactflow.dev/)。
+废弃: diagram-maker
 
 平台/端: [processon](https://www.processon.com/)、visio、mindnode lite、[visual-paradigm](https://online.visual-paradigm.com/diagrams/features/aws-architecture-diagram-tool/)、[ithoughts](https://www.toketaware.com/ithoughts-osx)、[gliffy](https://www.gliffy.com/)、[terrastruct](https://terrastruct.com/)、[edrawsoft](https://www.edrawsoft.cn/)、[freedgo](https://www.freedgo.com/)、[websequencediagrams](https://www.websequencediagrams.com/)、[chartmage](http://chartmage.com/intro.html)、[thebrain](https://www.thebrain.com/)、[asciiflow](https://asciiflow.com/#/)([textik](https://textik.com/#9fe9a0bacdcf4a9a))、[omnigraffle](https://www.omnigroup.com/omnigraffle/)、[flowchart](https://flowchart.fun/)、[photopea](https://www.photopea.com/)​、[PPTist](https://github.com/pipipi-pikachu/PPTist)
 
-收费: [gojs](https://gojs.net/latest/samples/index.html)、[jointjs](https://www.jointjs.com/)、[jsplumbtoolkit](https://jsplumbtoolkit.com/)、[yworks](https://www.yworks.com/products/yfiles/demos)、[mindfusion-diagram](https://mindfusion.eu/javascript-diagram.html)
+收费: [isoflow](https://isoflow.io/)、[gojs](https://gojs.net/latest/samples/index.html)、[jointjs](https://www.jointjs.com/)、[jsplumbtoolkit](https://jsplumbtoolkit.com/)、[yworks](https://www.yworks.com/products/yfiles/demos)、[mindfusion-diagram](https://mindfusion.eu/javascript-diagram.html)、[jsplumb](https://github.com/jsplumb/jsplumb)
 
 系统: [drawio-aws-cloudcraft](https://www.diagrams.net/blog/drawio-aws-cloudcraft)、([placeholder](https://www.diagrams.net/blog/placeholder-scope)、[mermaid](https://www.diagrams.net/blog/mermaid-diagrams)、[network](https://www.diagrams.net/blog/network-diagrams)、[org](https://www.diagrams.net/blog/org-charts))
 
@@ -986,40 +997,8 @@ https://github.com/nrwl/nx-examples
 
 ## p/npm
 
-https://docs.npmjs.com/cli/v10/using-npm/config
-https://docs.npmjs.com/cli/v10/configuring-npm/package-json
-https://pnpm.io/settings
-pnpm v7 文档 https://github.com/pnpm/pnpm.io/blob/v7/docs/npmrc.md
-
 https://npmtrends.com/lint-staged-vs-pre-commit-vs-pretty-quick
-
-.npmrc 文件:
-```sh
-# https://jpospisil.com/2017/06/02/understanding-lock-files-in-npm-5
-update-notifier=false
-ignore-scripts=true
-legacy-peer-deps=true
-package-lock=false
-omit-lockfile-registry-resolved=true  # npm 特有
-engine-strict=true  # 对 package.json 里的 "engines": { "node": ">=18" } 这个起作用
-# package.json 里设置 "packageManager": "pnpm@7.33.7" 会使得 在当前目录运行 pnpm -v 始终是 7.33.7 而忽略系统安装的 不同 pnpm 版本. 原因是 https://github.com/nodejs/corepack
-
-# pnpm 特有配置:
-link-workspace-packages=deep
-reporter=append-only
-workspace-concurrency=1  # default: Infinity
-verify-deps-before-run=install  # verifyDepsBeforeRun
-verify-store-integrity=false
-recursive-install=false
-# enable-pre-post-scripts=true
-# package-manager-strict=true  # since v9 默认 true , v10 packageManagerStrict
-# resolution-mode=lowest-direct
-# lockfile-include-tarball-url=false
-# public-hoist-pattern[]=@types*
-# hoist-pattern[]=*
-# hoist-pattern[]=!@types/react-dom
-# hoist-pattern[]=!@types/react
-```
+https://www.npmtrends.com/jsplumb-vs-mxgraph
 
 ```sh
 # https://docs.npmjs.com/cli/v10/commands/npm
@@ -1048,6 +1027,7 @@ npm config list --json  # 只显示 最终实际生效 的值
 npm config get registry  # 获取 最终实际生效 的某个值
 npm config set -g registry https://registry.npmmirror.com
 npm config get cache  # 一般为 ~/.npm 查看 _npx 目录
+npm cache clean --force
 
 # 发包 登录账号
 # npm publish 时使用的 registry 与 npmrc 里的 registry 和 @scope/registry 哪个起作用?
@@ -1078,14 +1058,8 @@ npm version prerelease --preid rc --no-git-tag-version
 
 # ====== pnpm
 
-# https://pnpm.io/symlinked-node-modules-structure
-# 分析 /node_modules/.modules.yaml 文件
-# pnpm(v7+) 的 Isolated 即通过 node-linker=hoisted 设置 每个子包的 node_modules 只存自己依赖的软链接  没有 hoist 到顶层
 ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
 
-# https://pnpm.io/workspaces monorepo 场景:
-# 比如 package.json 文件的 "dependencies": { "demo0": "npm:demo1@^2.0.1", "demo": "workspace:demo2@*" }
-# 这类 npm alias 依赖. 内部存在 demo2 这个包, 但 pnpm ls demo2 无结果, 而 pnpm ls demo 有结果.
 # 使用 -r --filter 参数, 对 monorepo 里的子包进行操作.
 pnpm --filter "@xx/quick-*..." aa   # 后边的 aa 为 filter 筛选出的包的 scripts 里的 某个key 比如 test build 等
 pnpm ls -r --only-projects --parseable --filter "@xx/yy"
@@ -1094,7 +1068,7 @@ pnpm ls  # 列出 package.json 中声明的直接依赖
 pnpm ls react  # 只列出 react 依赖
 pnpm ls --json --long
 pnpm ls --depth 2 ts-jest
-pnpm ls --depth Infinity fast-glob  # 等效于 pnpm why fast-glob -r
+pnpm ls --depth Infinity fast-glob  # 等效于 pnpm why -r fast-glob
 
 pnpm build --dir ./dir
 pnpm install --dir ./dir  # 自动进去指定目录安装. 同 npm install --prefix ./dir
@@ -1104,6 +1078,7 @@ pnpm add express@2 react@">=0.1.0 <0.2.0"
 pnpm add ./package.tar.gz
 pnpm add ./some-directory  # same as running pnpm link
 
+rm -rf "$(pnpm store path)"
 pnpm store prune
 pnpm import package‑lock.json  # 导入 npm lock 或 npm-shrinkwrap.json 文件
 pnpx create-react-app@next ./my-app  # npm 的 npx 等效于 pnpm 的 pnpx = pnpm dlx
@@ -1116,6 +1091,42 @@ pnpm up "@ant-design/pro-*" -r  # 加 --workspace 作用一样
 
 ```
 
+
+npm 包 xx 的依赖版本是 @types/react: * 时, 在 monorepo 里存在 @types/react 16 17 18 多个大版本, 这个 xx 实际安装的 @types/react 版本是什么?
+...
+公共源的某些npm包, 在公司内部源没有. 通过 bundledDependencies 先从公共源下载, 在公司内部源发布. 能解决问题吗?
+https://chatgpt.com/c/68826ea0-4564-8008-b420-5b51b36eaaa9
+2025-07-25
+
+const rl = readline.createInterface({
+  input: res,
+  crlfDelay: Infinity, // Recognizes '\r\n' and '\n' as line breaks
+});
+如上 res 是个 流数据, 需要一行行读取. 其实际内容如下
+data: { "response": { "modelVersion": "gemini-2.5-pro1" } }\r\n\r\n
+data: { "response": { "modelVersion": "gemini-2.5-pro2" } }\r\n\r\n
+data: { "response": { "modelVersion": "gemini-2.5-pro3" } }\r\n\r\n
+res 是 PassThrough 对象, 需要先读取到这个对象的实际数据, 做一些修改, 再构造出一个新的 PassThrough 对象.
+2025-07-23
+
+在 node 模块里, 一个函数 需要返回一个 await axios.request() 值. 但又希望不请求真实的服务器地址, 而是直接返回给定的mock结果, 应该怎么做?
+2025-07-22
+
+运行 pnpm store prune 后, 安装遇到如下问题, 是因为本地缓存吗?
+This error may happen when a package is republished to the registry with the same version.
+In this case, the metadata in the local pnpm cache will contain the old integrity checksum.
+没有 republish 但同一个包同一个版本, 发布到了 不同的 registry 上. 是这个问题吗?
+2025-07-20
+
+对于 responseType: 'stream' 的 http 输出, 使用 node 的 readline.createInterface 可以按行读取内容, 怎么能一次全部读取 而不用按行读?
+2025-07-16
+
+pnpm workspaces 会统一添加子包的依赖到根目录的 lock 文件里, 怎么排除某几子包?
+...
+因为公司内部源不全, 安装外部包时 怎么把其依赖的 node_modules 也作为源码, 但不叫 node_modules 这个名字.
+...
+开发阶段的 npm 包设置了 bin 怎么能给其他目录的调用者使用?
+2025-07-13
 
 pnpm add pkg 和 pnpm install pkg 的区别?
 如果一个二级依赖的 patch 版本号升级, 在项目中对一级依赖进行 pnpm uninstall 再 pnpm add , 这时候二级依赖版本号 仍然没升级, 是怎么了?
@@ -1712,6 +1723,14 @@ https://github.com/zzj3720 (github/toeverything)
 
 
 ```sh
+
+# pnpm tsc 当存在多个版本 typescript 查看当前使用的是哪个
+pnpm exec tsc -v  # pnpx tsc -v 会报错
+pnpm exec which tsc  # 查看
+ls -l ./node_modules/.bin/tsc
+
+pnpm exec tsc --build --traceResolution > a.log
+
 # 查看当前项目 typescript 版本
 npx tsc -v
 npx tsc --showConfig
@@ -2043,6 +2062,72 @@ gmtc https://gmtc.infoq.cn/2022/beijing/schedule
 
 
 
+gemini-cli
+multiple tasks: https://github.com/google-gemini/gemini-cli/issues/2387
+feature 增强: https://github.com/google-gemini/gemini-cli/issues/1585
+openrouter支持: https://github.com/google-gemini/gemini-cli/issues/1515
+Gemini code assist  https://www.youtube.com/watch?v=hOAGISjKIOY
+命令:
+gemini --prompt hello
+流程:
+cli: gemini.js -> settings.js & config.js -> 进入core模块
+core: config.js -> GeminiClient core/client.js -> contentGenerator.js -> codeAssist.js -> server.js
+cli: useGeminiStream.js submitQuery -> nextSpeakerChecker.js -> core/client.js core/geminiChat.js core/turn.js
+修改代码:
+- infra/ai/aaid-cli/dist/src/gemini.js
+settings.setValue(SettingScope.User, 'selectedAuthType', AuthType.LOGIN_WITH_GOOGLE);
+// logUserPrompt
+- infra/ai/aaid-cli/dist/src/ui/hooks/useGeminiStream.js
+// logUserPrompt
+- infra/ai/aaid-cli/dist/src/ui/hooks/useAuthCommand.js
+setIsAuthenticating(false);
+- infra/ai/aaid-cli-core/dist/src/tools/mcp-client.js
+add1MCPStatusChangeListener
+- infra/ai/aaid-cli-core/dist/src/code_assist/codeAssist.js
+return new CodeAssistServer(authClient, 11, httpOptions, sessionId);
+- infra/ai/aaid-cli-core/dist/src/code_assist/oauth2.js
+return client;
+- infra/ai/aaid-cli-core/dist/src/core/geminiChat.js
+// this._logApiRequest(requestContents, this.config.getModel());
+// this._logApiError
+// await this._logApiResponse
+- ai/aaid-cli-core/dist/src/tools/read-many-files.js
+return `Will attempt to read and concatenate files:\n ${pathDesc}
+- infra/ai/aaid-cli-core/dist/src/code_assist/server.js
+
+
+
+Agents 架构
+https://github.com/langchain-ai/langchain
+https://dify.ai/
+https://platform.openai.com/docs/guides/deep-research
+https://www.anthropic.com/engineering/built-multi-agent-research-system
+
+Agents
+https://github.com/All-Hands-AI/OpenHands
+https://github.com/sourcegraph/cody
+https://github.com/codota/TabNine
+Python 实现
+https://github.com/SWE-agent/SWE-agent
+https://github.com/AutoCodeRoverSG/auto-code-rover
+https://github.com/bytedance/trae-agent
+
+
+https://github.com/ollama/ollama
+https://docs.openwebui.com/
+https://huggingface.co/spaces/galileo-ai/agent-leaderboard
+
+https://github.com/openai/codex
+claude_code 原理 https://www.reddit.com/r/ClaudeAI/comments/1jpyqlu/claude_codes_context_magic_does_it_really_scan/
+
+continue
+https://github.com/continuedev/continue
+https://hub.continue.dev/explore/rules
+https://hub.continue.dev/explore/prompts
+https://docs.continue.dev/customize/context/codebase
+https://docs.continue.dev/customization/prompts
+https://docs.continue.dev/customization/rules
+https://docs.continue.dev/features/agent/how-it-works
 
 v0.dev
 https://ui.shadcn.com/blocks/authentication
@@ -2053,10 +2138,25 @@ https://vercel.com/blog/v0-composite-model-family
 https://github.com/modelcontextprotocol/servers
 https://github.com/modelcontextprotocol/typescript-sdk
 figma mcp
+企业新基建：MCP + LLM + Agent架构，将打通AI Agent的“神经中枢”
+https://mp.weixin.qq.com/s/zAFVeZdiskhbQuVIfG9eXw
 
 
-claude_code 原理 https://www.reddit.com/r/ClaudeAI/comments/1jpyqlu/claude_codes_context_magic_does_it_really_scan/
-2025-06
+Agentic AI / AI Agent:
+Cursor, Jules, Devin,
+构建agent: openai-agents-js, VoltAgent, Mastra.ai
+Agenticseek, AutoDev AutoGen Auto-GPT
+
+万字综述，讲一讲这两年大模型这整个领域到底发展了哪些方面
+https://mp.weixin.qq.com/s/RPj5fS7-hjacswRV7OQY9w
+AI Agent 基础设施
+https://mp.weixin.qq.com/s/xp1f1BistZxy9rES3We3sA
+Claude Code 背后的技术机制
+https://mp.weixin.qq.com/s/xCajyF-WWCSCR0ElJdW-0A
+https://github.com/DevHorizonLabs/ClaudeX
+https://github.com/anthropics/claude-code/issues/59
+2025-07
+
 
 AI驱动研发效率在中后台的实践 https://mp.weixin.qq.com/s/bg32-w2e308XBPXyXpE6sQ
 2025-04
@@ -2064,6 +2164,9 @@ AI驱动研发效率在中后台的实践 https://mp.weixin.qq.com/s/bg32-w2e308
 [终于找到了AIGC时代连专业前端都能提效的工具](https://mp.weixin.qq.com/s/HU6xBqa2L4VCZBmpTYIV8A)
 https://zhuanlan.zhihu.com/p/15140783070
 2024-12
+
+
+------
 
 代码:
 https://jules.google.com/
@@ -2083,6 +2186,38 @@ https://www.ancodeai.com  https://github.com/abi/screenshot-to-code
 https://github.com/rag-web-ui/rag-web-ui
 https://www.wordware.ai/
 https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+
+自然语言生成数据表格 https://columns.ai/chatgpt
+电脑操作 https://deepmind.google/technologies/project-mariner/
+手机助手
+https://github.com/Skythinker616/gpt-assistant-android
+https://github.com/X-PLUG/MobileAgent
+LLMText https://marketplace.visualstudio.com/items?itemName=Kingleo.llmtext
+自然语言命令行 https://github.com/guoriyue/LangCommand
+https://github.com/guanguans/ai-commit
+-- 工具
+
+https://github.com/coaidev/coai  数字人 https://character.ai
+智能客服/知识库问答 https://github.com/1Panel-dev/MaxKB
+https://github.com/cs-lazy-tools/ChatGPT-On-CS
+阿里 B2B 个人采购代理 https://www.accio.com/  音乐 https://lamucal.ai/
+-- 行业
+
+https://huggingface.co/  https://openrouter.ai/rankings
+https://lmarena.ai/  https://openlm.ai/chatbot-arena/
+https://app.slack.com/client/T053EMGBEEN/C05BVLPE885?geocode=zh-cn
+-- 大模型竞技场
+
+https://metaso.cn/  https://onionai.so/  https://poe.com/  https://aichatru.ru/en
+https://chathub.gg/  https://chat100.ai/zh-CN  https://www.perplexity.ai/
+https://duckduckgo.com/?q=DuckDuckGo&ia=chat
+-- 套壳
+
+https://chatgpt.com  https://gemini.google.com/  https://www.meta.ai/  https://llama3.dev/
+https://www.tongyi.com/qianwen/  https://chat.qwenlm.ai/
+https://chat.deepseek.com/  https://www.doubao.com/chat/
+https://www.kimi.com/  https://kimi.moonshot.cn  http://ai.baidu.com/
+-- 综合/模型厂商
 
 
 
@@ -2228,6 +2363,13 @@ LaunchAgents
 - https://gist.github.com/fadhlirahim/78fefdfdf4b96d9ea9b8
 - https://gist.github.com/Pezhvak/297b058d9c449b39d321409cd041899c
 - https://github.com/Supervisor/supervisor/issues/1514
+
+
+curl -v -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d '{
+  "jsonKey": "jsonVal",
+  "jsonKey1": {}
+}' | jq
+curl -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d "@aa.json" | jq
 
 
 ---
