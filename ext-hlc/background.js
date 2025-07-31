@@ -1,3 +1,7 @@
+/**
+ * 需要在 chrome://extensions/ 打开背景页, 查看 console log 结果
+ */
+
 importScripts('common.js');
 // console.log('hl_utils: ', hl_utils);
 console.log('bg page, 注意其执行时机', chrome);
@@ -120,9 +124,8 @@ const hl_inject_auto_params = [
 ];
 
 
-
 // 在地址栏调用 Google 翻译 API 直接搜索
-const changeDelay = hl_utils.debounce((text, suggest) => {
+const suggestFn = (text, suggest) => {
   if (text.length <= 1) {
     suggest([]);
     return;
@@ -139,29 +142,40 @@ const changeDelay = hl_utils.debounce((text, suggest) => {
         }]);
       }
     });
-}, 900);
+}
 // 填入搜索结果到本插件 Google 翻译的 iframe 里，产生搜索记录、方便回顾
 const saveResult = async (text) => {
-  const cn = text?.split(' | ')?.[0];
-  if (!cn) {
+  const txt = text?.split(' | ')?.[0];
+  if (!txt) {
     return;
   }
+  const { hl_page_ext_index, hl_page_my_index } = await hl_utils.getStorage(null);
   const [curTab] = await chrome.tabs.query({ active: true });
-  const newTranslateUrl = `https://translate.google.com/?sl=zh-CN&tl=en&text=${cn}&op=translate`;
-  if (curTab.url === 'chrome://newtab/') {
-    // 如果打开了 newtab 页面
+  console.log('log curTab: ', curTab);
+  const newTranslateUrl = `https://translate.google.com/?sl=zh-CN&tl=en&text=${txt}&op=translate`;
+  const sendMsg = (msg) => {
+    // 在插件页面
     chrome.runtime.sendMessage({
       _bg: true,
       action: 'newTranslateUrl',
-      message: newTranslateUrl,
+      message: msg,
     }, (response) => {
       console.log("Receive response in background", response);
     });
+  }
+  if (curTab.url.indexOf(hl_page_ext_index) > -1) {
+    sendMsg(newTranslateUrl);
+  } else if (curTab.url.indexOf(hl_page_my_index) > -1) {
+    chrome.tabs.create({ url: hl_page_ext_index, index: curTab.index });
+    setTimeout(() => {
+      sendMsg(newTranslateUrl);
+    }, 800);
   } else {
     chrome.tabs.create({ url: newTranslateUrl, index: curTab.index });
   }
 };
 
+const changeDelay = hl_utils.debounce(suggestFn, 300);
 let cacheText = '';
 chrome.omnibox.setDefaultSuggestion({
   description: '输入中文翻译为英语'
@@ -232,7 +246,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 
 async function aiChat(clipText) {
   const { hl_inject_ai = [] } = await hl_utils.getStorage();
-  // const hl_inject_ai = ['https://www.doubao.com/chat/']; // 调试用
   const maps = hl_inject_ai.map((url, idx) => ({
     url, func: hl_inject_ai_fns[idx]
   }));
@@ -262,7 +275,6 @@ async function aiChat(clipText) {
   // console.log('log maps: ', maps);
   for (let item of maps) {
     await runFn(item);
-    // 隔一秒跑一个
     await hl_utils.sleep(1000);
   }
   // 并行执行，有焦点失焦问题？

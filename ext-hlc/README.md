@@ -12,6 +12,8 @@ https://developer.chrome.com/docs/extensions?hl=zh-cn
 
 ```json
 {
+  "hl_page_ext_index": "chrome-extension://kafpfdegkmheageeldelgnnkegpkbpca/index.html",
+  "hl_page_my_index": "http://localhost/a/_proj/ext-hlc/index.html",
   "hl_inject_ai": [
     "https://gemini.google.com/",
     "https://chatgpt.com/"

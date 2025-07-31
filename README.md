@@ -1000,15 +1000,24 @@ https://github.com/nrwl/nx-examples
 https://npmtrends.com/lint-staged-vs-pre-commit-vs-pretty-quick
 https://www.npmtrends.com/jsplumb-vs-mxgraph
 
+npm源 http://registry.npmjs.org/esbuild/0.21.4
+ali源 https://registry.npmmirror.com/esbuild/0.21.4
+腾讯源 https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4
+
 ```sh
 # https://docs.npmjs.com/cli/v10/commands/npm
 rm -rf node_modules **/node_modules
+
 # install 时除了 可选依赖 (optionalDependencies) 其他遇到 404 会报错退出.
 npm install --verbose > install.log
 # 安装 npm alias 别名依赖
-npm install axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
+npm install --registry=https://registry.npmmirror.com axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
 npm install --prefix ./dir
 npm run build --prefix ./dir
+# 从 git 安装, 验证 ssh -T git@github.com   ssh -v git@github.com
+npm install git+ssh://git@github.com:warmhug/demo.git#develop
+npm install git+https://github.com/warmhug/demo.git
+npm install https://warmhug:glpat-xx@github.com/warmhug/my-private-lib.git  # Personal Access Token
 
 # 设置 dist-tag
 npm dist-tag add @huajs/demo latest
@@ -1029,18 +1038,21 @@ npm config set -g registry https://registry.npmmirror.com
 npm config get cache  # 一般为 ~/.npm 查看 _npx 目录
 npm cache clean --force
 
+# link
+npm link  # cd my-lib , 会创建 globally-installed my-lib
+npm link my-lib  # cd my-app
+# 使用 file: 协议替代 link , 不会创建 globally-installed my-lib
+npm install ../path/to/my-lib
+ln -s /abs/path/to/my-cli ./node_modules/my-cli  # 手动软链接 node_modules
+
 # 发包 登录账号
 # npm publish 时使用的 registry 与 npmrc 里的 registry 和 @scope/registry 哪个起作用?
 # 命令行 --registry > @scope:registry > 全局/项目级 registry > npm 官方 registry
 npm publish [dir/subdir]
-npm whoami --registry https://registry.npmjs.org
-npm profile get --registry https://registry.npmjs.org
+npm whoami
+npm profile get
 npm access list packages --registry https://registry.npmjs.org
 npm search @ant-design --searchlimit=100 --json  # 搜索组织下的包
-
-# npm源 http://registry.npmjs.org/esbuild/0.21.4
-# ali源 https://registry.npmmirror.com/esbuild/0.21.4
-# 腾讯源 https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4
 
 # npx 用法: 会自动在项目的 node_modules/.bin 目录中查找可执行文件
 npx ls  # 等同于 ls
@@ -1048,6 +1060,8 @@ npx mocha --version
 npx http-server --ignore-existing # 忽略本地的同名模块
 # https://code.visualstudio.com/api/get-started/your-first-extension
 npx --package yo --package generator-code -- yo code
+
+
 
 # npm monorepo 在根目录运行  npm v7(2020-10发布) 支持 Workspaces
 npm version 0.1.5 --workspaces --no-git-tag-version --allow-same-version=true
@@ -1058,9 +1072,14 @@ npm version prerelease --preid rc --no-git-tag-version
 
 # ====== pnpm
 
+# 项目里存在 幽灵依赖 时 pnpm 会自动抛错.
+pnpm dlx depcheck  #  Missing dependencies 即为幽灵依赖
+
 ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
 
 # 使用 -r --filter 参数, 对 monorepo 里的子包进行操作.
+# Monorepo 的核心优势之一是根目录下的单一锁文件（pnpm-lock.yaml, yarn.lock, package-lock.json），它保证了所有子项目依赖版本的一致性。在子目录中单独安装会创建独立的锁文件，破坏了这一优势。
+pnpm install --filter <package_name>  # 只安装某个子包的依赖.  不推荐的方式：cd 进入子目录安装 无法链接内部依赖, 破坏单一锁文件, 依赖版本冲突
 pnpm --filter "@xx/quick-*..." aa   # 后边的 aa 为 filter 筛选出的包的 scripts 里的 某个key 比如 test build 等
 pnpm ls -r --only-projects --parseable --filter "@xx/yy"
 
@@ -2074,6 +2093,57 @@ cli: gemini.js -> settings.js & config.js -> 进入core模块
 core: config.js -> GeminiClient core/client.js -> contentGenerator.js -> codeAssist.js -> server.js
 cli: useGeminiStream.js submitQuery -> nextSpeakerChecker.js -> core/client.js core/geminiChat.js core/turn.js
 修改代码:
+- infra/ai/aaid-cli/package.json
+删除 dependencies -> "update-notifier": "^7.3.1", "@types/update-notifier": "^6.0.8",
+添加 dependencies ->
+  "ansi-escapes": "^7.0.0",
+  "chalk": "^5.3.0",
+删除 "devDependencies": {
+  "@babel/runtime": "^7.27.6",
+  "@testing-library/react": "^16.3.0",
+  "@types/command-exists": "^1.2.3",
+  "@types/diff": "^7.0.2",
+  "@types/dotenv": "^6.1.1",
+  "@types/node": "^20.11.24",
+  "@types/react": "^19.1.8",
+  "@types/react-dom": "^19.1.6",
+  "@types/semver": "^7.7.0",
+  "@types/shell-quote": "^1.7.5",
+  "@types/yargs": "^17.0.32",
+  "ink-testing-library": "^4.0.0",
+  "jsdom": "^26.1.0",
+  "pretty-format": "^30.0.2",
+  "react-dom": "^19.1.0",
+  "typescript": "^5.3.3",
+  "vitest": "^3.1.1"
+},
+- infra/ai/aaid-cli-core/package.json
+添加 dependencies ->
+  "@opentelemetry/api-logs": "^0.52.0",
+  "@opentelemetry/resources": "^1.25.0",
+  "@opentelemetry/sdk-logs": "^0.52.0",
+  "@opentelemetry/sdk-metrics": "^1.25.0",
+  "@opentelemetry/sdk-trace-node": "^1.25.0",
+  "@opentelemetry/semantic-conventions": "^1.25.0",
+  "@opentelemetry/otlp-exporter-base": "^0.52.0",
+  "mime-types": "^3.0.1",
+删除 "devDependencies": {
+  "@types/diff": "^7.0.2",
+  "@types/dotenv": "^6.1.1",
+  "@types/micromatch": "^4.0.8",
+  "@types/minimatch": "^5.1.2",
+  "@types/ws": "^8.5.10",
+  "typescript": "^5.3.3",
+  "vitest": "^3.1.1"
+},
+- infra/ai/aaid-cli/dist/src/config/config.js
+process.env.AFE_MODEL = 'Devstral-Small-2505';
+- infra/ai/aaid-cli/dist/src/config/settings.js
+path.join(workspaceDir, 'aaid-settings.json')
+- infra/ai/aaid-cli/dist/src/ui/utils/updateCheck.js 删除
+- infra/ai/aaid-cli/dist/src/ui/App.js
+// checkForUpdates().then(setUpdateMessage);
+!settings.merged.hideTips &&
 - infra/ai/aaid-cli/dist/src/gemini.js
 settings.setValue(SettingScope.User, 'selectedAuthType', AuthType.LOGIN_WITH_GOOGLE);
 // logUserPrompt
@@ -2217,6 +2287,7 @@ https://chatgpt.com  https://gemini.google.com/  https://www.meta.ai/  https://l
 https://www.tongyi.com/qianwen/  https://chat.qwenlm.ai/
 https://chat.deepseek.com/  https://www.doubao.com/chat/
 https://www.kimi.com/  https://kimi.moonshot.cn  http://ai.baidu.com/
+https://chat.z.ai/
 -- 综合/模型厂商
 
 
@@ -2365,18 +2436,13 @@ LaunchAgents
 - https://github.com/Supervisor/supervisor/issues/1514
 
 
-curl -v -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d '{
-  "jsonKey": "jsonVal",
-  "jsonKey1": {}
-}' | jq
-curl -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d "@aa.json" | jq
-
 
 ---
 
 需求是想在 mac 电脑上 同时连接不同的 WiFi , 解决 公司网络 阻止访问某些网站的问题.
 有哪些解决办法? 比如 macos 能做双系统吗?
 或者 macbook pro 使用自己网络, 搭配自己的 mac mini 使用公司网络, 但需要 macbook 能方便的控制 mac mini, 这样可行吗?
+希望在mac上使用两个网络, 不同app 链接不同的网络. 还有什么办法吗?
 2025-05-12
 
 crontab 脚本里能使用 环境变量 吗, 怎么使用?
@@ -2864,12 +2930,81 @@ Charles
 
 
 
+[yaml和json区别](https://stackoverflow.com/questions/1726802/what-is-the-difference-between-yaml-and-json)
+2025-07-31
+
+https://github.com/ant-design-blazor/ant-design-blazor
+https://learn.microsoft.com/zh-cn/aspnet/core/blazor/
+2025-07-29
+
 service eu us 不同大区, dr 含义? 其中 r 是 region 的意思, dr 可能是什么?
 https://chat.deepseek.com/a/chat/s/fdaa9566-f02a-4d9e-b719-3c98b7733741
 2025-04-15
 
 软件配置管理(SCM)是指通过执行版本控制、变更控制的规程，以及使用合适的配置管理软件，来保证所有配置项的完整性和可跟踪性。
 2024
+
+
+
+
+------ 2025-07 docker
+
+
+```sh
+docker inspect harbor.smart.ddns.xx.team/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3
+
+docker build -t node-build-with-sh .
+docker run -it node-build-with-sh
+# 挂载工作目录
+docker run -it -v /Users/hua/inner/xx:/workspace -w /workspace node-build-with-sh
+
+docker run -it harbor.smart.ddns.xx.team/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 sh
+
+docker run -d --name node-build-dev \
+  -v /Users/hua/inner/xx:/workspace \
+  -w /workspace \
+  harbor.smart.ddns.xx.team/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 \
+  tail -f /dev/null
+```
+没有写 CMD ["bash"]，所以没有前台进程. Docker Desktop GUI 默认不会附加 bash，所以容器运行后立刻退出。
+让容器执行一个长期运行的命令（比如 tail -f /dev/null），这样容器保持运行状态.
+
+
+---
+
+docker engine 和 swarm 关系, 和 kubernete 关系?
+
+https://github.com/dockersamples/helloworld-demo-node
+https://docs.docker.com/engine/storage/drivers/
+https://docs.docker.com/build/concepts/dockerfile/
+https://docs.docker.com/build/ci/github-actions/
+https://docs.docker.com/compose/intro/compose-application-model/
+https://docs.docker.com/desktop/features/networking
+
+
+--- CICD系统
+
+https://github.com/actions/checkout
+在 CI 环境里 比如 github action, 先加载需要的 node 镜像, 再跑 npm install / test 等, 是怎么触发的?
+通过 workflow 文件（.github/workflows/*.yml） 触发的。
+GitHub Actions 启动一个 Runner（可以是 GitHub 提供的虚拟机，也可以是自托管机器）。
+Workflow 里可以指定：直接使用 Docker 镜像 作为运行环境, 或使用官方 actions/setup-node 在 runner 上安装 Node, Runner 在容器内或虚拟机上执行 npm install、npm test 等命令。
+
+github 的 workflow 是怎么实现的?
+GitHub Actions 的 Workflow 是 GitHub 提供的一个 事件驱动的 CI/CD 系统，其实现本质上是：
+GitHub 托管一个 Workflow 引擎（负责解析 .github/workflows/*.yml）
+事件（push、PR、schedule 等）触发 Workflow 运行
+Workflow 引擎调度 Runner（执行任务的机器）
+Runner 拉取工作内容、运行 Actions、上报日志和结果.
+
+在公司内部署 Workflow Engine 和 Runner , 用什么语言写的比较多?
+为什么 Go / .NET 最多？
+Go：天然适合容器环境，CI/CD 场景高并发、K8s 集成方便
+.NET Core：跨平台 + 运行稳定，GitHub 官方 Runner 采用
+
+
+
+
 
 ------ 2016 基础
 
@@ -2993,6 +3128,15 @@ Cookie可以让服务端程序跟踪每个客户端的访问，但是每次客�
 
 
 ## 安全
+
+
+@types/update-notifier:6.0.8,command-exists:1.2.9,diff:7.0.0,dotenv:16.6.1,gaxios:6.1.1,glob:10.4.1,highlight.js:11.11.1,ink:6.0.1,ink-big-text:2.0.0,ink-gradient:3.0.0,ink-link:4.1.0,ink-select-input:6.2.0,ink-spinner:5.0.0,ink-text-input:6.0.0,lowlight:3.3.0,mime-types:2.1.4,open:10.1.2,react:19.1.0,read-package-up:11.0.0,shell-quote:1.8.2,string-width:7.1.0,strip-ansi:7.1.0,strip-json-comments:3.1.1,update-notifier:7.3.1,yargs:17.7.2,@google/genai:1.4.0,@modelcontextprotocol/sdk:1.11.0,@opentelemetry/api:1.9.0,@opentelemetry/exporter-logs-otlp-grpc:0.52.0,@opentelemetry/exporter-metrics-otlp-grpc:0.52.0,@opentelemetry/exporter-trace-otlp-grpc:0.52.0,@opentelemetry/instrumentation-http:0.52.0,@opentelemetry/sdk-node:0.52.0,@types/glob:8.1.0,@types/html-to-text:9.0.4,google-auth-library:9.11.0,html-to-text:9.0.5,ignore:7.0.0,micromatch:4.0.8,simple-git:3.28.0,undici:7.10.0,ws:8.18.0
+帮我查下这些 npm 包, 是否有 未经用户操作 而是自身主动地发起 "log请求，或者三方的cookie设置" 等不利于企业信息安全的行为.
+或者是否有类似木马和病毒的行为.
+https://chatgpt.com/c/688894a7-05cc-8008-87e0-c5ef572475b7
+https://chat.deepseek.com/a/chat/s/a84bb58a-3f19-47f5-aec8-9ed298db0e71
+https://gemini.google.com/app/17702d037ff7ca2c
+2025-07-29
 
 
 ------ 2018 - 2017
