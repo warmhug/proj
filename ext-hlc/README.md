@@ -14,16 +14,6 @@ https://developer.chrome.com/docs/extensions?hl=zh-cn
 {
   "hl_page_ext_index": "chrome-extension://kafpfdegkmheageeldelgnnkegpkbpca/index.html",
   "hl_page_my_index": "http://localhost/a/_proj/ext-hlc/index.html",
-  "hl_inject_ai": [
-    "https://gemini.google.com/",
-    "https://chatgpt.com/"
-  ],
-  "hl_inject_auto": [
-    ["https://*.google.com/*", "https://*.bing.com/*", "https://*.baidu.com/*"],
-    "https://www.zhihu.com/",
-    "https://i.mi.com/note/h5#/",
-    "https://note.txxx.tea/"
-  ],
   "hl_tabs_saved": [
     "https://x.com",
     "http://warmhug.github.io/"
@@ -71,6 +61,12 @@ chrome extension crx 加载错误: Package is invalid: 'CRX_HEADER_INVALID'.  �
 
 ### 2024-09~10
 
+vscode://vscode-remote/Users/hua/.zshrc
+vscode://file/Users/hua/.zshrc
+https://vscode.dev/ 编辑本地文件
+https://insiders.vscode.dev/ chrome129 新增 FileSystemObserver
+调试 readFileStream 函数，使用了 FileSystemDirectoryHandle FileSystemFileHandle
+
 chrome.tabs.query({ url: urls }); 如果 urls 里含有 #xxx 则 匹配不到，因为 hash 是在页面 url 渲染之后再触发变化的。
 
 ```js
@@ -114,14 +110,16 @@ https://github.com/simov/native-messaging
 
 ```json
 {
-  "name": "nm_sh",
+  "name": "native_exec",
   "description": "Chrome Native Messaging API Example Host",
   "path": "HOST_PATH",
   "type": "stdio",
   "allowed_origins": ["chrome-extension://kafpfdegkmheageeldelgnnkegpkbpca/"]
 }
 ```
-> 实际路径 '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/nm_sh.json'
+
+实际路径
+'/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/_sh_nm.json'
 
 安装脚本 install_host.sh
 
@@ -133,26 +131,26 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 if [ $(uname -s) == 'Darwin' ]; then
   if [ "$(whoami)" == "root" ]; then
     # Due to macOS permission changes we need to put the host in /Applications
-    HOST_PATH="/Applications/nm_sh"
-    cp "$DIR/nm_sh" $HOST_PATH
+    HOST_PATH="/Applications/native_exec"
+    cp "$DIR/native_exec" $HOST_PATH
     TARGET_DIR="/Library/Google/Chrome/NativeMessagingHosts"
   else
-    # nm_sh 不需要放到 ~/Applications 目录里，改为自己的目录
-    # HOST_PATH="/Users/$USER/Applications/nm_sh"
-    HOST_PATH="/Users/hua/inner/nm_sh"
-    cp "$DIR/nm_sh" $HOST_PATH
+    # native_exec 不需要放到 ~/Applications 目录里，改为自己的目录
+    # HOST_PATH="/Users/$USER/Applications/native_exec"
+    HOST_PATH="/Users/hua/inner/native_exec"
+    cp "$DIR/native_exec" $HOST_PATH
     TARGET_DIR="$HOME/Library/Application Support/Google/Chrome/NativeMessagingHosts"
   fi
 else
-  HOST_PATH="$DIR/nm_sh"
+  HOST_PATH="$DIR/native_exec"
   if [ "$(whoami)" == "root" ]; then
     TARGET_DIR="/etc/opt/chrome/native-messaging-hosts"
   else
     TARGET_DIR="$HOME/.config/google-chrome/NativeMessagingHosts"
   fi
 fi
-chmod a+x "$DIR/nm_sh"
-HOST_NAME=nm_sh
+chmod a+x "$DIR/native_exec"
+HOST_NAME=native_exec
 mkdir -p "$TARGET_DIR"
 cp "$DIR/$HOST_NAME.json" "$TARGET_DIR"
 ESCAPED_HOST_PATH=${HOST_PATH////\\/}

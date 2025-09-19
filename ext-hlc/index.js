@@ -180,10 +180,6 @@ async function renderBookmarks(bsData = [], topSites, extraData = []) {
       'eng'
     ],
     [
-      "sandbox-localEditor.html",
-      "本地文件编辑器"
-    ],
-    [
       "https://www.baidu.com/s?wd=%E6%97%A5%E5%8E%86",
       "日历"
     ],

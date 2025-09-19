@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tree shaking</title>
+</head>
+<body>
+<script>
+// 2017 tree shaking es6-modules in webpack-2
+// module.js
+export const sayHello = name => `Hello ${name}!`;
+export const sayBye = name => `Bye ${name}!`;
+// index.js
+import { sayHello } from './module';
+sayHello('World');
+// 构建后 sayBye 会被删除
+</script>
+</body>
+</html>

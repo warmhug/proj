@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# 定义子 JSON
+SUB_JSON='{"timeout": 30, "retries": 3}'
+
+# 使用 jq 将子 JSON 作为字符串值注入到外层 JSON
+PAYLOAD=$(jq -n --argjson id 123 --arg config_str "$SUB_JSON" --arg metadata "some info" \
+  '{id: $id, config: $config_str, metadata: $metadata}')
+
+payload=$(jq -n --arg data_str "$SUB_JSON" '{"data": $data_str}')
+
+echo "$PAYLOAD"
+echo "$payload"

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+xxx
+xxx || true
+echo "run here"

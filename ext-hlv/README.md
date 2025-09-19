@@ -187,13 +187,13 @@ https://chat.deepseek.com/a/chat/s/edb9092f-5c97-461c-a2e9-0d362a2c3180
     ],
     "description": "setTimeout"
   },
-  "python server": {
+  "node server": {
     "scope": "shellscript",
-    "prefix": "pys",
+    "prefix": "ser",
     "body": [
-      "python3 -m http.server 3000"
+      "npx http-server --ignore-existing"
     ],
-    "description": "start python server"
+    "description": "start node server"
   },
 	"Add link": {
 		"prefix": "[]",

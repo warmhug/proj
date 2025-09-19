@@ -1,0 +1,155 @@
+
+hl_ext_root="$HOME/inner/a/_proj/ext-hlc"
+hl_ext_note="$hl_ext_root/z_note.md"
+export hl_ext_log="$hl_ext_root/z_log"
+
+hl_ext_backup="$HOME/_backup"
+hl_ext_note_bk="$hl_ext_backup/z_note_"
+hl_command_flag="$HOME/hl_command_flag"
+
+hl_setAlias() {
+  # 不建议用 source https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ
+  # alias sz='source ~/.zshrc'
+  alias sz='exec zsh'
+  alias cz='code ~/.zshrc'
+
+  alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+
+  alias pi='pnpm i'
+  alias gs='git status'
+  alias gd='git diff'
+  alias gl='git log'
+  alias gp='git pull'
+  alias gpf='git push -f'
+  alias gaa='git add --all'
+  alias gb='git branch'
+  alias gba='git branch --all'
+  # 删除本地除 当前和master 分支外的其他分支
+  alias gbd='git branch | grep -v "master" | xargs git branch -D'
+
+  # pnpm store prune
+  alias re='git clean -xdf && pnpm i'
+  alias reb='git clean -xdf && pnpm i && npm run build'
+}
+hl_setAlias
+
+hl_command_query="$1"
+hl_run_command() {
+  datef() {
+    local fmt="${1:-"%Y_%m_%d-%H_%M_%S"}"
+    local output=$(date "+$fmt")
+    echo "[$output __hl_log__]"
+    # date "+$fmt"
+  }
+  # datef "%Y-%m-%d"
+  local x_command="$1"
+  local x_command_flag="$2"
+  if ! command -v "$x_command_flag" >/dev/null 2>&1 ; then
+    echo "$(datef): $x_command_flag 命令不存在, 请运行 brew install"
+    return
+  fi
+  local ppid=$(ps -p $PPID -o comm=)
+  # local parent_cmd=$(ps -p $PPID -o args=)
+  printf '\n%.0s' {1..5} >> $hl_ext_log
+  echo "$(datef): param command: $x_command" >> "$hl_ext_log"
+  echo "$(datef): invoke by: $ppid" >> "$hl_ext_log"
+  # 通过环境变量防止递归调用 跳过处理
+  # if [[ -n "$x_command_RUNNING" ]]; then
+  #   echo "return function" >> "$z_log"
+  #   return
+  # fi
+  # export x_command_RUNNING=1
+  local pid=$(ps aux | grep -w "$x_command" | grep -v grep | awk '{print $2}')
+  local pid1=$(pgrep -u "$USER" -f "$x_command_flag")
+  if [[ "$ppid" == "$x_command_flag" ]]; then
+    echo "$(datef): hl_command_query: $hl_command_query" >> "$hl_ext_log"
+    zsh -c "$hl_command_query"
+  fi
+  # 检查标志文件是否存在
+  if [[ -f "$hl_command_flag" ]] && ps -p "$(cat "$hl_command_flag")" > /dev/null 2>&1; then
+    echo "$(datef): $x_command_flag is already running" >> "$hl_ext_log"
+    return
+  fi
+  # 启动命令
+  echo "run command by nohup: $x_command" >> "$hl_ext_log"
+  nohup zsh -c "$x_command" >> "$hl_ext_log" 2>&1 &
+  # 记录 PID 注意要用 >
+  echo $! > "$hl_command_flag"
+}
+hl_run_command "ttyd -W -a zsh" "ttyd"
+# http://localhost:7681/?disableLeaveAlert=true&arg=/Users/hua/.zshrc&arg=top
+# http://localhost:7681/?disableLeaveAlert=true&arg=/Users/hua/.zshrc&arg=echo aa
+# 支持多实例
+# run_command "ttyd -p 9999 -W -a zsh" "ttyd"
+# http://localhost:9999/?disableLeaveAlert=true&arg=/Users/hua/.zshrc&arg=top
+
+# 使用 crontab -e 编辑系统定时任务文件
+scheduled_tasks() {
+  local bk_dist_file="${hl_ext_note_bk}$(date '+%Y-%m-%d_%H-%M-%S').md"
+  local log_files=("$hl_ext_log")
+  send_notification() {
+    local title=$1
+    local message=$2
+    if ! osascript -e "display notification \"$message\" with title \"$title\""; then
+      echo "Notification failed: $title - $message" >> "$hl_ext_log"
+    fi
+  }
+  backup_file() {
+    echo "run scheduled_tasks (backup)" >> "$hl_ext_log"
+    if [[ ! -f "$hl_ext_note" ]]; then
+      send_notification "备份失败" "$hl_ext_note 不存在."
+      return 1
+    fi
+    mkdir -p "$hl_ext_backup"
+    if cp "$hl_ext_note" "$bk_dist_file"; then
+      send_notification "备份完成" "$hl_ext_note 已备份到 $bk_dist_file."
+      cleanup_old_backups
+    else
+      send_notification "备份失败" "无法备份 $hl_ext_note 到 $bk_dist_file."
+    fi
+  }
+  cleanup_old_backups() {
+    echo "run $0 (cleanup_old_backups)" >> "$hl_ext_log"
+    local backups=("${hl_ext_note_bk}*.md")
+    local backup_count=${#backups[@]}
+    if (( backup_count > 3 )); then
+      local files_to_delete
+      files_to_delete=$(ls -t "${hl_ext_note_bk}*.md" | tail -n +4)
+      echo "Found $backup_count backups, deleting old ones..." >> "$hl_ext_log"
+
+      for old_backup in $files_to_delete; do
+        rm -f "$old_backup"
+        echo "Deleted old backup: $old_backup" >> "$hl_ext_log"
+      done
+
+      send_notification "备份清理完成" "多余备份文件已清理，仅保留最新 3 个."
+    else
+      echo "Backup count ($backup_count) is within the limit, no cleanup needed." >> "$hl_ext_log"
+    fi
+  }
+  clear_logs() {
+    echo "run scheduled_tasks (clear_logs)" >> "$hl_ext_log"
+    for log_file in "${log_files[@]}"; do
+      if [[ -f "$log_file" ]]; then
+        # lsof 发现文件被 ttyd 进程占用，不能用 > 操作修改
+        # > "$log_file"
+        truncate -s 0 "$log_file"
+        send_notification "logs已删除" "$log_file 内容已删除."
+      else
+        send_notification "logs删除失败" "$log_file 不存在."
+      fi
+    done
+  }
+  case $1 in
+    backup)
+      backup_file
+      ;;
+    clear_logs)
+      clear_logs
+      ;;
+    *)
+      echo "Usage: scheduled_tasks {backup|clear_logs}"
+      return 1
+      ;;
+  esac
+}

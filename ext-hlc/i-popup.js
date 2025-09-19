@@ -1,5 +1,3 @@
-
-
 (async function popup () {
   hl_utils.getCookies();
 
@@ -247,34 +245,55 @@
     dealResponse(response);
   };
 
+
+  // 不能用 ~ 表示用户
+  const filePaths = [
+    ['ss.yaml', '/Users/hua/.config/clash/ss.yaml'],
+    // ['ss.yaml(clash-meta)', '/Users/hua/.config/clash.meta/ss.yaml'],
+    ['.zshrc', '/Users/hua/.zshrc'],
+    ['.zsh_history', '/Users/hua/.zsh_history'],
+    ['_sh_nm.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/_sh_nm.json'],
+    ['.npmrc', '/Users/hua/.npmrc'],
+    ['.gitconfig', '/Users/hua/.gitconfig'],
+    ['.gitconfig-github', '/Users/hua/.gitconfig-github'],
+    ['apache', '/etc/apache2/httpd.conf'],
+    ['tmp(文件夹)', '/var/folders/xk/tpmztqjx0gldhvryd_mh60_80000gn/T/'],
+  ];
+  const nativeCmds = [
+    ['~/.nvm/versions/node', 'code --new-window /Users/hua/.nvm/versions/node'],
+  ];
+
+  document.querySelector('#localFileLinks').innerHTML = `
+  <div class="links">
+    <span>local vscode links: </span>
+    <span>
+      ${filePaths.map(([fileName, filePath]) => (
+        `<a href="vscode://file${filePath}" target="_blank">${fileName}</a>`
+          )).join('')}
+    </span>
+  </div>
+  <div class="links">
+    <span>native cmds:</span>
+    <span id="nativeCmds">
+      ${nativeCmds.map(([label]) => (
+      `<a href="">${label}</a>`)).join('')}
+    </span>
+  </div>
+  `;
+  document.querySelector('#nativeCmds').addEventListener('click', async (evt) => {
+    evt.preventDefault();
+    const label = evt.target.innerHTML;
+    const cmd = nativeCmds.find(item => item[0] === label)?.[1];
+    if (cmd) {
+      await hl_utils.sendNativeMessage('nativeCmd', cmd);
+    }
+  });
+
+
   const localStorage = await hl_utils.getStorage(null, false);
   const syncStorage = await hl_utils.getStorage(null);
   console.log('localStorage: ', localStorage);
   console.log('syncStorage: ', syncStorage);
-
-  // .replaceAll('\n', '<br/>')
-  const storageText = document.querySelector('#storageEle textarea');
-  const removeInput = document.querySelector('#storageEle input');
-  storageText.value = JSON.stringify(syncStorage, null, 2);
-  storageText.addEventListener('input', async (evt) => {
-    console.log('evt: ', evt);
-    const tv = hl_utils.jsonParse(evt.target.value);
-    if (tv) {
-      await hl_utils.setStorage(tv);
-    }
-  });
-  removeInput.addEventListener('input', async (evt) => {
-    const tv = hl_utils.jsonParse(evt.target.value);
-    if (tv) {
-      await hl_utils.removeStorage(tv);
-    }
-  });
-
-  // 获取快捷键
-  const manifest = chrome.runtime.getManifest()
-  document.querySelector('#cmds').innerHTML = `
-  <pre>${JSON.stringify(manifest.commands, null, 2)}</pre>
-  `;
 
   // 电源模式
   // 防止休眠或屏幕关闭 https://chrome.google.com/webstore/detail/keep-computer-awake-for-a/imbpigcghoambmanjekibelfjemnnool
@@ -301,4 +320,29 @@
     //   console.log('reportActivity');
     // });
   });
+
+  // 获取快捷键
+  const manifest = chrome.runtime.getManifest()
+  document.querySelector('#cmds').innerHTML = `
+  <pre>${JSON.stringify(manifest.commands, null, 2)}</pre>
+  `;
+
+  // 编辑 本地存储
+  const storageText = document.querySelector('#storageEle textarea');
+  const storageRemove = document.querySelector('#storageEle input');
+  storageText.value = JSON.stringify(syncStorage, null, 2);
+  storageText.addEventListener('input', async (evt) => {
+    console.log('evt: ', evt);
+    const tv = hl_utils.jsonParse(evt.target.value);
+    if (tv) {
+      await hl_utils.setStorage(tv);
+    }
+  });
+  storageRemove.addEventListener('input', async (evt) => {
+    const tv = hl_utils.jsonParse(evt.target.value);
+    if (tv) {
+      await hl_utils.removeStorage(tv);
+    }
+  });
+
 })();

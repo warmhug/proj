@@ -292,6 +292,15 @@ const hl_uiUtils = {
       openState,
     }
   },
+  /*
+  使用 html modal 元素写一个类似 bootstrap 的 modal 功能，抽象成 js 组件、把 css 注入进去。
+  把类改为使用函数写法。
+  防止多次调用时，多次生成样式和元素。
+  返回 打开 关闭 toggleModal 的函数。
+  把 openModalBtn 元素放到 js 里。
+  把 modal-content 和 close-btn 也放到 js 里去。
+  2024-06
+  */
   modalGpt: function () {
     let modalsInitialized = new Set();  // 用 Set 来标记已经初始化的 modal
     const defaultContainer = document.body;
@@ -548,6 +557,262 @@ const hl_uiUtils = {
   },
 };
 
+const hl_fileUtils = {
+  downloadBase64File: function (base64String, fileName) {
+    // const linkSource = `data:${contentType};base64,${base64Data}`;
+    const downloadLink = document.createElement("a");
+    downloadLink.href = base64String;
+    downloadLink.download = fileName || this.getNow() + '.jpeg';
+    downloadLink.click();
+  },
+  requestPersistentStorage: async function () {
+    try {
+      navigator.storage.estimate().then(estimate => {
+        console.log(`已使用存储空间: ${estimate.usage}`);
+        console.log(`可用存储空间: ${estimate.quota}`);
+      }).catch((promiseError) => {
+        // promise error 不会被外边 try catch 拦截
+        console.log('log promiseError: ', promiseError);
+      });
+      const isPersisted = await navigator.storage.persisted();
+      if (!isPersisted) {
+        const result = await navigator.storage.persist();
+        if (result) {
+          console.log("持久化权限已授予");
+        } else {
+          console.log("持久化权限请求被拒绝");
+        }
+      } else {
+        console.log("持久化权限已经启用");
+      }
+    } catch (error) {
+      console.log('log error navigator.storage: ', error);
+    }
+  },
+  // 打开或创建一个 IndexedDB 数据库
+  openDatabase: async function (dbName = 'fileHandlesDB', dbTable = 'fileHandles') {
+    return new Promise((resolve, reject) => {
+      try {
+        const request = indexedDB.open(dbName, 1);
+        request.onupgradeneeded = (event) => {
+          const db = event.target.result;
+          db.createObjectStore(dbTable, { keyPath: "id" });
+        };
+        request.onsuccess = (event) => {
+          const db = event.target.result;
+          const transaction = db.transaction(dbTable, 'readwrite');
+          const objectStore = transaction.objectStore(dbTable);
+          resolve([objectStore, transaction, db]);
+          // transaction.oncomplete = function() {
+          // }
+        };
+        request.onerror = (event) => {
+          console.error('打开数据库出错：', event.target.error);
+          reject(event.target.error);
+        };
+      } catch (error) {
+        console.log('log error indexedDB: ', error);
+      }
+    });
+  },
+  fileReader: async function (fileArg, streamRead) {
+    try {
+      let file = fileArg;
+      if (!file) {
+        // 注意: showOpenFilePicker() getFile() createWritable() 这几个函数、都需要调用， chrome 才会弹出授权操作文件的弹框
+        const [fileHandle] = await window.showOpenFilePicker();
+        file = await fileHandle.getFile();
+      }
+      if (!streamRead) {
+        const contents = await file.text();
+        // console.log('contents: ', contents);
+        return contents;
+      } else {
+        await streamReader(file);
+      }
+    } catch (err) {
+      console.error("fileReader 报错", err);
+    }
+    async function streamReader(file) {
+      // 按块读取文件的方式，特别适合处理大文件时逐步读取，避免一次性读取整个文件占用太多内存
+      const reader = file.stream().getReader();
+      let decoder = new TextDecoder(); // 用于解码文本数据
+      let { done, value } = await reader.read();
+      while (!done) {
+        // 将二进制数据转换为文本
+        let chunk = decoder.decode(value, { stream: true });
+        console.log('读取的块:', chunk);
+        ({ done, value } = await reader.read());
+      }
+    }
+  },
+  // FileHandle 需要通过 IndexedDB 来存储
+  fileOpt: function () {
+    const self = this;
+    const saveFileHandle = async (id, fileHandle, filePath) => {
+      if (!id || !fileHandle) {
+        return;
+      }
+      const [store] = await self.openDatabase();
+      const request = store.put({ id, fileHandle, filePath });
+      return new Promise((resolve, reject) => {
+        request.onsuccess = () => resolve(request.result);
+      });
+    }
+    const getFileHandle = async (id) => {
+      const [store] = await self.openDatabase();
+      const request = id ? (await store.get(id)) : (await store.getAll());
+      return new Promise((resolve, reject) => {
+        request.onsuccess = () => resolve(request.result);
+      });
+    }
+    const deleteFileHandle = async (id) => {
+      const [store] = await self.openDatabase();
+      const request = id ? (await store.delete(id)) : (await store.clear());
+      return new Promise((resolve, reject) => {
+        request.onsuccess = () => resolve(request.result);
+      });
+    }
+    return { saveFileHandle, getFileHandle, deleteFileHandle };
+  },
+  // js处理本地文件
+  // https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file-in-the-browser
+  // https://developer.chrome.com/docs/capabilities/web-apis/file-system-access
+  filesOpt: async function (updateFileList = () => {}, filePaths = [
+    ['.zshrc', '/Users/hua/.zshrc'],
+  ]) {
+    await this.requestPersistentStorage();
+    const { saveFileHandle, getFileHandle, deleteFileHandle } = this.fileOpt();
+    let fileHandles = [];
+    let currentFileIndex = -1;
+
+    const readFiles = async () => {
+      const allFiles = await getFileHandle();
+      console.log('log allFiles: ', allFiles);
+      fileHandles = await Promise.all(allFiles.map(async ({ id, fileHandle, filePath }) => {
+        return {
+          name: id,
+          handle: fileHandle,
+          filePath,
+        };
+      }));
+    };
+    const writeFiles = async () => {
+      await deleteFileHandle();
+      const fileData = await Promise.all(fileHandles.map(async ({ name, handle, filePath }) => {
+        await saveFileHandle(name, handle, filePath);
+        return name
+      }));
+    };
+    const clearFiles = async () => {
+      if (window.confirm('确认清空吗')) {
+        await deleteFileHandle();
+        fileHandles = [];
+        updateFileList();
+      }
+    };
+
+    const openFile = async () => {
+      try {
+        // 文件路径属于用户系统的敏感信息 获取不到
+        const picker = await window.showOpenFilePicker();
+        const [fileHandle] = picker;
+        if (!fileHandles.some(fh => fh.name === fileHandle.name)) {
+          const filePath = filePaths?.find(item => item[0] === fileHandle.name)?.[1];
+          fileHandles.push({
+            name: fileHandle.name,
+            handle: fileHandle,
+            filePath,
+          });
+        } else {
+          console.log('已存在同名文件，可以先删除再添加');
+        }
+        await writeFiles();
+        updateFileList();
+      } catch (err) {
+        console.error('无法打开文件:', err);
+      }
+    };
+    const saveCurrentFile = async (target) => {
+      if (currentFileIndex < 0 || currentFileIndex >= fileHandles.length) {
+        alert('请选择要保存的文件');
+        return;
+      }
+      const handle = fileHandles[currentFileIndex].handle;
+      if (!handle) {
+        alert('该文件不可用');
+        return;
+      }
+      try {
+        const writable = await handle.createWritable();
+        await writable.write(target);
+        await writable.close();
+        alert('文件已保存');
+      } catch (err) {
+        console.error('无法保存文件:', err);
+      }
+    };
+
+    return {
+      readFiles, writeFiles, fileHandles, currentFileIndex,
+      openFile, saveCurrentFile, clearFiles,
+    };
+  },
+};
+// <div id="editLocalFiles"></div>
+/*
+document.querySelector('#editLocalFiles').innerHTML = `
+<h3>编辑保存本地文件</h3>
+<div>
+  <button id="ofileEle">打开新文件</button>
+  <button id="sfileEle">保存文件</button>
+  <button id="cfileEle">清空</button>
+</div>
+<div>文件列表: <span id="fileList"></span></div>
+<div class="editor">
+  <div id="filePath"></div>
+  <textarea id="fileContent" placeholder="文件内容将显示在此处"></textarea>
+</div>
+`;
+function updateFileList() {
+  const ulListDate = fileHandles.map(item => ({
+    text: item.name,
+    onClick: async (index) => {
+      currentFileIndex = index;
+      const { handle, filePath } = fileHandles[index] || {};
+      if (!handle) {
+        alert('该文件不可用');
+        return;
+      }
+      try {
+        const fileContent = await hl_utils.fileReader(await handle.getFile());
+        document.getElementById('fileContent').value = fileContent;
+        document.getElementById('filePath').innerHTML = `<a>${filePath}</a>`
+      } catch (err) {
+        console.error('无法加载文件内容:', err);
+      }
+    },
+    onClose: async (index) => {
+      fileHandles.splice(index, 1);
+      await writeFiles();
+      updateFileList();
+    },
+  }));
+  const fileList = document.querySelector('#fileList');
+  fileList.innerHTML = '';
+  hl_utils.ulList(ulListDate, fileList);
+}
+*/
+// const {
+  // readFiles, writeFiles, fileHandles, currentFileIndex,
+  // openFile, saveCurrentFile, clearFiles,
+// } = await hl_fileUtils.filesOpt(updateFileList);
+// await readFiles();
+// updateFileList();
+// document.querySelector('#ofileEle').addEventListener('click', openFile);
+// document.querySelector('#sfileEle').addEventListener('click', () => saveCurrentFile(document.getElementById('fileContent').value));
+// document.querySelector('#cfileEle').addEventListener('click', clearFiles);
+
 const hl_commonUtils = {
   asyncMap: async function (arr, callback = async () => {}) {
     const res = await Promise.all(arr.map(async (item, index) => {
@@ -575,13 +840,6 @@ const hl_commonUtils = {
     }
     return res;
   },
-  downloadBase64File: function (base64String, fileName) {
-    // const linkSource = `data:${contentType};base64,${base64Data}`;
-    const downloadLink = document.createElement("a");
-    downloadLink.href = base64String;
-    downloadLink.download = fileName || this.getNow() + '.jpeg';
-    downloadLink.click();
-  },
   debounce: (fn, delay) => {
     var timer = null;
     return function() {
@@ -608,6 +866,9 @@ const hl_commonUtils = {
     return ua = ub;
   },
   // get local ip https://github.com/dlo83/local-ip-chrome-extension
+  // 在 chrome 插件页面, ip 显示是 192.168.64.1 是正常的.
+  // 在 普通的本地 server 页面, 比如 http://localhost/index.html ip 显示是 http://75969d96-5f31-4cd2-b75c-b6a8f9a32258.local 是"异常"的. 因为 浏览器的 隐私保护机制, 隐藏真实 IP 防止指纹追踪. 可以设置 chrome://flags/#enable-webrtc-hide-local-ips-with-mdns 中 禁用 mDNS 隐藏.
+  // 在浏览器中，无法可靠地获取真实局域网 IP，这是出于安全和隐私的正当限制.
   getLocalIPs: () => new Promise((resolve, reject) => {
     var ips = [];
     var RTCPeerConnection = window.RTCPeerConnection || window.webkitRTCPeerConnection;
@@ -619,6 +880,7 @@ const hl_commonUtils = {
         resolve(ips);
         return;
       }
+      console.log('Full candidate:', e.candidate.candidate);
       var ip = /^candidate:.+ (\S+) \d+ typ/.exec(e.candidate.candidate)[1];
       if (ips.indexOf(ip) == -1) // avoid duplicate entries (tcp/udp)
         ips.push(ip);
@@ -678,115 +940,6 @@ const hl_commonUtils = {
     // console.log('hl readClipboardText', text);
     return text;
   },
-  requestPersistentStorage: async function () {
-    try {
-      navigator.storage.estimate().then(estimate => {
-        console.log(`已使用存储空间: ${estimate.usage}`);
-        console.log(`可用存储空间: ${estimate.quota}`);
-      }).catch((promiseError) => {
-        // promise error 不会被外边 try catch 拦截
-        console.log('log promiseError: ', promiseError);
-      });
-      const isPersisted = await navigator.storage.persisted();
-      if (!isPersisted) {
-        const result = await navigator.storage.persist();
-        if (result) {
-          console.log("持久化权限已授予");
-        } else {
-          console.log("持久化权限请求被拒绝");
-        }
-      } else {
-        console.log("持久化权限已经启用");
-      }
-    } catch (error) {
-      console.log('log error navigator.storage: ', error);
-    }
-  },
-  // 打开或创建一个 IndexedDB 数据库
-  openDatabase: async function (dbName = 'fileHandlesDB', dbTable = 'fileHandles') {
-    return new Promise((resolve, reject) => {
-      try {
-        const request = indexedDB.open(dbName, 1);
-        request.onupgradeneeded = (event) => {
-          const db = event.target.result;
-          db.createObjectStore(dbTable, { keyPath: "id" });
-        };
-        request.onsuccess = (event) => {
-          const db = event.target.result;
-          const transaction = db.transaction(dbTable, 'readwrite');
-          const objectStore = transaction.objectStore(dbTable);
-          resolve([objectStore, transaction, db]);
-          // transaction.oncomplete = function() {
-          // }
-        };
-        request.onerror = (event) => {
-          console.error('打开数据库出错：', event.target.error);
-          reject(event.target.error);
-        };
-      } catch (error) {
-        console.log('log error indexedDB: ', error);
-      }
-    });
-  },
-  // FileHandle 需要通过 IndexedDB 来存储
-  fileHandleOpt: function () {
-    const self = this;
-    const saveFileHandle = async (id, fileHandle, filePath) => {
-      if (!id || !fileHandle) {
-        return;
-      }
-      const [store] = await self.openDatabase();
-      const request = store.put({ id, fileHandle, filePath });
-      return new Promise((resolve, reject) => {
-        request.onsuccess = () => resolve(request.result);
-      });
-    }
-    const getFileHandle = async (id) => {
-      const [store] = await self.openDatabase();
-      const request = id ? (await store.get(id)) : (await store.getAll());
-      return new Promise((resolve, reject) => {
-        request.onsuccess = () => resolve(request.result);
-      });
-    }
-    const deleteFileHandle = async (id) => {
-      const [store] = await self.openDatabase();
-      const request = id ? (await store.delete(id)) : (await store.clear());
-      return new Promise((resolve, reject) => {
-        request.onsuccess = () => resolve(request.result);
-      });
-    }
-    return { saveFileHandle, getFileHandle, deleteFileHandle };
-  },
-  fileReader: async function (fileArg, streamRead) {
-    try {
-      let file = fileArg;
-      if (!file) {
-        const [fileHandle] = await window.showOpenFilePicker();
-        file = await fileHandle.getFile();
-      }
-      if (!streamRead) {
-        const contents = await file.text();
-        // console.log('contents: ', contents);
-        return contents;
-      } else {
-        await streamReader(file);
-      }
-    } catch (err) {
-      console.error("fileReader 报错", err);
-    }
-    async function streamReader(file) {
-      // 按块读取文件的方式，特别适合处理大文件时逐步读取，避免一次性读取整个文件占用太多内存
-      const reader = file.stream().getReader();
-      let decoder = new TextDecoder(); // 用于解码文本数据
-      let { done, value } = await reader.read();
-      while (!done) {
-        // 将二进制数据转换为文本
-        let chunk = decoder.decode(value, { stream: true });
-        console.log('读取的块:', chunk);
-        ({ done, value } = await reader.read());
-      }
-    }
-  },
   ajax: function (url, { success }) {
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -837,7 +990,7 @@ const hl_chromeUtils = {
       // 单向通信
       let response;
       try {
-        response = await chrome.runtime.sendNativeMessage('nm_sh', {
+        response = await chrome.runtime.sendNativeMessage('_sh_nm', {
           message,
           content,
         });
@@ -847,7 +1000,7 @@ const hl_chromeUtils = {
         response = { code: '304', error: error.message };
       }
       return response;
-      connect('nm_sh');
+      connect('_sh_nm');
       port.postMessage({ message });
     }
     return sendMessage;
@@ -1132,6 +1285,7 @@ const hl_chromeUtils = {
 
 const hl_utils = {
   ...hl_commonUtils,
+  ...hl_fileUtils,
   ...hl_uiUtils,
   ...hl_chromeUtils,
   // chrome storage 的保存内容可以是对象

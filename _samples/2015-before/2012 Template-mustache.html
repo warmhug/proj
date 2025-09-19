@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+</head>
+<body>
+  <div id="output"></div>
+  <script type="text/html" id="tpl">
+    {{#list}}
+    <p>{{title}}</p>
+    <div>{{>partial}}</div>
+    {{/list}}
+  </script>
+  <script type="text/html" id="partial">
+    {{#inlist}}
+    <a href="{{url}}">{{txt}}</a>
+    {{/inlist}}
+  </script>
+  
+  <script>
+    var data = {
+      list: [{
+        title: '标题',
+        inlist: [
+          { txt: '内容', url: 'http://m.taobao.com' },
+          { txt: '内容', url: 'http://m.taobao.com' }
+        ]
+      }]
+    };
+
+    document.getElementById('output').innerHTML = Mustache.render(
+      document.getElementById('tpl').innerHTML, data, 
+      { partial: document.getElementById('partial').innerHTML }
+    );
+  </script>
+</body>
+</html>

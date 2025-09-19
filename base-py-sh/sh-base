@@ -1,0 +1,190 @@
+#!/usr/bin/env bash
+
+# 其他 shebang
+#!/usr/bin/env -i bash   # 重置所有环境变量
+# /bin/zsh
+
+#!/bin/bash  # 最常用
+
+# bash 语句中的符号:
+# - 分号(;) 无论前一个命令是否成功，都会执行下一个命令。
+# - 双与号(&&) 只有当前一个命令执行成功 (返回值 0) 时，才会执行下一个命令。
+# - 双管道(||) 成功时执行 A，失败时执行 B `mkdir mydir && echo "创建成功" || echo "创建失败"`
+
+# 默认没有 set -e 使用 set -e 会使脚本在任何命令返回非零状态时立即退出
+# -e: 出错立即退出 -u: 使用未定义变量时报错 -o pipefail: pipeline 任一命令失败即报错
+set -e
+set -euo pipefail
+
+set +e   # 关闭 "遇到错误立即退出"
+xxx || true  # 即便是未知命令 也不会抛错
+# 错误处理. 注意: bash 和 sh 支持的 trap 语法不同.
+# ERR 不是 POSIX 标准信号. ERR 是一个 bash 特有的伪信号. 其他有 EXIT INT TERM 等信号.
+trap 'echo "Error occurred on line $LINENO"; exit 1' ERR
+trap 'echo "[WARN] 出现错误，但脚本继续运行"' ERR
+trap 'cleanup' EXIT
+
+echo $HOME
+echo $PWD
+
+command && success_action  # 当 command 成功时执行 success_action
+command || failure_action  # 当 command 失败时执行 failure_action
+my_function || echo "Function failed!"
+
+# 一行可以多个.  export 之后 子进程 才能使用
+# export GIT_USER_NAME="Alice" GIT_USER_EMAIL="alice@example.com"
+# export PATH="/usr/local/bin:/usr/bin:$PATH"
+# export PATH="$PATH:/usr/local/bin:/usr/local"
+export PATH=/usr/bin:/bin
+export HOME=/home/username
+export TERM=xterm-256color
+export TMP_VAR='tmp'  # 在 terminal 里临时设置环境变量
+unset npm_config_registry  # 删除特定 env
+unset npm_config_userconfig  # 删除特定 env
+
+[ -s "./scripts/script.sh" ] && \. "./scripts/script.sh"
+bash script.sh && fn_name
+bash script.sh fn_name  # 需要在脚本里 $1 为 fn_name 时手动执行一下
+bash -c '. script.sh && fn_name'
+zsh -c "source script.sh; fn_name"
+sh -c "top -l 1 -pid 1234"
+sh -c 'while true; do (ls -la); echo "- $(date +%H:%M:%S) -"; sleep 1; done'
+
+# 不同平台安装包 查看包管理器
+# Ubuntu/Debian `sudo apt-get install jq`
+# CentOS/Fedora `sudo yum install jq`
+command -v apt-get && echo "Debian/Ubuntu (apt)"
+command -v yum && echo "CentOS/RHEL (yum)"
+command -v dnf && echo "Fedora/RHEL8+ (dnf)"
+command -v apk && echo "Alpine Linux (apk)"
+
+local str="long...\
+实际不换行"
+local str1="第一行
+第二行"
+local num=1
+local num="$num"2  # 或 num=${num}2
+local new_msg="Merged $(($num-1)) $((${num}-1)) commits"
+echo $str $str1 $num $new_msg
+
+# 转义 引号
+local blank_path="/Applications/Google\" \"Chrome.app/Contents/MacOS/Google\" \"Chrome"
+# \空格 保留
+local blank_path=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+local blank_path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+local escaped_blank_path=${blank_path////\\/}
+echo $escaped_blank_path
+data_str="master-"$(date +"%Y%m%d-%H%M%S")
+printf "这是要写入文件的内容\n"
+
+# 设置默认值
+default_value="default"
+# 使用参数扩展来获取值，若无则用默认值
+value="${1:-$default_value}"
+value="${2:-$default_value}"
+value="${3:-$default_value}"
+
+# 数组  # 在 Bash 3 中 不能直接在函数内部引用或修改外部数组
+myArray=("apple" "banana" "cherry")
+myArray+=("element1" "element2" "element3")
+newMyArray=("${myArray[@]}")
+echo "${myArray[0]}"
+echo "${myArray[1]}"
+echo "${myArray[@]}"
+# 遍历输出
+for item in "${myArray[@]}"; do echo "$item"; done
+
+# 输入输出  使用 eval 不安全，也难解决命令参数 含有空格和引号 的情况
+eval "ls -l" >> "/tmp/a_log.txt"
+eval "ls -l" 2>&1 | tee -a "/tmp/a_log.txt"
+(exec eval "ls -l" 2>&1 | tee -a "/tmp/a_log.txt") >/dev/null
+eval "$command" >> "$file" 2>&1
+
+# 兼容 bash 和 zsh 颜色和换行
+# 依赖特定 Shell 的转义序列  (Zsh 的一些插件和配置 可能会影响换行的显示效果)
+echo -e "\033[31mRed text\033[0m"
+echo -e "Line 1\nLine 2"
+
+# 使用 tput 命令，不依赖特定 Shell 的转义序列
+RED=$(tput setaf 1)
+RESET=$(tput sgr0)
+echo "${RED}Red text${RESET}"
+# 检测不同的 shell 分别设置
+if [ -n "$BASH_VERSION" ]; then
+  RED='\033[31m'
+  RESET='\033[0m'
+elif [ -n "$ZSH_VERSION" ]; then
+  RED='%F{red}'
+  RESET='%f'
+fi
+echo "${RED}Red text${RESET}"
+
+
+echo $? # 获取 函数 return 返回值
+cd /path/to/dir || { echo "路径无效"; exit 1; }
+
+if [ $? -ne 0 ]; then
+  echo "Error: Function failed!"
+  exit 1  # 或者根据需要退出脚本
+fi
+
+# 检查是否在 Git 仓库中
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  echo "错误：当前不在 Git 仓库中"
+  exit 2
+fi
+
+# PIPESTATUS 必须在主 shell 中使用，不能在子 shell 中（包括 {}、() 等）。
+if [ ${PIPESTATUS[0]} -ne 0 ]; then
+  echo "pnpm i failed with an error. Terminating execution."
+  exit 1
+fi
+
+if [ "$1" -eq 1 ]; then
+  return 0  # 成功
+fi
+
+if [[ "${a}" != "${b}" ]]; then
+  echo "a"
+fi
+
+if [ -s "./lib/sh/sync.sh" ]; then
+  \. "./lib/sh/sync.sh"
+  fn xx
+fi
+
+if [ -z "$1" ]; then
+  echo "Please input the repo name"
+  exit 1
+fi
+
+# if [[ -n $GIT_USER_NAME ]]; then
+if [[ "$NPM_TAG" =~ ^(alpha|beta|rc|latest)$ ]]; then
+  echo "node ./build-publish.mjs"
+else
+  echo "Local release is prohibited!"
+fi
+
+while true; do
+  ls -l
+  echo "
+  ---- last update: $(date '+%H:%M:%S') ----
+  "
+  sleep 1
+done
+
+# 持续显示进程信息
+while true; do
+  clear
+  ps aux | awk '{print $2, $3, $11}' | sort -k2 -nr | head -n 10
+  sleep 2
+done
+
+sync_code() {
+  unset npm_config_registry
+  echo "===== start clean ====="
+}
+case $1 in
+  "sync_code") sync_code $2 ;;
+  # "two") functionTwo ;;
+esac

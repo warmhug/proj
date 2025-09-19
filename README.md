@@ -7,10 +7,257 @@ permalink: /
 
 # .
 
-## js html css
-> with 小程序/RN
+网易 [科技](https://tech.163.com/)  [财经](https://money.163.com/) [国际](https://news.163.com/world/)
+[pmbaobao](https://www.pmbaobao.com/) [人人PD](http://www.woshipm.com)
+[热榜](https://tophub.today/) [36kr热榜](https://www.36kr.com/hot-list/catalog)
 
------- js
+[oschina](https://www.oschina.net) [yuque](https://www.yuque.com/iscott)
+[极客公园](https://www.geekpark.net) [少数派](https://sspai.com)
+[凤凰网](https://www.ifeng.com) [威锋网](https://www.feng.com)
+[蜻蜓](https://www.qingting.fm/) [什么值得买](https://www.smzdm.com)
+[奇绩创坛](https://www.miracleplus.com)  [壹心理](https://www.xinli001.com)
+
+[时代周刊](https://time.com)  [纽约时报](https://nytimes.com) [华尔街日报](https://www.wsj.com)  https://youtube.com  https://instagram.com  https://whatsapp.com
+
+[科技周刊](https://www.ruanyifeng.com/blog/2025/08/weekly-issue-363.html)
+[chrome-experiments](https://experiments.withgoogle.com/collection/chrome)
+[chromestatus](https://www.chromestatus.com/features)、[webkit](https://webkit.org/)
+https://coolshell.cn
+
+GitHub登录 https://codesandbox.io  https://codepen.io
+[JavaScript risingstars](https://risingstars.js.org)
+[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
+[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
+[stateofreact](https://2023.stateofreact.com)
+[awesome-react](https://github.com/enaqx/awesome-react)
+[awesome-react-components](https://github.com/brillout/awesome-react-components)
+[react-next](https://www.react-next.com/)
+[设计工具排名](https://uxtools.co/tools/design)
+
+https://ai-bot.cn/daily-ai-news/
+https://chatgpt.com  https://gemini.google.com/  https://chat.deepseek.com/
+https://www.kimi.com/  https://www.doubao.com/chat/
+https://www.tongyi.com/  https://chat.qwen.ai/
+https://chat.z.ai/  http://ai.baidu.com/
+https://www.meta.ai/  https://ai.meta.com/get-meta-ai/
+https://metaso.cn  https://chathub.gg
+https://poe.com/  https://www.perplexity.ai  https://duckduckgo.com
+-- 模型厂商/套壳
+
+
+中国技术先锋
+2024 中国技术品牌影响力企业 https://segmentfault.com/a/1190000045534050
+2023 中国技术品牌影响力 及 新锐技术企业 https://segmentfault.com/a/1190000044503608
+2022 中国技术品牌影响力 及 新锐技术企业 https://segmentfault.com/a/1190000043210594
+2021 中国新锐技术先锋企业 https://segmentfault.com/a/1190000041274038
+2020 中国技术先锋年度评选的初心和起源 https://segmentfault.com/a/1190000038317016
+
+2022-04 《美国公布：长达35页的2045年新兴科技趋势报告》 https://mp.weixin.qq.com/s/ox6NHtK4usvKJ1gpk8uY8A
+
+2021-12《CEM如何助力企业流量新增长？》https://mp.weixin.qq.com/s/aNT3V-zPTbVWHh4s-njyRg 安道全
+
+[2019中国开源软件榜](https://www.oschina.net/project/top_cn_2019)
+[2018前端技术清单](https://juejin.im/post/5bdfb387e51d452c8e0aa902)
+
+
+
+
+# 前端
+
+const aa = [...new Set([1, 2, 3])]; 这个 js 写法在不同的 webpack 编译目标下, 表现一致吗?
+使用 aa.valueOf() 验证: 在最新的 chrome 浏览器里结果是 (3) [1, 2, 3] 但在 webpack 编译后结果是 [Set(3)]
+2025-08-12
+
+@types/update-notifier:6.0.8,command-exists:1.2.9,diff:7.0.0,dotenv:16.6.1,gaxios:6.1.1,glob:10.4.1,highlight.js:11.11.1,ink:6.0.1,ink-big-text:2.0.0,ink-gradient:3.0.0,ink-link:4.1.0,ink-select-input:6.2.0,ink-spinner:5.0.0,ink-text-input:6.0.0,lowlight:3.3.0,mime-types:2.1.4,open:10.1.2,react:19.1.0,read-package-up:11.0.0,shell-quote:1.8.2,string-width:7.1.0,strip-ansi:7.1.0,strip-json-comments:3.1.1,update-notifier:7.3.1,yargs:17.7.2,@google/genai:1.4.0,@modelcontextprotocol/sdk:1.11.0,@opentelemetry/api:1.9.0,@opentelemetry/exporter-logs-otlp-grpc:0.52.0,@opentelemetry/exporter-metrics-otlp-grpc:0.52.0,@opentelemetry/exporter-trace-otlp-grpc:0.52.0,@opentelemetry/instrumentation-http:0.52.0,@opentelemetry/sdk-node:0.52.0,@types/glob:8.1.0,@types/html-to-text:9.0.4,google-auth-library:9.11.0,html-to-text:9.0.5,ignore:7.0.0,micromatch:4.0.8,simple-git:3.28.0,undici:7.10.0,ws:8.18.0
+帮我查下这些 npm 包, 是否有 未经用户操作 而是自身主动地发起 "log请求，或者三方的cookie设置" 等不利于企业信息安全的行为.
+或者是否有类似木马和病毒的行为.
+https://chatgpt.com/c/688894a7-05cc-8008-87e0-c5ef572475b7
+https://chat.deepseek.com/a/chat/s/a84bb58a-3f19-47f5-aec8-9ed298db0e71
+https://gemini.google.com/app/17702d037ff7ca2c
+2025-07-29
+
+2025 react-libraries https://www.robinwieruch.de/react-libraries/
+
+https://webkit.org/blog/16458/announcing-interop-2025/
+https://antfu.me/posts/move-on-to-esm-only
+2025-02 技术趋势
+
+markdown 转html 用十几行正则就可以为什么要搞那么复杂？
+https://www.zhihu.com/question/443343954/answer/3375039874
+2024-12
+
+Vue.js 作者宣布成立 VoidZero https://mp.weixin.qq.com/s/xT7SRffAcUqLFf7Ou4I5Og
+2024-11
+
+cssinjs https://mp.weixin.qq.com/s/cepGi8Jhe4RnyfNaoN_zfw
+react19 cssinjs 问题 https://juejin.cn/post/7359876671137071156
+探索：业务中推行 tailwindcss 和 emotion，设计上 design token 抽象。
+2024-10 cssinjs
+
+2024-05 阿侎 命令模式undo/redo https://zhuanlan.zhihu.com/p/698816530
+
+2023年前端技术盘点与2024年技术展望 https://mp.weixin.qq.com/s/LiygBJqMN8U_vSpAjxMibQ
+
+2022-02 本杰 《协同文档工作机制简介》 https://mp.weixin.qq.com/s/BtoM_4Gy5v4I0okpMukATg
+
+gmtc https://gmtc.infoq.cn/2022/beijing/schedule
+重庆前端交流会 https://zhuanlan.zhihu.com/p/581717444
+[前端领域的 “干净架构”](https://zhuanlan.zhihu.com/p/458410158)
+[徐飞 业务中的前端组件化体系](https://zhuanlan.zhihu.com/p/383129585)
+2022
+
+[2021 大前端技术回顾及未来展望](https://mp.weixin.qq.com/s/HfZDrrqDNUVpnU-aegKxcg)
+
+
+
+## html css HTTP
+> 2018 2021
+
+- html 规则检测 https://validator.w3.org 、 http://infohound.net/tidy
+- html head 里的 js css 如何放置  head 里能放什么 https://github.com/joshbuchea/HEAD
+- iframe 有哪些问题 https://afantasy.ninja/2018/07/15/dive-into-iframe
+  - 高度改变麻烦、弹框、iframe 里再嵌套 ifr。
+  - 移动端页面、打开(全屏)嵌入的 iframe 页面，点浏览器返回、返回不到业务页面、需要销毁 iframe。
+  - 浏览器刷新 iframe url 状态丢失、后退前进按钮无法使用。
+  - 里边 弹出框 的位置、难居中，浏览器 resize 时自动居中 更难处理。
+  - 主文档和 iframe 文档如果不同域、免登录处理麻烦，涉及 cookie 透传。
+  - 需要完全重新加载，比较慢。
+  - iframe 自适应高度：给定高度、内部滚动
+- div/span 都是容器元素， p dt 标签里不能有块(block)标签， button 里面不要嵌套 a 标签。
+- img script 的 src、css 的 href 都不能为空。 DOM 的 attribute 和 property 区别。
+- a 伪类需遵循 css2 规范中的 L-V-H-A (a:link visited hover active) 顺序。
+- 没有 css-parent-selector 。 BEM命名方式。  如何提升 CSS 选择器性能 http://www.jianshu.com/p/268c7f3dd7a6
+
+- [anchor-positioning-api](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn)
+- CSS 选择器优先级(id>class>标签>伪类)？伪类和伪元素区别？BFC/IFC 介绍？
+- 浮动以及清除浮动？页面布局方法？flex一维 CSS Grid 二维。元素垂直居中方法？
+- border-box 作用？display/position 作用(absolute会变为块元素)？z-index 在节点 position 值是什么生效(relative/absolute/fixed)？
+- 子元素的 margin-top 设置影响父元素位置？页面兼容性问题？响应式布局怎么实现？
+- CSS优化方法？减少DOM操作，减少重绘和重排，合理使用选择器，减少@import使用。
+- h5高清方案(rem) 优缺点？ css 实现 loading，三角形？ css-module 的作用？ css 样式初始化为了什么？
+- https://www.iconfont.cn/
+- css 时间函数 http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions
+- css 长度 https://css-tricks.com/the-lengths-of-css
+  - 绝对长度: px inch cm mm。 rem: 相对 root 的 font-size 大小  em: 基于大写字母 M 的尺寸  ex: 基于 x 字母高度  1vh 等于 1/100 的视口高度
+
+------ browser
+
+- [URL 编码，为什么要编码？](http://anjia.github.io/2015/04/15/jsURIEncode/)
+- 浏览器在自动选择编码方式的时候不会优先根据 html 源码中的所展示的`<meta charset="utf-8" />`代码来决定选择什么编码方式，而是优先根据“响应标头-response header”中的键为“Content-Type”的值来自动选择判断。
+- [ua 检测](https://github.com/ded/bowser) / [特性检测](https://github.com/barisaydinoglu/Detectizr)
+- 浏览器解析和CSS（GPU）动画优化 https://segmentfault.com/a/1190000008015671
+  - css 动画中尽量只使用 transform 和 opacity ，这不会发生重排和重绘。
+  - 有动画的元素样式，给定尺寸、设置为 display block（如果设置 display flex 子元素尺寸会动态变化、影响动画效果）
+- [WebAssembly](https://juejin.im/entry/5b20d09d6fb9a01e242490b1)
+  - 不是一门编程语言，而是一份字节码标准。 各种复杂的计算：图像处理、3D运算(大型 3D 网页游戏)、语音识别、音视频编码解码。区块链合约。
+  - [madewithwebassembly](https://madewithwebassembly.com/)、eBay 的[条形码扫描](https://www.infoq.cn/article/vc*q7psQqWMaVU8igJeD)、 [Google earth web](https://earth.google.com/web/) 版、 [autocad](https://web.autocad.com/login) web 版
+- [PWA](https://developers.google.com/web/progressive-web-apps/)
+  - Service Worker 需要运行于 HTTPS 或本地 localhost 环境，是继 Web Worker 后又一个新的线程。来实现离线页面功能。 Service Worker 是独立于页面的一个运行环境，它在页面关闭后仍可以运行。Web Worker 在页面关闭后不再运行。
+- https://developer.chrome.com/blog/introducing-popover-api/   Web Authentication 在Web上使用Touch ID 和 Windows Hello 登录
+- 浏览器 eventLoop 机制 microtask marcotask 执行顺序？setTimeout 宏队列先执行，promise 微队列。
+- 优化：压缩资源、异步加载、预加载、缓存、使用gzip、减少cookie、减少重定向、减少请求数。
+
+- JSONP 的原理以及 cors 怎么设置？跨域的方法有哪些？jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面。
+- web worker 突破同源限制？importScripts。 不好地方:(协程)解决并行计算，数据共享和精确控制线程生命周期方面存在缺陷。
+- SPA 实现方法？产生的问题：切换路由后会把上个路由状态生成的html全部销毁掉，再切回来恢复不到原来的样子。客户端渲染和服务端渲染，哪个快？
+- 移动: 点击穿透/300ms延迟？Fastclick。首频渲染、网络性能？手势库？有没有用过RN PWA？
+- 数据可视化: 3d 编辑器功能？技术点 svg 3dgis canvas webgl，svg 转 webgl 怎么实现？
+
+drag-drop
+- drag 事件 不支持 ie8、Safari 5.1  ie<=9 只能对 a href="" 、img、文本 添加drag事件。 ie9上通过 selectstart hack方法对任何元素添加事件。 在ie<=8版本上，需要把dragenter/drageover/drop事件绑定到具体的元素上，而不能绑定到document做委托处理。
+- 使用 drag-drop API的优势（相对于用mousedown/mousemove）： 如果拖动元素所在的容器尺寸小，拖动过程产生滚动条、会自动触发滚动条移动。 不用再 clone 出一个要拖动的元素； 不用计算涉及到的元素的位置和尺寸。
+传统拖动做法
+- 在 touchstart / mousedown 中记录起始位置，并开始监听 touchmove touchend / mousemove mouseup
+- 在 touchmove mousemove 中计算当前位置和起始位置之间的 offset，并进行拖拽操作
+- 在 touchend mouseup 中取消监听 touchmove 和 touchstart，并进行释放操作
+
+--- 安全 2018 - 2017
+
+xss/csrf 原理和防御方法。CORS 的 POST 跨域如何带cookie https://www.jianshu.com/p/13d53acc124f
+[csrf 详解](https://tech.meituan.com/fe_security_csrf.html)、[csrf漏洞](http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html)、[wiki中文](http://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0)
+XSS 利用的是用户对指定网站的信任，CSRF 利用的是网站对用户网页浏览器的信任。
+> [ajax里如何更新csrf token](http://www.v2ex.com/t/82751) ，最后的一段评论提到：csrf-token的目的是，让攻击者不能伪造请求（如通过img发起的请求会带上cookie）。因此，csrf-token不需要每个请求都改变，只需要确保对于每个session不一致即可，同一个session内不变没有问题。
+jsonp请求也需要「防止csrf漏洞」，例如可以用jsonp获取通讯录列表。
+ajax 方式的 csrf token 放到 post 提交的 body 里、随其他数据一起提交。
+
+[a 标签中 target="_blank" 的安全漏洞](https://www.tutorialdocs.com/article/html-opener-blank.html) 详细地解释了该漏洞的攻击方法和原理。并在文末给出了防范该漏洞的解决办法：给 a 标签增加 rel="noopener noreferrer nofollow"。
+
+反爬虫 https://segmentfault.com/a/1190000017899193
+循序渐进学加密 https://segmentfault.com/a/1190000019437132
+蚂蚁内容风险识别接口服务 撞库 人机识别服务 IFAA 生物认证 https://tech.antfin.com/products/IFAA
+
+安全资讯网站博客
+- 先知社区 https://xz.aliyun.com
+- freebuf https://www.freebuf.com/articles/web
+- 安全客 https://www.anquanke.com/vul
+- 台湾217战队 http://blog.orange.tw/
+- 腾讯云牵头制定首个IEEE业务安全风控全球标准 https://www.toutiao.com/i6681138895255503374
+- 蚂蚁研发者门户 安全&风控 专题
+- 2019 RSAC 对安全技术领域发展的思考
+- RSA原理浅析
+- OTP动态付款码(仟墨)、数字证书(万佛)、支付盾、安全控件(文同)
+- 反洗钱、欺诈/盗用、信息窃取篡改、病毒/木马/钓鱼/防火墙、安全意识、负面舆情治理
+
+
+------ HTTP
+> 2018 2022 2024
+
+HTTP 长轮询/长连接
+一种轮询方式是否为长轮询，是根据服务端的处理方式来决定的，与客户端没有关系。轮询的长短，是服务器通过编程的方式手动挂起请求来实现的。
+
+HTTP GET/DELETE/PUT 幂等性(无副作用) DNS 缓存.
+http1.1，keep-alive 是默认的 只需一次 TCP 握手.
+PC 上的 RTT 大概是 50ms, wifi 为 100ms， 3G 为 200ms，2G 为 400ms.
+丢包: 丢的是 tcp 包？服务器怎么知道丢了，丢了哪些内容 (如 get 请求内容一部分丢了)？浏览器会重新发送，还是自动重发？
+[合并 HTTP 请求是否真的有意义？](http://www.zhihu.com/question/34401250)
+浏览器针对每个域名并发建立的最大 TCP 连接数基本都是 6 个，然后每个连接上串行发送若干个请求。HTTP1.1 协议规定请求只能串行发送。
+
+[http pipelining](https://en.wikipedia.org/wiki/HTTP_pipelining) pipeline 原理是 客户端可以并行发送多个请求，但是服务器的响应必须按次序返回。一些服务器和代理不支持 pipeline；在 pipeline 中的前一个链接可能会阻塞后边的链接；减缓页面加载速度。Chrome 默认禁止了 pipelining。[原因](https://www.chromium.org/developers/design-documents/network-stack/http-pipelining)
+
+名词：`TCP`、`UDP`、`套接字Socket`、`ip`、`URI`、`URL`、`URN`
+`消息摘要和数字签名`、`RSA算法`、`DSA`、`认证问题`、`证书签名`、`代码签名`、`AES密匙`、`GSS-API`、`SASL`、`SSL`
+
+IP地址和端口号组成了所谓的Socket，Socket是网络上运行的程序之间双向通信链路的终结点，是TCP和UDP的基础。
+半关闭提供了这样一种能力：套接字连接的一端可以终止其输出，同时仍旧可以接收来自另一端的数据。该协议只适用于一站式（one-shot）的服务，如http服务。
+
+
+--- Session与Cookie
+
+Session 默认有效期是关闭浏览器，为什么session会消失，主要原因是浏览器端cookie内保存的 sessionID 失效了，因为session是基于cookie的，所以关闭浏览器会失效。浏览器关闭，session是不会马上消失的。如何延长session声明周期，解决方案：延长cookie 和 session 的生存时间
+
+Cookie可以让服务端程序跟踪每个客户端的访问，但是每次客户端的访问都必须传回这些Cookie，如果数量很多，这就增加了客户端与服务端的数据传输量，而Session解决了这个问题。
+
+同一个客户端每次和服务端交互时，不需要都传回所有的Cookie值，而是只要传回一个id，这个id是客户端第一次访问服务器时生成的，而且每个客户端是唯一的。这个id通常是name为JSESIONID的一个Cookie。
+
+由于Cookie是存储在客户端浏览器里的，不安全很容易被修改。相比之下，Session是将数据保存在服务端，只是通过Cookie传递一个SessionID而已，所以Session更适合存储用户隐私和重要的数据。
+
+分布式Session框架可以解决的问题：Session配置的统一管理；Cookie使用的监控和统一规范管理；Session存储的多元化；Session配置的动态修改；Session加密key的定期修改；充分的容灾机制，保持框架的稳定性；Session各种存储的监控和报警支持；Session框架的可扩展性；跨域名Session与Cookie的共享。
+
+由于应用是一个集群，所以不可能将创建的Session都保存在每台应用服务器的内存中，因为如果每台服务器有几十万的访问用户，服务器的内存肯定不够用，即使够用，这些Session也无法同步到这个应用的所有服务器中。所以要共享这些Session必须将他们存储在一个分布式缓存中，可以随时写入和读取，而且性能要很好才能满足要求，如MemCache、淘宝的Tair。
+
+跨域名共享Cookie问题，Cookie是有域名限制的，一个域名下的Cookie不能被另一个域名访问。所以，如果在一个域名下已经登陆成功，如何访问到另外一个域名的应用且保证登陆状态仍然有效呢？
+
+
+--- 2019
+
+- 从输入URL到页面加载完成 http://fex.baidu.com/blog/2014/05/what-happen/
+- HTTP 协议，http2.0，http 301 / 302 / 304 的区别。
+- TCP 是运输层而 HTTP 是应用层，HTTP需要支持「分块传输编码」。分块传输编码可以在响应数据未完全生成时进行数据传输，此时还无法确定响应信息的具体大小。如果分块中所包含信息的长度为 0，则表示响应信息的结束。
+- SPDY / HTTP 2 核心优势就是多路复用，简单说来就是将多个请求通过一个 TCP 连接发送。浏览器能不能将 100 个请求通过一个 TCP 连接发送？会出现什么问题？那就是 TCP 协议的 head of line blocking,队头阻塞。
+- [http2讲解](http://http2-explained.haxx.se/content/zh/index.html)、 [htt2 and UDP](http://2014.jsconf.eu/speakers/iliyan-peychev-http-20-and-quic-protocols-of-the-near-future.html)
+- 200、304 状态图 https://img2018.cnblogs.com/blog/907596/201903/907596-20190302011346217-1805589363.png (文章 https://www.cnblogs.com/kevingrace/p/10459429.html)
+
+- 输入域名并按下回车后 第一步，浏览器会检查缓存中有没有这个域名对应的解析过的 IP 地址，有就结束，没有进入下一步
+- 第二步，浏览器查找操作系统缓存中是否有。操作系统也有一个域名解析过程，在 hosts 文件里设置可以将任何域名解析到任何能够访问的 IP 地址。如果指定了，浏览器会使用这个 IP 地址。（早期 Windows 中的域名被入侵黑客劫持问题）
+- 前两步都是在本机完成的，如果无法完成解析，就会请求域名服务器了。我们的网络配置中都会有「DNS 服务器地址」，操作系统会把域名发送给 LDNS，也就是本地区的域名服务器。大约 80% 的域名解析到这里完成。
+- 第四步，如果 LDNS 没命中，就到 Root Server 域名服务器请求解析。然后 `gTLD Server`，`Name Server 域名服务器`，返回该域名对应的 `IP 和 TTL 值` 被 Local DNS Server 缓存，解析结果返回给用户、缓存到本地系统缓存中、域名解析过程结束。（这中间还有 GTM 负载均衡控制等）
+- 可以用 `nslookup`、`dig www.taobao.com` 等命令，跟踪解析过程
+
+
+
+
+## JS / Libs
+> 2018 2022 2024
 
 - console.log(1_048_576) 这是 Numeric Separators 的语法，是 ECMAScript 2021（ES12）中的一部分
 - https://evertpot.com/using-top-level-await-is-bc-break/
@@ -78,84 +325,45 @@ redux 基本流程
 - redux-saga 典型流程:  form 表单提交，触发 FORM_POST action，saga 里 `yield put` POST_SUCCESS 触发 action，改变页面状态或拉取新数据，触发 UI CHANGE 的 action，过程中用 `yield select` 从 state 里选取需要的参数。
 [Reactive programming vs Passive programming](https://vaibhavgupta.me/2017/12/31/reactive-programming-vs-passive-programming/)
 
-redux / umi 2018
+redux / umi
 - 框架的“双向绑定”意思是 view -> state -> view 变化的绑定，而不是 state1 <-> state2 变化的绑定、同样功能的 state 只用定义一个、有多个就会导致 state 变更检测的死循环。
 - umi 某个 router 多处复用方案 [umi/1830](https://github.com/umijs/umi/issues/1830)、[umi/4569](https://github.com/umijs/umi/issues/4569)
 - subscriptions 怎么获取到 model 中的 state [issues/1600](https://github.com/dvajs/dva/issues/1600)
 - 多个请求并行发起 [redux-saga/issues/1800](https://github.com/redux-saga/redux-saga/issues/1800)、[redux-saga/pull/759](https://github.com/redux-saga/redux-saga/pull/759)、[dva/issues/1009](https://github.com/dvajs/dva/issues/1009)
 - 如何请求多个数据源并渲染？如[图](https://img.alicdn.com/imgextra/i4/O1CN0150J8CS26jHFosJFF4_!!6000000007697-2-tps-476-266.png)
 
+性能和体验 2020
+弹窗 modal 里高度需要设置、内容长时“内滚动”。
+一行多列 card 卡片，每个卡片 高度需要设置成一样。
+某个操作 触发多次 ajax 请求、再 setState 页面，导致卡顿？
+一个页面有多个“富文本实例”同时初始化、比较耗时？导致页面卡顿？
+
+开放问题
+- 在项目中的角色？是否“独立”负责/0-1的项目、还是维护修改项目？
+- 遇到印象深刻的难题是什么？怎么解决的？（潜力） 开源作品或技术博客？ 最有成就感的技术产出？
+- 原工作是否有过因为他的存在而带来不一样的结果？以后三年职业计划？
+- 看哪些技术网站？国外网站？最近有学什么新技术（学习能力和专业热情）
+
+笔试套路：写出所有可能解法，也写出最经典解法。
+- Google笔试面试
+- 聊聊微软面试 https://mp.weixin.qq.com/s/-NESGyGBbF3WakPFieAT0w
+- https://github.com/hzfe/awesome-interview
+- https://github.com/yifeikong/reverse-interview-zh
+- https://github.com/lydiahallie/javascript-questions
+- https://h5bp.org/Front-end-Developer-Interview-Questions/translations/chinese/
+- https://github.com/MaximAbramchuck/awesome-interview-questions
+- 2020 https://github.com/CavsZhouyou/Front-End-Interview-Notebook
+- 2019
+- https://mp.weixin.qq.com/s/e-IC588SZPJK2QRBm3KuHA
+- https://segmentfault.com/a/1190000019496107
+- 2018
+- https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651011223&idx=2&sn=54acfe1d565f650c52fcea5481ad1195
+- https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers
+- 2017 https://github.com/jawil/blog/issues/22
 
 
------- html css
 
-cssinjs https://mp.weixin.qq.com/s/cepGi8Jhe4RnyfNaoN_zfw
-react19 cssinjs 问题 https://juejin.cn/post/7359876671137071156
-探索：业务中推行 tailwindcss 和 emotion，设计上 design token 抽象。
-2024-10 cssinjs
-
-- html 规则检测 https://validator.w3.org 、 http://infohound.net/tidy
-- html head 里的 js css 如何放置  head 里能放什么 https://github.com/joshbuchea/HEAD
-- iframe 有哪些问题 https://afantasy.ninja/2018/07/15/dive-into-iframe
-  - 高度改变麻烦、弹框、iframe 里再嵌套 ifr。
-  - 移动端页面、打开(全屏)嵌入的 iframe 页面，点浏览器返回、返回不到业务页面、需要销毁 iframe。
-  - 浏览器刷新 iframe url 状态丢失、后退前进按钮无法使用。
-  - 里边 弹出框 的位置、难居中，浏览器 resize 时自动居中 更难处理。
-  - 主文档和 iframe 文档如果不同域、免登录处理麻烦，涉及 cookie 透传。
-  - 需要完全重新加载，比较慢。
-  - iframe 自适应高度：给定高度、内部滚动
-- div/span 都是容器元素， p dt 标签里不能有块(block)标签， button 里面不要嵌套 a 标签。
-- img script 的 src、css 的 href 都不能为空。 DOM 的 attribute 和 property 区别。
-- a 伪类需遵循 css2 规范中的 L-V-H-A (a:link visited hover active) 顺序。
-- 没有 css-parent-selector 。 BEM命名方式。  如何提升 CSS 选择器性能 http://www.jianshu.com/p/268c7f3dd7a6
-
-- [anchor-positioning-api](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn)
-- CSS 选择器优先级(id>class>标签>伪类)？伪类和伪元素区别？BFC/IFC 介绍？
-- 浮动以及清除浮动？页面布局方法？flex一维 CSS Grid 二维。元素垂直居中方法？
-- border-box 作用？display/position 作用(absolute会变为块元素)？z-index 在节点 position 值是什么生效(relative/absolute/fixed)？
-- 子元素的 margin-top 设置影响父元素位置？页面兼容性问题？响应式布局怎么实现？
-- CSS优化方法？减少DOM操作，减少重绘和重排，合理使用选择器，减少@import使用。
-- h5高清方案(rem) 优缺点？ css 实现 loading，三角形？ css-module 的作用？ css 样式初始化为了什么？
-- https://www.iconfont.cn/
-- css 时间函数 http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions
-- css 长度 https://css-tricks.com/the-lengths-of-css
-  - 绝对长度: px inch cm mm。 rem: 相对 root 的 font-size 大小  em: 基于大写字母 M 的尺寸  ex: 基于 x 字母高度  1vh 等于 1/100 的视口高度
-
-
-browser
-
-- [URL 编码，为什么要编码？](http://anjia.github.io/2015/04/15/jsURIEncode/)
-- 浏览器在自动选择编码方式的时候不会优先根据 html 源码中的所展示的`<meta charset="utf-8" />`代码来决定选择什么编码方式，而是优先根据“响应标头-response header”中的键为“Content-Type”的值来自动选择判断。
-- [ua 检测](https://github.com/ded/bowser) / [特性检测](https://github.com/barisaydinoglu/Detectizr)
-- 浏览器解析和CSS（GPU）动画优化 https://segmentfault.com/a/1190000008015671
-  - css 动画中尽量只使用 transform 和 opacity ，这不会发生重排和重绘。
-  - 有动画的元素样式，给定尺寸、设置为 display block（如果设置 display flex 子元素尺寸会动态变化、影响动画效果）
-- [WebAssembly](https://juejin.im/entry/5b20d09d6fb9a01e242490b1)
-  - 不是一门编程语言，而是一份字节码标准。 各种复杂的计算：图像处理、3D运算(大型 3D 网页游戏)、语音识别、音视频编码解码。区块链合约。
-  - [madewithwebassembly](https://madewithwebassembly.com/)、eBay 的[条形码扫描](https://www.infoq.cn/article/vc*q7psQqWMaVU8igJeD)、 [Google earth web](https://earth.google.com/web/) 版、 [autocad](https://web.autocad.com/login) web 版
-- [PWA](https://developers.google.com/web/progressive-web-apps/)
-  - Service Worker 需要运行于 HTTPS 或本地 localhost 环境，是继 Web Worker 后又一个新的线程。来实现离线页面功能。 Service Worker 是独立于页面的一个运行环境，它在页面关闭后仍可以运行。Web Worker 在页面关闭后不再运行。
-- https://developer.chrome.com/blog/introducing-popover-api/   Web Authentication 在Web上使用Touch ID 和 Windows Hello 登录
-- xss/csrf 原理和防御方法。CORS 的 POST 跨域如何带cookie https://www.jianshu.com/p/13d53acc124f
-- 浏览器 eventLoop 机制 microtask marcotask 执行顺序？setTimeout 宏队列先执行，promise 微队列。
-- 优化：压缩资源、异步加载、预加载、缓存、使用gzip、减少cookie、减少重定向、减少请求数。
-
-- JSONP 的原理以及 cors 怎么设置？跨域的方法有哪些？jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面。
-- web worker 突破同源限制？importScripts。 不好地方:(协程)解决并行计算，数据共享和精确控制线程生命周期方面存在缺陷。
-- SPA 实现方法？产生的问题：切换路由后会把上个路由状态生成的html全部销毁掉，再切回来恢复不到原来的样子。客户端渲染和服务端渲染，哪个快？
-- 移动: 点击穿透/300ms延迟？Fastclick。首频渲染、网络性能？手势库？有没有用过RN PWA？
-- 数据可视化: 3d 编辑器功能？技术点 svg 3dgis canvas webgl，svg 转 webgl 怎么实现？
-
-drag-drop
-- drag 事件 不支持 ie8、Safari 5.1  ie<=9 只能对 a href="" 、img、文本 添加drag事件。 ie9上通过 selectstart hack方法对任何元素添加事件。 在ie<=8版本上，需要把dragenter/drageover/drop事件绑定到具体的元素上，而不能绑定到document做委托处理。
-- 使用 drag-drop API的优势（相对于用mousedown/mousemove）： 如果拖动元素所在的容器尺寸小，拖动过程产生滚动条、会自动触发滚动条移动。 不用再 clone 出一个要拖动的元素； 不用计算涉及到的元素的位置和尺寸。
-传统拖动做法
-- 在 touchstart / mousedown 中记录起始位置，并开始监听 touchmove touchend / mousemove mouseup
-- 在 touchmove mousemove 中计算当前位置和起始位置之间的 offset，并进行拖拽操作
-- 在 touchend mouseup 中取消监听 touchmove 和 touchstart，并进行释放操作
-
-
------- 小程序/RN
+------ 小程序/RN 2022
 
 小程序的渲染层和逻辑层分别由2个线程管理：渲染层的界面使用了 WebView 进行渲染；逻辑层采用 JsCore 线程运行JS脚本。一个小程序存在多个界面，所以渲染层存在多个 WebView 线程，这两个线程的通信会经由微信客户端做中转，逻辑层发送网络请求也经由 Native 转发。
 目的：安全可控，沙箱隔离，限制 DOM 和 BOM 能力。逻辑层和渲染层是独立的，二者不会互相阻塞，因此性能更优（小程序限制了 JS 操作 DOM 的能力，因此不用担心二者的不同步问题）在浏览器网页中，虽然 JS 执行和 UI 渲染也是处于两个线程，但是 JS 线程和 UI 线程是互斥的。
@@ -193,6 +401,119 @@ Ali.showActionSheet({ content: '' }, (result) => {});
 AlipayJSBridge.call('popWindow');
 AlipayJSBridge.call('setTitle', { title: 'xxx' });
 AlipayJSBridge.call('getSystemInfo', { }, (result) => {});
+```
+
+
+
+
+
+## TypeScript
+
+这么写的 export type * from 'xxx';
+报错: error TS1383: Only named exports may use 'export type'.
+ts不允许这么写. 在 compilerOptions 里加上 "skipLibCheck": true, 忽略.
+2025-07-01
+
+@types/node @types/react 版本 需要和 typescript react 版本匹配.
+2025-04
+
+Why Go https://github.com/microsoft/typescript-go/discussions/411
+2025-03
+
+monorepo 项目根目录 tsconfig 里已配置 "paths": { "@xx/monoaid": ["./common/monoaid/src/index.ts"] }
+根目录有个 build.mjs 文件,内容有 import { xx } from '@xx/monoaid';
+使用 node ./build.mjs 运行报错 Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@xx/monoaid'
+这是因为 TypeScript 的 paths 配置只影响 TypeScript 编译器和工具（如 IDE 的代码提示），而不会直接影响运行时（Node.js）。Node.js 不会解析 tsconfig.json 中的 paths，所以它找不到 @xx/monoaid 模块。
+2024-12
+
+[TypesSript 装饰器源码分析](https://github.com/frontend9/fe9-library/issues/226)
+[使用 TypeScript 实现依赖注入](https://github.com/frontend9/fe9-library/issues/225)
+[如何实现一个 TypeScript 的宏](https://github.com/frontend9/fe9-library/issues/186)
+[让 babel 帮你编译 typescript](https://github.com/frontend9/fe9-library/issues/23)
+https://github.com/zzj3720 (github/toeverything)
+[conditional type 中的联合类型与 never](https://github.com/frontend9/fe9-library/issues/135)
+[TypeScript专栏](https://www.zhihu.com/column/c_206498766)
+2019
+
+
+```sh
+
+# pnpm tsc 当存在多个版本 typescript 查看当前使用的是哪个
+pnpm exec tsc -v  # pnpx tsc -v 会报错
+pnpm exec which tsc  # 查看
+ls -l ./node_modules/.bin/tsc
+
+pnpm exec tsc --build --traceResolution > a.log
+
+# 查看当前项目 typescript 版本
+npx tsc -v
+npx tsc --showConfig
+# 输出 resolution 日志
+npx tsc --traceResolution
+# 如果遇到 react 问题, 搜 Resolving module 'react' from
+npx tsc -p tsconfig.json --traceResolution
+
+# 遇到ts类型报错 Cannot find module '@xx' or its corresponding type declarations.
+# 打开报错的 ts 文件, 按 Cmd+Shift+P 输入 TypeScript: Go to Project Configuration 它会跳转到当前文件生效的 tsconfig
+```
+
+TypeScript 的模块解析机制, 查找类型声明的顺序是：
+- 当前包的 node_modules/@types
+- 往上级目录递归找 node_modules/@types
+- global 的类型（如果 tsconfig 配置了）
+如果只限制在当前包查找, 在 tsconfig.json compilerOptions 配置 paths.
+
+https://www.typescriptlang.org/tsconfig/  tsconfig.json 配置
+
+```json
+// 比如是 monorepo 根目录的 tsconfig.json
+{
+  "compilerOptions": {
+    // baseUrl 的 . 和 ./ 一样 ,
+    "baseUrl": "./",
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "strictBindCallApply": false,
+    "importHelpers": true,
+    // debug
+    "explainFiles": true,
+    "traceResolution": true,
+    //
+    "typeRoots": ["./typings", "./vendor/types"],
+    "types": ["node", "jest", "express"],
+    //
+    "paths": {
+      "tslib": ["node_modules/tslib/tslib.d.ts"],
+      "*": ["./node_modules/*", "*"],
+      "@/*": ["src/*"],
+      "@@/*": ["src/.space/*"],
+      "@xx/yy": ["src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "tests/**/*"]
+}
+
+// monorepo 子目录 ./packages/_demo/tsconfig.json 内容如下,
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {
+        // 注意 虽然是在 packages/_demo 子目录里, 但这里 compilerOptions - paths 路径写法是相对 项目根目录 .
+        // 如果再设了 baseUrl: "./" 才是相对 packages/_demo 解析
+        // 即 compilerOptions.baseUrl 和 paths 的解析是以：最终（合并后的） tsconfig.json 中的 baseUrl 为准。 https://chatgpt.com/c/6846814a-2dd0-8008-b63c-d61d4825318f
+      "myswr": ["./packages/swr/index.tsx"],
+    }
+  },
+  // 如果是自建的 以 点 开头的目录, 在 unix 系统里会被当做 配置文件 而默认不被 vscode 等解析.
+  // 比如 .xx 在 include 里不能只写 ".xx" 而是 ".xx/**/*"
+  "include": ["./src", "./.i18n/**/*"]
+}
 ```
 
 
@@ -342,6 +663,24 @@ https://tldraw.dev/
 
 ## 测试 监控
 
+
+https://code.visualstudio.com/docs/copilot/guides/test-with-copilot
+https://docs.github.com/zh/copilot/using-github-copilot/guides-on-using-github-copilot/writing-tests-with-github-copilot
+2025-06-05 使用 GitHub Copilot 编写测试
+
+前端应用各类测试区别 https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests
+https://kentcdodds.com/blog/why-i-never-use-shallow-rendering
+https://kentcdodds.com/blog/avoid-the-test-user
+已废弃 https://enzymejs.github.io/enzyme/
+2025-05-30
+
+目前最流行的前端开发的测试框架工具有哪些?
+https://chatgpt.com/c/68371d58-3420-8008-8991-9b2df8b537a8
+2025-05-28
+
+
+------
+
 https://httparchive.org/reports/page-weight
 语言性能 jsperf / benchmarks https://jsben.ch/browse
 [heavy tasks on the main thread](https://github.com/astoilkov/main-thread-scheduling)
@@ -375,13 +714,6 @@ arms / quick a+ / spm / aplus / retcode / clue。
 arm aem 对任何请求（包括图片）都做埋点，导致业务接口被阻塞，页面性能下降一倍。采用合并、延迟上报埋点方式，把所有打点请求都延迟推入单独的队列维护，当页面完全加载完成后再从队列中依次取出数据进行上报。下掉非必要埋点。
 2022-01~04
 
-性能和体验 2020
-弹窗 modal 里高度需要设置、内容长时“内滚动”。
-一行多列 card 卡片，每个卡片 高度需要设置成一样。
-某个操作 触发多次 ajax 请求、再 setState 页面，导致卡顿？
-一个页面有多个“富文本实例”同时初始化、比较耗时？导致页面卡顿？
-
-
 [iceworks-doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor)
 [vscode-codemetrics](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-codemetrics)
 
@@ -394,24 +726,8 @@ arm aem 对任何请求（包括图片）都做埋点，导致业务接口被阻
 [代码质量](https://stackoverflow.blog/2021/10/18/code-quality-a-concern-for-businesses-bottom-lines-and-empathetic-programmers/)
 
 
+
 ------ 测试
-
-https://code.visualstudio.com/docs/copilot/guides/test-with-copilot
-https://docs.github.com/zh/copilot/using-github-copilot/guides-on-using-github-copilot/writing-tests-with-github-copilot
-2025-06-05 使用 GitHub Copilot 编写测试
-
-前端应用各类测试区别 https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests
-https://kentcdodds.com/blog/why-i-never-use-shallow-rendering
-https://kentcdodds.com/blog/avoid-the-test-user
-已废弃 https://enzymejs.github.io/enzyme/
-2025-05-30
-
-目前最流行的前端开发的测试框架工具有哪些?
-https://chatgpt.com/c/68371d58-3420-8008-8991-9b2df8b537a8
-2025-05-28
-
-
---- 工具
 
 静态分析与代码质量工具：SonarQube、CodeClimate 等，有助于在构建前发现问题，减少后续测试和修复时间。
 [SonarQube](https://docs.sonarsource.com/) Codeowners
@@ -509,6 +825,44 @@ https://mp.weixin.qq.com/s/2FXkUE2OttMHUSwbf3JDgw
 
 ## 基本库
 
+
+antd 的 ConfigProvider 如果存在多层嵌套, 哪一层优先级最高, 每一层的属性怎么覆盖?
+为什么 locale prefixCls 无覆盖? 如果外层的 ConfigProvider 设置了 locale 内层的 ConfigProvider 没设置, 那这时候 locale 不是无效了吗? 怎么解决?
+https://chatgpt.com/c/689ef7c6-2f94-8333-b328-46f09b85c787
+2025-08-15
+
+在 docusaurus v3 中, 不通过修改 md 文档的 slug 而是通过插件方式, 实现 比如实际文件路径是 form/.i18n/index.md 在 URL 里显示为 components/form 的功能.
+2025-06-15
+
+为什么 mui button 的 api 叫 variant , 最初来源于哪里?
+...
+antd 还有其他的 api 一样的版本吗?
+由于大量项目已基于 antd 构建, 但需要换一套组件库, 希望新的组件库 api 和相应功能 都能对 antd做兼容, 应该怎么做? 最好的办法是什么?
+应该基于哪个新的组件库来做呢?
+有人用 Material UI 做兼容 antd 的 api 的中间层库吗?
+...
+学习 tailwind 应该要理解哪些重点和难点地方
+tailwind variants vs cva
+...
+基于 React Hook Form 和 Zod 做一个新的 react form 组件, 使其功能和 antd 4 的 Form 组件一样, api 用法也一样.
+2024-12
+
+很多 react UI 组件库都有 variant 属性, 为什么这么命名, 作用是什么 作用都一样吗
+chrome 插件 popup 页面, 怎么区分是在 新 tab 打开, 还是 弹窗里打开?
+https://chatgpt.com/share/674d2c48-8c94-8008-aca4-0ae4cc13eaa7
+...
+shadcn/ui ant-design material-ui 现状综合看哪个好、应该怎么选择？
+基于哪个做二次开发比较好，成本怎么样？
+需要面向未来、有一定先进性，应该怎么选?
+想从 antd 迁移到新的 react 组件库, 要求 api 尽量一致或者改造成本低, 哪个新组件库符合要求?
+https://chatgpt.com/share/6749ea04-8f08-8008-9f30-132d8ec8071d
+2024-11
+
+tailwindcss 的 text-danger 等 className 使用。
+2023
+
+
+------
 
 https://www.kylegill.com/essays/next-vs-tanstack/
 React Trends in 2025 https://www.robinwieruch.de/react-trends/
@@ -647,7 +1001,6 @@ package.json 中的 browser 字段 主要由打包器识别 (如 Webpack Rollup 
 - gulp 强调的是前端开发的工作流程，通过配置一系列的task，定义执行顺序，来让gulp执行。 webpack 侧重模块打包，我们可以把开发中的所有资源（图片、js文件、css文件等）都看成模块，通过loader（加载器）和plugins（插件）对资源进行处理，打包成符合生产环境部署的前端资源。 对于 gulp 来说模块化不是他强调的东西，而 webpack 更强调模块化开发，而文件压缩合并、预处理等功能，不过是他附带的功能。
 
 
-
 ------ 框架 脚手架
 
 https://github.com/web-infra-dev
@@ -674,41 +1027,7 @@ https://github.com/mcuking/blog/issues/88
 
 ------ 基础 UI 组件
 
-在 docusaurus v3 中, 不通过修改 md 文档的 slug 而是通过插件方式, 实现 比如实际文件路径是 form/.i18n/index.md 在 URL 里显示为 components/form 的功能.
-2025-06-15
-
-为什么 mui button 的 api 叫 variant , 最初来源于哪里?
-...
-antd 还有其他的 api 一样的版本吗?
-由于大量项目已基于 antd 构建, 但需要换一套组件库, 希望新的组件库 api 和相应功能 都能对 antd做兼容, 应该怎么做? 最好的办法是什么?
-应该基于哪个新的组件库来做呢?
-有人用 Material UI 做兼容 antd 的 api 的中间层库吗?
-...
-学习 tailwind 应该要理解哪些重点和难点地方
-tailwind variants vs cva
-...
-基于 React Hook Form 和 Zod 做一个新的 react form 组件, 使其功能和 antd 4 的 Form 组件一样, api 用法也一样.
-2024-12
-
-很多 react UI 组件库都有 variant 属性, 为什么这么命名, 作用是什么 作用都一样吗
-chrome 插件 popup 页面, 怎么区分是在 新 tab 打开, 还是 弹窗里打开?
-https://chatgpt.com/share/674d2c48-8c94-8008-aca4-0ae4cc13eaa7
-...
-shadcn/ui ant-design material-ui 现状综合看哪个好、应该怎么选择？
-基于哪个做二次开发比较好，成本怎么样？
-需要面向未来、有一定先进性，应该怎么选?
-想从 antd 迁移到新的 react 组件库, 要求 api 尽量一致或者改造成本低, 哪个新组件库符合要求?
-https://chatgpt.com/share/6749ea04-8f08-8008-9f30-132d8ec8071d
-2024-11
-
-tailwindcss 的 text-danger 等 className 使用。
-2023
-
-
----
-
-
-UI 功能库 2024
+--- UI 功能库 2024
 
 - react hooks
   - [zeit/swr](https://github.com/zeit/swr)
@@ -721,12 +1040,21 @@ UI 功能库 2024
 - 独立功能: [react-virtualized](https://github.com/bvaughn/react-virtualized) / 分步指引 tour [shepherd](https://github.com/shipshapecode/shepherd) / [driver.js](https://github.com/kamranahmedse/driver.js) / form-builder FormRender.
 
 
-UI 库 2024
+--- UI 库 2024
 
-- [tailwindcss](https://github.com/tailwindcss/tailwindcss)
-  - [shadcn/ui](https://ui.shadcn.com/)(2023-05开源)
-  - [Chakra UI](https://v2.chakra-ui.com/)(2019-09开源) / [Mantine](https://mantine.dev/)(2021-03开源)
-  - [Adobe](https://react-spectrum.adobe.com/) / [上海 geist-ui](https://github.com/geist-org/geist-ui)
+基于 [tailwindcss](https://github.com/tailwindcss/tailwindcss) 的 UI 库:
+
+- [shadcn/ui](https://ui.shadcn.com/)(2023-05开源)
+  - https://github.com/shadcn-ui/ui
+  - https://github.com/radix-ui/primitives
+- [Chakra UI](https://v2.chakra-ui.com/)(2019-09开源)
+  - [Chakra UI github](https://github.com/chakra-ui/chakra-ui)
+  - [ark](https://github.com/chakra-ui/ark)
+- [Mantine](https://mantine.dev/)(2021-03开源)
+- [Adobe](https://react-spectrum.adobe.com/) / [上海 geist-ui](https://github.com/geist-org/geist-ui)
+
+自成一体:
+
 - [material-ui](https://mui.com/material-ui) [base-ui](https://mui.com/base-ui/)
 - [github-primer](https://primer.style/) / [Semantic UI](https://semantic-ui.com/)
 - https://ant.design
@@ -746,7 +1074,7 @@ antd4 [发布日志](https://github.com/ant-design/ant-design/issues/21656)
 - [antd 3.x-stable](https://github.com/ant-design/ant-design/tree/3.x-stable)
 
 
-UI 功能库 2021
+--- UI 功能库 2021
 
 - 图表: [amcharts](http://www.amcharts.com/demos/) / antv [L7地图](https://l7.antv.vision/zh)
 - 编辑器/IDE: [awesome editors](https://github.com/JefMari/awesome-wysiwyg)
@@ -793,779 +1121,695 @@ antd-mobile 旧 demo 备份 2018
 
 
 
-## monorepo
-
-使用 lerna@8 和 pnpm@7 , 在 lerna version 时, 因为搭配了 pnpm  就算不使用workspace: 协议, 也能自动关联升级版本号. 是怎么实现的?
-https://chatgpt.com/share/6809e167-f024-8008-983a-3d3429470081
-https://gemini.google.com/app/1660bddbb4205ab5
-https://github.com/lerna/lerna/issues/718
-https://github.com/lerna/lerna/issues/2326
-2025-04-24
-
-lerna 的 libs/core/src/lib/command/index.ts 里的 configureProperties 里的 execOpts 怎么修改? 怎么在调用 lerna 命令时传入这个参数?
-怎么使用 lerna 的 ChangedCommand 类?
-怎么让 lerna changed 命令忽略 Merge branch带来的代码变化?
-2025-04-22
-
-在 lerna@8 + pnpm@7 的 monorepo 项目里, 因为存在两个相同的包名, 虽然通过 project.json 做了区分, 但 lerna 背后的 nx 对于内部包之间的 依赖解析 仍然有问题.
-https://gemini.google.com/app/f2ce6aaf2219c618
-...
-使用 pnpx nx graph 分析内部包之间的依赖, 发现部分内部依赖缺失?
-因为 lerna 背后实际是 nx 在检测依赖. 写死版本号, 或使用工作区协议(workspace: 或 file: 协议) 会被检测到. 但如果依赖版本号是 ^ 开头 则检测不到, 因为 SemVer ^ 范围并不是“协议” 只是 NPM 在安装时的解析策略，Nx 的项目图器并不去解析 SemVer 范围，它只信任显式的工作区协议或基于代码的导入。
-https://chatgpt.com/c/6804b4b9-bc04-8008-b378-803e803e9f9e
-2025-04-20
-
-当前 master 分支 最新的commit 关联了 tag a b c, 此时有新的 feature 分支合并进 master, 就在 master 最新commit 之上新增了 2个commit 变为了 master 的最新 commit, 同时在 master 第 10 条 commit 位置, 插入了一周前的 feature 分支的多个 commit 进来.
-这时候, lerna change 认为 master 上的 tag a b c 疑似失效, 显示这些 tag 对应的文件有变更, 实际上这些文件已经在 master 的 commit 里, 并且没有变更.
-继续提问: 是使用 git merge --no-ff 合并的 feature 分支到 master. 也没有改变 master 已有的 commit hash , 只是把 feature 分支上一周前的几个 commit 合到了 master commit 时间线里, hash 也都没有变化.
-https://chatgpt.com/c/68021519-6b6c-8008-832d-e82255a913ba
-2025-04-18
-
-nx implicitDependencies 怎么理解和使用?
-pnpm build 有类似 nx implicitDependencies 的功能吗? 或者怎么能实现这样的效果, 特别是在处理 npm alias 这种场景时.
-https://chatgpt.com/c/67f8cedd-9b20-8008-b596-daa0e9c3bb7c
-https://gemini.google.com/app/c5def5cfe22d8825
-https://chat.deepseek.com/a/chat/s/bfe64f5d-98e5-4481-8332-b738c1926eb6
-2025-04-11
-
-monorepo 工具 lerna changesets rushjs 功能详细对比?
-lerna 配合 nx 能实现 rush.js 的 增量构建、并行化、分布式缓存 功能吗?
-Rushjs 提供了构建缓存（build cache）功能，还支持阶段构建（phased builds）这些优化, 能节省公司使用云构建的机器成本吗? 比传统多仓库模式能节省多少成本?
-https://gemini.google.com/app/8f758441dfbc2494
-https://chatgpt.com/share/67e3ee41-856c-8008-acea-945ed9ba627b
-https://chat.deepseek.com/a/chat/s/84c31b44-3b08-4cde-921f-01f077639dca
-2025-03-26
-
-lerna publish from-git from-package 详解?
-为什么 from-git 适合 自动化 cicd 场景?
-使用 from-package 时, --ignore-changes 为什么不起作用?
-https://chat.deepseek.com/a/chat/s/f8b25b55-f0f0-4851-a901-0156ddd8f5d8
-2025-03-19
-
-使用 Nx 进行构建时，.nx 目录用于存储与构建相关的缓存和数据 .nx/cache/ .nx/installation/ .nx/workspace-data/ 这些目录包含特定于本地环境的临时文件，不适合纳入版本控制。在 .gitignore 里忽略掉.
-使用 Nx 提供的分布式缓存功能，在团队内部共享缓存.
-2025-03-13
-
-lerna 运行完 根目录的 version 钩子后, 虽然提示了要修改文件的版本号, 但程序那一刻 看起来还没有改动完成相应文件, 什么时候文件内容会被实际改掉? 改成 postversion 也不行.
-2025-03-11
-
-lerna 在 preversion 阶段会执行 package.json 里的 scripts, 但不希望明确写这个 scripts, 而是想由另一个脚本 动态设置 scripts 后传递给 lerna , 这样能实现吗?
-https://chat.deepseek.com/a/chat/s/aaea4f5c-0d71-4b54-b8f0-a6fc1d771ef1
-https://chatgpt.com/c/67ce9933-a260-8008-8046-cff83664fe40
-2025-03-10
-
-lerna 在更新版本时候, 有什么钩子函数, 能打印出来新旧版本号吗?
-现在是 lerna 结合 pnpm 的 monorepo 项目, 不想在每个子包都重复写 scripts 怎么能统一解决?
-2025-03-09
-
-lerna version 不能自动更改 npm alias 的版本号, 怎么解决这个问题? 怎么解决?
-除了 lerna 有其他类似工具能解决这个问题吗?
-https://grok.com/chat/8e0fc14a-3f17-40a2-b7c5-99463c153087
-https://grok.com/share/bGVnYWN5_2285de9a-750d-409c-a6a1-0c33cd067f1e
-https://chat.deepseek.com/a/chat/s/e1bbf052-b8a7-4064-81f9-b7fc3bfc426f
-2025-02-26
-
-monorepo 忽略了 samples 子目录, 但在 samples/xx 里运行 pnpm install 还是会根据根目录的 pnpm-lock 安装依赖, 怎么避免这个问题?
-2024-12
-
-在 2022/05 的时候 Next.js 在这个 [PR#37259](https://github.com/vercel/next.js/pull/37259) 从yarn 转移到了pnpm，原因是使用pnpm 帮助他们降低了下载套件的大小，而且找到了一些幽灵依赖，并在 CI 上安装套件的速度从 4 分钟降低到了 2 分钟。
-...
-[将 50 万个文件放在一个 Git 存储库中](https://www.infoq.cn/article/tomhtgpmuy4oqhpvf0w1)
-2024-10
 
 
 
------- lerna
+# BE
+
+node nginx 服务和 node pm2 服务, 是分别用于 CSR 和 SSR 服务运行吗?
+https://chatgpt.com/c/68b9404a-ed10-8322-8ce0-3e6be1704b70
+2025-09-04
+
+[yaml和json区别](https://stackoverflow.com/questions/1726802/what-is-the-difference-between-yaml-and-json)
+2025-07-31
+
+https://github.com/ant-design-blazor/ant-design-blazor
+https://learn.microsoft.com/zh-cn/aspnet/core/blazor/
+2025-07-29 .net
+
+service eu us 不同大区, dr 含义? 其中 r 是 region 的意思, dr 可能是什么?
+https://chat.deepseek.com/a/chat/s/fdaa9566-f02a-4d9e-b719-3c98b7733741
+2025-04-15
+
+软件配置管理(SCM)是指通过执行版本控制、变更控制的规程，以及使用合适的配置管理软件，来保证所有配置项的完整性和可跟踪性。
+2024
+
+[2021 年 Rust 生态版图调研报告](https://zhuanlan.zhihu.com/p/458046979)
+
+
+## DB/Java/cpp/go
+
+IoC就是Inversion of Control，控制反转还有一个名字叫做依赖注入（Dependency Injection），就是由容器控制程序之间的关系，而非传统实现中，由程序代码直接操控。IoC意味着将你设计好的类交给系统去控制，而不是在你的类内部控制。由IoC容器帮对象找相应的依赖对象并注入，而不是由对象主动去找。
+
+AOP：AOP是 Aspect Oriented Programming 的缩写，意思是面向切面编程，提供从另一个角度来考虑程序结构以完善面向对象编程（相对于OOP），即可以通过在编译期间、装载期间或运行期间实现在不修改源代码的情况下给程序动态添加功能的一种技术。
+
+面向对象OOP
+面向对象的3个基本要素：封装、继承、多态. 面向对象的5个基本设计原则:
+- 单一职责原则（Single-Resposibility Principle）
+  - 一个类，最好只做一件事，只有一个引起它的变化。
+- 开放封闭原则（Open-Closed principle）
+  - 对扩展开放，对修改封闭的
+- 里氏替换原则（Liskov-Substituion Principle）
+  - 子类必须能够替换其基类。
+  - 子类可以扩展父类的功能，但不能改变父类原有的功能。
+- 依赖倒置原则（Dependecy-Inversion Principle）
+  - 高层模块不依赖于低层次模块，二者都同依赖于抽象接口。
+  - 抽象接口不应该依赖于具体实现;而具体实现则应该依赖于抽象接口。
+- 接口隔离原则（Interface-Segregation Principle）
+  - 使用多个小的专门的接口，而不要使用一个大的总接口。
+可以运用组合技术使用现有类来开发新的类，而继承技术其实是不太常用的。尽管在教授OOP的过程中我们多次强调继承，但这并不意味着要尽可能使用它。相反，应当慎用这一技术，其使用场合仅限于你确信使用该技术确实有效的情况。
+到底是该用组合还是用继承，一个最清晰的判断办法就是问一问自己是否需要从新类向基类进行向上转型。如果必须向上转型，则继承是必要的，但如果不需要，则应当好好考虑自己是否需要继承。
+
+- QPS、RT、阿里云OSS：文件存储系统（避免把文件存到数据库里、占用IO资源）
+- tair：内存缓存服务器 开源：memcached / redis
+- F5：硬件负载均衡，LVS替代(软负载): 即为name server（configServer），名字服务器，存放各个机器名，能知道有哪些机器。
+- HSF(High Speed FrameWork)：远程服务调用框架. non-blocking IO.  IO连接多路复用。一个连接上维持多个会话。 序列化协议，hessian序列化。 同类开源的rpc框架: dubbo 或 thrift 等.
+- osgi：用于进行类库隔离的组件，允许组件动态热部署.
+- DRM：分布式资源管理，在运行时动态、即时地改变应用系统内存中的资源值，已经解决多机房问题。
+- zookeeper: 可以充当一个服务注册表（Service Registry），让多个服务提供者形成一个集群，让服务消费者通过服务注册表获取具体的服务访问地址 去访问具体的服务提供者. 提供了“心跳检测”功能 定时向各个服务提供者发送一个请求，如果长期没有响应，服务中心就认为该服务提供者已经“挂了”，并将其剔除.
+
+- DAL(数据访问层)、IDAL(接口层)、BLL(业务逻辑层)
+- PO(Persisent Object)持久对象，和VO一样都是由一组属性和属性的 get 和 set 方法组成。PO 的属性是跟数据库表的字段一一对应的。PO 对象需要实现序列化接口。
+- VO(value object)值对象，通常用于业务层之间的数据传递，和 PO 一样也是仅仅包含数据而已。但应是抽象出的业务对象,可以和表对应,也可以不,根据业务的需要。
+- DAO(data access object) 数据访问对象，它负持久层的操作，为业务层提供接口。此对象用于访问数据库。通常和 PO 结合使用. DAO 中包含了各种数据库的操作方法. DTO(Data Transfer Object) 数据传输对象，主要用于远程调用等需要大量传输对象的地方.
+
+比如我们一张表有 100 个字段，那么对应的 PO 就有 100 个属性。 但是我们界面上只要显示 10 个字段，客户端用 WEB service 来获取数据，没有必要把整个 PO 对象传递到客户端，这时我们就可以用只有这 10 个属性的 DTO 来传递结果到客户端，这样也不会暴露服务端表结构.
+
+[正向代理与反向代理有什么区别](http://mp.weixin.qq.com/s/ikrI3rmSYs83wdSWqq2QIg)
+CDN 工作机制：CDN = 镜像（Mirror）+ 缓存（Cache）+ 整体负载均衡（GSLB），主要缓存网站中的静态数据。
+三种负载均衡架构：链路负载均衡、集群负载均衡、操作系统负载均衡。
+- 链路负载均衡就是通过 DNS 解析成不同的 IP，用户根据这个 IP 来访问不同的目标服务器。
+- 集群负载均衡分为硬件和软件负载均衡。硬件负载均衡设备昂贵、如 F5，性能非常好，但访问量超出极限时不能进行动态扩容。软件负载均衡成本低，缺点是一般一次访问请求要经过多次代理服务器，会增加网络延时，如 LVS、HAProxy。
+- 操作系统负载均衡，是利用操作系统级别的软中断或硬中断，设置多队列网卡等来实现。
+2016
+
+
+------ DB
+
+时间序列数据的数据库选型思考 https://j-coder.com/2021/11/12/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B%E6%80%9D%E8%80%83/
+ClickHouse vs Elasticsearch谁更胜一筹 https://www.zhihu.com/question/472389514
+2024-05-28
+
+--- 2016
+MapReduce 是一种分布式的程序设计模型，专门用来在集群里处理大量的数据。主要由两部分组成：mapper 和 reducer。mapper 读取一部分数据，运算后输出成一系列的中间（intermediate）数据；而 reducer 将 mapper 的输出数据查核、合并，产生最后输出。最常被使用的就是Hadoop。
+Hadoop 是以 Java 实现的，但是可以支持许多其他语言写成的 mapper 和 reducer。
+Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量数据时，就会比关系型数据库还要慢了。
+
+读写并行，锁和并行，读写锁，隔离，死锁检测：碰撞检测。
+数据一致性，数据完整性。单机事务，分布式事务。一致性hash。数据库连接利用率低。
+
+orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
+
+hbase、hive
+
+
+------ Java 2015-2016
+
+《java并发编程实战源码》 《Effective Java Examples》 尚学堂 爱慕课
+- [Java 征途：行者的地图](http://www.cnblogs.com/mindwind/p/5251430.html)
+- [Java工程师成神之路~](http://www.hollischuang.com/archives/489)
+视频地址：http://www.imooc.com/learn/196 [Spring基础知识汇总](http://www.imooc.com/article/1309)
+
+Java中JDK,JRE和JVM之间的关系：![](https://t.alipayobjects.com/images/rmsweb/T1bNxiXeRcXXXXXXXX.png)
+java跨平台，是因为jvm做了跨平台实现。Java代码都要写到class中。
+
+类型安全 强制类型转换 泛型 泛型类 泛型方法如`public static <T> T getMiddle(T... a){ }`
+Java虚拟机中没有泛型，只有普通的类和方法。
+文件锁 它可以控制对文件或文件中某个范围的字节的访问 文件加锁机制依赖于操作系统。
+Javac 是一种编译器 将便于人理解的语言规范转化成机器容易理解的语言规范。
+Javac 主要有四大模块：词法分析器、语法分析器、语义分析器、代码生成器。
+Java 是跨平台的，一次编译到处运行。
+ClassLoader 就是类加载器，负责将class加载到JVM中；还有一个任务就是将class字节码重新解析成JVM统一要求的对象格式。
+检查已经加载的class文件是否被修改，如果修改了，可以重新加载这个类，从而实现类的热部署。
+Java应不应该动态加载类?
+`类加载器与安全管理器类`、`对类文件进行加密`、`字节码校验与校验器`、`安全策略文件`、`JAAS（Java认证和授权服务）`
+注解是哪些插入到源代码中使用其他工具可以对其进行处理的标签。注解不会改变程序的编译方式。`测试、日志、事务语义等代码的自动生成`。Java EE使用注解极大地简化了编程模型。
+Java servlet、asp、CGI等统一称为「服务器端程序脚本」，可以让web服务器实现对程序的调用，用来对用户的输入进行处理。
+有许多工具都需要调用Java编译器，例如`开发环境`，`自动化构建和测试工具`、`处理Java代码段的模板工具（如JSP）`等。JSP引擎将HTML里混杂的Java代码编译到Servlet中。
+反射（reflective）
+
+Web服务站点的后端服务器不是将Java的应用服务器直接暴露给服务访问者，而是在应用服务器（如Jboss）的前面再加一个Web服务器（如Apache或Nginx），可以做日志分析、负载均衡、权限控制、防止恶意请求以及静态资源预加载等。
+
+Servlet 其实就是一个 Java 类，所有的servlet类都必须继承 HttpServlet 类。
+生命周期：服务器会在启动或第一次请求servlet时初始化一个servlet对象，然后使用该对象处理客户端的请求，当服务器关闭时销毁该对象。Servlet容器有：Tomcat、Jetty等。
+现在的Web应用很少直接将交互全部页面都用Servlet来实现，而是采用更加高效的MVC框架来实现。这些MVC框架的基本原理是将所有的请求都映射到一个Servlet，然后去实现service方法，这个方法也就是MVC框架的入口。
+
+JavaBean是为Java语言设计的软件组件模型，具有可重复使用和跨平台的特点（类似VB里的控件）。
+JavaBean 是使用 java.beans 包开发的，它是 Java 2 标准版的一部分。JavaBean 是一台机器上同一个地址空间中运行的组件。JavaBean 是进程内组件。
+Enterprise Bean 是使用 javax.ejb 包开发的，它是标准 JDK 的扩展，是 Java 2 Enterprise Edition 的一部分。Enterprise Bean 是在多台机器上跨几个地址空间运行的组件。因此 Enterprise Bean 是进程间组件。JavaBean 通常用作 GUI 窗口小部件，而 Enterprise Bean 则用作分布式商业对象.
+如果你的bean中的方法使用了标准的命名模式，那么开发工具就可以使用反射机制来确定bean的特征，例如属性以及事件。
+
+POJO(Plain Ordinary/Old Java Object) 普通Java类，具有一部分 getter/setter 方法 简单的Java对象，它可以包含业务逻辑或持久化逻辑，但不继承或不实现任何其它Java框架的类或接口。
+
+Spring 是一个轻量级的 IOC 和 AOP 容器框架，通过其核心的依赖注入机制，以及AOP的声明式事务管理，与持久层框架整合，以及与其他的MVC框架整合，为企业应用提供一个轻量级的解决方案。
+灵活的Web层支持：Spring本身提供一套非常强大的MVC框架，而且可以非常容易的与第三方MVC框架集成，比如 Struts 等。
+Hibernate(orm框架) 让JavaBean在数据库生成表及关联，通过对JavaBean的操作来对数据库进行操作；
+Struts框架来连接数据层和视图层，接收、处理、发送数据并控制流程；Struts2 整合 Hibernate.
+JSP模板把页面展现给用户以及提供与用户的交互。
+- JSP 是编译执行，而 Velocity 是解释执行. 编译执行的效率明显好于解释执行.
+- JSP的执行必须要有 Servlet 的运行环境，而渲染 Velocity 不需要，所以 Velocity 不只应用在 Servlet 环境中。
+
+--- 内存管理 JVM
+
+每一个Java应用都唯一对应一个JVM实例，每一个实例唯一对应一个堆。
+Java虚拟机 JIT(Just-In-Time) 把程序全部或部分翻译成本地机器码.
+计算机的体系结构: CPU指令集(RISC/CISC)；计算单元；寻址方式；寄存器定义；存储单元.
+
+JVM的结构基本由4部分组成：类加载器；执行引擎；内存区；本地方法调用。
+JVM的实现厂家实现执行引擎 用来解析JVM字节码指令，得到执行结果. 如SUN的hotspot是基于栈的执行引擎，而Google的Dalvik是基于寄存器的执行引擎.
+每一个Java线程就是一个执行引擎实例，一个JVM实例中就会同时有多个执行引擎在工作，这些执行引擎有的在执行用户的程序，有的在执行JVM内部的程序（如Java垃圾收集器）.
+Java中垃圾回收器并不是采用“引用计数”方式来进行。引用记数是一种简单但速度很慢的垃圾回收技术。
+Java中垃圾回收器是"自适应的、分代的、停止-复制、标记-清扫"式垃圾回收器。
+
+在 Java中，所有的对象都储存在堆上。因此，new关键字的完整含义是，在堆上创建对象。
+基本类型(primitive type)的对象，比如int, double，保存在栈上。声明基本类型时，不需要new。基本类型的变量名表示的是数据本身，不是引用。
+在JVM的一个进程空间中，一个栈(stack)代表了方法调用的次序。对于多线程来说，进程空间中需要有多个栈，以记录不同线程的调用次序。多个栈互不影响，但所有的线程将共享堆(heap)中的对象 对它的访问需要注意同步问题，方法和对应的属性都需要保证一致性。
+通常操作系统管理内存的申请空间是按照进程来管理的，每个进程拥有一段独立的地址空间，每个进程之间不会相互重合，操作系统也会保证每个进程只能访问自己的内存空间。
+几个名词：`物理内存和虚拟内存`、`RAM`、`地址总线与总线宽度`、`内核空间与用户空间`、`静态/动态内存分配和回收`
+Java堆是用于存储Java对象的内存区域，堆的大小在JVM启动时就一次向操作系统申请完成。
+JVM运行实际程序的实体是线程，每个线程创建时JVM都会为它创建一个堆栈，堆栈的大小根据不同的JVM实现而不同。一个线程的方法的调用和返回对应于这个Java栈的压栈和出栈。
+栈中主要存放一些基本类型的变量数据（int、short、long、byte、float、double、boolean、char）和对象句柄（引用），方法执行结束此处变量也就会消失。存取速度比堆要快，仅次于寄存器，栈数据可以共享。缺点是，存在栈中的数据大小与生存期必须是确定的，这样导致缺乏了其灵活性。
+从堆和栈的功能和作用来通俗地比较，堆主要用来存放对象，栈主要用来执行程序.
+
+线程和进程的区别: https://gw.alipayobjects.com/zos/rmsportal/sPHJvmeyIHeUBcQqOmVO.png
+可以同时运行一个以上线程的程序称为多线程程序。多进程与多线程本质区别在于每个进程拥有自己的一整套变量，而线程则共享数据。但共享变量使线程之间的通信比进程之间的通信更有效、更容易。
+构建一个新的线程是有一定代价的，因为涉及与操作系统的交互。如果程序中创建了大量的生命周期很短的线程，应该使用「线程池」。一个线程池中包含许多准备运行的空闲线程。
+名词：`中断线程`，`线程状态`，`线程属性`，`同步：竞争条件、锁对象、条件对象、死锁`，`阻塞队列`，`线程安全的集合`，`线程池`，`同步器`
+
+--- oop
+
+Java是完全的面向对象的语言，它使用`类和对象`、遵从`封装、继承、多态`的设计原则。
+Java不支持多重继承，即派生类只能有一个基类。Java中每个类都从类Object派生出。
+子类方法不能低于父类方法的可见性，例如：父类方法是public、子类也要是public。
+多态: 例如Person类的数组，可以包含其派生类Student的对象。当调用`person[0].xx()`方法时，如果`person[0]`中存放的是Student类的对象，则`xx`方法是Student类中的实例方法，而不是Person类的实例方法。
+用`static`修饰的方法叫做“类方法”，修饰的变量叫做“类变量”。类的对象上不存在static变量或方法。
+多态的存在要有3个必要条件: 要有继承、要有方法重写、父类引用指向子类对象。
+接口中只有：常量、抽象方法。
+类既不可以是 private 的 也不可以是 protected 的. 对于类的访问权限，仅有两个选择：包访问权限或public 但可以把所有的构造器都指定为private。
+
+
+------ cpp 2017
+
+- 指针和引用的区别
+  - 引用总是指向某个对象，定义引用时必须初始化(之后不可改变)；引用只是一个“别名”，给引用赋值修改的是引用所关联对象的值. 函数指针.
+  - 指针可以指向任何对象，可以修改。 不能对未被初始化为适当地址的指针解除引用。
+- new 出来的对象，需要手动 delete，然后再设置为 NULL
+  - 只能用 delete 来释放使用 new 分配的内存；不能用 delete 来释放普通变量声明所获得的内存。
+  - 手工管理内存，非常容易出错，导致“内存泄露”问题，排查非常困难。使用智能指针，避免这种问题。
+  - 当使用 delete 时，类的析构函数会被自动调用。删除对象可以释放对象本身占用的内存，但并不能自动释放属于对象成员的指针指向的内存，因此要在析构函数使用 delete 删除对象成员的内存。
+- 内存模型
+  - 自动变量：函数内的变量(包含函数参数)；静态变量：函数外的变量、使用 static 定义的变量；动态变量：new 出来的变量。
+  - 自动变量保存在栈（LIFO 后进先出）中、变量数量可以灵活增减；静态变量数目在程序运行期间不会变，因此不需要栈来管理，编译器将分配固定的内存块来存储所有的静态变量，这些变量在程序执行期间一直存在。
+  - 位于函数内的变量是「局部变量(自动变量)」，位于函数外的变量是「全局变量」，全局变量对所有的程序文件都是可见的。
+  - 使用 static 修饰局部变量、可以在函数调用之间保持局部变量的值、不需要在每次进入和离开函数时进行创建和销毁。
+  - 使用 static 修饰全局变量时，会使变量的作用域限制在声明它的文件内。
+  - extern 是用来在另一个文件中声明一个全局变量或函数，用于当有两个或多个文件共享相同的全局变量或函数时。
+  - 在函数或代码块中声明 const 时，其作用域为代码块，所以不用担心与外部的 const 常量重名引起冲突。
+  - C/C++ 都不允许在一个函数中定义另外一个函数，因此所有函数都是静态存储，在整个程序执行期间一直存在。
+  - 可以使用 static 定义静态函数，使函数只在文件内可见，这样可以在其他文件中定义同名的函数。
+  - 使用 C++ 运算符 new（或 C 函数 malloc()）分配的内存称为动态内存，不受作用域限制，可以在一个函数中分配内存，在另一个函数中释放。动态内存不是 LIFO。
+  - 通常编译器使用三块独立的内存：一块用于静态变量（可能再细分），一块用于自动变量，另一块用于动态存储。
+- 异常
+  - 对于不同的异常类型，基类引用能够捕获各派生类异常对象，而派生类异常只能捕获从这个类派生而来的类对象。
+  - 使用异常会降低程序的运行速度。
+- 头文件：
+  - 可包含：函数原型，使用 #define 或 const 定义的常量，结构/类/模板声明，内联函数。
+  - 不能包含：函数定义/函数体、变量声明。不要使用 using 指令。
+- 命名空间
+  - 命名空间可以是全局的，也可以位于另一个命名空间中，但不能位于代码块中。
+  - using 声明：`using std::cout`，using 编译指令：`using namespace std`，首选在局部作用域内使用 using 声明。
+  - 使用在已命名的名称空间中声明的变量，而不是使用外部全局变量或静态全局变量。
+
+何时使用引用参数：
+![何时使用引用参数](https://zos.alipayobjects.com/rmsportal/CpddxowZkhtkSoOVasEN.jpg)
+
+如何选择数据类型？通常来说 int 被设置为对目标计算机来说最“自然”(处理起来效率最高)的长度，如果没有特殊理由，则应使用 int。
+如果可能超过 int 类型的最大值，则使用 long 或 long long，便于程序移植到低位数的系统上而不出现问题。
+如果节省内存很重要，则应使用 short 而不是 int，即使它们的长度一样。例如 int 数组从 16 位系统移到 32 位系统，内存占用会加倍。
+
+预处理指令 #include 来引用头文件，引用头文件相当于复制头文件的内容。
+建议把所有的常量、宏、系统全局变量和函数原型写在头文件中。
+
+C++ 可以使用 C 的头文件，C++ 头文件去掉了扩展名 h，有些 C 头文件被转换为 C++ 头文件时被重新命名，去掉了扩展名 h，并在文件名称前面加上前缀 c (表明来自 c 语言)，例如 C++ 版本的 math.h 为 cmath。
+
+泛型（generic）是一种允许一个值取不同数据类型（所谓多态）的技术，
+强调使用这种技术的编程风格被称为泛型编程（generic programming通用编程/类属编程）。
+STL（Standard Template Library 标准模板库）是泛型编程思想的实际体现和具体实现，STL 是最新的 C++ 标准函数库中的一个子集.
+
+
+
+## Linux python docker k8s
+
+
+Python 反向代理. 关键点 Content-Length
+https://gemini.google.com/app/b799e0b13733d5d5
+2025-09-15
+
+https://github.com/apple/container
+2025-09-14
+
+Red Hat / QEMU 和 Ubuntu 是什么关系?
+ QEMU 开源虚拟化引擎.
+ Ubuntu 系统默认安装并支持 KVM/QEMU 虚拟化。
+ Ubuntu 是 QEMU 的“下游使用者”，它利用 QEMU 的能力为用户提供虚拟化功能。
+2025-09-05
 
 ```sh
-# https://lerna.js.org/docs/api-reference/commands
-
-# --loglevel silly --yes --no-commit-hooks
-# --include-merged-tags --no-push --no-git-tag-version
-lerna ls --graph # 等效 pnpm ls -r --json
-lerna ls --long # 等效 pnpm ls -r --depth -1 --json 换成 npm 不行
-lerna ls --since master
-lerna ls --since="master" --loglevel=verbose
-lerna ls --since --include-merged-tags
-lerna list --scope=my --include-dependencies --ndjson
-lerna list --since=origin/master -include-dependents --loglevel=verbose
-lerna list --scope=package-A --include-dependencies --since=main
-
-# changed 比较当前工作树与最近的标签之间的差异 不支持 since scope 参数
-lerna changed
-lerna changed --include-merged-tags
-lerna changed --include-merged-tags --loglevel debug
-
-# 比较自上次发布以来的所有包或单个包的差异。依赖 Git 标签来确定上次发布的版本。
-lerna diff
-lerna diff package-name
-
-# lerna version / publish 不支持 --scope 参数
-lerna version patch --exact
-lerna version patch --include-merged-tags --no-push --no-git-tag-version --no-commit-hooks --exact
-lerna version patch --exact --message '🎨 chore(release): Publish' --conventional-commits
-lerna version prerelease --preid beta
-lerna publish prerelease --preid rc --dist-tag rc
-lerna publish from-git --preid rc --dist-tag rc
-lerna publish from-package
-
-# 构建时需包含依赖  使用 concurrency 不要使用 parallel 参数
-lerna run build --include-dependencies --concurrency 4
-
-lerna watch -- echo \$LERNA_PACKAGE_NAME \$LERNA_FILE_CHANGES
-lerna watch -- lerna run build --scope=\$LERNA_PACKAGE_NAME
-
-lerna exec --since --include-merged-tags -- ls -la
-lerna exec --include-merged-tags --concurrency 1 -- "pwd && ls -la"
-lerna exec --scope @ant-design/pro-form -- pnpm version 0.1.5-alpha.0 --no-git-tag-version
-# 可以使用 pnpm up 命令，但升级后的 包的版本号为类似这样 "xxx": "workspace:0.1.3" 需要 lerna/npm publish 命令再次处理.
-lernaCli, 'exec', '--scope', name, '--', `pnpm version ${newVersion}` --workspaces=false --no-git-tag-version --allow-same-version=true`
+cat ls rm find grep head tail
+echo env  ping ps  kill  lsof
+df  # 查看文件系统使用情况
+du  # 统计目录、文件大小
+jcmd  # 用于向JVM进程发送诊断命令，集成了jstack、jmap、jinfo等工具的功能
+jmap  # 用于分析Java进程的内存使用情况
+jps  # 用于列出当前系统中所有的Java进程及其主类名或JAR包名
+jstack  # 用于生成Java进程的线程转储
+nc  # 用于探测容器网络端口的连通性
+netstat  # 用于查看容器中网络连接
+ss  # 用于查看网络连接状态
 ```
-
---- 总结
-
-在 lerna@8.0.2 里的 lerna.json 的 ignoreChanges 不支持 `"!commons/galaxy-upload-cdn/lib/**"` 这样的 否定匹配, 但 git 的 .gitignore 文件支持.
-
-lerna 项目存在 相同的 pkgName 不同的大版本 1x 2x 3x 怎么管理
-- 加入 project.json 文件, 内容为 { "name": "pkgName@1.x" } 或 { "name": "pkgName@2.x" } 利用了 nx 的特性.
-- nx 报错: lerna ERR! lerna To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
-
-lerna changed 和 list 行为不一致:
-- https://github.com/lerna/lerna/issues/1909#issuecomment-459548676
-- https://github.com/lerna/lerna/issues/1377
-
-lerna tag(仅支持 annotated tags) 与 commit
-- lerna changed 会根据 annotated tag 判断是否升级版本.
-  - 如果最近的 annotated tag 之后 "有代码变更,并且没有被之前的某个 annotated tag 记录", 这些变更的代码版本 对应的组件 就被认为需要升级版本. 解法: 比如最新的 commit 对应的 tag V1 不是 annotated 的, 运行 `git tag -a -m 'V1' V1 -f` 做修复.
-  - 参考: https://lerna.js.org/docs/troubleshooting#publish-command  https://github.com/lerna/lerna/issues/1357#issuecomment-438162152  https://juejin.cn/post/7114538970339344420
-  - 原理是 `git describe --first-parent --always --dirty` (搜源码 describeRefSync) 和 git diff --name-only lastTagName pkg_path (搜源码 diffSinceIn)
-- 如果 lerna tag 对应的 commit_id 被 squash/rebase 而不在 git 历史里. lerna version 就不会基于这个 tag 的版本号 来升级版本. 解法: 修改 tag 对应到新的 commit_id, 强推覆盖远程的已有 tag.
-- 如果你的项目使用了规范化的提交信息（例如，使用 commitizen 和 cz-lerna-changelog），Lerna 可以更准确地检测变更，因为它会根据提交信息中的标签来识别影响的包. https://github.com/lerna/lerna/issues/2437  https://github.com/lerna/lerna/issues/1569  [lerna 发包原理浅析](https://zhuanlan.zhihu.com/p/392438222)
-
-lerna publish 参数 from-git from-package
-- 如果 lerna publish 失败，使用 lerna publish from-git 重新发布，不用改版本号。
-- 设置 from-git 或 from-package 后不会运行 lerna version 也不检测文件变更.
-- 设置 --ignore-changes 只对 lerna version 或默认的 lerna publish（包含版本生成阶段）有效.
-
-uncommitted changes 阻止发布
-- https://github.com/lerna/lerna/issues/2329
-- https://github.com/lerna/lerna/issues/1591
-- lerna ERR! EUNCOMMIT  M pnpm-lock.yaml 确保开发阶段使用的 pnpm 版本一致.
-
-lerna.json 配置项 https://github.com/lerna/lerna/blob/main/libs/core/src/lib/project/index.ts#L28
-使用 lerna@8.0.2 在 /usr/local/lib/node_modules/lerna/dist/index.js 文件的 10480 行, 调试:
-`console.log('log concurrency: ', this.concurrency, Object.keys(this));` this 对象的 keys 为:
-[
-  'options', 'concurrency', 'toposort', 'execOpts', 'argv', 'name',
-  'composed','runner', 'script', 'projectsWithScript', '_project','logger',
-  'projectGraph',  'projectFileMap', 'args', 'npmClient', 'bail', 'prefix',
-  'count', 'packagePlural', 'joinedCommand'
-]
-
---- nx
-
-https://nx.dev/concepts/decisions/why-monorepos
-依赖管理
-https://nx.dev/extending-nx/recipes/project-graph-plugins
-
-[Turborepo](https://github.com/vercel/turborepo) (类似nx) 解决了 Monorepo 的问题。我们的远程缓存存储您所有任务的结果，这意味着您的 CI 永远不需要做同样的工作两次。 任务调度可能是困难的，想象 yarn build 需要运行前 yarn test ，在所有的工作空间。Turborepo 可以调度您的任务，以最大的速度，在所有可用的核心。
+2025-09-04 容器远程调用, 限制的命令
 
 
------- monorepo(one code base) 工具 2023 ~ 2025
+---
 
-https://jamiemason.github.io/syncpack/
-* [monorepo.tools](https://monorepo.tools/)
-* [monorepo-vs-polyrepo](https://github.com/joelparkerhenderson/monorepo-vs-polyrepo)
-* [Awesome-monorepo](https://github.com/korfuri/awesome-monorepo)
-* [advantages of monorepo](https://medium.com/@suman.maity112/is-it-the-era-of-mono-repo-671e6dee387)
-* [Misconceptions about Monorepos](https://blog.nrwl.io/misconceptions-about-monorepos-monorepo-monolith-df1250d4b03c)
-https://github.com/changesets/changesets
-Monorepos 工具 https://www.51cto.com/article/759432.html
-https://medium.com/ekino-france/monorepo-insights-nx-turborepo-and-pnpm-4-4-96a3fb363cf4
+- Unix 遵循的原则是 KISS (Keep it simple, stupid) do one thing and do it well。
+- Linux 严格区分大小写。所有内容以文件形式保存，包括硬件。如：键盘 /dev/stdin 显示器 /dev/stdout
+- Linux 不靠扩展名区分文件类型，靠权限区分。（ .gz .tgz .sh 等文件扩展名只是为了方便管理员查看 ）
+  - bash 文件 想在 mac 上双击可执行(调用系统terminal)，需要去掉文件后缀名。
+- shell 是一个命令行解释器。shell 是壳，kernel 是内核。shell 把用户敲进去的命令、翻译为 linux 内核能识别的语言。
+  - sh: Bourne Shell 的缩写，可以说是目前所有 Shell 的祖先。 bash : Bourne Again Shell 的缩写，是 sh 的一个进阶版本。
+- vi编辑器使用 color-scheme `:colo desert` 或者 配置 `~/.vimrc` 为 `colo desert` + `syntax on`
+  - [vim 键盘图](https://zos.alipayobjects.com/rmsportal/MOPJrAnojdFvAToZkESi.gif)
+- 在 Windows 上 哪些流行的 terminal 能和 macOS Linux 的 terminal 兼容?
+  - Windows Terminal / WSL（Windows Subsystem for Linux）/ Git Bash
 
-采用的知名项目:
-https://github.com/facebook/react/
-https://github.com/vuejs/core/
-https://github.com/jestjs/jest
-https://github.com/angular/angular
-https://github.com/nrwl/nx-examples
+[Zsh 和 Bash 的不同](https://xshell.net/shell/bash_zsh.html)
 
 
+--- Kubernetes
+
+CrashLoopBackOff
 
 
-
-
-## p/npm
-
-https://npmtrends.com/lint-staged-vs-pre-commit-vs-pretty-quick
-https://www.npmtrends.com/jsplumb-vs-mxgraph
-
-npm源 http://registry.npmjs.org/esbuild/0.21.4
-ali源 https://registry.npmmirror.com/esbuild/0.21.4
-腾讯源 https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4
+------ Ubuntu v22
 
 ```sh
-# https://docs.npmjs.com/cli/v10/commands/npm
-rm -rf node_modules **/node_modules
+cat /etc/os-release  # 查看发行版
 
-# install 时除了 可选依赖 (optionalDependencies) 其他遇到 404 会报错退出.
-npm install --verbose > install.log
-# 安装 npm alias 别名依赖
-npm install --registry=https://registry.npmmirror.com axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
-npm install --prefix ./dir
-npm run build --prefix ./dir
-# 从 git 安装, 验证 ssh -T git@github.com   ssh -v git@github.com
-npm install git+ssh://git@github.com:warmhug/demo.git#develop
-npm install git+https://github.com/warmhug/demo.git
-npm install https://warmhug:glpat-xx@github.com/warmhug/my-private-lib.git  # Personal Access Token
+# 通过 apt 或 dpkg 列出所有软件包
+dpkg --get-selections | grep -v deinstall
+dpkg -l | grep 软件包名称
+apt list --installed
 
-# 设置 dist-tag
-npm dist-tag add @huajs/demo latest
-npm root -g
-npm ls -g node-sass
-npm ls --long node-sass
-npm ls --all --json --loglevel silent
-npm view monoaid@0.11.0 main
-npm view monoaid@0.11.0 exports --json
-node -p process.env
-node -e "console.log(module.paths)"
+# 安装 Python
+sudo apt install python3  # sudo apt install python3.11
+sudo apt install python3-pip
+pip3 --version
+# 可选
+sudo apt install python3-venv  # 安装 venv（用于创建虚拟环境）
+sudo apt install python3-dev  # 安装开发工具包
 
-# node env 优先级: 命令行 env > `/project/.npmrc` > `~/.npmrc` > `/etc/npmrc`
-npm config list -l  # 按 env 优先级显示 所有值
-npm config list --json  # 只显示 最终实际生效 的值
-npm config get registry  # 获取 最终实际生效 的某个值
-npm config set -g registry https://registry.npmmirror.com
-npm config get cache  # 一般为 ~/.npm 查看 _npx 目录
-npm cache clean --force
+lscpu
+lscpu | grep -i avx2
+free -h
 
-# link
-npm link  # cd my-lib , 会创建 globally-installed my-lib
-npm link my-lib  # cd my-app
-# 使用 file: 协议替代 link , 不会创建 globally-installed my-lib
-npm install ../path/to/my-lib
-ln -s /abs/path/to/my-cli ./node_modules/my-cli  # 手动软链接 node_modules
+nvidia-smi
+nvidia-smi --query-gpu=name,memory.total,driver_version,cuda_version --format=csv,noheader,nounits
 
-# 发包 登录账号
-# npm publish 时使用的 registry 与 npmrc 里的 registry 和 @scope/registry 哪个起作用?
-# 命令行 --registry > @scope:registry > 全局/项目级 registry > npm 官方 registry
-npm publish [dir/subdir]
-npm whoami
-npm profile get
-npm access list packages --registry https://registry.npmjs.org
-npm search @ant-design --searchlimit=100 --json  # 搜索组织下的包
-
-# npx 用法: 会自动在项目的 node_modules/.bin 目录中查找可执行文件
-npx ls  # 等同于 ls
-npx mocha --version
-npx http-server --ignore-existing # 忽略本地的同名模块
-# https://code.visualstudio.com/api/get-started/your-first-extension
-npx --package yo --package generator-code -- yo code
-
-
-
-# npm monorepo 在根目录运行  npm v7(2020-10发布) 支持 Workspaces
-npm version 0.1.5 --workspaces --no-git-tag-version --allow-same-version=true
-npm version patch --workspace=packages/button --workspace=packages/card --no-git-tag-version --allow-same-version=true -f
-# 如果只改某个子包版本号，进入到子包 设置 --workspaces=false
-npm version patch --workspaces=false --no-git-tag-version
-npm version prerelease --preid rc --no-git-tag-version
-
-# ====== pnpm
-
-# 项目里存在 幽灵依赖 时 pnpm 会自动抛错.
-pnpm dlx depcheck  #  Missing dependencies 即为幽灵依赖
-
-ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
-
-# 使用 -r --filter 参数, 对 monorepo 里的子包进行操作.
-# Monorepo 的核心优势之一是根目录下的单一锁文件（pnpm-lock.yaml, yarn.lock, package-lock.json），它保证了所有子项目依赖版本的一致性。在子目录中单独安装会创建独立的锁文件，破坏了这一优势。
-pnpm install --filter <package_name>  # 只安装某个子包的依赖.  不推荐的方式：cd 进入子目录安装 无法链接内部依赖, 破坏单一锁文件, 依赖版本冲突
-pnpm --filter "@xx/quick-*..." aa   # 后边的 aa 为 filter 筛选出的包的 scripts 里的 某个key 比如 test build 等
-pnpm ls -r --only-projects --parseable --filter "@xx/yy"
-
-pnpm ls  # 列出 package.json 中声明的直接依赖
-pnpm ls react  # 只列出 react 依赖
-pnpm ls --json --long
-pnpm ls --depth 2 ts-jest
-pnpm ls --depth Infinity fast-glob  # 等效于 pnpm why -r fast-glob
-
-pnpm build --dir ./dir
-pnpm install --dir ./dir  # 自动进去指定目录安装. 同 npm install --prefix ./dir
-pnpm install --frozen-lockfile  # 流水线里安装
-
-pnpm add express@2 react@">=0.1.0 <0.2.0"
-pnpm add ./package.tar.gz
-pnpm add ./some-directory  # same as running pnpm link
-
-rm -rf "$(pnpm store path)"
-pnpm store prune
-pnpm import package‑lock.json  # 导入 npm lock 或 npm-shrinkwrap.json 文件
-pnpx create-react-app@next ./my-app  # npm 的 npx 等效于 pnpm 的 pnpx = pnpm dlx
-
-pnpm outdated -r # 只检测 lock文件(不是package.json) 里的依赖版本号 是否过时
-pnpm outdated "@ant-design/pro-*"
-# 升级到 npm latest 指定的版本 如果 workspace 内部包 版本号大于npm最新版 则使用内部包版本号
-pnpm up "@ant-design/pro-*" -r --latest
-pnpm up "@ant-design/pro-*" -r  # 加 --workspace 作用一样
+# PCI 设备就是插在电脑主板上的各种“功能卡”或内置组件，比如显卡(GPU)、网卡、声卡、硬盘控制器.电脑的器官.
+lspci | grep -i nvidia
 
 ```
 
+命令行 输入多行代码 并创建 my.py 文件
 
-npm 包 xx 的依赖版本是 @types/react: * 时, 在 monorepo 里存在 @types/react 16 17 18 多个大版本, 这个 xx 实际安装的 @types/react 版本是什么?
-...
-公共源的某些npm包, 在公司内部源没有. 通过 bundledDependencies 先从公共源下载, 在公司内部源发布. 能解决问题吗?
-https://chatgpt.com/c/68826ea0-4564-8008-b420-5b51b36eaaa9
-2025-07-25
+```sh
+nano my.py  # nano: command not found
 
-const rl = readline.createInterface({
-  input: res,
-  crlfDelay: Infinity, // Recognizes '\r\n' and '\n' as line breaks
-});
-如上 res 是个 流数据, 需要一行行读取. 其实际内容如下
-data: { "response": { "modelVersion": "gemini-2.5-pro1" } }\r\n\r\n
-data: { "response": { "modelVersion": "gemini-2.5-pro2" } }\r\n\r\n
-data: { "response": { "modelVersion": "gemini-2.5-pro3" } }\r\n\r\n
-res 是 PassThrough 对象, 需要先读取到这个对象的实际数据, 做一些修改, 再构造出一个新的 PassThrough 对象.
-2025-07-23
-
-在 node 模块里, 一个函数 需要返回一个 await axios.request() 值. 但又希望不请求真实的服务器地址, 而是直接返回给定的mock结果, 应该怎么做?
-2025-07-22
-
-运行 pnpm store prune 后, 安装遇到如下问题, 是因为本地缓存吗?
-This error may happen when a package is republished to the registry with the same version.
-In this case, the metadata in the local pnpm cache will contain the old integrity checksum.
-没有 republish 但同一个包同一个版本, 发布到了 不同的 registry 上. 是这个问题吗?
-2025-07-20
-
-对于 responseType: 'stream' 的 http 输出, 使用 node 的 readline.createInterface 可以按行读取内容, 怎么能一次全部读取 而不用按行读?
-2025-07-16
-
-pnpm workspaces 会统一添加子包的依赖到根目录的 lock 文件里, 怎么排除某几子包?
-...
-因为公司内部源不全, 安装外部包时 怎么把其依赖的 node_modules 也作为源码, 但不叫 node_modules 这个名字.
-...
-开发阶段的 npm 包设置了 bin 怎么能给其他目录的调用者使用?
-2025-07-13
-
-pnpm add pkg 和 pnpm install pkg 的区别?
-如果一个二级依赖的 patch 版本号升级, 在项目中对一级依赖进行 pnpm uninstall 再 pnpm add , 这时候二级依赖版本号 仍然没升级, 是怎么了?
-npm yarn 分别是怎么处理二级依赖的版本的?
-因为项目里 A 里有多个依赖 比如 B B1 B2 都需要升级, 怎么能 pnpm up A (但此时 A 的版本号不变), 能让其依赖 B B1 B2 的 patch 版本都自动升级. 而不是 pnpm up B --depth=2 ?
-2025-06-29
-
-package.json 的 browser 字段值, 可以怎么写, 分别起到什么作用?
-jest 是使用什么 编译和打包 工具? 是调用 package.json 里的 main 还是 browser 指向的模块?
-设置了 testEnvironment: 'jsdom' 之后, 会使用 browser 指向的模块吗?
-https://chatgpt.com/c/6844032d-7350-8008-a325-40da589b8176
-2025-06-07
-
-pnpm v7 的 list 命令 怎么能 exclude peer dependencies
-https://chatgpt.com/c/68382b61-8408-8008-b85a-2064c39c1dd1
-2025-05-29
-
-pnpm workspaces 某个子包 aa 的 dependencies 含有这样依赖 "demo": "workspace:demo2@*" 其中 demo2 是另一个子包的包名.
-当在 workspaces 根目录 运行 pnpm --filter "aa..." build 时候, 预期是 demo2 的子包需要先运行 build 命令, 但实际未运行.
-这是因为 pnpm 默认把 npm alias 的依赖, 当做 外部依赖 解析, 需要额外的解决方案, 应该怎么做呢?
-...
-需要做到 自动化工具构建, 能通过给 pnpm 写插件等方式, 补足这个功能吗? 应该怎么写?
-https://gemini.google.com/app/74b4f952721158d0
-2025-05-27
-
-修改了 registry 但需要保持原 registry 生成的 pnpm-lock.yaml 文件的版本号一样, 并自动修改 resolution 的 integrity 和 tarball 字段.
-https://github.com/pnpm/pnpm/issues/6667
-https://stackoverflow.com/questions/62439074/override-registry-for-installed-packages-in-package-lock-json
-可行方法: 先用 pnpm install --fix-lockfile 更新 lockfile, 再手动替换 tarball 字段的 registry URL 为新的.
-2025-05-26
-
-详细解释一下 re2 这个包的作用, 以及其与 node-gyp 编译了什么?
-node-re2 是一个 Node.js 模块，它封装了 Google 的 RE2 正则表达式引擎，避免潜在的 ReDoS（正则表达式拒绝服务）攻击。保证线性时间复杂度，从算法层面杜绝 ReDoS。
-node 的 ajv 包 devDependencies 依赖了 re2 , re2 依赖了 install-artifact-from-github 和 node-gyp . 在 安装包过程中, re2 会尝试下载 https://github.com/uhop/node-re2/releases/download/1.20.12/darwin-x64-108.br 这个预编译文件, 若无预编译二进制 调用 node-gyp 编译 RE2 源码，生成适配当前环境的 .node 文件。
-https://gemini.google.com/app/8db2f2b251d9f63e
-...
-在 package.json 里的 pnpm overrides 字段, 怎么指定使用 workspaces 里某个包的版本, 并自动跟随版本变化.
-2025-05-21
-
-同一个 npm 包, 在不同的 registry 的 integrity 为什么不一样, 怎么修复?
-如果是从其他 registry 同步到另一个 registry 的包, 他们的 integrity 一样吗?
-切换 Registry 之后, 使用 node 脚本修改 lock 文件, 需要让 lock 文件里的依赖包名和版本号都不变. 应该怎么处理?
-https://gemini.google.com/app/8bd107edfc557f66
-2025-05-13
-
-现有不同的 git 仓库, 其内部代码大致一样, 但 npmrc 不同. 虽然已经用 process.chdir 切换到了相应的目录. 但随后在运行 child_process spawn 时候, process env 里的 npm 相关配置 设置使用了 chdir 之前目录的配置. 这跟 spawn 的 cwd 设置有关系吗? 应该怎么解决?
-怎么知道在设置 cwd 后, spawn 函数执行时候的 process env 参数有哪些?
-https://gemini.google.com/app/c3b2f45e5789965b
-2025-05-08
-
-使用 npm child_process exec 调用 npm publish ./dir 怎么获取发布包的成功和失败状态, 以及包的 name 和 version 信息?
-2025-05-06
-
-使用 nodejs 删除 pnpm-lock.yaml 里的 resolution 下的 tarball 字段, 其他内容保持不变.
-2025-04-27
-
-为什么使用 ^2.2.12-alpha.3 在 npm install 时候安装的不是指定的这个版本?
-2025-04-21
-
-pnpm 里没有和 npm 的 omit-lockfile-registry-resolved 一样作用的配置吗?
-pnpm 能生成和使用 npm-shrinkwrap 文件, 代替 lock 文件使用吗?
-2025-04-16
-
-项目 package.json 里的 packageManager 作用, 为什么能让系统安装的 pnpm 版本不生效?
-2025-04-15
-
-npm install 时生成的 lock 文件里每个包的 integrity 字段用于确保包文件的完整性，其值通过特定算法计算文件内容的哈希值生成。包内容相同则 integrity 相同，与不同的 registry 无关 与 yarn pnpm 等包管理器无关. 若内容有差异（如恶意篡改、非官方修改版 即使版本号相同），则 integrity 不同。
-是 npm 利用 integrity 防止包被恶意篡改的核心机制。
-怎么能不生成 package-lock.json 文件里的 resolved 和 pnpm-lock.json 文件里的 tarball 字段?
-https://github.com/npm/npm/issues/16849
-2025-04-15
-
-pnpm install 后的 lock 文件里的 tarball 字段的生成规则是什么?
-生成的结果是 tarball: npm/@types/babel__traverse/-/babel__traverse-7.20.7.tgz 但实际多了 npm/ 前缀, 是什么原因? 这个前缀导致下载这个包时报了 404 错误.
-虽然有 npm/ 前缀, 在本地电脑运行 pnpm install 不会报错, 但在流水线里会报 404 错误. 什么原因?
-2025-04-14
-
-在 pnpm(v7) + lerna 的 monorepo 项目, 为了能让各个子包 使用各自不同的 react 版本,
-在子包 package.json 的 devDependencies 里安装 @types/react 包,
-在子包 tsconfig.json 配置 "paths": { "react": ["./node_modules/@types/react"] } 只解析当前目录安装的 @types/react 内容.
-但 @types/react 本身依赖的 csstype 等包, 是被安装在 **根目录的 node_modules 里**, 如果子包 有源码 调用 React.CSSProperties 类型, 就会报错 TS2339: Property 'position' does not exist on type 'CSSProperties'.
-解法:
-在子包 package.json 的 devDependencies 里, 加入 @types/react 包依赖的 csstype 等包. 使其都能在当前目录的 node_modules 里被找到, 问题解决.
-2025-04-09
-
-场景: 项目的 build工具(依赖ts@3), 但项目本身(依赖ts@4), 在使用 npm(@9) 构建时候 无报错, 但使用 pnpm(@7) 构建时 对源码的 ts 语句解析报错.
-npm 和 pnpm 分别这么处理:
-- npm: 直接使用 根目录 node_modules 的 ts@4 来解析 build工具+项目 的源码, 虽然 build工具 是依赖的 ts@3 但使用 ts@4 来解析 "凑巧"也没有错误.
-- pnpm: 会使用 build工具的ts@3 来解析 项目源码, 导致解析报错, 因为项目源码需要 ts@4 来解析.
-参考: [lerna@8](https://www.npmjs.com/package/lerna?activeTab=code) 的 dependencies 里这么声明 ts 依赖 `"typescript": ">=3 < 6"`, 确保使用方 不受其版本锁定的影响.
-...
-npm(@9) 依赖提升Hoisting, 默认会将所有依赖提升到 根目录 node_modules.
-pnpm(@7) 严格依赖隔离, 默认不会提升依赖, 每个子包的 node_modules 仅包含其显式声明的依赖, 使用 硬链接和符号链接.
-pnpm 不会默认进行大规模的提升。它使用符号链接（symlinks）的方式，在项目的 node_modules 里只精确地链接项目直接依赖的包。而这些包自身的依赖，则位于一个集中的内容寻址存储区（通常是项目根目录下的 .pnpm 文件夹内），并通过符号链接按需链接到对应包的 node_modules 目录下。
-https://gemini.google.com/app/c1b7c1ac21903ab2
-...
-[moduleResolution 总结](https://zhuanlan.zhihu.com/p/621795173)
-2025-04-08
-
-npm 和 pnpm 在 .npmrc 文件里 可通用的配置项 都有哪些?
-怎么让 pnpm 保持和 npm 一样的 模块安装方式, 不要有 node_modules/.pnpm 目录.
-2025-04-08
-
-单独的 npm 包 execa 里的 sync 和 child_process 里的 execSync 的区别?
-https://chat.deepseek.com/a/chat/s/9af55d01-f490-46bc-b8a5-677cd1a2a3bc
-2025-03-17
-
-使用 pnpm 安装了依赖, 但在 package.json 的 scripts 里使用 npm run lint, 这样有问题吗?
-如果是 monorepo 项目, 在子包里运行, 怎么查找 bin 下的二进制文件?
-https://chat.deepseek.com/a/chat/s/133eb6d1-d73f-4457-b92a-8a725cad3d1d
-2025-03-13
-
-使用 pnpm 为了避免在 package.json 里声明, 在 postinstall 或 prepare 阶段 安装一个依赖, 怎么能避免自动修改 lock 文件.
-... 结果
-"scripts": {
-"postinstall": "pnpm install nx@latest --lockfile=false --ignore-workspace --dir ./tmp",
-}
-https://chatgpt.com/c/67cd4e89-f4a4-8008-b5e1-89bfe0c831a8
-https://chat.deepseek.com/a/chat/s/3c5acb32-1b6b-4e8c-9808-25ebc8f419d8
-https://gemini.google.com/app/9f8cca7169306de3
-2025-03-09
-
-pnpm monorepo 怎么查看除了内部 link 包之外的其他包依赖, 在 registry 是否存在?
-如果没有直接的命令, 写一个 node js 脚本来实现.
-...
-内部链接的版本号, 可以以 workspace: 或 file: 开头, 但也可以不是以它们开头.
-因为 pnpm 提供了 prefer-workspace-packages 和 link-workspace-packages 设置, 能够自动匹配引用 monorepo 内部有相同包名的其他 package. 怎么识别并处理这种情况?
-...
-包所在不一定只是 packages 目录内, 而是在 pnpm-workspace.yaml 配置中指定的, 可以通过 pnpm list --json -r 来获取所有内部包, 基于此再做过滤.
-...
-https://chat.deepseek.com/a/chat/s/f2241a08-daf7-4c21-b266-ef53b3d836e6
-2025-03-06
-
-node-semver 怎么获取 Tilde 或 Caret 标记?
-代码依赖里一般都写 Tilde 或 Caret 标记, 怎么用 node-semver 做解析?
-2025-03-05
-
-运行 pnpm -r run build 构建问题.
-在 monorepo 里运行 pnpm run build 时, 因为有对 build 出的目录删除操作, 如果不设置 workspace-concurrency=1 就会报错, 但设置后速度就很慢. 应该怎么解决?
-https://gemini.google.com/app/f37076c19be3c895
-2025-04-11
-在 npmrc 里设置 `workspace-concurrency=1` (注意与`--parallel`区别) 的用途:
-- 避免并发引发的竞态问题: 各个子项目在构建、清理或其他任务中可能存在共享资源（比如同一个目录、文件或网络资源）的写入冲突，强制串行执行可以防止由于并发操作带来的竞态条件和文件锁冲突。
-- 任务之间存在依赖或副作用: 当某些任务必须按照严格的顺序完成，或者前一个任务的产物会影响下一个任务的执行.
-在设置 pnpm 的 workspace-concurrency = 1  时候, 怎么利用 nx 能缓存构建结果加速构建过程?
-2025-03-13
-pnpm -r run build 怎么先构建被依赖的包?
-对于 npm alias 形式的依赖, 没有先构建 dependencies 是怎么了?
-2025-02-28
-使用 pnpm 未把 dependencies 构建完成,而导致 dependent 构建失败的问题
-https://stackoverflow.com/questions/72216431/how-to-control-pnpm-workspace-build-order
-2025-02
-
-npm 的 dependencies 写了 latest, 是怎么解析版本的?
-如果 最新发布的版本 是个 alpha 但不是 latest 标签, 会对它做解析吗?
-这个最新的 alpha 版本的依赖有缺失, npm install 包的 latest 版本时, 实际不应安装这个 alpha 版本, 但 先对这个 alpha 版本 报错 No matching version found, 导致 安装失败. 是为什么?
-2025-02-13 https://chatgpt.com/share/67ad9bcd-913c-8008-aa33-1edb177b7203
-
-npm install --legacy-peer-deps
-npm v7+ 默认 自动安装各个包的 peerDependencies 但使用了 --legacy-peer-deps 则不会安装,
-需要 包使用者(比如业务仓库) 在 dependencies 或 devDependencies 中自行安装.
-使用 --legacy-peer-deps 的主要风险是运行时兼容性问题。由于忽略了 peer 依赖检查，安装的包可能在运行时无法正常工作。例如，某个组件库可能依赖 react@16 的特定 API，而项目使用 react@17，可能导致功能异常。
-2025-02
-
-monorepo same package name multiple version coexist
-除了使用 npm alias 功能外, 还有其他办法吗? 使用中文回复.
-...
-通过以上提到的哪种方法, 能够解决如下报错
-npm ERR! code EDUPLICATEWORKSPACE
-npm ERR! must not have multiple workspaces with the same name
-...
-使用 lerna 和 pnpm 并加入 project.json 文件, 可以让多个子包 package.json 有相同的 name 和不同的 version. 除此之外,还有更多的实现办法吗?
-...
-参考 https://stackoverflow.com/questions/26414587/how-to-install-multiple-versions-of-package-using-npm
-回复最好 https://gemini.google.com/app/4c2ea1e657922b90
-2025-02-24
-
-npm yarn 和 pnpm 的 lock 文件内容结构详细解释?
-现在使用 pnpm 工具, 有两个环境, 比如 A 环境 registry 是 https://ra.com 生成了 lock 文件. 但 B 环境 registry 是 https://rb.com , 希望复用 A 环境生成的 lock 文件, 怎么做到? pnpm-lock.yaml 文件里的 tarball 地址, 怎么能不区分 ra rb 的域名?
-需要在 monorepo 里存在 同名包的 不同版本, 怎么实现?
-lerna 和 pnpm 支持 通过 project.json 能让存在 同名包的 不同版本, 使用 npm 能做到吗?
-https://chatgpt.com/c/677fbce1-c1d8-8008-ba11-f56bad58fa80
-2025-01
-
-前端或 node 项目, 引用A包的时候，比如A引用了B，B里面有overrides/resolutions，最终会装 overrides / resolutions 指向的包吗?
-主项目的 overrides/resolutions 优先级最高，覆盖所有依赖。
-如果主项目没有定义，子依赖的 overrides/resolutions 只会影响其自己的依赖树。
-...
-怎么在运行 npm start / build 之前, 确保 node_modules 里的依赖有被重新 insall 过
-2025-01
-
-https://www.npmjs.com/package/npm-check
-https://www.npmjs.com/package/depcheck
-2025-01
-
-
-确保依赖版本始终同步的一种常用方法是，在 package.json 中为工作区包的依赖项指定严格的版本号，而不是 ^ 或 ~ 这样的语义版本号范围。这样做可以避免依赖更新时出现的意外问题。
-
-lockfile 出现合并冲突，主流的包管理工具都支持运行依赖安装命令（npm install/yarn/pnpm install）来自动解决冲突。
-在 主分支 上合入 开发分支（git merge feat-branch），theirs 指的就是开发分支，ours 指的是主分支，如果两个分支同时更新同一模块的版本号、对 lockfile 进行合并的策略:
-- npm: 深合并，并以当前分支（ ours ）的为准
-- yarn: 浅合并，并以目标分支（theirs）的为准
-- pnpm: 深合并，以版本号大的为准 (认为 新版本出现的问题会比旧版本更少)
-  - 关注直接依赖 搜素 specifiers 的版本变更，对于直接依赖引入的间接依赖，自动升级出错的概率较小（一旦出错影响的不只一个项目），且 review 成本太高，选择信任社区。
-  - 支持在每个分支中生成锁文件 https://github.com/pnpm/pnpm/pull/4475 。
-  - [@types/react 18.3.5 bug](https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/70418) 在 package.json 设置 resolutions 锁定版本。
-
-对于应用项目来说，可以直接使用固定版本；但是对于类库项目，不推荐固定版本，有以下原因:
-- 依赖该类库的应用项目无法充分复用依赖: 比如 ^1.0.0 和 ^1.1.0 可以合并成 ^1.1.0）
-- 类库项目的间接依赖出现安全漏洞时，无法通过重新安装依赖直接修复
-- 锁定直接依赖的版本也不完全有效，丢失 lock 后，直接依赖的间接依赖还是会进行升级，进而导致 BREAKING CHANGE
-- 锁版本 就得信任其他依赖不会出现问题（听天由命）
-- 尽量由开发流程保证，有冲突就复测，并做好充足的人工 review
-
-在开发一个 npm包 时，你的 npm包 是需要被其他仓库依赖的，由于扁平安装机制，如果你锁定了依赖包版本，你的依赖包就不能和其他依赖包共享同一 semver 范围内的依赖包，这样会造成不必要的冗余。所以我们不应该把package-lock.json 文件发布出去（ npm 默认也不会把 package-lock.json 文件发布出去）。
-
-npm 包的主版本号为 0 时，会被认为是一个不稳定版本，主版本号和次版本号都为 0: ^0.0.z、~0.0.z 都被当作固定版本，主版本号为 0: ^0.y.z 表现和 ~0.y.z 相同，只保持修订号为最新版本。
-1.0.0 的版本号用于界定公共 API，对外部发布一个正式版本的npm包时，把它的版本标为1.0.0。
-
-pre-release 预发布版本号的排序规则是:
-不同预发布版本类型之间 alpha < beta < rc < release（即稳定版本，没有预发布标识符）。
-同一预发布版本类型下，数字越大，版本越新，例如 1.0.0-alpha.1 < 1.0.0-alpha.2。
-比如 rc-0..n > beta-0..n > alpha-2..
-
-2024-07~12
-
-npm version 怎么自动升级 monorepo 的 子包依赖版本号
-pnpm 只检查并保持 workspaces 内部包 的最新版本，写成 bash 脚本
-2024-06
+cat > my.py << 'EOF'
+str='123456789'
+print(str[2:5])
+print ("Hello, Python!")
+EOF
+```
 
 
 
+------ docker 2025
+
+详细解释一下这个文件内容(docker history --no-trunc harbor.xx/xx 的结果)
+希望能运行 gpt-oss 120b 的模型, 这个镜像能满足要求吗? 需要升级 vllm 版本吗?
+镜像里怎么加载大模型文件, 怎么提供http服务?
+我能修改这个镜像吗? 比如 FROM 了这个镜像之后, 应该做什么?
+2025-08-29
+
+docker desktop 里 镜像的 layers 每行内容有省略号, 使用什么工具能显示完整?
+2025-08-29
+
+nvidia/cuda Tag: 12.9.1-cudnn-devel-ubuntu24.04 和 Tag: 12.9.1-cudnn-runtime-ubuntu24.04 的区别? 有些包叫 alpine 是什么意思?
+docker镜像的依赖怎么查看? 比如基于 nodejs 的镜像可能依赖 npm/pnpm/python 但应用程序内部 package.json 声明的依赖, 为什么不包含在 docker 镜像里?
+https://www.tongyi.com/qianwen?sessionId=73a29b53c98b4b588e2eb385a9630eef
+2025-08-22
+
+微服务是剧目（由多个独立的小剧目组成）。Docker 是用来运输和运行这些小剧目的“集装箱”，而 Linux 是承载所有这些集装箱的“货轮”或“码头”。Docker 是 “集装箱卡车”。Kubernetes 是 “自动化港口调度系统”。
+Docker 镜像是创建容器的基础模板，而 Docker 容器是镜像启动后的一个或多个运行实例。一个镜像可以启动任意多个相互隔离的容器。
+2025-08-22
+
+比如 前端 nodejs 服务, 通过服务构建出的镜像 包含 "node运行时+node框架(比如nextjs)+业务build后代码", 是放到一个 docker 容器里 被 k8s prod 调度?
+这个情况下, 每个 nodejs 服务, 如果 "node运行时+node框架" 都是一样的版本, 只是业务代码不一样. 不同服务用到的 相同部分的内容, 有复用吗? 如果没有 那是浪费了存储资源?
+2025-08-13
+
+https://github.com/dockersamples/helloworld-demo-node
+https://docs.docker.com/engine/storage/drivers/
+https://docs.docker.com/build/concepts/dockerfile/
+https://docs.docker.com/build/ci/github-actions/
+https://docs.docker.com/compose/intro/compose-application-model/
+https://docs.docker.com/desktop/features/networking
+2025-08 docker学习
+
+https://github.com/actions/checkout
+在 CI 环境里 比如 github action, 先加载需要的 node 镜像, 再跑 npm install / test 等, 是怎么触发的?
+通过 workflow 文件（.github/workflows/*.yml） 触发的。
+GitHub Actions 启动一个 Runner（可以是 GitHub 提供的虚拟机，也可以是自托管机器）。
+Workflow 里可以指定：直接使用 Docker 镜像 作为运行环境, 或使用官方 actions/setup-node 在 runner 上安装 Node, Runner 在容器内或虚拟机上执行 npm install、npm test 等命令。
+
+github 的 workflow 是怎么实现的?
+GitHub Actions 的 Workflow 是 GitHub 提供的一个 事件驱动的 CI/CD 系统，其实现本质上是：
+GitHub 托管一个 Workflow 引擎（负责解析 .github/workflows/*.yml）
+事件（push、PR、schedule 等）触发 Workflow 运行
+Workflow 引擎调度 Runner（执行任务的机器）
+Runner 拉取工作内容、运行 Actions、上报日志和结果.
+
+在公司内部署 Workflow Engine 和 Runner , 用什么语言写的比较多?
+为什么 Go / .NET 最多？
+Go：天然适合容器环境，CI/CD 场景高并发、K8s 集成方便
+.NET Core：跨平台 + 运行稳定，GitHub 官方 Runner 采用
+2025-07
+
+对于公司内部署的 CI 构建平台, Docker资源参数(cpus/memory等)应该怎么设置, 详细解答下.
+2025-04-02
+
+js java go 等编程语言在 CI 阶段, 有哪些 优化性能和减少资源消耗 的方法, 有什么通用的工具可以使用吗?
+https://gemini.google.com/app/cc075eb2e9e4dff8
+2025-04-01
+
+前端组件库 monorepo 包含 50 个组件, 都位于一个 git 仓库里. 而传统的组件库 50 个组件分别位于 50 个 git 仓库里.
+使用 云服务器 对 monorepo 仓库一次性构建 50 个组件, 和对传统的 50 个 git 仓库的组件分别进行构建.
+能节省哪方面资源, 节省多少?
+https://chatgpt.com/share/67c6c45a-cc9c-8008-86c7-60b6ef688619
+https://grok.com/share/bGVnYWN5_a947bd4d-8829-4cbe-af01-0e9dbcef16c3
+https://gemini.google.com/app/95b09bd5710e389f
+2025-03-03
+
+
+---
+
+CI/CD 平台: GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Azure DevOps, Bitbucket.
+这些是执行 CI 流程的核心平台，它们提供了缓存、并行、条件执行等基础能力:
+
+- CI 平台缓存: 可以将构建输出目录（如 dist, build, target）也纳入 CI 平台的缓存机制，但这需要更精细的缓存键策略，通常结合代码变更来判断.
+  - 依赖缓存 (Dependency Caching): 缓存策略可避免重复下载或编译未更改的依赖和工件，从而加快构建速度. 配置 CI 脚本，将下载的依赖目录（如 node_modules, ~/.m2/repository, ~/.gradle/caches, GOMODCACHE 或 GOPATH/pkg/mod）缓存起来，并在后续运行中恢复. 通常基于依赖锁文件(package-lock.json, pom.xml, build.gradle, go.mod, go.sum)的内容 当锁文件变化时 缓存才失效并重新下载.
+- 容器化工具 Docker 层缓存: 如果你使用 Docker 构建镜像，优化 Dockerfile 的指令顺序，将不经常变动的步骤（如下载依赖）放在前面，充分利用 Docker 的层缓存.
+- 多阶段构建 (Multi-stage Builds): 使用一个阶段安装依赖和编译代码，然后将最终产物复制到一个干净、轻量的基础镜像中，减小最终镜像体积和构建时间。
+- 条件化执行 (Conditional Execution): CI/CD 平台通常提供条件执行的语法（如 GitHub Actions 的 if 条件, GitLab CI 的 rules 或 only/except .
+- 并行执行 (Parallelization): 将可以独立运行的任务（如不同模块的编译、单元测试、集成测试、代码检查）分配到不同的执行单元（线程、进程或 CI runner）上同时运行. GitHub Actions (matrix strategy, jobs), GitLab CI, Jenkins 等都支持并行执行 Job 或 Stage.
+  - 构建工具支持: Maven (-T), Gradle (--parallel), golangci-lint, Jest (--maxWorkers) 等测试框架都支持并行。
+  - 测试分片 (Test Sharding): 将测试套件分割成多个部分，在不同的并行 Job 中运行。
+
+分布式构建/缓存系统(Build Caching):
+- 使用支持增量编译的构建工具，只重建受更改部分代码。这在编译型语言如 Java 和 Go 中尤为重要，工具如 Bazel 和 Gradle(--build-cache) Go 默认开启构建缓存(GOCACHE) 提供此功能。对于 JavaScript，工具如 Vite 或 Nx, Turbopack 也支持快速增量构建.
+JavaScript (Node.js):
+- 包管理器: 使用 npm ci 而不是 npm install，它更快、更可靠，基于 package-lock.json。对于 yarn，使用 yarn install --frozen-lockfile。考虑使用 pnpm，它通过硬链接和符号链接共享依赖，可以显著节省磁盘空间和安装时间。
+- 构建工具: 选择速度更快的构建工具，如 esbuild 或 Vite (底层使用 esbuild/Rollup)。优化 Webpack/Rollup 配置，启用持久化缓存。
+- 测试: 配置 Jest 等测试框架的缓存 (--cache)。根据需要调整并行工作进程数 (--maxWorkers)。
+- Linting/Formatting: 将 Linting (ESLint) 和 Formatting (Prettier) 步骤与测试并行执行。
+
+---
+
+Dockerfile 示例
+```sh
+FROM harbor.smart.ddns.xx.xx/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3
+CMD ["sh"]
+```
+
+没有写 CMD ["bash"]，所以没有前台进程. Docker Desktop GUI 默认不会附加 bash，所以容器运行后立刻退出。
+让容器执行一个长期运行的命令（比如 tail -f /dev/null），这样容器保持运行状态.
+
+Docker 客户端与 Docker 守护进程（Docker daemon）进行通信.
+
+docker stop 会向 PID 1 进程 发送 SIGTERM，等待 10 秒，若未退出则发送 SIGKILL。
 
 
 
+## 命令 shell python docker
+
+https://docs.python.org/3.13/index.html
+
+--- Python
+
+```sh
+brew install python python3  # 一起安装 2.7.x 和 3.x
+python -m SimpleHTTPServer 3435  # python@2
+python3 -m http.server 3000
+
+python3 --version  # python3 -V
+python3 your_script.py
+pip3 --version
+pip3 list | grep vllm  # 查看安装的模块
+
+# https://pypi.tuna.tsinghua.edu.cn/simple
+# https://mirrors.aliyun.com/pypi/simple/
+pip3 install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 uninstall requests
+pip index versions vllm
+pip show vllm
+pip show transformers torch sentencepiece
+
+# venv 是 Python 标准库 创建虚拟环境 隔离项目依赖 避免依赖冲突
+python3 -m venv myenv
+source myenv/bin/activate
+pip install xx
+deactivate
+
+# 在 ~/.zshrc 加上
+export PYTHON_BUILD_MIRROR_URL="https://mirrors.tuna.tsinghua.edu.cn/python"
+export PYTHON_BUILD_MIRROR_URL_SKIP_CHECKSUM=1
+# 手动指定下载地址
+pyenv install --url https://mirrors.tuna.tsinghua.edu.cn/python/3.10.12/Python-3.10.12.tgz 3.10.12
+brew install pyenv
+pyenv install 3.10.12
+# ~/.pyenv/versions
+pyenv versions           # 查看所有已安装版本
+pyenv version            # 查看当前使用的版本
+pyenv global 3.10.12     # 设置全局默认版本
+pyenv local 3.10.12      # 设置当前目录使用版本
+pyenv shell 3.10.12      # 仅当前 shell 会话使用该版本
+```
+
+--- docker
+
+```sh
+docker inspect harbor.xx/xx
+docker inspect harbor.xx/xx | grep -A 5 -B 5 "Cmd\|Entrypoint"
+docker history harbor.xx/xx
+docker history --no-trunc harbor.xx/xx
+docker build -t node-build-with-sh .
+docker run -it node-build-with-sh
+# 挂载工作目录
+docker run -it -v /Users/hua/inner/xx:/workspace -w /workspace node-build-with-sh
+
+docker run -it harbor./test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 sh
+
+docker run -d --name node-build-dev \
+  -v /Users/hua/inner/xx:/workspace \
+  -w /workspace \
+  harbor./test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 \
+  tail -f /dev/null
+```
+
+------ shell
+
+```sh
+env / w / who / whoami / tty / last / mtr -r
+echo "system: $HOME $PATH $SHELL"
+printenv HOME  # 打印环境变量
+printenv | grep npm_config  # 查看所有 npm 设置的 env
+type/which npm  # fn_name  type -a node / pwd
+
+say hello
+open -a Activity\ Monitor # 打开活动监视器 或者 "Activity Monitor"
+zip -e output.zip ~/xx.txt  # zip加解密
+
+mount | grep /  # 查看系统挂载状态
+sudo mount -uw /  # 挂载系统分区为可写  /sbin/mount
+history 10 # 列出10条
+timeout 3600 some-command
+
+# curl 默认使用 http 协议, 可以省略 http:// 前缀
+curl baidu.com
+# 在 mac 上 xx.sh 里的代码不会执行 因为默认没权限. 先下载,再 chmod +x xx.sh 再执行
+curl -O "http://xx.com/xx.sh"
+curl -v -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d '{
+  "jsonKey": "jsonVal",
+  "jsonKey1": {}
+}' | jq
+curl -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d "@aa.json" | jq
+
+nohup sleep 100 &
+# 最后一个后台运行进程的 PID
+echo $!
+echo $! > "flag_file.log"
+
+# nohup 不会随着 terminal 的关闭而停止、会在 系统关闭 时停止运行
+nohup echo "Hello World"
+my_command='echo "Hello World" && sleep 30'
+nohup bash -c "$my_command" > output.log
+nohup bash -c 'echo "Hello World" && sleep 30' > output.log
+# 临时文件
+echo 'echo "Hello World" && sleep 30' > /tmp/my_script.sh
+chmod +x /tmp/my_script.sh
+nohup /tmp/my_script.sh > output.log
+# 如果不需要输出日志，可以将其重定向到 /dev/null
+nohup bash -c 'your_command_here' > /dev/null 2>&1 &
+```
+
+--- Process status (进程状态, 非线程thread)
+
+```sh
+lsof -i :8087   # 查找出占用了某个端口的程序和其对应的PID
+kill 3747  # 杀掉 进程id
+kill -9 *pid*  # 强制杀掉进程
+pkill -P $$  # 杀掉当前 shell 启动的所有子进程
+# 用 tmux 或 screen 可以让你在一个 shell 中开多个会话
+
+top #  man top
+top -l 1 -o cpu | head -n 20
+top -l 1 -stats pid,cpu | head -n 20
+
+ps -ax
+ps aux | grep xx.sh  # 列出正在运行的脚本进程
+ps aux | grep "xx" | grep -v grep  # 排除 grep 本身的进程
+ps -ef | grep adb  # 有时候 adb devices 没反应 需要杀掉进程重启
+ps -ef | grep ttyd
+
+pgrep -x 'ClashX'  # 获取应用的 pid
+pgrep -f "ttyd zsh"  # -f 匹配完整的命令行
+pgrep -f "ttyd -t disableLeaveAlert=true zsh"  # 参数解析后不一样 这里匹配不到
+pgrep -f "ttyd zsh"> /dev/null  # 只返回输出码
+pgrep -fx "ttyd -p 9999 -W -a zsh"
+pgrep -u "$USER" -f "ttyd"
+pgrep -u "$USER" -fx "ttyd -p 9999 -W -a zsh"
+
+lsof "$z_log"
+# z_log 文件正被进程 ttyd 打开, 文件描述符 1w 和 2w 表明它正在被用作标准输出和标准错误的重定向.
+# 这时候 z_log 文件不能被其他进程 以 > 方式 写入内容, 改为 truncate -s 0 "$z_log" 处理.
+# COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+# ttyd    1245  hua    1w   REG    1,6  16 65909077 /Users/hua/xx/z_log
+# ttyd    1245  hua    2w   REG    1,6  16 65909077 /Users/hua/xx/z_log
+
+# 后台运行命令 & 和 nohup
+# 注意  & 会随着 terminal 的关闭 而自动停止运行
+# 在 bash 里用 & 启动的是 背景进程(子进程) 不是 背景线程
+/path/to/xx.sh >> /path/to/log.txt 2>&1 &
+ttyd -W -a zsh >> log.txt 2>&1 &
+
+# 在容器或脚本中 “hold 住” 进程
+sleep 365d  # 临时方案. 启动一个容器或服务后，用 sleep 防止主进程退出
+tail -f /dev/null  # 临时方案. 替代 sleep 方式
+# 生产环境 优雅退出 trap + while sleep 1
+trap cleanup SIGTERM SIGINT
+while true; do sleep 1; done
+```
+
+--- file/dir
+
+```sh
+
+# 查看 符号链接 的真实地址
+realpath node_modules/react
+ls -l node_modules/react
+
+# ls 命令默认只显示文件名
+ls /usr/bin  # 有 env
+ls /usr/local/bin  # 有 node npm npx
+ls -d $PWD/*
+ls -la
+ls -l "$z_log"  # 查看文件是否有 读写权限，如无 运行 chmod u+rw "$z_log"
+ls /Volumes/Macintosh\ HD/Applications
+ls -lhR ./  # 递归列出目录内容
+ls -R /mnt | head -40
+
+# 清理系统缓存与日志, 能使 "设置 - storage - System Data" 占用显著变小
+# 执行后最好 重启 系统
+sudo rm -rf /Library/Caches/*
+sudo rm -rf ~/Library/Caches/*
+sudo rm -rf /private/var/log/*
+sudo rm -rf /private/var/folders/*
+du -sh ~/Library/Application\ Support/* | sort -h
+
+cat -n fname
+mv fname rename
+more filename # 一页一页的显示档案内容.
+head/tail -n 20 ~/.zsh_history  # 只看 头/尾 几行(默认10行)
+
+mkdir -p ~/inner/aa && touch $_/file.txt  # 创建目录并能生成文件
+ln -s source_file dist
+
+rm -rf xx # rm 删除不存在的文件或目录 加上 -f 不会报错
+# 删除 ai 目录下的指定后缀文件
+rm -rf ai/**/*.d.ts ai/**/*.test.js ai/**/*.js.map
+
+# 同步文件和目录
+# 报错 cp: --exclude=a.txt is not a directory
+cp -r test/* test1 --exclude=a --exclude='a.txt'
+# 加引号 避免路径中间有空格
+# 报错 cp: illegal option -- -
+cp -r --exclude=a --exclude='a.txt' test/* test1
+
+# 会排除掉 所有子目录 含有的同名 a.txt 文件
+rsync -av --exclude='a.txt' --exclude='a/' test/ test1
+# 在目标端删除源端不存在的文件
+rsync -av --exclude='a.txt' --delete --dry-run test/ test1
+rsync --version  # v2 不支持通配符
+# 使用 .rsync-filter 文件配置
+rsync -avF .rsync-filter test/ test1
+
+# 创建一个临时目录用于存储 other-branch 的文件
+mkdir /tmp/other
+diff -r . /tmp/other
+diff -rq . /tmp/other  # -q 只报告哪些文件不同
+diff -r --exclude=".git" . /tmp/other
+# 使用 --exclude="{.git,.svn}" 好像不正确
+diff -r --exclude=".git" --exclude=".svn" dir1 dir2
+diff -r --exclude=".git" dir1 dir2 dir3 > diff_output.txt
+diff -r --exclude=".git" --exclude="node_modules" pro-components pro-componentsk > diff_output.txt
+
+grep -rn 'grep' *  # 以 字符串 grep 来搜索 当前目录及子目录 的所有文件内容
+grep grep$ she*.md  # 以 正则表达式 grep$ 来搜索 当前目录下 文件名匹配 she*.md 的内容
+grep -r --include=\*.{cpp,h} pattern ./
+grep -r --exclude-dir=node_modules pattern ~/
+
+find . -name '*bash*'
+find . -name "*.js" -not -path "*node_modules*" -not -path "*js-css-html*"
+find . -name '*.DS_Store' -type f -delete   # 删除某目录及子目录下的 .DS_Store 文件
+# find / -mmin -5   # 查找在系统中最后5分钟里修改过的文件(modify time)
+
+# 如果文件存在则追加内容，否则创建并写入内容
+# [ -f "$file" ] && echo "$content" >> "$file" || echo "$content" > "$file"
+printf '\n%.0s' {1..10} >> $file
+```
+
+
+
+
+
+
+
+
+
+
+# 工程
 
 ## git
 
-[git](https://github.com/git/git) .git/hooks/query-watchman
-
-git 三板斧 (2018)
-- 一板基础斧 add，commit，pull/push，checkout，revert
-- 二板合作斧 merge，rebase，stash，cherry-pick
-- 三板优雅斧 commit --amend，rebase -i
-
-```sh
-# https://github.com/paulirish/git-open
-# https://gitlab.com/warmhug/test
-
-# -f 强制运行  -d 同时考虑子目录  -x 清理忽略文件  -n 模拟删除操作.
-git clean -fdxn  # git 删除 Untracked files
-
-git ls-files -m  # 列出所有已跟踪且内容已修改的文件
-git ls-files -o --exclude-standard  # 列出所有未跟踪且不在 .gitignore 中的文件
-git ls-files -m -o --exclude-standard -z  # 一起列出来
-git ls-files -m -o --exclude-standard | tr '\n' ' '  # 替换换行为空格
-# 修改 git status --porcelain 的输出内容
-git status --porcelain | awk '$1 == "M" || $1 == "??" {print $2}' | tr '\n' ' '
-# 不检测更新
-git update-index --skip-worktree -- .npmrc  # 比 assume-unchanged 更好
-git update-index --no-skip-worktree -- .npmrc
-git update-index --assume-unchanged file1 file2
-git update-index --no-assume-unchanged file1 file2  # 恢复检测
-# https://stackoverflow.com/questions/12288212/git-update-index-assume-unchanged-on-directory
-# 对于 untracked files 不支持使用 assume-unchanged 先加入到 .git/info/exclude 排除
-git ls-files -o --exclude-standard >> .git/info/exclude
-git update-index --assume-unchanged $(git ls-files -m | tr '\n' ' ')
-git ls-files -v | grep '^[a-z]'  # 获取已经被 assume-unchanged 的文件
-
-git remote [-v add | set-url] origin git@xxx.git
-git ls-remote --heads origin
-git ls-remote --tags  # 查看远程仓库所有 tags
-git config -l  # --list
-
-git commit --amend  # 修改提交信息
-git commit --no-edit  # 使用上一次的提交信息进行提交 (未进行过提交会失败)
-# 压缩 commit 保留压缩前的所有commit信息 其中的 hash 修改记录 也会被保留
-git merge --squash feature-branch
-git add . && git commit --no-verify
-
-git pull --rebase
-git pull   # 仅拉取与当前分支相关的标签 只有当标签指向的提交是由于拉取特定分支而下载到本地时，这些标签才会被自动下载。
-git pull --tags   # 拉取所有分支的更新 + 所有 tags .  注意: 远程仓库可能包含大量历史 tags（如版本发布标签），全量拉取会占用额外存储和网络资源.
-git pull --prune	# 更新所有远程分支引用，并删除本地已失效的远程分支引用
-git fetch --prune --prune-tags  # 删除本地已被远程删除的标签 Git 2.20 及以上版本
-git fetch --tags -f  # 强制覆盖本地 tags
-git fetch   # 获取 当前origin的远程 所有分支 信息
-git fetch --all  # 获取 当前origin和设置的其他origin的 所有分支 信息
-git fetch --all --tags  # 额外获取所有 tags 信息
-git fetch origin master
-git branch -m newBranchName  # 重命名分支
-git checkout HEAD~1 -- file1 dir1
-git reset HEAD~1 file1 dir1
-
-git log master..feat-xx --oneline
-git log -n 10
-git log origin/master -- .npmrc package.json
-git log --name-status # 显示文件增删状态
-git log --graph
-git log --oneline --decorate
-git log --oneline --first-parent --reverse | tail -1
-git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all
-git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
-
-# HEAD = HEAD~0 = HEAD^0 当前提交
-# HEAD~1 = HEAD^ 主线的上一次提交  HEAD~3 = HEAD^^^ 主线的上三次提交
-# HEAD^1 主线提交（第一个父提交） HEAD^2 第2个并入的分支的最近一次的提交
-# HEAD^2~3 第2个并入的分支 的最近第 4 次的提交
-git diff HEAD^  # 比较 最新提交 和 其父提交 的差异
-git diff master..feat-xx
-git diff origin/master..origin/master -- .npmrc
-git diff --name-only version1/branch1 version2/branch2
-# 比较当前分支和 master 分支的实际不同的内容
-git diff --name-only master..HEAD
-git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space -p --stat [file/dir]
-git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space --name-only
-git diff @{upstream}
-# 创建和 apply 补丁
-# 当前为 branch-a 分支，想应用 branch-b 相对于 branch-a 的更改
-git diff branch-a..branch-b > changes.patch
-git diff branch-a..branch-b -- path/to/file > changes.patch
-git apply changes.patch
-
-# git merge 会产生重复无用的 Merge pull request pull_id from xx_branch 或者 Merge branch “branch_name” 信息，不利于 review 提交记录。
-# git rebase 需要经常 reapply 其他提交的改动，commit 的时间顺序也会乱掉。只对自己的分支 commit 做 rebase，公共的分支不要 rebase. 其后续的 commit hash 将全部改变
-git rebase -i [commit_id] # hash 换成 master
-git rebase -i --root # 删除第一个提交
-git rebase origin/master
-git push --force-with-lease  # 强制提交 比 -f 安全
-
-# cherry-pick 和 rebase 最终都会在操作完之后、修改同样提交的 commit hash 值
-# 场景: 比如要 pick 的 来源分支的 commit 只是 HADE~1, 但 来源分支的 HEAD~5 和 目标分支的 HEAD~1 有相同的 commit_hash (即来源分支同步了最新的 master commit 但目标分支没有同步), 此时来源分支的 HADE~1到4 (而不是预期的只是HADE~1) 的 commit 都会 apply 到 目标分支, 并且在目标分支 同步过来的 HADE~1到4 的 commit hash 都会被重新修改。
-git cherry-pick src_branch_commit_hash  # 切换到 目标分支
-# 从另一个仓库的分支 pick 先 git fetch <other-repo-url> <other-branch>
-git cherry-pick commit_hash # commit_hash 可以是其他仓库的hash
-
-# --soft 不修改本地文件 --hard 本地的文件修改都被丢弃
-git reset --[soft | hard] [origin/master | file | 057d]
-git reset --hard && git clean --force -dfx # pristine
-git reset --hard && git clean --force -df # wipe
-git revert commit_id # 回滚代码 不抹掉 提交记录 产生新纪录
-# git reflog 的记录只会保存在本地，不会推送到远程仓库。
-git reflog  # 撤销 reset 时 找到撤销前的 commit_id 再 git reset 即可
-
-
-# Git 标签是与特定的提交关联的，而不是直接与分支关联 。
-# 标签是提交的别名，只要标签存在，它所指向的提交（以及该提交的历史）就会被保留 。 删除标签只会移除这个标签的“标签”本身，而不会影响代码或提交 。同样地，删除分支也不会删除其指向的提交 。
-# tag 只附在一个 commit 上、如果这个 commit 被 squash，但 tag 仍然存在。
-# https://stackoverflow.com/questions/54281360/what-happens-to-tags-of-squashed-commits
-# 在 git rebase 之后，标签可能会指向新的历史中任何分支都无法访问的提交。在 rebase 后的历史中，这些标签有时被称为“悬空的”或“孤立的”。然而，标签本身仍然存在于仓库中。
-git tag v1.0  # 给当前分支最新 commit 打 tag
-git tag v1.0 commit_id  # 给当前分支 某个 commit_id 打 tag
-# 打 annotated tags  使用 git show tag_name 会看到包含 tagger 标记
-git tag -a 0.0.1 -m 'Release version 0.0.1'
-git tag -a -m '@pkg/xx@0.1.16' @pkg/xx@0.1.16
-git tag -a @pkg/xx@0.1.16 -m '@pkg/xx@0.1.16' 4da6c3d4 -f
-# 推送 tags
-git push [origin] --tags    # 推送所有标签到服务器
-git push --follow-tags --no-verify origin f-i18n-xx
-git push origin tag_name
-git push origin --delete tag_name
-git push origin :refs/tags/tag_name
-# 删除 tags
-git tag -d tag_name
-git tag -d $(git tag -l)  # 删除 本地所有 tags
-# 搜索本地的某个 tag_name
-git tag -l '*tag_name*'
-git tag | grep tag_name
-# 按时间排序的最近 5 个 tag (再转为 json 数组)
-git tag --sort=-creatordate | head -n 5
-git tag --sort=-creatordate | head -n 5 | awk 'BEGIN{printf "["} {printf "%s\"%s\"", sep, $0; sep=", "} END{print "]"}'
-git for-each-ref --sort=-creatordate --count=5 --format='%(refname:short) %(objectname)' refs/tags
-git for-each-ref refs/tags/ --format='%(refname:short) %(objectname)'
-# 查看 tag 信息
-git describe --first-parent
-git describe --all  # 查找所有分支上的标签
-git describe --tags
-git describe --tags HEAD
-git describe --tags --match "xx"  # 仅匹配名称包含 "xx" 的标签
-git show-ref --tags
-git tag -v xx@0.1.1  # 非 annotated tags 会报错 error: cannot verify a non-tag object
-
-# 查看当前分支上有哪些 tags
-git tag --merged HEAD / feat1 # 所有直接打在该分支的 commit 上的 tag (无论新旧)
-git tag --no-contains master  # 获取那些不包含在 master 中的标签
-git tag --contains HEAD  # 查看直接指向当前分支 最新 commit 的 tag
-git tag --points-at HEAD  # 查看直接指向当前分支 最新 commit 的 tag
-git tag --points-at 6627f6  # 查看直接指向 某个 commit_id 的 tag
-
-# 遍历所有本地的 tag，检查每个 tag 指向的提交是否是当前分支（HEAD）的祖先, 即在当前分支的历史中。
-for tag in $(git tag); do if git merge-base --is-ancestor "$tag" HEAD; then echo "$tag"; fi; done
-
-# 操作 https://stackoverflow.com/a/930495/2190503
-# 在 .gitattributes 文件里配置 当 pnpm-lock.yaml 出现冲突时，将以当前分支为准
-pnpm-lock.yaml merge=ours
-
-# 其他
-git rev-list --left-right --count origin/branch1..branch1
-git reflog show branch1 -n5 | grep 'rebase'
-
-# 每个 commit 都包含两个时间戳 作者时间（AuthorDate） 提交时间（CommitterDate）
-# Git rebase、amend、cherry-pick 等操作会保留旧的 AuthorDate，但会更新 CommitDate
-git show --no-patch --pretty=fuller commit_id
-
-# GitHub stars topics/javascript
-# https://www.star-history.com/#google-gemini/gemini-cli
-# https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
-# https://github.com/topics/javascript
-
-# 搜索 issues
-# https://help.github.com/articles/searching-issues/
-# https://github.com/search?type=Issues&q=xx+in:body+author:warmhug
-# https://github.com/search?type=Issues&q=xx+commenter:warmhug+user:ant-design
-# https://github.com/search?type=Issues&q=xx+commenter:warmhug+repo:ant-design/ant-design-mobile
-
-# GitHub commit 或合并 MR 时，可以自动修改 issue 状态、关闭关联的 issue。
-# 业内成熟的 GIT 分支模型 https://cloud.githubusercontent.com/assets/36899/7315642/015f534c-eaa2-11e4-9882-b7cc7535fb72.png
-# GitHub Issues blog https://gitblog.io/
-```
-
+master 分支有新的提交 删除了大量文件, feature 分支 rebase master 时, 这些在 master 上被删除的文件 也被删除了, 怎么能保留下来?
+https://gemini.google.com/app/ade0b31c686aa747
+https://chat.deepseek.com/a/chat/s/5ddee617-1471-45cc-8ebf-4456ccd2d8dd
+在 feature 分支有个 commit 是基于 master 的一个旧 commit , 现在 master 有个新 commit, 修改了大量 feature 分支相关的内容, 怎么让 feature 分支 重新 rebase master 新的 commit, 而不需要解决冲突?
+需要保留 feature 和 master 的改动, 把这些改动合并到一起. - 只能 merge
+因为 master 的新 commit 删了代码文件, 但 feature 新 commit 仍有这些文件并可能有其他改动. 希望是以 feature 的代码为准. 即不能因为 master 的新 commit 删了代码, feature 分支也删掉.
+https://chatgpt.com/c/68a46f14-8c48-8323-bf88-be5975d38a82
+2025-08-19
 
 git 出现合并冲突时候, ff 和 no-ff 等操作过程和原理是什么? 图示演示一下.
 2025-04-23
@@ -1695,6 +1939,192 @@ bash 处理 git ls-remote --tags origin 和 git tag -l 获取到的字符串列�
 2024-07
 
 
+------ 总结
+
+[git](https://github.com/git/git) .git/hooks/query-watchman
+
+git 三板斧 (2018)
+- 一板基础斧 add, commit, pull/push, checkout, revert
+- 二板合作斧 merge, rebase, stash, cherry-pick
+- 三板优雅斧 commit --amend, rebase -i
+
+https://github.com/paulirish/git-open
+https://gitlab.com/warmhug/test
+
+
+
+
+
+
+
+## lerna nx
+
+使用 lerna@8 和 pnpm@7 , 在 lerna version 时, 因为搭配了 pnpm  就算不使用 workspace: 协议, 也能自动关联升级版本号. 是怎么实现的?
+https://chatgpt.com/share/6809e167-f024-8008-983a-3d3429470081
+https://gemini.google.com/app/1660bddbb4205ab5
+https://github.com/lerna/lerna/issues/718
+https://github.com/lerna/lerna/issues/2326
+2025-04-24
+
+lerna 的 libs/core/src/lib/command/index.ts 里的 configureProperties 里的 execOpts 怎么修改? 怎么在调用 lerna 命令时传入这个参数?
+怎么使用 lerna 的 ChangedCommand 类?
+怎么让 lerna changed 命令忽略 Merge branch带来的代码变化?
+2025-04-22
+
+当前 master 分支 最新的commit 关联了 tag a b c, 此时有新的 feature 分支合并进 master, 就在 master 最新commit 之上新增了 2个commit 变为了 master 的最新 commit, 同时在 master 第 10 条 commit 位置, 插入了一周前的 feature 分支的多个 commit 进来.
+这时候, lerna change 认为 master 上的 tag a b c 疑似失效, 显示这些 tag 对应的文件有变更, 实际上这些文件已经在 master 的 commit 里, 并且没有变更.
+继续提问: 是使用 git merge --no-ff 合并的 feature 分支到 master. 也没有改变 master 已有的 commit hash , 只是把 feature 分支上一周前的几个 commit 合到了 master commit 时间线里, hash 也都没有变化.
+https://chatgpt.com/c/68021519-6b6c-8008-832d-e82255a913ba
+2025-04-18
+
+monorepo 工具 lerna changesets rushjs 功能详细对比?
+lerna 配合 nx 能实现 rush.js 的 增量构建、并行化、分布式缓存 功能吗?
+Rushjs 提供了构建缓存（build cache）功能，还支持阶段构建（phased builds）这些优化, 能节省公司使用云构建的机器成本吗? 比传统多仓库模式能节省多少成本?
+https://gemini.google.com/app/8f758441dfbc2494
+https://chatgpt.com/share/67e3ee41-856c-8008-acea-945ed9ba627b
+https://chat.deepseek.com/a/chat/s/84c31b44-3b08-4cde-921f-01f077639dca
+2025-03-26
+
+lerna publish from-git from-package 详解?
+为什么 from-git 适合 自动化 cicd 场景?
+使用 from-package 时, --ignore-changes 为什么不起作用?
+https://chat.deepseek.com/a/chat/s/f8b25b55-f0f0-4851-a901-0156ddd8f5d8
+2025-03-19
+
+lerna 运行完 根目录的 version 钩子后, 虽然提示了要修改文件的版本号, 但程序那一刻 看起来还没有改动完成相应文件, 什么时候文件内容会被实际改掉? 改成 postversion 也不行.
+2025-03-11
+
+lerna 在 preversion 阶段会执行 package.json 里的 scripts, 但不希望明确写这个 scripts, 而是想由另一个脚本 动态设置 scripts 后传递给 lerna , 这样能实现吗?
+https://chat.deepseek.com/a/chat/s/aaea4f5c-0d71-4b54-b8f0-a6fc1d771ef1
+https://chatgpt.com/c/67ce9933-a260-8008-8046-cff83664fe40
+2025-03-10
+
+lerna 在更新版本时候, 有什么钩子函数, 能打印出来新旧版本号吗?
+现在是 lerna 结合 pnpm 的 monorepo 项目, 不想在每个子包都重复写 scripts 怎么能统一解决?
+2025-03-09
+
+lerna version 不能自动更改 npm alias 的版本号, 怎么解决这个问题? 怎么解决?
+除了 lerna 有其他类似工具能解决这个问题吗?
+https://grok.com/chat/8e0fc14a-3f17-40a2-b7c5-99463c153087
+https://grok.com/share/bGVnYWN5_2285de9a-750d-409c-a6a1-0c33cd067f1e
+https://chat.deepseek.com/a/chat/s/e1bbf052-b8a7-4064-81f9-b7fc3bfc426f
+2025-02-26
+
+monorepo same package name multiple version coexist
+除了使用 npm alias 功能外, 还有其他办法吗? 使用中文回复.
+...
+通过以上提到的哪种方法, 能够解决如下报错
+npm ERR! code EDUPLICATEWORKSPACE
+npm ERR! must not have multiple workspaces with the same name
+...
+使用 lerna 和 pnpm 并加入 project.json 文件, 可以让多个子包 package.json 有相同的 name 和不同的 version. 除此之外,还有更多的实现办法吗?
+...
+参考 https://stackoverflow.com/questions/26414587/how-to-install-multiple-versions-of-package-using-npm
+回复最好 https://gemini.google.com/app/4c2ea1e657922b90
+2025-02-24
+
+需要在 monorepo 里存在 同名包的 不同版本, 怎么实现?
+lerna 和 pnpm 支持 通过 project.json 能让存在 同名包的 不同版本, 使用 npm 能做到吗?
+https://chatgpt.com/c/677fbce1-c1d8-8008-ba11-f56bad58fa80
+2025-01
+
+在 2022/05 的时候 Next.js 在这个 [PR#37259](https://github.com/vercel/next.js/pull/37259) 从yarn 转移到了pnpm，原因是使用pnpm 帮助他们降低了下载套件的大小，而且找到了一些幽灵依赖，并在 CI 上安装套件的速度从 4 分钟降低到了 2 分钟。
+...
+[将 50 万个文件放在一个 Git 存储库中](https://www.infoq.cn/article/tomhtgpmuy4oqhpvf0w1)
+2024-10
+
+https://jamiemason.github.io/syncpack/
+* [monorepo.tools](https://monorepo.tools/)
+* [monorepo-vs-polyrepo](https://github.com/joelparkerhenderson/monorepo-vs-polyrepo)
+* [Awesome-monorepo](https://github.com/korfuri/awesome-monorepo)
+* [advantages of monorepo](https://medium.com/@suman.maity112/is-it-the-era-of-mono-repo-671e6dee387)
+* [Misconceptions about Monorepos](https://blog.nrwl.io/misconceptions-about-monorepos-monorepo-monolith-df1250d4b03c)
+https://github.com/changesets/changesets
+Monorepos 工具 https://www.51cto.com/article/759432.html
+https://medium.com/ekino-france/monorepo-insights-nx-turborepo-and-pnpm-4-4-96a3fb363cf4
+采用的知名项目:
+https://github.com/facebook/react/
+https://github.com/vuejs/core/
+https://github.com/jestjs/jest
+https://github.com/angular/angular
+https://github.com/nrwl/nx-examples
+2023 ~ 2025 monorepo(one code base) 工具
+
+
+------ nx
+
+在 lerna@8 + pnpm@7 的 monorepo 项目里, 因为存在两个相同的包名, 虽然通过 project.json 做了区分, 但 lerna 背后的 nx 对于内部包之间的 依赖解析 仍然有问题.
+https://gemini.google.com/app/f2ce6aaf2219c618
+...
+使用 pnpx nx graph 分析内部包之间的依赖, 发现部分内部依赖缺失?
+因为 lerna 背后实际是 nx 在检测依赖. 写死版本号, 或使用工作区协议(workspace: 或 file: 协议) 会被检测到. 但如果依赖版本号是 ^ 开头 则检测不到, 因为 SemVer ^ 范围并不是“协议” 只是 NPM 在安装时的解析策略，Nx 的项目图器并不去解析 SemVer 范围，它只信任显式的工作区协议或基于代码的导入。
+https://chatgpt.com/c/6804b4b9-bc04-8008-b378-803e803e9f9e
+2025-04-20
+
+nx implicitDependencies 怎么理解和使用?
+pnpm build 有类似 nx implicitDependencies 的功能吗? 或者怎么能实现这样的效果, 特别是在处理 npm alias 这种场景时.
+https://chatgpt.com/c/67f8cedd-9b20-8008-b596-daa0e9c3bb7c
+https://gemini.google.com/app/c5def5cfe22d8825
+https://chat.deepseek.com/a/chat/s/bfe64f5d-98e5-4481-8332-b738c1926eb6
+2025-04-11
+
+使用 Nx 进行构建时，.nx 目录用于存储与构建相关的缓存和数据 .nx/cache/ .nx/installation/ .nx/workspace-data/ 这些目录包含特定于本地环境的临时文件，不适合纳入版本控制。在 .gitignore 里忽略掉.
+使用 Nx 提供的分布式缓存功能，在团队内部共享缓存.
+2025-03-13
+
+---
+
+https://nx.dev/concepts/decisions/why-monorepos
+依赖管理 https://nx.dev/extending-nx/recipes/project-graph-plugins
+
+[Turborepo](https://github.com/vercel/turborepo) (类似nx) 解决了 Monorepo 的问题。我们的远程缓存存储您所有任务的结果，这意味着您的 CI 永远不需要做同样的工作两次。 任务调度可能是困难的，想象 yarn build 需要运行前 yarn test ，在所有的工作空间。Turborepo 可以调度您的任务，以最大的速度，在所有可用的核心。
+
+
+------ 总结
+
+Monorepo 的核心优势之一是根目录下的单一锁文件（pnpm-lock.yaml, yarn.lock, package-lock.json），它保证了所有子项目依赖版本的一致性。在子目录中单独安装会创建独立的锁文件，破坏了这一优势。
+
+在 lerna@8.0.2 里的 lerna.json 的 ignoreChanges 不支持 `"!commons/xx/lib/**"` 这样的 否定匹配, 但 git 的 .gitignore 文件支持.
+
+lerna 项目存在 相同的 pkgName 不同的大版本 1x 2x 3x 怎么管理
+- 加入 project.json 文件, 内容为 { "name": "pkgName@1.x" } 或 { "name": "pkgName@2.x" } 利用了 nx 的特性.
+- nx 报错: lerna ERR! lerna To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+
+lerna changed 和 list 行为不一致:
+- https://github.com/lerna/lerna/issues/1909#issuecomment-459548676
+- https://github.com/lerna/lerna/issues/1377
+
+lerna tag(仅支持 annotated tags) 与 commit
+- lerna changed 会根据 annotated tag 判断是否升级版本.
+  - 如果最近的 annotated tag 之后 "有代码变更,并且没有被之前的某个 annotated tag 记录", 这些变更的代码版本 对应的组件 就被认为需要升级版本. 解法: 比如最新的 commit 对应的 tag V1 不是 annotated 的, 运行 `git tag -a -m 'V1' V1 -f` 做修复.
+  - 参考: https://lerna.js.org/docs/troubleshooting#publish-command  https://github.com/lerna/lerna/issues/1357#issuecomment-438162152  https://juejin.cn/post/7114538970339344420
+  - 原理是 `git describe --first-parent --always --dirty` (搜源码 describeRefSync) 和 git diff --name-only lastTagName pkg_path (搜源码 diffSinceIn)
+- 如果 lerna tag 对应的 commit_id 被 squash/rebase 而不在 git 历史里. lerna version 就不会基于这个 tag 的版本号 来升级版本. 解法: 修改 tag 对应到新的 commit_id, 强推覆盖远程的已有 tag.
+- 如果你的项目使用了规范化的提交信息（例如，使用 commitizen 和 cz-lerna-changelog），Lerna 可以更准确地检测变更，因为它会根据提交信息中的标签来识别影响的包. https://github.com/lerna/lerna/issues/2437  https://github.com/lerna/lerna/issues/1569  [lerna 发包原理浅析](https://zhuanlan.zhihu.com/p/392438222)
+
+lerna publish 参数 from-git from-package
+- 如果 lerna publish 失败，使用 lerna publish from-git 重新发布，不用改版本号。
+- 设置 from-git 或 from-package 后不会运行 lerna version 也不检测文件变更.
+- 设置 --ignore-changes 只对 lerna version 或默认的 lerna publish（包含版本生成阶段）有效.
+
+Lerna always uses npm to publish packages.
+https://lerna.js.org/docs/features/version-and-publish
+
+uncommitted changes 阻止发布
+- https://github.com/lerna/lerna/issues/2329
+- https://github.com/lerna/lerna/issues/1591
+- lerna ERR! EUNCOMMIT  M pnpm-lock.yaml 确保开发阶段使用的 pnpm 版本一致.
+
+lerna.json 配置项
+https://github.com/lerna/lerna/blob/main/libs/core/src/lib/project/index.ts#L28
+使用 lerna@8.0.2 在 /usr/local/lib/node_modules/lerna/dist/index.js 文件的 10480 行, 调试:
+`console.log('log concurrency: ', this.concurrency, Object.keys(this));` this 对象的 keys 为:
+[
+  'options', 'concurrency', 'toposort', 'execOpts', 'argv', 'name',
+  'composed','runner', 'script', 'projectsWithScript', '_project','logger',
+  'projectGraph',  'projectFileMap', 'args', 'npmClient', 'bail', 'prefix',
+  'count', 'packagePlural', 'joinedCommand'
+]
 
 
 
@@ -1703,307 +2133,849 @@ bash 处理 git ls-remote --tags origin 和 git tag -l 获取到的字符串列�
 
 
 
+## deps
 
-## TypeScript
 
-这么写的 export type * from 'xxx';
-报错: error TS1383: Only named exports may use 'export type'.
-ts不允许这么写. 在 compilerOptions 里加上 "skipLibCheck": true, 忽略.
-2025-07-01
+pnpm 在单 package.json 仓库里 能发现幽灵依赖吗? 在 monorepo 仓库里 发现不了子包的幽灵依赖问题?
+使用 pnpm@7 发现只有 根目录的 依赖, 会被安装到 根目录的 node_modules 中, 子包的依赖 有些被安装在 子包目录的 node_modules 中,有些是在 根目录的 node_modules 的 .pnpm 里. 这个逻辑是什么?
+https://chat.deepseek.com/a/chat/s/92301748-7afa-491b-b44b-a5e248b1170a
+2025-08-27
+
+在 lerna@8 + pnpm@7 的 monorepo 项目里, 各个子包 虽然依赖了相同的 typescript @types/react 等 大版本, 但因为有些作为下层依赖 ts 类型包 比如 @types/estree 1.0.6 的 patch 版本问题, 导致上层 ts 类型编译报错.
+通过 pnpm 的 overrides 方式 统一版本 能临时解决, 但很不优雅 也引起版本锁定问题. 另外排查这类问题 很费时间 怎么有快速的排查方式?
+最终更好的解决方案是什么?
+如果确实需要存在比如多个版本的 @types/estree 给不同的包使用, 应该怎么做?
+https://gemini.google.com/app/0cf7e56b21800f66
+https://chatgpt.com/c/68aeb81b-6c44-8329-8577-d8d299e94ea8
+https://www.tongyi.com/?sessionId=f2a1764a92bc4704a5a97026fc182889
+2025-08-27
+
+两个包互相依赖, 一个包依赖另一个包的 ts 定义, 一个包依赖另一个包的源码. 在 lerna pnpm 的环境中, 怎么构建?
+https://gemini.google.com/app/4c8d09b0bb7d0795
+2025-08-21
+
+npm 包 xx 的依赖版本是 @types/react: * 时, 在 monorepo 里存在 @types/react 16 17 18 多个大版本, 这个 xx 实际安装的 @types/react 版本是什么?
+...
+公共源的某些npm包, 在公司内部源没有. 通过 bundledDependencies 先从公共源下载, 在公司内部源发布. 能解决问题吗?
+https://chatgpt.com/c/68826ea0-4564-8008-b420-5b51b36eaaa9
+2025-07-25
+
+如果一个二级依赖的 patch 版本号升级, 在项目中对一级依赖进行 pnpm uninstall 再 pnpm add , 这时候二级依赖版本号 仍然没升级, 是怎么了?
+npm yarn 分别是怎么处理二级依赖的版本的?
+因为项目里 A 里有多个依赖 比如 B B1 B2 都需要升级, 怎么能 pnpm up A (但此时 A 的版本号不变), 能让其依赖 B B1 B2 的 patch 版本都自动升级. 而不是 pnpm up B --depth=2 ?
+2025-06-29
+
+pnpm workspaces 某个子包 aa 的 dependencies 含有这样依赖 "demo": "workspace:demo2@*" 其中 demo2 是另一个子包的包名.
+当在 workspaces 根目录 运行 pnpm --filter "aa..." build 时候, 预期是 demo2 的子包需要先运行 build 命令, 但实际未运行.
+这是因为 pnpm 默认把 npm alias 的依赖, 当做 外部依赖 解析, 需要额外的解决方案, 应该怎么做呢?
+...
+需要做到 自动化工具构建, 能通过给 pnpm 写插件等方式, 补足这个功能吗? 应该怎么写?
+https://gemini.google.com/app/74b4f952721158d0
+2025-05-27
+
+为什么使用 ^2.2.12-alpha.3 在 npm install 时候安装的不是指定的这个版本?
+2025-04-21
 
 不同子包依赖了不同的 ts react react-router 版本, 在 pnpm 下会互相影响?
 源码存在 `import { Route, StaticRouter } from 'react-router-dom';` 时, ts 会报错
 Route, StaticRouter 不存在.
 2025-04-09
 
+在 pnpm(v7) + lerna 的 monorepo 项目, 为了能让各个子包 使用各自不同的 react 版本,
+在子包 package.json 的 devDependencies 里安装 @types/react 包,
+在子包 tsconfig.json 配置 "paths": { "react": ["./node_modules/@types/react"] } 只解析当前目录安装的 @types/react 内容.
+但 @types/react 本身依赖的 csstype 等包, 是被安装在 **根目录的 node_modules 里**, 如果子包 有源码 调用 React.CSSProperties 类型, 就会报错 TS2339: Property 'position' does not exist on type 'CSSProperties'.
+解法:
+在子包 package.json 的 devDependencies 里, 加入 @types/react 包依赖的 csstype 等包. 使其都能在当前目录的 node_modules 里被找到, 问题解决.
+2025-04-09
+
+场景: 项目的 build工具(依赖ts@3), 但项目本身(依赖ts@4), 在使用 npm(@9) 构建时候 无报错, 但使用 pnpm(@7) 构建时 对源码的 ts 语句解析报错.
+npm 和 pnpm 分别这么处理:
+- npm: 直接使用 根目录 node_modules 的 ts@4 来解析 build工具+项目 的源码, 虽然 build工具 是依赖的 ts@3 但使用 ts@4 来解析 "凑巧"也没有错误.
+- pnpm: 会使用 build工具的ts@3 来解析 项目源码, 导致解析报错, 因为项目源码需要 ts@4 来解析.
+参考: [lerna@8](https://www.npmjs.com/package/lerna?activeTab=code) 的 dependencies 里这么声明 ts 依赖 `"typescript": ">=3 < 6"`, 确保使用方 不受其版本锁定的影响.
+...
+npm(@9) 依赖提升Hoisting, 默认会将所有依赖提升到 根目录 node_modules.
+pnpm(@7) 严格依赖隔离, 默认不会提升依赖, 每个子包的 node_modules 仅包含其显式声明的依赖, 使用 硬链接和符号链接.
+pnpm 不会默认进行大规模的提升。它使用符号链接（symlinks）的方式，在项目的 node_modules 里只精确地链接项目直接依赖的包。而这些包自身的依赖，则位于一个集中的内容寻址存储区（通常是项目根目录下的 .pnpm 文件夹内），并通过符号链接按需链接到对应包的 node_modules 目录下。
+https://gemini.google.com/app/c1b7c1ac21903ab2
+...
+[moduleResolution 总结](https://zhuanlan.zhihu.com/p/621795173)
+2025-04-08
+
 lerna + pnpm 的 monorepo 项目, 在子包里单独引入 TS 的版本, 怎么能不受 根目录的 @types/react 版本影响?
 2025-04-06
 
-@types/node @types/react 版本 需要和 typescript react 版本匹配.
-2025-04
+pnpm monorepo 怎么查看除了内部 link 包之外的其他包依赖, 在 registry 是否存在?
+如果没有直接的命令, 写一个 node js 脚本来实现.
+...
+内部链接的版本号, 可以以 workspace: 或 file: 开头, 但也可以不是以它们开头.
+因为 pnpm 提供了 prefer-workspace-packages 和 link-workspace-packages 设置, 能够自动匹配引用 monorepo 内部有相同包名的其他 package. 怎么识别并处理这种情况?
+...
+包所在不一定只是 packages 目录内, 而是在 pnpm-workspace.yaml 配置中指定的, 可以通过 pnpm list --json -r 来获取所有内部包, 基于此再做过滤.
+...
+https://chat.deepseek.com/a/chat/s/f2241a08-daf7-4c21-b266-ef53b3d836e6
+2025-03-06
 
-https://github.com/microsoft/typescript-go/discussions/411
-2025-03
+运行 pnpm -r run build 构建问题.
+在 monorepo 里运行 pnpm run build 时, 因为有对 build 出的目录删除操作, 如果不设置 workspace-concurrency=1 就会报错, 但设置后速度就很慢. 应该怎么解决?
+https://gemini.google.com/app/f37076c19be3c895
+2025-04-11
+在 npmrc 里设置 `workspace-concurrency=1` (注意与`--parallel`区别) 的用途:
+- 避免并发引发的竞态问题: 各个子项目在构建、清理或其他任务中可能存在共享资源（比如同一个目录、文件或网络资源）的写入冲突，强制串行执行可以防止由于并发操作带来的竞态条件和文件锁冲突。
+- 任务之间存在依赖或副作用: 当某些任务必须按照严格的顺序完成，或者前一个任务的产物会影响下一个任务的执行.
+在设置 pnpm 的 workspace-concurrency = 1  时候, 怎么利用 nx 能缓存构建结果加速构建过程?
+2025-03-13
+pnpm -r run build 怎么先构建被依赖的包?
+对于 npm alias 形式的依赖, 没有先构建 dependencies 是怎么了?
+2025-02-28
+使用 pnpm 未把 dependencies 构建完成,而导致 dependent 构建失败的问题
+https://stackoverflow.com/questions/72216431/how-to-control-pnpm-workspace-build-order
+2025-02
 
-monorepo 项目根目录 tsconfig 里已配置 "paths": { "@xx/monoaid": ["./common/monoaid/src/index.ts"] }
-根目录有个 build.mjs 文件,内容有 import { xx } from '@xx/monoaid';
-使用 node ./build.mjs 运行报错 Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@xx/monoaid'
-这是因为 TypeScript 的 paths 配置只影响 TypeScript 编译器和工具（如 IDE 的代码提示），而不会直接影响运行时（Node.js）。Node.js 不会解析 tsconfig.json 中的 paths，所以它找不到 @xx/monoaid 模块。
-2024-12
+npm 的 dependencies 写了 latest, 是怎么解析版本的?
+如果 最新发布的版本 是个 alpha 但不是 latest 标签, 会对它做解析吗?
+这个最新的 alpha 版本的依赖有缺失, npm install 包的 latest 版本时, 实际不应安装这个 alpha 版本, 但 先对这个 alpha 版本 报错 No matching version found, 导致 安装失败. 是为什么?
+2025-02-13 https://chatgpt.com/share/67ad9bcd-913c-8008-aa33-1edb177b7203
 
-[TypesSript 装饰器源码分析](https://github.com/frontend9/fe9-library/issues/226)
-[使用 TypeScript 实现依赖注入](https://github.com/frontend9/fe9-library/issues/225)
-[如何实现一个 TypeScript 的宏](https://github.com/frontend9/fe9-library/issues/186)
-[让 babel 帮你编译 typescript](https://github.com/frontend9/fe9-library/issues/23)
-https://github.com/zzj3720 (github/toeverything)
-[conditional type 中的联合类型与 never](https://github.com/frontend9/fe9-library/issues/135)
-[TypeScript专栏](https://www.zhihu.com/column/c_206498766)
-2019
+npm install --legacy-peer-deps
+npm v7+ 默认 自动安装各个包的 peerDependencies 但使用了 --legacy-peer-deps 则不会安装,
+需要 包使用者(比如业务仓库) 在 dependencies 或 devDependencies 中自行安装.
+使用 --legacy-peer-deps 的主要风险是运行时兼容性问题。由于忽略了 peer 依赖检查，安装的包可能在运行时无法正常工作。例如，某个组件库可能依赖 react@16 的特定 API，而项目使用 react@17，可能导致功能异常。
+2025-02
+
+前端或 node 项目, 引用A包的时候，比如A引用了B，B里面有overrides/resolutions，最终会装 overrides / resolutions 指向的包吗?
+主项目的 overrides/resolutions 优先级最高，覆盖所有依赖。
+如果主项目没有定义，子依赖的 overrides/resolutions 只会影响其自己的依赖树。
+...
+怎么在运行 npm start / build 之前, 确保 node_modules 里的依赖有被重新 insall 过
+2025-01
+
+npm version 怎么自动升级 monorepo 的 子包依赖版本号
+pnpm 只检查并保持 workspaces 内部包 的最新版本，写成 bash 脚本
+2024-06
+
+
+
+
+
+
+
+
+
+
+
+
+## p/npm
+
+pnpm 安装 jest 分析一下 node_modules 结构. 比如
+.pnpm/@jest+core@29.7.0_ts-node@10.9.2/node_modules 路径里为什么有 ts-node ?
+node_modules/jest/node_modules/.bin/jest 文件里 export NODE_PATH node_modules/.pnpm/jest@29.7.0_emg2r4tyatcnbgvb4hel57idem/node_modules/jest/bin/node_modules
+https://gemini.google.com/app/5c8016f5723f0933
+2025-08-27
+
+pnpm v7 里 public-hoist-pattern 和 hoist-pattern 和 hoist 区别?
+hoist-pattern 默认值是 ['*'] 如果在 .npmrc 里设置了 hoist-pattern[]=*eslint* 最终的 hoist-pattern 值是什么?
+https://chatgpt.com/c/68aed297-1fd4-8332-b822-c4e5d5ef8022
+2025-08-27
+
+在 lerna@8 + pnpm@7 + node@18.16.1 + npm@9.5.1 的 monorepo 项目里:
+- 使用 pnpm publish ./dir/subdir 或者使用 lerna publish 两种方式都不会报错.
+- 使用 npm publish ./dir/subdir 命令发版本. 绝大多数子包 都能正常发布成功, 只有部分子包报错 npm ERR! Cannot set properties of null (setting 'peer') 升级 npm 版本为 10.x 版本 不会报错.
+为什么 pnpm publish 不报错? 这时候 pnpm 和 npm 有什么关系? 是应该使用 pnpm 还是 npm ?
+如果使用 lerna publish 时, 背后实际使用的是 pnpm 还是 npm ?
+发包命令封装在了一个单独的 npm 包中, 默认使用的是 npm publish . 但使用它的项目可以是 npm pnpm yarn 等各种包管理器, 这个抽象出来的 npm 包 应该怎么兼容项目里不同包管理器的情况?
+https://gemini.google.com/app/695adcd1a1cb940e
+https://chatgpt.com/c/68a85205-0acc-8321-9a95-da9ba8e7805c
+2025-08-22~27
+
+const rl = readline.createInterface({
+  input: res,
+  crlfDelay: Infinity, // Recognizes '\r\n' and '\n' as line breaks
+});
+如上 res 是个 流数据, 需要一行行读取. 其实际内容如下
+data: { "response": { "modelVersion": "gemini-2.5-pro1" } }\r\n\r\n
+data: { "response": { "modelVersion": "gemini-2.5-pro2" } }\r\n\r\n
+data: { "response": { "modelVersion": "gemini-2.5-pro3" } }\r\n\r\n
+res 是 PassThrough 对象, 需要先读取到这个对象的实际数据, 做一些修改, 再构造出一个新的 PassThrough 对象.
+2025-07-23
+
+在 node 模块里, 一个函数 需要返回一个 await axios.request() 值. 但又希望不请求真实的服务器地址, 而是直接返回给定的mock结果, 应该怎么做?
+2025-07-22
+
+运行 pnpm store prune 后, 安装遇到如下问题, 是因为本地缓存吗?
+This error may happen when a package is republished to the registry with the same version.
+In this case, the metadata in the local pnpm cache will contain the old integrity checksum.
+没有 republish 但同一个包同一个版本, 发布到了 不同的 registry 上. 是这个问题吗?
+2025-07-20
+
+对于 responseType: 'stream' 的 http 输出, 使用 node 的 readline.createInterface 可以按行读取内容, 怎么能一次全部读取 而不用按行读?
+2025-07-16
+
+pnpm workspaces 会统一添加子包的依赖到根目录的 lock 文件里, 怎么排除某几子包?
+...
+因为公司内部源不全, 安装外部包时 怎么把其依赖的 node_modules 也作为源码, 但不叫 node_modules 这个名字.
+...
+开发阶段的 npm 包设置了 bin 怎么能给其他目录的调用者使用?
+2025-07-13
+
+package.json 的 browser 字段值, 可以怎么写, 分别起到什么作用?
+jest 是使用什么 编译和打包 工具? 是调用 package.json 里的 main 还是 browser 指向的模块?
+设置了 testEnvironment: 'jsdom' 之后, 会使用 browser 指向的模块吗?
+https://chatgpt.com/c/6844032d-7350-8008-a325-40da589b8176
+2025-06-07
+
+pnpm v7 的 list 命令 怎么能 exclude peer dependencies
+https://chatgpt.com/c/68382b61-8408-8008-b85a-2064c39c1dd1
+2025-05-29
+
+修改了 registry 但需要保持原 registry 生成的 pnpm-lock.yaml 文件的版本号一样, 并自动修改 resolution 的 integrity 和 tarball 字段.
+https://github.com/pnpm/pnpm/issues/6667
+https://stackoverflow.com/questions/62439074/override-registry-for-installed-packages-in-package-lock-json
+可行方法: 先用 pnpm install --fix-lockfile 更新 lockfile, 再手动替换 tarball 字段的 registry URL 为新的.
+2025-05-26
+
+详细解释一下 re2 这个包的作用, 以及其与 node-gyp 编译了什么?
+node-re2 是一个 Node.js 模块，它封装了 Google 的 RE2 正则表达式引擎，避免潜在的 ReDoS（正则表达式拒绝服务）攻击。保证线性时间复杂度，从算法层面杜绝 ReDoS。
+node 的 ajv 包 devDependencies 依赖了 re2 , re2 依赖了 install-artifact-from-github 和 node-gyp . 在 安装包过程中, re2 会尝试下载 https://github.com/uhop/node-re2/releases/download/1.20.12/darwin-x64-108.br 这个预编译文件, 若无预编译二进制 调用 node-gyp 编译 RE2 源码，生成适配当前环境的 .node 文件。
+https://gemini.google.com/app/8db2f2b251d9f63e
+...
+在 package.json 里的 pnpm overrides 字段, 怎么指定使用 workspaces 里某个包的版本, 并自动跟随版本变化.
+2025-05-21
+
+同一个 npm 包, 在不同的 registry 的 integrity 为什么不一样, 怎么修复?
+如果是从其他 registry 同步到另一个 registry 的包, 他们的 integrity 一样吗?
+切换 Registry 之后, 使用 node 脚本修改 lock 文件, 需要让 lock 文件里的依赖包名和版本号都不变. 应该怎么处理?
+https://gemini.google.com/app/8bd107edfc557f66
+2025-05-13
+
+现有不同的 git 仓库, 其内部代码大致一样, 但 npmrc 不同. 虽然已经用 process.chdir 切换到了相应的目录. 但随后在运行 child_process spawn 时候, process env 里的 npm 相关配置 设置使用了 chdir 之前目录的配置. 这跟 spawn 的 cwd 设置有关系吗? 应该怎么解决?
+怎么知道在设置 cwd 后, spawn 函数执行时候的 process env 参数有哪些?
+https://gemini.google.com/app/c3b2f45e5789965b
+2025-05-08
+
+使用 npm child_process exec 调用 npm publish ./dir 怎么获取发布包的成功和失败状态, 以及包的 name 和 version 信息?
+2025-05-06
+
+使用 nodejs 删除 pnpm-lock.yaml 里的 resolution 下的 tarball 字段, 其他内容保持不变.
+2025-04-27
+
+pnpm 里没有和 npm 的 omit-lockfile-registry-resolved 一样作用的配置吗?
+pnpm 能生成和使用 npm-shrinkwrap 文件, 代替 lock 文件使用吗?
+2025-04-16
+
+项目 package.json 里的 packageManager 作用, 为什么能让系统安装的 pnpm 版本不生效?
+2025-04-15
+
+npm install 时生成的 lock 文件里每个包的 integrity 字段用于确保包文件的完整性，其值通过特定算法计算文件内容的哈希值生成。包内容相同则 integrity 相同，与不同的 registry 无关 与 yarn pnpm 等包管理器无关. 若内容有差异（如恶意篡改、非官方修改版 即使版本号相同），则 integrity 不同。
+是 npm 利用 integrity 防止包被恶意篡改的核心机制。
+怎么能不生成 package-lock.json 文件里的 resolved 和 pnpm-lock.json 文件里的 tarball 字段?
+https://github.com/npm/npm/issues/16849
+2025-04-15
+
+pnpm install 后的 lock 文件里的 tarball 字段的生成规则是什么?
+生成的结果是 tarball: npm/@types/babel__traverse/-/babel__traverse-7.20.7.tgz 但实际多了 npm/ 前缀, 是什么原因? 这个前缀导致下载这个包时报了 404 错误.
+虽然有 npm/ 前缀, 在本地电脑运行 pnpm install 不会报错, 但在流水线里会报 404 错误. 什么原因?
+2025-04-14
+
+npm 和 pnpm 在 .npmrc 文件里 可通用的配置项 都有哪些?
+怎么让 pnpm 保持和 npm 一样的 模块安装方式, 不要有 node_modules/.pnpm 目录.
+2025-04-08
+
+单独的 npm 包 execa 里的 sync 和 child_process 里的 execSync 的区别?
+https://chat.deepseek.com/a/chat/s/9af55d01-f490-46bc-b8a5-677cd1a2a3bc
+2025-03-17
+
+使用 pnpm 安装了依赖, 但在 package.json 的 scripts 里使用 npm run lint, 这样有问题吗?
+如果是 monorepo 项目, 在子包里运行, 怎么查找 bin 下的二进制文件?
+https://chat.deepseek.com/a/chat/s/133eb6d1-d73f-4457-b92a-8a725cad3d1d
+2025-03-13
+
+使用 pnpm 为了避免在 package.json 里声明, 在 postinstall 或 prepare 阶段 安装一个依赖, 怎么能避免自动修改 lock 文件.
+... 结果
+"scripts": {
+"postinstall": "pnpm install nx@latest --lockfile=false --ignore-workspace --dir ./tmp",
+}
+https://chatgpt.com/c/67cd4e89-f4a4-8008-b5e1-89bfe0c831a8
+https://chat.deepseek.com/a/chat/s/3c5acb32-1b6b-4e8c-9808-25ebc8f419d8
+https://gemini.google.com/app/9f8cca7169306de3
+2025-03-09
+
+npm yarn 和 pnpm 的 lock 文件内容结构详细解释?
+现在使用 pnpm 工具, 有两个环境, 比如 A 环境 registry 是 https://ra.com 生成了 lock 文件. 但 B 环境 registry 是 https://rb.com , 希望复用 A 环境生成的 lock 文件, 怎么做到? pnpm-lock.yaml 文件里的 tarball 地址, 怎么能不区分 ra rb 的域名?
+2025-01
+
+lockfile 出现合并冲突，主流的包管理工具都支持运行依赖安装命令（npm install/yarn/pnpm install）来自动解决冲突。
+在 主分支 上合入 开发分支（git merge feat-branch），theirs 指的就是开发分支，ours 指的是主分支，如果两个分支同时更新同一模块的版本号、对 lockfile 进行合并的策略:
+- npm: 深合并，并以当前分支（ ours ）的为准
+- yarn: 浅合并，并以目标分支（theirs）的为准
+- pnpm: 深合并，以版本号大的为准 (认为 新版本出现的问题会比旧版本更少)
+  - 关注直接依赖 搜素 specifiers 的版本变更，对于直接依赖引入的间接依赖，自动升级出错的概率较小（一旦出错影响的不只一个项目），且 review 成本太高，选择信任社区。
+  - 支持在每个分支中生成锁文件 https://github.com/pnpm/pnpm/pull/4475 。
+  - [@types/react 18.3.5 bug](https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/70418) 在 package.json 设置 resolutions 锁定版本。
+
+
+------ 版本号
+
+某个版本的 nodejs 可以使用非自带的 npm 版本吗, 有版本范围要求吗?
+2025-08-26
+
+这个返回什么 semver.satisfies('0.0.11-beta.0', '^0.0.10', { includePrerelease: true })
+https://gemini.google.com/app/858055839ab4ed51
+只有 gemini 2.5pro 回答正确, 其他的最新模型 ChatGPT@5 grok@4 deepseek 千问 豆包 Kimi 全部回答错误.
+https://stackoverflow.com/a/77837308/2190503
+^0.0.1 - 0.0.1 (即使有 0.0.2 npm update 也不会升级) ^0.0.z won't update anything, because there is no element after z .
+2025-08-25
+
+node-semver 怎么获取 Tilde 或 Caret 标记?
+代码依赖里一般都写 Tilde 或 Caret 标记, 怎么用 node-semver 做解析?
+2025-03-05
+
+确保依赖版本始终同步的一种常用方法是，在 package.json 中为工作区包的依赖项指定严格的版本号，而不是 ^ 或 ~ 这样的语义版本号范围。这样做可以避免依赖更新时出现的意外问题。
+
+对于应用项目来说，可以直接使用固定版本；但是对于类库项目，不推荐固定版本，有以下原因:
+- 依赖该类库的应用项目无法充分复用依赖: 比如 ^1.0.0 和 ^1.1.0 可以合并成 ^1.1.0）
+- 类库项目的间接依赖出现安全漏洞时，无法通过重新安装依赖直接修复
+- 锁定直接依赖的版本也不完全有效，丢失 lock 后，直接依赖的间接依赖还是会进行升级，进而导致 BREAKING CHANGE
+- 锁版本 就得信任其他依赖不会出现问题（听天由命）
+- 尽量由开发流程保证，有冲突就复测，并做好充足的人工 review
+
+在开发一个 npm包 时，你的 npm包 是需要被其他仓库依赖的，由于扁平安装机制，如果你锁定了依赖包版本，你的依赖包就不能和其他依赖包共享同一 semver 范围内的依赖包，这样会造成不必要的冗余。所以我们不应该把package-lock.json 文件发布出去（ npm 默认也不会把 package-lock.json 文件发布出去）。
+
+npm 包的主版本号为 0 时，会被认为是一个不稳定版本，主版本号和次版本号都为 0: ^0.0.z、~0.0.z 都被当作固定版本，主版本号为 0: ^0.y.z 表现和 ~0.y.z 相同，只保持修订号为最新版本。
+1.0.0 的版本号用于界定公共 API，对外部发布一个正式版本的npm包时，把它的版本标为1.0.0。
+
+pre-release 预发布版本号的排序规则是:
+不同预发布版本类型之间 alpha < beta < rc < release（即稳定版本，没有预发布标识符）。
+同一预发布版本类型下，数字越大，版本越新，例如 1.0.0-alpha.1 < 1.0.0-alpha.2。
+比如 rc-0..n > beta-0..n > alpha-2..
+2024-07~12
+
+
+------ 总结
+
+npm源 http://registry.npmjs.org/esbuild/0.21.4
+ali源 https://registry.npmmirror.com/esbuild/0.21.4
+腾讯源 https://mirrors.cloud.tencent.com/npm/esbuild/0.21.4
+https://docs.npmjs.com/cli/v10/commands/npm
+
+https://docs.npmjs.com/cli/v10/using-npm/config
+https://docs.npmjs.com/cli/v10/configuring-npm/package-json
+https://docs.npmjs.com/cli/v9/using-npm/config
+http://yarnpkg.com
+
+https://jpospisil.com/2017/06/02/understanding-lock-files-in-npm-5
+
+https://npmtrends.com/lint-staged-vs-pre-commit-vs-pretty-quick
+https://www.npmtrends.com/jsplumb-vs-mxgraph
+
+node/npm 各个大版本 发布时间:
+https://nodejs.org/en/about/previous-releases
+https://www.npmjs.com/package/npm?activeTab=versions
+https://github.com/npm/cli/releases
+
+https://www.npmjs.com/package/npm-check
+https://www.npmjs.com/package/depcheck
+
+
+--- pnpm
+
+http://pnpm.io  注意: 从 pnpm/CHANGELOG 里查看 API 的变更.
+https://github.com/pnpm/pnpm/blob/main/pnpm/CHANGELOG.md
+https://github.com/pnpm/pnpm.io/blob/v7/docs/npmrc.md
+https://github.com/pnpm/pnpm.io/blob/v7/versioned_docs_archived/version-4.x/npmrc.md
+注意: pnpm v7 文档 不全, 有些在 version-4.x 里
+
+package.json 里设置 `"packageManager": "pnpm@7.33.7"` 会使得 在当前目录运行 pnpm -v 始终是 7.33.7 而忽略系统安装的 不同 pnpm 版本.
+原因是 https://github.com/nodejs/corepack
+
+https://pnpm.io/symlinked-node-modules-structure
+分析 `/node_modules/.modules.yaml` 文件
+pnpm(v7+) 的 Isolated 即通过 node-linker=hoisted 设置
+每个子包的 node_modules 只存自己依赖的软链接  没有 hoist 到顶层
+
+场景: 当同一个包 pkga@1.1.1 "分别"发到不同的 registry a/b/c 时, 会生成不同的 integrity a/b/c.
+- 先在 registry a 下, 进行 pnpm install 会缓存 pkga@1.1.1 在 pnpm store path 目录下, 并生成 pnpm-lock.yaml 文件.
+- 再拷贝此 lock 文件到 registry b 下. lock 文件中 pkga@1.1.1 仍是 integrity-a (实际应该修改为 integrity-b ). 但 pnpm install 仍能成功, 为什么?
+因为 直接读了 pnpm store path 目录下的 pkga 的缓存.
+注意: 但在 服务器上, a/b 属于不同容器, b 读不了 a 的缓存, b 在安装时候 就会报错.
+在 registry b 里 运行 `rm -rf "$(pnpm store path)" && pnpm install --frozen-lockfile` 即可复现错误.
+
+https://pnpm.io/workspaces monorepo 场景:
+比如 package.json 文件的 "dependencies": { "demo0": "npm:demo1@^2.0.1", "demo": "workspace:demo2@*" }
+这类 npm alias 依赖. 内部存在 demo2 这个包, 但 pnpm ls demo2 无结果, 而 pnpm ls demo 有结果.
+
+
+https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-module-type-aliases/package.json
+https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-types/package.json
+注意如上 @docusaurus/module-type-aliases 和 @docusaurus/types 里 package.json 的 "@types/react": "*" 这种 * 的写法, 会依赖 monorepo 根目录的 @types/react 版本.
+场景:
+在 pnpm 下, 因为 不同子包 依赖的 @types/react 大版本不一致, 不能在 根目录下 设置统一的 @types/react 版本.
+子包 a/b/c 依赖了 @types/react@16^ 子包 d/e/f 及其下层依赖 因为声明了 @types/react: * 就也实际使用了 @types/react@16^ 版本, 但他们实际需要的是 @types/react@18^ 版本, 这样导致错误.
+通过 `pnpm why -r @types/react` 查看实际使用版本.
+
+https://www.npmjs.com/package/@types/react-dom/v/18.3.1?activeTab=code
+比如 @types/react-dom 18 的 "dependencies": { "@types/react": "*" } 版本号是 *
+在 monorepo 中 存在 @types/react 16 17 18 多个版本, pnpm 使用 最低版本 16.
+而除了 "古老" 的包外 其他包实际需要的是 @types/react 18 版本, 使用 pnpm overrides 功能统一覆盖解决.
+
+
+phantom dependencies
+项目里存在 幽灵依赖 时 pnpm 会自动抛错. monorepo 子包存在幽灵依赖 但安装没报错.
+`pnpm dlx depcheck`  Missing dependencies 即为幽灵依赖
+
+pnpm 的设计哲学不鼓励“幽灵依赖”（phantom dependencies）。即使你在根目录安装了 @types/react，如果某个子包的代码里 import 了 React，最佳实践依然是在该子包的 package.json 中也声明 devDependencies。版本号可以宽松一些（例如 * 或 workspace:*），pnpm 会自动解析到根目录安装的那个唯一版本。
+pnpm 会将所有 workspace 包的公共依赖提升（hoist） 到根目录的 node_modules 中。
+依赖隔离：每个包的 node_modules 目录只包含其直接依赖。间接依赖通过符号链接从全局存储或依赖的 node_modules 中获取。关键点是：一个包无法访问其兄弟依赖或祖父依赖，除非它们被明确声明为直接依赖或通过依赖链传递。
+
+
+
+
+
+
+## 命令 p/npm git lerna
+
+```sh
+rm -rf node_modules **/node_modules
+
+ls -l $(which npm)
+npm whoami
+npm profile get
+npm access list packages --registry https://registry.npmjs.org
+
+# node env 优先级: 命令行 env > `/project/.npmrc` > `~/.npmrc` > `/etc/npmrc`
+npm config list -l  # 按 env 优先级显示 所有值
+npm config list --json  # 只显示 最终实际生效 的值
+npm config get registry  # 获取 最终实际生效 的某个值
+npm config set -g registry https://registry.npmmirror.com
+npm config get cache  # 一般为 ~/.npm 查看 _npx 目录
+npm cache clean --force
+
+# install 时除了 可选依赖 (optionalDependencies) 其他遇到 404 会报错退出.
+npm install --verbose > install.log
+# 安装 npm alias 别名依赖
+npm install --registry=https://registry.npmmirror.com axios4@npm:axios@1.4.0 axios5@npm:axios@1.5.0
+npm install --prefix ./dir
+npm run build --prefix ./dir
+
+# 从 git 安装, 验证 ssh -T git@github.com   ssh -v git@github.com
+npm install git+ssh://git@github.com:warmhug/demo.git#develop
+npm install git+https://github.com/warmhug/demo.git
+npm install https://warmhug:glpat-xx@github.com/warmhug/my-private-lib.git  # Personal Access Token
+# 默认情况下， /usr/local 目录属于 root，普通用户没有权限修改
+# 修改 /usr/local/lib/node_modules 的权限（不推荐） 推荐使用 nvm
+sudo chown -R $(whoami) /usr/local/lib/node_modules
+sudo chown -R $(whoami) /usr/local/bin
+
+# 设置 dist-tag
+npm dist-tag add @huajs/demo latest
+npm root -g
+npm ls -g node-sass
+npm ls --long node-sass
+npm ls --all --json --loglevel silent
+
+npm view npm@10.8.2 engines  # 查看 npm 兼容的 node 版本范围
+npm view monoaid@0.11.0 main
+npm view monoaid@0.11.0 exports --json
+node -p process.env
+node -e "console.log(module.paths)"
+
+# link
+npm link  # cd my-lib , 会创建 globally-installed my-lib
+npm link my-lib  # cd my-app
+# 使用 file: 协议替代 link , 不会创建 globally-installed my-lib
+npm install ../path/to/my-lib
+ln -s /abs/path/to/my-cli ./node_modules/my-cli  # 手动软链接 node_modules
+
+# npm monorepo 在根目录运行 npm v7(2020-10发布) 支持 Workspaces
+npm version 0.1.5 --workspaces --no-git-tag-version --allow-same-version=true
+npm version patch --workspace=packages/button --workspace=packages/card --no-git-tag-version --allow-same-version=true -f
+# 如果只改某个子包版本号，进入到子包 设置 --workspaces=false
+npm version patch --workspaces=false --no-git-tag-version
+npm version prerelease --preid rc --no-git-tag-version
+
+npm pack --dry-run --json
+
+# 发包 登录账号
+# npm publish 时使用的 registry 与 npmrc 里的 registry 和 @scope/registry 哪个起作用?
+# 命令行 --registry > @scope:registry > 全局/项目级 registry > npm 官方 registry
+npm publish
+npm publish ./dir/subdir  # 必须是相对路径
+npm publish --dry-run
+npm publish --no-git-checks --tag beta
+npx -p npm@9.6.7 npm publish --dry-run
+
+# corepack (Node.js >=16.9 自带)
+corepack -h  # -v
+# 安装并启用指定版本  会把 全局默认 npm 版本 切换到 9.6.7
+corepack prepare npm@9.6.7 --activate
+
+npx mocha --version  # 在项目的 node_modules/.bin 目录中查找可执行文件
+npx http-server --ignore-existing # 忽略本地的同名模块
+# https://code.visualstudio.com/api/get-started/your-first-extension
+npx --package yo --package generator-code -- yo code
+npm_config_registry=https://registry.npmmirror.com/ npx <package-name>
+
+npm search @ant-design --searchlimit=100 --json  # 搜索组织下的包
+
+
+# === pnpm
+
+ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
+
+pnpm install --dir ./dir  # 自动进去指定目录安装. 同 npm install --prefix ./dir
+pnpm install --frozen-lockfile  # 流水线里安装
+# 只安装某个子包的依赖. 不推荐 cd 进入子目录安装 无法链接内部依赖, 破坏单一锁文件, 依赖版本冲突
+pnpm install --filter <package_name>
+pnpm --filter "@huajs/demo..." build
+pnpm --filter "@xx/quick-*..." build  # 运行 筛选出的包 scripts 里比如 test build 等
+
+# monorepo 依赖关系
+pnpx nx graph
+pnpm ls -r
+pnpm ls -r demo1
+pnpm ls -r --only-projects --parseable --filter "@xx/yy"
+pnpm ls  # 列出 package.json 中声明的直接依赖
+pnpm ls react  # 只列出 react 依赖
+pnpm ls --json --long
+pnpm ls --depth 2 ts-jest
+pnpm ls --depth Infinity fast-glob  # 等效于 pnpm why -r fast-glob
+
+# pnpm add pkg 和 pnpm install pkg 的区别?
+pnpm add express@2 react@">=0.1.0 <0.2.0"
+pnpm add ./package.tar.gz
+pnpm add ./some-directory  # same as running pnpm link
+
+rm -rf "$(pnpm store path)"
+pnpm store prune
+pnpm import package‑lock.json  # 导入 npm lock 或 npm-shrinkwrap.json 文件
+pnpx create-react-app@next ./my-app  # npm 的 npx 等效于 pnpm 的 pnpx = pnpm dlx
+
+pnpm outdated -r # 只检测 lock文件(不是package.json) 里的依赖版本号 是否过时
+pnpm outdated "@ant-design/pro-*"
+# 升级到 npm latest 指定的版本 如果 workspace 内部包 版本号大于npm最新版 则使用内部包版本号
+pnpm up "@ant-design/pro-*" -r --latest
+pnpm up "@ant-design/pro-*" -r  # 加 --workspace 作用一样
+```
+
+
+.npmrc 文件
+
+```sh
+ignore-scripts=true
+legacy-peer-deps=true
+omit-lockfile-registry-resolved=true  # npm 特有
+#
+# configs for npm/pnpm/yarn
+#
+# node-options=--max_old_space_size=8192
+; loglevel=verbose
+package-lock=false
+update-notifier=false
+engine-strict=true  # 对 package.json 里的 "engines": { "node": ">=18" } 起作用
+
+registry=https://registry.npmmirror.com
+#
+# pnpm 特有配置
+#
+verify-store-integrity=false  # 7.7.0 开始默认 false. npm 没有相匹配的配置
+verify-deps-before-run=install
+link-workspace-packages=deep
+workspace-concurrency=1  # default: Infinity
+
+# pnpm@7 public-hoist-pattern 默认是 ['*types*', '*eslint*', '@prettier/plugin-*', '*prettier-plugin-*']
+public-hoist-pattern[]  # 设置为空 覆盖默认值, 任何包 都不能被提升到根 node_modules
+# 向 默认值 追加新值
+# public-hoist-pattern[]=@types*  # 所有子包 types 当能统一版本时, 提升依赖
+# public-hoist-pattern[]=!@types*  # 所有子包 types 禁止 提升依赖
+# public-hoist-pattern[]=!@types/react
+# hoist-pattern[]=!@types/react
+# hoist-pattern[]=!@types/react-dom
+
+auto-install-peers=false
+strict-peer-dependencies=false  # pnpm@7 默认是 true
+
+# enable-pre-post-scripts=true
+# package-manager-strict=true  # since v9 默认 true , v10 packageManagerStrict
+# resolution-mode=lowest-direct
+lockfile=false
+# lockfile-include-tarball-url=false  # 实际不起作用
+recursive-install=false
+reporter=append-only
+pnpmfile=node_modules/.pnpm-config/@pnpm/types-fixer/pnpmfile.cjs
+```
+
+
+
+------ git
 
 
 ```sh
 
-# pnpm tsc 当存在多个版本 typescript 查看当前使用的是哪个
-pnpm exec tsc -v  # pnpx tsc -v 会报错
-pnpm exec which tsc  # 查看
-ls -l ./node_modules/.bin/tsc
+# -f 强制运行  -d 同时考虑子目录  -x 清理忽略文件  -n 模拟删除操作.
+git clean -fdxn  # git 删除 Untracked files
 
-pnpm exec tsc --build --traceResolution > a.log
+git ls-files -m  # 列出所有已跟踪且内容已修改的文件
+git ls-files -o --exclude-standard  # 列出所有未跟踪且不在 .gitignore 中的文件
+git ls-files -m -o --exclude-standard -z  # 一起列出来
+git ls-files -m -o --exclude-standard | tr '\n' ' '  # 替换换行为空格
+# 修改 git status --porcelain 的输出内容
+git status --porcelain | awk '$1 == "M" || $1 == "??" {print $2}' | tr '\n' ' '
+# 不检测更新
+git update-index --skip-worktree -- .npmrc  # 比 assume-unchanged 更好
+git update-index --no-skip-worktree -- .npmrc
+git update-index --assume-unchanged file1 file2
+git update-index --no-assume-unchanged file1 file2  # 恢复检测
+# https://stackoverflow.com/questions/12288212/git-update-index-assume-unchanged-on-directory
+# 对于 untracked files 不支持使用 assume-unchanged 先加入到 .git/info/exclude 排除
+git ls-files -o --exclude-standard >> .git/info/exclude
+git update-index --assume-unchanged $(git ls-files -m | tr '\n' ' ')
+git ls-files -v | grep '^[a-z]'  # 获取已经被 assume-unchanged 的文件
 
-# 查看当前项目 typescript 版本
-npx tsc -v
-npx tsc --showConfig
-# 输出 resolution 日志
-npx tsc --traceResolution
-# 如果遇到 react 问题, 搜 Resolving module 'react' from
-npx tsc -p tsconfig.json --traceResolution
+git remote [-v add | set-url] origin git@xxx.git
+git ls-remote --heads origin
+git ls-remote --tags  # 查看远程仓库所有 tags
+git config -l  # --list
 
-# 遇到ts类型报错 Cannot find module '@xx' or its corresponding type declarations.
-# 打开报错的 ts 文件, 按 Cmd+Shift+P 输入 TypeScript: Go to Project Configuration 它会跳转到当前文件生效的 tsconfig
+git commit --amend  # 修改提交信息
+git commit --no-edit  # 使用上一次的提交信息进行提交 (未进行过提交会失败)
+# 压缩 commit 保留压缩前的所有commit信息 其中的 hash 修改记录 也会被保留
+git merge --squash feature-branch
+git add . && git commit --no-verify
+
+git pull --rebase
+git pull   # 仅拉取与当前分支相关的标签 只有当标签指向的提交是由于拉取特定分支而下载到本地时，这些标签才会被自动下载。
+git pull --prune	# 更新所有远程分支引用，并删除本地已失效的远程分支引用
+git fetch   # 获取 当前origin的远程 所有分支 信息
+git fetch --all  # 获取 当前origin和设置的其他origin的 所有分支 信息
+git fetch origin master
+git branch -m newBranchName  # 重命名分支
+git checkout HEAD~1 -- file1 dir1
+git reset HEAD~1 file1 dir1
+
+git log master..feat-xx --oneline
+git log -n 10
+git log origin/master -- .npmrc package.json
+git log --name-status # 显示文件增删状态
+git log --graph
+git log --oneline --decorate
+git log --oneline --first-parent --reverse | tail -1
+git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all
+git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+
+# HEAD = HEAD~0 = HEAD^0 当前提交
+# HEAD~1 = HEAD^ 主线的上一次提交  HEAD~3 = HEAD^^^ 主线的上三次提交
+# HEAD^1 主线提交（第一个父提交） HEAD^2 第2个并入的分支的最近一次的提交
+# HEAD^2~3 第2个并入的分支 的最近第 4 次的提交
+git diff HEAD^  # 比较 最新提交 和 其父提交 的差异
+git diff master..feat-xx
+git diff origin/master..origin/master -- .npmrc
+git diff --name-only version1/branch1 version2/branch2
+# 比较当前分支和 master 分支的实际不同的内容
+git diff --name-only master..HEAD
+git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space -p --stat [file/dir]
+git diff master..HEAD -b -w --ignore-blank-lines --ignore-space-change --ignore-all-space --name-only
+git diff @{upstream}
+# 创建和 apply 补丁
+# 当前为 branch-a 分支，想应用 branch-b 相对于 branch-a 的更改
+git diff branch-a..branch-b > changes.patch
+git diff branch-a..branch-b -- path/to/file > changes.patch
+git apply changes.patch
+
+git merge -X ours master  # 在 feature 分支执行
+git checkout --ours .  # 恢复被 master 分支删除的文件
+# 此时 -X ours 含义:
+# 当某个文件 被双方同时修改 时，以当前分支（feature）的版本为准.
+# 如果 master 删除了文件，而 feature 没有修改这个文件，那 Git 会直接认为:
+# master 删除生效（文件被删） 因为 feature 没有冲突性修改  文件就显示成 deleted: xx/yy/file
+
+git merge feature  # git merge 默认行为是“如果可能就快进，否则就三方合并”。 不能快进 则会产生 Merge pull request pull_id from xx_branch 或者 Merge branch “branch_name” 信息
+git merge --no-ff  # 强制进行三方合并，即使可以进行快进合并
+git merge --ff-only  # 只允许进行快进合并。如果不能快进合并，它会中止合并操作并报错
+
+# git rebase 需要经常 reapply 其他提交的改动，commit 的时间顺序也会乱掉。只对自己的分支 commit 做 rebase，公共的分支不要 rebase. 其后续的 commit hash 将全部改变
+git rebase -i [commit_id] # hash 换成 master
+git rebase -i --root # 删除第一个提交
+git rebase origin/master
+git push --force-with-lease  # 强制提交 比 -f 安全
+
+# cherry-pick 和 rebase 最终都会在操作完之后、修改同样提交的 commit hash 值
+# 场景: 比如要 pick 的 来源分支的 commit 只是 HADE~1, 但 来源分支的 HEAD~5 和 目标分支的 HEAD~1 有相同的 commit_hash (即来源分支同步了最新的 master commit 但目标分支没有同步), 此时来源分支的 HADE~1到4 (而不是预期的只是HADE~1) 的 commit 都会 apply 到 目标分支, 并且在目标分支 同步过来的 HADE~1到4 的 commit hash 都会被重新修改。
+git cherry-pick src_branch_commit_hash  # 切换到 目标分支
+# 从另一个仓库的分支 pick 先 git fetch <other-repo-url> <other-branch>
+git cherry-pick commit_hash # commit_hash 可以是其他仓库的hash
+
+# --soft 不修改本地文件 --hard 本地的文件修改都被丢弃
+git reset --[soft | hard] [origin/master | file | 057d]
+git reset --hard && git clean --force -dfx # pristine
+git reset --hard && git clean --force -df # wipe
+git revert commit_id # 回滚代码 不抹掉 提交记录 产生新纪录
+# git reflog 的记录只会保存在本地，不会推送到远程仓库。
+git reflog  # 撤销 reset 时 找到撤销前的 commit_id 再 git reset 即可
+
+
+# Git 标签是与特定的提交关联的，而不是直接与分支关联 。
+# 标签是提交的别名，只要标签存在，它所指向的提交（以及该提交的历史）就会被保留 。 删除标签只会移除这个标签的“标签”本身，而不会影响代码或提交 。同样地，删除分支也不会删除其指向的提交 。
+# tag 只附在一个 commit 上、如果这个 commit 被 squash，但 tag 仍然存在。
+# https://stackoverflow.com/questions/54281360/what-happens-to-tags-of-squashed-commits
+# 在 git rebase 之后，标签可能会指向新的历史中任何分支都无法访问的提交。在 rebase 后的历史中，这些标签有时被称为“悬空的”或“孤立的”。然而，标签本身仍然存在于仓库中。
+git tag v1.0  # 给当前分支最新 commit 打 tag
+git tag v1.0 commit_id  # 给当前分支 某个 commit_id 打 tag
+# 打 annotated tags  使用 git show tag_name 会看到包含 tagger 标记
+git tag -a 0.0.1 -m 'Release version 0.0.1'
+git tag -a -m '@pkg/xx@0.1.16' @pkg/xx@0.1.16
+git tag -a @pkg/xx@0.1.16 -m '@pkg/xx@0.1.16' 4da6c3d4 -f
+# 获取 tags
+git pull --tags   # 拉取所有分支的更新 + 所有 tags .  注意: 远程仓库可能包含大量历史 tags（如版本发布标签），全量拉取会占用额外存储和网络资源.
+git fetch --prune-tags --prune -f # 删除本地已被远程删除的标签 Git 2.20 及以上版本
+git fetch --tags -f  # 强制覆盖本地 tags
+git fetch --tags --all  # 额外获取所有 tags 信息
+# 推送 tags
+git push [origin] --tags    # 推送所有标签到服务器
+git push --follow-tags --no-verify origin f-i18n-xx
+git push origin tag_name
+git push origin --delete tag_name
+git push origin :refs/tags/tag_name
+# 删除 tags
+git tag -d tag_name
+git tag -d $(git tag -l)  # 删除 本地所有 tags
+# 搜索本地的某个 tag_name
+git tag -l '*tag_name*'
+git tag | grep tag_name
+# 按时间排序的最近 5 个 tag (再转为 json 数组)
+git tag --sort=-creatordate | head -n 5
+git tag --sort=-creatordate | head -n 5 | awk 'BEGIN{printf "["} {printf "%s\"%s\"", sep, $0; sep=", "} END{print "]"}'
+git for-each-ref --sort=-creatordate --count=5 --format='%(refname:short) %(objectname)' refs/tags
+git for-each-ref refs/tags/ --format='%(refname:short) %(objectname)'
+# 查看 tag 信息
+git describe --first-parent
+git describe --all  # 查找所有分支上的标签
+git describe --tags
+git describe --tags HEAD
+git describe --tags --match "xx"  # 仅匹配名称包含 "xx" 的标签
+git show-ref --tags
+git tag -v xx@0.1.1  # 非 annotated tags 会报错 error: cannot verify a non-tag object
+
+# 查看当前分支上有哪些 tags
+git tag --merged HEAD / feat1 # 所有直接打在该分支的 commit 上的 tag (无论新旧)
+git tag --no-contains master  # 获取那些不包含在 master 中的标签
+git tag --contains HEAD  # 查看直接指向当前分支 最新 commit 的 tag
+git tag --points-at HEAD  # 查看直接指向当前分支 最新 commit 的 tag
+git tag --points-at 6627f6  # 查看直接指向 某个 commit_id 的 tag
+
+# 遍历所有本地的 tag，检查每个 tag 指向的提交是否是当前分支（HEAD）的祖先, 即在当前分支的历史中。
+for tag in $(git tag); do if git merge-base --is-ancestor "$tag" HEAD; then echo "$tag"; fi; done
+
+# 操作 https://stackoverflow.com/a/930495/2190503
+# 在 .gitattributes 文件里配置 当 pnpm-lock.yaml 出现冲突时，将以当前分支为准
+pnpm-lock.yaml merge=ours
+
+# dangling object
+git fsck --full --no-reflog | grep "dangling commit"
+# dangling commit abc12345 本地没了, 远程存在. 怎么把 远程的加载到本地?
+# https://chatgpt.com/c/68a5daa6-ff5c-8328-818c-fd3d7f1cabeb
+git fetch origin abc12345
+git checkout -b recovered-branch abc12345
+
+# 其他
+git rev-list --left-right --count origin/branch1..branch1
+git reflog show branch1 -n5 | grep 'rebase'
+
+# 每个 commit 都包含两个时间戳 作者时间（AuthorDate） 提交时间（CommitterDate）
+# Git rebase、amend、cherry-pick 等操作会保留旧的 AuthorDate，但会更新 CommitDate
+git show --no-patch --pretty=fuller commit_id
+
+git lfs pull  # 拉取大文件
+git lfs ls-files  # 检查文件完整性
+
+# --show-toplevel | --short
+git rev-parse --symbolic-full-name --abbrev-ref HEAD
+git symbolic-ref --quiet HEAD
+
+# GitHub stars topics/javascript
+# https://www.star-history.com/#google-gemini/gemini-cli
+# https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
+# https://github.com/topics/javascript
+
+# 搜索 issues
+# https://help.github.com/articles/searching-issues/
+# https://github.com/search?type=Issues&q=xx+in:body+author:warmhug
+# https://github.com/search?type=Issues&q=xx+commenter:warmhug+user:ant-design
+# https://github.com/search?type=Issues&q=xx+commenter:warmhug+repo:ant-design/ant-design-mobile
+
+# GitHub commit 或合并 MR 时，可以自动修改 issue 状态、关闭关联的 issue。
+# 业内成熟的 GIT 分支模型 https://cloud.githubusercontent.com/assets/36899/7315642/015f534c-eaa2-11e4-9882-b7cc7535fb72.png
+# GitHub Issues blog https://gitblog.io/
 ```
 
-TypeScript 的模块解析机制, 查找类型声明的顺序是：
-- 当前包的 node_modules/@types
-- 往上级目录递归找 node_modules/@types
-- global 的类型（如果 tsconfig 配置了）
-如果只限制在当前包查找, 在 tsconfig.json compilerOptions 配置 paths.
-
-https://www.typescriptlang.org/tsconfig/  tsconfig.json 配置
-
-```json
-// 比如是 monorepo 根目录的 tsconfig.json
-{
-  "compilerOptions": {
-    // baseUrl 的 . 和 ./ 一样 ,
-    "baseUrl": "./",
-    "target": "es5",
-    "module": "esnext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "strictBindCallApply": false,
-    "importHelpers": true,
-    // debug
-    "explainFiles": true,
-    "traceResolution": true,
-    //
-    "typeRoots": ["./typings", "./vendor/types"],
-    "types": ["node", "jest", "express"],
-    //
-    "paths": {
-      "tslib": ["node_modules/tslib/tslib.d.ts"],
-      "*": ["./node_modules/*", "*"],
-      "@/*": ["src/*"],
-      "@@/*": ["src/.space/*"],
-      "@xx/yy": ["src/index.ts"]
-    }
-  },
-  "include": ["src/**/*", "tests/**/*"]
-}
-
-// monorepo 子目录 ./packages/_demo/tsconfig.json 内容如下,
-{
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true,
-    "paths": {
-        // 注意 虽然是在 packages/_demo 子目录里, 但这里 compilerOptions - paths 路径写法是相对 项目根目录 .
-        // 如果再设了 baseUrl: "./" 才是相对 packages/_demo 解析
-        // 即 compilerOptions.baseUrl 和 paths 的解析是以：最终（合并后的） tsconfig.json 中的 baseUrl 为准。 https://chatgpt.com/c/6846814a-2dd0-8008-b63c-d61d4825318f
-      "myswr": ["./packages/swr/index.tsx"],
-    }
-  },
-  // 如果是自建的 以 点 开头的目录, 在 unix 系统里会被当做 配置文件 而默认不被 vscode 等解析.
-  // 比如 .xx 在 include 里不能只写 ".xx" 而是 ".xx/**/*"
-  "include": ["./src", "./.i18n/**/*"]
-}
-```
-
-基本语法
-
-```ts
-// @ts-nocheck  // 忽略整个文件
-// @ts-ignore  // 忽略一行
-
-export type * as xTypes from 'x-editor'
-export type { default as xTypes } from 'x-editor'
-
-export type ProFormListItemProps = {
-  onAfterAdd?: (...params: any) => any;
-}
-
-// Arrow function returning an array of numbers
-const getArr2 = (): (string | number)[] => {
-  return [1, '2', 3];
-};
-// arrow function
-const getObj2 = async (): Promise<{ name: string; age: number: [key: string]: any; }> => {
-  return { name: 'Bobby Hadz', age: 30, xx: 'any' };
-};
-// Readonly
-function getTuple(): Readonly<[number, number]> {
-  return [10, 100];
-  // return [10, 100] as const;
-}
-
-// 泛型
-interface GenericInterface<T> {
-  (arg: T): T
-}
-function foo<T> (arg: T): T {
-  return arg
-}
-let output = foo('string') // type of output will be 'string'
-let myFoo: GenericInterface<number> = foo
-myFoo(123)
-
-// 命名空间 types/ajax.d.ts
-declare namespace Ajax {
-  export interface AxiosResponse {
-    data: AjaxResponse
-  }
-  export interface AjaxResponse {
-    code: number,
-    data: object | null | Array<any>,
-    message: string
-  }
-}
-this.axiosRequest({ key: 'idc' }).then((res: Ajax.AjaxResponse) => {
-  console.log(res)
-})
 
 
-// ! 是 typescript 非空断言符，解决 ts 类型空提示问题
 
-// void promise 函数返回值类型
-() => Promise<void>
+------ lerna
 
-// ts高级用法 Omit Pick
-import { INameProps } from './Name';
-type IDashboardNameProps = {
-  className?: string;
-  style: React.CSSProperties;
-} & Pick<INameProps, 'id' | 'onSaved'>;
+```sh
+# https://lerna.js.org/docs/api-reference/commands
+
+# --loglevel silly --yes --no-commit-hooks
+# --include-merged-tags --no-push --no-git-tag-version
+lerna ls --graph # 等效 pnpm ls -r --json
+lerna ls --long # 等效 pnpm ls -r --depth -1 --json 换成 npm 不行
+lerna ls --since master
+lerna ls --since="master" --loglevel=verbose
+lerna ls --since --include-merged-tags
+lerna list --scope=my --include-dependencies --ndjson
+lerna list --since=origin/master -include-dependents --loglevel=verbose
+lerna list --scope=package-A --include-dependencies --since=main
+
+# changed 比较当前工作树与最近的标签之间的差异 不支持 since scope 参数
+lerna changed
+lerna changed --include-merged-tags
+lerna changed --include-merged-tags --loglevel debug
+
+# 比较自上次发布以来的所有包或单个包的差异。依赖 Git 标签来确定上次发布的版本。
+lerna diff
+lerna diff package-name
+
+# lerna version / publish 不支持 --scope 参数
+lerna version patch --exact
+lerna version patch --include-merged-tags --no-push --no-git-tag-version --no-commit-hooks --exact
+lerna version patch --exact --message '🎨 chore(release): Publish' --conventional-commits
+lerna version prerelease --preid beta
+lerna publish prerelease --preid rc --dist-tag rc
+lerna publish from-git --preid rc --dist-tag rc
+lerna publish from-package
+
+# 构建时需包含依赖  使用 concurrency 不要使用 parallel 参数
+lerna run build --include-dependencies --concurrency 4
+
+lerna watch -- echo \$LERNA_PACKAGE_NAME \$LERNA_FILE_CHANGES
+lerna watch -- lerna run build --scope=\$LERNA_PACKAGE_NAME
+
+lerna exec --since --include-merged-tags -- ls -la
+lerna exec --include-merged-tags --concurrency 1 -- "pwd && ls -la"
+lerna exec --scope @ant-design/pro-form -- pnpm version 0.1.5-alpha.0 --no-git-tag-version
+# 可以使用 pnpm up 命令，但升级后的 包的版本号为类似这样 "xxx": "workspace:0.1.3" 需要 lerna/npm publish 命令再次处理.
+lernaCli, 'exec', '--scope', name, '--', `pnpm version ${newVersion}` --workspaces=false --no-git-tag-version --allow-same-version=true`
 ```
 
 
-文件示例
 
-types.ts
+--- jq
 
-```ts
-export interface Config {
-  dr: 'cn' | 'us' | undefined;
-  env: 'prod' | 'testing' | 'local';
-  serviceName?: string;
-  [property: string]: any;
-}
+```sh
+npm view react@19.0.0 --json  | jq '{(.name): .["dist-tags"].latest}'
+echo '[{ "name": 1 }]' | jq -r '.[].name'
+echo '{message:"aa", content: "www.cont"}' | yq '.message'
+
+# 使用 yq 操作 yaml
+clash_file="./configs/clash.yaml"
+new_str="DOMAIN-SUFFIX,xx.com,DIRECT"
+echo $(yq '.rules' $clash_file)
+yq e '.rules |= [ "'"$new_str"'" ] +.' $clash_file -i
 ```
 
-css-modules.d.ts
-scss.d.ts
 
-```ts
-// declare module '*.module.scss' {
-declare module '*.module.css' {
-  const classes: { [key: string]: string };
-  export default classes;
-}
 
-declare module '*.scss';
-declare module '*.less';
-```
-
-declare.d.ts
-
-```ts
-declare namespace DApi {
-  namespace dStyle {
-    interface Req {
-      id?: number;
-    }
-    type Res = typeof import('./dStyleDTO').dStyleDTO.Res;
-    type Fn = TFN<Req, Res>;
-  }
-}
-```
-
-dStyleDTO.ts
-
-```ts
-import { IsBoolean, IsOptional } from 'class-validator';
-export namespace dStyleDTO {
-  export const Res = Boolean();
-  export class Response {
-    @IsBoolean()
-    @IsOptional()
-    res?: typeof Res;
-  }
-}
-export const dStyle: DApi.dStyle.Fn = (params, options) => {
-};
-```
-
-typings.d.ts
-
-```ts
-declare module 'classnames';
-declare module 'uuid';
-
-interface Window {
-  DarkReader: any;
-}
-
-declare module '*.html' {
-  const rawHtmlFile: string;
-  export = rawHtmlFile;
-}
-
-declare module '*.jpeg' {
-  const src: string;
-  export default src;
-}
-
-declare module '*.webp' {
-  const src: string;
-  export default src;
-}
-
-declare module '*.module.css' {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module '*.module.less';
-declare module '*.module.less' {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare namespace modalManageType {
-  interface ModalConfigObj {
-    isModalManager?: boolean;
-    promise: ModalPromiseObj;
-    onCancel?(): void;
-  }
-
-  interface OpenConfigProps {
-    componentProps: ComponentProps;
-    component: any;
-  }
-
-  interface ModalPromiseObj {
-    resolve(data?: any): void;
-    reject(error?: any): void;
-  }
-
-  interface ComponentProps {
-    [key: string]: any;
-  }
-}
-```
 
 
 
@@ -2013,311 +2985,27 @@ declare namespace modalManageType {
 
 
 # .
+# 软件
 
+vscode 查看 pnpm node_modules 里的 符号链接 等内容 很不方便, 对其背后的实际文件 有什么定位和搜索的好办法吗?
+https://chatgpt.com/c/68af0425-82dc-8327-b2df-11c547f14b7a
+2025-08-27
 
-网易 [科技](https://tech.163.com/)  [财经](https://money.163.com/) [国际](https://news.163.com/world/)
-[pmbaobao](https://www.pmbaobao.com/) [人人PD](http://www.woshipm.com)
-[热榜](https://tophub.today/) [36kr热榜](https://www.36kr.com/hot-list/catalog)
-AI新闻 https://ai-bot.cn/daily-ai-news/
+macOS 系统的 storage 里 System Data 占用了 60G 多, 这个很不正常, 怎么处理?
+2025-08-10
 
-[oschina](https://www.oschina.net) [yuque](https://www.yuque.com/iscott)
-[极客公园](https://www.geekpark.net) [少数派](https://sspai.com)
-[凤凰网](https://www.ifeng.com) [威锋网](https://www.feng.com)
-[蜻蜓](https://www.qingting.fm/) [什么值得买](https://www.smzdm.com)
-[奇绩创坛](https://www.miracleplus.com)  [壹心理](https://www.xinli001.com)
+macOS 的 m 芯片, 有 Nvidia GPU 吗?
+M系列芯片采用的是苹果自行设计的基于ARM架构的处理器，并集成了苹果自己设计的GPU。
+对于需要GPU加速的应用，如机器学习模型训练，可以使用苹果提供的Metal性能着色器（MPS）框架来利用内置GPU的计算能力。此外，一些第三方软件，如PyTorch，也已经针对苹果的M系列芯片进行了优化.
+尽管M系列芯片的GPU性能非常强，但与高端独立NVIDIA或AMD GPU相比，在特定的专业应用场景下可能仍存在差距。
+https://www.tongyi.com/qianwen/?sessionId=3ba1fcbb1a764157a8ecb48f07ffaca9
+...
+mac 上的虚拟机 UTM  / VMware Fusion Player / Parallels Desktop 哪个比较好? 需要免费使用.
+https://chat.deepseek.com/a/chat/s/68b857de-7b1c-41a6-8013-490dbf25f899
+2025-08-09
 
-[时代周刊](https://time.com)  [纽约时报](https://nytimes.com)
-[华尔街日报](https://www.wsj.com)  https://youtube.com
-https://instagram.com  https://whatsapp.com
-
-[科技周刊](https://www.ruanyifeng.com/blog/2024/10/weekly-issue-322.html)
-[chrome-experiments](https://experiments.withgoogle.com/collection/chrome)
-[chromestatus](https://www.chromestatus.com/features)、[webkit](https://webkit.org/)
-https://coolshell.cn
-
-GitHub登录 https://codesandbox.io  https://codepen.io
-[JavaScript risingstars](https://risingstars.js.org)
-[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
-[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
-[stateofreact](https://2023.stateofreact.com)
-[awesome-react](https://github.com/enaqx/awesome-react)
-[awesome-react-components](https://github.com/brillout/awesome-react-components)
-[react-next](https://www.react-next.com/)
-[设计工具排名](https://uxtools.co/tools/design)
-
----
-
-2025 react-libraries https://www.robinwieruch.de/react-libraries/
-
-https://webkit.org/blog/16458/announcing-interop-2025/
-https://antfu.me/posts/move-on-to-esm-only
-2025-02 技术趋势
-
-Vue.js 作者宣布成立 VoidZero https://mp.weixin.qq.com/s/xT7SRffAcUqLFf7Ou4I5Og
-2024-11
-
-2023年前端技术盘点与2024年技术展望 https://mp.weixin.qq.com/s/LiygBJqMN8U_vSpAjxMibQ
-
-2022-04 《美国公布：长达35页的2045年新兴科技趋势报告》 https://mp.weixin.qq.com/s/ox6NHtK4usvKJ1gpk8uY8A
-
-gmtc https://gmtc.infoq.cn/2022/beijing/schedule
-重庆前端交流会 https://zhuanlan.zhihu.com/p/581717444
-[前端领域的 “干净架构”](https://zhuanlan.zhihu.com/p/458410158)
-[徐飞 业务中的前端组件化体系](https://zhuanlan.zhihu.com/p/383129585)
-2022
-
-[2021 大前端技术回顾及未来展望](https://mp.weixin.qq.com/s/HfZDrrqDNUVpnU-aegKxcg)
-[2021 年 Rust 生态版图调研报告](https://zhuanlan.zhihu.com/p/458046979)
-
-2021 《Tubi 工程师文化》 https://mp.weixin.qq.com/s/p_em5wfzhnZGnH4cd16pcQ
-2021-12《CEM如何助力企业流量新增长？》https://mp.weixin.qq.com/s/aNT3V-zPTbVWHh4s-njyRg 安道全
-
-[2019中国开源软件榜](https://www.oschina.net/project/top_cn_2019)
-[2018前端技术清单](https://juejin.im/post/5bdfb387e51d452c8e0aa902)
-
-
-
-## AI
-
-
-
-gemini-cli
-multiple tasks: https://github.com/google-gemini/gemini-cli/issues/2387
-feature 增强: https://github.com/google-gemini/gemini-cli/issues/1585
-openrouter支持: https://github.com/google-gemini/gemini-cli/issues/1515
-Gemini code assist  https://www.youtube.com/watch?v=hOAGISjKIOY
-命令:
-gemini --prompt hello
-流程:
-cli: gemini.js -> settings.js & config.js -> 进入core模块
-core: config.js -> GeminiClient core/client.js -> contentGenerator.js -> codeAssist.js -> server.js
-cli: useGeminiStream.js submitQuery -> nextSpeakerChecker.js -> core/client.js core/geminiChat.js core/turn.js
-修改代码:
-- infra/ai/aaid-cli/package.json
-删除 dependencies -> "update-notifier": "^7.3.1", "@types/update-notifier": "^6.0.8",
-添加 dependencies ->
-  "ansi-escapes": "^7.0.0",
-  "chalk": "^5.3.0",
-删除 "devDependencies": {
-  "@babel/runtime": "^7.27.6",
-  "@testing-library/react": "^16.3.0",
-  "@types/command-exists": "^1.2.3",
-  "@types/diff": "^7.0.2",
-  "@types/dotenv": "^6.1.1",
-  "@types/node": "^20.11.24",
-  "@types/react": "^19.1.8",
-  "@types/react-dom": "^19.1.6",
-  "@types/semver": "^7.7.0",
-  "@types/shell-quote": "^1.7.5",
-  "@types/yargs": "^17.0.32",
-  "ink-testing-library": "^4.0.0",
-  "jsdom": "^26.1.0",
-  "pretty-format": "^30.0.2",
-  "react-dom": "^19.1.0",
-  "typescript": "^5.3.3",
-  "vitest": "^3.1.1"
-},
-- infra/ai/aaid-cli-core/package.json
-添加 dependencies ->
-  "@opentelemetry/api-logs": "^0.52.0",
-  "@opentelemetry/resources": "^1.25.0",
-  "@opentelemetry/sdk-logs": "^0.52.0",
-  "@opentelemetry/sdk-metrics": "^1.25.0",
-  "@opentelemetry/sdk-trace-node": "^1.25.0",
-  "@opentelemetry/semantic-conventions": "^1.25.0",
-  "@opentelemetry/otlp-exporter-base": "^0.52.0",
-  "mime-types": "^3.0.1",
-删除 "devDependencies": {
-  "@types/diff": "^7.0.2",
-  "@types/dotenv": "^6.1.1",
-  "@types/micromatch": "^4.0.8",
-  "@types/minimatch": "^5.1.2",
-  "@types/ws": "^8.5.10",
-  "typescript": "^5.3.3",
-  "vitest": "^3.1.1"
-},
-- infra/ai/aaid-cli/dist/src/config/config.js
-process.env.AFE_MODEL = 'Devstral-Small-2505';
-- infra/ai/aaid-cli/dist/src/config/settings.js
-path.join(workspaceDir, 'aaid-settings.json')
-- infra/ai/aaid-cli/dist/src/ui/utils/updateCheck.js 删除
-- infra/ai/aaid-cli/dist/src/ui/App.js
-// checkForUpdates().then(setUpdateMessage);
-!settings.merged.hideTips &&
-- infra/ai/aaid-cli/dist/src/gemini.js
-settings.setValue(SettingScope.User, 'selectedAuthType', AuthType.LOGIN_WITH_GOOGLE);
-// logUserPrompt
-- infra/ai/aaid-cli/dist/src/ui/hooks/useGeminiStream.js
-// logUserPrompt
-- infra/ai/aaid-cli/dist/src/ui/hooks/useAuthCommand.js
-setIsAuthenticating(false);
-- infra/ai/aaid-cli-core/dist/src/tools/mcp-client.js
-add1MCPStatusChangeListener
-- infra/ai/aaid-cli-core/dist/src/code_assist/codeAssist.js
-return new CodeAssistServer(authClient, 11, httpOptions, sessionId);
-- infra/ai/aaid-cli-core/dist/src/code_assist/oauth2.js
-return client;
-- infra/ai/aaid-cli-core/dist/src/core/geminiChat.js
-// this._logApiRequest(requestContents, this.config.getModel());
-// this._logApiError
-// await this._logApiResponse
-- ai/aaid-cli-core/dist/src/tools/read-many-files.js
-return `Will attempt to read and concatenate files:\n ${pathDesc}
-- infra/ai/aaid-cli-core/dist/src/code_assist/server.js
-
-
-
-Agents 架构
-https://github.com/langchain-ai/langchain
-https://dify.ai/
-https://platform.openai.com/docs/guides/deep-research
-https://www.anthropic.com/engineering/built-multi-agent-research-system
-
-Agents
-https://github.com/All-Hands-AI/OpenHands
-https://github.com/sourcegraph/cody
-https://github.com/codota/TabNine
-Python 实现
-https://github.com/SWE-agent/SWE-agent
-https://github.com/AutoCodeRoverSG/auto-code-rover
-https://github.com/bytedance/trae-agent
-
-
-https://github.com/ollama/ollama
-https://docs.openwebui.com/
-https://huggingface.co/spaces/galileo-ai/agent-leaderboard
-
-https://github.com/openai/codex
-claude_code 原理 https://www.reddit.com/r/ClaudeAI/comments/1jpyqlu/claude_codes_context_magic_does_it_really_scan/
-
-continue
-https://github.com/continuedev/continue
-https://hub.continue.dev/explore/rules
-https://hub.continue.dev/explore/prompts
-https://docs.continue.dev/customize/context/codebase
-https://docs.continue.dev/customization/prompts
-https://docs.continue.dev/customization/rules
-https://docs.continue.dev/features/agent/how-it-works
-
-v0.dev
-https://ui.shadcn.com/blocks/authentication
-https://v0.dev/chat/open-in-v0-02cbToAP1lx
-https://vercel.com/blog/v0-composite-model-family
-
-[mcp](https://modelcontextprotocol.io/introduction)
-https://github.com/modelcontextprotocol/servers
-https://github.com/modelcontextprotocol/typescript-sdk
-figma mcp
-企业新基建：MCP + LLM + Agent架构，将打通AI Agent的“神经中枢”
-https://mp.weixin.qq.com/s/zAFVeZdiskhbQuVIfG9eXw
-
-
-Agentic AI / AI Agent:
-Cursor, Jules, Devin,
-构建agent: openai-agents-js, VoltAgent, Mastra.ai
-Agenticseek, AutoDev AutoGen Auto-GPT
-
-万字综述，讲一讲这两年大模型这整个领域到底发展了哪些方面
-https://mp.weixin.qq.com/s/RPj5fS7-hjacswRV7OQY9w
-AI Agent 基础设施
-https://mp.weixin.qq.com/s/xp1f1BistZxy9rES3We3sA
-Claude Code 背后的技术机制
-https://mp.weixin.qq.com/s/xCajyF-WWCSCR0ElJdW-0A
-https://github.com/DevHorizonLabs/ClaudeX
-https://github.com/anthropics/claude-code/issues/59
-2025-07
-
-
-AI驱动研发效率在中后台的实践 https://mp.weixin.qq.com/s/bg32-w2e308XBPXyXpE6sQ
-2025-04
-
-[终于找到了AIGC时代连专业前端都能提效的工具](https://mp.weixin.qq.com/s/HU6xBqa2L4VCZBmpTYIV8A)
-https://zhuanlan.zhihu.com/p/15140783070
-2024-12
-
-
-------
-
-代码:
-https://jules.google.com/
-https://bolt.new/  https://githubnext.com/projects/github-spark
-https://www.cursor.com/  Windsurf https://codeium.com/
-四大国产AI编程助手横向浅评 https://zhuanlan.zhihu.com/p/708820713
-字节 https://www.trae.ai/ https://www.trae.com.cn/
-字节 编程助手 https://www.marscode.com 海外 https://www.coze.com
-百度 comate f2c https://cloud.baidu.com/doc/COMATE/s/jm5atx00b
-蚂蚁 https://weavefox.ai/  https://www.yuque.com/weavefox/intro/intro
-antd机器人 Peter Cat https://mp.weixin.qq.com/s/PnHVc1_yBPu2HiA2En9cAg
-网易-海豹D2C https://music.163.com/st/seal
-https://www.ancodeai.com  https://github.com/abi/screenshot-to-code
-
-生成 AI 应用:
-支付宝 https://tbox.alipay.com/
-https://github.com/rag-web-ui/rag-web-ui
-https://www.wordware.ai/
-https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
-
-自然语言生成数据表格 https://columns.ai/chatgpt
-电脑操作 https://deepmind.google/technologies/project-mariner/
-手机助手
-https://github.com/Skythinker616/gpt-assistant-android
-https://github.com/X-PLUG/MobileAgent
-LLMText https://marketplace.visualstudio.com/items?itemName=Kingleo.llmtext
-自然语言命令行 https://github.com/guoriyue/LangCommand
-https://github.com/guanguans/ai-commit
--- 工具
-
-https://github.com/coaidev/coai  数字人 https://character.ai
-智能客服/知识库问答 https://github.com/1Panel-dev/MaxKB
-https://github.com/cs-lazy-tools/ChatGPT-On-CS
-阿里 B2B 个人采购代理 https://www.accio.com/  音乐 https://lamucal.ai/
--- 行业
-
-https://huggingface.co/  https://openrouter.ai/rankings
-https://lmarena.ai/  https://openlm.ai/chatbot-arena/
-https://app.slack.com/client/T053EMGBEEN/C05BVLPE885?geocode=zh-cn
--- 大模型竞技场
-
-https://metaso.cn/  https://onionai.so/  https://poe.com/  https://aichatru.ru/en
-https://chathub.gg/  https://chat100.ai/zh-CN  https://www.perplexity.ai/
-https://duckduckgo.com/?q=DuckDuckGo&ia=chat
--- 套壳
-
-https://chatgpt.com  https://gemini.google.com/  https://www.meta.ai/  https://llama3.dev/
-https://www.tongyi.com/qianwen/  https://chat.qwenlm.ai/
-https://chat.deepseek.com/  https://www.doubao.com/chat/
-https://www.kimi.com/  https://kimi.moonshot.cn  http://ai.baidu.com/
-https://chat.z.ai/
--- 综合/模型厂商
-
-
-
-
-
-
-## 软件
-
------- APP / mobile
-
-文字图
-https://asciiflow.com/
-https://ascii-tree-generator.com/
-- [asciiart](https://asciiart.website) [figlet](http://www.figlet.org/examples.html) [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
-占位图
-- [dummyimage](https://dummyimage.com/750x300/eee/f0f)  [生成logo](https://www.logo.surf/)
-- [颜色选择](https://htmlcolorcodes.com/zh/) [flickr](https://flickr.com)
-markdown 表情 :+1: :smile: :smiley: :laughing:
-- [emojispark](https://emojispark.com/)
-- [emoji8](https://emoji8.com/zh-hans/)
-- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-Android 软件: MX播放器(VLC不能播放加密文件) AirDroid 微动手势(允许后台弹出界面和显示悬浮窗), automate,, kwgt, popup widget, macrodroid, tasker(收费), easytouch, anywhere . 反编译apk: apktool/dex2jar/jd-gui/javadecompilers
-
-iOS 快捷指令
-- 同步: Apple ID -> iCloud -> 使用iCloud的APP -> 显示全部 找到 快捷指令 勾选同步。
-- 朗读的 声音大小和siri一样，不受设置里声音大小的控制，通过设置 Siri 的声音来控制。
-
----
+usb 充电线 输入为 5v1a 时, 末尾分叉为多个头 每个头的输出是多少?
+2025-08-08
 
 有两个表情图片 没有删除的地方, 但在 微信和 QQ 的表情选择里 都能看到. 是存放在哪里的? 怎么能删除掉?
 2025-06-13
@@ -2330,120 +3018,18 @@ iOS 快捷指令
 网页版微信 https://wx.qq.com/ 能收到的表情包拖到电脑桌面保存.
 2025-05
 
-我这个 macrodroid 设置有什么问题，应该怎么修改？
-gpt最好，dp疑似抄gpt，豆包一般，百度用dp，通义宕机
-2025-04-11
-
-谷歌账号在注册的时候就确定了关联的国家与地区，属于哪个国家地区和当时注册ip手机环境有关系。以下是查看当前 Google 账号的归属地方法：登录 Google 账号，打开 Google 搜索首页 点击 首页右下角 条款  在新页面显示出 国家/地区版本：香港
-2024-11-14
-
-[Win系统安装盘](https://zhuanlan.zhihu.com/p/273305963)、系统[下载地址](https://hellowindows.cn/)，电脑开机(按F12)设置U盘优先启动。
-2024-04
-
-2023-11 尝试 百度/腾讯/中国移动 网盘，广告多 文件格式支持少，最终使用 微软云盘。
-
-小米多看电纸书[一代](https://item.jd.com/100010633100.html)、安装app[方法](https://www.bilibili.com/video/av893445949/)
-iPhone 恢复出厂设置后，系统软件版本是 iOS 最新版 不是出厂时旧版本。 连接数据线恢复备份的文件后，各个第三方app仍然需要重新下载、如有卡死状态 用手机网络 先下载重要app 其他暂停.
-2022-09
-
-2022-05 惠普z27k显示器 typec 100w 输出功率 能给电脑充电
-
-2019 支持 Mac + Win 读写的U盘格式: exFAT FAT32 NTFS(软件 ntfstool / ParagonNTFS )
-
-
------- macOS
-
-设置
-- 点击和手势: 触控板。1 勾选 “轻点来点按” 2 启用词典：查询与数据检测器 - 选择三指轻点 3 更多手势 - 应用Expose。
-- 三指拖移窗口: 辅助功能 -> 鼠标与触控板 -> 触控板选项 -> 启用拖移 -> 三指拖移。
-- 触发角: 调度中心 -> 触发角 (左上角:启动台, 左下角:显示器睡眠, 右上角:调度中心, 右下角:桌面)。
-- 键盘 -> 键盘快捷键:
-  - 输入法(input source) 选择 `cmd + 空格`，在 “服务” 里勾选或不选。
-  - 打开文件夹下的 terminal: 选择 服务(Services), 展开 "文件和文件夹", 勾选 "新建位于文件夹位置的终端窗口", 选择一个文件夹 "右键" 即可看到.
-  - [添加快捷键](https://superuser.com/a/1260437)
-- launchpad 里的图标 不能一次性拖动 多个 进行移动. (macOS 15.3)
-- dock: 程序坞 -> 不勾选 “在程序坞中显示最近使用的应用程序”(最后一项) 显示隐藏 `cmd + alt + d`。
-- 通知: 通知中心 -> 勾选 “当显示器进入睡眠状态时/当屏幕锁定时”
-- 文本替换: 键盘 -> 文本，「command + A」全选、拖拽到 Finder 会生成 “用户词典.plist” 的文件。
-- 系统顶部菜单栏: 按住 `Command` 再拖动图标，改变右边图标顺序。
-- Finder 设置
-  - 列表视图 `cmd + 2` 展开所有子文件夹 `alt + 左边箭头`。
-  - 按 `cmd + alt`，拖动 app 到工具栏。
-- QuickLook: 搜索下载 QLMarkdown / QLStephen / QuickLookJSON 并放到 `~/Library/QuickLook` 或 `/Library/QuickLook` 目录。如果不生效、`killall Finder` 重启 Finder。
-- 查看ip地址: 设置 - wifi - 详细信息。
-- m1 外接显示器分辨率低: 显示器 -> 按住 Option 键的同时点击“缩放”。
-- .
-- 允许安装”任何来源“的软件，解决 xx.app已损坏 `sudo spctl --master-disable`
-- 关闭 sip 关机、按住电源键(非m1按下`Cmd R`) 选择实用工具->终端 `csrutil disable` 查看状态 `csrutil status`
-- 安装 git gcc `xcode-select --install`
-
-软件
-- https://apps.apple.com  https://music.apple.com  https://archive.org/web  https://github.com/tonghohin/screen-sharing
-- `shortcuts run 获取时间` [Run shortcuts from the command line](https://support.apple.com/en-gb/guide/shortcuts-mac/apd455c82f02/mac)
-- AppCleaner / Unarchiver / Clipy / https://github.com/Stengo/DeskPad / ngrok inlets(GitHub) / https://github.com/CrossPaste/crosspaste-desktop / https://www.hammerspoon.org
-
-图像视频
-- 截图: command + shift + 4 (3全屏) 录屏: command + shift + 5
-- xnip snipaste lightshot (snip) / licecap (kap gifify) / UPDF(pdf编辑) / any-video-converter(online-audio-converter.com) / XnConvert(图像处理) / Movist (IINA) / ExifRenamer(重命名图片) / ExifTool [exifr](https://mutiny.cz/exifr/) / HandBrake / MKVToolnix(mkv字幕抽取) / perian(QuickTime 插件) / aria2
-- 图片批量修改 宽或高 最大值 保持宽高比 `sips -Z 1600 *.jpg` 或指定宽高 `sips -z height width [file]`
-```sh
-brew install ffmpeg
-ffmpeg -i input.mp4  # 查看分辨率 Stream #0:0: Video: h264 (High), **1920x1080**, ...
-ffmpeg -i input.mp4 -filter:v "crop=宽度:高度:x偏移:y偏移" output.mp4  # 裁剪视频
-ffplay input.mp4 -vf "crop=1280:720:320:180"  # 裁剪视频 预览
-# 2x 倍速压缩, 没有音频
-ffmpeg -i input.mov -filter:v "setpts=0.5*PTS" -crf 28 -preset fast 2x_compressed.mp4
-```
-
-pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
-语音转文字 https://www.zaixianai.cn/voiceToText
-
-文件传输
-https://github.com/WCY-dt/EasyTransfer
-https://snapdrop.net/ (速度快 最方便， mac 上 edge 浏览器不可用、使用 chrome 浏览器)
-https://easychuan.cn/  https://www.wenshushu.cn/  https://github.com/schollz/croc
-Mac smb 文件共享(速度约1M/s较慢): 在需要共享文件的 Mac 上打开「系统偏好设置-共享-文件共享」会显示类似 smb://192.168.1.9 的共享地址。在另一台 Mac 上打开访达，在菜单栏选择「前往-连接服务器」。在 iPhone 或 iPad 打开「文件」App，点击右上角选项图标，选择「连接服务器」。
-
-下载器 https://github.com/imputnet/cobalt  https://www.fastdownload.io webtorrent-desktop / NeatDownloadManager
-[测网速](https://fast.com)  [vpn检测](https://proxy.incolumitas.com/proxy_detect.html)
-
-视频字幕类型有三种：内嵌字幕、外挂字幕、封装软字幕。可以视频转为音频、再提取字幕。
-- 字幕下载 https://subhd.tv  剪映 / 钉钉闪记 / B站必剪 / 迅捷文字转语音。
-- Subtitle Edit / Aegisub / Subtitle Workshop / HandBrake / FFmpeg
-- 大模型 [openai/whisper](https://github.com/openai/whisper) 为视频生成字幕文件 https://github.com/buxuku/VideoSubtitleGenerator
-
-欧路词典: 修改 ~/Library/Preferences/ com.eusoft.eudic.plist 修改 MAIN_TimesLeft：允许使用次数(任意改) 10000000 重启 （更新 [notion](https://www.notion.so/Eudic-Mac-0b5e993809794576868714f613f637ff)、百度网盘下载 再升级）
-
-web shell [ttyd](https://github.com/tsl0922/ttyd) 基于 xtermjs
-```sh
-brew install ttyd
-ttyd vim/login/bash/zsh
-ttyd -W top  # 自动运行 top 命令、 加 --once 网页关闭时 命令也自动停止运行
-ttyd -W -t fontSize=20 zsh  # http://localhost:7681
-ttyd -W -a -t disableLeaveAlert=true zsh # http://localhost:7681/?&arg=aa&arg=bb
-ttyd -p 9999 -W -a ./test.sh  # http://localhost:9999/?arg=./test.sh&arg=aa
-# 命令不能被 ttyd 直接运行 https://github.com/tsl0922/ttyd/issues/1031
-```
-
-LaunchAgents
-- `launchctl load/unload ~/Library/LaunchAgents/com.hua.autorun.plist` 加载卸载 plist 文件
-- `launchctl list | grep com.hua.autorun` 验证是否运行
-
-进程守护工具 supervisor
-- https://soulteary.com/2023/03/12/stable-web-terminal-services-using-docker-nginx-and-ttyd.html
-- https://gist.github.com/fadhlirahim/78fefdfdf4b96d9ea9b8
-- https://gist.github.com/Pezhvak/297b058d9c449b39d321409cd041899c
-- https://github.com/Supervisor/supervisor/issues/1514
-
-
-
----
-
 需求是想在 mac 电脑上 同时连接不同的 WiFi , 解决 公司网络 阻止访问某些网站的问题.
 有哪些解决办法? 比如 macos 能做双系统吗?
 或者 macbook pro 使用自己网络, 搭配自己的 mac mini 使用公司网络, 但需要 macbook 能方便的控制 mac mini, 这样可行吗?
 希望在mac上使用两个网络, 不同app 链接不同的网络. 还有什么办法吗?
 2025-05-12
+
+我这个 macrodroid 设置有什么问题，应该怎么修改？
+gpt最好，dp疑似抄gpt，豆包一般，百度用dp，通义宕机
+2025-04-11
+
+vscode 有个内置插件, 能检测 typescript 的语法, 不小心关掉了怎么重开?
+2025-04-07
 
 crontab 脚本里能使用 环境变量 吗, 怎么使用?
 在 .gitconfig 里能使用环境变量吗?
@@ -2465,12 +3051,249 @@ https://chatgpt.com/share/674539a5-4d50-8008-9cce-a950f4a2354b
 https://chatgpt.com/share/6742e267-f3a0-8008-bda3-6b1b6bbce601
 2024-11
 
+谷歌账号在注册的时候就确定了关联的国家与地区，属于哪个国家地区和当时注册ip手机环境有关系。以下是查看当前 Google 账号的归属地方法：登录 Google 账号，打开 Google 搜索首页 点击 首页右下角 条款  在新页面显示出 国家/地区版本：香港
+2024-11-14
 
------- chrome
+clash 配置指定域名用指定 dns 解析
+https://chatgpt.com/share/671762b0-e55c-8008-bf27-b762cf930059
+2024-08
 
+[Win系统安装盘](https://zhuanlan.zhihu.com/p/273305963)、系统[下载地址](https://hellowindows.cn/)，电脑开机(按F12)设置U盘优先启动。
+2024-04
+
+2023-11 尝试 百度/腾讯/中国移动 网盘，广告多 文件格式支持少，最终使用 微软云盘。
+
+小米多看电纸书[一代](https://item.jd.com/100010633100.html)、安装app[方法](https://www.bilibili.com/video/av893445949/)
+iPhone 恢复出厂设置后，系统软件版本是 iOS 最新版 不是出厂时旧版本。 连接数据线恢复备份的文件后，各个第三方app仍然需要重新下载、如有卡死状态 用手机网络 先下载重要app 其他暂停.
+2022-09
+
+2022-05 惠普z27k显示器 typec 100w 输出功率 能给电脑充电
+
+2019 支持 Mac + Win 读写的U盘格式: exFAT FAT32 NTFS(软件 ntfstool / ParagonNTFS )
+
+
+
+
+## 常用
+
+https://time.is  https://datetime.app
 [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
 - https://make-bookmarklets.com/
 - 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
+
+文字图
+https://asciiflow.com/
+https://ascii-tree-generator.com/
+
+markdown 表情 :+1: :smile: :smiley: :laughing:
+- [emojispark](https://emojispark.com/)
+- [emoji8](https://emoji8.com/zh-hans/)
+- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+艺术字
+- [asciiart](https://asciiart.website)
+- [figlet](http://www.figlet.org/examples.html)
+- [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
+
+占位图
+- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
+- [生成logo](https://www.logo.surf/)
+- [颜色选择](https://htmlcolorcodes.com/zh/) [flickr](https://flickr.com)
+
+pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
+语音转文字 https://www.zaixianai.cn/voiceToText
+拼图 https://img.ops-coffee.com/
+https://nextbconvert.com/en
+https://tinyurl.com/
+
+
+## macOS
+
+- `shortcuts run 获取时间` [Run shortcuts from the command line](https://support.apple.com/en-gb/guide/shortcuts-mac/apd455c82f02/mac)
+- https://apps.apple.com  https://music.apple.com
+
+------ 设置
+- 点击和手势: 触控板。1 勾选 “轻点来点按” 2 启用词典：查询与数据检测器 - 选择三指轻点 3 更多手势 - 应用Expose。
+- 三指拖移窗口: 辅助功能 -> 鼠标与触控板 -> 触控板选项 -> 启用拖移 -> 三指拖移。
+- 触发角: 调度中心 -> 触发角 (左上角:启动台, 左下角:显示器睡眠, 右上角:调度中心, 右下角:桌面)。
+- 键盘 -> 键盘快捷键:
+  - 输入法(input source) 选择 `cmd + 空格`，在 “服务” 里勾选或不选。
+  - 打开文件夹下的 terminal: 选择 服务(Services), 展开 "文件和文件夹", 勾选 "新建位于文件夹位置的终端窗口", 选择一个文件夹 "右键" 即可看到.
+  - [添加快捷键](https://superuser.com/a/1260437)
+- launchpad 里的图标 不能一次性拖动 多个 进行移动. (macOS 15.3)
+- dock: 程序坞 -> 不勾选 “在程序坞中显示最近使用的应用程序”(最后一项) 显示隐藏 `cmd + alt + d`。
+- 通知: 通知中心 -> 勾选 “当显示器进入睡眠状态时/当屏幕锁定时”
+- 文本替换: 键盘 -> 文本，「command + A」全选、拖拽到 Finder 会生成 “用户词典.plist” 的文件。
+- 系统顶部菜单栏: 按住 `Command` 再拖动图标，改变右边图标顺序。
+- Finder 设置
+  - 列表视图 `cmd + 2` 展开所有子文件夹 `alt + 左边箭头`。
+  - 按 `cmd + alt`，拖动 app 到工具栏。
+- QuickLook: 搜索下载 QLMarkdown / QLStephen / QuickLookJSON 并放到 `~/Library/QuickLook` 或 `/Library/QuickLook` 目录。如果不生效、`killall Finder` 重启 Finder。
+- 查看ip地址: 设置 - wifi - 详细信息。
+- m1 外接显示器分辨率低: 显示器 -> 按住 Option 键的同时点击“缩放”。
+- 关闭 sip 关机、按住电源键(非m1按下`Cmd R`) 选择实用工具->终端 `csrutil disable` 查看状态 `csrutil status`
+
+```sh
+# 查看计算机名称: 设置 - General - About - name
+# 查看本地主机名: 设置 - General - Sharing - Local hostname
+scutil --get ComputerName  # 电脑名修改后, Local hostname 也会跟随自动修改
+scutil --get LocalHostName # 用于本地网络上的服务发现 http://hostname.local:7890
+
+uname -a  # 查看处理器架构
+
+# System Settings – Privacy & Security 系统设置 – 隐私和安全性
+# 允许安装”任何来源“的软件，解决 xx.app已损坏
+sudo spctl --master-disable
+
+xcode-select --install  # 安装 git gcc
+pmset noidle # 阻止电脑睡眠 同时按住 shift、control、电源键，关闭显示器
+# defaults read 查看系统设置
+defaults write com.apple.screencapture type jpg
+defaults write com.apple.screencapture location ~/Downloads/
+defaults write com.apple.Music autoPlay -bool false
+```
+
+--- cron 定时任务
+
+系统任务在 `/etc/crontab` 或 `/etc/cron.d/` 目录，需要管理员权限.
+crontab 文件一般位于 `/var/at/tabs/<username>` 或 `/var/cron/tabs/<username>` 不建议直接改.
+
+```sh
+# 通过 vi 编辑器修改, 使用 :wq 保存.
+# 注意: crontab 里的默认 env 为 SHELL=/bin/sh 等.
+crontab -l  # 查看当前的 crontab 内容
+crontab -e  # 编辑 cron 配置 保存后 cron 会自动加载和应用
+sudo launchctl list | grep cron  # 检查 cron 服务是否正常运行
+sudo launchctl load -w /System/Library/LaunchDaemons/com.vix.cron.plist # 如果未启动
+```
+
+crontab -e 脚本内容示例
+
+```sh
+# 接下来的 每1分钟 每2分钟 每10分钟 执行. 后面的四个 * 分别表示小时、日期、月份和星期几
+* * * * * env > /tmp/cron_log
+* * * * * zsh -ic 'echo "time: $(date)" >> /tmp/cron_log; env >> /tmp/cron_log'
+*/2 * * * * env > /tmp/cron_log
+*/10 * * * * env > /tmp/cron_log
+# 每天 11:50 14:30 执行备份  /bin/bash -c 'source ~/.zshrc; fn_name fn_arg'
+50 11 * * * zsh -ic 'scheduled_tasks backup >> "$hl_ext_log"' 2>&1
+30 14 * * * zsh -ic 'scheduled_tasks backup >> "$hl_ext_log"' 2>&1
+# 每隔三天 14:29 清空日志文件
+29 14 */3 * * zsh -ic 'scheduled_tasks clear_logs >> "$hl_ext_log"' 2>&1
+```
+
+
+
+------ 软件
+
+- 屏幕共享 https://github.com/tonghohin/screen-sharing
+- AppCleaner / Unarchiver / Clipy / https://github.com/Stengo/DeskPad / ngrok inlets(GitHub) / https://github.com/CrossPaste/crosspaste-desktop / https://www.hammerspoon.org / https://archive.org/web
+下载器 https://github.com/imputnet/cobalt  https://www.fastdownload.io webtorrent-desktop / NeatDownloadManager
+
+图像视频
+- 截图: command + shift + 4 (3全屏) 录屏: command + shift + 5
+- xnip snipaste lightshot (snip) / licecap (kap gifify) / UPDF(pdf编辑) / any-video-converter(online-audio-converter.com) / XnConvert(图像处理) / Movist (IINA) / ExifRenamer(重命名图片) / ExifTool [exifr](https://mutiny.cz/exifr/) / HandBrake / MKVToolnix(mkv字幕抽取) / perian(QuickTime 插件) / aria2
+- 图片批量修改 宽或高 最大值 保持宽高比 `sips -Z 1600 *.jpg` 或指定宽高 `sips -z height width [file]`
+```sh
+brew install ffmpeg
+ffmpeg -i input.mp4  # 查看分辨率 Stream #0:0: Video: h264 (High), **1920x1080**, ...
+ffmpeg -i input.mp4 -filter:v "crop=宽度:高度:x偏移:y偏移" output.mp4  # 裁剪视频
+ffplay input.mp4 -vf "crop=1280:720:320:180"  # 裁剪视频 预览
+# 2x 倍速压缩, 没有音频
+ffmpeg -i input.mov -filter:v "setpts=0.5*PTS" -crf 28 -preset fast 2x_compressed.mp4
+```
+
+文件传输
+https://github.com/WCY-dt/EasyTransfer
+https://snapdrop.net/ (速度快 最方便， mac 上 edge 浏览器不可用、使用 chrome 浏览器)
+https://easychuan.cn/  https://www.wenshushu.cn/  https://github.com/schollz/croc
+Mac smb 文件共享(速度约1M/s较慢): 在需要共享文件的 Mac 上打开「系统偏好设置-共享-文件共享」会显示类似 smb://192.168.1.9 的共享地址。在另一台 Mac 上打开访达，在菜单栏选择「前往-连接服务器」。在 iPhone 或 iPad 打开「文件」App，点击右上角选项图标，选择「连接服务器」。
+
+视频字幕类型有三种：内嵌字幕、外挂字幕、封装软字幕。可以视频转为音频、再提取字幕。
+- 字幕下载 https://subhd.tv  剪映 / 钉钉闪记 / B站必剪 / 迅捷文字转语音。
+- Subtitle Edit / Aegisub / Subtitle Workshop / HandBrake / FFmpeg
+- 大模型 [openai/whisper](https://github.com/openai/whisper) 为视频生成字幕文件 https://github.com/buxuku/VideoSubtitleGenerator
+
+欧路词典: 修改 ~/Library/Preferences/ com.eusoft.eudic.plist 修改 MAIN_TimesLeft：允许使用次数(任意改) 10000000 重启 （更新 [notion](https://www.notion.so/Eudic-Mac-0b5e993809794576868714f613f637ff)、百度网盘下载 再升级）
+
+git设置
+全局默认设置 code ~/.gitconfig  内部 name email
+```sh
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  br = branch
+[user]
+  name = 然则
+  email = hualei.hl@xx-inc.com
+[includeIf "gitdir:~/inner/-/"]
+    path = .gitconfig-github
+```
+code ~/.gitconfig-github 文件 给特定目录 设置个人 name email
+```sh
+[user]
+  name = warmhug
+  email = hualei5280@gmail.com
+```
+
+web shell [ttyd](https://github.com/tsl0922/ttyd) 基于 xtermjs
+```sh
+brew install ttyd
+ttyd vim/login/bash/zsh
+ttyd -W top  # 自动运行 top 命令、 加 --once 网页关闭时 命令也自动停止运行
+ttyd -W -t fontSize=20 zsh  # http://localhost:7681
+ttyd -W -a -t disableLeaveAlert=true zsh # http://localhost:7681/?&arg=aa&arg=bb
+ttyd -p 9999 -W -a ./test.sh  # http://localhost:9999/?arg=./test.sh&arg=aa
+# 命令不能被 ttyd 直接运行 https://github.com/tsl0922/ttyd/issues/1031
+```
+
+LaunchAgents
+```sh
+launchctl load/unload ~/Library/LaunchAgents/com.hua.autorun.plist  # 加载卸载 plist 文件
+launchctl list | grep com.hua.autorun  # 验证是否运行
+launchctl setenv OLLAMA_HOST "0.0.0.0:11434"
+```
+
+进程守护工具 supervisor
+- https://soulteary.com/2023/03/12/stable-web-terminal-services-using-docker-nginx-and-ttyd.html
+- https://gist.github.com/fadhlirahim/78fefdfdf4b96d9ea9b8
+- https://gist.github.com/Pezhvak/297b058d9c449b39d321409cd041899c
+- https://github.com/Supervisor/supervisor/issues/1514
+
+测网速 https://fast.com
+vpn检测 https://proxy.incolumitas.com/proxy_detect.html
+查看本机公网 ip: http://cip.cc  https://ipinfo.io/json  https://ifconfig.me
+
+```sh
+curl cip.cc
+traceroute baidu.com  # 查看域名路由 或 `ping baidu.com`
+ifconfig | grep inet
+#
+# 2025-08 在 macOS 上 `ifconfig` 结果解释 https://www.tongyi.com/?sessionId=77c9f2e4fb574fd49f1de408bd118c63
+#
+# 127.x.x.x 都是本地回环范围
+inet 127.0.0.1 netmask 0xff000000
+# 当前连接网络的实际 IPv4 地址（比如公司或家庭网络） 连接路由器/Wi-Fi 后获得的局域网地址
+en0: ...
+    inet 10.140.30.244 netmask 0xfffffc00 broadcast 10.140.31.255
+# 虚拟化技术（如 Docker Desktop、虚拟机）创建的虚拟网络网关
+# js 的 WebRTC 的 ICE 候选地址中，真实 IP（如 10.140.30.244）被替换为 .local 域名. WebRTC 在 chrome extension 里 也只能看到 192.168.64.1 这个地址. 在 ChromeOS 设备 使用 chrome.networking.config API 才能获取到 真实 IP 地址.
+bridge100: ...
+    inet 192.168.64.1 netmask 0xffffff00 broadcast 192.168.64.255
+# 其他状态为 inactive，说明未激活或未连接
+```
+
+
+基于 OnlyOffice 的本地网页文档编辑器 https://github.com/ranuts/document  https://www.onlyoffice.com/
+新闻订阅 https://github.com/sansan0/TrendRadar
+https://github.com/glidea/zenfeed
+
+
+
+## chrome vscode zsh
+
+------ chrome
 
 --- chrome extensions
 
@@ -2482,6 +3305,7 @@ Tab Position Options / 一键切换(Jomic) 搜索拐杖 下一页(空格键自�
 ------ vscode
 
 - 按`cmd shift p` 输入
+  - fold level 折叠各层缩进
   - code zoom reload(未知错误) diplay(修改语言).
   - 显示内置插件: Show Built-in Extensions
 - 在查找(替换)框里按 ctrl + enter 支持多行，或者 复制多行文本 粘贴。
@@ -2495,6 +3319,8 @@ https://github.com/jianbingfang/vscode-dup-checker
 - plantuml(设置指定server) / Auto Hide / Live Preview / Markdown All in One / markdown-pdf / marp / GitLens(simple logs) / pangu / Hungry Delete / Template String Converter
 - Code Runner / Terminal Keeper / Commands(usernamehw) / Todo Tree / Excalidraw / npm-dependency-links / Bookmarks / Diff Folders / Editor Group Minimizer Plus / favorites
 端口 [转发](https://code.visualstudio.com/docs/editor/port-forwarding) 实现 [内网穿透](https://51.ruyo.net/18562.html)，目前已被 [国内禁用](https://github.com/microsoft/vscode-remote-release/issues/9438)
+
+https://github.com/coder/code-server
 
 ```json
 // 快捷键
@@ -2521,24 +3347,80 @@ https://github.com/jianbingfang/vscode-dup-checker
 tasks `xxProj/.vscode/tasks.json`
 代码片段 `xxProj/.vscode/my.code-snippets`、
 
----
-
-vscode 有个内置插件, 能检测 typescript 的语法, 不小心关掉了怎么重开?
-2025-04-07
 
 
+------ zsh(rc)
 
------- clash 代理
+生成 ssh key 推拉代码
+```sh
+ssh-keygen -t ed25519 -C hualei.hl@xx-inc.com
+ssh-add ~/.ssh/id_ed25519
+# 再把 ~/.ssh/id_ed25519.pub 文件内容添加到 gitlab
+# 配置 ssh 走 clash 代理， code ~/.ssh/config
+Host github.com
+  ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
+```
+
+code ~/.zshrc
+
+- zsh模版 https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
+- 参考 git 插件 https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
+- 覆盖内部命令 https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-internals
+  - 比如 lib/directories.zsh 里的 alias 1='cd -1' 不需要
+- 命令使用状态 `zsh_stats`
+
+```sh
+#export PS1="\u \w$"
+ZSH_DISABLE_COMPFIX="true"
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="ys"  # Look ~/.oh-my-zsh/themes/
+# plugins=(git)  # Look ~/.oh-my-zsh/plugins/*
+source $ZSH/oh-my-zsh.sh
+
+export EDITOR='vim'
+# export EDITOR=nano
+# export EDITOR='code'  # 修改为 vscode 编辑器有问题
+
+# 使用 brew install.sh 安装脚本时, git 设置为 git config --global http.version HTTP/1.1
+# brew 国内源 https://www.jianshu.com/p/bea984d27cd2
+# cd "$(brew --repo)" && git remote -v
+# cd "$(brew --repo homebrew/core)" && git remote -v
+# cd "$(brew --repo homebrew/cask)" && git remote -v
+# 恢复官方源
+# git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
+# git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core.git
+# git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/Homebrew/homebrew-cask.git
+# 更换 home-bottles
+# export HOMEBREW_BOTTLE_DOMAIN=http://mirrors.aliyun.com/homebrew/homebrew-bottles
+# export HOMEBREW_BOTTLE_DOMAIN=http://7xkcej.dl1.z0.glb.clouddn.com
+# env | grep HOMEBREW
+# brew config
+# brew ls
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# 不建议用 source https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ
+# alias sz='source ~/.zshrc'
+alias sz='exec zsh'
+alias cz='code ~/.zshrc'
+```
+
+
+
+
+
+
+## clash Charles
+
+
+------ clash
 > 2015 ~ 2025
 
-
+https://clash-meta.gitbook.io/clash.meta-wiki-older
 https://github.com/MetaCubeX/ClashX.Meta
 支持 tun 模式, 能让“所有程序”都能通过 Clash 代理, 通过虚拟网卡 修改系统路由表, 作用在 网络层, 几乎等同 VPN 效果. 不开启 tun 是作用在 应用层.
-2025-07-02
-
-clash 配置指定域名用指定 dns 解析
-https://chatgpt.com/share/671762b0-e55c-8008-bf27-b762cf930059
-2024-08
 
 验证 终端代理 是否成功: `curl -v x.com`
 - 不能用 ping， ping 使用的是ICMP协议，ICMP处于网络层(第三层)，而SOCKS5是传输层代理协议(第四层)，HTTP和HTTPS是应用层协议(第五层或者第七层)，协议层不同是无法代理的。
@@ -2572,141 +3454,7 @@ networksetup -getdnsservers Ethernet
   - 最终规则类似 `SRC-IP-CIDR,43.175.127.0/24,Proxy`
 - 在Clash配置文件"rules"添加规则。
 
-code ~/.config/clash/config.yaml
-
-```yaml
-# port: 7890
-# socks-port: 7891
-mixed-port: 7890
-allow-lan: false
-mode: Rule
-external-controller: 127.0.0.1:9090
-dns:
-  enable: true
-  ipv6: false
-  use-hosts: true
-  nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
-  # fallback 值 先配置 公司内网 DNS服务器 地址，通过 cat /etc/resolv.conf 获取
-  fallback: ['https://doh.dns.sb/dns-query']
-  fallback-filter: {
-    geoip: true,
-    geoip-code: CN,  # 确保国内 IP 使用内网 DNS
-    ipcidr: [240.0.0.0/4, 0.0.0.0/32],
-    domain: ['+.xx.team', '+.xx.net']
-  }
-  # # 需要 Clash 版本支持 Fake-IP 模式
-  # enhanced-mode: fake-ip
-  # fake-ip-range: 198.18.0.1/16
-  # # default-nameserver 主要用于 enhanced-mode: fake-ip 模式下
-  # default-nameserver: [223.5.5.5, 119.29.29.29]
-  # nameserver:
-  #   - 180.76.76.76
-  #   - 114.114.114.114
-  #   - https://dns.alidns.com/dns-query
-  #   - https://doh.pub/dns-query
-  # fallback:
-  #   - 8.8.8.8
-  #   - tls://dns.rubyfish.cn:853
-  #   - tls://1.0.0.1:853
-  #   - tls://8.8.4.4:853
-  #   - https://cloudflare-dns.com/dns-query
-  #   - https://dns.cloudflare.com/dns-query
-  #   - https://dns.google/dns-query
-  # fallback-filter:
-  #   geoip: true
-  #   ipcidr:
-  #     - 127.0.0.1/32
-  #   domain:
-  #     - +.google.com
-  #     - +.googleapis.cn
-rules:
-  # - DOMAIN,example.com,DIRECT,dns - 114.114.114.114,119.29.29.29
-  # 微信客户端
-  - DOMAIN-SUFFIX,weixin.qq.com,Proxy
-  - DOMAIN-SUFFIX,qq.com,Proxy
-  - DOMAIN-SUFFIX,wechat.com,Proxy
-  - DOMAIN-SUFFIX,tenpay.com,Proxy
-  - SRC-IP-CIDR,43.175.127.0/24,Proxy
-  - SRC-IP-CIDR,43.153.165.0/24,Proxy
-  # one driver
-  # - DOMAIN-SUFFIX,microsoftonline.com,Proxy
-  # - DOMAIN-SUFFIX,live.com,Proxy
-  # - DOMAIN-SUFFIX,office.com,Proxy
-  # - DOMAIN-SUFFIX,office.net,Proxy
-  # - DOMAIN-SUFFIX,sharepointonline.com,Proxy
-  # 常用国外站点
-  - 'DOMAIN-KEYWORD,google,Proxy'
-  - DOMAIN-KEYWORD,google,Proxy
-  - DOMAIN-KEYWORD,gmail,Proxy
-  - DOMAIN-KEYWORD,youtube,Proxy
-  - DOMAIN-KEYWORD,facebook,Proxy
-  - DOMAIN-KEYWORD,github,Proxy
-  - DOMAIN-KEYWORD,twitter,Proxy
-  - DOMAIN-KEYWORD,instagram,Proxy
-  - DOMAIN-KEYWORD,whatsapp,Proxy
-  # 其他
-  - DOMAIN-SUFFIX,local,DIRECT
-  - DOMAIN-SUFFIX,cn,DIRECT
-  - DOMAIN-KEYWORD,-cn,DIRECT
-  - DOMAIN-KEYWORD,umeng,REJECT
-  - DOMAIN-SUFFIX,stat.com,REJECT
-  - DOMAIN,e.crashlytics.com,REJECT
-  # Telegram Messenger
-  - IP-CIDR,91.108.4.0/22,Proxy,no-resolve
-  - IP-CIDR,91.108.8.0/22,Proxy,no-resolve
-  - IP-CIDR,91.108.12.0/22,Proxy,no-resolve
-  - IP-CIDR,91.108.16.0/22,Proxy,no-resolve
-  - IP-CIDR,91.108.56.0/22,Proxy,no-resolve
-  - IP-CIDR,149.154.160.0/22,Proxy,no-resolve
-  - IP-CIDR,149.154.164.0/22,Proxy,no-resolve
-  - IP-CIDR,149.154.168.0/22,Proxy,no-resolve
-  - IP-CIDR,149.154.172.0/22,Proxy,no-resolve
-  # apple.com
-  - IP-CIDR,17.0.0.0/8,DIRECT
-  # 内网网段
-  - IP-CIDR,127.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  # 自动检测
-  - GEOIP,CN,DIRECT
-  - MATCH,Proxy
-proxies:
-  - name: 有效期2025/07/03,剩余:94.71GB
-    type: trojan
-    server: iplc-hk-beta1.trojanwheel.com
-    port: 5001
-    password: xxx
-    alpn:
-      - h2
-      - http/1.1
-    skip-cert-verify: true
-  - name: 香港-IPLC-HK-BETA1-流量倍率:1.0
-    type: trojan
-    server: iplc-hk-beta1.trojanwheel.com
-    port: 5001
-    password: xxx
-    alpn:
-      - h2
-      - http/1.1
-    skip-cert-verify: true
-proxy-groups:
-  - name: Proxy
-    type: select
-    proxies:
-      - Auto
-      - 有效期2025/07/03,剩余:94.71GB
-      - 香港-IPLC-HK-BETA1-流量倍率:1.0
-  - name: Auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 有效期2025/07/03,剩余:94.71GB
-      - 香港-IPLC-HK-BETA1-流量倍率:1.0
-```
-
+code ~/.config/clash/config.yaml 备份 configs/clash.yaml
 
 mac 自动设置全局代理
 https://gist.github.com/rmcdongit/f66ff91e0dad78d4d6346a75ded4b751
@@ -2731,7 +3479,41 @@ networksetup -listallnetworkservices
 ```
 
 
------- Apache
+
+------ Charles whistle
+> 2019 2024
+
+[whistle](https://wproxy.org/) 规则配置:
+```sh
+https://aa.bb.xx 127.0.0.1:28064 excludeFilter://^/service
+https://aa.bb.xx/govern 127.0.0.1:3025
+https://local.tedev.ltt:27187  127.0.0.1:27187
+```
+
+Charles
+
+- 注意
+  - 公司里默认安装的vpn软件、公司wifi的代理选项默认会打开“自动发现代理”的配置，需要关闭后、才能使用Charles代理。
+  - 使用没有 被设置代理的 浏览器（比如 Chrome **翻墙代理需要关掉**）
+- HTTPs 支持：
+   - Help -> SSL Proxying -> Install Charles Root Certificate (挨着的 **模拟器** / **手机 **证书都装)
+      - 注意：**手机上安装的 证书 和 连接的 mac 电脑要匹配。使用新电脑需要重新给手机安装证书。**
+   - 在 macOS 钥匙串访问 里信任证书，iOS 设置里信任证书。
+   - 菜单 Proxy -> Proxy Setting -> Port: 8888 /
+   - 菜单 Proxy -> SSL Proxying Settings -> SSL Proxying -> add -> Host: *  Port: 443
+   - 在 iOS (**不用连数据线**) WiFi 设置 HTTP 代理，服务器输入 电脑 ip、端口 8888
+- 其他：
+   - 关闭 mac 端包的抓取：菜单 Proxy 将 maxOS Proxy 取消选中 （这样 iOS 模拟器里也抓不了）
+   - 抓取支付宝 RPC 请求：支付宝 可切换环境包 设置关闭 mmtp 开关
+   - 映射本地 js 文件、调试代码：菜单 Tools -> Map Remote / Map Local…
+   - 拦截请求：菜单 Tools -> Rewrite -> 勾选 Enable Rewrite -> Add -> Add -> Rewrite Rule -> Type 选 URL, Where 勾选 Request, Match Value 填 `http(s?):\/\/aa.bb.xx\/(?!(service)\/)`勾选Regex , Replace value 填 `https://127.0.0.1:28064/` 勾选 Replace all
+   - （点击配置框的问号、发现是使用的 Perl-style regular expressions）
+
+
+
+
+
+## Apache / UTM虚拟机
 
 mac系统的 Apache 怎么配置 localhost 同时支持 https http
 https://chatgpt.com/share/674ab45e-27a8-8008-b1bb-04c8bf5e444e
@@ -2807,114 +3589,51 @@ Listen 9999
 如果目录中存在 .htaccess 文件，检查其中是否有配置禁止访问。比如有 Deny from all
 
 
------- zsh(rc) git 配置
+------ UTM 虚拟机
+> 2025-08
 
-生成 ssh key 推拉代码
+--- MacBook Pro 2018 (Intel + AMD GPU) x86_64
+
+1. 在 [UTM](https://mac.getutm.app/) 安装 Linux 虚拟机
+> 参考 https://www.tongyi.com/qianwen/?sessionId=e4e3643aac5f497096256d70a4432775
+> 下载 https://www.releases.ubuntu.com/22.04/ ubuntu-22.04.5-live-server-amd64.iso . 使用 server 版本 没有图形界面 占资源少.
+- Create a New Virtual Machine -> Virtualize -> Linux -> 加载下载的 Ubuntu ISO 镜像
+- 分配: 内存 8G, 存储(Storage) 64G . 设置 Shared Directory, 取名 Ubuntu22 .
+- 点击 Play 图标, 运行 Ubuntu ISO 镜像. 选择 Try or Install Ubuntu Server .
+
+2. 安装 Ubuntu 操作系统
+> 复选框 括号里的 x 表示选中, 使用 空格 来取消选中.
+- 如果你的网络可能不顺畅，选择 "Ubuntu Server (minimized)" 并且不勾选 "Search for third-party drivers" 选项.
+- 在 Proxy address 里留空.
+- 在 Storage configuration 步骤的 “Confirm destructive action” 提示框, 选择“Continue”.
+- 在 SSH configuration 里, 可以先不选 Install OpenSSH server .
+- 在 "Featured server snaps" 界面, 都不选择.
+- 在 “Installation complete!” 界面, 选择 [Reboot Now] 来重启计算机
+- 遇到 “Failed unmounting /cdrom” 错误, 进入 UTM - Ubuntu22 界面 末尾的 CD/DVD 取消选择 Ubuntu ISO 镜像. 确认安装介质已经移除后，按照屏幕上的提示按 Enter 键。系统会尝试再次卸载 /cdrom 并继续启动过程。
+- 到 Ubuntu 22.04.5 LTS hua tty1 界面, 表示安装完成, 主机名为 "hua".
+- 在 hua login: 提示符后 输入你的用户名. 如果创建了一个名为 "hua" 的用户，那么你应该输入 hua 以及后续的密码.
+
+utm 虚拟机 设置了 shared directory , 怎么在 虚拟机 里实际访问这个目录的内容?
+
+剪贴板共享, 这样设置 不可行: 关掉虚拟机 在 UTM 里 右键 → Sharing → 勾选 Enable Clipboard Sharing 或者 右键 → Edit → Display → Spice(qxl). 需要改用 SSH 连接.
+
+操作虚拟机:
 ```sh
-ssh-keygen -t ed25519 -C hualei.hl@xx-inc.com
-ssh-add ~/.ssh/id_ed25519
-# 再把 ~/.ssh/id_ed25519.pub 文件内容添加到 gitlab
-
-# 配置 ssh 走 clash 代理， code ~/.ssh/config
-Host github.com
-  ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
-```
-
-全局默认设置 code ~/.gitconfig  内部 name email
-```sh
-[alias]
-  st = status
-  co = checkout
-  ci = commit
-  br = branch
-[user]
-  name = 然则
-  email = hualei.hl@xx-inc.com
-[includeIf "gitdir:~/inner/-/"]
-    path = .gitconfig-github
-```
-code ~/.gitconfig-github 文件 给特定目录 设置个人 name email
-```sh
-[user]
-  name = warmhug
-  email = hualei5280@gmail.com
-```
-
-`code ~/.zshrc` 文件
-
-- zsh模版 https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
-- 参考 git 插件 https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
-- 覆盖内部命令 https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-internals
-  - 比如 lib/directories.zsh 里的 alias 1='cd -1' 不需要
-- 命令使用状态 `zsh_stats`
-
-```sh
-#export PS1="\u \w$"
-ZSH_DISABLE_COMPFIX="true"
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="ys"  # Look ~/.oh-my-zsh/themes/
-# plugins=(git)  # Look ~/.oh-my-zsh/plugins/*
-source $ZSH/oh-my-zsh.sh
-
-export EDITOR='vim'
-# export EDITOR=nano
-# export EDITOR='code'  # 修改为 vscode 编辑器有问题
-
-# 使用 brew install.sh 安装脚本时, git 设置为 git config --global http.version HTTP/1.1
-# brew 国内源 https://www.jianshu.com/p/bea984d27cd2
-# cd "$(brew --repo)" && git remote -v
-# cd "$(brew --repo homebrew/core)" && git remote -v
-# cd "$(brew --repo homebrew/cask)" && git remote -v
-# 恢复官方源
-# git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
-# git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core.git
-# git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/Homebrew/homebrew-cask.git
-# 更换 home-bottles
-# export HOMEBREW_BOTTLE_DOMAIN=http://mirrors.aliyun.com/homebrew/homebrew-bottles
-# export HOMEBREW_BOTTLE_DOMAIN=http://7xkcej.dl1.z0.glb.clouddn.com
-# env | grep HOMEBREW
-# brew config
-# brew ls
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# 不建议用 source https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ
-# alias sz='source ~/.zshrc'
-alias sz='exec zsh'
-alias cz='code ~/.zshrc'
+# 安装 ssh
+sudo apt update
+sudo apt install openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh
+# 在 mac 电脑终端里 登录 Ubuntu 虚拟机
+# 通过 ip addr show 查看虚拟机的 IP 地址, 显示为 inet 192.168.64.3/24 metric...
+ssh hua@192.168.64.3
+# 虚拟机里 翻墙:
+# 在 clashx 里 copy shell command 获取的 export https_proxy=http://127.0.0.1...
+# 使用 ifconfig 获取 ip 比如 192.168.64.1 替换 127.0.0.1 如下:
+export https_proxy=http://192.168.64.1:7890 http_proxy=http://192.168.64.1:7890 all_proxy=socks5://192.168.64.1:7890
 ```
 
 
------- Charles whistle
-> 2019 2024
-
-[whistle](https://wproxy.org/) 规则配置:
-```sh
-https://aa.bb.xx 127.0.0.1:28064 excludeFilter://^/service
-https://aa.bb.xx/govern 127.0.0.1:3025
-https://local.tedev.ltt:27187  127.0.0.1:27187
-```
-
-Charles
-
-- 注意
-  - 公司里默认安装的vpn软件、公司wifi的代理选项默认会打开“自动发现代理”的配置，需要关闭后、才能使用Charles代理。
-  - 使用没有 被设置代理的 浏览器（比如 Chrome **翻墙代理需要关掉**）
-- HTTPs 支持：
-   - Help -> SSL Proxying -> Install Charles Root Certificate (挨着的 **模拟器** / **手机 **证书都装)
-      - 注意：**手机上安装的 证书 和 连接的 mac 电脑要匹配。使用新电脑需要重新给手机安装证书。**
-   - 在 macOS 钥匙串访问 里信任证书，iOS 设置里信任证书。
-   - 菜单 Proxy -> Proxy Setting -> Port: 8888 /
-   - 菜单 Proxy -> SSL Proxying Settings -> SSL Proxying -> add -> Host: *  Port: 443
-   - 在 iOS (**不用连数据线**) WiFi 设置 HTTP 代理，服务器输入 电脑 ip、端口 8888
-- 其他：
-   - 关闭 mac 端包的抓取：菜单 Proxy 将 maxOS Proxy 取消选中 （这样 iOS 模拟器里也抓不了）
-   - 抓取支付宝 RPC 请求：支付宝 可切换环境包 设置关闭 mmtp 开关
-   - 映射本地 js 文件、调试代码：菜单 Tools -> Map Remote / Map Local…
-   - 拦截请求：菜单 Tools -> Rewrite -> 勾选 Enable Rewrite -> Add -> Add -> Rewrite Rule -> Type 选 URL, Where 勾选 Request, Match Value 填 `http(s?):\/\/aa.bb.xx\/(?!(service)\/)`勾选Regex , Replace value 填 `https://127.0.0.1:28064/` 勾选 Replace all
-   - （点击配置框的问号、发现是使用的 Perl-style regular expressions）
 
 
 
@@ -2922,692 +3641,627 @@ Charles
 
 
 
+## .
+## 自动化
+> 2021 ~ 2025
 
+------ scrcpy adb
 
+电脑控制手机 https://www.zhihu.com/question/46795475 、 anydesk 体验不错、但不能远程操作iPhone，国产抄袭版 todesk 会卡死，Wormhole虫洞 利用 iPhone 的辅助功能-触控 能被三方控制功能实现远程操作、但体验很差。
 
-
-# BE
-
-
-
-[yaml和json区别](https://stackoverflow.com/questions/1726802/what-is-the-difference-between-yaml-and-json)
-2025-07-31
-
-https://github.com/ant-design-blazor/ant-design-blazor
-https://learn.microsoft.com/zh-cn/aspnet/core/blazor/
-2025-07-29
-
-service eu us 不同大区, dr 含义? 其中 r 是 region 的意思, dr 可能是什么?
-https://chat.deepseek.com/a/chat/s/fdaa9566-f02a-4d9e-b719-3c98b7733741
-2025-04-15
-
-软件配置管理(SCM)是指通过执行版本控制、变更控制的规程，以及使用合适的配置管理软件，来保证所有配置项的完整性和可跟踪性。
-2024
-
-
-
-
------- 2025-07 docker
-
+- https://github.com/Genymobile/scrcpy/blob/master/doc/shortcuts.md
+- https://github.com/Genymobile/scrcpy/blob/master/doc/connection.md#tcpip-wireless
+- 第一次电脑和手机需要usb线链接，手机打开“开发者选项和usb调试”。
+- 手机开发者选项: 建议打开 停用adb授权超时功能(disable ADB authorization timeout)。
 
 ```sh
-docker inspect harbor.smart.ddns.xx.team/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3
-
-docker build -t node-build-with-sh .
-docker run -it node-build-with-sh
-# 挂载工作目录
-docker run -it -v /Users/hua/inner/xx:/workspace -w /workspace node-build-with-sh
-
-docker run -it harbor.smart.ddns.xx.team/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 sh
-
-docker run -d --name node-build-dev \
-  -v /Users/hua/inner/xx:/workspace \
-  -w /workspace \
-  harbor.smart.ddns.xx.team/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 \
-  tail -f /dev/null
+# scrcpy --tcpip  # 插入usb线时、先设置无线连接，之后不用插入usb线、通过具体ip地址链接。
+# scrcpy --tcpip=10.94.62.181  # 如果ip正确但也连不上 删掉ip 插上线。
+scrcpy --shortcut-mod=lctrl --stay-awake --turn-screen-off -m1024 -b2M --tcpip=10.94.62.181
 ```
-没有写 CMD ["bash"]，所以没有前台进程. Docker Desktop GUI 默认不会附加 bash，所以容器运行后立刻退出。
-让容器执行一个长期运行的命令（比如 tail -f /dev/null），这样容器保持运行状态.
 
+- 其他选项 --select-usb  --max-fps 15 --max-size 960
+- 快捷键: ctrl p(开电源) o(关屏幕) h(主屏幕) ↑(音量) nn(通知/设置)
+- 其他 https://github.com/Uj947nXmRqV2nRaWshKtHzTvckUUpD/ethernally
+
+adb 自动化: https://blog.ferstar.org/post/use-tasker-do-some-funny-things/
+
+```sh
+adb -s emulator-5554 shell input text 'my%stext'
+# 如果有空格、特殊字符等, 会报错: Error: Invalid arguments for command: text usage: input ...
+# 对这些字符 ( ) < > | ; & * \ ~ " ' 加上反斜杠 \ 转义, 空格用 %s 转义
+
+# adb 解锁 android 手机
+# https://stackoverflow.com/questions/30402582/how-to-verify-android-device-screen-on-or-off-using-adb-shell-command
+
+screenState=$(adb shell dumpsys nfc | grep -e 'mScreenState=' -e 'Screen State:' | tr : = | cut -d '=' -f2)
+if [ "$screenState" == "OFF_LOCKED" ] ; then
+  echo "Screen is off. Turning on."
+  adb shell input keyevent 26 # wakeup
+  sleep 0.8
+  adb shell input touchscreen swipe 540 1000 540 500 # unlock bottom->top
+  sleep 0.8
+  adb shell input text 0000 # pin
+  echo "OK, should be on now."
+else
+  echo "Screen is already on. Locking."
+  adb shell input keyevent 26
+fi
+```
+
+
+------ AppleScript
+> 2024
+
+- call-another-programs-functions: [Accessibility APIs](https://stackoverflow.com/a/866389/2190503) [NSWorkspace](https://stackoverflow.com/q/20874893/2190503)
+- 键盘码 https://eastmanreference.com/complete-list-of-applescript-key-codes
+- 菜单处理
+  - [打开菜单](https://stackoverflow.com/questions/16492839/applescript-on-clicking-menu-bar-item-via-gui-script) [打开子菜单](https://stackoverflow.com/questions/2111736/applescript-or-automator-to-click-on-menus-in-an-application)
+  - [Frontmost Application](https://stackoverflow.com/questions/14386167/os-x-accessing-the-main-menu-of-the-frontmost-application)
+
+在 bash 文件里调用 osascript
+- [open app using bash](https://stackoverflow.com/questions/55100327/how-to-open-and-close-apps-using-bash-in-macos)
+- [activate app By Pid](https://stackoverflow.com/questions/2296812/how-to-activate-mac-os-x-application-with-a-given-process-id)
+
+```sh
+#!/bin/bash
+
+# 显示系统通知
+osascript -e 'display notification "Test message" with title "Test Notification"'
+
+osascript -e 'tell application "Safari" to activate'
+osascript -e 'activate app "Safari"'
+osascript -e 'quit app "Safari"'
+
+osascript -e 'tell application "System Events" to tell process "ClashX"
+  tell menu bar item 1 of menu bar 2
+    click
+    key code 15 using command down
+  end tell
+end tell
+'
+
+# https://apple.stackexchange.com/questions/103621/run-applescript-from-bash-script
+osascript <<EOD
+  tell application "Google Chrome"
+    activate
+  end tell
+EOD
+```
+
+
+------ Android kwgt
+> 2025
+
+$df(h:mma:ss)$  ( good $if(df(H)>=0&df(H)<=11, "morning", df(H)>=12&df(H)<=15, "afternoon", df(H)>=16&df(H)<=20, "evening", "night")$ )
+2025-05 公式编辑器
+
+KWGT 默认刷新间隔为每分钟一次，可在 全局设置 中，将 更新间隔 调整为 1秒, 但会导致 手机耗电 过度.
+所以 小组件的 秒数 不能直接显示出来, 能怎么做?
+https://chat.deepseek.com/a/chat/s/fc16fdf3-c934-4446-9e30-91f821899648
+https://www.douban.com/group/topic/243177384
+2025-03
+
+kwgt kustom 能用 JavaScript 编程的方式做小组件吗?
+哪里有比较丰富的 widgets 市场或集合, 可以直接下载使用?
+2025-03-04
+
+kwgt [官网](https://docs.kustom.rocks/) [reddit](https://www.reddit.com/r/kustom/)
+
+
+------ Android automate
+> 2023 2024
+
+https://llamalab.com/automate/
+
+权限设置：开启无障碍 允许后台弹出界面 显示悬浮窗 桌面快捷方式。
+添加桌面图标：在flow beginning里 install home screen shortcut
+
+语法：
+拼接变量 `"my string" ++ myVar` 或 `mystring{myVar}`。
+正则表达式(java版本): `matches(txt, "(?s)\\s*+(?:https?://)?+(?:www\\.)?+(?:m\\.)?+(.+?)/?+\\s*+")[1]`。
+函数: `contains(txt, "https://")` 等。
+Content view 组件的 Content MIME type: `video/mp4` 等类型。
+一些 APP 的 Package 和 Activity class:
+`com.android.chrome` / `com.google.android.apps.chrome.Main`
+
+社区优秀应用：Search Engine 、 Tab Browser 、 Text to Speech 、Web dialogs (inspect layout, better support) 、 Microsoft Rewards Auto-Search
+
+- 直接打开 天猫精灵-我的设备 页面: 使用 App start 组件，package 选择 `com.alibaba.ailabs.tg` Activity class 选择 `com.alibaba.ailabs.tg.home.MyIotHomeActivity`
+- 亮度升高: set screen brightness 为 0.4，因为 小米改动了系统默认亮度、这里0.5是最亮的。
+- 复制日期时间: 设置变量 dt "{Now;dateFormat;yyyy-MM-dd_HH-mm}" 设置 clipboard 为 dt。
+
+--- 通过分享使用 百度/Google 搜索:
+
+情况分析：
+- 从普通软件分享的文字是 `你好` 这样的纯文本。
+- 从 edge 浏览器bing网站菜单栏的“分享按钮”直接点击分享的文字是 `https://cn.bing.com/search?q=test&qs=HS` 这种纯粹的url。
+- 从 edge 浏览器bing搜索结果网页内选中文字后、弹出的分享按钮点击是 `"你好" https://cn.bing.com/search?q=test&qs=HS` 这种 纯文本+URL，需要去掉其中的链接。
+
+实现：
+1. 使用 Content shared 组件，设置 Content MIME type 为 Any / Text，Content text 为 txt。
+2. 上一步 txt 值可能是 `纯文本、纯文本+URL、纯URL` 三者中的某一种，使用 Expression true 组件来做 if 判断。
+   1. 先判断是否为http开头的纯URL、if语句为 `#txt < 4 ? 0 : slice(txt, 0, 4) = "http"` 如果值为真、这时只是bing(或者你自己的默认)搜索引擎链接，用表达式 `matches(txt, ".*([?&])q=(.*?)&.*")[1]` 提取 url 后边的 q 参数值。
+   2. 否则再判断是否是 `纯文本+URL`(注意文本和URL之间有换行符)，设置中间变量 txt1 为 `matches(txt, "\"(.*)\"([\\s\\S]*)http.*")[1]` 这个正则能匹配换行符、并提取出了其中的纯文本文字。
+   3. 再使用 Expression true 组件判断 `txt1 != ""` 值为真、则使用 Variable set 组件、设置 txt 为 txt1。不为真、则是 `纯文本` 的情况、直接返回 txt 即可。
+3. 最终打开的链接: `"https://www.google.com/search?q=" ++ txt` 和 `"https://www.baidu.com/s?wd=" ++ txt`
+
+--- 处理 onedriver 里 txt 文件:
+
+使用 Dialog choice 组件，在 Choices 输入框输入
+```json
+{
+  "content://com.microsoft.skydrive.content.external/Drive/ID/1/Item/RID/4B2D0681F143BB23%216901/Stream/1/Property/_life.txt": "life",
+  "content://com.microsoft.skydrive.content.external/Drive/ID/1/Item/RID/4B2D0681F143BB23%216902/Stream/1/Property/_misc.txt": "misc"
+}
+```
+勾选 Show window 选项、才能弹出弹窗。
+> 其中 json 里的 URL 来自 小米默认浏览器 打开 onedriver txt 文件时的路径，使用这个路径、也可以在 automate 这里打开。
+再使用 App start 组件，package 选择 `cn.wps.moffice_eng.xiaomi.lite` Activity class 选择 `cn.wps.moffice.plugin.app.entrance.WriterEntranceActivity`
+
+
+------ iOS Scriptable
+> 2022 ~ 2023
+
+[mac scriptable](https://scriptable.app/mac-beta/)
+[scriptable docs](https://docs.scriptable.app/)
+[reddit 社区](https://www.reddit.com/r/Scriptable/)
+[automators 社区](https://talk.automators.fm/t/file-bookmarks-sync/5729)
+https://github.com/dersvenhesse/awesome-scriptable
+https://github.com/evilbutcher/Scriptables
+https://routinehub.co/
+
+[捷径汇总](https://www.jianshu.com/p/ec131155c58d)
+https://ifttt.com/ 通过获取“智能开关、iOS提醒事项日历”等各类服务的API、再设置 if.then 逻辑、在手机上打开才能运行。注意：没有像“iOS快捷指令”app的系统权限、不能调用其他app。
+
+iOS<=16 版本，小组件里列表内容 没有click等点击事件、只可以通过url打开Safari或其他app。
+
+[icon_themer & Fancy Icon Maker](https://www.reddit.com/r/shortcuts/comments/p30bnu/icon_themer_alternative/) 新版 iOS 已失效。
+
+iOS内容限制：转到“设置” > “屏幕时间” > “内容和隐私限制” > 选择“内容限制”-”网页内容“。
+
+[appintents](https://developer.apple.com/documentation/appintents/)
+
+
+
+
+
+
+## mobile
+
+
+Android 软件: MX播放器(VLC不能播放加密文件) AirDroid 微动手势(允许后台弹出界面和显示悬浮窗), automate,, kwgt, popup widget, macrodroid, tasker(收费), easytouch, anywhere . 反编译apk: apktool/dex2jar/jd-gui/javadecompilers
+
+iOS 快捷指令
+- 同步: Apple ID -> iCloud -> 使用iCloud的APP -> 显示全部 找到 快捷指令 勾选同步。
+- 朗读的 声音大小和siri一样，不受设置里声音大小的控制，通过设置 Siri 的声音来控制。
+
+
+## cdn
+
+```md
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][downloads-url]
+[![Build Status][travis-image]][travis-url]
+
+[npm-url]: https://npmjs.org/package/@huajs/demo
+[npm-image]: http://img.shields.io/npm/v/@huajs/demo.svg
+
+[downloads-url]: https://npmjs.org/package/@huajs/demo
+[downloads-image]: http://img.shields.io/npm/dm/@huajs/demo.svg?style=flat-square
+
+[travis-url]: https://travis-ci.org/react-component/m-steps
+[travis-image]: http://img.shields.io/travis/react-component/m-steps.svg
+```
+
+- https://www.npmjs.com/~warmhug
+- https://www.npmjs.com/org/huajs
+- https://www.npmjs.com/org/warm_hug
+
+
+国外图片站点
+https://www.pexels.com/zh-cn/
+https://pixabay.com/
+
+https://gw.alipayobjects.com/os/lib/react/16.13.0/umd/react.production.min.js
+https://gw.alipayobjects.com/os/lib/react-dom/16.13.0/umd/react-dom.production.min.js
+https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
+https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
+https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
+https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
+https://os.alipayobjects.com/rmsportal/EylTaSCtqXQRiTK.jpg
+http://images.cnblogs.com/cnblogs_com/bluedream2009/201609/o_mm.jpg
+
+[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
+https://unpkg.com  https://cdnjs.com  https://jshub.com  https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org  https://upcdn.b0.upaiyun.com
+https://cdn.bytedance.com  https://www.webcache.cn
+
+http://cdn.staticfile.org/angular.js/1.2.16/angular.js
+http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
+http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
+https://code.jquery.com/ui/1.13.0/jquery-ui.js
+jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
+https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
+https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
+qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
+less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
+bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
+bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
+
+
+
+## 命名
+
+devops 中 dev 环节英语应该叫什么
+https://chatgpt.com/c/689082d1-4d54-8008-b28b-6668d4e733f6
+2025-08-04
+
+代码项目的目录命名 common 和 commons 哪个更好?
+https://gemini.google.com/app/fd0ec4b35523c91f
+https://chat.deepseek.com/a/chat/s/f32465b1-6753-4abf-be2b-1edb5ea56f26
+https://chatgpt.com/share/67bdc47e-88b4-8008-9094-399b0a78b555
+2025-02-25
+
+http://json-schema.org/draft-07/schema
+2025-04
+
+2024-lerna
+|- packages/
+│  |─ demo/
+│  |─ demo1/
+|- shared/
+│  |─ utils.ts
+|- tests/
+│  |─ setupTests.ts
+|- typings/
+│  |─ css-modules.d.ts
+│  |─ scss.d.ts
+|- .gitignore
+|- .npmrc
+|- tsconfig.json
+|- typings.d.ts
+|- vitest.config.ts
 
 ---
 
-docker engine 和 swarm 关系, 和 kubernete 关系?
+bash 英语术语: Redirection Pipes
+
+aids / facilities / Misc / Vendor / base / core
+data-commons / data-utils / http-utils / json-helper
+integration / integrate / legacy
+
+lib - Library（库）：通常包含一系列可重用的代码模块或函数集合。
+common - Common（公共）：存放项目中多个部分都会用到的通用函数或组件。
+commons - 公共组件/方法：项目中多个部分都会用到的通用逻辑和功能。
+aux 或 auxiliary - 辅助，与 helper 类似，指辅助性代码模块。
+Assistants - 辅助类，帮助主程序执行操作。
+helper - Helper（助手）：这类文件或模块提供一些辅助性的功能函数。
+Helpers - 帮助函数或模块，用于简化代码。
+extensions / ext - 扩展方法：扩展已有对象或类型的额外功能函数。
+tools - 工具集：各种杂项但实用的功能函数合集。
+utility utilities (完整形式) - 同样指代工具函数，与 utils 含义一致
+support - 支持模块：为其它主要模块提供支持性功能的代码块。
+tasks / jobs - 任务/作业：用于定时任务或其他异步工作流程的模块。
+
+logger / logging - 日志记录：用于处理日志生成和管理的模块。
+core_utils - 核心工具：专用于项目核心模块的一组工具方法。
+funcs / functions - 函数集：用来存储独立、非特定业务逻辑的函数。
+Components - 组件类，用于构建更大的系统。
+Modules - 模块类，包含一组相关的功能。
+Libraries - 库，提供预定义的功能集合。
+Frameworks - 框架，提供应用程序的基本结构。
+Addons - 插件或附加组件，扩展主程序的功能。
+Plugins - 插件，用于扩展软件的功能。
+Scripts - 脚本，一系列自动化命令或程序。
+Snippets - 代码片段，用于快速插入常用代码。
+services - 服务层：在某些架构中，这一层封装了应用程序的核心业务逻辑和数据处理操作。
+services_utils - 服务层工具：在服务层内部使用的通用功能模块。
+models - 模型：在 MVC（Model-View-Controller）架构中，模型代表数据结构及相关的业务逻辑。
+middlewares - 中间件：在像Express.js这样的Node框架中，中间件是指处理HTTP请求的函数序列。
+io - Input/Output（输入/输出）：与数据读取、写入等I/O操作相关的模块。
+config - 配置：存放应用程序配置信息的模块或文件夹。
+cache - 缓存：提供缓存功能，如数据缓存、HTTP请求缓存等的模块。
+validators / validation - 校验器/验证：包含数据校验逻辑的模块。
+exceptions - 异常处理：用来定义和处理自定义异常的模块。
+consts / constants - 常量：存放程序中不会改变的值。
+enums - 枚举：存储枚举类型的模块。
+templates / views - 模板/视图：在Web开发中，存放HTML模板或其他类型视图文件的目录。
+primitives - 基础工具：包含一些基础且常用的处理数据、字符串等的基础方法。
+
+
+
+## PRD 系分 2019-11
+
+PRD有三种状态：Draft、 Review、Ready,  其中起草人为产品或研发团队，相关人 review 通过。
+
+修订记录/更新日志
+修改日期	修改版本	修改内容	备注
+
+前后端测试负责人、工作量评估。
+
+一、需求背景
+1.1 需求来源
+1.2 需求描述
+概念对齐/名词定义/关键术语
+目标对齐
+竞品调研/同类产品调研
+使用场景/主要用户/试点用户
 
-https://github.com/dockersamples/helloworld-demo-node
-https://docs.docker.com/engine/storage/drivers/
-https://docs.docker.com/build/concepts/dockerfile/
-https://docs.docker.com/build/ci/github-actions/
-https://docs.docker.com/compose/intro/compose-application-model/
-https://docs.docker.com/desktop/features/networking
+二、需求目标
+产品定位
+产品目标
+产品能力
+业务问题(业务需求)现存问题
+功能一览表格
+业务流程
 
+三、结构/流程图
+3.1 功能结构图
+3.2 需求流程图
+业务流程 -> 任务流程 -> 页面流程
+3.3 交互设计图
 
---- CICD系统
+四、需求范围
+模块 功能 优先级
+
+五、功能性需求
+详细需求
+详细方案
 
-https://github.com/actions/checkout
-在 CI 环境里 比如 github action, 先加载需要的 node 镜像, 再跑 npm install / test 等, 是怎么触发的?
-通过 workflow 文件（.github/workflows/*.yml） 触发的。
-GitHub Actions 启动一个 Runner（可以是 GitHub 提供的虚拟机，也可以是自托管机器）。
-Workflow 里可以指定：直接使用 Docker 镜像 作为运行环境, 或使用官方 actions/setup-node 在 runner 上安装 Node, Runner 在容器内或虚拟机上执行 npm install、npm test 等命令。
+六、非功能性需求
+上线/灰度/回滚方案、兼容性、AB实验、高可用、性能、监控、权限、运维 等。
 
-github 的 workflow 是怎么实现的?
-GitHub Actions 的 Workflow 是 GitHub 提供的一个 事件驱动的 CI/CD 系统，其实现本质上是：
-GitHub 托管一个 Workflow 引擎（负责解析 .github/workflows/*.yml）
-事件（push、PR、schedule 等）触发 Workflow 运行
-Workflow 引擎调度 Runner（执行任务的机器）
-Runner 拉取工作内容、运行 Actions、上报日志和结果.
+七、附录
+数据分析报告、用户调研报告
+
+
+------ 系分 模版
+> 2019-11
+
+系分(系统设计+业务分析)的本质其实就是将技术推演的过程前置，所带来的好处就是：问题可以在第一时间发现，第一时间解决，从而最大化的降低了需求变更、方案变更 所带来的沉没成本。
 
-在公司内部署 Workflow Engine 和 Runner , 用什么语言写的比较多?
-为什么 Go / .NET 最多？
-Go：天然适合容器环境，CI/CD 场景高并发、K8s 集成方便
-.NET Core：跨平台 + 运行稳定，GitHub 官方 Runner 采用
+--- 修订历史
+| 版本号 | 作者 | 内容提要 | 发布日期 |
+|  ----  | ----  | ---- | ---- |
+| V1.0 | XX | 初稿 | 2020-10-24 |
 
+--- 需求背景
+xxxx
 
+--- 需求目标
+xxxx
 
+--- 相关资源
+- prd(@xx): XXX  交互稿(@xx): XXX  视觉稿(@xx): XXX
+- 后端系分: XXX、API 列表
 
+--- 功能分析
+> 1.模块交互截图 2.展示要素分析 3.时序图（包含系统交互、用户行为交互）
 
------- 2016 基础
+模块A
+xxxx
+模块B
+xxxx
 
-[正向代理与反向代理有什么区别](http://mp.weixin.qq.com/s/ikrI3rmSYs83wdSWqq2QIg)
+特殊模块分析(可选)
+1.特殊功能描述
+2.实现思路流程图？依赖的框架、类库？
+3.性能表现，是否需要降级？降级的维度：钱包版本、系统版本、小程序版本?
+4.兼容性，稳定性方案
 
-CDN 工作机制：CDN = 镜像（Mirror）+ 缓存（Cache）+ 整体负载均衡（GSLB），主要缓存网站中的静态数据。
+--- 监控设计
+核心业务数据监控。异常监控告警。
 
-三种负载均衡架构：链路负载均衡、集群负载均衡、操作系统负载均衡。
-- 链路负载均衡就是通过 DNS 解析成不同的 IP，用户根据这个 IP 来访问不同的目标服务器。
-- 集群负载均衡分为硬件和软件负载均衡。硬件负载均衡设备昂贵、如 F5，性能非常好，但访问量超出极限时不能进行动态扩容。软件负载均衡成本低，缺点是一般一次访问请求要经过多次代理服务器，会增加网络延时，如 LVS、HAProxy。
-- 操作系统负载均衡，是利用操作系统级别的软中断或硬中断，设置多队列网卡等来实现。
+--- 灰度方案
+服务端、客户端、配置项灰度方案。
 
-- QPS、RT、CPU 性能监控
-- 阿里云OSS：文件存储系统（避免把文件存到数据库里、占用IO资源）
-- tair：内存缓存服务器 开源：memcached / redis
-- F5：硬件负载均衡，LVS替代(软负载)
-  - 即为name server（configServer），名字服务器，存放各个机器名，能知道有哪些机器。
-- HSF(High Speed FrameWork)：远程服务调用框架
-  - non-blocking IO.可以减少CPU切换开销，留更多CPU资源给业务代码。类比渔夫钓鱼，鱼竿有灯，钓起来灯亮，渔夫遍历查看鱼竿的等是否亮，亮了通知订阅者。一个渔夫可以看更多鱼竿，但如果鱼竿很多，一个渔夫看不过来，会造成延迟增加。
-  - IO连接多路复用。一个连接上维持多个会话。
-  - 序列化协议，hessian序列化。
-  - 同类开源的rpc框架：dubbo或thrift等
-- osgi：用于进行类库隔离的组件，允许组件动态热部署
-- hbase、hive
-- DRM：分布式资源管理，DRM框架即提供了这样一种能力，可以在运行时动态、即时地改变应用系统内存中的资源值，并且已经解决多机房问题。
-- zookeeper：可以充当一个服务注册表（Service Registry），让多个服务提供者形成一个集群，让服务消费者通过服务注册表获取具体的服务访问地址（ip+端口）去访问具体的服务提供者。zookeeper提供了“心跳检测”功能，它会定时向各个服务提供者发送一个请求（实际上建立的是一个 socket 长连接），如果长期没有响应，服务中心就认为该服务提供者已经“挂了”，并将其剔除
+--- 应急方案
+写操作熔断方案、核心模块熔断、应急提示（小黄条）
 
-- DAL(数据访问层)、IDAL(接口层)、BLL(业务逻辑层)
-- PO(Persisent Object)持久对象，和VO一样都是由一组属性和属性的 get 和 set 方法组成。PO 的属性是跟数据库表的字段一一对应的。PO 对象需要实现序列化接口。
-- VO(value object)值对象，通常用于业务层之间的数据传递，和 PO 一样也是仅仅包含数据而已。但应是抽象出的业务对象 ,可以和表对应 ,也可以不 ,这根据业务的需要。
-- DAO(data access object) 数据访问对象，它负持久层的操作，为业务层提供接口。此对象用于访问数据库。通常和 PO 结合使用， DAO 中包含了各种数据库的操作方法。通过它的方法 , 结合 PO 对数据库进行相关的操作。
-- DTO(Data Transfer Object) 数据传输对象，主要用于远程调用等需要大量传输对象的地方。
+--- 埋点方案
+1.页面访问埋点 2.链路行动点曝光+点击 3.特殊业务埋点
 
-比如我们一张表有 100 个字段，那么对应的 PO 就有 100 个属性。
-但是我们界面上只要显示 10 个字段，客户端用 WEB service 来获取数据，没有必要把整个 PO 对象传递到客户端，这时我们就可以用只有这 10 个属性的 DTO 来传递结果到客户端，这样也不会暴露服务端表结构 . 到达客户端以后，如果用这个对象来对应界面显示，那此时它的身份就转为 VO。
+--- 技术沉淀
+1.沉淀一个组件？ 2.沉淀一个模板？ 3.沉淀一套解决方案？
 
-- BO(business object) 业务对象，从业务模型的角度看 , 见 UML 元件领域模型中的领域对象。封装业务逻辑的 java 对象 , 通过调用 DAO 方法 , 结合 PO,VO 进行业务操作。主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。比如一个简历，有教育经历、工作经历、社会关系等等。我们可以把教育经历对应一个 PO ，工作经历对应一个 PO ，社会关系对应一个 PO 。建立一个对应简历的 BO 对象处理简历，每个 BO 包含这些 PO 。这样处理业务逻辑时，我们就可以针对 BO去处理。
+--- 项目管理
 
+工作量评估
 
+| 功能点 | 工作量 | 需求优先级 | 责任人 |
+|  ----  | ----  | ---- | ---- |
+| 模块A | X天 | P0 | 小马 |
+| 模块B | X天 | P0 | 小马 |
+| 模块C | X天 | P1 | 小马 |
 
+项目风险点
 
-## 网络
+项目详细计划表
 
------- 2019
+发布checkList
 
-- 从输入URL到页面加载完成 http://fex.baidu.com/blog/2014/05/what-happen/
-- HTTP 协议，http2.0，http 301 / 302 / 304 的区别。
-- TCP 是运输层而 HTTP 是应用层，HTTP需要支持「分块传输编码」。分块传输编码可以在响应数据未完全生成时进行数据传输，此时还无法确定响应信息的具体大小。如果分块中所包含信息的长度为 0，则表示响应信息的结束。
-- SPDY / HTTP 2 核心优势就是多路复用，简单说来就是将多个请求通过一个 TCP 连接发送。浏览器能不能将 100 个请求通过一个 TCP 连接发送？会出现什么问题？那就是 TCP 协议的 head of line blocking,队头阻塞。
-- [http2讲解](http://http2-explained.haxx.se/content/zh/index.html)、 [htt2 and UDP](http://2014.jsconf.eu/speakers/iliyan-peychev-http-20-and-quic-protocols-of-the-near-future.html)
-- 200、304 状态图 https://img2018.cnblogs.com/blog/907596/201903/907596-20190302011346217-1805589363.png (文章 https://www.cnblogs.com/kevingrace/p/10459429.html)
 
-- 输入域名并按下回车后 第一步，浏览器会检查缓存中有没有这个域名对应的解析过的 IP 地址，有就结束，没有进入下一步
-- 第二步，浏览器查找操作系统缓存中是否有。操作系统也有一个域名解析过程，在 hosts 文件里设置可以将任何域名解析到任何能够访问的 IP 地址。如果指定了，浏览器会使用这个 IP 地址。（早期 Windows 中的域名被入侵黑客劫持问题）
-- 前两步都是在本机完成的，如果无法完成解析，就会请求域名服务器了。我们的网络配置中都会有「DNS 服务器地址」，操作系统会把域名发送给 LDNS，也就是本地区的域名服务器。大约 80% 的域名解析到这里完成。
-- 第四步，如果 LDNS 没命中，就到 Root Server 域名服务器请求解析。然后 `gTLD Server`，`Name Server 域名服务器`，返回该域名对应的 `IP 和 TTL 值` 被 Local DNS Server 缓存，解析结果返回给用户、缓存到本地系统缓存中、域名解析过程结束。（这中间还有 GTM 负载均衡控制等）
-- 可以用 `nslookup`、`dig www.taobao.com` 等命令，跟踪解析过程
 
 
------- HTTP
 
-发起一个 HTTP 请求的过程就是建立一个 socket 通信的过程。
-HTTP 协议是基于请求 / 响应模式的，因此只要服务端给了响应，本次 HTTP 连接就结束了。
-HTTP 分为长连接和短连接，其实本质上是说的 TCP 连接。TCP 连接是一个双向的通道，它是可以保持一段时间不关闭的，因此 TCP 连接才有真正的长连接和短连接这一说。HTTP 协议说到底是应用层的协议，而 TCP 才是真正的传输层协议，只有负责传输的这一层才需要建立连接。
-HTTP1.1 默认是长连接，也就是默认 Connection 的值就是 keep-alive。好处是：长连接情况下，多个 HTTP 请求可以复用同一个 TCP 连接，这就节省了很多 TCP 连接建立和断开的消耗。
+## plantuml
 
-对于客户端来说，不管是长轮询还是短轮询，客户端的动作都是一样的，就是不停的去请求，不同的是服务端，短轮询情况下服务端每次请求不管有没有变化都会立即返回结果，而长轮询情况下，如果有变化才会立即返回结果，而没有变化的话，则不会再立即给客户端返回结果，直到超时为止。不管是长轮询还是短轮询，都不太适用于客户端数量太多的情况，因为每个服务器所能承载的 TCP 连接数是有上限的，这种轮询很容易把连接数顶满。
-一种轮询方式是否为长轮询，是根据服务端的处理方式来决定的，与客户端没有关系。轮询的长短，是服务器通过编程的方式手动挂起请求来实现的。
+2022
 
-HTTP 协议本身是一种面向资源的应用层协议，但对 HTTP 协议的使用实际上存在着两种不同的方式：一种是 RESTful 的，它把 HTTP 当成应用层协议，比较忠实地遵守了 HTTP 协议的各种规定；另一种是 SOA 的，它并没有完全把 HTTP 当成应用层协议，而是把 HTTP 协议作为了传输层协议，然后在 HTTP 之上建立了自己的应用层协议。
+```plantuml
+@startuml
+:sss;
+split
+   :A;
+   kill
+split again
+   :B;
+   detach
+split again
+   :C;
+   kill
+end split
+@enduml
+```
 
-幂等性并不属于特定的协议，它是分布式系统的一种特性；所以，不论是 SOA 还是 RESTful 的 Web API 设计都应该考虑幂等性。（幂等性是数学中的一个概念，表达的是 N 次变换与 1 次变换的结果相同）
 
-- HTTP GET 方法用于获取资源，不应有副作用，所以是幂等的。（不会改变资源的状态，但不是每次 GET 的结果相同）
-- HTTP DELETE 方法用于删除资源，有副作用，但它应该满足幂等性。
-- HTTP POST 和 PUT 的区别容易被简单地误认为 “POST 表示创建资源，PUT 表示更新资源”；而实际上，二者均可用于创建资源，更为本质的差别是在幂等性方面。
-- POST 所对应的 URI 并非创建的资源本身，而是资源的接收者。比如：POST `http://www.forum.com/articles` 的语义是在这里创建一篇帖子，HTTP 响应中应包含帖子的创建状态以及帖子的 URI。两次相同的 POST 请求会在服务器端创建两份资源，它们具有不同的 URI；所以，POST 方法不具备幂等性。
-- 而 PUT 所对应的 URI 是要创建或更新的资源本身。比如：PUT `http://www.forum/articles/4231` 的语义是创建或更新 ID 为 4231 的帖子。对同一 URI 进行多次 PUT 的副作用和一次 PUT 是相同的；因此，PUT 方法具有幂等性。
+```plantuml
+@startuml
+title 无分支条件
 
-[合并 HTTP 请求是否真的有意义？](http://www.zhihu.com/question/34401250)
-浏览器针对每个域名并发建立的最大 TCP 连接数基本都是 6 个，然后每个连接上串行发送若干个请求。HTTP1.1 协议规定请求只能串行发送。
+[*] --> active
+active -right-> inactive : disable
+inactive -left-> active  : enable
+inactive --> closed  : close
+active --> closed  : close
+closed --> [*]
+@enduml
+```
 
-- 100 个请求下：在 http1.1，keep-alive 是默认的，现代浏览器都有 DNS 缓存，DNS 寻址时间可忽略。
-  - 寻址还是会花很少量时间，考虑个别情况下 DNS 缓存失效时需要更多点时间（10ms 左右）。另外 url 检查时间，一般可忽略。
-- 3 次握手由于有 keep-alive，一条和一百条都只需一次 TCP 握手 -- 无差别。
-- 发送报文 -- 增多了 99 次的 http 请求头，请求之间有停顿（网络延迟 RTT），如果合并后节省延迟时间 RTT*(n-1)。网络延迟低或请求数 n 比较小时，可忽略不计。（4G 以上网络延迟很低）。
-  - PC 上的 RTT 大概是 50ms, wifi 为 100ms， 3G 为 200ms，2G 为 400ms。例如：一个 200M 带宽、2000ms 延迟的网络，和一个 2M 带宽，20ms 延迟的网络。
-  - 无线环境下头部大小每减少 100 个字节，速度能够提升 20~30ms。因为：上下行带宽严重不对称，上行带宽太小。假设一个请求头部是 800 个字节，如果上行带宽是 100 个字节，那至少得传 8 次才能将一个请求传完。
-- 考虑丢包（比如移动网络），合并请求会更有优势。
-  - 丢的是 tcp 包？服务器怎么知道丢了，丢了哪些内容 (如 get 请求内容一部分丢了)？浏览器会重新发送，还是自动重发？
-- 据说 keep-alive 在经过代理或者防火墙的时候可能会被断开。
 
-[http pipelining](https://en.wikipedia.org/wiki/HTTP_pipelining) pipeline 原理是 客户端可以并行发送多个请求，但是服务器的响应必须按次序返回。一些服务器和代理不支持 pipeline；在 pipeline 中的前一个链接可能会阻塞后边的链接；减缓页面加载速度。Chrome 默认禁止了 pipelining。[原因](https://www.chromium.org/developers/design-documents/network-stack/http-pipelining)
+```plantuml
+@startuml
 
-名词：`TCP`、`UDP`、`套接字Socket`、`ip`、`URI`、`URL`、`URN`
-`消息摘要和数字签名`、`RSA算法`、`DSA`、`认证问题`、`证书签名`、`代码签名`、`AES密匙`、`GSS-API`、`SASL`、`SSL`
+left to right direction
+'top to bottom direction
 
-IP地址和端口号组成了所谓的Socket，Socket是网络上运行的程序之间双向通信链路的终结点，是TCP和UDP的基础。
-半关闭提供了这样一种能力：套接字连接的一端可以终止其输出，同时仍旧可以接收来自另一端的数据。该协议只适用于一站式（one-shot）的服务，如http服务。
+rectangle Arrows
+rectangle C
+rectangle D
+rectangle E
 
+Arrows --> C
+Arrows --> D
+Arrows --[hidden]> E
 
------- Session与Cookie
+@enduml
+```
 
-Session 默认有效期是关闭浏览器，为什么session会消失，主要原因是浏览器端cookie内保存的 sessionID 失效了，因为session是基于cookie的，所以关闭浏览器会失效。浏览器关闭，session是不会马上消失的。如何延长session声明周期，解决方案：延长cookie 和 session 的生存时间
 
-Cookie可以让服务端程序跟踪每个客户端的访问，但是每次客户端的访问都必须传回这些Cookie，如果数量很多，这就增加了客户端与服务端的数据传输量，而Session解决了这个问题。
+```plantuml
+@startuml
+left to right direction
+'top to bottom direction
 
-同一个客户端每次和服务端交互时，不需要都传回所有的Cookie值，而是只要传回一个id，这个id是客户端第一次访问服务器时生成的，而且每个客户端是唯一的。这个id通常是name为JSESIONID的一个Cookie。
+rectangle Arrows
+note top : aaa\nbbb
+rectangle A
+rectangle B
+rectangle C
+rectangle D
+rectangle E
 
-由于Cookie是存储在客户端浏览器里的，不安全很容易被修改。相比之下，Session是将数据保存在服务端，只是通过Cookie传递一个SessionID而已，所以Session更适合存储用户隐私和重要的数据。
-
-分布式Session框架可以解决的问题：Session配置的统一管理；Cookie使用的监控和统一规范管理；Session存储的多元化；Session配置的动态修改；Session加密key的定期修改；充分的容灾机制，保持框架的稳定性；Session各种存储的监控和报警支持；Session框架的可扩展性；跨域名Session与Cookie的共享。
-
-由于应用是一个集群，所以不可能将创建的Session都保存在每台应用服务器的内存中，因为如果每台服务器有几十万的访问用户，服务器的内存肯定不够用，即使够用，这些Session也无法同步到这个应用的所有服务器中。所以要共享这些Session必须将他们存储在一个分布式缓存中，可以随时写入和读取，而且性能要很好才能满足要求，如MemCache、淘宝的Tair。
-
-跨域名共享Cookie问题，Cookie是有域名限制的，一个域名下的Cookie不能被另一个域名访问。所以，如果在一个域名下已经登陆成功，如何访问到另外一个域名的应用且保证登陆状态仍然有效呢？
-
-
-
-
-
-
-## 安全
-
-
-@types/update-notifier:6.0.8,command-exists:1.2.9,diff:7.0.0,dotenv:16.6.1,gaxios:6.1.1,glob:10.4.1,highlight.js:11.11.1,ink:6.0.1,ink-big-text:2.0.0,ink-gradient:3.0.0,ink-link:4.1.0,ink-select-input:6.2.0,ink-spinner:5.0.0,ink-text-input:6.0.0,lowlight:3.3.0,mime-types:2.1.4,open:10.1.2,react:19.1.0,read-package-up:11.0.0,shell-quote:1.8.2,string-width:7.1.0,strip-ansi:7.1.0,strip-json-comments:3.1.1,update-notifier:7.3.1,yargs:17.7.2,@google/genai:1.4.0,@modelcontextprotocol/sdk:1.11.0,@opentelemetry/api:1.9.0,@opentelemetry/exporter-logs-otlp-grpc:0.52.0,@opentelemetry/exporter-metrics-otlp-grpc:0.52.0,@opentelemetry/exporter-trace-otlp-grpc:0.52.0,@opentelemetry/instrumentation-http:0.52.0,@opentelemetry/sdk-node:0.52.0,@types/glob:8.1.0,@types/html-to-text:9.0.4,google-auth-library:9.11.0,html-to-text:9.0.5,ignore:7.0.0,micromatch:4.0.8,simple-git:3.28.0,undici:7.10.0,ws:8.18.0
-帮我查下这些 npm 包, 是否有 未经用户操作 而是自身主动地发起 "log请求，或者三方的cookie设置" 等不利于企业信息安全的行为.
-或者是否有类似木马和病毒的行为.
-https://chatgpt.com/c/688894a7-05cc-8008-87e0-c5ef572475b7
-https://chat.deepseek.com/a/chat/s/a84bb58a-3f19-47f5-aec8-9ed298db0e71
-https://gemini.google.com/app/17702d037ff7ca2c
-2025-07-29
-
-
------- 2018 - 2017
-
-[a 标签中 target="_blank" 的安全漏洞](https://www.tutorialdocs.com/article/html-opener-blank.html) 详细地解释了该漏洞的攻击方法和原理。并在文末给出了防范该漏洞的解决办法：给 a 标签增加 rel="noopener noreferrer nofollow"。
-
-cors跨域：http头可以伪造，所以跨域的时候记得带上sessionId做身份验证；防止允许跨域的站点被入侵；不要对 Access–Control-Allow-Origin 使用`*`
-
-[csrf 详解](https://tech.meituan.com/fe_security_csrf.html)、[csrf漏洞](http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html)、[wiki中文](http://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0)
-XSS 利用的是用户对指定网站的信任，CSRF 利用的是网站对用户网页浏览器的信任。
-跨站请求攻击，简单地说，是攻击者通过一些技术手段欺骗用户的浏览器去访问一个自己曾经认证过的网站并执行一些操作（如发邮件，发消息，甚至财产操作如转帐和购买商品）。由于浏览器曾经认证过，所以被访问的网站会认为是真正的用户操作而去执行。这利用了web中用户身份验证的一个漏洞：简单的身份验证只能保证请求发自某个用户的浏览器，却不能保证请求本身是用户自愿发出的。
-为防止csrf漏洞，传统表单里默认有生成了随机token的隐藏input，同步提交表单时能自动提交上去，同步提交后刷新页面会再次更新token。
-但使用Ajax异步提交时，提交时要从Cookie里(或页面上)获得token值（这里假设攻击者不能获得第三方的Cookie，但用户的Cookie很容易由于网站的XSS漏洞而被盗取），另外要考虑在提交后是否需要手动更新Cookie里(或页面上)的token。
-> [ajax里如何更新csrf token](http://www.v2ex.com/t/82751) ，最后的一段评论提到：csrf-token的目的是，让攻击者不能伪造请求（如通过img发起的请求会带上cookie）。因此，csrf-token不需要每个请求都改变，只需要确保对于每个session不一致即可，同一个session内不变没有问题。
-
-jsonp请求也需要「防止csrf漏洞」，例如可以用jsonp获取通讯录列表。
-ajax 方式的 csrf token 放到 post 提交的 body 里、随其他数据一起提交。
-
-反爬虫 https://segmentfault.com/a/1190000017899193
-循序渐进学加密 https://segmentfault.com/a/1190000019437132
-
-蚂蚁内容风险识别接口服务 https://docs.alipay.com/pre-open/api_pre/alipay.security.risk.content.analyze
-撞库 https://baike.baidu.com/item/%E6%92%9E%E5%BA%93/16480882?fr=aladdin
-人机识别服务接口 RDS https://apires.alipay.com/isp/previewDetail.htm?apiId=4967
-IFAA 生物认证 https://tech.antfin.com/products/IFAA
-
-安全资讯网站博客
-- 先知社区 https://xz.aliyun.com
-- freebuf https://www.freebuf.com/articles/web
-- 安全客 https://www.anquanke.com/vul
-- 台湾217战队 http://blog.orange.tw/
-- 腾讯云牵头制定首个IEEE业务安全风控全球标准 https://www.toutiao.com/i6681138895255503374
-- 蚂蚁研发者门户 安全&风控 专题
-- 2019 RSAC 对安全技术领域发展的思考
-- RSA原理浅析
-- OTP动态付款码(仟墨)、数字证书(万佛)、支付盾、安全控件(文同)
-- 反洗钱、欺诈/盗用、信息窃取篡改、病毒/木马/钓鱼/防火墙、安全意识、负面舆情治理
-
-
-
-
-
-
-## DB 2016
-
-时间序列数据的数据库选型思考 https://j-coder.com/2021/11/12/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B%E6%80%9D%E8%80%83/
-ClickHouse vs Elasticsearch谁更胜一筹 https://www.zhihu.com/question/472389514
-2024-05-28
-
-- [数据库深度解析 | 从NoSQL历史看未来](https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=209753217&idx=1&sn=d3a021a7bd959cbf92ffc658336b2387)
-
-MapReduce 是一种分布式的程序设计模型，专门用来在集群里处理大量的数据。主要由两部分组成：mapper 和 reducer。mapper 读取一部分数据，运算后输出成一系列的中间（intermediate）数据；而 reducer 将 mapper 的输出数据查核、合并，产生最后输出。最常被使用的就是Hadoop。Hadoop 是以 Java 实现的，但是可以支持许多其他语言写成的 mapper 和 reducer。
-Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量数据时，就会比关系型数据库还要慢了。
-
-读写并行，锁和并行，读写锁，隔离，死锁检测：碰撞检测。
-数据一致性，数据完整性。单机事务，分布式事务。一致性hash。数据库连接利用率低。
-
-orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
-
-Hibernate 联合主键构成类时，需要重写类的equal hashcode，实现序列化接口。
-
-MyBatis是支持普通SQL查询，存储过程和高级映射的优秀持久层框架。MyBatis消除了几乎所有的JDBC代码和参数的手工设置以及对结果集的检索。MyBatis可以使用简单的XML或注解用于配置和原始映射，将接口和Java的POJO（Plain Old Java Objects，普通的Java对象）映射成数据库中的记录。
-
-对象之间的关系：一对一、一对多、多对多。
-- 一对一：一个学生对应一个学生证（可以记录到一张表里，不需要中间表）。
-- 一对多(多对一)：一个组对应多个用户，每个用户只能属于一个组。表设计：在多方加外键。
-- 多对多：一个老师对应多个学生，但每个学生可被多个老师教。多对多比较少用。
-  - 表设计：加中间表。例如：学生、课程、分数表设计，分数表作为中间表，里边有学生id/课程id、分数，中间表的主键可以为：联合主键(学生id和课程id)、并且不能是自动生成的(需要从学生表id和课程表id获得)。问题：操作不方便 也可单独设置分数表id作为主键。分数表和学生或课程表是多对一的关系。比联合主键简单
-
-表设计 三范式：
-- 要有主键，列不可分。
-- 联合主键，不能存在部分依赖。
-- 不能存在传递依赖。
-
-事务 ACID 原子性Atomicity、一致性Consistency、隔离性Isolation和持久性Durability
-事务隔离级别：1 read-uncommitted，2 read-committed，4 repeatable read，8 serializable 。级别越高，越安全但效率越低 一般设置为 read-committed。用悲观锁或乐观锁。
-- 悲观锁：获取到数据后加锁，防止别人更新。使用的是数据库的锁。
-- 乐观锁：所有对数据的更新带上版本号，对照不同版本判断是否被更新过。不在获取数据后加锁。
-
-mysql 约束: https://gw.alipayobjects.com/zos/rmsportal/PDMVJVKZwvVWWGNaKvsK.png
-
-从存储上来说，数据库主要分为几类：
-
-- Key/Value形式，典型的产品如tair。NoSql数据库，在NoSql分类中，有一种基于键值对（key/value pairs）的结构化数据类型，它通常被存储在内存中以支持快速访问。三种最流行的基于内存键值对的存储系统是：Memcached，Cassandra和Redis。
-- Schema-free, 典型的如mongoDB，阿里云的OTS，这一类产品的特点是使用灵活简单，但如果有二级索引的需求，会比较麻烦。
-- SQL,关系型数据库，比如MySQL、OceanBase，特点是有较高的使用成本，schema变更较为麻烦，但功能强大，特别是OceanBase解决了扩展性和性能问题。
-
-对数据库进行读写分离。 让主数据库处理事务性的增，删，改操作(Insert,Update,Delete)操作，让从数据库处理查询操作(Select操作)，数据库复制被用来将事务性操作导致的变更同步到集群中的从数据库。
-
-当访问量大的时候（数据库连接数不够）：
-- 业务垂直拆分，拆分后就需要远程服务调用框架hsf
-    - 淘宝业务类型：商品、交易、评价、属性
-    - 拆分为“商品中心、用户中心”等，不同团队分别负责
-- 中间加一层，这层下边的机器要减少，作为proxy
-- 数据库切分：单个商品库切分为多个
-
-除了数字、字符串和日期之外，许多数据库还可以存储大对象，例如图片或其他数据。在sql中，二进制大对象称为BLOB，字符型大对象称为CLOB。
-
-存储过程是在数据库中执行的用数据库相关的语言编写的过程。
-
-可以将多个语句(sql语句？)组合成「事务(transaction)」。当所有语句都顺利执行之后，事务可以被提交。否则，如果其中某个语句遇到错误，事务将被回滚，就好像没有任何语句被执行过一样。
-
-建立与数据库的连接很耗时（花接近一秒），实质是建立了socket连接，用“连接池”来解决。
-数据库连接是有限的资源，如果用户要离开应用一段时间，那么他占用的连接就不应该保持开放状态；另一方面，每次查询都获取连接并在随后关闭它的代价也是相当高的。
-解决办法是建立「数据库连接池（pool）」。这意味着数据库连接在物理上并未被关闭，而是保留在一个队列中并被反复重用。连接池是一种非常重要的服务，web容器和应用服务器的开发商通常会提供连接池服务的实现。
-连接池的使用对程序员来说是「完全透明的」，可以通过获取数据源并调用getConnection方法来得到连接池中的连接。使用完连接后，需要调用close方法。该方法并不在物理上关闭连接，而只是告诉连接池已经使用完该连接。
-
-
------- JDBC、Hibernate、iBATIS 使用区别
-Java应用传统上使用JDBC（Java Database Connectivity）API来把数据持久到关系数据库中。JDBC API使用SQL语句来完成创建（create）、读取（read）、更新（update）和删除（delete）（CRUD）操作。JDBC代码内嵌在Java类中——换句话说，这类代码与业务逻辑紧密耦合在一起。这类代码还在很大程度上依赖于SQL，而SQL并非是跨数据库的标准；这使得从一种数据库移植到另一种数据库变得困难起来。
-
-对象-关系映射（ORM）使用直接映射来生成内部的JDBC或是SQL代码。然而对于一些应用场景来说，你需要对SQL查询做更加直接的控制。在编写涉及了一系列更新查询的应用时，直接编写自己的SQL查询比依赖于ORM生成的SQL来得更有效一些。另外，在对象模型和数据模型之间存在失配时，ORM是不能够使用的。
-
-iBATIS最好是用在你需要全面地控制SQL的时候，在需要对SQL查询做微调的时候也很有用。当你在应用和数据库设计两方面都有完全的控制权的时候，就不应该使用iBATIS，因为在这样的情况下，应用可能会做出修改以适应数据库，或是反过来。
-
-在ORM的领域中，看来JPA已经是王道，规范就是规范。在各大厂商的支持下，JPA的使用开始变得广泛。
-
-总是会存在精通Java的人和更信任SQL的人这样的一种划分，对于一个熟练的Java程序员来说，他想使用一个无需与SQL有太多交互的持久性框架，那么Hibernate是最好的选择，因为它会在运行时生成高效率的SQL查询。但是，如果你想要使用存储过程来对数据库查询做各方面的控制的话，则iBATIS是推荐的解决方案。iBATIS大力支持SQL，而Hibernate和JPA则是使用它们自己的查询语言（分别是HQL和JPQL），这些语言与SQL类似。
-
-
------- 视图 事务 索引
-SQL 内连接inner join、外连接outer join、左外连接left outer join、右外连接right outer join、全外连接full outer join。外连接实际上产生了两个关系(表)的笛卡尔积。
-
-SQL允许通过查询来定义“虚关系”，它在概念上包含查询的结果。但虚关系并不预先计算并存储，而是在使用虚关系的时候才通过执行查询被计算出来。像这种不是逻辑模型的一部分，但作为虚关系对用户可见的关系称为「视图」(view)。
-
-特定数据库系统允许存储视图关系，它们保证，如果用于定义视图的实际关系改变，视图也跟着修改，这样的视图被称为物化视图（materialized view）。
-
-对查询而言，视图是一个有用的工具，但如果我们用它们来表达更新、插入或删除，它们可能带来严重的问题。困难在于，用视图表达的数据库修改必须被翻译为对数据库逻辑模型中实际关系的修改。就像对上边的`faculty`视图插入数据，实际数据表中还必须要插入 salary 列的数据，此时 salary 列就不能为非空约束，不然修改视图会失败。
-
-一般来说，如果定义视图的查询对下列条件都能满足，我们称SQL视图是可更新的（即视图上可以执行插入、更新或删除）：1. from子句中只有一个数据库关系。 2. select子句中只包含关系的属性名，不包含任何表达式、聚集或 distinct 声明。 3. 任何没有出现在select子句中的属性可以取空值；即这些属性上没有not null约束，也不构成主键的一部分。 4. 查询中不含有group by或having子句。
-
-事务（transaction）由查询或更新语句的序列组成。SQL标准规定当一条SQL语句被执行，就隐式地开始了一个事务。但事务被提交（commit）或被回滚（rollback）时，该事务结束。在很多SQL实现中，默认方式下每个SQL语句自成一个事务，且一执行完就提交。如果一个事务要执行多条SQL语句，就必须关闭单独SQL语句的自动提交。如何关系自动提交也依赖于特定的SQL实现，在诸如JDBC或ODBC那样的应用编程接口中存在标准化方式来完成这项工作。
-数据库系统保证在发生诸如某条SQL语句错误、断电、系统崩溃这些故障的情况下，如果一个事务还没有完成commit work，其影响将被回滚。在断电和系统崩溃情况下，回滚会在系统重启后执行。
-
-许多查询只涉及少量记录，例如找出id为221的学生的tot_cred值，只涉及学生记录中的一小部分。如果数据库读取每条记录并一一检查，这样是很低效的。
-在关系的属性上所创建的「索引(index)」是一种数据结构，它允许数据库系统高效地找到关系中那些在索引属性上取给定值的元组，而不用扫描关系中的所有元组。很多数据库支持这样创建索引：`create index studentID_index on student(ID);` 在 student 关系的属性 ID 上创建了一个名为 studentID_index 的索引。
-
-触发器（trigger）是一条语句，当对数据库作修改时，他自动被系统执行。触发器可以用来实现未被SQL约束机制指定的某些完整性约束，用来当满足特定条件时对用户发警报或自动开始执行某项任务。创建方式：`create trigger xx after update ...`。 触发器是很有用的工具，但是如果有其他候选方法就最好别用触发器。很多触发器的应用都可以用适当的存储过程来替换。
-
-联机分析处理（OLAP）工具帮助分析人员用不同的方式查看汇总数据，使他们能够洞察一个组织的运行。OLAP工具工作在以维属性和度量属性为特性的多维数据之上。数据立方体由以不同方式汇总的多维数据构成，预先计算数据立方体有助于提高汇总数据的查询速度。交叉表的显示允许用户一次查看多维数据的两个维及其汇总数据。下钻、上卷、切片和切块是用户使用OLAP工具时执行的一些操作。从SQL1999标准开始，SQL提供了一系列的用于数据分析的操作符，其中包括cube和rollup操作，有些系统还支持pivot子句，可以很方便地生成交叉表。
-
-关系代数（relational algebra）定义了一套在表上运算且输出结果也是表的代数运算。这些运算可以混合使用来得到表达所希望查询的表达式。关系代数定义了关系查询语言中使用的基本运算。
-
-
------- 数据存储和查询
-绝大多数数据库将数据存储在磁盘上（越来越多地在闪存上），并将数据取入内存用于处理。存储设备的物理特性影响很大，磁盘上随机数据片段的访问比内存访问慢得多：磁盘访问需要几十毫秒，而内存访问只需十分之一微秒。
-
-缓冲区（buffer）：缓冲区管理，被钉住的块，块的强制写出。缓冲区替换策略：最近最少使用（LRU），立即丢弃，最近最常使用（MRU）。
-
-当数据库系统中的程序需要磁盘上的块(数据)时，它向缓冲区管理器发出请求（即调用），如果这个块已经在缓冲区中，缓冲区管理器将这个块在主存储器中的地址传给请求者。如果这个块不在缓冲区中，缓冲区管理器首先在缓冲区中为这个块分配空间，如果需要的话，会把其他块移出主存储器，为这个新块腾出空间。然后缓冲区管理器把请求的块从磁盘读入缓冲区，并将这个块在主存储器中的地址传给请求者。
-
-如果你熟悉操作系统的概念，你会发现缓冲区管理器几乎和大多数操作系统中的虚拟存储管理器是一样的它们的一点区别是数据库的大小会比机器的硬件地址空间大得多，因此存储器地址不足以对所有磁盘块进行寻址。此外为了更好地为数据库系统服务，缓冲区管理器必须使用比典型的虚拟存储器管理策略更加复杂的技术：缓冲区替换策略（buffer replacement strategy）；被钉住的块（pinned block）；块的强制写出（forced output of block）。
-
-因为数据以块为单位在磁盘存储器和主存储器之间传输，所以采取用一个单独的块包含相关联的记录的方式，将文件记录分配到不同的块中是可取的。如果我们能够仅使用一次块访问就可以存取我们想要的多个记录，就能节省磁盘访问次数。
-
-数据字典也称为系统目录，用于记录元数据，即关于数据的数据，例如关系名、属性名和类型、存储信息、完整性约束和用户信息。
-
-减少磁盘访问数量的一种方法是在主存储器中保留尽可能多的块。因为在主存储器中保留所有的块是不可能的，所以需要为块的存储而管理主存储器中可用空间的分配。缓冲区是主存储器的一部分，可用于存储磁盘块的拷贝。负责分配缓冲区空间的子系统称为缓冲区管理器。
-
-
-
-
-
-
-
-## Java / cpp
-
-
------- Java 2015-2016
-
-《java并发编程实战源码》
-《Effective Java Examples》
-尚学堂 爱慕课
-- [Java 征途：行者的地图](http://www.cnblogs.com/mindwind/p/5251430.html)
-- [Java工程师成神之路~](http://www.hollischuang.com/archives/489)
-
-视频地址：http://www.imooc.com/learn/196
-[Spring基础知识汇总](http://www.imooc.com/article/1309)
-
-java跨平台，是因为jvm做了跨平台实现。Java代码都要写到class中。
-
-Java中JDK,JRE和JVM之间的关系：![](https://t.alipayobjects.com/images/rmsweb/T1bNxiXeRcXXXXXXXX.png)
-
-能够分析类能力的程序称为反射（reflective），反射可以用来： 在运行中分析类的能力
-，在运行中查看对象， 实现通用的数组操作代码， 利用 Method 对象 这个对象很像C++中的函数指针。
-
-使用泛型机制编写的程序代码要比那些杂乱地使用Object变量，然后再进行强制类型转换的代码具有更好的安全性和可读性，泛型对于集合类尤其有用，在表面上看来，泛型很像C++中的模板。
-一个泛型类就是具有一个或多个类型变量的类, 如`public class Pair<T, U>{ ... }`。类型变量使用大写形式，且比较短，在Java库中，使用变量E表示集合的元素类型，K和V分别表示表的关键字与值的类型。T(需要时还可以用临近的字母U/S)表示「任意类型」。泛型类可看做普通类的工厂。
-泛型方法，如`public static <T> T getMiddle(T... a){ }` 可以定义在普通的类中，也可以定义在泛型类中。
-Java虚拟机泛型转换： 虚拟机中没有泛型，只有普通的类和方法。所有的类型参数都用它们的限定类型替换。桥方法被合成来保持多态。为保持类型安全性，必要时插入强制类型转换。
-
-流与文件 多个同时执行的程序需要修改同一个文件的时，这些程序需要以某种方式进行通信，不然这个文件很容易被破坏。文件锁可以解决这个问题，它可以控制对文件或文件中某个范围的字节的访问。但文件加锁机制是依赖于操作系统的。
-
-Java I/O 操作的都是字节而不是字符。字符到字节必须要经过编码转换，而这个编码又非常耗时，而且会经常出现乱码问题。
-
-Javac编译原理
-Javac是一种编译器，能将一种语言规范转成另一种语言规范，通常编译器都是将便于人理解的语言规范转化成机器容易理解的语言规范。
-Javac主要有四大模块：词法分析器、语法分析器、语义分析器、代码生成器。
-Java是跨平台的，一次编译到处运行。
-ClassLoader就是类加载器，负责将class加载到JVM中；还能审查每个类应该由谁加载、它是一种父优先的等级加载机制；还有一个任务就是将class字节码重新解析成JVM统一要求的对象格式。
-- 在自定义路径下查找自定义的class类文件，也许我们需要的class文件并不总是在已经设置好的ClassPath下面，那么需要自己实现一个ClassLoader来找到这个类。
-- 对我们自己的要加载的类做特殊处理，如保证通过网络传输的类的安全性，可以将类经过加密后再传输，在加载到JVM之前需要对类的字节码再解密，就可以在自定义的ClassLoader中实现。
-- 我们可以检查已经加载的class文件是否被修改，如果修改了，可以重新加载这个类，从而实现类的热部署。
-
-Java应不应该动态加载类
-用Java的一个痛处就是，如果修改一个类，必须要重启一边，很费时。于是能否来个动态类的加载而不需要重启JVM？不应该这样。
-Java的优势正是基于共享对象的机制，达到信息的高度共享，也就是通过保存并持有对象的状态而省去类信息的重复创建和回收。对象一旦被创建，这个对象就可以被人持有和利用。
-
-`类加载器与安全管理器类`、`对类文件进行加密`、`字节码校验与校验器`、`安全策略文件`、`JAAS（Java认证和授权服务）`
-
-
-注解是哪些插入到源代码中使用其他工具可以对其进行处理的标签。注解不会改变程序的编译方式。注解的使用范围还是很广泛的，如：`附属文件的自动生成，例如部署描述符或者bean信息类`，`测试、日志、事务语义等代码的自动生成`。Java EE使用注解极大地简化了编程模型。
-
-Java servlet、asp、CGI等统一称为「服务器端程序脚本」，可以让web服务器实现对程序的调用，用来对用户的输入进行处理。
-
-有许多工具都需要调用Java编译器，例如`开发环境`，`自动化构建和测试工具`、`处理Java代码段的模板工具（如JSP）`等。JSP引擎将HTML里混杂的Java代码编译到Servlet中。
-
-
------- Servlet JavaBean
-
-- bean 普通的java bean 可以包含业务逻辑代码！
-- entity 实体bean ，一般是用于ORM 对象关系映射 ，一个实体映射成一张表，一般无业务逻辑代码！
-
-POJO全称是Plain Ordinary Java Object / Plain中文可以翻译成：普通Java类，具有一部分getter/setter方法的那种类就可以称作POJO，很显然POJO也是JavaBean的一种。一般在web应用程序中建立一个数据库的映射对象时，我们只能称它为POJO。
-
-通常一个Web服务站点的后端服务器不是将Java的应用服务器直接暴露给服务访问者，而是在应用服务器（如Jboss）的前面再加一个Web服务器（如Apache或Nginx），可以做日志分析、负载均衡、权限控制、防止恶意请求以及静态资源预加载等。
-
-servlet 其实就是一个 Java 类，所有的servlet类都必须继承 HttpServlet 类。
-生命周期：服务器会在启动或第一次请求servlet时初始化一个servlet对象，然后使用该对象处理客户端的请求，当服务器关闭时销毁该对象。
-
-Servlet容器有：Tomcat、Jetty等。Tomcat的容器分为四个等级，真正管理Servlet的容器是Context容器，一个Context对应一个web工程。
-
-用户浏览器向服务器发起一个请求通常会包含如下信息：http://hostname:port/contextpath/servletpath/。hostname和port用来与服务器建立TCP链接，而后面的URL才用来选择服务器中哪个子容器服务用户的请求。
-
-现在的Web应用很少直接将交互全部页面都用Servlet来实现，而是采用更加高效的MVC框架来实现。这些MVC框架的基本原理是将所有的请求都映射到一个Servlet，然后去实现service方法，这个方法也就是MVC框架的入口。
-
-JavaBean
-> JavaBean与EJB（Enterprise JavaBean）没什么关系。JavaBean是为Java语言设计的软件组件模型，具有可重复使用和跨平台的特点。EJB是服务器端的构件，提供对事务、持久化、复制以及安全问题的支持。
-> Enterprise Bean 与 JavaBean 不同。JavaBean 是使用 java.beans 包开发的，它是 Java 2 标准版的一部分。JavaBean 是一台机器上同一个地址空间中运行的组件。JavaBean 是进程内组件。Enterprise Bean 是使用 javax.ejb 包开发的，它是标准 JDK 的扩展，是 Java 2 Enterprise Edition 的一部分。Enterprise Bean 是在多台机器上跨几个地址空间运行的组件。因此 Enterprise Bean 是进程间组件。JavaBean 通常用作 GUI 窗口小部件，而 Enterprise Bean 则用作分布式商业对象.
-
-一个bean就是一个可重用的软件构件，并且能够在开发工具中可视化地操作。（类似VB里的控件）bean就是一个在开发工具中可操作的类。
-如果你的bean中的方法使用了标准的命名模式，那么开发工具就可以使用反射机制来确定bean的特征，例如属性以及事件。如果你需要更灵活的方式来描述有关bean的信息，可以定义一个实现了BeanInfo接口的对象。只要提供了这样的对象，开发工具就会通过询问它来识别你的bean具有的特性。
-
-1. 它是一个简单的Java类，有Java类的一切特性，可使用封装、继承、多态等特性。
-2. 必须是一个公开的类，访问权限为public。
-3. 必须具有一个无参数的构造方法。
-4. 一般将属性设置为私有的，通过使用 getXXX() 方法 和 setXXX() 方法进行属性的取得和设值。
-
-JavaBean的任务就是: “Write once, run anywhere, reuse everywhere”，即“一次性编写，任何地方执行，任何地方重用”。
-
-
------- Spring Struts
-Spring 是一个轻量级的 IOC 和 AOP 容器框架，通过其核心的依赖注入机制，以及AOP的声明式事务管理，与持久层框架整合，以及与其他的MVC框架整合，为企业应用提供一个轻量级的解决方案。
-
-非侵入式设计：从框架角度可以这样理解，无需继承框架提供的类，这种设计就可以看作是非侵入式设计，如果继承了这些框架类，就是侵入设计，如果以后想更换框架之前写过的代码几乎无法重用，如果非侵入式设计则之前写过的代码仍然可以继续使用。
-
-POJO：POJO（Plain Old Java Objects）简单的Java对象，它可以包含业务逻辑或持久化逻辑，但不担当任何特殊角色且不继承或不实现任何其它Java框架的类或接口。
-
-AOP：AOP是Aspect Oriented Programming的缩写，意思是面向切面编程，提供从另一个角度来考虑程序结构以完善面向对象编程（相对于OOP），即可以通过在编译期间、装载期间或运行期间实现在不修改源代码的情况下给程序动态添加功能的一种技术。通俗点说就是把可重用的功能提取出来，然后将这些通用功能在合适的时候织入到应用程序中；比如安全，日记记录，这些都是通用的功能，我们可以把它们提取出来，然后在程序执行的合适地方织入这些代码并执行它们，从而完成需要的功能并复用了这些功能。
-
-灵活的Web层支持：Spring本身提供一套非常强大的MVC框架，而且可以非常容易的与第三方MVC框架集成，比如Struts等。
-
-spring由以下几个模块组成：
-
-1. 核心容器和支持工具
-2. Application context 模块
-3. AOP模块 直接集成了面向切面编程的功能，通过使用AOP，不用依赖EJB，可以在应用系统中使用声明式的事务管理策略。
-4. JDBC 和 DAO模块 提供了数据库操作中的模板代码，简化数据库操作工作。
-5. ORM映射模块、 web模块、 MVC模块 它是一个完整的MVC实现，也可以和其他MVC框架集成，支持各种视图技术如JSP、velocity、Tiles等
-
-IoC就是Inversion of Control，控制反转还有一个名字叫做依赖注入（Dependency Injection），就是由容器控制程序之间的关系，而非传统实现中，由程序代码直接操控。IoC意味着将你设计好的类交给系统去控制，而不是在你的类内部控制。IoC很好的体现了面向对象设计法则之一—— 好莱坞法则：“别找我们，我们找你”；即由IoC容器帮对象找相应的依赖对象并注入，而不是由对象主动去找。
-
-Struts Hibernate(orm框架)
-- Struts的目的是为了分离视图层和控制层
-- Spring是为了让你养成用接口编程的好习惯 提高程序的重用率还有可维护性（健壮性）
-- Hibernate的目的是为了实现用面向对象的思想来管理数据库实现与数据库之间的低耦合
-
-- 模型层，用Hibernate框架让来JavaBean在数据库生成表及关联，通过对JavaBean的操作来对数据库进行操作；
-- 控制层，用Struts框架来连接数据层和视图层的，接收、处理、发送数据并控制流程；
-- 视图层，用JSP模板把页面展现给用户以及提供与用户的交互。
-
-Struts2 整合 Hibernate 开发：分层思想，从上到下：表现层 → 业务逻辑层 → 持久层 → 数据库层
-
-Velocity
-
-- JSP是编译执行，而Velocity是解释执行
-- 编译执行的效率明显好于解释执行
-- JSP的执行必须要有Servlet的运行环境，也就是需要ServletContext、HttpServletRequest、HttpServletResponse类。而渲染Velocity不需要，所以Velocity不只应用在Servlet环境中。
-
-Velocity优化实践：改变Velocity的解释执行，变为编译执行。
-
-
------- JVM / 内存管理
-
-Java虚拟机中有许多附加技术用以提升速度。尤其是与加载器操作有关的，被称为"即时" (Just-In-Time，JIT)编译器的技术。这种技术可以把程序全部或部分翻译成本地机器码(这本来是Java虚拟机的工作)，程序运行速度因此得以提升。
-
-以计算为中心看计算机的体系结构可分为几部分：指令集；计算单元；寻址方式；寄存器定义；存储单元。指令集就是CPU中用来计算和控制计算机系统的一套指令的集合，指令集的先进与否关系到CPU的性能发挥，体现CPU性能的一个重要标志。当前计算机中指令集主要分为：精简指令集（RISC）和复杂指令集（CISC），桌面操作系统中普遍使用CISC。
-
-JVM的结构基本由4部分组成：类加载器；执行引擎；内存区；本地方法调用。执行引擎是核心部分，用来解析JVM字节码指令，得到执行结果。在《Java虚拟机规范》中规定了执行引擎执行字节码时应该处理什么、得到什么结果，但并没有规定执行引擎应该采取什么方式处理而得到这个结果，具体采取什么方式由JVM的实现厂家自己去实现、如SUN的hotspot是基于栈的执行引擎，而Google的Dalvik是基于寄存器的执行引擎。
-
-每一个Java线程就是一个执行引擎实例，一个JVM实例中就会同时有多个执行引擎在工作，这些执行引擎有的在执行用户的程序，有的在执行JVM内部的程序（如Java垃圾收集器）。
-
-Java中垃圾回收器并不是采用“引用计数”方式来进行。引用记数是一种简单但速度很慢的垃圾回收技术。
-Java中垃圾回收器是"自适应的、分代的、停止-复制、标记-清扫"式垃圾回收器。
-
-对象的引用关系只有对象的创建者持有和使用，JVM不可以干预对象的引用关系，因为JVM并不知道对象是怎么被使用的，这就涉及JVM并不知道对象的运行时类型而只知道编译时类型。假如一个对象的属性结构被修改，但是运行时其他对象可能仍然引用该属性。
-
-堆栈图: https://gw.alipayobjects.com/zos/rmsportal/VpwONqGFCQIOuJLLFbvu.png
-
-基本类型一旦声明就会被分配内存空间，而普通类型需要使用new关键字来分配内存空间。
-
-在 Java中，所有的(普通)对象都储存在堆上。因此，new关键字的完整含义是，在堆上创建对象。
-
-基本类型(primitive type)的对象，比如int, double，保存在栈上。当我们声明基本类型时，不需要new。一旦声明，Java将在栈上直接存储基本类型的数据。所以，基本类型的变量名表示的是数据本身，不是引用。
-
-在JVM的一个进程空间中，一个栈(stack)代表了方法调用的次序。对于多线程来说，进程空间中需要有多个栈，以记录不同线程的调用次序。多个栈互不影响，但所有的线程将共享堆(heap)中的对象。
-
-通常操作系统管理内存的申请空间是按照进程来管理的，每个进程拥有一段独立的地址空间，每个进程之间不会相互重合，操作系统也会保证每个进程只能访问自己的内存空间。
-
-几个名词：`物理内存和虚拟内存`、`RAM`、`地址总线与总线宽度`、`内核空间与用户空间`、`静态/动态内存分配和回收`
-
-Java堆是用于存储Java对象的内存区域，堆的大小在JVM启动时就一次向操作系统申请完成，一旦分配完成，堆的大小就不能再改变。Java堆中内存空间的管理由JVM控制，对象创建由Java应用程序控制，但对象所占的空间释放由管理堆内存的垃圾收集器来完成。
-堆是被所有Java线程所共享的，所以对它的访问需要注意同步问题，方法和对应的属性都需要保证一致性。
-
-JVM运行实际程序的实体是线程，每个线程创建时JVM都会为它创建一个堆栈，堆栈的大小根据不同的JVM实现而不同。一个线程的方法的调用和返回对应于这个Java栈的压栈和出栈。
-
-栈中主要存放一些基本类型的变量数据（int、short、long、byte、float、double、boolean、char）和对象句柄（引用），方法执行结束此处变量也就会消失。存取速度比堆要快，仅次于寄存器，栈数据可以共享。缺点是，存在栈中的数据大小与生存期必须是确定的，这样导致缺乏了其灵活性。
-
-每一个Java应用都唯一对应一个JVM实例，每一个实例唯一对应一个堆。
-
-从堆和栈的功能和作用来通俗地比较，堆主要用来存放对象，栈主要用来执行程序，这种不同主要是由堆和栈的特点决定的。
-
-线程和进程的区别: https://gw.alipayobjects.com/zos/rmsportal/sPHJvmeyIHeUBcQqOmVO.png
-
-操作系统的多任务：在同一时刻运行多个程序的能力。计算机有多个CPU，但是并发执行的进程数目并不是由CPU数目制约的。操作系统将CPU的时间片分配给每一个进程，给人并行处理的感觉。
-
-可以同时运行一个以上线程的程序称为多线程程序。多进程与多线程本质区别在于每个进程拥有自己的一整套变量，而线程则共享数据。但共享变量使线程之间的通信比进程之间的通信更有效、更容易。
-
-一些名词：`中断线程`，`线程状态`，`线程属性`，`同步：竞争条件、锁对象、条件对象、死锁`，`阻塞队列`，`线程安全的集合`，`线程池`，`同步器`
-
-构建一个新的线程是有一定代价的，因为涉及与操作系统的交互。如果程序中创建了大量的生命周期很短的线程，应该使用「线程池」。一个线程池中包含许多准备运行的空闲线程。
-
-
------- 面向对象OOP
-Java是完全的面向对象的语言，它使用`类和对象`、遵从`封装、继承、多态`的设计原则。类定义了对象的类型或种类、是定义对象的样板；同一个类的所有对象都有`相同的行为、相同种类的数据`(即有相同的方法和属性、但具体数据不同)
-
-面向对象的3个基本要素：封装、继承、多态
-
-面向对象的5个基本设计原则：
-
-- 单一职责原则（Single-Resposibility Principle）
-    - 一个类，最好只做一件事，只有一个引起它的变化。
-- 开放封闭原则（Open-Closed principle）
-    - 对扩展开放，对修改封闭的
-- 里氏替换原则（Liskov-Substituion Principle）
-    - 子类必须能够替换其基类。
-    - 子类可以扩展父类的功能，但不能改变父类原有的功能。
-- 依赖倒置原则（Dependecy-Inversion Principle）
-    - 高层模块不依赖于低层次模块，二者都同依赖于抽象接口。
-    - 抽象接口不应该依赖于具体实现;而具体实现则应该依赖于抽象接口。
-- 接口隔离原则（Interface-Segregation Principle）
-    - 使用多个小的专门的接口，而不要使用一个大的总接口。
-
-类设计技巧：
-- 一定要保证数据私有。
-- 一定要对数据初始化。Java不对局部变量进行初始化，但对对象的实例域进行初始化；但最好要自己去显式地初始化所有的数据。
-- 不要在类中使用过多的基本类型。用其他的类代替多个相关的基本类型的使用。
-- 不是所有的域都需要独立的域访问器和域更改器。
-- 将职责过多的类进行分解。
-- 类名和方法名命名要恰当、能体现他们的职责。
-
-类的数据域应该标记为`private`，以达到封装的目的，对其操作时，提供`公有的访问器方法(get)`、`公有的更改器方法（set）`。这样的好处是：可以改变内部实现，不影响其他代码；更改器方法可以执行错误检查。
-
-final 修饰符大都应用于`基本类型`或`不可变类型(类中的每个方法都不会改变其对象，如String类)`，对于可变的类如`private final Date hiredate;`仅仅意味着存储在hiredate变量中的`对象引用`在对象构造之后不能改变，而并不意味着hiredate对象是一个常量，任何方法都可以对hiredate引用的对象调用setTime更改器。
-
-Java不支持多重继承，即派生类只能有一个基类。
-
-Java中每个类都从类Object派生出。但来自object类的`equals()、toString()`不好用、需要被覆盖重写掉。
-
-能够将派生类的对象赋值给任何祖先类型的变量，但相反方向的赋值不成立（例如：Student类构造为Person类的派生类，那么student是person，但person不一定是student）。student与person的关系为：「是其中一个关系（is-a relationship）」；象类MechanicalArm（机器人手臂）被类Robot（机器人）拥有，他们就是「拥有关系（has-a relationship）」；这就是术语「is-a 、has-a」的概念。
-
-「is-a」关系是继承的一个明显特征，它可用来判断是否应该将类设计为继承关系。
-
-> super 不是一个对象的引用，不能将 super 赋给另一个对象变量，它只是一个指示编译器调用超类方法、或超类的构造器的特殊关键字。
-
-子类方法不能低于父类方法的可见性，例如：父类方法是public、子类也要是public。
-
-多态和「动态绑定」或「后期绑定」是相同的东西。例如Person类的数组，可以包含其派生类Student的对象。当调用`person[0].xx()`方法时，如果`person[0]`中存放的是Student类的对象，则`xx`方法是Student类中的实例方法，而不是Person类的实例方法。
-
-实例变量可以不用初始化而会被赋上默认值，局部变量(方法内定义的变量)必须要进行初始化。
-
-用`static`修饰的方法叫做“类方法”，修饰的变量叫做“类变量”。类的对象上不存在static变量或方法。静态方法(static方法)里不能调用“非静态”的变量或方法；但非静态方法里可以调用静态变量或方法。
-
-所有的类“构造器”第一句话都是`super()`，没有明确写则会默认加上，直到祖宗类`Object`没父类也就没super。普通的类方法里，也有隐式super参数供调用父类同名方法
-
-多态的存在要有3个必要条件：要有继承、要有方法重写、父类引用指向子类对象。
-接口中只有：常量、抽象方法。
-Map的底层结构是：数组 + 链表
-
-类既不可以是private的(这样会值得除该类之外，其他任何类都不可以访问它)， 也不可以是protected的。所以对于类的访问权限，仅有两个选择：包访问权限或public。如不希望其他任何人对该类拥有访问权限，可以把所有的构造器都指定为private。
-
-由导出类转型成基类，在继承图上是向上移动的，因此一般称为向上转型。由于向上转型是从一个较专用类型向较通用类型转换，所以总是很安全的。也就是说，导出类是基类的一个超集。它可能比基类含有更多的方法，但它必须至少具备基类中所含有的方法。
-
-在面向对象编程中，生成和使用程序代码最有可能采用的方法就是直接将数据和方法包装进一个类中，井使用该类的对象。也可以运用组合技术使用现有类来开发新的类，而继承技术其实是不太常用的。因此，尽管在教授OOP的过程中我们多次强调继承，但这并不意味着要尽可能使用它。相反，应当慎用这一技术，其使用场合仅限于你确信使用该技术确实有效的情况。到底是该用组合还是用继承，一个最清晰的判断办法就是问一问自己是否需要从新类向基类进行向上转型。如果必须向上转型，则继承是必要的，但如果不需要，则应当好好考虑自己是否需要继承。
-
-
-
-
-cpp 2017
-
-- 指针和引用的区别
-  - 引用总是指向某个对象，定义引用时必须初始化(之后不可改变)；引用只是一个“别名”，给引用赋值修改的是引用所关联对象的值
-  - 指针可以指向任何对象，可以修改。 不能对未被初始化为适当地址的指针解除引用。
-
-- new 出来的对象，需要手动 delete，然后再设置为 NULL
-  - 只能用 delete 来释放使用 new 分配的内存；不能用 delete 来释放普通变量声明所获得的内存。
-  - 手工管理内存，非常容易出错，导致“内存泄露”问题，排查非常困难。使用智能指针，避免这种问题。
-  - 当使用 delete 时，类的析构函数会被自动调用。删除对象可以释放对象本身占用的内存，但并不能自动释放属于对象成员的指针指向的内存，因此要在析构函数使用 delete 删除对象成员的内存。
-
-- 内存模型
-  - 自动变量：函数内的变量(包含函数参数)；静态变量：函数外的变量、使用 static 定义的变量；动态变量：new 出来的变量。
-  - 自动变量保存在栈（LIFO 后进先出）中、变量数量可以灵活增减；静态变量数目在程序运行期间不会变，因此不需要栈来管理，编译器将分配固定的内存块来存储所有的静态变量，这些变量在程序执行期间一直存在。
-  - 位于函数内的变量是「局部变量(自动变量)」，位于函数外的变量是「全局变量」，全局变量对所有的程序文件都是可见的。
-  - 使用 static 修饰局部变量、可以在函数调用之间保持局部变量的值、不需要在每次进入和离开函数时进行创建和销毁。
-  - 使用 static 修饰全局变量时，会使变量的作用域限制在声明它的文件内。
-  - extern 是用来在另一个文件中声明一个全局变量或函数，用于当有两个或多个文件共享相同的全局变量或函数时。
-  - 在函数或代码块中声明 const 时，其作用域为代码块，所以不用担心与外部的 const 常量重名引起冲突。
-  - C/C++ 都不允许在一个函数中定义另外一个函数，因此所有函数都是静态存储，在整个程序执行期间一直存在。
-  - 可以使用 static 定义静态函数，使函数只在文件内可见，这样可以在其他文件中定义同名的函数。
-  - 使用 C++ 运算符 new（或 C 函数 malloc()）分配的内存称为动态内存，不受作用域限制，可以在一个函数中分配内存，在另一个函数中释放。动态内存不是 LIFO。
-  - 通常编译器使用三块独立的内存：一块用于静态变量（可能再细分），一块用于自动变量，另一块用于动态存储。
-
-- 异常
-  - 对于不同的异常类型，基类引用能够捕获各派生类异常对象，而派生类异常只能捕获从这个类派生而来的类对象。
-  - 使用异常会降低程序的运行速度。
-
-- 头文件：
-  - 可包含：函数原型，使用 #define 或 const 定义的常量，结构/类/模板声明，内联函数。
-  - 不能包含：函数定义/函数体、变量声明。不要使用 using 指令。
-
-- 命名空间
-  - 命名空间可以是全局的，也可以位于另一个命名空间中，但不能位于代码块中。
-  - using 声明：`using std::cout`，using 编译指令：`using namespace std`，首选在局部作用域内使用 using 声明。
-  - 使用在已命名的名称空间中声明的变量，而不是使用外部全局变量或静态全局变量。
-
-何时使用引用参数：
-![何时使用引用参数](https://zos.alipayobjects.com/rmsportal/CpddxowZkhtkSoOVasEN.jpg)
-
-不同的编译器对同一个函数生成不同的修饰名称，名称不同将使链接器无法将一个编译器生成的函数调用与另一个编译器生成的函数定义匹配。在链接编译模块时，请确保所有对象文件或库都是由同一个编译器生成的。通常可以用自己的编译器重新编译源代码来消除链接错误。
-
-数组是一种数据结构，在内存中连续存储同类型的多个值。C++ 将数组名解释为其第一个元素的地址：arr == &arr[0]
-
-如何选择数据类型？通常来说 int 被设置为对目标计算机来说最“自然”(处理起来效率最高)的长度，如果没有特殊理由，则应使用 int。
-如果可能超过 int 类型的最大值，则使用 long 或 long long，便于程序移植到低位数的系统上而不出现问题。
-如果节省内存很重要，则应使用 short 而不是 int，即使它们的长度一样。例如 int 数组从 16 位系统移到 32 位系统，内存占用会加倍。
-
-类之于对象 就像 类型之于变量。面向对象编程（OOP）的本质是设计并扩展自己的数据类型。
-
-预处理指令 #include 来引用头文件，引用头文件相当于复制头文件的内容。
-建议把所有的常量、宏、系统全局变量和函数原型写在头文件中。
-
-C++ 可以使用 C 的头文件，C++ 头文件去掉了扩展名 h，有些 C 头文件被转换为 C++ 头文件时被重新命名，去掉了扩展名 h，并在文件名称前面加上前缀 c (表明来自 c 语言)，例如 C++ 版本的 math.h 为 cmath。
-
-泛型（generic）是一种允许一个值取不同数据类型（所谓多态）的技术，
-强调使用这种技术的编程风格被称为泛型编程（generic programming通用编程/类属编程）。
-
-STL（Standard Template Library 标准模板库）是泛型编程思想的实际体现和具体实现，
-它是一种为泛型组件建立大型标准库的可扩展架构。STL本身，与面向对象无关，也与具体的程序设计语言无关。STL 提供了一组表示容器、迭代器、函数对象和算法的模板。所有 STL 容器都提供了一些基本方法：size()、swap()、begin()、end()
-
-STL 是泛型编程思想的产物。 STL 是最新的 C++ 标准函数库中的一个子集，这个庞大的子集占据了整个库的大约 80% 的分量。 而作为在实现 STL 过程中扮演关键角色的模板则充斥了几乎整个 C++ 标准函数库。
-
-泛型编程是一种面向算法的多态技术，STL 是它的一种具体实现。 与针对问题和数据的面向对象的方法不同，泛型编程中强调的是算法。 是一类通用的参数化算法，它们对各种数据类型和各种数据结构都能以相同的方式进行工作，从而实现源代码级的软件重用。
-例如，不管（容器）是数组、队列、链表、还是堆栈，不管里面的元素（类型）是字符、整数、浮点数、还是对象，都可以使用同样的（迭代器）方法来遍历容器内的所有元素、获取指定元素的值、添加或删除元素，从而实现排序、检索、复制、合并等各种操作和算法。
-泛型编程的通用化算法，是建立在各种抽象化基础之上的：利用参数化模版来达到数据类型的抽象化、利用容器和迭代器来达到数据结构的抽象化、利用分配器和适配器来达到存储分配和界面接口的抽象化。
+Arrows --> A
+A --> B
+A --> C
+Arrows -u-> D
+Arrows -u-> E
+Arrows -u-> F
+
+@enduml
+```
+
+
+```plantuml
+@startuml
+left to right direction
+
+rectangle ima as "Issues Management" #lightgreen
+rectangle qac as "Quick Access"
+rectangle jse as "JS Overview \n [[https://baidu.com JS Error List]]"
+rectangle req as "Request Overview \n [[https://baidu.com Error Request List]]"
+rectangle res as "Resource Overview \n [[https://baidu.com Error Resource List]]"
+rectangle per as "Performance Overview \n [[https://baidu.com Worst Performing Pages]]"
+
+qac --> ima : direct link to
+jse --> ima : manage issues
+req --> ima : manage issues
+res --> ima : manage issues
+per --> ima : manage issues
+
+@enduml
+```
+
+
+```plantuml
+@startuml
+
+!$rfcs = "进入 apm_web_rfcs 空间"
+!$coll = "收集需求"
+!$new  = "新建需求\n添加基本描述"
+!$rc   = "选择 slard/apmplus 空间，同步创建新需求 或关联已有需求"
+!$entr = "进入 slard/apmplus 空间"
+!$main = '在 slard/apmplus 空间做需求管理 \n 会 <u>自动同步</u> 部分状态变更 到 rfcs 空间的相应需求'
+!$fm   = "在 slard/apmplus 空间完成 线上验收"
+!$fr   = "rfcs 空间相应需求 手动再确认"
+!$stop = "终止"
+
+rectangle $coll #A9DCDF
+rectangle frr as "$fr" #lightgreen
+rectangle $stop #ddd
+
+:Actor: -u-> $coll : bp/oncall
+$coll -r-> ($new) : $rfcs
+($new) -r-> ($rc) : 转为正式需求
+($new) -d-> ($stop) : 伪需求
+($rc) -d-> ($main) : $entr
+($main) -d-> frr : $fm
+
+@enduml
+```
+
+
+```plantuml
+' a 不能变成 :a:
+a -> b
+if "a" then
+  -->[true] "Some Action"
+else
+  ->[false] "Something else"
+endif
+```
+
+
+```plantuml
+'甘特图
+
+@startgantt
+/'
+单行注释、放在 单引号之间，多行注释前后加斜杠
+[正式上线] lasts 1 day and starts at 2020/03/20
+'/
+'skinparam classFontSize 10'
+
+scale 2
+project starts the 2019/12/16
+saturday are closed
+sunday are closed
+2020/01/01 is closed
+2020/01/22 to 2020/02/02 is closed
+2019/12/16 to 2019/12/30 are named [十二月]
+2020/01/01 to 2020/01/31 are named [一月]
+'2020/02/01 to 2020/02/30 are named [二月]'
+
+-- 开发阶段（灰色背景是节假日、不计入总时间） --
+[环境准备] as [hj] lasts 2 days and is colored in Lavender/LightBlue
+then [首页 3d] lasts 3 days
+[流程管理 4d] as [lc] lasts 4 days
+[hj] -> [lc]
+
+[<size:13><b>交付中心 <color:red>11d] as [jf] lasts 11 days
+[jf] starts at [lc]'s end and is colored in Yellow/Green
+[列表 3d] lasts 3 days and starts at [jf]'s start
+[大图 3d] lasts 3 days and starts at [jf]'s start
+[明细 3d] lasts 3 days and starts at [jf]'s start
+[大图 3d] lasts 3 days and starts at [jf]'s start
+[任务 3d] lasts 3 days and starts at [jf]'s start
+[权限 5d] as [qx] lasts 5 days and starts at [jf]'s end
+
+-- 测试阶段 --
+[集成测试 5d] as [jc] lasts 5 days and is colored in Fuchsia/FireBrick
+[qx] -> [jc]
+
+@endgantt
+```

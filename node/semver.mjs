@@ -6,8 +6,9 @@ import semver from 'semver';
 await test();
 async function test() {
   const testVersions = [
-    // '0.9.8', '0.9.9', '0.9.10',
+    '0.9.8', '0.9.9', '0.9.10',
     '0.9.10-beta', '0.9.0-beta', '0.9.0-beta.1',
+    '0.9.11-beta.1',
     // '0.9.9-beta', '0.9.9-beta.1',
     // '0.9.9-alpha.2', '0.9.9-alpha.3', '0.9.9-rc',
   ];
@@ -22,6 +23,13 @@ async function test() {
   console.log('gtMinors: ', gtMinors);
   console.log('log semver.gte: ', semver.gte('1.2.3-beta.0', semver.minVersion('^1.2.2').version));
   console.log('log semver.gte: ', semver.gte('1.2.3-beta.0', semver.minVersion('^1.2.3').version));
+
+  // note: 0.0.z range is special
+  console.log('log semver.satisfies: ', semver.satisfies('0.0.11-beta.0', '^0.0.10', { includePrerelease: true }));
+  console.log('log semver.satisfies: ', semver.satisfies('0.0.11-beta.0', '~0.0.10', { includePrerelease: true }));
+  console.log('log semver.minVersion: ', semver.minVersion('^0.0.10'));
+
+  console.log('log semver.satisfies: ', semver.satisfies('0.1.1-beta.0', '^0.1.0', { includePrerelease: true }));
   console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.2', { includePrerelease: true }));
   console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.2'));
   console.log('log semver.satisfies: ', semver.satisfies('1.2.3-beta.0', '^1.2.3', { includePrerelease: true }));
@@ -49,6 +57,7 @@ async function test() {
   console.log('prepatch: ', semver.inc('1.2.3-beta.1', 'prepatch'));
 
   console.log('prerelease', semver.inc('1.2.3', 'prerelease', 'beta'));
+  console.log('prerelease beta-alpha: ', semver.inc('0.204.1-beta.40', 'prerelease', 'alpha'));
   console.log('prerelease beta: ', semver.inc('1.2.3-beta', 'prerelease', 'beta'));
   console.log('prerelease alpha: ', semver.inc('1.2.3-beta', 'prerelease', 'alpha'));
   console.log('prerelease beta0: ', semver.inc('1.2.3-beta.0', 'prerelease', 'beta'));

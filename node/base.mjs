@@ -1,3 +1,6 @@
+// import fs from 'node:fs';
+// import fs from 'node:fs/promises'
+// import fs from 'fs/promises';
 import fs from 'fs';
 import os from 'os';
 import net from 'net';
@@ -34,9 +37,6 @@ loadModule();
 const pkgPath = path.join(process.cwd(), 'packages', 'pkg');
 console.log('pkgPath: ', pkgPath);
 
-console.log('log npm_lifecycle_event: ', process.env.npm_lifecycle_event);
-console.log(process.env.HOME, process.env.HOMEPATH);
-console.log(process.argv, process.execPath, process.uptime());
 console.log(os.homedir());
 console.log(os.tmpdir());
 

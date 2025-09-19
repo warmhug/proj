@@ -40,6 +40,19 @@
       margin-right: 10px;
     }
   }
+  #localFileLinks {
+    padding-top: 4px;
+    .links {
+      margin: 10px 0;
+      span a {
+        margin-left: 10px;
+        text-decoration: none;
+      }
+      span a:nth-child(3n) {
+        margin-right: 20px;
+      }
+    }
+  }
 </style>
 </head>
 <!-- popup 页面 浏览器限制的 最大宽度：800px 最大高度：600px -->
@@ -62,9 +75,10 @@
     <div class="msg"></div>
   </div>
 
+  <div id="localFileLinks"></div>
+
   <details>
     <summary>
-      <span>当前页面被插入css/js</span>
       <span>快捷键 | </span>
       <span>电源模式 | </span>
     </summary>
@@ -78,7 +92,6 @@
       <label for="radio-3">操作系统默认</label>
     </fieldset>
     <div id="cmds" style="margin: 10px 0;"></div>
-    <div id="injectCode" style="margin: 10px 0; overflow-x: scroll;"></div>
   </details>
 
   <details open id="storageEle">

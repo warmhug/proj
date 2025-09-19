@@ -1,12 +1,93 @@
+
+# port: 7890
+# socks-port: 7891
+mixed-port: 7890
+allow-lan: false
 mode: Rule
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
   ipv6: false
+  use-hosts: true
+  nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+  # fallback 值 先配置 公司内网 DNS服务器 地址，通过 cat /etc/resolv.conf 获取
+  fallback: ['https://doh.dns.sb/dns-query']
+  fallback-filter: {
+    geoip: true,
+    geoip-code: CN,  # 确保国内 IP 使用内网 DNS
+    ipcidr: [240.0.0.0/4, 0.0.0.0/32],
+    domain: ['+.xx.team', '+.xx.net']
+  }
+  # # 需要 Clash 版本支持 Fake-IP 模式
+  # enhanced-mode: fake-ip
+  # fake-ip-range: 198.18.0.1/16
+  # # default-nameserver 主要用于 enhanced-mode: fake-ip 模式下
+  # default-nameserver: [223.5.5.5, 119.29.29.29]
+  # nameserver:
+  #   - 180.76.76.76
+  #   - 114.114.114.114
+  #   - https://dns.alidns.com/dns-query
+  #   - https://doh.pub/dns-query
+  # fallback:
+  #   - 8.8.8.8
+  #   - tls://dns.rubyfish.cn:853
+  #   - tls://1.0.0.1:853
+  #   - tls://8.8.4.4:853
+  #   - https://cloudflare-dns.com/dns-query
+  #   - https://dns.cloudflare.com/dns-query
+  #   - https://dns.google/dns-query
+  # fallback-filter:
+  #   geoip: true
+  #   ipcidr:
+  #     - 127.0.0.1/32
+  #   domain:
+  #     - +.google.com
+  #     - +.googleapis.cn
 rules:
-  - DOMAIN-SUFFIX,baidu.com,DIRECT
-  - DOMAIN-KEYWORD,gmail,Proxy
+  # Clash 按从上到下的顺序匹配规则, 特殊网络规则 放前边
+  # - DOMAIN,example.com,DIRECT,dns - 114.114.114.114,119.29.29.29
+  # 微信客户端
+  - DOMAIN-SUFFIX,weixin.qq.com,Proxy
+  - DOMAIN-SUFFIX,qq.com,Proxy
+  - DOMAIN-SUFFIX,wechat.com,Proxy
+  - DOMAIN-SUFFIX,tenpay.com,Proxy
+  - SRC-IP-CIDR,43.175.127.0/24,Proxy
+  - SRC-IP-CIDR,43.153.165.0/24,Proxy
+  # one driver
+  # - DOMAIN-SUFFIX,microsoftonline.com,Proxy
+  # - DOMAIN-SUFFIX,live.com,Proxy
+  # - DOMAIN-SUFFIX,office.com,Proxy
+  # - DOMAIN-SUFFIX,office.net,Proxy
+  # - DOMAIN-SUFFIX,sharepointonline.com,Proxy
+  # 常用国外站点
+  - 'DOMAIN-KEYWORD,google,Proxy'
   - DOMAIN-KEYWORD,google,Proxy
+  - DOMAIN-KEYWORD,gmail,Proxy
+  - DOMAIN-KEYWORD,youtube,Proxy
+  - DOMAIN-KEYWORD,facebook,Proxy
+  - DOMAIN-KEYWORD,github,Proxy
+  - DOMAIN-KEYWORD,twitter,Proxy
+  - DOMAIN-KEYWORD,instagram,Proxy
+  - DOMAIN-KEYWORD,whatsapp,Proxy
+  # 其他
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
   - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-SUFFIX,stat.com,REJECT
+  - DOMAIN,e.crashlytics.com,REJECT
+  # Telegram Messenger
+  - IP-CIDR,91.108.4.0/22,Proxy,no-resolve
+  - IP-CIDR,91.108.8.0/22,Proxy,no-resolve
+  - IP-CIDR,91.108.12.0/22,Proxy,no-resolve
+  - IP-CIDR,91.108.16.0/22,Proxy,no-resolve
+  - IP-CIDR,91.108.56.0/22,Proxy,no-resolve
+  - IP-CIDR,149.154.160.0/22,Proxy,no-resolve
+  - IP-CIDR,149.154.164.0/22,Proxy,no-resolve
+  - IP-CIDR,149.154.168.0/22,Proxy,no-resolve
+  - IP-CIDR,149.154.172.0/22,Proxy,no-resolve
+  # apple.com
+  - IP-CIDR,17.0.0.0/8,DIRECT
   # 内网网段
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
@@ -16,3 +97,36 @@ rules:
   # 自动检测
   - GEOIP,CN,DIRECT
   - MATCH,Proxy
+proxies:
+  - name: 有效期2025/07/03,剩余:94.71GB
+    type: trojan
+    server: iplc-hk-beta1.trojanwheel.com
+    port: 5001
+    password: xxx
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-IPLC-HK-BETA1-流量倍率:1.0
+    type: trojan
+    server: iplc-hk-beta1.trojanwheel.com
+    port: 5001
+    password: xxx
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - Auto
+      - 有效期2025/07/03,剩余:94.71GB
+      - 香港-IPLC-HK-BETA1-流量倍率:1.0
+  - name: Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 有效期2025/07/03,剩余:94.71GB
+      - 香港-IPLC-HK-BETA1-流量倍率:1.0

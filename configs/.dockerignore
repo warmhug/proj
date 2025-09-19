@@ -1,0 +1,8 @@
+# https://docs.docker.com/build/building/best-practices/
+
+*.md
+
+node_modules
+npm-debug.log
+.git
+.env

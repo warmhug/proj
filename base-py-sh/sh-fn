@@ -1,0 +1,287 @@
+#!/bin/bash
+
+check_chinese() {}
+
+# 获取当前路径和父路径
+# echo "$(dirname $(/bin/pwd))"
+# echo "$(basename $(/bin/pwd))"
+current_path=$(/bin/pwd)
+get_parent_dir() {
+  local current_dir=$(basename "$current_path")
+  local parent_dir="${current_path%$current_dir}"
+  echo $parent_dir
+}
+parent_dir=$(get_parent_dir)
+
+command_exists () {
+  command -v "$1" >/dev/null 2>&1
+}
+
+# 跨平台
+check_install() {
+  local target="${1:-"ldconfig"}"
+  if command -v $target >/dev/null 2>&1; then
+    echo "[OK] $target is available: $(command -v $target)"
+  else
+    echo "[WARN] $target is not available."
+    # Detect package manager
+    if command -v apt-get >/dev/null 2>&1; then
+      echo "You can install it via: apt-get update && apt-get install -y libc-bin"
+    elif command -v yum >/dev/null 2>&1; then
+      echo "You can install it via: yum install -y glibc"
+    elif command -v dnf >/dev/null 2>&1; then
+      echo "You can install it via: dnf install -y glibc"
+    elif command -v apk >/dev/null 2>&1; then
+      echo "You can install it via: apk add libc-utils"
+    else
+      echo "No known package manager detected. Please install $target manually."
+    fi
+  fi
+}
+
+usage() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: $0 xx"
+    return 1
+  fi
+}
+
+# 读取用户输入
+confirm_action() {
+  local prompt_message="$1"
+  local user_input
+
+  read -p "$prompt_message (y/n): " user_input
+  user_input=${user_input:-y}  # 默认值为 'y'，如果用户直接按回车
+
+  if [[ $user_input =~ ^[Yy]$ ]]; then
+    return 0  # 表示确认，返回成功状态
+  else
+    return 1  # 表示取消，返回失败状态
+  fi
+}
+
+datef() {
+  local fmt="${1:-"%Y_%m_%d-%H_%M_%S"}"
+  local output=$(date "+$fmt")
+  echo "[$output]"
+  # date "+$fmt"
+}
+# datef "%Y-%m-%d"
+
+add_blank_lines() {
+  # return 1
+  # echo -e "\n" >> $sync_log
+  printf '\n%.0s' {1..5} >> $sync_log
+}
+
+get_special_files() {
+  special_files=(".pnpmfile.cjs" ".npmrc" "pnpm-lock.yaml" ".git")
+  # 2024-08 bash 查找 packages 目录下二级 目录里存在的所有 config.ts congfig.tsx config.js 和 config 目录，排除掉 node_modules 目录。不查找子路径。查找结果 存放到数组里。
+  # special_files+=($(find packages/*/src -maxdepth 1 -type f \( -name "config.ts" -o -name "config.tsx" -o -name "config.js" \) -not -path "*/node_modules/*" -o -type d -name "config" -not -path "*/node_modules/*"))
+  # for item in "${special_files[@]}"; do echo "$item"; done
+}
+# get_special_files
+
+base64() {
+  input_string="your string to encode"
+  encoded_string=$(echo -n "$input_string" | base64)
+  decoded_string=$(echo -n "$encoded_string" | base64 --decode)
+}
+
+check_chinese() {
+  # 使用 Node.js 检查字符串是否包含中文字符
+  if node -e "let s = process.argv[1]; process.exit(s.match(/[\u4e00-\u9fa5]/) ? 0 : 1)" "$string"; then
+    echo "字符串包含中文字符。"
+  else
+    echo "字符串不包含中文字符。"
+  fi
+
+  # 识别字符串包含的中文
+  string="Hello，世界！"
+  # string="Hello"
+  # 使用 printf 将每个字符转换为 Unicode 编码
+  for ((i=0; i<${#string}; i++)); do
+    char="${string:i:1}"
+    unicode=$(printf "%04X" "'$char")
+    echo "字符: $char, Unicode 编码: \\u$unicode"
+  done
+  # 使用 bash 语句, 在 macOS 里不正常
+  if [[ $string =~ [\u4e00-\u9fa5] ]]; then
+    echo "字符串包含中文"
+  else
+    echo "字符串不包含中文"
+  fi
+}
+
+
+# git
+
+git_tags() {
+  # 先 git tag -l > tags.txt
+  # 再运行本脚本
+  while read -r line; do
+    git tag -d "$line"
+    # git push origin --delete "$line"
+  done < tags.txt
+}
+
+# 获取 git log 的 第一条 最后一条 总数 等信息，放到 bash 数组里
+git_log() {
+  # current_branch
+  branch_name=$(git symbolic-ref --short HEAD)
+  all_commits_num=$(git rev-list --count HEAD)
+  all_commits=$(git log $branch_name --format=%H:%an:%s)
+  latest_commit=$(git log $branch_name -1 --pretty=%H)
+  skip_latest_commit=$(git log --skip=1 --pretty=%H)
+  first_commit=$(git log $branch_name --reverse --skip=1 $latest_commit --pretty=%H | head -n 1)
+  first_commit=$(git rev-list --max-parents=0 HEAD)
+  echo $latest_commit
+  echo $first_commit
+
+  declare -a commits_info
+
+  # 使用 while 循环读取 git log 输出，并将信息追加到数组中
+  while IFS= read -r line; do
+    commits_info+=("$line")
+  done < <(echo "$all_commits")
+
+  echo "commits count: "${#commits_info[@]}
+
+  for info in "${commits_info[@]}"; do
+    if [[ "$info" != "$first_commit" ]]; then
+      echo "$info"
+      # echo "${info%%:*}, ${info#*:}"
+      # do sth
+      # git cherry-pick $info
+    else
+      echo first_commit: "$first_commit"
+    fi
+  done
+}
+
+# 备份分支
+git_branch_backup() {
+  if [ -z "$1" ]; then
+    echo "请输入要备份的分支名"
+    return 1
+  fi
+  local bk_branch_name=backup-$1
+  local branch_exists=$(git branch | grep "$bk_branch_name")
+  if [ -n "$branch_exists" ]; then
+    echo -e "
+    备份分支名 $bk_branch_name 已存在 请运行命令删除或改名
+      git branch -D $bk_branch_name
+    "
+    return 1
+  else
+    # 做备份
+    git checkout -b "${bk_branch_name}"
+  fi
+}
+
+# 压缩分支的提交  使用 /bin/zsh 执行，不然显示有问题
+git_commits_squash() {
+  local feature_branch="$1"
+  local base_branch="$2"
+  if [ -z "$1" ]; then
+    local feature_branch=$(git symbolic-ref --short HEAD)
+  fi
+  if [ -z "$2" ]; then
+    local base_branch="origin/master"
+  fi
+  # echo "参数 $1 $2 , $feature_branch $base_branch"
+
+  local gitStatus=$(git status --porcelain)
+  if [ "$gitStatus" != "" ]; then
+    echo "Your git status is not clean"
+    return 1
+  fi
+
+  git_branch_backup $feature_branch || return 1
+  git pull
+
+  echo "\033[32m
+  合并 ${feature_branch} 成一个 commit，并归集所有待合并 commit 的 messages
+  \033[0m"
+  git checkout "${feature_branch}"
+
+  calc_commits_num $base_branch $feature_branch
+  local commits_num=$calc_commits_num_result
+  echo $commits_num
+
+  # 如果只有一个 commit，则无需合并
+  if [ $commits_num -lt 2 ]; then
+    echo "\033[32m
+    只有一个提交，不需要压缩
+    \033[0m"
+    return 0
+  fi
+
+  # 收集所有待合并 commits 的 message
+  local commits_message=""
+  for ((i = commits_num - 1 ; i >= 0 ; i--)); do
+    # MESSAGE=$(git log --format=%s HEAD~${i} -1)
+    MESSAGE=$(git log --format='%h - %an - %ad %n %s' HEAD~${i} -1)
+    commits_message+="${MESSAGE}
+  "
+  done
+  local new_message="📦 chore: Squashed ${commits_num} commits:
+
+  ${commits_message}"
+
+  echo -e "\033[32m 请确认是否合并这些commits (y/n) : \033[0m"
+  printf $new_message
+
+  read answer
+  [[ $answer = "n" ]] && return 1
+
+  # 恢复到 base 分支的 最后一次提交
+  git reset --soft $(git rev-parse HEAD~$commits_num)
+  git add --all
+  git commit -am "${new_message}"
+
+  echo "
+  建议再手动运行 git commit --amend 额外添加 commit 注释
+  提交 git push --force-with-lease
+  "
+  # git log
+  # git push origin "${feature_branch}" --force-with-lease
+}
+
+gitignore_get() {
+  gitignore=()
+  GITIGNORE_FILE=".gitignore"
+  if [ ! -f "$GITIGNORE_FILE" ]; then
+    echo ".gitignore file not found in the current directory!"
+    exit 1
+  fi
+  while IFS= read -r line; do
+    # 移除行首尾的空白字符
+    stripped_line=$(echo "$line" | tr -d '[:space:]')
+    # 跳过空行和以 '#' 开头的注释行
+    if [ -n "$stripped_line" ] && [ "${stripped_line:0:1}" != "#" ]; then
+      # echo "$stripped_line"
+      gitignore+=("--exclude=$line")
+    fi
+  done < "$GITIGNORE_FILE"
+  # echo "${gitignore[@]}"
+  for item in "${gitignore[@]}"; do echo "$item"; done
+  # diff 的 exclude 参数 不认识 .gitignore 文件里的 **/**/es/** 这种写法
+  # diff -rq --exclude=.git --exclude=**/**/es/** . /tmp/pro-components > diff.txt
+}
+
+
+# 2016 自动 commit push
+function commit() {
+  # printf "\n"
+  echo "\033[32m git op (y/n)?  \033[0m"
+  read git_op
+  [[ $git_op = "n" ]] && exit
+  BASEDIR=$(dirname $0)
+  ## echo $BASEDIR
+  cd $BASEDIR
+  echo "\033[32m git status \033[0m"
+  git status
+  read -p "Press Return to Close..."
+}

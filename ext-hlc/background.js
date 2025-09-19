@@ -7,6 +7,10 @@ importScripts('common.js');
 console.log('bg page, 注意其执行时机', chrome);
 // console.log('bg page init no window', window?.document?.title);
 
+const hl_inject_ai_urls = [
+  "https://gemini.google.com/",
+  "https://chatgpt.com/"
+];
 const hl_inject_ai_fns = [
   // https://www.doubao.com/chat/
   (clipText) => {
@@ -65,6 +69,12 @@ const hl_inject_ai_fns = [
   },
 ];
 
+const hl_inject_auto_urls = [
+  ["https://*.google.com/*", "https://*.bing.com/*", "https://*.baidu.com/*"],
+  "https://www.zhihu.com/",
+  "https://i.mi.com/note/h5#/",
+  "https://note.txxx.tea/"
+];
 const hl_inject_auto_params = [
   // https://cn.bing.com  https://www.bing.com https://www.google.com  https://www.baidu.com
   {
@@ -84,6 +94,9 @@ const hl_inject_auto_params = [
         position: static;
       }
     `,
+    func: () => {
+      // alert(11);
+    },
   },
   // https://i.mi.com/note/h5#/
   {
@@ -224,8 +237,7 @@ chrome.tabs.onCreated.addListener(async (tabInfo) => {
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   // console.log('onUpdated tabs: ', tabId, changeInfo, tab.url);
-  const { hl_inject_auto = [] } = await hl_utils.getStorage();
-  const result = hl_utils.asyncMap(hl_inject_auto, async (url, idx) => {
+  const result = hl_utils.asyncMap(hl_inject_auto_urls, async (url, idx) => {
     const queryTabs = await chrome.tabs.query({ url: url });
     return await hl_utils.asyncMap(queryTabs, async (qTab) => {
       if (qTab.id = tabId) {
@@ -245,8 +257,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 });
 
 async function aiChat(clipText) {
-  const { hl_inject_ai = [] } = await hl_utils.getStorage();
-  const maps = hl_inject_ai.map((url, idx) => ({
+  const maps = hl_inject_ai_urls.map((url, idx) => ({
     url, func: hl_inject_ai_fns[idx]
   }));
   const runFn = async ({ url, func }) => {

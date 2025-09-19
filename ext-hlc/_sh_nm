@@ -25,7 +25,7 @@ datef() {
 
 log_command() {
   local command="$1"
-  echo -e "\n$(datef) === chrome-extension nm_sh log ===" >> "$log_file"
+  echo -e "\n$(datef) === chrome-extension log ===" >> "$log_file"
   echo "$(datef) 执行命令: $command" >> "$log_file"
   if eval "$command" 2>&1 | tee -a "$log_file"; then
     echo "$(datef) 执行完成" >> "$log_file"
