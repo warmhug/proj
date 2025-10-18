@@ -49,6 +49,9 @@ bash -c '. script.sh && fn_name'
 zsh -c "source script.sh; fn_name"
 sh -c "top -l 1 -pid 1234"
 sh -c 'while true; do (ls -la); echo "- $(date +%H:%M:%S) -"; sleep 1; done'
+node -e "console.log(require('os').tmpdir())"
+node -e "import os from 'os'; console.log(os.homedir())" # node 老版本加 --input-type=module
+
 
 # 不同平台安装包 查看包管理器
 # Ubuntu/Debian `sudo apt-get install jq`

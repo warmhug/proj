@@ -20,30 +20,8 @@ permalink: /
 [时代周刊](https://time.com)  [纽约时报](https://nytimes.com) [华尔街日报](https://www.wsj.com)  https://youtube.com  https://instagram.com  https://whatsapp.com
 
 [科技周刊](https://www.ruanyifeng.com/blog/2025/08/weekly-issue-363.html)
-[chrome-experiments](https://experiments.withgoogle.com/collection/chrome)
-[chromestatus](https://www.chromestatus.com/features)、[webkit](https://webkit.org/)
-https://coolshell.cn
-
-GitHub登录 https://codesandbox.io  https://codepen.io
-[JavaScript risingstars](https://risingstars.js.org)
-[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
-[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
-[stateofreact](https://2023.stateofreact.com)
-[awesome-react](https://github.com/enaqx/awesome-react)
-[awesome-react-components](https://github.com/brillout/awesome-react-components)
-[react-next](https://www.react-next.com/)
-[设计工具排名](https://uxtools.co/tools/design)
-
-https://ai-bot.cn/daily-ai-news/
-https://chatgpt.com  https://gemini.google.com/  https://chat.deepseek.com/
-https://www.kimi.com/  https://www.doubao.com/chat/
-https://www.tongyi.com/  https://chat.qwen.ai/
-https://chat.z.ai/  http://ai.baidu.com/
-https://www.meta.ai/  https://ai.meta.com/get-meta-ai/
-https://metaso.cn  https://chathub.gg
-https://poe.com/  https://www.perplexity.ai  https://duckduckgo.com
--- 模型厂商/套壳
-
+hacknews中文 https://feedme.icu  https://github.com/ccbikai/hacker-news
+[设计工具排名](https://uxtools.co/tools/design) https://coolshell.cn
 
 中国技术先锋
 2024 中国技术品牌影响力企业 https://segmentfault.com/a/1190000045534050
@@ -76,8 +54,6 @@ https://chat.deepseek.com/a/chat/s/a84bb58a-3f19-47f5-aec8-9ed298db0e71
 https://gemini.google.com/app/17702d037ff7ca2c
 2025-07-29
 
-2025 react-libraries https://www.robinwieruch.de/react-libraries/
-
 https://webkit.org/blog/16458/announcing-interop-2025/
 https://antfu.me/posts/move-on-to-esm-only
 2025-02 技术趋势
@@ -85,14 +61,6 @@ https://antfu.me/posts/move-on-to-esm-only
 markdown 转html 用十几行正则就可以为什么要搞那么复杂？
 https://www.zhihu.com/question/443343954/answer/3375039874
 2024-12
-
-Vue.js 作者宣布成立 VoidZero https://mp.weixin.qq.com/s/xT7SRffAcUqLFf7Ou4I5Og
-2024-11
-
-cssinjs https://mp.weixin.qq.com/s/cepGi8Jhe4RnyfNaoN_zfw
-react19 cssinjs 问题 https://juejin.cn/post/7359876671137071156
-探索：业务中推行 tailwindcss 和 emotion，设计上 design token 抽象。
-2024-10 cssinjs
 
 2024-05 阿侎 命令模式undo/redo https://zhuanlan.zhihu.com/p/698816530
 
@@ -108,10 +76,26 @@ gmtc https://gmtc.infoq.cn/2022/beijing/schedule
 
 [2021 大前端技术回顾及未来展望](https://mp.weixin.qq.com/s/HfZDrrqDNUVpnU-aegKxcg)
 
+---
+
+[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
+[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
+[stateofreact](https://2023.stateofreact.com)
+https://risingstars.js.org
+https://github.com/enaqx/awesome-react
+https://github.com/brillout/awesome-react-components
+https://www.react-next.com
+
+https://experiments.withgoogle.com/collection/chrome
+https://www.chromestatus.com/features
+https://webkit.org
+GitHub登录 https://codesandbox.io  https://codepen.io
 
 
 ## html css HTTP
-> 2018 2021
+> 2018 2021 2025
+
+https://prettier.io/playground/
 
 - html 规则检测 https://validator.w3.org 、 http://infohound.net/tidy
 - html head 里的 js css 如何放置  head 里能放什么 https://github.com/joshbuchea/HEAD
@@ -259,6 +243,8 @@ Cookie可以让服务端程序跟踪每个客户端的访问，但是每次客�
 ## JS / Libs
 > 2018 2022 2024
 
+------ 基础
+
 - console.log(1_048_576) 这是 Numeric Separators 的语法，是 ECMAScript 2021（ES12）中的一部分
 - https://evertpot.com/using-top-level-await-is-bc-break/
 
@@ -279,7 +265,25 @@ Cookie可以让服务端程序跟踪每个客户端的访问，但是每次客�
   - es5-shim 完美模拟了所有 ES5 中可以被完美模拟的方法。就是说 ES5 中有些方法，是可以在旧 JS 引擎中完美模拟了，那么 shim 就完美模拟了它们。shim 不局限与浏览器环境，只要 JavaScript 引擎支持，代码即可运行。
   - es5-sham 只承诺你用的时候代码不会崩溃，至于对应的方法是不是起作用它就不保证了。如果你要用的方法在 shim 中都包含了，那么就不需要 sham。sham 能不引用就不引用。sham 依赖 shim。 IE8：只支持 ES3。
 
-库/框架
+
+------ 库/框架
+
+A Guide to Server-Side Rendering
+https://www.builder.io/m/explainers/server-side-rendering
+
+2025 react-libraries https://www.robinwieruch.de/react-libraries/
+
+Vue.js 作者宣布成立 VoidZero https://mp.weixin.qq.com/s/xT7SRffAcUqLFf7Ou4I5Og
+2024-11
+
+cssinjs https://mp.weixin.qq.com/s/cepGi8Jhe4RnyfNaoN_zfw
+react19 cssinjs 问题 https://juejin.cn/post/7359876671137071156
+探索：业务中推行 tailwindcss 和 emotion，设计上 design token 抽象。
+2024-10 cssinjs
+
+CSS in React Server Components https://sorrycc.com/css-in-rsc
+原文：https://www.joshwcomeau.com/react/css-in-rsc/
+2024-04
 
 - React16 / 17 / 18版本新特性 https://blog.csdn.net/momei1942/article/details/129699873
 - React18: 并发控制的更好更灵活，定时器等异步函数setState批处理、Suspense 流式 html SSR、useTransition 延迟/过渡更新。
@@ -332,35 +336,11 @@ redux / umi
 - 多个请求并行发起 [redux-saga/issues/1800](https://github.com/redux-saga/redux-saga/issues/1800)、[redux-saga/pull/759](https://github.com/redux-saga/redux-saga/pull/759)、[dva/issues/1009](https://github.com/dvajs/dva/issues/1009)
 - 如何请求多个数据源并渲染？如[图](https://img.alicdn.com/imgextra/i4/O1CN0150J8CS26jHFosJFF4_!!6000000007697-2-tps-476-266.png)
 
-性能和体验 2020
 弹窗 modal 里高度需要设置、内容长时“内滚动”。
 一行多列 card 卡片，每个卡片 高度需要设置成一样。
 某个操作 触发多次 ajax 请求、再 setState 页面，导致卡顿？
 一个页面有多个“富文本实例”同时初始化、比较耗时？导致页面卡顿？
-
-开放问题
-- 在项目中的角色？是否“独立”负责/0-1的项目、还是维护修改项目？
-- 遇到印象深刻的难题是什么？怎么解决的？（潜力） 开源作品或技术博客？ 最有成就感的技术产出？
-- 原工作是否有过因为他的存在而带来不一样的结果？以后三年职业计划？
-- 看哪些技术网站？国外网站？最近有学什么新技术（学习能力和专业热情）
-
-笔试套路：写出所有可能解法，也写出最经典解法。
-- Google笔试面试
-- 聊聊微软面试 https://mp.weixin.qq.com/s/-NESGyGBbF3WakPFieAT0w
-- https://github.com/hzfe/awesome-interview
-- https://github.com/yifeikong/reverse-interview-zh
-- https://github.com/lydiahallie/javascript-questions
-- https://h5bp.org/Front-end-Developer-Interview-Questions/translations/chinese/
-- https://github.com/MaximAbramchuck/awesome-interview-questions
-- 2020 https://github.com/CavsZhouyou/Front-End-Interview-Notebook
-- 2019
-- https://mp.weixin.qq.com/s/e-IC588SZPJK2QRBm3KuHA
-- https://segmentfault.com/a/1190000019496107
-- 2018
-- https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651011223&idx=2&sn=54acfe1d565f650c52fcea5481ad1195
-- https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers
-- 2017 https://github.com/jawil/blog/issues/22
-
+2020 性能和体验
 
 
 ------ 小程序/RN 2022
@@ -566,9 +546,19 @@ GUI 研发：[umi-ui](https://umijs.org/guide/umi-ui.html)、[angular-console](h
 
 ------ 文档 / 图
 
-https://github.com/yshavit/mdq
+https://github.com/GraphiteEditor/Graphite  https://editor.graphite.rs/
+rust 图片编辑器
 
-https://affine.pro/ (字节刘义)
+基于 OnlyOffice 的本地网页文档编辑器 https://github.com/ranuts/document  https://www.onlyoffice.com/
+
+https://github.com/plait-board/drawnix
+https://github.com/pages-cms/pages-cms
+https://github.com/warmhug/demo/blob/main/.pages.yml
+
+https://liveblocks.io/blog/which-rich-text-editor-framework-should-you-choose-in-2025
+
+https://github.com/yshavit/mdq
+2024 https://affine.pro/ (字节刘义)
 
 2020-11 孟方(游圣) [aliyun/cadt](https://www.aliyun.com/product/developerservices/cadt)
 
@@ -680,6 +670,8 @@ https://chatgpt.com/c/68371d58-3420-8008-8991-9b2df8b537a8
 
 
 ------
+
+https://midscenejs.com/zh/
 
 https://httparchive.org/reports/page-weight
 语言性能 jsperf / benchmarks https://jsben.ch/browse
@@ -1122,436 +1114,9 @@ antd-mobile 旧 demo 备份 2018
 
 
 
+# 工程
 
-
-# BE
-
-node nginx 服务和 node pm2 服务, 是分别用于 CSR 和 SSR 服务运行吗?
-https://chatgpt.com/c/68b9404a-ed10-8322-8ce0-3e6be1704b70
-2025-09-04
-
-[yaml和json区别](https://stackoverflow.com/questions/1726802/what-is-the-difference-between-yaml-and-json)
-2025-07-31
-
-https://github.com/ant-design-blazor/ant-design-blazor
-https://learn.microsoft.com/zh-cn/aspnet/core/blazor/
-2025-07-29 .net
-
-service eu us 不同大区, dr 含义? 其中 r 是 region 的意思, dr 可能是什么?
-https://chat.deepseek.com/a/chat/s/fdaa9566-f02a-4d9e-b719-3c98b7733741
-2025-04-15
-
-软件配置管理(SCM)是指通过执行版本控制、变更控制的规程，以及使用合适的配置管理软件，来保证所有配置项的完整性和可跟踪性。
-2024
-
-[2021 年 Rust 生态版图调研报告](https://zhuanlan.zhihu.com/p/458046979)
-
-
-## DB/Java/cpp/go
-
-IoC就是Inversion of Control，控制反转还有一个名字叫做依赖注入（Dependency Injection），就是由容器控制程序之间的关系，而非传统实现中，由程序代码直接操控。IoC意味着将你设计好的类交给系统去控制，而不是在你的类内部控制。由IoC容器帮对象找相应的依赖对象并注入，而不是由对象主动去找。
-
-AOP：AOP是 Aspect Oriented Programming 的缩写，意思是面向切面编程，提供从另一个角度来考虑程序结构以完善面向对象编程（相对于OOP），即可以通过在编译期间、装载期间或运行期间实现在不修改源代码的情况下给程序动态添加功能的一种技术。
-
-面向对象OOP
-面向对象的3个基本要素：封装、继承、多态. 面向对象的5个基本设计原则:
-- 单一职责原则（Single-Resposibility Principle）
-  - 一个类，最好只做一件事，只有一个引起它的变化。
-- 开放封闭原则（Open-Closed principle）
-  - 对扩展开放，对修改封闭的
-- 里氏替换原则（Liskov-Substituion Principle）
-  - 子类必须能够替换其基类。
-  - 子类可以扩展父类的功能，但不能改变父类原有的功能。
-- 依赖倒置原则（Dependecy-Inversion Principle）
-  - 高层模块不依赖于低层次模块，二者都同依赖于抽象接口。
-  - 抽象接口不应该依赖于具体实现;而具体实现则应该依赖于抽象接口。
-- 接口隔离原则（Interface-Segregation Principle）
-  - 使用多个小的专门的接口，而不要使用一个大的总接口。
-可以运用组合技术使用现有类来开发新的类，而继承技术其实是不太常用的。尽管在教授OOP的过程中我们多次强调继承，但这并不意味着要尽可能使用它。相反，应当慎用这一技术，其使用场合仅限于你确信使用该技术确实有效的情况。
-到底是该用组合还是用继承，一个最清晰的判断办法就是问一问自己是否需要从新类向基类进行向上转型。如果必须向上转型，则继承是必要的，但如果不需要，则应当好好考虑自己是否需要继承。
-
-- QPS、RT、阿里云OSS：文件存储系统（避免把文件存到数据库里、占用IO资源）
-- tair：内存缓存服务器 开源：memcached / redis
-- F5：硬件负载均衡，LVS替代(软负载): 即为name server（configServer），名字服务器，存放各个机器名，能知道有哪些机器。
-- HSF(High Speed FrameWork)：远程服务调用框架. non-blocking IO.  IO连接多路复用。一个连接上维持多个会话。 序列化协议，hessian序列化。 同类开源的rpc框架: dubbo 或 thrift 等.
-- osgi：用于进行类库隔离的组件，允许组件动态热部署.
-- DRM：分布式资源管理，在运行时动态、即时地改变应用系统内存中的资源值，已经解决多机房问题。
-- zookeeper: 可以充当一个服务注册表（Service Registry），让多个服务提供者形成一个集群，让服务消费者通过服务注册表获取具体的服务访问地址 去访问具体的服务提供者. 提供了“心跳检测”功能 定时向各个服务提供者发送一个请求，如果长期没有响应，服务中心就认为该服务提供者已经“挂了”，并将其剔除.
-
-- DAL(数据访问层)、IDAL(接口层)、BLL(业务逻辑层)
-- PO(Persisent Object)持久对象，和VO一样都是由一组属性和属性的 get 和 set 方法组成。PO 的属性是跟数据库表的字段一一对应的。PO 对象需要实现序列化接口。
-- VO(value object)值对象，通常用于业务层之间的数据传递，和 PO 一样也是仅仅包含数据而已。但应是抽象出的业务对象,可以和表对应,也可以不,根据业务的需要。
-- DAO(data access object) 数据访问对象，它负持久层的操作，为业务层提供接口。此对象用于访问数据库。通常和 PO 结合使用. DAO 中包含了各种数据库的操作方法. DTO(Data Transfer Object) 数据传输对象，主要用于远程调用等需要大量传输对象的地方.
-
-比如我们一张表有 100 个字段，那么对应的 PO 就有 100 个属性。 但是我们界面上只要显示 10 个字段，客户端用 WEB service 来获取数据，没有必要把整个 PO 对象传递到客户端，这时我们就可以用只有这 10 个属性的 DTO 来传递结果到客户端，这样也不会暴露服务端表结构.
-
-[正向代理与反向代理有什么区别](http://mp.weixin.qq.com/s/ikrI3rmSYs83wdSWqq2QIg)
-CDN 工作机制：CDN = 镜像（Mirror）+ 缓存（Cache）+ 整体负载均衡（GSLB），主要缓存网站中的静态数据。
-三种负载均衡架构：链路负载均衡、集群负载均衡、操作系统负载均衡。
-- 链路负载均衡就是通过 DNS 解析成不同的 IP，用户根据这个 IP 来访问不同的目标服务器。
-- 集群负载均衡分为硬件和软件负载均衡。硬件负载均衡设备昂贵、如 F5，性能非常好，但访问量超出极限时不能进行动态扩容。软件负载均衡成本低，缺点是一般一次访问请求要经过多次代理服务器，会增加网络延时，如 LVS、HAProxy。
-- 操作系统负载均衡，是利用操作系统级别的软中断或硬中断，设置多队列网卡等来实现。
-2016
-
-
------- DB
-
-时间序列数据的数据库选型思考 https://j-coder.com/2021/11/12/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B%E6%80%9D%E8%80%83/
-ClickHouse vs Elasticsearch谁更胜一筹 https://www.zhihu.com/question/472389514
-2024-05-28
-
---- 2016
-MapReduce 是一种分布式的程序设计模型，专门用来在集群里处理大量的数据。主要由两部分组成：mapper 和 reducer。mapper 读取一部分数据，运算后输出成一系列的中间（intermediate）数据；而 reducer 将 mapper 的输出数据查核、合并，产生最后输出。最常被使用的就是Hadoop。
-Hadoop 是以 Java 实现的，但是可以支持许多其他语言写成的 mapper 和 reducer。
-Hadoop 是设计用来处理大量数据和运算的，所以如果只有少量数据时，就会比关系型数据库还要慢了。
-
-读写并行，锁和并行，读写锁，隔离，死锁检测：碰撞检测。
-数据一致性，数据完整性。单机事务，分布式事务。一致性hash。数据库连接利用率低。
-
-orm会有1+n查询问题如：学生表和老师表，查出所有学生(n个)的数据（结果要包含老师名字），每一条学生数据里关联某一个老师的id，通过这个id要从老师表里查出老师的名字，所以需要查n次老师表。在有数据分页和索引的情况下，1+n的性能还是很好的，虽然看起来发了很多sql查询，相对join的方式性能要好些。
-
-hbase、hive
-
-
------- Java 2015-2016
-
-《java并发编程实战源码》 《Effective Java Examples》 尚学堂 爱慕课
-- [Java 征途：行者的地图](http://www.cnblogs.com/mindwind/p/5251430.html)
-- [Java工程师成神之路~](http://www.hollischuang.com/archives/489)
-视频地址：http://www.imooc.com/learn/196 [Spring基础知识汇总](http://www.imooc.com/article/1309)
-
-Java中JDK,JRE和JVM之间的关系：![](https://t.alipayobjects.com/images/rmsweb/T1bNxiXeRcXXXXXXXX.png)
-java跨平台，是因为jvm做了跨平台实现。Java代码都要写到class中。
-
-类型安全 强制类型转换 泛型 泛型类 泛型方法如`public static <T> T getMiddle(T... a){ }`
-Java虚拟机中没有泛型，只有普通的类和方法。
-文件锁 它可以控制对文件或文件中某个范围的字节的访问 文件加锁机制依赖于操作系统。
-Javac 是一种编译器 将便于人理解的语言规范转化成机器容易理解的语言规范。
-Javac 主要有四大模块：词法分析器、语法分析器、语义分析器、代码生成器。
-Java 是跨平台的，一次编译到处运行。
-ClassLoader 就是类加载器，负责将class加载到JVM中；还有一个任务就是将class字节码重新解析成JVM统一要求的对象格式。
-检查已经加载的class文件是否被修改，如果修改了，可以重新加载这个类，从而实现类的热部署。
-Java应不应该动态加载类?
-`类加载器与安全管理器类`、`对类文件进行加密`、`字节码校验与校验器`、`安全策略文件`、`JAAS（Java认证和授权服务）`
-注解是哪些插入到源代码中使用其他工具可以对其进行处理的标签。注解不会改变程序的编译方式。`测试、日志、事务语义等代码的自动生成`。Java EE使用注解极大地简化了编程模型。
-Java servlet、asp、CGI等统一称为「服务器端程序脚本」，可以让web服务器实现对程序的调用，用来对用户的输入进行处理。
-有许多工具都需要调用Java编译器，例如`开发环境`，`自动化构建和测试工具`、`处理Java代码段的模板工具（如JSP）`等。JSP引擎将HTML里混杂的Java代码编译到Servlet中。
-反射（reflective）
-
-Web服务站点的后端服务器不是将Java的应用服务器直接暴露给服务访问者，而是在应用服务器（如Jboss）的前面再加一个Web服务器（如Apache或Nginx），可以做日志分析、负载均衡、权限控制、防止恶意请求以及静态资源预加载等。
-
-Servlet 其实就是一个 Java 类，所有的servlet类都必须继承 HttpServlet 类。
-生命周期：服务器会在启动或第一次请求servlet时初始化一个servlet对象，然后使用该对象处理客户端的请求，当服务器关闭时销毁该对象。Servlet容器有：Tomcat、Jetty等。
-现在的Web应用很少直接将交互全部页面都用Servlet来实现，而是采用更加高效的MVC框架来实现。这些MVC框架的基本原理是将所有的请求都映射到一个Servlet，然后去实现service方法，这个方法也就是MVC框架的入口。
-
-JavaBean是为Java语言设计的软件组件模型，具有可重复使用和跨平台的特点（类似VB里的控件）。
-JavaBean 是使用 java.beans 包开发的，它是 Java 2 标准版的一部分。JavaBean 是一台机器上同一个地址空间中运行的组件。JavaBean 是进程内组件。
-Enterprise Bean 是使用 javax.ejb 包开发的，它是标准 JDK 的扩展，是 Java 2 Enterprise Edition 的一部分。Enterprise Bean 是在多台机器上跨几个地址空间运行的组件。因此 Enterprise Bean 是进程间组件。JavaBean 通常用作 GUI 窗口小部件，而 Enterprise Bean 则用作分布式商业对象.
-如果你的bean中的方法使用了标准的命名模式，那么开发工具就可以使用反射机制来确定bean的特征，例如属性以及事件。
-
-POJO(Plain Ordinary/Old Java Object) 普通Java类，具有一部分 getter/setter 方法 简单的Java对象，它可以包含业务逻辑或持久化逻辑，但不继承或不实现任何其它Java框架的类或接口。
-
-Spring 是一个轻量级的 IOC 和 AOP 容器框架，通过其核心的依赖注入机制，以及AOP的声明式事务管理，与持久层框架整合，以及与其他的MVC框架整合，为企业应用提供一个轻量级的解决方案。
-灵活的Web层支持：Spring本身提供一套非常强大的MVC框架，而且可以非常容易的与第三方MVC框架集成，比如 Struts 等。
-Hibernate(orm框架) 让JavaBean在数据库生成表及关联，通过对JavaBean的操作来对数据库进行操作；
-Struts框架来连接数据层和视图层，接收、处理、发送数据并控制流程；Struts2 整合 Hibernate.
-JSP模板把页面展现给用户以及提供与用户的交互。
-- JSP 是编译执行，而 Velocity 是解释执行. 编译执行的效率明显好于解释执行.
-- JSP的执行必须要有 Servlet 的运行环境，而渲染 Velocity 不需要，所以 Velocity 不只应用在 Servlet 环境中。
-
---- 内存管理 JVM
-
-每一个Java应用都唯一对应一个JVM实例，每一个实例唯一对应一个堆。
-Java虚拟机 JIT(Just-In-Time) 把程序全部或部分翻译成本地机器码.
-计算机的体系结构: CPU指令集(RISC/CISC)；计算单元；寻址方式；寄存器定义；存储单元.
-
-JVM的结构基本由4部分组成：类加载器；执行引擎；内存区；本地方法调用。
-JVM的实现厂家实现执行引擎 用来解析JVM字节码指令，得到执行结果. 如SUN的hotspot是基于栈的执行引擎，而Google的Dalvik是基于寄存器的执行引擎.
-每一个Java线程就是一个执行引擎实例，一个JVM实例中就会同时有多个执行引擎在工作，这些执行引擎有的在执行用户的程序，有的在执行JVM内部的程序（如Java垃圾收集器）.
-Java中垃圾回收器并不是采用“引用计数”方式来进行。引用记数是一种简单但速度很慢的垃圾回收技术。
-Java中垃圾回收器是"自适应的、分代的、停止-复制、标记-清扫"式垃圾回收器。
-
-在 Java中，所有的对象都储存在堆上。因此，new关键字的完整含义是，在堆上创建对象。
-基本类型(primitive type)的对象，比如int, double，保存在栈上。声明基本类型时，不需要new。基本类型的变量名表示的是数据本身，不是引用。
-在JVM的一个进程空间中，一个栈(stack)代表了方法调用的次序。对于多线程来说，进程空间中需要有多个栈，以记录不同线程的调用次序。多个栈互不影响，但所有的线程将共享堆(heap)中的对象 对它的访问需要注意同步问题，方法和对应的属性都需要保证一致性。
-通常操作系统管理内存的申请空间是按照进程来管理的，每个进程拥有一段独立的地址空间，每个进程之间不会相互重合，操作系统也会保证每个进程只能访问自己的内存空间。
-几个名词：`物理内存和虚拟内存`、`RAM`、`地址总线与总线宽度`、`内核空间与用户空间`、`静态/动态内存分配和回收`
-Java堆是用于存储Java对象的内存区域，堆的大小在JVM启动时就一次向操作系统申请完成。
-JVM运行实际程序的实体是线程，每个线程创建时JVM都会为它创建一个堆栈，堆栈的大小根据不同的JVM实现而不同。一个线程的方法的调用和返回对应于这个Java栈的压栈和出栈。
-栈中主要存放一些基本类型的变量数据（int、short、long、byte、float、double、boolean、char）和对象句柄（引用），方法执行结束此处变量也就会消失。存取速度比堆要快，仅次于寄存器，栈数据可以共享。缺点是，存在栈中的数据大小与生存期必须是确定的，这样导致缺乏了其灵活性。
-从堆和栈的功能和作用来通俗地比较，堆主要用来存放对象，栈主要用来执行程序.
-
-线程和进程的区别: https://gw.alipayobjects.com/zos/rmsportal/sPHJvmeyIHeUBcQqOmVO.png
-可以同时运行一个以上线程的程序称为多线程程序。多进程与多线程本质区别在于每个进程拥有自己的一整套变量，而线程则共享数据。但共享变量使线程之间的通信比进程之间的通信更有效、更容易。
-构建一个新的线程是有一定代价的，因为涉及与操作系统的交互。如果程序中创建了大量的生命周期很短的线程，应该使用「线程池」。一个线程池中包含许多准备运行的空闲线程。
-名词：`中断线程`，`线程状态`，`线程属性`，`同步：竞争条件、锁对象、条件对象、死锁`，`阻塞队列`，`线程安全的集合`，`线程池`，`同步器`
-
---- oop
-
-Java是完全的面向对象的语言，它使用`类和对象`、遵从`封装、继承、多态`的设计原则。
-Java不支持多重继承，即派生类只能有一个基类。Java中每个类都从类Object派生出。
-子类方法不能低于父类方法的可见性，例如：父类方法是public、子类也要是public。
-多态: 例如Person类的数组，可以包含其派生类Student的对象。当调用`person[0].xx()`方法时，如果`person[0]`中存放的是Student类的对象，则`xx`方法是Student类中的实例方法，而不是Person类的实例方法。
-用`static`修饰的方法叫做“类方法”，修饰的变量叫做“类变量”。类的对象上不存在static变量或方法。
-多态的存在要有3个必要条件: 要有继承、要有方法重写、父类引用指向子类对象。
-接口中只有：常量、抽象方法。
-类既不可以是 private 的 也不可以是 protected 的. 对于类的访问权限，仅有两个选择：包访问权限或public 但可以把所有的构造器都指定为private。
-
-
------- cpp 2017
-
-- 指针和引用的区别
-  - 引用总是指向某个对象，定义引用时必须初始化(之后不可改变)；引用只是一个“别名”，给引用赋值修改的是引用所关联对象的值. 函数指针.
-  - 指针可以指向任何对象，可以修改。 不能对未被初始化为适当地址的指针解除引用。
-- new 出来的对象，需要手动 delete，然后再设置为 NULL
-  - 只能用 delete 来释放使用 new 分配的内存；不能用 delete 来释放普通变量声明所获得的内存。
-  - 手工管理内存，非常容易出错，导致“内存泄露”问题，排查非常困难。使用智能指针，避免这种问题。
-  - 当使用 delete 时，类的析构函数会被自动调用。删除对象可以释放对象本身占用的内存，但并不能自动释放属于对象成员的指针指向的内存，因此要在析构函数使用 delete 删除对象成员的内存。
-- 内存模型
-  - 自动变量：函数内的变量(包含函数参数)；静态变量：函数外的变量、使用 static 定义的变量；动态变量：new 出来的变量。
-  - 自动变量保存在栈（LIFO 后进先出）中、变量数量可以灵活增减；静态变量数目在程序运行期间不会变，因此不需要栈来管理，编译器将分配固定的内存块来存储所有的静态变量，这些变量在程序执行期间一直存在。
-  - 位于函数内的变量是「局部变量(自动变量)」，位于函数外的变量是「全局变量」，全局变量对所有的程序文件都是可见的。
-  - 使用 static 修饰局部变量、可以在函数调用之间保持局部变量的值、不需要在每次进入和离开函数时进行创建和销毁。
-  - 使用 static 修饰全局变量时，会使变量的作用域限制在声明它的文件内。
-  - extern 是用来在另一个文件中声明一个全局变量或函数，用于当有两个或多个文件共享相同的全局变量或函数时。
-  - 在函数或代码块中声明 const 时，其作用域为代码块，所以不用担心与外部的 const 常量重名引起冲突。
-  - C/C++ 都不允许在一个函数中定义另外一个函数，因此所有函数都是静态存储，在整个程序执行期间一直存在。
-  - 可以使用 static 定义静态函数，使函数只在文件内可见，这样可以在其他文件中定义同名的函数。
-  - 使用 C++ 运算符 new（或 C 函数 malloc()）分配的内存称为动态内存，不受作用域限制，可以在一个函数中分配内存，在另一个函数中释放。动态内存不是 LIFO。
-  - 通常编译器使用三块独立的内存：一块用于静态变量（可能再细分），一块用于自动变量，另一块用于动态存储。
-- 异常
-  - 对于不同的异常类型，基类引用能够捕获各派生类异常对象，而派生类异常只能捕获从这个类派生而来的类对象。
-  - 使用异常会降低程序的运行速度。
-- 头文件：
-  - 可包含：函数原型，使用 #define 或 const 定义的常量，结构/类/模板声明，内联函数。
-  - 不能包含：函数定义/函数体、变量声明。不要使用 using 指令。
-- 命名空间
-  - 命名空间可以是全局的，也可以位于另一个命名空间中，但不能位于代码块中。
-  - using 声明：`using std::cout`，using 编译指令：`using namespace std`，首选在局部作用域内使用 using 声明。
-  - 使用在已命名的名称空间中声明的变量，而不是使用外部全局变量或静态全局变量。
-
-何时使用引用参数：
-![何时使用引用参数](https://zos.alipayobjects.com/rmsportal/CpddxowZkhtkSoOVasEN.jpg)
-
-如何选择数据类型？通常来说 int 被设置为对目标计算机来说最“自然”(处理起来效率最高)的长度，如果没有特殊理由，则应使用 int。
-如果可能超过 int 类型的最大值，则使用 long 或 long long，便于程序移植到低位数的系统上而不出现问题。
-如果节省内存很重要，则应使用 short 而不是 int，即使它们的长度一样。例如 int 数组从 16 位系统移到 32 位系统，内存占用会加倍。
-
-预处理指令 #include 来引用头文件，引用头文件相当于复制头文件的内容。
-建议把所有的常量、宏、系统全局变量和函数原型写在头文件中。
-
-C++ 可以使用 C 的头文件，C++ 头文件去掉了扩展名 h，有些 C 头文件被转换为 C++ 头文件时被重新命名，去掉了扩展名 h，并在文件名称前面加上前缀 c (表明来自 c 语言)，例如 C++ 版本的 math.h 为 cmath。
-
-泛型（generic）是一种允许一个值取不同数据类型（所谓多态）的技术，
-强调使用这种技术的编程风格被称为泛型编程（generic programming通用编程/类属编程）。
-STL（Standard Template Library 标准模板库）是泛型编程思想的实际体现和具体实现，STL 是最新的 C++ 标准函数库中的一个子集.
-
-
-
-## Linux python docker k8s
-
-
-Python 反向代理. 关键点 Content-Length
-https://gemini.google.com/app/b799e0b13733d5d5
-2025-09-15
-
-https://github.com/apple/container
-2025-09-14
-
-Red Hat / QEMU 和 Ubuntu 是什么关系?
- QEMU 开源虚拟化引擎.
- Ubuntu 系统默认安装并支持 KVM/QEMU 虚拟化。
- Ubuntu 是 QEMU 的“下游使用者”，它利用 QEMU 的能力为用户提供虚拟化功能。
-2025-09-05
-
-```sh
-cat ls rm find grep head tail
-echo env  ping ps  kill  lsof
-df  # 查看文件系统使用情况
-du  # 统计目录、文件大小
-jcmd  # 用于向JVM进程发送诊断命令，集成了jstack、jmap、jinfo等工具的功能
-jmap  # 用于分析Java进程的内存使用情况
-jps  # 用于列出当前系统中所有的Java进程及其主类名或JAR包名
-jstack  # 用于生成Java进程的线程转储
-nc  # 用于探测容器网络端口的连通性
-netstat  # 用于查看容器中网络连接
-ss  # 用于查看网络连接状态
-```
-2025-09-04 容器远程调用, 限制的命令
-
-
----
-
-- Unix 遵循的原则是 KISS (Keep it simple, stupid) do one thing and do it well。
-- Linux 严格区分大小写。所有内容以文件形式保存，包括硬件。如：键盘 /dev/stdin 显示器 /dev/stdout
-- Linux 不靠扩展名区分文件类型，靠权限区分。（ .gz .tgz .sh 等文件扩展名只是为了方便管理员查看 ）
-  - bash 文件 想在 mac 上双击可执行(调用系统terminal)，需要去掉文件后缀名。
-- shell 是一个命令行解释器。shell 是壳，kernel 是内核。shell 把用户敲进去的命令、翻译为 linux 内核能识别的语言。
-  - sh: Bourne Shell 的缩写，可以说是目前所有 Shell 的祖先。 bash : Bourne Again Shell 的缩写，是 sh 的一个进阶版本。
-- vi编辑器使用 color-scheme `:colo desert` 或者 配置 `~/.vimrc` 为 `colo desert` + `syntax on`
-  - [vim 键盘图](https://zos.alipayobjects.com/rmsportal/MOPJrAnojdFvAToZkESi.gif)
-- 在 Windows 上 哪些流行的 terminal 能和 macOS Linux 的 terminal 兼容?
-  - Windows Terminal / WSL（Windows Subsystem for Linux）/ Git Bash
-
-[Zsh 和 Bash 的不同](https://xshell.net/shell/bash_zsh.html)
-
-
---- Kubernetes
-
-CrashLoopBackOff
-
-
------- Ubuntu v22
-
-```sh
-cat /etc/os-release  # 查看发行版
-
-# 通过 apt 或 dpkg 列出所有软件包
-dpkg --get-selections | grep -v deinstall
-dpkg -l | grep 软件包名称
-apt list --installed
-
-# 安装 Python
-sudo apt install python3  # sudo apt install python3.11
-sudo apt install python3-pip
-pip3 --version
-# 可选
-sudo apt install python3-venv  # 安装 venv（用于创建虚拟环境）
-sudo apt install python3-dev  # 安装开发工具包
-
-lscpu
-lscpu | grep -i avx2
-free -h
-
-nvidia-smi
-nvidia-smi --query-gpu=name,memory.total,driver_version,cuda_version --format=csv,noheader,nounits
-
-# PCI 设备就是插在电脑主板上的各种“功能卡”或内置组件，比如显卡(GPU)、网卡、声卡、硬盘控制器.电脑的器官.
-lspci | grep -i nvidia
-
-```
-
-命令行 输入多行代码 并创建 my.py 文件
-
-```sh
-nano my.py  # nano: command not found
-
-cat > my.py << 'EOF'
-str='123456789'
-print(str[2:5])
-print ("Hello, Python!")
-EOF
-```
-
-
-
------- docker 2025
-
-详细解释一下这个文件内容(docker history --no-trunc harbor.xx/xx 的结果)
-希望能运行 gpt-oss 120b 的模型, 这个镜像能满足要求吗? 需要升级 vllm 版本吗?
-镜像里怎么加载大模型文件, 怎么提供http服务?
-我能修改这个镜像吗? 比如 FROM 了这个镜像之后, 应该做什么?
-2025-08-29
-
-docker desktop 里 镜像的 layers 每行内容有省略号, 使用什么工具能显示完整?
-2025-08-29
-
-nvidia/cuda Tag: 12.9.1-cudnn-devel-ubuntu24.04 和 Tag: 12.9.1-cudnn-runtime-ubuntu24.04 的区别? 有些包叫 alpine 是什么意思?
-docker镜像的依赖怎么查看? 比如基于 nodejs 的镜像可能依赖 npm/pnpm/python 但应用程序内部 package.json 声明的依赖, 为什么不包含在 docker 镜像里?
-https://www.tongyi.com/qianwen?sessionId=73a29b53c98b4b588e2eb385a9630eef
-2025-08-22
-
-微服务是剧目（由多个独立的小剧目组成）。Docker 是用来运输和运行这些小剧目的“集装箱”，而 Linux 是承载所有这些集装箱的“货轮”或“码头”。Docker 是 “集装箱卡车”。Kubernetes 是 “自动化港口调度系统”。
-Docker 镜像是创建容器的基础模板，而 Docker 容器是镜像启动后的一个或多个运行实例。一个镜像可以启动任意多个相互隔离的容器。
-2025-08-22
-
-比如 前端 nodejs 服务, 通过服务构建出的镜像 包含 "node运行时+node框架(比如nextjs)+业务build后代码", 是放到一个 docker 容器里 被 k8s prod 调度?
-这个情况下, 每个 nodejs 服务, 如果 "node运行时+node框架" 都是一样的版本, 只是业务代码不一样. 不同服务用到的 相同部分的内容, 有复用吗? 如果没有 那是浪费了存储资源?
-2025-08-13
-
-https://github.com/dockersamples/helloworld-demo-node
-https://docs.docker.com/engine/storage/drivers/
-https://docs.docker.com/build/concepts/dockerfile/
-https://docs.docker.com/build/ci/github-actions/
-https://docs.docker.com/compose/intro/compose-application-model/
-https://docs.docker.com/desktop/features/networking
-2025-08 docker学习
-
-https://github.com/actions/checkout
-在 CI 环境里 比如 github action, 先加载需要的 node 镜像, 再跑 npm install / test 等, 是怎么触发的?
-通过 workflow 文件（.github/workflows/*.yml） 触发的。
-GitHub Actions 启动一个 Runner（可以是 GitHub 提供的虚拟机，也可以是自托管机器）。
-Workflow 里可以指定：直接使用 Docker 镜像 作为运行环境, 或使用官方 actions/setup-node 在 runner 上安装 Node, Runner 在容器内或虚拟机上执行 npm install、npm test 等命令。
-
-github 的 workflow 是怎么实现的?
-GitHub Actions 的 Workflow 是 GitHub 提供的一个 事件驱动的 CI/CD 系统，其实现本质上是：
-GitHub 托管一个 Workflow 引擎（负责解析 .github/workflows/*.yml）
-事件（push、PR、schedule 等）触发 Workflow 运行
-Workflow 引擎调度 Runner（执行任务的机器）
-Runner 拉取工作内容、运行 Actions、上报日志和结果.
-
-在公司内部署 Workflow Engine 和 Runner , 用什么语言写的比较多?
-为什么 Go / .NET 最多？
-Go：天然适合容器环境，CI/CD 场景高并发、K8s 集成方便
-.NET Core：跨平台 + 运行稳定，GitHub 官方 Runner 采用
-2025-07
-
-对于公司内部署的 CI 构建平台, Docker资源参数(cpus/memory等)应该怎么设置, 详细解答下.
-2025-04-02
-
-js java go 等编程语言在 CI 阶段, 有哪些 优化性能和减少资源消耗 的方法, 有什么通用的工具可以使用吗?
-https://gemini.google.com/app/cc075eb2e9e4dff8
-2025-04-01
-
-前端组件库 monorepo 包含 50 个组件, 都位于一个 git 仓库里. 而传统的组件库 50 个组件分别位于 50 个 git 仓库里.
-使用 云服务器 对 monorepo 仓库一次性构建 50 个组件, 和对传统的 50 个 git 仓库的组件分别进行构建.
-能节省哪方面资源, 节省多少?
-https://chatgpt.com/share/67c6c45a-cc9c-8008-86c7-60b6ef688619
-https://grok.com/share/bGVnYWN5_a947bd4d-8829-4cbe-af01-0e9dbcef16c3
-https://gemini.google.com/app/95b09bd5710e389f
-2025-03-03
-
-
----
-
-CI/CD 平台: GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Azure DevOps, Bitbucket.
-这些是执行 CI 流程的核心平台，它们提供了缓存、并行、条件执行等基础能力:
-
-- CI 平台缓存: 可以将构建输出目录（如 dist, build, target）也纳入 CI 平台的缓存机制，但这需要更精细的缓存键策略，通常结合代码变更来判断.
-  - 依赖缓存 (Dependency Caching): 缓存策略可避免重复下载或编译未更改的依赖和工件，从而加快构建速度. 配置 CI 脚本，将下载的依赖目录（如 node_modules, ~/.m2/repository, ~/.gradle/caches, GOMODCACHE 或 GOPATH/pkg/mod）缓存起来，并在后续运行中恢复. 通常基于依赖锁文件(package-lock.json, pom.xml, build.gradle, go.mod, go.sum)的内容 当锁文件变化时 缓存才失效并重新下载.
-- 容器化工具 Docker 层缓存: 如果你使用 Docker 构建镜像，优化 Dockerfile 的指令顺序，将不经常变动的步骤（如下载依赖）放在前面，充分利用 Docker 的层缓存.
-- 多阶段构建 (Multi-stage Builds): 使用一个阶段安装依赖和编译代码，然后将最终产物复制到一个干净、轻量的基础镜像中，减小最终镜像体积和构建时间。
-- 条件化执行 (Conditional Execution): CI/CD 平台通常提供条件执行的语法（如 GitHub Actions 的 if 条件, GitLab CI 的 rules 或 only/except .
-- 并行执行 (Parallelization): 将可以独立运行的任务（如不同模块的编译、单元测试、集成测试、代码检查）分配到不同的执行单元（线程、进程或 CI runner）上同时运行. GitHub Actions (matrix strategy, jobs), GitLab CI, Jenkins 等都支持并行执行 Job 或 Stage.
-  - 构建工具支持: Maven (-T), Gradle (--parallel), golangci-lint, Jest (--maxWorkers) 等测试框架都支持并行。
-  - 测试分片 (Test Sharding): 将测试套件分割成多个部分，在不同的并行 Job 中运行。
-
-分布式构建/缓存系统(Build Caching):
-- 使用支持增量编译的构建工具，只重建受更改部分代码。这在编译型语言如 Java 和 Go 中尤为重要，工具如 Bazel 和 Gradle(--build-cache) Go 默认开启构建缓存(GOCACHE) 提供此功能。对于 JavaScript，工具如 Vite 或 Nx, Turbopack 也支持快速增量构建.
-JavaScript (Node.js):
-- 包管理器: 使用 npm ci 而不是 npm install，它更快、更可靠，基于 package-lock.json。对于 yarn，使用 yarn install --frozen-lockfile。考虑使用 pnpm，它通过硬链接和符号链接共享依赖，可以显著节省磁盘空间和安装时间。
-- 构建工具: 选择速度更快的构建工具，如 esbuild 或 Vite (底层使用 esbuild/Rollup)。优化 Webpack/Rollup 配置，启用持久化缓存。
-- 测试: 配置 Jest 等测试框架的缓存 (--cache)。根据需要调整并行工作进程数 (--maxWorkers)。
-- Linting/Formatting: 将 Linting (ESLint) 和 Formatting (Prettier) 步骤与测试并行执行。
-
----
-
-Dockerfile 示例
-```sh
-FROM harbor.smart.ddns.xx.xx/test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3
-CMD ["sh"]
-```
-
-没有写 CMD ["bash"]，所以没有前台进程. Docker Desktop GUI 默认不会附加 bash，所以容器运行后立刻退出。
-让容器执行一个长期运行的命令（比如 tail -f /dev/null），这样容器保持运行状态.
-
-Docker 客户端与 Docker 守护进程（Docker daemon）进行通信.
-
-docker stop 会向 PID 1 进程 发送 SIGTERM，等待 10 秒，若未退出则发送 SIGKILL。
-
-
-
-## 命令 shell python docker
+## 命令 sh python docker
 
 https://docs.python.org/3.13/index.html
 
@@ -1596,6 +1161,7 @@ pyenv local 3.10.12      # 设置当前目录使用版本
 pyenv shell 3.10.12      # 仅当前 shell 会话使用该版本
 ```
 
+
 --- docker
 
 ```sh
@@ -1615,7 +1181,12 @@ docker run -d --name node-build-dev \
   -w /workspace \
   harbor./test/group/rd-efficacy/node-build:node18.16_npm9.5_lerna8.0.2_python3 \
   tail -f /dev/null
+
+# Docker 客户端与 Docker 守护进程（Docker daemon）进行通信.
+docker stop # 会向 PID 1 进程 发送 SIGTERM，等待 10 秒，若未退出则发送 SIGKILL
 ```
+
+
 
 ------ shell
 
@@ -1624,7 +1195,7 @@ env / w / who / whoami / tty / last / mtr -r
 echo "system: $HOME $PATH $SHELL"
 printenv HOME  # 打印环境变量
 printenv | grep npm_config  # 查看所有 npm 设置的 env
-type/which npm  # fn_name  type -a node / pwd
+type/which/whereis npm  # fn_name  type -a node / pwd
 
 say hello
 open -a Activity\ Monitor # 打开活动监视器 或者 "Activity Monitor"
@@ -1666,17 +1237,21 @@ nohup bash -c 'your_command_here' > /dev/null 2>&1 &
 --- Process status (进程状态, 非线程thread)
 
 ```sh
+top #  man top
+top -l 1 -o cpu | head -n 20
+top -l 1 -stats pid,cpu | head -n 20
+
+lsof -p 94979
 lsof -i :8087   # 查找出占用了某个端口的程序和其对应的PID
 kill 3747  # 杀掉 进程id
 kill -9 *pid*  # 强制杀掉进程
 pkill -P $$  # 杀掉当前 shell 启动的所有子进程
 # 用 tmux 或 screen 可以让你在一个 shell 中开多个会话
 
-top #  man top
-top -l 1 -o cpu | head -n 20
-top -l 1 -stats pid,cpu | head -n 20
-
+ps     # 等价于 ps -p $$  # 只显示当前 shell 的进程
 ps -ax
+ps -ww -p 94979
+ps aux | grep python
 ps aux | grep xx.sh  # 列出正在运行的脚本进程
 ps aux | grep "xx" | grep -v grep  # 排除 grep 本身的进程
 ps -ef | grep adb  # 有时候 adb devices 没反应 需要杀掉进程重启
@@ -1789,6 +1364,17 @@ find . -name '*.DS_Store' -type f -delete   # 删除某目录及子目录下的 
 printf '\n%.0s' {1..10} >> $file
 ```
 
+命令行 输入多行代码 并创建 文件
+
+```sh
+nano my.py  # nano: command not found
+
+cat > my.py << 'EOF'
+str='123456789'
+print(str[2:5])
+print ("Hello, Python!")
+EOF
+```
 
 
 
@@ -1798,9 +1384,13 @@ printf '\n%.0s' {1..10} >> $file
 
 
 
-# 工程
 
 ## git
+
+
+How I Use Git Worktrees
+https://matklad.github.io/2024/07/25/git-worktrees.html
+2025-09-28
 
 master 分支有新的提交 删除了大量文件, feature 分支 rebase master 时, 这些在 master 上被删除的文件 也被删除了, 怎么能保留下来?
 https://gemini.google.com/app/ade0b31c686aa747
@@ -1948,9 +1538,10 @@ git 三板斧 (2018)
 - 二板合作斧 merge, rebase, stash, cherry-pick
 - 三板优雅斧 commit --amend, rebase -i
 
-https://github.com/paulirish/git-open
 https://gitlab.com/warmhug/test
 
+https://github.com/paulirish/git-open
+https://github.com/sinclairtarget/git-who
 
 
 
@@ -2603,18 +2194,22 @@ npm publish
 npm publish ./dir/subdir  # 必须是相对路径
 npm publish --dry-run
 npm publish --no-git-checks --tag beta
-npx -p npm@9.6.7 npm publish --dry-run
 
 # corepack (Node.js >=16.9 自带)
 corepack -h  # -v
 # 安装并启用指定版本  会把 全局默认 npm 版本 切换到 9.6.7
 corepack prepare npm@9.6.7 --activate
 
+# https://docs.npmjs.com/cli/v10/commands/npx
 npx mocha --version  # 在项目的 node_modules/.bin 目录中查找可执行文件
 npx http-server --ignore-existing # 忽略本地的同名模块
+# -p 会临时安装包到 缓存目录 ~/.npm/_npx 使用 npm config get cache 查看.
+npx -p typescript tsc --version
+npx --verbose -p typescript tsc --version
+npx -p npm@9.6.7 npm publish --dry-run
 # https://code.visualstudio.com/api/get-started/your-first-extension
 npx --package yo --package generator-code -- yo code
-npm_config_registry=https://registry.npmmirror.com/ npx <package-name>
+npm_config_registry=https://registry.npmmirror.com/ npx
 
 npm search @ant-design --searchlimit=100 --json  # 搜索组织下的包
 
@@ -2987,33 +2582,16 @@ yq e '.rules |= [ "'"$new_str"'" ] +.' $clash_file -i
 # .
 # 软件
 
-vscode 查看 pnpm node_modules 里的 符号链接 等内容 很不方便, 对其背后的实际文件 有什么定位和搜索的好办法吗?
-https://chatgpt.com/c/68af0425-82dc-8327-b2df-11c547f14b7a
-2025-08-27
+## 问
+
+markdown 文本变成了一行, 有 \n 等字符, 推荐一些在线工具美化或格式化
+2025-09-26
+
+https://frame.work/ro/en/laptop16?tab=whats-new
+2025-09 组装电脑
 
 macOS 系统的 storage 里 System Data 占用了 60G 多, 这个很不正常, 怎么处理?
 2025-08-10
-
-macOS 的 m 芯片, 有 Nvidia GPU 吗?
-M系列芯片采用的是苹果自行设计的基于ARM架构的处理器，并集成了苹果自己设计的GPU。
-对于需要GPU加速的应用，如机器学习模型训练，可以使用苹果提供的Metal性能着色器（MPS）框架来利用内置GPU的计算能力。此外，一些第三方软件，如PyTorch，也已经针对苹果的M系列芯片进行了优化.
-尽管M系列芯片的GPU性能非常强，但与高端独立NVIDIA或AMD GPU相比，在特定的专业应用场景下可能仍存在差距。
-https://www.tongyi.com/qianwen/?sessionId=3ba1fcbb1a764157a8ecb48f07ffaca9
-...
-mac 上的虚拟机 UTM  / VMware Fusion Player / Parallels Desktop 哪个比较好? 需要免费使用.
-https://chat.deepseek.com/a/chat/s/68b857de-7b1c-41a6-8013-490dbf25f899
-2025-08-09
-
-usb 充电线 输入为 5v1a 时, 末尾分叉为多个头 每个头的输出是多少?
-2025-08-08
-
-有两个表情图片 没有删除的地方, 但在 微信和 QQ 的表情选择里 都能看到. 是存放在哪里的? 怎么能删除掉?
-2025-06-13
-
-最新发布的 iPad OS 26 能用来写代码? 能安装 vscode terminal 等软件吗?
-2025-06-11
-
-2025-05-15 手机控制电脑ppt https://github.com/Rico00121/decktap
 
 网页版微信 https://wx.qq.com/ 能收到的表情包拖到电脑桌面保存.
 2025-05
@@ -3058,56 +2636,15 @@ clash 配置指定域名用指定 dns 解析
 https://chatgpt.com/share/671762b0-e55c-8008-bf27-b762cf930059
 2024-08
 
-[Win系统安装盘](https://zhuanlan.zhihu.com/p/273305963)、系统[下载地址](https://hellowindows.cn/)，电脑开机(按F12)设置U盘优先启动。
-2024-04
-
 2023-11 尝试 百度/腾讯/中国移动 网盘，广告多 文件格式支持少，最终使用 微软云盘。
-
-小米多看电纸书[一代](https://item.jd.com/100010633100.html)、安装app[方法](https://www.bilibili.com/video/av893445949/)
-iPhone 恢复出厂设置后，系统软件版本是 iOS 最新版 不是出厂时旧版本。 连接数据线恢复备份的文件后，各个第三方app仍然需要重新下载、如有卡死状态 用手机网络 先下载重要app 其他暂停.
-2022-09
 
 2022-05 惠普z27k显示器 typec 100w 输出功率 能给电脑充电
 
-2019 支持 Mac + Win 读写的U盘格式: exFAT FAT32 NTFS(软件 ntfstool / ParagonNTFS )
-
-
-
-
-## 常用
-
-https://time.is  https://datetime.app
-[Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
-- https://make-bookmarklets.com/
-- 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
-
-文字图
-https://asciiflow.com/
-https://ascii-tree-generator.com/
-
-markdown 表情 :+1: :smile: :smiley: :laughing:
-- [emojispark](https://emojispark.com/)
-- [emoji8](https://emoji8.com/zh-hans/)
-- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-艺术字
-- [asciiart](https://asciiart.website)
-- [figlet](http://www.figlet.org/examples.html)
-- [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
-
-占位图
-- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
-- [生成logo](https://www.logo.surf/)
-- [颜色选择](https://htmlcolorcodes.com/zh/) [flickr](https://flickr.com)
-
-pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
-语音转文字 https://www.zaixianai.cn/voiceToText
-拼图 https://img.ops-coffee.com/
-https://nextbconvert.com/en
-https://tinyurl.com/
-
 
 ## macOS
+
+https://github.com/PasteBar/PasteBarApp
+https://github.com/hkdobrev/cleanmac
 
 - `shortcuts run 获取时间` [Run shortcuts from the command line](https://support.apple.com/en-gb/guide/shortcuts-mac/apd455c82f02/mac)
 - https://apps.apple.com  https://music.apple.com
@@ -3151,6 +2688,16 @@ pmset noidle # 阻止电脑睡眠 同时按住 shift、control、电源键，关
 defaults write com.apple.screencapture type jpg
 defaults write com.apple.screencapture location ~/Downloads/
 defaults write com.apple.Music autoPlay -bool false
+# Enable tap-to-click for the trackpad and show the correct state in System Preferences
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults -currentHost write -g com.apple.mouse.tapBehavior -int 1
+# Show the path bar in the Finder
+defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
+# Disable the .DS file creation
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+# Apply the settings
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 ```
 
 --- cron 定时任务
@@ -3209,6 +2756,7 @@ https://snapdrop.net/ (速度快 最方便， mac 上 edge 浏览器不可用、
 https://easychuan.cn/  https://www.wenshushu.cn/  https://github.com/schollz/croc
 Mac smb 文件共享(速度约1M/s较慢): 在需要共享文件的 Mac 上打开「系统偏好设置-共享-文件共享」会显示类似 smb://192.168.1.9 的共享地址。在另一台 Mac 上打开访达，在菜单栏选择「前往-连接服务器」。在 iPhone 或 iPad 打开「文件」App，点击右上角选项图标，选择「连接服务器」。
 
+拼字幕 https://quotemaker.cc/zh/
 视频字幕类型有三种：内嵌字幕、外挂字幕、封装软字幕。可以视频转为音频、再提取字幕。
 - 字幕下载 https://subhd.tv  剪映 / 钉钉闪记 / B站必剪 / 迅捷文字转语音。
 - Subtitle Edit / Aegisub / Subtitle Workshop / HandBrake / FFmpeg
@@ -3224,6 +2772,11 @@ git设置
   co = checkout
   ci = commit
   br = branch
+  cp = cherry-pick
+  r = rebase -i origin/main
+  acp = !git add -A && git commit -m \"auto commit\" && git push
+[push]
+  autoSetupRemote = true
 [user]
   name = 然则
   email = hualei.hl@xx-inc.com
@@ -3252,7 +2805,6 @@ LaunchAgents
 ```sh
 launchctl load/unload ~/Library/LaunchAgents/com.hua.autorun.plist  # 加载卸载 plist 文件
 launchctl list | grep com.hua.autorun  # 验证是否运行
-launchctl setenv OLLAMA_HOST "0.0.0.0:11434"
 ```
 
 进程守护工具 supervisor
@@ -3285,17 +2837,33 @@ bridge100: ...
 ```
 
 
-基于 OnlyOffice 的本地网页文档编辑器 https://github.com/ranuts/document  https://www.onlyoffice.com/
-新闻订阅 https://github.com/sansan0/TrendRadar
-https://github.com/glidea/zenfeed
-
-
-
 ## chrome vscode zsh
+
+vscode 查看 pnpm node_modules 里的 符号链接 等内容 很不方便, 对其背后的实际文件 有什么定位和搜索的好办法吗?
+https://chatgpt.com/c/68af0425-82dc-8327-b2df-11c547f14b7a
+2025-08-27
+
+有什么 vscode 内置的 api 能临时禁用启用所有插件?
+workbench.extensions.action.disableAllInstalledExtensions
+workbench.extensions.action.enableAllInstalledExtensions
+2025-05
+
+有办法绕过 chrome extension manifest v3 禁止内联 script 的限制吗?
+https://chat.deepseek.com/a/chat/s/edb9092f-5c97-461c-a2e9-0d362a2c3180
+2025-04-01
 
 ------ chrome
 
+[Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
+- https://make-bookmarklets.com/
+- 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
+
 --- chrome extensions
+
+https://peekfoc.us/
+Mobile simulator - responsive testing tool
+Interactive Git Log
+uicloner
 
 ChatGPT 历史会话搜索 chrome 插件: 1Proompt / ChatGPT Conversation History Search / Superpower ChatGPT / Echoes / Searchable ChatGPT / GPT Search
 
@@ -3304,6 +2872,13 @@ Tab Position Options / 一键切换(Jomic) 搜索拐杖 下一页(空格键自�
 
 ------ vscode
 
+工作空间
+/Users/hua/Downloads
+/Users/hua/.aaid
+/Users/hua/.nvm/versions/node
+/tmp
+/Users/var/folders/xk/tpmztqjx0gldhvryd_mh60_80000gn/T
+
 - 按`cmd shift p` 输入
   - fold level 折叠各层缩进
   - code zoom reload(未知错误) diplay(修改语言).
@@ -3311,16 +2886,21 @@ Tab Position Options / 一键切换(Jomic) 搜索拐杖 下一页(空格键自�
 - 在查找(替换)框里按 ctrl + enter 支持多行，或者 复制多行文本 粘贴。
 - 查找中文，启用正则表达式 搜索 [\u4e00-\u9fa5]+
 - 使用 macOS native tabs https://stackoverflow.com/a/55470186/2190503
-
-https://github.com/jianbingfang/vscode-dup-checker
-
+- https://github.com/coder/code-server
 [tab group 建议](https://github.com/microsoft/vscode/issues/100335#issuecomment-964358943)
-扩展 [推荐](https://github.com/viatsko/awesome-vscode):
+
+--- 扩展
+
+[推荐](https://github.com/viatsko/awesome-vscode):
 - plantuml(设置指定server) / Auto Hide / Live Preview / Markdown All in One / markdown-pdf / marp / GitLens(simple logs) / pangu / Hungry Delete / Template String Converter
 - Code Runner / Terminal Keeper / Commands(usernamehw) / Todo Tree / Excalidraw / npm-dependency-links / Bookmarks / Diff Folders / Editor Group Minimizer Plus / favorites
 端口 [转发](https://code.visualstudio.com/docs/editor/port-forwarding) 实现 [内网穿透](https://51.ruyo.net/18562.html)，目前已被 [国内禁用](https://github.com/microsoft/vscode-remote-release/issues/9438)
 
-https://github.com/coder/code-server
+https://github.com/jackiotyu/git-worktree-manager
+https://github.com/jianbingfang/vscode-dup-checker
+
+
+--- 设置
 
 ```json
 // 快捷键
@@ -3351,6 +2931,16 @@ tasks `xxProj/.vscode/tasks.json`
 
 ------ zsh(rc)
 
+[Zsh 和 Bash 的不同](https://xshell.net/shell/bash_zsh.html)
+
+https://github.com/MichaelAquilina/zsh-you-should-use
+
+- zsh模版 https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
+- 参考 git 插件 https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
+- 覆盖内部命令 https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-internals
+  - 比如 lib/directories.zsh 里的 alias 1='cd -1' 不需要
+- 命令使用状态 `zsh_stats`
+
 生成 ssh key 推拉代码
 ```sh
 ssh-keygen -t ed25519 -C hualei.hl@xx-inc.com
@@ -3362,12 +2952,6 @@ Host github.com
 ```
 
 code ~/.zshrc
-
-- zsh模版 https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
-- 参考 git 插件 https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
-- 覆盖内部命令 https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-internals
-  - 比如 lib/directories.zsh 里的 alias 1='cd -1' 不需要
-- 命令使用状态 `zsh_stats`
 
 ```sh
 #export PS1="\u \w$"
@@ -3412,7 +2996,7 @@ alias cz='code ~/.zshrc'
 
 
 
-## clash Charles
+## clash Charles Apache
 
 
 ------ clash
@@ -3479,7 +3063,6 @@ networksetup -listallnetworkservices
 ```
 
 
-
 ------ Charles whistle
 > 2019 2024
 
@@ -3510,27 +3093,19 @@ Charles
    - （点击配置框的问号、发现是使用的 Perl-style regular expressions）
 
 
-
-
-
-## Apache / UTM虚拟机
-
-mac系统的 Apache 怎么配置 localhost 同时支持 https http
-https://chatgpt.com/share/674ab45e-27a8-8008-b1bb-04c8bf5e444e
-2024-08
+------ Apache
 
 出现 403 You dont have permission to access 错误， 修改 路径下 各级目录 权限 everyone 为 “只读”，再重启。
 默认设置，不能浏览目录、只能访问目录下的文件，比较安全。
+如果目录中存在 .htaccess 文件，检查其中是否有配置禁止访问。比如有 Deny from all
 
-生成自签名证书
 ```sh
+# 2024-08 mac系统的 Apache 怎么配置 localhost 同时支持 https http https://chatgpt.com/share/674ab45e-27a8-8008-b1bb-04c8bf5e444e
+# 生成自签名证书
 sudo mkdir /etc/apache2/ssl
 cd /etc/apache2/ssl
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
-```
 
-操作
-```sh
 httpd -v # 查看版本号
 sudo apachectl restart / start / stop   # 开关重启
 code /etc/apache2/httpd.conf  # 编辑 Apche 的配置文件
@@ -3586,13 +3161,59 @@ Listen 9999
 </VirtualHost>
 ```
 
-如果目录中存在 .htaccess 文件，检查其中是否有配置禁止访问。比如有 Deny from all
+
+
+
+## Ubuntu / UTM
+
+Red Hat / QEMU 和 Ubuntu 是什么关系?
+ QEMU 开源虚拟化引擎.
+ Ubuntu 系统默认安装并支持 KVM/QEMU 虚拟化。
+ Ubuntu 是 QEMU 的“下游使用者”，它利用 QEMU 的能力为用户提供虚拟化功能。
+2025-09-05
+
+mac 上的虚拟机 UTM  / VMware Fusion Player / Parallels Desktop 哪个比较好? 需要免费使用.
+https://chat.deepseek.com/a/chat/s/68b857de-7b1c-41a6-8013-490dbf25f899
+2025-08-09
+
+
+------
+
+```sh
+cat /etc/os-release  # 查看发行版
+lscpu | grep -i avx2
+free -h
+
+# 通过 apt 或 dpkg 列出所有软件包
+dpkg --get-selections | grep -v deinstall
+dpkg -l | grep 软件包名称
+apt list --installed
+
+# 安装 Python
+sudo apt install python3  # sudo apt install python3.11
+sudo apt install python3-pip
+pip3 --version
+# 可选
+sudo apt install python3-venv  # 安装 venv（用于创建虚拟环境）
+sudo apt install python3-dev  # 安装开发工具包
+```
+
+- Unix 遵循的原则是 KISS (Keep it simple, stupid) do one thing and do it well。
+- Linux 严格区分大小写。所有内容以文件形式保存，包括硬件。如：键盘 /dev/stdin 显示器 /dev/stdout
+- Linux 不靠扩展名区分文件类型，靠权限区分。（ .gz .tgz .sh 等文件扩展名只是为了方便管理员查看 ）
+  - bash 文件 想在 mac 上双击可执行(调用系统terminal)，需要去掉文件后缀名。
+- shell 是一个命令行解释器。shell 是壳，kernel 是内核。shell 把用户敲进去的命令、翻译为 linux 内核能识别的语言。
+  - sh: Bourne Shell 的缩写，可以说是目前所有 Shell 的祖先。 bash : Bourne Again Shell 的缩写，是 sh 的一个进阶版本。
+- vi编辑器使用 color-scheme `:colo desert` 或者 配置 `~/.vimrc` 为 `colo desert` + `syntax on`
+  - [vim 键盘图](https://zos.alipayobjects.com/rmsportal/MOPJrAnojdFvAToZkESi.gif)
+- 在 Windows 上 哪些流行的 terminal 能和 macOS Linux 的 terminal 兼容?
+  - Windows Terminal / WSL（Windows Subsystem for Linux）/ Git Bash
 
 
 ------ UTM 虚拟机
 > 2025-08
 
---- MacBook Pro 2018 (Intel + AMD GPU) x86_64
+MacBook Pro 2018 (Intel + AMD GPU) x86_64
 
 1. 在 [UTM](https://mac.getutm.app/) 安装 Linux 虚拟机
 > 参考 https://www.tongyi.com/qianwen/?sessionId=e4e3643aac5f497096256d70a4432775
@@ -3638,12 +3259,45 @@ export https_proxy=http://192.168.64.1:7890 http_proxy=http://192.168.64.1:7890 
 
 
 
+## mobile / win
+
+usb 充电线 输入为 5v1a 时, 末尾分叉为多个头 每个头的输出是多少?
+2025-08-08
+
+有两个表情图片 没有删除的地方, 但在 微信和 QQ 的表情选择里 都能看到. 是存放在哪里的? 怎么能删除掉?
+2025-06-13
+
+最新发布的 iPad OS 26 能用来写代码? 能安装 vscode terminal 等软件吗?
+2025-06-11
+
+2025-05-15 手机控制电脑ppt https://github.com/Rico00121/decktap
+
+[Win系统安装盘](https://zhuanlan.zhihu.com/p/273305963)、系统[下载地址](https://hellowindows.cn/)，电脑开机(按F12)设置U盘优先启动。
+2024-04
+
+小米多看电纸书[一代](https://item.jd.com/100010633100.html)、安装app[方法](https://www.bilibili.com/video/av893445949/)
+iPhone 恢复出厂设置后，系统软件版本是 iOS 最新版 不是出厂时旧版本。 连接数据线恢复备份的文件后，各个第三方app仍然需要重新下载、如有卡死状态 用手机网络 先下载重要app 其他暂停.
+2022-09
+
+2019 支持 Mac + Win 读写的U盘格式: exFAT FAT32 NTFS(软件 ntfstool / ParagonNTFS )
+
+------
+
+Android 软件: MX播放器(VLC不能播放加密文件) AirDroid 微动手势(允许后台弹出界面和显示悬浮窗), automate,, kwgt, popup widget, macrodroid, tasker(收费), easytouch, anywhere . 反编译apk: apktool/dex2jar/jd-gui/javadecompilers
+
+iOS 快捷指令
+- 同步: Apple ID -> iCloud -> 使用iCloud的APP -> 显示全部 找到 快捷指令 勾选同步。
+- 朗读的 声音大小和siri一样，不受设置里声音大小的控制，通过设置 Siri 的声音来控制。
 
 
 
-## .
+
+
+
 ## 自动化
 > 2021 ~ 2025
+
+https://github.com/modstart-lib/linkandroid
 
 ------ scrcpy adb
 
@@ -3827,14 +3481,68 @@ iOS内容限制：转到“设置” > “屏幕时间” > “内容和隐私�
 
 
 
-## mobile
 
 
-Android 软件: MX播放器(VLC不能播放加密文件) AirDroid 微动手势(允许后台弹出界面和显示悬浮窗), automate,, kwgt, popup widget, macrodroid, tasker(收费), easytouch, anywhere . 反编译apk: apktool/dex2jar/jd-gui/javadecompilers
 
-iOS 快捷指令
-- 同步: Apple ID -> iCloud -> 使用iCloud的APP -> 显示全部 找到 快捷指令 勾选同步。
-- 朗读的 声音大小和siri一样，不受设置里声音大小的控制，通过设置 Siri 的声音来控制。
+
+
+
+## .
+
+## 创作/素材
+
+
+想要在 DevOps无限环 这个图的各个环节, 补充一些 公司内部对应的工具. 有什么可编辑的图片工具? 还能支持多次修改编辑.
+  Figma / Canva / Excalidraw
+2025-09-30
+
+
+------
+
+https://time.is  https://datetime.app
+
+like jq for markdown https://github.com/yshavit/mdq
+
+文字图
+https://emojis.click/zh
+https://asciiflow.com/
+https://ascii-tree-generator.com/
+
+markdown 表情 :+1: :smile: :smiley: :laughing:
+- [emojispark](https://emojispark.com/)
+- [emoji8](https://emoji8.com/zh-hans/)
+- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+艺术字
+- [asciiart](https://asciiart.website)
+- [figlet](http://www.figlet.org/examples.html)
+- [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
+
+占位图
+- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
+- [生成logo](https://www.logo.surf/)
+- [颜色选择](https://htmlcolorcodes.com/zh/) [flickr](https://flickr.com)
+
+pdf转markdown https://github.com/MarkPDFdown/markpdfdown
+pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
+语音转文字 https://www.zaixianai.cn/voiceToText
+拼图 https://img.ops-coffee.com/
+https://nextbconvert.com/en
+https://tinyurl.com/
+
+https://path-motion.yysuni.com/canvas
+https://www.svgshow.cn/
+https://github.com/liujuntao123/new-svg-viewer
+
+https://clipso.agilestudio.cn/
+
+独立开发者工具 https://github.com/yaolifeng0629/Awesome-independent-tools
+新闻订阅 https://github.com/sansan0/TrendRadar
+https://github.com/glidea/zenfeed
+https://github.com/w4n9hu1/hot-hub-web
+白噪音 https://soundbox.fun/
+
+
 
 
 ## cdn

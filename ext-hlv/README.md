@@ -30,19 +30,6 @@ npm run pack
 - 在 Extension Development Host 窗口中，按下 Cmd+Opt+I 打开开发者工具，查看 console 输出。
 
 
-------
-
-有什么 vscode 内置的 api 能临时禁用启用所有插件?
-workbench.extensions.action.disableAllInstalledExtensions
-workbench.extensions.action.enableAllInstalledExtensions
-2025-05
-
-有办法绕过 chrome extension manifest v3 禁止内联 script 的限制吗?
-https://chat.deepseek.com/a/chat/s/edb9092f-5c97-461c-a2e9-0d362a2c3180
-2025-04-01
-
-
-
 # vscode
 > 2020 ~ 2025
 

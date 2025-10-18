@@ -77,7 +77,7 @@ export function activate(context: ExtensionContext) {
     const { totalCount, chineseCount } = countWords(activeDoc?.getText());
     const data = generateTable(['key', 'value'], [
       ['Count(Chinese)', chineseCount],
-      ['Count(Other)', totalCount - chineseCount],
+      ['Count(字母数-不含空格)', totalCount - chineseCount],
       ['Size', info.prettySize],
       ['Gzipped', info.gzipSize],
       ['Brotli', info.brotliSize],

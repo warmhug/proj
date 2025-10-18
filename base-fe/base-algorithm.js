@@ -1,6 +1,8 @@
 /*
 2018 2022 2024
 
+可视化排序算法 https://mszula.github.io/visual-sorting
+
 算法入门 https://leetcode.cn/study-plan/algorithms
 [LeetCode 刷题攻略](https://github.com/youngyangyang04/leetcode-master)
 js 算法 https://github.com/trekhleb/javascript-algorithms
@@ -349,7 +351,7 @@ console.log(arrayToTree(arr))
 
 
 // 广度优先和深度优先 Traversal（BFS vs. DFS）：http://kevhuang.com/tree-traversal/
-https://stackoverflow.com/a/33704700/2190503
+// https://stackoverflow.com/a/33704700/2190503
 // 库：http://aaronstacy.com/t-js/
 function unflatten(array, parent, tree) {
   tree = typeof tree !== 'undefined' ? tree : [];

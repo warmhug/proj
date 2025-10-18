@@ -4,6 +4,11 @@
 import os
 import sys
 import importlib
+from datetime import datetime
+
+now = datetime.now()
+formatted_time = now.strftime("%Y-%m-%d_%H-%M-%S")
+print(formatted_time)
 
 try:
     from importlib import metadata  # Python 3.8+

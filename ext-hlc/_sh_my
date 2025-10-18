@@ -26,10 +26,10 @@ hl_setAlias() {
   alias gba='git branch --all'
   # 删除本地除 当前和master 分支外的其他分支
   alias gbd='git branch | grep -v "master" | xargs git branch -D'
+  alias re='git clean -xdf && pnpm i'  # pnpm store prune
 
-  # pnpm store prune
-  alias re='git clean -xdf && pnpm i'
-  alias reb='git clean -xdf && pnpm i && npm run build'
+  alias tmp='node -e "console.log(require(\"os\").tmpdir())"'
+  alias omz-update='cd ~/.oh-my-zsh && git pull && cd - > /dev/null'
 }
 hl_setAlias
 

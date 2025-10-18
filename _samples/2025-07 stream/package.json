@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "axios": "^1.10.0",
+    "gaxios": "^6.1.1"
+  }
+}

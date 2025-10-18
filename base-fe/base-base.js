@@ -2,12 +2,19 @@
  易错
 */
 
-var res = '{"data": "{\\n  \"message\": \"This is a mock response from the local debugger.\"\\n }\\n}"}';
-var res = '{"message":"Thisisamockresponsefromthelocaldebugger.","request_received":{"method":"POST","url":"/v1/models","headers":{"host":"127.0.0.1:25521","connection":"keep-alive","content-type":"application/json","accept":"*/*","accept-language":"*","sec-fetch-mode":"cors","user-agent":"undici","accept-encoding":"gzip,deflate","Content-Length":"114"},"body":"{\\"model\\":\\"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\\",\\"messages\\":[{\\"role\\":\\"user\\",\\"content\\":\\"whoareyou?\\"}]}"}}'
-// json 中含有 子jsonString 和 \n
-console.log(JSON.parse(res));
 
+// jsonParse()
+function jsonParse() {
+  var res = '{"data": "{\\n  \"message\": \"This is a mock response from the local debugger.\"\\n }\\n}"}';
+  var res = '{"message":"Thisisamockresponsefromthelocaldebugger.","request_received":{"method":"POST","url":"/v1/models","headers":{"host":"127.0.0.1:25521","connection":"keep-alive","content-type":"application/json","accept":"*/*","accept-language":"*","sec-fetch-mode":"cors","user-agent":"undici","accept-encoding":"gzip,deflate","Content-Length":"114"},"body":"{\\"model\\":\\"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\\",\\"messages\\":[{\\"role\\":\\"user\\",\\"content\\":\\"whoareyou?\\"}]}"}}'
+  // json 中含有 子jsonString 和 \n
+  console.log(JSON.parse(res));
 
+  var jsonStr = "{\"id\":\"chatcmpl-843044eb0fa94783ad94572b1b457b7d\",\"object\":\"chat.completion\",\"created\":1758031882,\"model\":\"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"The current weather in San Francisco, CA is:\\n\\n- **Temperature:** 58 °F  \\n- **Condition:** Mostly cloudy with light winds  \\n- **Humidity:** 78%  \\n- **Wind:** 6 mph from the northwest  \\n\\nFeel free to ask if you’d like a forecast or details for another location!\",\"refusal\":null,\"annotations\":null,\"audio\":null,\"function_call\":null,\"tool_calls\":[],\"reasoning_content\":\"The user asks: \\\"What is the weather like in San Francisco?\\\" We need to fetch current weather. Use function get_weather with location \\\"San Francisco, CA\\\". Probably default unit? We can choose Celsius or Fahrenheit. Likely Fahrenheit for US. Use \\\"fahrenheit\\\". We'll call function.\\n{\\n  \\\"location\\\": \\\"San Francisco, CA\\\",\\n  \\\"unit\\\": \\\"fahrenheit\\\"\\n}\"},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null,\"token_ids\":null}],\"service_tier\":null,\"system_fingerprint\":null,\"usage\":{\"prompt_tokens\":152,\"total_tokens\":323,\"completion_tokens\":171,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"prompt_token_ids\":null,\"kv_transfer_params\":null}"
+  const outer = JSON.parse(jsonStr);
+  console.log('log outer: ', outer);
+  console.log('log message: ', outer.choices[0].message);
+}
 
 
 /*

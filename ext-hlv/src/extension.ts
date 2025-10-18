@@ -1,7 +1,6 @@
 import * as vscode from 'vscode';
 import type { ExtensionContext } from 'vscode';
 
-import { activate as outlineFocus } from "./outlineFocus";
 import { activate as outline } from "./outline";
 import { activate as terminal } from "./terminal";
 import { activate as consoleLog } from "./consoleLog";
@@ -26,7 +25,6 @@ export function activate(context: ExtensionContext) {
     vscode.commands.executeCommand('outline.focus');
   }));
 
-  outlineFocus(context);
   outline(context);
   terminal(context);
   consoleLog(context);

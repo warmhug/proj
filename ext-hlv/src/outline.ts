@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import { languages } from 'vscode';
 import type { ExtensionContext } from 'vscode';
 
+// 给 .txt 文件添加侧边栏大纲视图, 类似 markdown 文件的效果
+
 class MyConfigDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
   public provideDocumentSymbols(
     document: vscode.TextDocument,

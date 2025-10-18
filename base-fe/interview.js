@@ -1,4 +1,28 @@
 /*
+
+开放问题
+- 在项目中的角色？是否“独立”负责/0-1的项目、还是维护修改项目？
+- 遇到印象深刻的难题是什么？怎么解决的？（潜力） 开源作品或技术博客？ 最有成就感的技术产出？
+- 原工作是否有过因为他的存在而带来不一样的结果？以后三年职业计划？
+- 看哪些技术网站？国外网站？最近有学什么新技术（学习能力和专业热情）
+
+笔试套路：写出所有可能解法，也写出最经典解法。
+- Google笔试面试
+- 聊聊微软面试 https://mp.weixin.qq.com/s/-NESGyGBbF3WakPFieAT0w
+- https://github.com/hzfe/awesome-interview
+- https://github.com/yifeikong/reverse-interview-zh
+- https://github.com/lydiahallie/javascript-questions
+- https://h5bp.org/Front-end-Developer-Interview-Questions/translations/chinese/
+- https://github.com/MaximAbramchuck/awesome-interview-questions
+- 2020 https://github.com/CavsZhouyou/Front-End-Interview-Notebook
+- 2019
+- https://mp.weixin.qq.com/s/e-IC588SZPJK2QRBm3KuHA
+- https://segmentfault.com/a/1190000019496107
+- 2018
+- https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651011223&idx=2&sn=54acfe1d565f650c52fcea5481ad1195
+- https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers
+- 2017 https://github.com/jawil/blog/issues/22
+
 笔试题
 
 - 图文卡片，图片上 hover 显示半透明灰色背景、一个 button 在水平垂直居中位置。
