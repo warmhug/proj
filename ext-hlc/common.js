@@ -990,7 +990,7 @@ const hl_chromeUtils = {
       // 单向通信
       let response;
       try {
-        response = await chrome.runtime.sendNativeMessage('_sh_nm', {
+        response = await chrome.runtime.sendNativeMessage('a_sh_nm', {
           message,
           content,
         });
@@ -1000,7 +1000,7 @@ const hl_chromeUtils = {
         response = { code: '304', error: error.message };
       }
       return response;
-      connect('_sh_nm');
+      connect('a_sh_nm');
       port.postMessage({ message });
     }
     return sendMessage;

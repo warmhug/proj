@@ -104,15 +104,16 @@ dealMsg() {
   networksetup -setsocksfirewallproxystate Wi-Fi off
   elif [[ "$msg_command" == "whistle" ]]; then
   # sleep 5
-  log_command "w2 restart"
-  networksetup -setproxyautodiscovery Wi-Fi off
-  networksetup -setwebproxy Wi-Fi 127.0.0.1 8899
-  networksetup -setsecurewebproxy Wi-Fi 127.0.0.1 8899
-  networksetup -setsocksfirewallproxy Wi-Fi Empty
-  networksetup -setwebproxystate Wi-Fi on
-  networksetup -setsecurewebproxystate Wi-Fi on
-  networksetup -setsocksfirewallproxystate Wi-Fi off
-  networksetup -setproxybypassdomains Wi-Fi Empty
+  echo "no output"
+  # log_command "w2 restart"
+  # networksetup -setproxyautodiscovery Wi-Fi off
+  # networksetup -setwebproxy Wi-Fi 127.0.0.1 8899
+  # networksetup -setsecurewebproxy Wi-Fi 127.0.0.1 8899
+  # networksetup -setsocksfirewallproxy Wi-Fi Empty
+  # networksetup -setwebproxystate Wi-Fi on
+  # networksetup -setsecurewebproxystate Wi-Fi on
+  # networksetup -setsocksfirewallproxystate Wi-Fi off
+  # networksetup -setproxybypassdomains Wi-Fi Empty
   elif [[ "$msg_command" == "openMacConfig" ]]; then
   open "x-apple.systempreferences:com.apple.Network-Settings.extension?Proxies"
   elif [[ "$msg_command" == "nativeCmd" ]]; then

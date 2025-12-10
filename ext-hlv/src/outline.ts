@@ -19,7 +19,7 @@ class MyConfigDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
         if (line.text.startsWith('===')) {
           // 创建一个新的父 symbol
           parentSymbol = new vscode.DocumentSymbol(
-            line.text.replaceAll('=', '').trim(),
+            line.text.replaceAll('=', '').trim() || 'Unnamed',
             '',
             vscode.SymbolKind.Module,
             line.range,

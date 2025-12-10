@@ -3,6 +3,55 @@
 */
 
 
+const modules = {
+  lodash: () => import('lodash'),
+  rocketUi: () => import('dayjs'),
+}
+async function tryLoad(name) {
+  try {
+    if (!modules[name]) return null
+    return await modules[name]()
+  } catch {
+    return null
+  }
+}
+// 会报错?
+async function loadModule(modulePath) {
+  try {
+    const module = await import(modulePath);
+    console.log('loadModule', module, module.default);
+    return module.default || module;
+  } catch (error) {
+    console.log('load module error: ', error);
+  }
+}
+await loadModule('/modules/my-module.js')
+
+import(`@/components/test/${name}.vue`)
+.then((component) => {
+  // 成功导入组件后，将其赋值给 dynamicComponent 数据属性
+  this.dynamicComponent = component.default
+})
+.catch((error) => {
+  console.error(`无法加载组件: ${error}`)
+});
+
+async function loadModule() {
+  const module = await import(模块路径);
+  return module;
+}
+if (someCondition) {
+  const module = await loadModule();
+  const instance = new module.Class();
+}
+
+import("./data.json", { with: { type: "json" } });
+
+Promise.all(Array.from({ length: 10 })
+.map((_, index) => import(`/modules/module-${index}.js`)))
+.then((modules) => modules.forEach((module) => module.load()));
+
+
 // jsonParse()
 function jsonParse() {
   var res = '{"data": "{\\n  \"message\": \"This is a mock response from the local debugger.\"\\n }\\n}"}';
@@ -15,6 +64,52 @@ function jsonParse() {
   console.log('log outer: ', outer);
   console.log('log message: ', outer.choices[0].message);
 }
+
+
+/*
+  Error
+*/
+try {
+  throw new Error({ myErr: 'err' });
+} catch (err) {
+  console.log(err.name);    // 输出: "Error"
+  console.log(err.message); // 输出: "[object Object]" (无法解析出 myErr)
+}
+
+try {
+  // 直接抛出自定义对象
+  throw { myErr: 'err', code: 404 };
+  const customError = new Error("发生了一个自定义错误");
+  customError.myErr = 'err'; // 添加自定义属性
+  throw customError;
+} catch (err) {
+  // 此时捕获到的 'err' 就是你抛出的原始对象
+  console.log(err);             // 输出: { myErr: 'err', code: 404 }
+  console.log(err.myErr);       // 输出: "err"
+  console.log(err.code);        // 输出: 404
+}
+
+// Promise then() 的第二个参数 只能捕获其自身之前的 Promise 链中的错误（即原始 Promise 的拒绝）。无法捕获 then() 第一个参数（成功处理函数 onFulfilled）中抛出的错误或异常。
+// catch() 方法 可以捕获其自身之前整个 Promise 链中抛出的任何错误或异常。
+// 推荐使用 catch , 只在 特定场景使用 then 的第二个参数
+// 比如: 当需要针对特定步骤进行错误处理时
+fetch('/api/data')
+  .then(
+    response => response.json(),
+    error => {
+      // 只处理网络请求错误
+      console.log('网络请求失败:', error)
+      return getCachedData() // 返回备用数据
+    }
+  )
+  .then(data => {
+    // 处理数据，这里的错误会被后面的 catch 捕获
+    return processData(data)
+  })
+  .catch(error => {
+    // 处理其他所有错误
+    console.error('数据处理失败:', error)
+  })
 
 
 /*

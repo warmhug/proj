@@ -85,7 +85,7 @@
   }
 
   const proxyListPrefix = 'hl_ctrl_proxy';
-  const proxyList = ['whistle', 'company', 'no_proxy', 'clash'];
+  const proxyList = ['whistle', 'no_proxy', 'company', 'clash'];
 
   const activeSelect = async (ctrlEle, isInit = false, btnEle) => {
     const storage = await hl_utils.getStorage(null);
@@ -94,10 +94,9 @@
       hl_ctrl_proxy_whistle: () => {
         const wrapper = document.createElement('div');
         wrapper.appendChild(hl_utils.createDomByStr(`<span>
-  whistle系统级代理已启动 &nbsp;
-  <a href="http://127.0.0.1:8899" target="_blank">规则配置</a> &nbsp;
-  <a href="https://wproxy.org/whistle/install.html" target="_blank">文档</a>
-  &nbsp;
+  用法: w2 start/restart &nbsp;
+  使用 chrome omega 插件 配置 Server 127.0.0.1 Port: 8899 &nbsp;
+  <a href="http://127.0.0.1:8899" target="_blank">规则配置</a> (<a href="https://github.com/avwo/whistle" target="_blank">文档</a>)
 </span>`));
         return wrapper;
       },
@@ -245,14 +244,13 @@
     dealResponse(response);
   };
 
-
   // 不能用 ~ 表示用户
   const filePaths = [
     ['ss.yaml', '/Users/hua/.config/clash/ss.yaml'],
     // ['ss.yaml(clash-meta)', '/Users/hua/.config/clash.meta/ss.yaml'],
     ['.zshrc', '/Users/hua/.zshrc'],
     ['.zsh_history', '/Users/hua/.zsh_history'],
-    ['_sh_nm.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/_sh_nm.json'],
+    ['a_sh_nm.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/a_sh_nm.json'],
     ['.npmrc', '/Users/hua/.npmrc'],
     ['.gitconfig', '/Users/hua/.gitconfig'],
     ['.gitconfig-github', '/Users/hua/.gitconfig-github'],
@@ -260,7 +258,9 @@
     ['tmp(文件夹)', '/var/folders/xk/tpmztqjx0gldhvryd_mh60_80000gn/T/'],
   ];
   const nativeCmds = [
-    ['~/.nvm/versions/node', 'code --new-window /Users/hua/.nvm/versions/node'],
+    ['~/.config/clash', 'open /Users/hua/.config/clash'],
+    ['~/.nvm/versions/node', 'open /Users/hua/.nvm/versions/node'],
+    // ['~/.nvm/versions/node', 'code --new-window /Users/hua/.nvm/versions/node'],
   ];
 
   document.querySelector('#localFileLinks').innerHTML = `

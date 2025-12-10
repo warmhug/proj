@@ -1,6 +1,3 @@
-/**
- * node ./base-server.mjs
- */
 
 import http from 'node:http';
 

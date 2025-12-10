@@ -119,7 +119,7 @@ https://github.com/simov/native-messaging
 ```
 
 实际路径
-'/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/_sh_nm.json'
+'/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/a_sh_nm.json'
 
 安装脚本 install_host.sh
 

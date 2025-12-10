@@ -1,13 +1,14 @@
 var path = require("path");
-var debug = require("debug");
-var ini = require("ini");
-var packageJson = require("package-json");
-var escapeStringRegexp = require("escape-string-regexp");
-var psl = require("psl");
+
 var Arborist = require("@npmcli/arborist");
 var pnpmLockfile = require("@pnpm/lockfile-file");
 var pnpmLockUtils = require("@pnpm/lockfile-utils");
 var yarnLockfile = require("@yarnpkg/lockfile");
+var debug = require("debug");
+var ini = require("ini");
+var escapeStringRegexp = require("escape-string-regexp");
+var packageJson = require("package-json");
+var psl = require("psl");
 
 var log = debug('fix-lock');
 log('aa');

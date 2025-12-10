@@ -1,6 +1,16 @@
 /*
 BOM 的核心是 window, window 对象包含属性：document、location、navigator、screen、history、frames
 Dom 根节点包含子节点 forms、embeds、anchors、images、links
+
+
+drag-drop
+- drag 事件 不支持 ie8、Safari 5.1  ie<=9 只能对 a href="" 、img、文本 添加drag事件。 ie9上通过 selectstart hack方法对任何元素添加事件。 在ie<=8版本上，需要把dragenter/drageover/drop事件绑定到具体的元素上，而不能绑定到document做委托处理。
+- 使用 drag-drop API的优势（相对于用mousedown/mousemove）： 如果拖动元素所在的容器尺寸小，拖动过程产生滚动条、会自动触发滚动条移动。 不用再 clone 出一个要拖动的元素； 不用计算涉及到的元素的位置和尺寸。
+传统拖动做法
+- 在 touchstart / mousedown 中记录起始位置，并开始监听 touchmove touchend / mousemove mouseup
+- 在 touchmove mousemove 中计算当前位置和起始位置之间的 offset，并进行拖拽操作
+- 在 touchend mouseup 中取消监听 touchmove 和 touchstart，并进行释放操作
+
 */
 
 // 改变 url 而不刷新页面的方法：location.hash(hashchange 事件)，history api。

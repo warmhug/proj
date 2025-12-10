@@ -52,6 +52,15 @@ sh -c 'while true; do (ls -la); echo "- $(date +%H:%M:%S) -"; sleep 1; done'
 node -e "console.log(require('os').tmpdir())"
 node -e "import os from 'os'; console.log(os.homedir())" # node 老版本加 --input-type=module
 
+# 后台运行命令 & 和 nohup
+# 注意 & 会随着 terminal 的关闭 而自动停止运行
+# 在 bash 里用 & 启动的是 背景进程(子进程) 不是 背景线程
+/path/to/xx.sh >> /path/to/log.txt 2>&1 &
+ttyd -W -a zsh >> log.txt 2>&1 &
+# nohup 不会随着 terminal 的关闭而停止、会在 系统关闭 时停止运行
+nohup sleep 100 &
+echo $!  # 最后一个后台运行进程的 PID
+nohup bash -c 'your_command_here' > /dev/null 2>&1 &
 
 # 不同平台安装包 查看包管理器
 # Ubuntu/Debian `sudo apt-get install jq`
@@ -79,6 +88,7 @@ local escaped_blank_path=${blank_path////\\/}
 echo $escaped_blank_path
 data_str="master-"$(date +"%Y%m%d-%H%M%S")
 printf "这是要写入文件的内容\n"
+printf '\n%.0s' {1..10} >> $file
 
 # 设置默认值
 default_value="default"
@@ -191,3 +201,23 @@ case $1 in
   "sync_code") sync_code $2 ;;
   # "two") functionTwo ;;
 esac
+
+
+# 如果文件存在则追加内容，否则创建并写入内容
+# [ -f "$file" ] && echo "$content" >> "$file" || echo "$content" > "$file"
+
+# 在命令行 输入多行代码 并创建 文件
+nano my.py  # nano: command not found
+cat > my.py << 'EOF'
+str='123456789'
+print(str[2:5])
+print ("Hello, Python!")
+EOF
+
+
+# 在容器或脚本中 “hold 住” 进程
+sleep 365d  # 临时方案. 启动一个容器或服务后，用 sleep 防止主进程退出
+tail -f /dev/null  # 临时方案. 替代 sleep 方式
+# 生产环境 优雅退出 trap + while sleep 1
+trap cleanup SIGTERM SIGINT
+while true; do sleep 1; done

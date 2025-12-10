@@ -17,9 +17,28 @@ https://zhuanlan.zhihu.com/p/58428287
 https://segmentfault.com/a/1190000009478377
 promise-error-handling https://zh.javascript.info/promise-error-handling
 Lightweight promises https://github.com/stackp/promisejs
-
-Generators
 */
+
+function handle() {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve();
+    } else {
+      reject();
+    }
+  })
+}
+// 注意 return new Promise 的 resolve/reject 必须被调用, 否则 promise 一直卡着.
+await handle();
+
+function withTimeout(promise, ms) {
+  return Promise.race([
+    promise,
+    new Promise((resolve) =>
+      setTimeout(() => resolve('timeout'), ms)
+    ),
+  ]);
+}
 
 function timeout(ms) {
   // return new Promise(resolve => setTimeout(resolve, ms));

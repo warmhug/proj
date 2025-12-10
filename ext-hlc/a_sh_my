@@ -13,8 +13,6 @@ hl_setAlias() {
   alias sz='exec zsh'
   alias cz='code ~/.zshrc'
 
-  alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
-
   alias pi='pnpm i'
   alias gs='git status'
   alias gd='git diff'
@@ -26,8 +24,13 @@ hl_setAlias() {
   alias gba='git branch --all'
   # 删除本地除 当前和master 分支外的其他分支
   alias gbd='git branch | grep -v "master" | xargs git branch -D'
-  alias re='git clean -xdf && pnpm i'  # pnpm store prune
+  # pnpm store prune
+  alias re='git clean -xdf && pnpm i'
 
+  # alias aa='node --inspect-brk /Users/hua/inner/infra/ai/aaid-cli/dist/index.js'
+  alias aa='node /Users/hua/inner/infra/ai/aaid-cli/dist/index.js'
+
+  alias fco='find . -type f | wc -l'
   alias tmp='node -e "console.log(require(\"os\").tmpdir())"'
   alias omz-update='cd ~/.oh-my-zsh && git pull && cd - > /dev/null'
 }
@@ -153,3 +156,26 @@ scheduled_tasks() {
       ;;
   esac
 }
+
+# nohup echo "Hello World"
+# my_command='echo "Hello World" && sleep 30'
+# nohup bash -c "$my_command" > output.log
+# echo 'echo "Hello World" && sleep 30' > /tmp/my_script.sh
+# nohup /tmp/my_script.sh > output.log
+
+
+# pgrep -x 'ClashX'  # 获取应用的 pid
+# pgrep -f "ttyd zsh"  # -f 匹配完整的命令行
+# pgrep -f "ttyd -t disableLeaveAlert=true zsh"  # 参数解析后不一样 这里匹配不到
+# pgrep -f "ttyd zsh"> /dev/null  # 只返回输出码
+# pgrep -fx "ttyd -p 9999 -W -a zsh"
+# pgrep -u "$USER" -f "ttyd"
+# pgrep -u "$USER" -fx "ttyd -p 9999 -W -a zsh"
+
+
+# lsof "$z_log"
+# z_log 文件正被进程 ttyd 打开, 文件描述符 1w 和 2w 表明它正在被用作标准输出和标准错误的重定向.
+# 这时候 z_log 文件不能被其他进程 以 > 方式 写入内容, 改为 truncate -s 0 "$z_log" 处理.
+# COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+# ttyd    1245  hua    1w   REG    1,6  16 65909077 /Users/hua/xx/z_log
+# ttyd    1245  hua    2w   REG    1,6  16 65909077 /Users/hua/xx/z_log

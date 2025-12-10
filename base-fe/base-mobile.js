@@ -1,4 +1,47 @@
 /*
+
+------ 小程序/RN 2022
+
+小程序的渲染层和逻辑层分别由2个线程管理：渲染层的界面使用了 WebView 进行渲染；逻辑层采用 JsCore 线程运行JS脚本。一个小程序存在多个界面，所以渲染层存在多个 WebView 线程，这两个线程的通信会经由微信客户端做中转，逻辑层发送网络请求也经由 Native 转发。
+目的：安全可控，沙箱隔离，限制 DOM 和 BOM 能力。逻辑层和渲染层是独立的，二者不会互相阻塞，因此性能更优（小程序限制了 JS 操作 DOM 的能力，因此不用担心二者的不同步问题）在浏览器网页中，虽然 JS 执行和 UI 渲染也是处于两个线程，但是 JS 线程和 UI 线程是互斥的。
+
+小程序采用的是混合架构，可通过 html 里的 a 标签启动新的 webview 窗口、调用 popWindow 关闭窗口。基本页面元素是 html 渲染，弹窗类 loading toast ActionSheet 和 本地存储、系统或用户信息，使用客户端原生实现。
+
+而 react-native 只是采用 js/html 写法，背后完全是 客户端原生 渲染。
+微信小程序和 RN 的区别：双线程架构，渲染层一个主要是 webview 一个完全 native。
+微信的支付 小程序云等开放API、小程序安全管控。
+
+小程序框架
+- [taro](https://taro.aotu.io/)、[remax](https://github.com/remaxjs/remax)、[alibaba/rax](https://github.com/alibaba/rax)、[flutter](https://github.com/flutter/flutter)。
+- 编译时：约定了一套自己的 DSL ，在编译打包的过程中，利用 babel 工具通过 AST 进行转译，生成符合小程序规则的代码。
+  - 容易出现 BUG、开发限制过多、跟不上 react vue 更新。早期的 Taro 1/2 采用的这种方案。
+- 运行时：在小程序的逻辑层中运行起来 React 或 Vue 的运行时，然后通过适配层，实现自定义渲染器。
+  - 有天然优势，remax taro3 这样实现。
+
+React component -> React Reconciler(调和器、实现了 Diff/Fiber 算法) -> React Renderer(可以是dom也可以是js对象等)。
+跨端小程序框架 remax taro3 自己实现了一套可以在 React 中用的，且能渲染到小程序页面的自定义渲染器。
+在 react reconciler resetAfterCommit 函数中、调用小程序的 setData 方法。
+小程序环境中，不支持直接创建DOM、仅支持模板渲染，用递归模板的方式，用相对静态的小程序模板语言实现了动态的模板渲染的特性。
+
+小程序 API
+```js
+const { Ali } = window;
+const { isAlipay } = Ali;
+window.AlipayJSBridge;
+document.addEventListener('AlipayJSBridgeReady', callback, false);
+Ali.httpRequest({ url: '', method: 'POST' }, (result) => {});
+Ali.rpc({ operationType: '', requestData: [] }, (result) => {});
+Ali.call('imageViewer', { enablesavephoto: true, images: [], init: index });
+Ali.showLoading(param);
+Ali.showToast({ content: '' });
+Ali.showActionSheet({ content: '' }, (result) => {});
+AlipayJSBridge.call('popWindow');
+AlipayJSBridge.call('setTitle', { title: 'xxx' });
+AlipayJSBridge.call('getSystemInfo', { }, (result) => {});
+```
+*/
+
+/*
 2012-2013 scroll touch
 
 浏览器内核区别：手机系统官方浏览器、Chrome、UC、QQ、android控件里的webview、自己开发的APP里引用的 Webview，内核都不一样。

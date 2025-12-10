@@ -1,15 +1,4 @@
 #!/usr/bin/env node
-/**
- * check-registry.js
- *
- * Checks whether the dependency versions declared in the current package.json
- * exist on the specified npm registry. Exits with code 1 when something is
- * missing or unsatisfied so it can be wired into CI.
- *
- * Usage:
- *   node check-deps.js                # check against public npm registry
- *   node check-deps.js --registry https://registry.npmmirror.com/
- */
 
 const fs = require('fs').promises;
 const path = require('path');

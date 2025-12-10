@@ -12,7 +12,7 @@
   <script>
     console.log("Sandboxed script");
     const el = document.querySelector('#tuiEditor');
-    hl_utils.ajax('./sandbox-eng.md', {
+    hl_utils.ajax('./sandbox1.md', {
       success: (resp) => {
         const tuiInst = new toastui.Editor.factory({
           el, initialValue: resp, viewer: true,

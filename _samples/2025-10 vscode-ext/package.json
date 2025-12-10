@@ -1,0 +1,22 @@
+{
+  "name": "proxy-test",
+  "displayName": "Proxy Test",
+  "publisher": "test",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.75.0" },
+  "activationEvents": ["*"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "proxy-test.test",
+        "title": "Test VSCode Proxy"
+      }
+    ]
+  },
+  "categories": ["Other"],
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "https-proxy-agent": "^7.0.2"
+  }
+}
