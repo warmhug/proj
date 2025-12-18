@@ -3456,6 +3456,7 @@ pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
 拼图 https://img.ops-coffee.com/
 https://nextbconvert.com/en
 https://tinyurl.com/
+免费在线拼图网站 https://collaigo.com/zh
 
 https://path-motion.yysuni.com/canvas
 https://www.svgshow.cn/
