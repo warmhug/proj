@@ -117,6 +117,7 @@ eval "$command" >> "$file" 2>&1
 # 依赖特定 Shell 的转义序列  (Zsh 的一些插件和配置 可能会影响换行的显示效果)
 echo -e "\033[31mRed text\033[0m"
 echo -e "Line 1\nLine 2"
+echo -e '\x1b[4:3mCurly\x1b[0m \x1b[4:3m\x1b[58;5;1mRed\x1b[0m'
 
 # 使用 tput 命令，不依赖特定 Shell 的转义序列
 RED=$(tput setaf 1)

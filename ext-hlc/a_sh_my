@@ -8,6 +8,8 @@ hl_ext_note_bk="$hl_ext_backup/z_note_"
 hl_command_flag="$HOME/hl_command_flag"
 
 hl_setAlias() {
+  alias omz-update='cd ~/.oh-my-zsh && git pull && cd - > /dev/null'
+
   # 不建议用 source https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ
   # alias sz='source ~/.zshrc'
   alias sz='exec zsh'
@@ -28,11 +30,9 @@ hl_setAlias() {
   alias re='git clean -xdf && pnpm i'
 
   # alias aa='node --inspect-brk /Users/hua/inner/infra/ai/aaid-cli/dist/index.js'
-  alias aa='node /Users/hua/inner/infra/ai/aaid-cli/dist/index.js'
-
-  alias fco='find . -type f | wc -l'
-  alias tmp='node -e "console.log(require(\"os\").tmpdir())"'
-  alias omz-update='cd ~/.oh-my-zsh && git pull && cd - > /dev/null'
+  alias aa='node /Users/hua/inner/infra1/ai/aaid-cli/dist/index.js'
+  alias afc='find . -type f | wc -l'
+  alias atmp='node -e "console.log(require(\"os\").tmpdir())"'
 }
 hl_setAlias
 
@@ -86,7 +86,7 @@ hl_run_command "ttyd -W -a zsh" "ttyd"
 # run_command "ttyd -p 9999 -W -a zsh" "ttyd"
 # http://localhost:9999/?disableLeaveAlert=true&arg=/Users/hua/.zshrc&arg=top
 
-# 使用 crontab -e 编辑系统定时任务文件
+# 使用 crontab -l (查看) -e (编辑) 系统定时任务文件
 scheduled_tasks() {
   local bk_dist_file="${hl_ext_note_bk}$(date '+%Y-%m-%d_%H-%M-%S').md"
   local log_files=("$hl_ext_log")

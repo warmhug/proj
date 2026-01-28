@@ -1,0 +1,17 @@
+{
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./ssr": {
+      "types": "./es/ssr.d.ts",
+      "import": "./es/ssr.js",
+      "require": "./lib/ssr.js"
+    }
+  }
+}

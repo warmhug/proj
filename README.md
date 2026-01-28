@@ -6,38 +6,38 @@ permalink: /
 ---
 
 网易 [科技](https://tech.163.com/)  [财经](https://money.163.com/) [国际](https://news.163.com/world/)
-[pmbaobao](https://www.pmbaobao.com/) [人人PD](http://www.woshipm.com)
-[热榜](https://tophub.today/) [36kr热榜](https://www.36kr.com/hot-list/catalog)
+[热榜](https://tophub.today/) [人人PD](http://www.woshipm.com)
+[pmbaobao](https://www.pmbaobao.com/) [36kr热榜](https://www.36kr.com/hot-list/catalog)
 
 [oschina](https://www.oschina.net) [极客公园](https://www.geekpark.net)
 [少数派](https://sspai.com) [凤凰网](https://www.ifeng.com)
 [蜻蜓](https://www.qingting.fm/) [什么值得买](https://www.smzdm.com)
 [奇绩创坛](https://www.miracleplus.com)  [壹心理](https://www.xinli001.com)
 
-[时代周刊](https://time.com)  [纽约时报](https://nytimes.com)
-[华尔街日报](https://www.wsj.com)
+[时代周刊](https://time.com)  [纽约时报](https://nytimes.com) [华尔街日报](https://www.wsj.com)
 https://youtube.com  https://instagram.com  https://whatsapp.com
+https://www.nature.com  https://www.science.org   https://www.economist.com
+https://www.vogue.com  https://cnn.com
 
 [科技周刊](https://www.ruanyifeng.com/blog/2025/08/weekly-issue-363.html)
 hacknews中文 https://feedme.icu  https://github.com/ccbikai/hacker-news
 
 ---
 
+[设计工具排名](https://uxtools.co/tools/design)
 [Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey)
-[stateofjs](https://stateofjs.com/)、[stateofcss](https://stateofcss.com/)
+[stateofjs](https://stateofjs.com/) | [stateofcss](https://stateofcss.com/)
 [stateofreact](https://2023.stateofreact.com)
+https://endoflife.date/nodejs
 https://risingstars.js.org  https://www.react-next.com
 https://github.com/enaqx/awesome-react
 https://github.com/brillout/awesome-react-components
 
-[设计工具排名](https://uxtools.co/tools/design)
+[ua 检测](https://github.com/ded/bowser) / [特性检测](https://github.com/barisaydinoglu/Detectizr)
+https://prettier.io/playground/
 https://experiments.withgoogle.com/collection/chrome
 https://www.chromestatus.com/features
 https://webkit.org
-
-[ua 检测](https://github.com/ded/bowser) / [特性检测](https://github.com/barisaydinoglu/Detectizr)
-https://endoflife.date/nodejs
-https://prettier.io/playground/
 GitHub登录 https://codesandbox.io  https://codepen.io
 
 
@@ -84,6 +84,9 @@ gmtc https://gmtc.infoq.cn/2022/beijing/schedule
 [2021 大前端技术回顾及未来展望](https://mp.weixin.qq.com/s/HfZDrrqDNUVpnU-aegKxcg)
 
 [2018前端技术清单](https://juejin.im/post/5bdfb387e51d452c8e0aa902)
+
+
+
 
 
 ## 库/框架
@@ -221,11 +224,14 @@ https://astexplorer.net/
 
 ------ 构建工具 (2024)
 
+package.json 中的 browser 字段 主要由打包器识别 (如 Webpack Rollup Browserify), 不是 Node.js 原生识别. Jest 运行在 Node.js 环境中, 它解析模块时, 会使用 main（CJS）指向的模块, 不会关心 browser 字段.
+当 package.json 中同时存在 "exports" 和 "main" 字段时：优先使用 "exports" 字段。如果没有命中 "exports"，才会回退到 "main" 字段。
+
 - webpack babel
   - [Babel 插件原理](https://github.com/frontend9/fe9-library/issues/154)
+  - [webpack chain 用法](https://juejin.cn/post/6947851867422621733)
   - [webpack sideEffect](https://github.com/frontend9/fe9-library/issues/33)
   - Webpack 5 module federationtion 联邦模块 https://juejin.cn/post/6844904187147321352
-- https://github.com/umijs/father
 - [postcss](https://github.com/postcss/postcss): 处在 css 预处理器 less scss 等流程之后，解析 css 为 ast，并有 Autoprefixer 等知名插件。
 - [analyze-css](https://www.projectwallace.com/analyze-css)
 - lint & actions
@@ -259,38 +265,37 @@ https://astexplorer.net/
   - [解读](https://github.com/frontend9/fe9-library/issues/32)
 
 
-package.json 中的 browser 字段 主要由打包器识别 (如 Webpack Rollup Browserify), 不是 Node.js 原生识别. Jest 运行在 Node.js 环境中, 它解析模块时, 会使用 main（CJS）指向的模块, 不会关心 browser 字段.
-当 package.json 中同时存在 "exports" 和 "main" 字段时：优先使用 "exports" 字段。如果没有命中 "exports"，才会回退到 "main" 字段。
-
-[father](https://github.com/umijs/father) 和 dumi
-- father 4 Bundle 模式使用 Webpack 作为构建核心，Bundless 模式支持 esbuild、Babel 及 SWC 三种构建核心。
-- father 4 打包成 umd 产物时，lessLoader 设置 `math: 'always'` 配置项 https://github.com/umijs/father/issues/514#issuecomment-2222842879
-  - [webpack chain 用法](https://juejin.cn/post/6947851867422621733)
+- [umijs/father](https://github.com/umijs/father)
+  - father 4 Bundle 模式使用 Webpack 作为构建核心，Bundless 模式支持 esbuild、Babel 及 SWC 三种构建核心。
+  - father 4 打包成 umd 产物时，lessLoader 设置 `math: 'always'` 配置项 https://github.com/umijs/father/issues/514#issuecomment-2222842879
 - [father 2.x](https://github.com/umijs/father/tree/v2.9.0) 基于 [rollupjs](https://rollupjs.org/) 构建，采用 babel插件 编译 js/ts、采用 [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss) 编译 less/css (不支持less配置项)。利用 [docz](https://www.docz.site/) 生成网站。
 - dumi 设置非根目录 [publicPath](https://github.com/umijs/dumi/issues/849)
+[father](https://github.com/umijs/father) 和 dumi
 
-[rollup，vite以及webpack比较与介绍](https://juejin.cn/post/7097493230572273700)
-- rollup 与 webpack 都是基于JavaScript依赖系统的一个打包构建工具，他们的共同点很多。 Rollup 默认打包为 ES6 格式、依靠插件生成 CommonJS 和 AMD 代码，静态分析代码中的 import 并排除任何未实际使用的代码。 Rollup 构建速度明显快于 webpack，生成的代码量很小。
-- 不过在应用开发层面讲，如果开发一个Web应用webpack要比rollup有更大的优势，因为其天然继承了devServer以及hmr，这使得开发者可以快速的对应用进行调试开发。 Rollup 更加适合插件开发，而webpack更加适合应用开发。
-- vite 号称是下一代的打包构建工具，主要体现在他从开发环境到生产环境的构建速度都能比webpack提升很多倍，原因就在于基于 rollup 和 esbuild 两个基础构建工具上。利用浏览器对ESM模块的支持，通过babel解决兼容性。将应用中的模块区分为 依赖 和 源码 两类，Vite使用esbuild预构建依赖、构建速度快 10-100 倍。在浏览器请求源码时、根据 router 按需以 原生 ESM方式提供 源码。利用 HTTP 头来加速整个页面的重新加载，源码模块的请求会根据 304 Not Modified 进行协商缓存，而依赖模块请求则会通过 Cache-Control: max-age=31536000,immutable 进行强缓存，因此一旦被缓存它们将不需要再次请求。
-- vite 在生产环境打包也使用的 rollup，在预购建依赖的时候使用 esbuild。
+- Rollup 默认打包为 ES6 格式、依靠插件生成 CommonJS 和 AMD 代码，静态分析代码中的 import 并排除任何未实际使用的代码。 Rollup 构建速度明显快于 webpack，生成的代码量很小。
+- 如果开发一个Web应用 webpack 因为其天然继承了devServer以及hmr，这使得开发者可以快速的对应用进行调试开发。 Rollup 更加适合插件开发，而webpack更加适合应用开发。
+- vite 构建速度比 webpack 提升很多倍，原因就在于基于 rollup 和 esbuild 两个基础构建工具上。利用浏览器对ESM模块的支持，通过babel解决兼容性。
+  - 将应用中的模块区分为 依赖 和 源码 两类，Vite使用esbuild预构建依赖。
+  - 在浏览器请求源码时、根据 router 按需以 原生 ESM方式提供 源码。源码模块的请求会根据 304 Not Modified 进行协商缓存，而依赖模块请求则会通过 Cache-Control 进行强缓存，因此一旦被缓存它们将不需要再次请求。
+  - vite 在生产环境打包也使用的 rollup，在预购建依赖的时候使用 esbuild。
 - esbuild 使用 go 编写，发挥多线程多核优势，不使用 AST。所以一些通过 AST 处理代码的 babel插件没有很好的方法过渡到 esbuild 中。
-
-概述
+[rollup，vite以及webpack比较与介绍](https://juejin.cn/post/7097493230572273700)
 
 - 转译器: babel, tsc, [esbuild](https://esbuild.github.io/) (go语言 不使用 ast 兼容性差些), swc (rust 兼容 babel 插件)
-- 打包器: webpack(应用打包) parcel (零配置) rollup (组件打包) [vite](https://vite.dev/)( bundleless) [snowpack](https://www.snowpack.dev/) (bundleless)
-
-[umijs/father](https://github.com/umijs/father) Bundle 模式使用 Webpack 作为构建核心，Bundless 模式支持 esbuild、Babel 及 SWC 三种构建核心。
-
 - 转译器: 将一门高级语音转译为另一种高级语言，如 ts 转译为 js、es6 转译为 es5 等等。 用js/ts实现的 babel、tsc 其他语言实现的 esbuild（go）、swc（rust）。
   - [esbuild](https://esbuild.github.io/) 不提供 AST 操作能力，一些需要操作 AST 的 babel 插件无法与之兼容。有两大功能，分别是 bundler 与 minifier，其中 bundler 用于代码编译，类似 babel-loader、ts-loader；minifier 用于代码压缩，类似 terser。
   - SWC 设计为与 babel 插件体系相兼容，因此可以在许多现有的 babel 配置下无缝替换，提升构建速度。
+
+- 打包器: webpack(应用打包) parcel (零配置) rollup (组件打包) [vite](https://vite.dev/)( bundleless) [snowpack](https://www.snowpack.dev/) (bundleless)
 - 打包器: 将项目中的各种文件如 png、sass、json 等等打包成想要的结果。
   - 一类是通过监听源代码变化然后重新构建项目将打包后的代码推送到浏览器的传统模式 如 Webpack、 rollup、 [parcel](https://parceljs.org/) 。
   - 另一类是通过浏览器的原生 module 来实现动态打包的 bundleless 模式 如 [vite](https://vite.dev/) 、 [snowpack](https://www.snowpack.dev/) 他们都依赖 esbuild 。
   - Bundle vs Bundleless（代表就是webpack VS vite）。 webpack 等工具会把代码打包成 Bundle 文件，而 vite 则是依赖原生的 ESM 来实现，虽然在生产环境仍然要打包。 在生产环境中发布未打包的 ESM 仍然效率低下（即使使用 HTTP/2）。为了在生产环境中获得最佳的加载性能，最好还是将代码进行 tree-shaking、懒加载和 chunk 分割（以获得更好的缓存）。
-- gulp 强调的是前端开发的工作流程，通过配置一系列的task，定义执行顺序，来让gulp执行。 webpack 侧重模块打包，我们可以把开发中的所有资源（图片、js文件、css文件等）都看成模块，通过loader（加载器）和plugins（插件）对资源进行处理，打包成符合生产环境部署的前端资源。 对于 gulp 来说模块化不是他强调的东西，而 webpack 更强调模块化开发，而文件压缩合并、预处理等功能，不过是他附带的功能。
+
+- gulp 强调的是前端开发的工作流程，通过配置一系列的task，定义执行顺序，来让gulp执行。对于 gulp 来说模块化不是他强调的东西，而 webpack 更强调模块化开发，而文件压缩合并、预处理等功能，不过是他附带的功能。
+- webpack 侧重模块打包，我们可以把开发中的所有资源（图片、js文件、css文件等）都看成模块，通过loader（加载器）和plugins（插件）对资源进行处理，打包成符合生产环境部署的前端资源。
+
+
 
 
 ------ 框架 脚手架
@@ -314,6 +319,8 @@ https://github.com/mcuking/blog/issues/88
 - API 管理平台 生成工具, 提高前后端联调效率. [google 的 API 设计指南](https://google.aip.dev/general) RESTful GraphQL.
 - API 数据mock/前后端: https://github.com/usebruno/bruno [postman](https://www.getpostman.com/) [paw](https://paw.cloud/) [hoppscotch](https://hoppscotch.io/)  [mockjs](https://github.com/nuysoft/Mock)  [swagger](https://swagger.io/) / [json-server](https://github.com/typicode/json-server)  [miragejs](https://miragejs.com/).
 - BFF: 多端适配/聚合裁剪数据，额外的部署资源及运维成本，集合 GraphQL https://insights.thoughtworks.cn/use-graphql-build-bff-in-microservices
+- umi-ui https://umijs.org/guide/umi-ui.html / https://angularconsole.com
+
 
 
 
@@ -533,331 +540,81 @@ https://www.typescriptlang.org/tsconfig/  tsconfig.json 配置
 
 
 
-## 搭建 文档/图
 
 
------- 搭建
-
-[去哪儿网前端代码自动生成技术实践](https://mp.weixin.qq.com/s/Jhs2dAvFHbaaP1OKjB0c6w)
-https://docmost.com/
-
-[阿里低代码引擎LowCodeEngine正式开源](https://mp.weixin.qq.com/s/rQ-X9OBFRvhI16KrWwIT6w)
-[官网](https://lowcode-engine.cn/)、[github](https://github.com/alibaba/lowcode-engine)
-
-https://www.wix.com/
-https://soloist.ai/
-
-[无代码nocobase](https://cn.nocobase.com/) [博客](https://blog-cn.nocobase.com/posts/nocobase-opensource-income-3years/)
-
-[网易云音乐低代码体系建设思考与实践](https://mp.weixin.qq.com/s/9yo-Au3wwsWErBJfFjhxUg)
-
-[从实现原理看LowCode](https://zhuanlan.zhihu.com/p/452251297)
-
-https://github.com/imcuttle/mometa
-[百度amis](https://baidu.github.io/amis/)
-https://aisuda.bce.baidu.com/amis
-
-AECP 开发平台架构 https://img.alicdn.com/imgextra/i2/O1CN01VFIoNq1E0PCIklFol_!!6000000000289-2-tps-2482-1410.png
-
-[2020/01/13/the-no-code-delusion](https://www.alexhudson.com/2020/01/13/the-no-code-delusion/)、[无代码编程介绍](https://mp.weixin.qq.com/s/eKvSxOvSyEZEr3BLloCXdw)
-[antd-lowcode](http://g.alicdn.com/code/npm/@ali/antd-lowcode/0.5.1/example/index.html)
-
-Markdown + 卡片 [可视化搭建](https://zhuanlan.zhihu.com/p/164558106)、
-宜搭、[云凤蝶](https://www.yunfengdie.com/home)、[阿里云外网建站](https://ac.aliyun.com/jianzhan)。微软 Power [Platform](https://yuque.antfin-inc.com/chenyu/articles/skei6i)。AWS [honeycode](https://www.honeycode.aws/)、[mendix](https://www.mendix.com/)。
-
-[SaaS行业导航](http://www.allsaas.cn/)、SaaS 平台：[氚云](https://h3yun.com/index.php?g=Chuanyun&m=Scene&a=index)、[搭搭云](https://www.dadayun.cn/)、[明道云](https://blog.mingdao.com/13061.html)、[appsheet](https://www.appsheet.com/)、[fibery](https://fibery.io)、[openchakra](https://openchakra.app/)、[tumult](https://tumult.com/)(YC投资)
-
-[grapesjs](https://grapesjs.com/)、[noflojs](https://noflojs.org/)、[pagedraw](https://pagedraw.io/)、Google Web Designer (类似 Dreamweaver) 2013 发布 2017 停止更新。
-
-[What's Salesforce?](https://tryretool.com/blog/salesforce-for-engineers/) 、Salesforce [Lightning](https://www.salesforce.com/cn/campaign/lightning)
-
-云上[编排](https://blog.csdn.net/devcloud/article/details/93175186)([cloudcraft](https://app.cloudcraft.co/)/阿里[ros](https://cn.aliyun.com/product/ros)/华为云[aos](https://www.jianshu.com/p/2301a1729fcc)/[Terraform](https://blog.csdn.net/yejingtao703/article/details/80574363)/[PAD图](https://baike.baidu.com/item/PAD%E5%9B%BE))、[图编排(](https://www.atatech.org/articles/170866)[相关](https://www.atatech.org/articles/174875/))
-
-GUI 研发：[umi-ui](https://umijs.org/guide/umi-ui.html)、[angular-console](https://angularconsole.com/)
-
-表单: [formily](https://github.com/alibaba/formily)、[build forms from JSON Schema](https://github.com/mozilla-services/react-jsonschema-form)、[react-final-form](https://github.com/final-form/react-final-form)、[AForm模型驱动生成表单](http://xiehuiqi220.github.io/AForm/doc/book/index.html)。
+## 文档 / 图
 
 
------- 文档 / 图
-
-https://github.com/GraphiteEditor/Graphite  https://editor.graphite.rs/
-rust 图片编辑器
-
-基于 OnlyOffice 的本地网页文档编辑器 https://github.com/ranuts/document  https://www.onlyoffice.com/
+Zeplin 设计交付与开发协作平台
+即时设计 https://js.design/
+设计稿转 vue 代码 https://code.fun/
+腾讯 codesign https://codesign.qq.com/
+https://www.antforfigma.com
+2025-12
 
 https://github.com/plait-board/drawnix
 https://github.com/pages-cms/pages-cms
-https://github.com/warmhug/demo/blob/main/.pages.yml
 
-https://liveblocks.io/blog/which-rich-text-editor-framework-should-you-choose-in-2025
+rust 图片编辑器 https://editor.graphite.rs
+2024
 
-https://github.com/yshavit/mdq
-2024 https://affine.pro/ (字节刘义)
+Notion 编辑器原理 https://zhuanlan.zhihu.com/p/359122473
+腾讯在线 Excel 技术 https://mp.weixin.qq.com/s/f1vwzuPryc8ag6nd5Ngr5A
+有道云笔记富文本编辑器技术演进 https://mp.weixin.qq.com/s/9gDI1r9aAu6dHJhXg34eIg
+语雀后端技术 https://mp.weixin.qq.com/s/VM61gkZuYYqE4pVhpba3nQ
+飞书在线文档协同 https://mp.weixin.qq.com/s?__biz=MzkzNTIwNTAwOA==&mid=2247496795&idx=1&sn=5edf65ebf8609ada7981a9a804b072d3
 
-2020-11 孟方(游圣) [aliyun/cadt](https://www.aliyun.com/product/developerservices/cadt)
+实时协作技术
+https://www.tiny.cloud/blog/real-time-collaboration-ot-vs-crdt
+https://blog.kevinjahns.de/are-crdts-suitable-for-shared-editing
+xi-editor-CRDTs https://xi-editor.io/docs/rope_science_08.html
+https://github.com/automerge/automerge
+https://ckeditor.com/collaborative-editing
 
-Roam Research [介绍](https://www.zhihu.com/question/384453977)、[介绍1](https://baijiahao.baidu.com/s?id=1669749949965240303)、[foam](https://foambubble.github.io/foam/)
+简历生成 https://github.com/visiky/resume
+阿里云office文件嵌入服务 https://help.aliyun.com/document_detail/63273.html
 
-https://github.com/thinkerchan/notion2md
-​[Notion 编辑器原理](https://zhuanlan.zhihu.com/p/359122473)、[腾讯在线 Excel 技术](https://mp.weixin.qq.com/s/f1vwzuPryc8ag6nd5Ngr5A)
-[语雀 实时保存 方案](https://klab.yuque.com/docs/share/0e3ee249-d977-492b-82f2-6b44d26bd4af) (平侠/遇春 2021-01)、[语雀后端技术](https://mp.weixin.qq.com/s/VM61gkZuYYqE4pVhpba3nQ)、[隆昊《富文本编辑器的技术演进》](https://myslide.cn/slides/21863)、[有道云笔记富文本编辑器技术演进](https://mp.weixin.qq.com/s/9gDI1r9aAu6dHJhXg34eIg)。
+https://gsuite.google.com   https://docs.google.com
+腾讯文档 https://docs.qq.com
+字节 https://www.larksuite.com
+https://www.onlyoffice.com (基于 OnlyOffice 的本地网页文档编辑器 https://github.com/ranuts/document)
 
-[飞书在线文档协同](https://mp.weixin.qq.com/s?__biz=MzkzNTIwNTAwOA==&mid=2247496795&idx=1&sn=5edf65ebf8609ada7981a9a804b072d3)、
-实时协作技术 [ot-vs-crdt](https://www.tiny.cloud/blog/real-time-collaboration-ot-vs-crdt/) / [xi-editor-CRDTs](https://xi-editor.io/docs/rope_science_08.html) /
-[are-crdts-suitable](https://blog.kevinjahns.de/are-crdts-suitable-for-shared-editing/)、
-[vs code 多人协作](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/connectivity)、
-[CKEditor 多人协作](https://ckeditor.com/collaborative-editing/)、
-[automerge](https://github.com/automerge/automerge)、
-[crdt](https://wiki.nikitavoloboev.xyz/distributed-systems/crdt)。
+https://airtable.com
+https://github.com/handsontable/handsontable
 
-[文档协同的三元结构-浩初](https://www.yuque.com/docs/share/92faca9c-2162-4fe2-974d-193164650b11)、[resume生成](https://github.com/visiky/resume)
-
-阿里云[媒体管理](https://help.aliyun.com/document_detail/63273.html)、
-[微软](https://support.microsoft.com/en-us/office/embed-a-presentation-in-a-web-page-or-blog-19668a1d-2299-4af3-91e1-ae57af723a60)、
-[Google/微软](https://gist.github.com/tzmartin/1cf85dc3d975f94cfddc04bc0dd399be)、
-Google [示例](https://docs.google.com/viewer?embedded=true&url=http%3A%2F%2Fhomepages.inf.ed.ac.uk%2Fneilb%2FTestWordDoc.doc)、
-转换 [sheetson](https://sheetson.com/)
-
-生成/查看 PPT:
-[PptxGenJS](https://github.com/gitbrent/PptxGenJS)、
-[apache_poi_ppt](https://www.w3cschool.cn/apache_poi_ppt/apache_poi_ppt_presentation.html)(java)、
-[nodeppt](https://github.com/ksky521/nodeppt)。
-[ViewerJS](https://github.com/webodf/ViewerJS)、
-[office sdk](https://www.pdftron.com/office-sdk/office-document-viewer/)。
-
-微软: [office](https://products.office.com/zh-cn/home) ([task](https://techcommunity.microsoft.com/t5/microsoft-365-blog/connecting-tasks-experiences-across-microsoft-365/ba-p/1522069))、[teams](https://teams.microsoft.com/)
-
-Google: [gsuite](https://gsuite.google.com/) ([google-forms](https://docs.google.com/forms/u/0/)/[教程](https://youtu.be/RoA65-vLV_0)) [alerts](https://www.google.com/alerts) [classroom](https://classroom.google.com/h)
-
-[notion](https://www.notion.so/)、[craft.do](https://www.craft.do/)、[airtable](https://airtable.com/)、[quip](https://quip.com/about/product)、[coda.io](https://coda.io/t/Welcome-to-Coda_tvbBdpE72Lq#)、slack。 [wolai](https://www.wolai.com/) ([介绍](https://www.zhihu.com/question/407132273/answer/1352638849))。 [mathigon](https://mathigon.org/)(互动教程)。
-
-腾讯文档 [docs.qq.com](https://docs.qq.com/desktop/)、
-头条 [larksuite](https://www.larksuite.com/) ([lark 出海](https://zhuanlan.zhihu.com/p/58585005))、
-[teambition](https://www.teambition.com/)、[wps](https://www.wps.cn/) (稻壳模板[docer](http://www.docer.com/))、
-[xiezuocat](https://xiezuocat.com/#/)(AI纠错)、[sheetui](https://sheetui.com/)(表格转网页)、[Luckysheet](https://github.com/mengshukeji/Luckysheet)、[handsontable](https://handsontable.com/)、[prezi](https://prezi.com/dashboard/next/#/presentations)、[milanote](https://app.milanote.com/1KeUXu1ElqNVrw/home)、
-
-产品设计工具:
-白板([mural](https://mural.co/)、[miro](https://miro.com/))、
-原型([xiaopiu](https://www.xiaopiu.com)、[xiaopiu/prd](https://www.xiaopiu.com/prd)、[justinmind](https://www.justinmind.com/))、[知乎](https://www.zhihu.com/question/23004570)([invision](https://www.invisionapp.com/)、[modao](https://modao.cc/)、
-[会议桌](https://www.huiyizhuo.com/))、[流程图和图表](https://zhuanlan.zhihu.com/p/111990866)、在线[培训工具](https://segmentfault.com/a/1190000021793283)。
-
-其他: [mubu](https://mubu.com/)、[slides.com](https://slides.com/)、[ppt.baomitu](https://ppt.baomitu.com/)、[zoho](https://www.zoho.com/)、[visme](https://www.visme.co/templates/)、[deckdeckgo](https://deckdeckgo.com/)、[witeboard](https://witeboard.com/)、[wireflow](https://wireflow.co/)、[presenta](https://play.presenta.cc/#s0)。
-[batnoter](https://github.com/batnoter/batnoter)
+笔记:
+https://www.notion.com
+https://coda.io
 https://evernote.com
+https://affine.pro  (2024字节刘义)
+https://roamresearch.com
+https://www.craft.do
+https://imubu.com
+https://xiezuocat.com
+https://github.com/batnoter/batnoter
+https://github.com/foambubble/foam
 
-
---- 画图 (web/客户端)
-
-如何画好一张架构图？ atatech/articles/173778
-流程图  https://baike.baidu.com/item/%E6%B5%81%E7%A8%8B%E5%9B%BE
-八种常见的业务设计和架构模型 https://www.sohu.com/a/384776040_246648
-B端产品设计3大流程图 http://www.woshipm.com/pd/3873765.html
-海兔设计系统 DSM yuque/afx-es/data-ai/weekly-2020-05-16
-软件设计/业务设计/流程图/架构图/UX设计/BPMN/脑图
-https://online.visual-paradigm.com/diagrams/templates/brainstorming
-
-https://tldraw.dev/
-[SVG-to-Canvas Parser](https://github.com/fabricjs/fabric.js)
-[skeditor](https://github.com/skeditor/skeditor)
-[canvaskit-wasm](https://zhuanlan.zhihu.com/p/432454443)
-
-[figma](https://www.figma.com/) ([FigmaToCode](https://github.com/bernaferrari/FigmaToCode))
-[figma 技术](https://madebyevan.com/figma/) /
-[figma c++](https://madebyevan.com/figma/building-a-professional-design-tool-on-the-web/) /
-[figma 插件技术](https://zhuanlan.zhihu.com/p/357724347)
-[react-sketchapp](https://github.com/airbnb/react-sketchapp)
-
-[excalidraw](https://github.com/excalidraw/excalidraw)、
-[drawio](https://github.com/jgraph/drawio)([mxgraph](https://github.com/jgraph/mxgraph))
-[plantuml](https://plantuml.com/zh/)、[planttext](https://www.planttext.com/)、
-[cloudskew](https://www.cloudskew.com/)、[diagram-js](https://github.com/bpmn-io/diagram-js)、
-[diagram.codes](https://www.diagram.codes/)、[mermaid-js](https://github.com/mermaid-js/mermaid)、[nomnoml](https://github.com/skanaar/nomnoml)、
-[visjs](https://github.com/visjs)([timeline](https://visjs.github.io/vis-timeline/examples/timeline/))、[react-diagrams](https://github.com/projectstorm/react-diagrams)、
-[roughjs](https://roughjs.com/)、[rete.js/](https://rete.js.org/#/)[flume](https://flume.dev/)/[nodered](https://nodered.org/)(可视化节点)、[diagrams](https://github.com/mingrammer/diagrams)([graphviz](https://www.graphviz.org/))、
-[text-to-diagram](https://smusamashah.github.io/text-to-diagram)、
-[reactflow](https://reactflow.dev/)。
-
-平台/端: [processon](https://www.processon.com/)、visio、mindnode lite、[visual-paradigm](https://online.visual-paradigm.com/diagrams/features/aws-architecture-diagram-tool/)、[ithoughts](https://www.toketaware.com/ithoughts-osx)、[gliffy](https://www.gliffy.com/)、[terrastruct](https://terrastruct.com/)、[edrawsoft](https://www.edrawsoft.cn/)、[freedgo](https://www.freedgo.com/)、[websequencediagrams](https://www.websequencediagrams.com/)、[chartmage](http://chartmage.com/intro.html)、[thebrain](https://www.thebrain.com/)、[asciiflow](https://asciiflow.com/#/)([textik](https://textik.com/#9fe9a0bacdcf4a9a))、[omnigraffle](https://www.omnigroup.com/omnigraffle/)、[flowchart](https://flowchart.fun/)、[photopea](https://www.photopea.com/)​、[PPTist](https://github.com/pipipi-pikachu/PPTist)
-
-收费: [isoflow](https://isoflow.io/)、[gojs](https://gojs.net/latest/samples/index.html)、[jointjs](https://www.jointjs.com/)、[jsplumbtoolkit](https://jsplumbtoolkit.com/)、[yworks](https://www.yworks.com/products/yfiles/demos)、[mindfusion-diagram](https://mindfusion.eu/javascript-diagram.html)、[jsplumb](https://github.com/jsplumb/jsplumb)
-
-系统: [drawio-aws-cloudcraft](https://www.diagrams.net/blog/drawio-aws-cloudcraft)、([placeholder](https://www.diagrams.net/blog/placeholder-scope)、[mermaid](https://www.diagrams.net/blog/mermaid-diagrams)、[network](https://www.diagrams.net/blog/network-diagrams)、[org](https://www.diagrams.net/blog/org-charts))
-
-
-
-## 测试 监控
-
-
-jest 测试 monorepo 项目, 子组件所在位置是 root/commons/pmm/, 其中的 root/commons/pmm/tsconfig.json 配置了 `paths: { "@/*": ["src/*"] }` 所以 组件 src 的代码有很多比如 `import { xx } from '@/types'` 或者 '@/utils' 的写法.
-但这个 monorepo 项目的测试代码 统一放在 root/tests/pkgs-commonns/pmm 的目录里. 这时候被测试的源码的 '@/utils' 这种应该怎么统一解析?
-2025-11-03
-
-对源码里的 `import axios from 'axios'` 做 mock, 在单独的测试文件 xx.test.ts 顶部写 `jest.mock('axios', () => {});` 不起作用. 放到 `__mocks__/axios.js` 里才能正常.
-2025-11-02
-
-jest 测试项目, 源码里有 const pkg = require('../../../package.json'); 但实际上没有这个 package.json 文件, 怎么 mock 它? 这个三层 ../ 在构建后的代码里是对的 但构建前不对 也不能修改源码.
-https://gemini.google.com/app/85bd6c10c4eec6ce
-2025-10-20
-
-https://code.visualstudio.com/docs/copilot/guides/test-with-copilot
-https://docs.github.com/zh/copilot/using-github-copilot/guides-on-using-github-copilot/writing-tests-with-github-copilot
-2025-06-05 使用 GitHub Copilot 编写测试
-
-前端应用各类测试区别 https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests
-https://kentcdodds.com/blog/why-i-never-use-shallow-rendering
-https://kentcdodds.com/blog/avoid-the-test-user
-已废弃 https://enzymejs.github.io/enzyme/
-2025-05-30
-
-目前最流行的前端开发的测试框架工具有哪些?
-https://chatgpt.com/c/68371d58-3420-8008-8991-9b2df8b537a8
-2025-05-28
-
-
-------
-
-https://midscenejs.com/zh/
-
-https://httparchive.org/reports/page-weight
-语言性能 jsperf / benchmarks https://jsben.ch/browse
-[heavy tasks on the main thread](https://github.com/astoilkov/main-thread-scheduling)
-
-Headless BI https://cube.dev/
-https://github.com/GoogleChromeLabs/quicklink
-https://superset.apache.org/
-
-ICBU前端性能度量 https://mp.weixin.qq.com/s/XAdNOovCQxh5xuGVOSEz3w
-
-https://web.dev/articles/vitals?hl=zh-cn
-[Web vitals](https://www.cnblogs.com/constantince/p/15237915.html)、
-[thresholds](https://web.dev/i18n/en/defining-core-web-vitals-thresholds/)、
-[Chrome的First Paint触发的时机探究](https://cloud.tencent.com/developer/article/1124484)、
-[window.onload vs document.onload](https://stackoverflow.com/questions/40193553/load-event-on-script-with-async-and-or-defer)
-
-[如何根治 Script Error.](https://mp.weixin.qq.com/s/6v_X0vtM5EZThF0odwJmTw)
-[JavaScript Errors Handbook](https://github.com/mknichel/javascript-errors/blob/master/README.md)、
-[如何捕获前端错误](https://mp.weixin.qq.com/s/E51lKQOojsvhHvACIyXwhw)、[搞定前端错误捕获和上报](https://juejin.cn/post/7031876097390149645)、[错误监控总结](https://segmentfault.com/a/1190000014672384)
-
-为什么大厂前端监控都在用GIF做埋点？ https://mp.weixin.qq.com/s?__biz=MzAxODE4MTEzMA==&mid=2650099077&idx=1&sn=813d2c96cd940dc95b0f47585b989c2f
-
-AEM [表单分析](https://img.alicdn.com/imgextra/i3/O1CN01x1xSNj26XMy1xUikf_!!6000000007671-0-tps-2934-1678.jpg)
-AEM: 稳定性(脚本/接口/资源异常)、流畅性(加载/卡顿/动画掉帧)、用户流量(pv uv 活跃用户 新用户/点击率 点击热点 / 停留黏性/来源去向/设备)、行为分析(页面流/操作流/留存跳失率/访问链路/表单分析)、满意度(问卷/反馈/录屏/主观分析)。告警/多维指标(用户纬度年龄性别籍贯)/自定义看板/乐高搭建报表页。
-
-[chrome-performance-devtool](https://github.com/Sanotsu/web-beginner/blob/master/documents/11-others/web-base-chrome-performance-devtool.md)
-Google [lighthouse](https://developers.google.com/web/tools/lighthouse/)、类似服务 [web.dev/measure](https://web.dev/measure)、[webpagetest](https://www.webpagetest.org/)、[pagespeed insights](https://developers.google.com/speed/pagespeed/insights/)
-
-arms / quick a+ / spm / aplus / retcode / clue。
-
-arm aem 对任何请求（包括图片）都做埋点，导致业务接口被阻塞，页面性能下降一倍。采用合并、延迟上报埋点方式，把所有打点请求都延迟推入单独的队列维护，当页面完全加载完成后再从队列中依次取出数据进行上报。下掉非必要埋点。
-2022-01~04
-
-[iceworks-doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor)
-[vscode-codemetrics](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-codemetrics)
-
-[jsinspect](https://github.com/danielstjules/jsinspect)、
-[jscpd](https://github.com/kucherenko/jscpd)
-[代码圈复杂度Cyclomatic Complexity](http://kaelzhang81.github.io/2017/06/18/%E8%AF%A6%E8%A7%A3%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/)
-
-[研发效能度量引发的血案](https://mp.weixin.qq.com/s/h9zIg2e8iHn3qgxlUGObbQ)、
-[10 倍程序员神话](https://www.simplethread.com/the-10x-programmer-myth/)、
-[代码质量](https://stackoverflow.blog/2021/10/18/code-quality-a-concern-for-businesses-bottom-lines-and-empathetic-programmers/)
-
-静态分析与代码质量工具：SonarQube、CodeClimate 等，有助于在构建前发现问题，减少后续测试和修复时间。
-[SonarQube](https://docs.sonarsource.com/) Codeowners
-前端项目接入SonarQube质量管理 https://www.panyanbin.com/article/f651276b.html
-前端使用sonar分析代码质量 https://juejin.cn/post/7137227950197309454
-
-
-
------- 测试
-
-https://github.com/jsdom/jsdom
-https://github.com/mobile-dev-inc/Maestro
-https://lightpanda.io/
-
-CI/CD、JS 覆盖率工具 [istanbul](https://istanbul.js.org/)。
-测试-漏测率。 阿里MTC无线测试中心、蚂蚁云测平台[Solomon]
-
-基础理论:
-[前端测试体系建设与最佳实践](https://mp.weixin.qq.com/s?__biz=MzI5MjYyODYyNQ==&mid=2247483987&idx=1&sn=132aea5d5185a1e4fa2fab5037a2fb3e)、
-[测试金字塔](https://martinfowler.com/bliki/TestPyramid.html)
-
-[codecov.io](https://codecov.io/) 覆盖率分析对比工具 支持所有语言，对 GitHub commit 的覆盖率做记录、前后对比。
-
-[代码测试覆盖率分析](https://blog.rsuitejs.com/2017/08/20/test-coverage/)
-Statements 与 Lines 的区别：一行可能有多个语句
-
-[百分百测试覆盖率真的有意义吗？](https://www.zhihu.com/question/29528349)
-各种 corner cases(比如除0、IO error handling) 很难做到 100% 覆盖。 覆盖率数据只能代表你测试过哪些代码，不能代表你是否测试好这些代码。 不能盲目追求代码覆盖率，而应该想办法设计更多更好的案例，哪怕多设计出来的案例对覆盖率一点影响也没有。
-
-
---- E2E测试 2024-02
-
-自动化测试 https://github.com/puppeteer/puppeteer / https://www.selenium.dev/
-https://livebook.manning.com/book/unit-testing/chapter-1/
-我们为什么需要单元测试？ https://mp.weixin.qq.com/s/F60MjrCnNsFmZV9jT75AVg
-
-TDD(Test-Driven Development)很强大，但不一定适用所有的团队，推广难度很大，学习曲线很高。
-TDD事实上由两个方面组成：测试先行，以及演进式设计；测试先行是非常重要的工程实践，做不到TDD，可以做到测试先行。在Kent Beck的经典名著《解析极限编程》中，提到：尽早测试，经常测试，自动测试！测试先行的本质能力要求是接口的设计能力——能否清晰的定义出设计单元的边界。
-什么是有效的单元测试？一味追求代码覆盖率，往往写出无效的单元测试。一个测试应当只检查一件事。避免条件逻辑。不要写永不失败的测试。避免冗余测试。避免Mock不确定的依赖：时间、随机数、并发性、基础设施、现存数据、持久化、网络等等。
-可测试的代码和设计：使用new要当心；避免构造函数中包含逻辑；避免复杂的私有方法；组合优于继承；可测试的代码是否违背了SOLID中的开闭原则？可测试的代码就是解耦了的代码；可测试的代码帮助我们实现更好的抽象。
-在实现测试金字塔时，你也应该牢记这两条基本法则：
-1. 如果一个更高层级的测试发现了一个错误，并且底层测试全都通过了，那么你应该写一个低层级测试去覆盖这个错误；
-2. 竭尽所能把测试往金字塔下层赶；
-任何测试，如果它的运行速度不快，结果不稳定，或者要用到被测试单元的一个或多个真实依赖，就是集成测试。 集成测试不够稳定，运行时间长等问题，如果不做隔离，日常开发浪费时间和精力维护，最后导致开发人员不再信任测试。
-把单元测试当成是“一等公民”，在Code Review的过程中，互相学习、分享最佳实践，消除无效的单元测试。
-愿意主动增加单元测试来保护自己的代码，那么单元测试这件事就算比较成功了。
-关于单元测试这件事，我觉得最重要永远是写单元测试的人，优秀的团队文化非常重要，没有什么能够真正衡量单元测试做的好坏，有的只是程序员的职业操守。
-<如何写出有效的单元测试> https://mp.weixin.qq.com/s/U6z-sjb29luOI3E6pE9kMw
-
-TDD 更适合配合单元测试，更适合通用组件/工具函数和纯函数库，比如 lodash、aHooks、ant-design等。
-BDD(Behavior-Driven Development) BDD思想就是写单元测试就像写产品需求，而不关心内部逻辑，每一个用例阅读起来就像一篇文档。更适合配合集成测试，测试关键业务流程代码。
-- 因为以功能性的集成测试为主，因此不是那么关注每个函数功能，测试覆盖率比较低
-- 难保证代码质量，没有 TDD 那么严格的保证代码质量，极端边界条件难覆盖
-<内网>
-
-测试金字塔的历史可以追溯到2009年。随着技术的快速发展，人们在应对不同的开发需求时，也可能需要不同的测试模型。由Kent C. Dodds提出的测试奖杯(https://twitter.com/kentcdodds/status/960723172591992832)就是一种针对前端开发所构建的测试模型。与金字塔相比，单元测试处于次要地位，而且可以被ESLint和JSHInt等静态测试工具所取代。它们通过扫描代码，便可发现诸如：使用了不安全的语句、或未遵守变量命名规则等潜在问题。
-https://www.testingjavascript.com/
-<测试金字塔模型全解析> https://www.easemob.com/news/8530  英文 https://dzone.com/articles/the-testing-pyramid-how-to-structure-your-test-sui
-
-覆盖率是金字塔的核心，底层是最宽的，象征着UT覆盖率应该是最高的，越往上越低，这一点大家都能达成共识。但是有一点需要注意的是，每网上一层应该是对下面一层覆盖率的一个补充。简单说集成测试应该聚焦于UT不好覆盖的场景或者UT采用mock方式测试的场景，而顶层的UI自动化应该聚焦于整个流程的集成测试，覆盖集成测试和UT难以覆盖到的场景。
-<测试金字塔是什么> https://juejin.cn/post/7216626919772225573
-
-唯一可以真正验证应用程序可行性的测试，只有E2E测试。因为它需要用线上真实的数据进行测试，所以它不仅涉及到前端，还涉及到后端。除了E2E外的测试方式都是通过Mock数据来实现。
-你的应用程序在与最终用户（浏览器）相同的环境中做测试，这意味着更高的置信度。即使你只编写一个 UI 测试，它给你带来的置信度也比一百个单元测试更多。
-你日常工作中接触的大多数项目都是小到中等规模的，它们最适合进行 UI 测试。UI 测试是一个通用术语，我们必须将其分为端到端测试和 UI 集成测试。
-<刚开始接触前端测试？那就从金字塔顶端开始吧！> https://www.infoq.cn/article/ei01kymcs0v2fo1r4srg
-
-E2E 把整个系统当作一个黑盒，测试人员模拟真实用户在浏览器中操作 UI，测试在真实浏览器环境运行测试。
-E2E 测试一般是由 QA 测试工程师来做。稍小的项目可能根据测试用例（excel）操作一遍就完了，稍大一点的会写一些自动化测试的代码。
-前端可能会为核心的、主要的或稳定的业务流程写 E2E，不过占据的测试比例要小很多，主要目的是：便于给 PM（产品经理） 展示业务流程，便于修改 Bug 之后的回归测试。
-
-完成E2E测试的最佳时间是开发过程接近尾声时。 这是因为客户使用的大部分功能都在软件中，这意味着端到端测试涵盖了用户将体验到的程序的所有必要方面。
-单元测试检查一段代码的具体单元，如单个函数和程序中两个不同函数之间的孤立连接。单元测试可以更快，但其缺点是不能完全模拟用户体验。
-较大的组织往往有单独的测试和开发团队，保持这两个机构相互独立，以便不对E2E测试的结果引入任何偏见。
-在可能的情况下，让没有开发过特定功能的人去测试它。 这在可能的情况下消除了固有的偏见，并使端到端的测试尽可能地准确。
-规模较小的独立开发者，如首次开发应用的开发者或预算限制较多的开发者自己完成E2E测试。
-在可能的情况下，多人完成测试并重复测试是最理想的，因为它提供了额外的确定性，无论是自动还是人工结果。
-端到端测试的调试过程更加复杂，因为自动测试返回的 “失败 “信息不太可能是问题的具体原因。开发人员需要进一步调查以解决问题，特别是在没有整合具体错误信息的情况下。
-响应速度 一些E2E测试的重点是确保系统快速返回有效的结果。
-UAT测试是用户验收测试的意思，是一种测试形式，不是由开发团队的人完成，而是由目标受众的成员完成。
-端到端测试仅仅是对软件的分析，以及它如何有效地工作，系统测试还包括对它所运行的硬件和一些固件的评估，如操作系统，它与之互动。
-通过人工端到端测试过程的主要好处之一是你自己看到所有的潜在问题，注意到计算机可能看不到的软件缺陷。然而，与实现测试过程自动化相比，这个过程可能相对缓慢。
-较小的项目可以由一个团队手动进行彻底的测试，梳理代码中的任何错误，并立即将其记下。相反，较大的项目根本无法手动测试，需要大量的软件测试自动化。
-<端到端测试 – 深入了解E2E测试类型、流程、方法、工具等> https://www.zaptest.com/end-to-end-testing-deep-dive-into-e2e-test-types-process-approaches-tools-more
-https://www.zaptest.com/zh-hans/%E7%AB%AF%E5%88%B0%E7%AB%AF%E6%B5%8B%E8%AF%95-%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3e2e%E6%B5%8B%E8%AF%95%E7%B1%BB%E5%9E%8B%E3%80%81%E6%B5%81%E7%A8%8B%E3%80%81%E6%96%B9%E6%B3%95%E3%80%81%E5%B7%A5
-
-质量不等于测试。质量不是被测试出来的。虽然质量不是被测出来的，但同样有证据可以表明，未经测试也不可能开发出有质量的软件。
-把开发过程和测试融合在一起----开发和测试必须同时开展。写一段代码就立刻测试这段代码，完成更多的代码就做更多的测试。
-最适合做测试的角色是开发人员而不是测试人员，质量更像是一种预防行为而不是检测行为。在google, 测试的目标是判断这种预防行为是否正常工作。质量是开发过程中的问题，而不是测试问题。
-测试工程师会转型为测试设计。少量的测试设计师快速地规划出测试范围、风险热图和应用程序的漫游路线。测试工程师会转变成像安全工程师这样的专家型角色，或者编程测试活动的管理者，而那些具体的测试活动则由其他人来完成。
-<Google软件测试之道>
-
-质量保障的追求不是发现所有的bug、解决所有的风险，而是确保即使触发了bug也不会带来恶劣的影响，在此基础上力求去发现尽可能多的bug  -> bug 触发概率降到尽可能低 -> 触发bug后带来的损失降到尽可能小。
-<测试八年｜对业务测试人员的一些思考> https://mp.weixin.qq.com/s/LQqYwrL2EDJBg5S00E3vaA
-
-研究了代码质量后，开发速度提高了 2 倍，bug 减少了 15 倍
-https://mp.weixin.qq.com/s/2FXkUE2OttMHUSwbf3JDgw
+https://github.com/mermaid-js/mermaid
+https://github.com/excalidraw/excalidraw
+https://github.com/jgraph/drawio (https://github.com/jgraph/mxgraph)
+https://modao.cc
+https://www.processon.com
+https://www.mindnode.com
+https://www.photopea.com
+https://www.cloudskew.com
+https://plantuml.com/zh
+https://github.com/mingrammer/diagrams
+https://github.com/bpmn-io/diagram-js
+https://github.com/xyflow/xyflow
+https://github.com/visjs
+https://github.com/tldraw/tldraw
+https://slides.com
+https://github.com/pipipi-pikachu/PPTist  https://github.com/gitbrent/PptxGenJS
+原型 https://www.xiaopiu.com  https://www.justinmind.com
+白板 https://mural.co  https://miro.com
+收费: Microsoft Visio , visual-paradigm , gliffy , terrastruct , isoflow , gojs , jointjs , jsplumbtoolkit , yworks , mindfusion-diagram , visme , sheetui
+其他: edrawsoft , freedgo, websequencediagrams , chartmage , thebrain , omnigraffle , flowchart
+2020
 
 
 
@@ -889,19 +646,6 @@ sudo mount -uw /  # 挂载系统分区为可写  /sbin/mount
 history 10 # 列出10条
 timeout 3600 some-command
 
-# 浏览器 同源策略 await fetch('https://www.baidu.com/') 会 blocked by CORS policy
-# 浏览器 fetch 不会 自动使用 http_proxy 环境变量, 但 curl 可以.
-# curl 默认使用 http 协议, 可以省略 http:// 前缀
-curl -v baidu.com
-# 在 mac 上 xx.sh 里的代码不会执行 因为默认没权限. 先下载,再 chmod +x xx.sh 再执行
-curl -O "http://xx.com/xx.sh"
-curl -v -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d '{
-  "jsonKey": "jsonVal",
-  "jsonKey1": {}
-}' | jq
-curl -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d "@aa.json" | jq
-
-
 top #  man top
 top -l 1 -o cpu | head -n 20
 top -l 1 -stats pid,cpu | head -n 20
@@ -921,7 +665,6 @@ ps aux | grep xx.sh  # 列出正在运行的脚本进程
 ps aux | grep "xx" | grep -v grep  # 排除 grep 本身的进程
 ps -ef | grep adb  # 有时候 adb devices 没反应 需要杀掉进程重启
 ps -ef | grep ttyd
-
 
 sudo du -hxd1 / | sort -hr | head -n 20  # 查看占用最多的文件夹
 du -h -d 1 ~ | sort -hr
@@ -981,11 +724,54 @@ grep -r --include=\*.{cpp,h} pattern ./
 grep -r --exclude-dir=node_modules pattern ~/
 
 find . -name '*bash*'
+find . -type f | wc -l  # 当前目录及子目录文件数量
+find . -maxdepth 1 -type f | wc -l  # 当前目录文件数量
+find . -type f -not -path './.git/*' | wc -l  # 所有子目录文件数量, 不含 .git 目录
 find . -name "*.js" -not -path "*node_modules*" -not -path "*js-css-html*"
 find . -name '*.DS_Store' -type f -delete   # 删除某目录及子目录下的 .DS_Store 文件
 # find / -mmin -5   # 查找在系统中最后5分钟里修改过的文件(modify time)
 
 ```
+
+
+--- curl jq
+
+```sh
+# 浏览器 同源策略 await fetch('https://www.baidu.com/') 会 blocked by CORS policy
+# 浏览器 fetch 不会 自动使用 http_proxy 环境变量, 但 curl 可以.
+# curl 默认使用 http 协议, 可以省略 http:// 前缀
+curl -v baidu.com
+# 在 mac 上 xx.sh 里的代码不会执行 因为默认没权限. 先下载,再 chmod +x xx.sh 再执行
+curl -O "http://xx.com/xx.sh"
+curl -v -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d '{
+  "jsonKey": "jsonVal",
+  "jsonKey1": {}
+}' | jq
+curl -H "Content-Type: application/json" -H "X-App-Id: xx-cli" -H "X-App-Key: xx" https://xx.com/chat -d "@aa.json" | jq
+
+
+SUB_JSON='{"timeout": 30, "retries": 3}'
+# 使用 jq 将子 JSON 作为字符串值注入到外层 JSON
+PAYLOAD=$(jq -n --argjson id 123 --arg config_str "$SUB_JSON" --arg metadata "some info" \
+  '{id: $id, config: $config_str, metadata: $metadata}')
+payload=$(jq -n --arg data_str "$SUB_JSON" '{"data": $data_str}')
+echo "$PAYLOAD"
+echo "$payload"
+
+
+npm view react@19.0.0 --json  | jq '{(.name): .["dist-tags"].latest}'
+echo '[{ "name": 1 }]' | jq -r '.[].name'
+echo '{message:"aa", content: "www.cont"}' | yq '.message'
+
+# 使用 yq 操作 yaml
+clash_file="./configs/clash.yaml"
+new_str="DOMAIN-SUFFIX,xx.com,DIRECT"
+echo $(yq '.rules' $clash_file)
+yq e '.rules |= [ "'"$new_str"'" ] +.' $clash_file -i
+```
+
+
+
 
 
 
@@ -1368,6 +1154,16 @@ https://github.com/lerna/lerna/blob/main/libs/core/src/lib/project/index.ts#L28
 ## git
 
 
+使用 import { execSync, spawnSync } from 'child_process';
+判断远程最新的 tag 是否在 master 分支上, 写个函数.
+如果本地新打了个 tag 没推送远程, 这个代码会有问题吗?
+execSync('git fetch origin master --tags'); 这个只能获取远程 master 分支的 tag, 需要获取远程所有分支的.
+获取 tag 对应的 commit 的id 和提交者信息.
+怎么获取 tag 所在的分支名?
+https://chatgpt.com/c/697629ac-0c18-8320-9acf-72d5871d18e3
+https://gemini.google.com/app/d31fcdf04d30d099
+2026-01-25
+
 How I Use Git Worktrees
 https://matklad.github.io/2024/07/25/git-worktrees.html
 2025-09-28
@@ -1563,6 +1359,9 @@ code ~/.gitconfig-github 文件 给特定目录 设置个人 name email
 
 ## p/npm
 
+怎么查看本地全局安装的 pnpm 的版本和修改后的配置?
+  pnpm config list --global
+2026-01-06
 
 有办法在安装一个 npm 包之前, 先检测 node 版本吗? 需要全局安装
 https://chatgpt.com/c/69247839-f4d0-8324-af8d-c19bf61d26cb
@@ -2057,10 +1856,11 @@ git ls-files -o --exclude-standard >> .git/info/exclude
 git update-index --assume-unchanged $(git ls-files -m | tr '\n' ' ')
 git ls-files -v | grep '^[a-z]'  # 获取已经被 assume-unchanged 的文件
 
+git config -l  # --list
+git config remote.origin.tagOpt  # 默认拉取 commit附带的tag 信息, 其他选项 --tags --no-tags
+
 git remote [-v add | set-url] origin git@xxx.git
 git ls-remote --heads origin
-git ls-remote --tags  # 查看远程仓库所有 tags
-git config -l  # --list
 
 git commit --amend  # 修改提交信息
 git commit --no-edit  # 使用上一次的提交信息进行提交 (未进行过提交会失败)
@@ -2071,8 +1871,8 @@ git add . && git commit --no-verify
 git pull --rebase
 git pull   # 仅拉取与当前分支相关的标签 只有当标签指向的提交是由于拉取特定分支而下载到本地时，这些标签才会被自动下载。
 git pull --prune	# 更新所有远程分支引用，并删除本地已失效的远程分支引用
-git fetch   # 获取 当前origin的远程 所有分支 信息
-git fetch --all  # 获取 当前origin和设置的其他origin的 所有分支 信息
+git fetch   # 获取 当前origin 远程所有分支 信息, 及其 自动关联标签 (Auto-following tags)
+git fetch --all  # 获取 当前origin和其他origin的 远程所有分支 信息
 git fetch origin master
 git branch -m newBranchName  # 重命名分支
 git checkout HEAD~1 -- file1 dir1
@@ -2147,16 +1947,15 @@ git reflog  # 撤销 reset 时 找到撤销前的 commit_id 再 git reset 即可
 git tag v1.0  # 给当前分支最新 commit 打 tag
 git tag v1.0 commit_id  # 给当前分支 某个 commit_id 打 tag
 # 打 annotated tags  使用 git show tag_name 会看到包含 tagger 标记
-git tag -a 0.0.1 -m 'Release version 0.0.1'
 git tag -a -m '@pkg/xx@0.1.16' @pkg/xx@0.1.16
-git tag -a @pkg/xx@0.1.16 -m '@pkg/xx@0.1.16' 4da6c3d4 -f
+git tag -a xx@0.0.1 -m 'Release version 0.0.1' -f
 # 获取 tags
 git pull --tags   # 拉取所有分支的更新 + 所有 tags .  注意: 远程仓库可能包含大量历史 tags（如版本发布标签），全量拉取会占用额外存储和网络资源.
 git fetch --prune-tags --prune -f # 删除本地已被远程删除的标签 Git 2.20 及以上版本
 git fetch --tags -f  # 强制覆盖本地 tags
 git fetch --tags --all  # 额外获取所有 tags 信息
 # 推送 tags
-git push [origin] --tags    # 推送所有标签到服务器
+git push --tags -f   # 推送所有标签到服务器
 git push --follow-tags --no-verify origin f-i18n-xx
 git push origin tag_name
 git push origin --delete tag_name
@@ -2167,29 +1966,33 @@ git tag -d $(git tag -l)  # 删除 本地所有 tags
 # 搜索本地的某个 tag_name
 git tag -l '*tag_name*'
 git tag | grep tag_name
+
 # 按时间排序的最近 5 个 tag (再转为 json 数组)
 git tag --sort=-creatordate | head -n 5
 git tag --sort=-creatordate | head -n 5 | awk 'BEGIN{printf "["} {printf "%s\"%s\"", sep, $0; sep=", "} END{print "]"}'
 git for-each-ref --sort=-creatordate --count=5 --format='%(refname:short) %(objectname)' refs/tags
 git for-each-ref refs/tags/ --format='%(refname:short) %(objectname)'
+
 # 查看 tag 信息
-git describe --first-parent
-git describe --all  # 查找所有分支上的标签
+git tag -v xx@0.1.1  # 非 annotated tags 会报错 error: cannot verify a non-tag object
+git show-ref --tags
 git describe --tags
 git describe --tags HEAD
 git describe --tags --match "xx"  # 仅匹配名称包含 "xx" 的标签
-git show-ref --tags
-git tag -v xx@0.1.1  # 非 annotated tags 会报错 error: cannot verify a non-tag object
+git describe --tags --abbrev=0  # 当前分支最近的一个 tag
 
-# 查看当前分支上有哪些 tags
-git tag --merged HEAD / feat1 # 所有直接打在该分支的 commit 上的 tag (无论新旧)
+# 查看当前分支上有哪些 tags (在 Git 里，tag 本身是“仓库级对象”，不隶属于某一个分支)
+git tag --merged HEAD / branch_name # 所有直接打在该分支的 commit 上的 tag (无论新旧)
+git tag --no-merged branch_name  # 查看「某分支没有的 tags」
 git tag --no-contains master  # 获取那些不包含在 master 中的标签
 git tag --contains HEAD  # 查看直接指向当前分支 最新 commit 的 tag
 git tag --points-at HEAD  # 查看直接指向当前分支 最新 commit 的 tag
 git tag --points-at 6627f6  # 查看直接指向 某个 commit_id 的 tag
+git ls-remote --tags  # 查看远程仓库所有 tags
 
-# 遍历所有本地的 tag，检查每个 tag 指向的提交是否是当前分支（HEAD）的祖先, 即在当前分支的历史中。
-for tag in $(git tag); do if git merge-base --is-ancestor "$tag" HEAD; then echo "$tag"; fi; done
+# https://cli.github.com/manual/gh
+# 在创建完 tag 后, 使用 gh cli 创建 release note
+gh release create v1.0.0 --title "First Release" --notes "这是我们的第一个版本说明。"
 
 # 操作 https://stackoverflow.com/a/930495/2190503
 # 在 .gitattributes 文件里配置 当 pnpm-lock.yaml 出现冲突时，将以当前分支为准
@@ -2284,20 +2087,6 @@ lernaCli, 'exec', '--scope', name, '--', `pnpm version ${newVersion}` --workspac
 ```
 
 
-
---- jq
-
-```sh
-npm view react@19.0.0 --json  | jq '{(.name): .["dist-tags"].latest}'
-echo '[{ "name": 1 }]' | jq -r '.[].name'
-echo '{message:"aa", content: "www.cont"}' | yq '.message'
-
-# 使用 yq 操作 yaml
-clash_file="./configs/clash.yaml"
-new_str="DOMAIN-SUFFIX,xx.com,DIRECT"
-echo $(yq '.rules' $clash_file)
-yq e '.rules |= [ "'"$new_str"'" ] +.' $clash_file -i
-```
 
 
 
@@ -2444,7 +2233,11 @@ sudo spctl --master-disable # 系统升级后 需要重新执行 执行完成"�
 
 xcode-select --install  # 安装 git gcc
 pmset noidle # 阻止电脑睡眠 同时按住 shift、control、电源键，关闭显示器
-uname -a  # 查看处理器架构
+
+# Intel版 Mac 软件标识为 darwin-x64 或 x86_64 或 amd64 (Intel 和 AMD 公司的处理器)
+# Apple Silicon 属于ARM架构，软件标识为 darwin-arm64 或 aarch64 (ARM公司 被软银收购)
+uname -a  # 查看处理器架构 -m -s
+system_profiler SPHardwareDataType  # 硬件信息
 
 # defaults read 查看系统设置
 defaults write com.apple.screencapture type jpg
@@ -2580,7 +2373,10 @@ Mobile simulator - responsive testing tool
 Interactive Git Log
 uicloner
 
-Tab Position Options / 一键切换(Jomic) 搜索拐杖 下一页(空格键自动翻到下一页) Tamper Tampermonkey / Disable Content-Security-Policy / Talend API Tester / Web Developer / Neat URL / Copy Tab Info / Open Multiple URLs / User JavaScript and CSS / Wayback Machine / Memex / 一叶 / grammarly.com / gitpod npmhub / screenity / Language Reactor / Side Browser / Sidebar Tab / Porter Plug / Video Speed Controller / click-to-react-component
+Tab Position Options / 一键切换(Jomic) 搜索拐杖 下一页(空格键自动翻到下一页) Tamper Tampermonkey / Disable Content-Security-Policy / Talend API Tester / Web Developer / Neat URL / Copy Tab Info / Open Multiple URLs / User JavaScript and CSS / Wayback Machine / Memex / 一叶 / grammarly.com / gitpod npmhub / screenity / Language Reactor / Side Browser / Sidebar Tab / Porter Plug / Video Speed Controller /
+
+click-to-react-component
+https://github.com/ericclemmons/click-to-component
 
 代理: Proxy SwitchyOmega 3 / ModHeader XSwitch
 - 解决不了 CORS 限制 https://chatgpt.com/c/693927dc-bbfc-832a-ac9e-31e94052876b
@@ -2622,6 +2418,7 @@ workbench.extensions.action.enableAllInstalledExtensions
 - [tab group 建议](https://github.com/microsoft/vscode/issues/100335#issuecomment-964358943)
 - 日志文件 `~/Library/Application Support/Code/logs`
 - vscode 不支持在 插件内 代理? 文档 https://code.visualstudio.com/docs/setup/network
+- 不设置 git.autofetch
 
 用法
 - 按`cmd shift p` 输入
@@ -2633,13 +2430,13 @@ workbench.extensions.action.enableAllInstalledExtensions
 
 --- 扩展
 
-[推荐](https://github.com/viatsko/awesome-vscode):
-- plantuml(设置指定server) / Auto Hide / Live Preview / Markdown All in One / markdown-pdf / marp / GitLens(simple logs) / pangu / Hungry Delete / Template String Converter
-- Code Runner / Terminal Keeper / Commands(usernamehw) / Todo Tree / Excalidraw / npm-dependency-links / Bookmarks / Diff Folders / Editor Group Minimizer Plus / favorites
+- 在用: Live Preview / Image preview / Commands(usernamehw) / Excalidraw / Diff Folders / Auto Rename Tag / marp / markdown-pdf
+- 备用: Google Translate / Code Runner / plantuml(设置指定server) / GitLens(simple logs)
 
 端口 [转发](https://code.visualstudio.com/docs/editor/port-forwarding)
 实现 [内网穿透](https://51.ruyo.net/18562.html)，目前已被 [国内禁用](https://github.com/microsoft/vscode-remote-release/issues/9438)
 
+https://github.com/viatsko/awesome-vscode
 https://github.com/coder/code-server
 https://github.com/jackiotyu/git-worktree-manager
 https://github.com/jianbingfang/vscode-dup-checker
@@ -2904,7 +2701,8 @@ alias cz='code ~/.zshrc'
 ------ iterm2
 
 - macOS-Dock → iTerm2 (右键) → Options → Assign To → ✔ All Desktops
-- 设置 - Keys - HotKey 设置 cmd+` 快捷打开
+- 设置 - Keys - HotKey - HotKey Wondow - HotKey 设置 cmd+` 快捷键
+  - 设置默认 Profile: Profiles → Other Actions → Set as Default
 - 设置 - General - Selection - 取消勾选 Clicking on a command selects it to
 - 设置 - Profiles - Default
   - General: Title 勾选 PWD 取消勾选 Session Name / Job Name
@@ -3053,10 +2851,13 @@ DocumentRoot "/Users/hua/inner"
     Header set Access-Control-Allow-Credentials: true
 </Directory>
 <VirtualHost *:80>
-  <FilesMatch "\.(md|cpp|php)$">
-    AddDefaultCharset utf-8
-    Header always set Content-Type "text/plain; charset: utf-8"
-  </FilesMatch>
+  ServerName localhost
+  DocumentRoot "/Users/hua/inner"
+  # 使用 http://localhost/od 访问其他目录, 注意 Library 目录设置权限 everyone read
+  Alias /od /Users/hua/Library/xx
+  <Directory "/Users/hua/Library/xx">
+    Require all granted
+  </Directory>
 </VirtualHost>
 
 # 打开 https://localhost 支持
@@ -3639,7 +3440,7 @@ PRD有三种状态：Draft、 Review、Ready,  其中起草人为产品或研发
 三、结构/流程图
 3.1 功能结构图
 3.2 需求流程图
-业务流程 -> 任务流程 -> 页面流程
+业务流程 -> 功能流程/任务流程 -> 页面流程
 3.3 交互设计图
 
 四、需求范围

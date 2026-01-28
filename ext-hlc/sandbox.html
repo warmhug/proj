@@ -9,15 +9,26 @@
   <div id="tuiEditor"></div>
   <script src="./assets/toastui-editor-all.js"></script>
   <script src="common.js"></script>
-  <script>
+  <script type="module">
     console.log("Sandboxed script");
-    const el = document.querySelector('#tuiEditor');
-    hl_utils.ajax('./sandbox1.md', {
-      success: (resp) => {
-        const tuiInst = new toastui.Editor.factory({
-          el, initialValue: resp, viewer: true,
+    const promiseAjax = (url) => {
+      return new Promise((resolve, reject) => {
+        hl_utils.ajax(url, {
+          success: (resp) => {
+            resolve(resp);
+          }
         });
-      }
+      })
+    };
+    const res = await Promise.all([
+      // promiseAjax('./sandbox1.md'),
+      promiseAjax('/od/__eng.md'),
+    ]);
+    // console.log('log res: ', res);
+    const tuiInst = new toastui.Editor.factory({
+      el: document.querySelector('#tuiEditor'),
+      viewer: true,
+      initialValue: res.join('\n\n == \n'),
     });
   </script>
 </body>

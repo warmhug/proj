@@ -1,4 +1,4 @@
-# ext-hlv
+# vscode 扩展
 
 文档
 - 内置变量 https://code.visualstudio.com/docs/reference/variables-reference

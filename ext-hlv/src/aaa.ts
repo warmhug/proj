@@ -4,6 +4,10 @@
 //
 //
 
+// from 包名 Google Translate
+// https://github.com/imlinhanchao/vsc-google-translate
+//
+
 // import * as vscode from 'vscode';
 import { commands, window, workspace } from 'vscode';
 import type { ExtensionContext } from 'vscode';

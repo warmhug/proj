@@ -79,12 +79,15 @@ const hl_inject_auto_params = [
   // https://cn.bing.com  https://www.bing.com https://www.google.com  https://www.baidu.com
   {
     func: () => {
-      hl_utils.createSearchSwitch();
-      window.addEventListener('popstate', function (event) {
-        const searchParams = new URLSearchParams(window.location.search);
-        // console.log('URL search parameters changed:', searchParams);
-        hl_utils.createSearchSwitch();
-      });
+      try {
+        hl_utils?.createSearchSwitch();
+        window.addEventListener('popstate', function (event) {
+          const searchParams = new URLSearchParams(window.location.search);
+          // console.log('URL search parameters changed:', searchParams);
+          hl_utils?.createSearchSwitch();
+        });
+      } catch (error) {
+      }
     },
   },
   // https://www.zhihu.com
@@ -136,28 +139,8 @@ const hl_inject_auto_params = [
   },
 ];
 
-
-// 在地址栏调用 Google 翻译 API 直接搜索
-const suggestFn = (text, suggest) => {
-  if (text.length <= 1) {
-    suggest([]);
-    return;
-  }
-  fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=zh-CN&tl=en&q=' + text)
-    .then((response) => response.json())
-    .then((data) => {
-      const resAry = data?.[0]?.[0];
-      if (resAry?.length) {
-        suggest([{
-          content: `${resAry?.[1]} | ${resAry?.[0]}`,
-          deletable: true,
-          description: `<dim>中文 ${resAry?.[1]} 英文</dim> <match>${resAry?.[0]}</match> <url>chrome://newtab</url>`
-        }]);
-      }
-    });
-}
 // 填入搜索结果到本插件 Google 翻译的 iframe 里，产生搜索记录、方便回顾
-const saveResult = async (text) => {
+const saveResult = async (text, langArg = '&sl=zh-CN&tl=en') => {
   const txt = text?.split(' | ')?.[0];
   if (!txt) {
     return;
@@ -165,7 +148,7 @@ const saveResult = async (text) => {
   const { hl_page_ext_index, hl_page_my_index } = await hl_utils.getStorage(null);
   const [curTab] = await chrome.tabs.query({ active: true });
   console.log('log curTab: ', curTab);
-  const newTranslateUrl = `https://translate.google.com/?sl=zh-CN&tl=en&text=${txt}&op=translate`;
+  const newTranslateUrl = `https://translate.google.com/?op=translate&text=${txt}${langArg}`;
   const sendMsg = (msg) => {
     // 在插件页面
     chrome.runtime.sendMessage({
@@ -187,29 +170,8 @@ const saveResult = async (text) => {
     chrome.tabs.create({ url: newTranslateUrl, index: curTab.index });
   }
 };
-
-const changeDelay = hl_utils.debounce(suggestFn, 300);
-let cacheText = '';
-chrome.omnibox.setDefaultSuggestion({
-  description: '输入中文翻译为英语'
-});
-chrome.omnibox.onInputCancelled.addListener(() => {
-  // console.log('onInputCancelled', cacheText);
-  if (cacheText.trim().length) {
-    void saveResult(cacheText);
-  }
-});
-chrome.omnibox.onInputChanged.addListener((text, suggest) => {
-  // console.log('change', text);
-  cacheText = text;
-  return changeDelay(text, suggest);
-});
-chrome.omnibox.onInputEntered.addListener(saveResult);
-chrome.omnibox.onDeleteSuggestion.addListener((text) => {
-  // console.log('onDeleteSuggestion', text, cacheText);
-});
-chrome.omnibox.onInputStarted.addListener((text) => {
-  // console.log('onInputStarted', text, cacheText);
+hl_utils.omnibox({
+  onEnterOrCancel: saveResult,
 });
 
 let lastActiveTabIndex = null;  // 用来记录上一个活动标签页的索引

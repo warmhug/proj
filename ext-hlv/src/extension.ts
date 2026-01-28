@@ -12,6 +12,8 @@ import { activate as indent4to2 } from "./indent4to2";
 import { activate as autohide } from "./autohide";
 import { activate as bookmark } from "./bookmark";
 import { activate as bookmarkTab } from "./bookmarkTab";
+import { activate as hungryDelete } from "./hungry-delete";
+import { activate as temSC } from "./template-string-converter";
 
 // https://github.com/usernamehw/vscode-commands
 // https://github.com/wk-j/vscode-save-and-run
@@ -36,6 +38,8 @@ export function activate(context: ExtensionContext) {
   autohide(context);
   bookmark(context);
   bookmarkTab(context);
+  hungryDelete(context);
+  temSC(context);
 }
 
 export function deactivate() {

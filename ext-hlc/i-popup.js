@@ -246,16 +246,15 @@
 
   // 不能用 ~ 表示用户
   const filePaths = [
+    ['.npmrc', '/Users/hua/.npmrc'],
     ['ss.yaml', '/Users/hua/.config/clash/ss.yaml'],
     // ['ss.yaml(clash-meta)', '/Users/hua/.config/clash.meta/ss.yaml'],
     ['.zshrc', '/Users/hua/.zshrc'],
     ['.zsh_history', '/Users/hua/.zsh_history'],
-    ['a_sh_nm.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/a_sh_nm.json'],
-    ['.npmrc', '/Users/hua/.npmrc'],
     ['.gitconfig', '/Users/hua/.gitconfig'],
     ['.gitconfig-github', '/Users/hua/.gitconfig-github'],
     ['apache', '/etc/apache2/httpd.conf'],
-    ['tmp(文件夹)', '/var/folders/xk/tpmztqjx0gldhvryd_mh60_80000gn/T/'],
+    ['a_sh_nm.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/a_sh_nm.json'],
   ];
   const nativeCmds = [
     ['~/.config/clash', 'open /Users/hua/.config/clash'],
@@ -265,15 +264,15 @@
 
   document.querySelector('#localFileLinks').innerHTML = `
   <div class="links">
-    <span>local vscode links: </span>
+    <span>vscode 里打开: </span>
     <span>
       ${filePaths.map(([fileName, filePath]) => (
-        `<a href="vscode://file${filePath}" target="_blank">${fileName}</a>`
+        `<a href="vscode-insiders://file${filePath}" target="_blank">${fileName}</a>`
           )).join('')}
     </span>
   </div>
   <div class="links">
-    <span>native cmds:</span>
+    <span>系统命令(文件夹):</span>
     <span id="nativeCmds">
       ${nativeCmds.map(([label]) => (
       `<a href="">${label}</a>`)).join('')}

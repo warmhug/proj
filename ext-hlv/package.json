@@ -9,7 +9,7 @@
   },
   "main": "./dist/extension.js",
   "scripts": {
-    "pack": "vsce package && code --install-extension ext-hlv-0.0.1.vsix",
+    "pack": "vsce package && code --install-extension ext-hlv-0.0.1.vsix && code-insiders --install-extension ext-hlv-0.0.1.vsix",
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
@@ -161,12 +161,6 @@
       }
     ],
     "menus": {
-      "commandPalette": [
-        {
-          "group": "z_commands",
-          "command": "warmhug.demo"
-        }
-      ],
       "editor/context": [
         {
           "submenu": "warmhug.demo.context",
@@ -179,20 +173,16 @@
         },
         {
           "group": "z_commands",
-          "command": "warmhug.simpleBookmark.add"
-        },
-        {
-          "group": "z_commands",
-          "command": "warmhug.simpleBookmark.list"
+          "command": "warmhug.demo"
         }
       ],
       "editor/title/context": [
         {
-          "group": "myGroup@1",
+          "group": "z_commands",
           "command": "warmhug.minimizer.addToDefaultGroup"
         },
         {
-          "group": "myGroup@2",
+          "group": "z_commands",
           "command": "warmhug.minimizer.addToGroup"
         }
       ],
@@ -260,7 +250,7 @@
     "submenus": [
       {
         "id": "warmhug.demo.context",
-        "label": "%warmhug.demo.context.label%"
+        "label": "aaa"
       }
     ],
     "keybindings": [
@@ -400,6 +390,16 @@
           "type": "string",
           "default": "",
           "markdownDescription": "Registry URL pattern to be used for package link.\n Example: `http://myCustomRegistry/{{pkg}}/package?queryparams`. \nTakes priority over `#warmhug.npmDepRegistryUrl#` if set."
+        },
+        "warmhug.templateStringConverter": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable template string converter functionality. When enabled, converts a string to a template string when \"${\" is typed inside quotes."
+        },
+        "warmhug.hungryDelete": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable hungry delete functionality. When enabled, deletes all whitespace characters before cursor until non-whitespace character is reached."
         }
       }
     }

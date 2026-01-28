@@ -1,0 +1,31 @@
+{
+  "name": "2026-01-react-live",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "antd": "3.x",
+    "babel-plugin-import": "~1.0.1",
+    "lodash": "^4.17.21",
+    "react-live": "^2.4.1",
+    "react": "18",
+    "react-dom": "18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^9.2.1",
+    "babel-plugin-import": "^1.13.8",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

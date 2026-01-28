@@ -947,9 +947,6 @@ const hl_commonUtils = {
         const resp = xhr.responseText;
         // console.log('log resp: ', resp);
         success?.(resp);
-        const tuiInst = new toastui.Editor.factory({
-          el, initialValue: resp, viewer: true,
-        });
       }
     };
     xhr.open('GET', url, true);
@@ -1280,6 +1277,58 @@ const hl_chromeUtils = {
       await chrome.proxy.settings.clear({});
     }
     return proxyOn;
+  },
+  omnibox: ({ onEnterOrCancel = () => {} }) => {
+    let cacheText = '';
+    let langArg = '';
+
+    // 覆盖 生僻字 / 扩展区
+    const hasCh = (str) => /[\u3400-\u4DBF\u4E00-\u9FFF]/.test(str);
+    // const hasCh = (str) => /[\u4e00-\u9fa5]/.test(str);
+
+    // 在地址栏调用 Google 翻译 API 直接搜索
+    const suggestFn = (text, suggest) => {
+      if (text.length <= 1) {
+        suggest([]);
+        return;
+      }
+      langArg = hasCh(text) ? '&sl=zh-CN&tl=en': '&sl=en&tl=zh-CN';
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&q=${text}${langArg}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const resAry = data?.[0]?.[0];
+          if (resAry?.length) {
+            suggest([{
+              content: `${resAry?.[1]} | ${resAry?.[0]}`,
+              deletable: true,
+              description: `<dim>源: ${resAry?.[1]} 目标:</dim> <match>${resAry?.[0]}</match> <url>chrome://newtab</url>`
+            }]);
+          }
+        });
+    };
+    const changeDelay = hl_commonUtils.debounce(suggestFn, 300);
+    chrome.omnibox.setDefaultSuggestion({
+      description: '使用 google api 做翻译'
+    });
+    chrome.omnibox.onInputChanged.addListener((text, suggest) => {
+      // console.log('change', text);
+      cacheText = text;
+      return changeDelay(text, suggest);
+    });
+    chrome.omnibox.onInputCancelled.addListener(() => {
+      // console.log('onInputCancelled', cacheText);
+      if (cacheText.trim().length) {
+        void onEnterOrCancel(cacheText, langArg);
+      }
+    });
+    chrome.omnibox.onInputEntered.addListener(() => onEnterOrCancel(cacheText, langArg));
+    chrome.omnibox.onDeleteSuggestion.addListener((text) => {
+      // console.log('onDeleteSuggestion', text, cacheText);
+    });
+    chrome.omnibox.onInputStarted.addListener((text) => {
+      // console.log('onInputStarted', text, cacheText);
+    });
+
   },
 };
 

@@ -28,7 +28,11 @@ export function activate(context: ExtensionContext) {
   }));
 
   context.subscriptions.push(vscode.commands.registerCommand(`${cmdPrefix}.list`, () => {
+    window.showInformationMessage('List of Bookmarks:');
     for (const [fileName, lineNumber] of bookmarks.entries()) {
+      // console.log('log fileName: ', fileName);
+      window.showInformationMessage(`fileName: ${fileName} lineNumber: ${lineNumber}`);
+      return;
       vscode.workspace.openTextDocument(fileName).then(doc => {
         const position = new vscode.Position(lineNumber, 0); // 行号从零开始计数
         vscode.window.showTextDocument(doc).then(editor => {
