@@ -1,5 +1,5 @@
 {
-  "name": "2026-01-react-live",
+  "name": "2026-02-react-view",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
@@ -8,9 +8,9 @@
     "antd": "3.x",
     "babel-plugin-import": "~1.0.1",
     "lodash": "^4.17.21",
-    "react-live": "^2.4.1",
     "react": "18",
-    "react-dom": "18"
+    "react-dom": "18",
+    "react-view": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",

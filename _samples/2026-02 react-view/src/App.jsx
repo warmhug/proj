@@ -1,12 +1,15 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 
-import Live from './Live';
+import 'antd/dist/antd.css';
+import { Button } from 'antd';
+
+import Main from './Main';
 
 export default function HomePage() {
   return (
     <div>
-      <Live />
+      <Button>btn</Button>
+      <Main />
     </div>
   );
 }

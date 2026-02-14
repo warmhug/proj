@@ -3,15 +3,20 @@
 // const semver = require('semver');
 import semver from 'semver';
 
+let testVersions = [
+  '0.9.8', '0.9.9', '0.9.10',
+  '0.9.10-beta', '0.9.0-beta', '0.9.0-beta.1',
+  '0.9.11-beta.1',
+  // '0.9.9-beta', '0.9.9-beta.1',
+  // '0.9.9-alpha.2', '0.9.9-alpha.3', '0.9.9-rc',
+];
+testVersions = [
+  '0.9.10-beta', '0.9.0-beta', '0.9.0-beta.1', '0.9.0'
+];
+
 await test();
 async function test() {
-  const testVersions = [
-    '0.9.8', '0.9.9', '0.9.10',
-    '0.9.10-beta', '0.9.0-beta', '0.9.0-beta.1',
-    '0.9.11-beta.1',
-    // '0.9.9-beta', '0.9.9-beta.1',
-    // '0.9.9-alpha.2', '0.9.9-alpha.3', '0.9.9-rc',
-  ];
+
   console.log(
     'filter versions',
     testVersions.filter(v => semver.gte(v, '0.9.0-beta')),

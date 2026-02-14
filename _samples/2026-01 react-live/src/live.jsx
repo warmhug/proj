@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // console.log('log React: ', React);
 
-import { LiveError, LivePreview, LiveProvider, LiveEditor } from 'react-live';
+import { LiveError, LivePreview, LiveProvider, LiveEditor, LiveContext } from 'react-live';
 import { omit } from 'lodash';
 
 import { Icon, Button, Modal } from 'antd';
 import * as AntdComps from 'antd';
 // console.log('log AntdComps: ', AntdComps);
 
-import codes, { codeDemos } from './codes';
+import codes, { codeDemos } from './live-codes';
 
 const scope = {
   React,
@@ -17,11 +17,27 @@ const scope = {
   Icon,
 };
 
+function LiveIn(props) {
+  const liveCtx = useContext(LiveContext);
+  console.log('log liveCtx1: ', liveCtx);
+
+  return (
+    <div>
+      <LivePreview />
+      <LiveError />
+      <LiveEditor />
+    </div>
+  )
+}
+
 // https://github.com/FormidableLabs/react-live
 
 export default function Live() {
-  let code = codes[1];
-  // code = codeDemos[4];
+  const liveCtx = useContext(LiveContext);
+  console.log('log liveCtx: ', liveCtx);
+
+  let code = codes;
+  // code = codeDemos[3];
 
   let containerStyle = {
     width: 700, height: 500, margin: 20, border: '1px solid gray',
@@ -34,6 +50,8 @@ export default function Live() {
     // transform: 'scale(1)',
   };
   // containerStyle = {};
+
+  return <LiveProvider code={code} scope={scope}>{<LiveIn />}</LiveProvider>
 
   return (
     <LiveProvider code={code} scope={scope}>
