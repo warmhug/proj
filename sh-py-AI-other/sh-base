@@ -24,9 +24,6 @@ trap 'echo "Error occurred on line $LINENO"; exit 1' ERR
 trap 'echo "[WARN] 出现错误，但脚本继续运行"' ERR
 trap 'cleanup' EXIT
 
-echo $HOME
-echo $PWD
-
 command && success_action  # 当 command 成功时执行 success_action
 command || failure_action  # 当 command 失败时执行 failure_action
 my_function || echo "Function failed!"
@@ -41,6 +38,7 @@ export TERM=xterm-256color
 export TMP_VAR='tmp'  # 在 terminal 里临时设置环境变量
 unset npm_config_registry  # 删除特定 env
 unset npm_config_userconfig  # 删除特定 env
+echo $HOME $PWD
 
 [ -s "./scripts/script.sh" ] && \. "./scripts/script.sh"
 bash script.sh && fn_name
@@ -52,24 +50,6 @@ sh -c 'while true; do (ls -la); echo "- $(date +%H:%M:%S) -"; sleep 1; done'
 node -e "console.log(require('os').tmpdir())"
 node -e "import os from 'os'; console.log(os.homedir())" # node 老版本加 --input-type=module
 
-# 后台运行命令 & 和 nohup
-# 注意 & 会随着 terminal 的关闭 而自动停止运行
-# 在 bash 里用 & 启动的是 背景进程(子进程) 不是 背景线程
-/path/to/xx.sh >> /path/to/log.txt 2>&1 &
-ttyd -W -a zsh >> log.txt 2>&1 &
-# nohup 不会随着 terminal 的关闭而停止、会在 系统关闭 时停止运行
-nohup sleep 100 &
-echo $!  # 最后一个后台运行进程的 PID
-nohup bash -c 'your_command_here' > /dev/null 2>&1 &
-
-# 不同平台安装包 查看包管理器
-# Ubuntu/Debian `sudo apt-get install jq`
-# CentOS/Fedora `sudo yum install jq`
-command -v apt-get && echo "Debian/Ubuntu (apt)"
-command -v yum && echo "CentOS/RHEL (yum)"
-command -v dnf && echo "Fedora/RHEL8+ (dnf)"
-command -v apk && echo "Alpine Linux (apk)"
-
 local str="long...\
 实际不换行"
 local str1="第一行
@@ -78,6 +58,11 @@ local num=1
 local num="$num"2  # 或 num=${num}2
 local new_msg="Merged $(($num-1)) $((${num}-1)) commits"
 echo $str $str1 $num $new_msg
+
+local str1="\n\n第一行\n"
+echo $str1
+echo "[$str1]"  # 用 [] 包裹，看是否有空格/换行
+echo "Length: ${#str1}" # 查看字符串长度
 
 # 转义 引号
 local blank_path="/Applications/Google\" \"Chrome.app/Contents/MacOS/Google\" \"Chrome"
@@ -158,10 +143,6 @@ if [ "$1" -eq 1 ]; then
   return 0  # 成功
 fi
 
-if [[ "${a}" != "${b}" ]]; then
-  echo "a"
-fi
-
 if [ -s "./lib/sh/sync.sh" ]; then
   \. "./lib/sh/sync.sh"
   fn xx
@@ -172,11 +153,23 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+if [[ "${a}" != "${b}" ]]; then
+  echo "a"
+fi
+
 # if [[ -n $GIT_USER_NAME ]]; then
 if [[ "$NPM_TAG" =~ ^(alpha|beta|rc|latest)$ ]]; then
   echo "node ./build-publish.mjs"
 else
   echo "Local release is prohibited!"
+fi
+
+if [[ "$name" == "Alice" || "$name" == "Bob" ]]; then
+  echo "欢迎 Alice 或 Bob"
+fi
+
+if [[ "$name" == *Alice* ]]; then
+  echo "欢迎 xx Alice xx"
 fi
 
 while true; do

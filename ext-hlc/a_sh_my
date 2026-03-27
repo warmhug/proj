@@ -33,8 +33,51 @@ hl_setAlias() {
   alias aa='node /Users/hua/inner/infra1/ai/aaid-cli/dist/index.js'
   alias afc='find . -type f | wc -l'
   alias atmp='node -e "console.log(require(\"os\").tmpdir())"'
+  alias scr='scrcpy --shortcut-mod=lctrl --show-touches --stay-awake -m1024 -b2M'
 }
 hl_setAlias
+
+# adb 解锁 android 手机, 终端直接输入 locks
+locks() {
+  # set -x
+  # local screenState=$(adb shell dumpsys nfc | grep -e 'mScreenState=' -e 'Screen State:' | tr : = | cut -d '=' -f2)
+  local screenState=$(adb shell dumpsys display | grep mScreenState= | cut -d= -f2)
+  echo "Screen state: [$screenState] . Length: ${#screenState}"
+  if [[ "$screenState" == *OFF* ]]; then
+    echo "Screen is off. Waking up..."
+    adb shell input keyevent 26
+    sleep 1  # 给足时间亮屏
+    # 获取真实分辨率
+    res=$(adb shell wm size | grep -o '[0-9]\+x[0-9]\+$')
+    echo "$res"
+    width=${res%x*}
+    height=${res#*x}
+    echo "width: $width"
+    echo "height: $height"
+    # 计算安全滑动坐标（从底部 80% 滑到顶部 40%）
+    startX=$((width / 2))
+    startY=$((height * 8 / 10))
+    endY=$((height * 4 / 10))
+    echo "Swiping from ($startX, $startY) to ($startX, $endY)"
+    adb shell input touchscreen swipe $startX $startY $startX $endY
+    sleep 1.5
+    for i in {1..4}; do
+      # 查看密码坐标位置 0: 762 2736
+      adb shell input tap 762 2736
+      # adb shell input keyevent KEYCODE_0
+      sleep 0.2 # 给系统留出响应每个按键的时间
+    done
+    # 以下这些事件 有比较高 失败概率
+    # adb shell input text "0000"
+    # adb shell input keyevent KEYCODE_0
+    # adb shell input keyevent KEYCODE_ENTER
+    echo "Unlock attempted."
+  else
+    echo "Screen is on. Locking..."
+    adb shell input keyevent 26
+  fi
+  # set +x
+}
 
 hl_command_query="$1"
 hl_run_command() {
