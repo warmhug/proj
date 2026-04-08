@@ -96,13 +96,6 @@ const restore = (group: createEditorGroupType & EditorGroup) => {
   }));
 };
 
-const remove = async (group: EditorGroup) => {
-  const groups = getGroups();
-  const remaining = groups.filter(mGroup => mGroup !== group);
-  await updateGroups(remaining);
-  refresh();
-};
-
 const minAll = async () => {
   const groups = getGroups();
   const docs: any = [];
@@ -135,29 +128,20 @@ const minAll = async () => {
   refresh();
 };
 
-const rename = async (group: EditorGroup) => {
-  const groups = getGroups();
-  const oldGroup = groups.find(mGroup => mGroup === group);
-  const value = await vscode.window.showInputBox();
-  if (oldGroup) {
-    oldGroup.label = value || oldGroup.label;
-    await updateGroups(groups);
-    refresh();
-  }
-};
-
 const addToGroup = async (uri: vscode.Uri, addToDefault = false) => {
   const groups = getGroups();
+  console.log('log addToGroup: ', groups);
   const document = await vscode.workspace.openTextDocument(uri);
+  let selectedGroup: any;
   if (!document) {
-    vscode.window.showErrorMessage(`文档不存在`);
+    vscode.window.showErrorMessage(`文档不存在, 退出`);
     return;
   }
-  let selectedGroup: any;
-  if (!groups?.length) {
-    vscode.window.showInformationMessage(`还没有创建组`);
-  }
   if (!addToDefault) {
+    if (!groups?.length) {
+      vscode.window.showInformationMessage(`还没有创建组, 退出`);
+      return;
+    }
     const picked = await vscode.window.showQuickPick(groups.map(group => group.label));
     selectedGroup = groups.find(group => group.label === picked);
   } else {
@@ -172,10 +156,11 @@ const addToGroup = async (uri: vscode.Uri, addToDefault = false) => {
   }
   if (!selectedGroup?.documents?.find(doc => doc.document?.fileName == document?.fileName)) {
     selectedGroup?.documents.push({ document });
-    vscode.window.showInformationMessage(`Added to ${selectedGroup?.label || 'defaullt'}`);
+    vscode.window.showInformationMessage(`Added to ${selectedGroup?.label || 'default'}`);
   } else {
     vscode.window.showInformationMessage(`已存在`);
   }
+  // vscode.window.showInformationMessage(`end: add to group`);
   // createOutputChannel({
   //   content: `selectedGroup: ` + JSON.stringify(selectedGroup, null, 2),
   //   open: true,
@@ -186,12 +171,13 @@ const addToGroup = async (uri: vscode.Uri, addToDefault = false) => {
 
 const removeFromGroup = async (group: createEditorGroupType & EditorGroup) => {
   const groups = getGroups();
+  console.log('log removeFromGroup: ', groups, group);
   // createOutputChannel({
   //   content: `removeFromGroup: ` + JSON.stringify({group,groups}, null, 2),
   //   open: true,
   // });
   if (group.parent) {
-    const oldGroupIdx = groups.findIndex(mGroup => mGroup === group.parent);
+    const oldGroupIdx = groups.findIndex(mGroup => mGroup?.label === (group.parent as any)?.label);
     if (oldGroupIdx >= 0) {
       const oldGroup = groups[oldGroupIdx];
       const i = oldGroup?.documents.findIndex(doc => doc.document?.fileName === group.document?.fileName) ?? -1;
@@ -247,9 +233,7 @@ export function activate(context: ExtensionContext) {
     // });
     minAll();
   });
-  vscode.commands.registerCommand(`${cmdPrefix}.remove`, remove);
   vscode.commands.registerCommand(`${cmdPrefix}.restore`, restore);
-  vscode.commands.registerCommand(`${cmdPrefix}.rename`, rename);
   vscode.commands.registerCommand(`${cmdPrefix}.dispose`, dispose);
   vscode.commands.registerCommand(`${cmdPrefix}.addToDefaultGroup`, (
     uri: vscode.Uri, a,b,

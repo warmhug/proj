@@ -40,6 +40,10 @@ unset npm_config_registry  # 删除特定 env
 unset npm_config_userconfig  # 删除特定 env
 echo $HOME $PWD
 
+# 如果包含大型 node_modules ** 递归搜索可能会让 shell 启动变慢
+HL_SH=($HOME/inner/a/_proj/**/a_sh_my(N))
+[ -s "$HL_SH[1]" ] && . "$HL_SH[1]"
+
 [ -s "./scripts/script.sh" ] && \. "./scripts/script.sh"
 bash script.sh && fn_name
 bash script.sh fn_name  # 需要在脚本里 $1 为 fn_name 时手动执行一下
@@ -69,6 +73,7 @@ local blank_path="/Applications/Google\" \"Chrome.app/Contents/MacOS/Google\" \"
 # \空格 保留
 local blank_path=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 local blank_path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+local blank_path=~/Library/"Application Support"/Google/Chrome
 local escaped_blank_path=${blank_path////\\/}
 echo $escaped_blank_path
 data_str="master-"$(date +"%Y%m%d-%H%M%S")

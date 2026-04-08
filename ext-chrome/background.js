@@ -70,7 +70,11 @@ const hl_inject_ai_fns = [
 ];
 
 const hl_inject_auto_urls = [
-  ["https://*.google.com/*", "https://*.bing.com/*", "https://*.baidu.com/*"],
+  [
+    // "https://*.google.com/*",
+    "https://google.com/*", "https://www.google.com/*",
+    "https://*.bing.com/*", "https://*.baidu.com/*"
+  ],
   "https://www.zhihu.com/",
   "https://i.mi.com/note/h5#/",
   "https://note.txxx.tea/"
@@ -145,7 +149,7 @@ const saveResult = async (text, langArg = '&sl=zh-CN&tl=en') => {
   if (!txt) {
     return;
   }
-  const { hl_page_ext_index, hl_page_my_index } = await hl_utils.getStorage(null);
+  const { hl_page_ext_index } = await hl_utils.getStorage(null);
   const [curTab] = await chrome.tabs.query({ active: true });
   console.log('log curTab: ', curTab);
   const newTranslateUrl = `https://translate.google.com/?op=translate&text=${txt}${langArg}`;
@@ -161,11 +165,6 @@ const saveResult = async (text, langArg = '&sl=zh-CN&tl=en') => {
   }
   if (curTab.url.indexOf(hl_page_ext_index) > -1) {
     sendMsg(newTranslateUrl);
-  } else if (curTab.url.indexOf(hl_page_my_index) > -1) {
-    chrome.tabs.create({ url: hl_page_ext_index, index: curTab.index });
-    setTimeout(() => {
-      sendMsg(newTranslateUrl);
-    }, 800);
   } else {
     chrome.tabs.create({ url: newTranslateUrl, index: curTab.index });
   }
@@ -202,7 +201,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   const result = hl_utils.asyncMap(hl_inject_auto_urls, async (url, idx) => {
     const queryTabs = await chrome.tabs.query({ url: url });
     return await hl_utils.asyncMap(queryTabs, async (qTab) => {
-      if (qTab.id = tabId) {
+      if (qTab.id == tabId) {
         // 自动注入的内容
         const { css = '', ...rest } = hl_inject_auto_params[idx];
         await chrome.scripting.insertCSS({ target: { tabId }, css });

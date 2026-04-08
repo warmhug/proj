@@ -1,12 +1,4 @@
 
-hl_ext_root="$HOME/inner/a/_proj/ext-hlc"
-hl_ext_note="$hl_ext_root/z_note.md"
-export hl_ext_log="$hl_ext_root/z_log"
-
-hl_ext_backup="$HOME/_backup"
-hl_ext_note_bk="$hl_ext_backup/z_note_"
-hl_command_flag="$HOME/hl_command_flag"
-
 hl_setAlias() {
   alias omz-update='cd ~/.oh-my-zsh && git pull && cd - > /dev/null'
 
@@ -78,6 +70,14 @@ locks() {
   fi
   # set +x
 }
+
+hl_ext_root="$HOME/inner/a/_proj/ext-chrome"
+hl_ext_note="$hl_ext_root/z_note.md"
+export hl_ext_log="$hl_ext_root/z_log"
+
+hl_ext_backup="$HOME/_backup"
+hl_ext_note_bk="$hl_ext_backup/z_note_"
+hl_command_flag="$HOME/hl_command_flag"
 
 hl_command_query="$1"
 hl_run_command() {

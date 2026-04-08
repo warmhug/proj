@@ -246,15 +246,14 @@
 
   // 不能用 ~ 表示用户
   const filePaths = [
-    ['.npmrc', '/Users/hua/.npmrc'],
-    ['ss.yaml', '/Users/hua/.config/clash/ss.yaml'],
+    // ['.npmrc', '/Users/hua/.npmrc'],
     // ['ss.yaml(clash-meta)', '/Users/hua/.config/clash.meta/ss.yaml'],
+    ['ss.yaml', '/Users/hua/.config/clash/ss.yaml'],
     ['.zshrc', '/Users/hua/.zshrc'],
     ['.zsh_history', '/Users/hua/.zsh_history'],
     ['.gitconfig', '/Users/hua/.gitconfig'],
     ['.gitconfig-github', '/Users/hua/.gitconfig-github'],
     ['apache', '/etc/apache2/httpd.conf'],
-    ['a_sh_nm.json', '/Users/hua/Library/Application Support/Google/Chrome/NativeMessagingHosts/a_sh_nm.json'],
   ];
   const nativeCmds = [
     ['~/.config/clash', 'open /Users/hua/.config/clash'],

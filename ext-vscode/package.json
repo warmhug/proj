@@ -1,15 +1,15 @@
 {
   "version": "0.0.1",
-  "name": "ext-hlv",
-  "displayName": "aa-ext-hlv",
+  "name": "ext-vscode-hl",
+  "displayName": "aa-ext-vscode-hl",
   "publisher": "warmhug",
   "repository": {
     "type": "git",
-    "url": "https://github.com/warmhug/proj.git"
+    "url": "https://github.com/warmhug/_proj.git"
   },
   "main": "./dist/extension.js",
   "scripts": {
-    "pack": "vsce package && code --install-extension ext-hlv-0.0.1.vsix && code-insiders --install-extension ext-hlv-0.0.1.vsix",
+    "pack": "vsce package && code --install-extension ext-vscode-hl-0.0.1.vsix && code-insiders --install-extension ext-vscode-hl-0.0.1.vsix",
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
@@ -72,18 +72,6 @@
         }
       },
       {
-        "command": "warmhug.minimizer.remove",
-        "title": "warmhug-minimizer: Remove",
-        "icon": {
-          "light": "images/light/clear.svg",
-          "dark": "images/dark/clear.svg"
-        }
-      },
-      {
-        "command": "warmhug.minimizer.rename",
-        "title": "warmhug-minimizer: Rename"
-      },
-      {
         "command": "warmhug.minimizer.addToGroup",
         "title": "warmhug-minimizer: Add to a Minimized Group"
       },
@@ -102,14 +90,6 @@
       {
         "command": "warmhug.minimizer.dispose",
         "title": "warmhug-minimizer: dispose"
-      },
-      {
-        "command": "warmhug.simpleBookmark.add",
-        "title": "warmhug: Add Bookmark"
-      },
-      {
-        "command": "warmhug.simpleBookmark.list",
-        "title": "warmhug: List Bookmarks"
       },
       {
         "command": "warmhug.autoHide.enable",
@@ -138,10 +118,6 @@
       {
         "command": "warmhug.asciiArtFavFont",
         "title": "warmhug-asciiArt: ascii art fav font"
-      },
-      {
-        "command": "warmhug.closeTag",
-        "title": "warmhug: Close Tag"
       },
       {
         "command": "warmhug.toggleFilesizeInfo",
@@ -189,11 +165,7 @@
       "editor/lineNumber/context": [
         {
           "group": "z_commands",
-          "command": "warmhug.simpleBookmark.add"
-        },
-        {
-          "group": "z_commands",
-          "command": "warmhug.simpleBookmark.list"
+          "command": "warmhug.demo"
         }
       ],
       "view/title": [
@@ -208,25 +180,12 @@
       ],
       "view/item/context": [
         {
-          "command": "warmhug.minimizer.remove",
-          "when": "view == warmhugPanel && viewItem == editorGroup",
-          "group": "inline"
-        },
-        {
           "command": "warmhug.minimizer.restore",
           "when": "view == warmhugPanel && viewItem == editorGroup",
           "group": "inline"
         },
         {
-          "command": "warmhug.minimizer.remove",
-          "when": "view == warmhugPanel && viewItem == editorGroup"
-        },
-        {
           "command": "warmhug.minimizer.restore",
-          "when": "view == warmhugPanel && viewItem == editorGroup"
-        },
-        {
-          "command": "warmhug.minimizer.rename",
           "when": "view == warmhugPanel && viewItem == editorGroup"
         },
         {
@@ -258,11 +217,6 @@
         "command": "warmhug.asciiArtFav",
         "key": "Ctrl+Alt+1",
         "when": "editorHasSelection"
-      },
-      {
-        "command": "warmhug.closeTag",
-        "key": "alt+.",
-        "mac": "cmd+alt+."
       },
       {
         "command": "warmhug.insertLogStatement",
@@ -346,35 +300,6 @@
           "type": "string",
           "default": "Standard",
           "description": "Favorite ASCII font (case sensitive)."
-        },
-        "warmhug.autoCloseTag.excludedTags": {
-          "type": "array",
-          "default": [
-            "area",
-            "base",
-            "br",
-            "col",
-            "command",
-            "embed",
-            "hr",
-            "img",
-            "input",
-            "keygen",
-            "link",
-            "meta",
-            "param",
-            "source",
-            "track",
-            "wbr"
-          ],
-          "description": "Set the tag list that would not be auto closed.",
-          "scope": "resource"
-        },
-        "warmhug.autoCloseTag.insertSpaceBeforeSelfClosingTag": {
-          "type": "boolean",
-          "default": false,
-          "description": "Insert a space before the forward slash in a self-closing tag.",
-          "scope": "resource"
         },
         "warmhug.showGzipFilesizeInStatusBar": {
           "type": "boolean",

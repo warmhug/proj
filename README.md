@@ -660,7 +660,9 @@ npm link  # cd my-lib , 会创建 globally-installed my-lib
 npm link my-lib  # cd my-app
 # 使用 file: 协议替代 link , 不会创建 globally-installed my-lib
 npm install ../path/to/my-lib
-ln -s /abs/path/to/my-cli ./node_modules/my-cli  # 手动软链接 node_modules
+# ln -sf [源文件] [目标链接] . [源文件] 建议使用绝对路径 . 建立/更新软链接 (-f 强制覆盖旧链接)
+ln -s /abs/path/to/my-cli.js ./node_modules/my-cli.js  # 手动软链接 node_modules
+ls -l ./node_modules/my-cli.js  # 验证链接是否成功
 
 # npm monorepo 在根目录运行 npm v7(2020-10发布) 支持 Workspaces
 npm version 0.1.5 --workspaces --no-git-tag-version --allow-same-version=true
@@ -707,7 +709,6 @@ node --inspect-brk /Users/hua/.nvm/versions/node/v20.19.5/bin/aaid
 ls -la node_modules/react  # node_modules/react -> ../../.pnpm/react@18.2.0/node_modules/react
 
 pnpm install --dir ./dir  # 自动进去指定目录安装. 同 npm install --prefix ./dir
-pnpm install --frozen-lockfile  # 流水线里安装
 # 只安装某个子包的依赖. 不推荐 cd 进入子目录安装 无法链接内部依赖, 破坏单一锁文件, 依赖版本冲突
 pnpm install --filter <package_name>
 pnpm --filter "@huajs/demo..." build
@@ -729,8 +730,11 @@ pnpm add express@2 react@">=0.1.0 <0.2.0"
 pnpm add ./package.tar.gz
 pnpm add ./some-directory  # same as running pnpm link
 
-rm -rf "$(pnpm store path)"
-pnpm store prune
+# 干净环境 安装 (当切换 registry 时)
+rm -rf "$(pnpm store path)" && pnpm store prune
+pnpm install --force  # --no-frozen-lockfile
+pnpm install --frozen-lockfile  # 流水线里安装
+
 pnpm import package‑lock.json  # 导入 npm lock 或 npm-shrinkwrap.json 文件
 pnpx create-react-app@next ./my-app  # npm 的 npx 等效于 pnpm 的 pnpx = pnpm dlx
 
@@ -782,7 +786,7 @@ strict-peer-dependencies=false  # pnpm@7 默认是 true
 # package-manager-strict=true  # since v9 默认 true , v10 packageManagerStrict
 # resolution-mode=lowest-direct
 lockfile=false
-# lockfile-include-tarball-url=false  # 实际不起作用
+# lockfile-include-tarball-url=false  # 实际不起作用 2026-04-07 pnpm@10.33.0
 recursive-install=false
 reporter=append-only
 pnpmfile=node_modules/.pnpm-config/@pnpm/types-fixer/pnpmfile.cjs
@@ -1297,6 +1301,7 @@ ffplay input.mp4 -vf "crop=1280:720:320:180"  # 裁剪视频 预览
 # 2x 倍速压缩, 没有音频
 ffmpeg -i input.mov -filter:v "setpts=0.5*PTS" -crf 28 -preset fast 2x_compressed.mp4
 ```
+https://cloudconvert.com/
 https://videocompressors.com/
 
 文件传输
@@ -1519,8 +1524,13 @@ workbench.extensions.action.enableAllInstalledExtensions
 vscode 有个内置插件, 能检测 typescript 的语法, 不小心关掉了怎么重开?
 2025-04-07
 
+vscode://file/Users/hua/.zshrc
+https://vscode.dev/ 编辑本地文件
+https://insiders.vscode.dev/ (chrome129 新增 FileSystemObserver)
+2024-09
 
------- vscode
+
+------
 
 工作空间
 /Users/hua/Downloads
@@ -1939,6 +1949,7 @@ echo "system: $HOME $PATH $SHELL"
 printenv HOME  # 打印环境变量
 printenv | grep npm_config  # 查看所有 npm 设置的 env
 type/which/whereis npm  # fn_name  type -a node / pwd
+hash -r  # 处理 $PATH 里查找路径不对
 
 say hello
 open -a Activity\ Monitor # 打开活动监视器 或者 "Activity Monitor"
@@ -2343,6 +2354,13 @@ iOS 快捷指令
 
 ## 自动化
 > 2021 ~ 2026
+
+
+adb 能否获取手机粘贴板数据
+  不行: adb shell service call clipboard 1
+  手机安装 Clipper 电脑运行 adb shell am broadcast -a clipper.get
+https://chatgpt.com/c/69c8f324-8bac-8323-9621-76874e049165
+2026-03-29
 
 https://github.com/tailscale/tailscale
 2026-03

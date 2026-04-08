@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# #!/bin/bash
-# /bin/zsh
+#!/bin/bash
+
+# zsh 有问题
+#!/bin/zsh
 
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 
