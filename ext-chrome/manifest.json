@@ -20,10 +20,6 @@
       },
       "description": "打开此扩展的 popup 页面"
     },
-    "AIChat": {
-      "suggested_key": "Ctrl+Shift+V",
-      "description": "AI对话"
-    },
     "openGoogTl": {
       "global": true,
       "suggested_key": "Ctrl+Shift+2",

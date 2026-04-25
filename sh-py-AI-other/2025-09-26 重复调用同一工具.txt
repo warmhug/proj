@@ -1,0 +1,536 @@
+====== requestStreamingPost start - 2025-9-26_14-2-452
+{
+  "model": "/mnt/posfs/globalmount/model/openai/gpt-oss-120b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an interactive CLI agent __omit_for_short_log__"
+    },
+    {
+      "role": "user",
+      "content": "This is the xxx CLI. We are setting up the context __omit_for_short_log__"
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. Thanks for the context!"
+    },
+    {
+      "role": "user",
+      "content": "Here is the user's editor context as a JSON object. This is for your information only.\n```json\n{\n  \"activeFile\": {\n    \"path\": \"/Users/hua/inner/xxx-service/start.sh\",\n    \"cursor\": {\n      \"line\": 21,\n      \"character\": 24\n    }\n  },\n  \"otherOpenFiles\": [\n    \"/Users/hua/inner/xxx-service/main.py\",\n    \"/Users/hua/inner/pro-components/package.json\"\n  ]\n}\n```"
+    },
+    {
+      "role": "user",
+      "content": "该服务的主流程是: 在 main.py 里接收客户端的 v1/chat/completions 请求, 转发到 vllm serve 的服务上. \n先把字符串 /mnt/posfs/globalmount/model/openai/gpt-oss-120b 设置为一个环境变量 MODEL_GPT_OSS_120B 能在用到的几个文件里复用.\n另外支持 新增比如 gpt-oss-20b 的模型, 但需要在 main.py 兼容 gpt-oss-20b 和 gpt-oss-120b 情况, 修改客户端的请求参数里 model 值为 gpt-oss 即可, 背后是 120b或 20b 不用感知到."
+    }
+  ],
+  "temperature": 0,
+  "top_p": 1,
+  "max_tokens": 20000,
+  "tools": [
+    "__omit_for_short_log__"
+  ]
+}
+
+
+
+
+====== requestStreamingPost res gpt-oss - 2025-9-26_14-2-320
+{
+  "id": "chatcmpl-92464181503540ff9ff225fe4fd70c31",
+  "object": "chat.completion",
+  "created": 1758866553,
+  "model": "/mnt/posfs/globalmount/model/openai/gpt-oss-120b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[tool_call: read_file for absolute_path '/Users/hua/inner/xxx-service/main.py']",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-d025bcd8093249f6b28561a83f733c1d",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"offset\": 0,\n  \"limit\": 2000\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-55e742c2d11448b0af0d97b35268cb80",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-da8be39ae79a46d9ae29afbc37169d2d",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"offset\": 0,\n  \"limit\": 2000\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-d23f0ae1c0194108889f44e459c42876",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/start.sh\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-2054bd22df9141098e0411265014aeed",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/python_requirements.txt\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-de03e79e89da434a81df1004116996b9",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/check_env.py\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-8a7023d5093e4d8e833d2b0367b64ce7",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/demo.mjs\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-d16156268f4f42459bc2bcf5ee718852",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/demo-data.mjs\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-9ae9a2c39c054e2baf555c7e663bec6b",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/mock_http.py\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-adee2b9b0ddd4bad8f3c49f4a7a40203",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/README.md\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-67525c6b00214fd5814b63bcd2eb69d6",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"limit\": 500\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-87ed031a711040929e1193de68929730",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"offset\": 0,\n  \"limit\": 200\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-66c46ba6870b411dbb36334269113840",
+            "type": "function",
+            "function": {
+              "name": "read_many_files",
+              "arguments": "{\n  \"paths\": [\"main.py\"]\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-e906ce865d3a4ccba9fe41a3b436e19b",
+            "type": "function",
+            "function": {
+              "name": "list_directory",
+              "arguments": "{\n  \"path\": \"/Users/hua/inner/xxx-service\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-feb3a42080824e9e9c031542bc9d8e08",
+            "type": "function",
+            "function": {
+              "name": "list_directory",
+              "arguments": "{\n  \"path\": \"/Users/hua/inner/xxx-service\",\n  \"ignore\": []\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-00cbdd03564b4e3ca38d12ba58659cfe",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/README.md\",\n  \"limit\": 200\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-2175cfd1eee345f0ae93bfecb20e3b5f",
+            "type": "function",
+            "function": {
+              "name": "search_file_content",
+              "arguments": "{\n  \"pattern\": \"def \",\n  \"path\": \"/Users/hua/inner/xxx-service\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-d6126b4d08f5423d91dcf2f42bb96392",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/.gitignore\",\n  \"limit\": 200\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-32e6879735cc44ac95ef058aafd86530",
+            "type": "function",
+            "function": {
+              "name": "run_shell_command",
+              "arguments": "{\n  \"command\": \"ls -R\",\n  \"description\": \"list all files\"\n}"
+            }
+          },
+          {
+            "id": "chatcmpl-tool-6f54f10655a34b898e12a592798721a4",
+            "type": "function",
+            "function": {
+              "name": "list_directory",
+              "arguments": "{\n  \"path\": \"/Users/hua/inner/xxx-service\"\n}"
+            }
+          }
+        ],
+        "reasoning_content": "The user is speaking Chinese. They describe the service's main flow: main.py receives client v1/chat/completions request, forwards to vllm serve service. Need to set string \"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\" as an environment variable MODEL_GPT_OSS_120B to be reused in several files. Also support adding new model like gpt-oss-20b, but main.py should be compatible with both gpt-oss-20b and gpt-oss-120b; modify client request parameter model value to \"gpt-oss\", and backend should map to appropriate model (120b or 20b) without client needing to know.\n\nSo tasks: define env var, maybe in start.sh or elsewhere. Also modify main.py to map model name \"gpt-oss\" to actual model path based on maybe another env var or config. Possibly add env var for 20b path. Provide code changes.\n\nWe need to inspect current files. Let's list main.py.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"offset\": 0,\n  \"limit\": 2000\n}\n\n\nWe need to see content.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\"\n}\n\n\nWe need output.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"offset\": 0,\n  \"limit\": 2000\n}\nWe haven't gotten output yet. Possibly tool returns. Let's wait.\n\nWe need to see start.sh too.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/start.sh\"\n}\n\nNow we need to see python_requirements maybe.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/python_requirements.txt\"\n}\n\nNow we need to see check_env.py.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/check_env.py\"\n}\n\nNow maybe demo files.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/demo.mjs\"\n}\n\nNow demo-data.mjs.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/demo-data.mjs\"\n}\n\nNow mock_http.py.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/mock_http.py\"\n}\n\nNow we need to see README maybe.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/README.md\"\n}\n\nNow we have content. Let's view outputs.\nWe haven't seen any output; maybe the tool returns after some time. Let's try again with smaller limit.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"limit\": 500\n}\n\nWe need to see output. Possibly the tool returns a JSON with content. Let's try reading many files at once? But first need to see main.py content. Maybe the tool didn't respond due to large file? Let's try reading first 200 lines.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/main.py\",\n  \"offset\": 0,\n  \"limit\": 200\n}\n\nWe still haven't got output. Possibly the tool returns but not displayed? Let's try a different approach: use read_many_files with pattern.\n{\n  \"paths\": [\"main.py\"]\n}\n\nMaybe the tool is not returning due to some issue. Let's try list_directory to see files.\n{\n  \"path\": \"/Users/hua/inner/xxx-service\"\n}\n\nWe need to see output. Possibly the tool returns but not displayed. Let's try to capture output. Maybe the tool returns a JSON with \"files\". Let's try again with ignore none.\n{\n  \"path\": \"/Users/hua/inner/xxx-service\",\n  \"ignore\": []\n}\n\nIt seems the tool calls are not returning visible output. Possibly the environment expects us to wait for response. Let's try a simpler file like README.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/README.md\",\n  \"limit\": 200\n}\n\nMaybe the tool returns but not displayed due to formatting. Let's try to capture output in a variable? Not possible. Possibly the tool returns but we need to view the response. Let's try a different approach: use search_file_content for a pattern like \"def\".\n{\n  \"pattern\": \"def \",\n  \"path\": \"/Users/hua/inner/xxx-service\"\n}\n\nNo output. Something is off. Maybe the tool requires relative path? But spec says absolute. We gave absolute. Could be permission? Let's try reading a small file like .gitignore.\n{\n  \"absolute_path\": \"/Users/hua/inner/xxx-service/.gitignore\",\n  \"limit\": 200\n}\n\nNo output. Possibly the tool is not returning because we need to include \"offset\"? Not needed. Could be that the tool returns but we need to capture? The interface may be that after tool call, the system will output the result. But we haven't seen any. Maybe we need to wait for the tool to respond. Let's try a simple command: run_shell_command 'ls -R' to see.\n{\n  \"command\": \"ls -R\",\n  \"description\": \"list all files\"\n}\n\nNo output. Something is wrong with tool calls. Possibly the environment expects us to include \"directory\" param? Not needed. Could be that the tool calls are being suppressed because we need to include \"analysis\" channel? Already.\n\nMaybe the tool calls need to be separate messages? The format is [tool_call: function_name ...]. The system expects us to output a JSON-like call. We used the function call format. It should respond with tool output. But we haven't seen any. Possibly the tool is not executed due to missing \"analysis\" channel? We are in analysis channel. Should be fine.\n\nLet's try a simpler call: list_directory.\n{\n  \"path\": \"/Users/hua/inner/xxx-service\"\n}\n\nNo output. Could be that the tool calls are not being processed because we need to output them as a separate message, not within analysis? The guidelines: Use tool calls directly, not embed in analysis. We need to output a message with the tool call. In this environment, we should produce a JSON with \"tool_call\". The earlier examples show \"[tool_call: read_file for absolute_path '/path/to/main.py']\". So we need to output that format. Let's do that.\n\nWe need to read main.py."
+      },
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 7637,
+    "total_tokens": 9531,
+    "completion_tokens": 1894,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}
+
+
+
+
+====== requestStreamingPost start - 2025-9-26_14-3-767
+{
+  "model": "/mnt/posfs/globalmount/model/openai/gpt-oss-120b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an interactive CLI agent __omit_for_short_log__"
+    },
+    {
+      "role": "user",
+      "content": "This is the xxx CLI. We are setting up the context __omit_for_short_log__"
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. Thanks for the context!"
+    },
+    {
+      "role": "user",
+      "content": "Here is the user's editor context as a JSON object. This is for your information only.\n```json\n{\n  \"activeFile\": {\n    \"path\": \"/Users/hua/inner/xxx-service/start.sh\",\n    \"cursor\": {\n      \"line\": 21,\n      \"character\": 24\n    }\n  },\n  \"otherOpenFiles\": [\n    \"/Users/hua/inner/xxx-service/main.py\",\n    \"/Users/hua/inner/pro-components/package.json\"\n  ]\n}\n```"
+    },
+    {
+      "role": "user",
+      "content": "该服务的主流程是: 在 main.py 里接收客户端的 v1/chat/completions 请求, 转发到 vllm serve 的服务上. \n先把字符串 /mnt/posfs/globalmount/model/openai/gpt-oss-120b 设置为一个环境变量 MODEL_GPT_OSS_120B 能在用到的几个文件里复用.\n另外支持 新增比如 gpt-oss-20b 的模型, 但需要在 main.py 兼容 gpt-oss-20b 和 gpt-oss-120b 情况, 修改客户端的请求参数里 model 值为 gpt-oss 即可, 背后是 120b或 20b 不用感知到."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-d025bcd8093249f6b28561a83f733c1d",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/main.py\",\"offset\":0,\"limit\":2000}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-55e742c2d11448b0af0d97b35268cb80",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/main.py\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-da8be39ae79a46d9ae29afbc37169d2d",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/main.py\",\"offset\":0,\"limit\":2000}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-d23f0ae1c0194108889f44e459c42876",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/start.sh\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-2054bd22df9141098e0411265014aeed",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/python_requirements.txt\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-de03e79e89da434a81df1004116996b9",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/check_env.py\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-8a7023d5093e4d8e833d2b0367b64ce7",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/demo.mjs\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-d16156268f4f42459bc2bcf5ee718852",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/demo-data.mjs\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-9ae9a2c39c054e2baf555c7e663bec6b",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/mock_http.py\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-adee2b9b0ddd4bad8f3c49f4a7a40203",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/README.md\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-67525c6b00214fd5814b63bcd2eb69d6",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/main.py\",\"limit\":500}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-87ed031a711040929e1193de68929730",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/main.py\",\"offset\":0,\"limit\":200}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-66c46ba6870b411dbb36334269113840",
+          "type": "function",
+          "function": {
+            "name": "read_many_files",
+            "arguments": "{\"paths\":[\"main.py\"]}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-e906ce865d3a4ccba9fe41a3b436e19b",
+          "type": "function",
+          "function": {
+            "name": "list_directory",
+            "arguments": "{\"path\":\"/Users/hua/inner/xxx-service\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-feb3a42080824e9e9c031542bc9d8e08",
+          "type": "function",
+          "function": {
+            "name": "list_directory",
+            "arguments": "{\"path\":\"/Users/hua/inner/xxx-service\",\"ignore\":[]}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-00cbdd03564b4e3ca38d12ba58659cfe",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/README.md\",\"limit\":200}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-2175cfd1eee345f0ae93bfecb20e3b5f",
+          "type": "function",
+          "function": {
+            "name": "search_file_content",
+            "arguments": "{\"pattern\":\"def \",\"path\":\"/Users/hua/inner/xxx-service\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-d6126b4d08f5423d91dcf2f42bb96392",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"absolute_path\":\"/Users/hua/inner/xxx-service/.gitignore\",\"limit\":200}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-32e6879735cc44ac95ef058aafd86530",
+          "type": "function",
+          "function": {
+            "name": "run_shell_command",
+            "arguments": "{\"command\":\"ls -R\",\"description\":\"list all files\"}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-6f54f10655a34b898e12a592798721a4",
+          "type": "function",
+          "function": {
+            "name": "list_directory",
+            "arguments": "{\"path\":\"/Users/hua/inner/xxx-service\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-d025bcd8093249f6b28561a83f733c1d",
+      "content": "from mock_http import MockHTTPConnection\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\nimport http.client\nimport urllib.parse\nimport os\nimport json\n\n# VLLM_HOST = \"127.0.0.1\"\nVLLM_HOST = os.environ.get(\"VLLM_HOST\", \"127.0.0.1\")\nVLLM_PORT = int(os.environ.get(\"VLLM_PORT\", \"8000\"))\nROUTE_PREFIX = os.environ.get(\"ROUTE_PREFIX\", \"/vllm\")\nAUTO_JSON = os.environ.get(\"AUTO_JSON_CONTENT_TYPE\", \"1\") == \"1\"\nDEBUG = os.environ.get(\"DEBUG_PROXY\", \"1\") == \"1\"\nMOCK = os.environ.get(\"MOCK\", \"0\") == \"1\"\n\n# hop-by-hop headers we must NOT forward to the client as-is\nHOP_BY_HOP = {\n    \"connection\",\n    \"keep-alive\",\n    \"proxy-authenticate\",\n    \"proxy-authorization\",\n    \"te\",\n    \"trailer\",\n    \"transfer-encoding\",\n    \"upgrade\"\n}\n\ndef log_body(body):\n    if body:\n        try:\n            print(f\"Body: {body.decode('utf-8')}\")\n        except:\n            print(f\"Body (raw bytes): {body}\")\n\nclass ProxyHandler(BaseHTTPRequestHandler):\n    def do_OPTIONS(self):\n        # respond to preflight\n        self.send_response(204)\n        self.send_cors_headers()\n        self.end_headers()\n\n    def do_GET(self):\n        if self.path == \"/api/health/ready\":\n            self.send_response(200)\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.end_headers()\n            self.wfile.write(b'{\"status\": \"ok\"}')\n        else:\n            self.forward_request(\"GET\")\n\n    def do_POST(self): self.forward_request(\"POST\")\n    def do_PUT(self): self.forward_request(\"PUT\")\n    def do_DELETE(self): self.forward_request(\"DELETE\")\n    def do_PATCH(self): self.forward_request(\"PATCH\")\n\n    def send_cors_headers(self):\n        self.send_header(\"Access-Control-Allow-Origin\", \"*\")\n        self.send_header(\"Access-Control-Allow-Methods\", \"GET, POST, PUT, DELETE, PATCH, OPTIONS\")\n        self.send_header(\"Access-Control-Allow-Headers\", \"Content-Type, Authorization, Accept\")\n        self.send_header(\"Access-Control-Expose-Headers\", \"Content-Length, Content-Type\")\n\n    def _log_request(self, method, path, headers, body):\n        \"\"\"print req\"\"\"\n        print(\"\\n\\n==== Proxy req ====\")\n        print(f\"Method: {method}\")\n        print(f\"Forward Path: {path}\")\n        print(f\"Headers: {headers}\")\n        log_body(body)\n        print(\"==== Proxy req end ====\")\n\n    def _log_response(self, status, headers, body, path):\n        \"\"\"print res\"\"\"\n        print(\"\\n\\n==== Proxy res ====\")\n        print(f\"Status: {status}\")\n        print(f\"Forward Path: {path}\")\n        print(\"Response Headers:\", headers)\n        log_body(body)\n        print(\"==== Proxy res end ====\")\n\n    def _prepare_forwarded_request(self, method):\n        parsed_url = urllib.parse.urlparse(self.path)\n\n        forward_path = parsed_url.path\n        if forward_path.startswith(ROUTE_PREFIX):\n            forward_path = forward_path[len(ROUTE_PREFIX):]\n        if not forward_path:\n            forward_path = \"/\"\n        if parsed_url.query:\n            forward_path += \"?\" + parsed_url.query\n\n        # read body if present\n        body = None\n        # Since BaseHTTPRequestHandler, same as \"content-length\" in self.headers\n        if \"Content-Length\" in self.headers:\n            try:\n                length = int(self.headers[\"Content-Length\"])\n                if length > 0:\n                    body = self.rfile.read(length)\n            except Exception:\n                body = None\n\n        if body:\n            try:\n                body_json = json.loads(body.decode(\"utf-8\"))\n                if isinstance(body_json, dict) and \"data\" in body_json:\n                    data_content = body_json[\"data\"]\n                    if isinstance(data_content, str):\n                        body = data_content.encode(\"utf-8\")\n                    elif isinstance(data_content, (dict, list)):\n                        body = json.dumps(data_content).encode(\"utf-8\")\n            except (json.JSONDecodeError, UnicodeDecodeError):\n                pass\n\n        # bad cases: Content-Length and content-length coexist\n        # headers = {k: v for k, v in self.headers.items()}\n        headers = {k: v for k, v in self.headers.items() if k.lower() != 'content-length'}\n        # headers[\"Host\"] = f\"{VLLM_HOST}:{VLLM_PORT}\"\n\n        # don't set Content-Type for GET (use Accept). For write methods, optionally set application/json\n        if method == \"GET\":\n            if \"Accept\" not in self.headers:\n                headers[\"Accept\"] = \"application/json\"\n            # remove Content-Type for GET if user mistakenly set it (avoid confusing server)\n            headers.pop(\"Content-Type\", None)\n        else:\n            if AUTO_JSON and \"Content-Type\" not in self.headers:\n                headers[\"Content-Type\"] = \"application/json\"\n\n        if body:\n            headers['Content-Length'] = str(len(body))\n        else:\n            headers.pop('Content-Length', None)\n\n        return forward_path, body, headers\n\n    def _process_and_send_response(self, method, resp, path):\n        resp_body = resp.read()\n        resp_headers = dict(resp.getheaders())\n        # print(\"Proxy response:\", resp_body.decode(\"utf-8\", errors=\"ignore\"))\n        if DEBUG:\n            self._log_response(resp.status, resp_headers, resp_body, path)\n\n        self.send_response(resp.status)\n        self.send_cors_headers()\n\n        # forward headers except hop-by-hop, and override Content-Length to actual length\n        for k, v in resp.getheaders():\n            kl = k.lower()\n            # do not forward existing content-length; we'll set correct one below\n            if kl in HOP_BY_HOP or kl == \"content-length\":\n                continue\n            # safe to forward\n            try:\n                self.send_header(k, v)\n            except Exception:\n                pass\n\n        if method == \"GET\":\n            final_body = resp_body\n        else:\n            try:\n                decoded_body = resp_body.decode(\"utf-8\")\n                # remove space and \\n\n                # compressed_body = \"\".join(decoded_body.split())\n                final_body = json.dumps({\"data\": decoded_body}).encode(\"utf-8\")\n                # final_body = json.dumps({\"data\": json.loads(decoded_body)}).encode(\"utf-8\")\n            except UnicodeDecodeError:\n                final_body = json.dumps({\"data\": \"\"}).encode(\"utf-8\")\n\n        # print(\"\\n\\n==== log final_body ====\")\n        # log_body(final_body)\n        # set correct Content-Length for client\n        self.send_header(\"Content-Length\", str(len(final_body)))\n        self.end_headers()\n        self.wfile.write(final_body)\n        # self.wfile.flush()\n\n    def forward_request(self, method):\n        forward_path, body, headers = self._prepare_forwarded_request(method)\n\n        if DEBUG:\n            self._log_request(method, forward_path, headers, body)\n\n        if MOCK:\n            conn = MockHTTPConnection(VLLM_HOST, VLLM_PORT)\n        else:\n            conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n        # conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n\n        try:\n            conn.request(method, forward_path, body, headers)\n            resp = conn.getresponse()\n            self._process_and_send_response(method, resp, forward_path)\n        except Exception as e:\n            print(f\"\\n\\n==== PROXY ERROR ====\")\n            print(f\"Error connecting to upstream server: {e}\")\n            print(f\"Exception Type: {type(e).__name__}\")\n            self.send_response(502)\n            self.send_cors_headers()\n            error_message = {\n                \"error\": {\n                    \"type\": \"proxy_error\",\n                    \"message\": f\"Bad Gateway: Could not connect to the upstream server. Reason: {str(e)}\",\n                    \"upstream_host\": f\"{VLLM_HOST}:{VLLM_PORT}\"\n                }\n            }\n            error_body = json.dumps(error_message).encode(\"utf-8\")\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.send_header(\"Content-Length\", str(len(error_body)))\n            self.end_headers()\n            self.wfile.write(error_body)\n        finally:\n            conn.close()\n\n    def log_message(self, format, *args):\n        return\n\nif __name__ == \"__main__\":\n    server = HTTPServer((\"0.0.0.0\", 25521), ProxyHandler)\n    print(f\"Serving on http://0.0.0.0:25521 (proxy to vLLM:{VLLM_PORT}, strip prefix {ROUTE_PREFIX})\")\n    server.serve_forever()\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-55e742c2d11448b0af0d97b35268cb80",
+      "content": "from mock_http import MockHTTPConnection\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\nimport http.client\nimport urllib.parse\nimport os\nimport json\n\n# VLLM_HOST = \"127.0.0.1\"\nVLLM_HOST = os.environ.get(\"VLLM_HOST\", \"127.0.0.1\")\nVLLM_PORT = int(os.environ.get(\"VLLM_PORT\", \"8000\"))\nROUTE_PREFIX = os.environ.get(\"ROUTE_PREFIX\", \"/vllm\")\nAUTO_JSON = os.environ.get(\"AUTO_JSON_CONTENT_TYPE\", \"1\") == \"1\"\nDEBUG = os.environ.get(\"DEBUG_PROXY\", \"1\") == \"1\"\nMOCK = os.environ.get(\"MOCK\", \"0\") == \"1\"\n\n# hop-by-hop headers we must NOT forward to the client as-is\nHOP_BY_HOP = {\n    \"connection\",\n    \"keep-alive\",\n    \"proxy-authenticate\",\n    \"proxy-authorization\",\n    \"te\",\n    \"trailer\",\n    \"transfer-encoding\",\n    \"upgrade\"\n}\n\ndef log_body(body):\n    if body:\n        try:\n            print(f\"Body: {body.decode('utf-8')}\")\n        except:\n            print(f\"Body (raw bytes): {body}\")\n\nclass ProxyHandler(BaseHTTPRequestHandler):\n    def do_OPTIONS(self):\n        # respond to preflight\n        self.send_response(204)\n        self.send_cors_headers()\n        self.end_headers()\n\n    def do_GET(self):\n        if self.path == \"/api/health/ready\":\n            self.send_response(200)\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.end_headers()\n            self.wfile.write(b'{\"status\": \"ok\"}')\n        else:\n            self.forward_request(\"GET\")\n\n    def do_POST(self): self.forward_request(\"POST\")\n    def do_PUT(self): self.forward_request(\"PUT\")\n    def do_DELETE(self): self.forward_request(\"DELETE\")\n    def do_PATCH(self): self.forward_request(\"PATCH\")\n\n    def send_cors_headers(self):\n        self.send_header(\"Access-Control-Allow-Origin\", \"*\")\n        self.send_header(\"Access-Control-Allow-Methods\", \"GET, POST, PUT, DELETE, PATCH, OPTIONS\")\n        self.send_header(\"Access-Control-Allow-Headers\", \"Content-Type, Authorization, Accept\")\n        self.send_header(\"Access-Control-Expose-Headers\", \"Content-Length, Content-Type\")\n\n    def _log_request(self, method, path, headers, body):\n        \"\"\"print req\"\"\"\n        print(\"\\n\\n==== Proxy req ====\")\n        print(f\"Method: {method}\")\n        print(f\"Forward Path: {path}\")\n        print(f\"Headers: {headers}\")\n        log_body(body)\n        print(\"==== Proxy req end ====\")\n\n    def _log_response(self, status, headers, body, path):\n        \"\"\"print res\"\"\"\n        print(\"\\n\\n==== Proxy res ====\")\n        print(f\"Status: {status}\")\n        print(f\"Forward Path: {path}\")\n        print(\"Response Headers:\", headers)\n        log_body(body)\n        print(\"==== Proxy res end ====\")\n\n    def _prepare_forwarded_request(self, method):\n        parsed_url = urllib.parse.urlparse(self.path)\n\n        forward_path = parsed_url.path\n        if forward_path.startswith(ROUTE_PREFIX):\n            forward_path = forward_path[len(ROUTE_PREFIX):]\n        if not forward_path:\n            forward_path = \"/\"\n        if parsed_url.query:\n            forward_path += \"?\" + parsed_url.query\n\n        # read body if present\n        body = None\n        # Since BaseHTTPRequestHandler, same as \"content-length\" in self.headers\n        if \"Content-Length\" in self.headers:\n            try:\n                length = int(self.headers[\"Content-Length\"])\n                if length > 0:\n                    body = self.rfile.read(length)\n            except Exception:\n                body = None\n\n        if body:\n            try:\n                body_json = json.loads(body.decode(\"utf-8\"))\n                if isinstance(body_json, dict) and \"data\" in body_json:\n                    data_content = body_json[\"data\"]\n                    if isinstance(data_content, str):\n                        body = data_content.encode(\"utf-8\")\n                    elif isinstance(data_content, (dict, list)):\n                        body = json.dumps(data_content).encode(\"utf-8\")\n            except (json.JSONDecodeError, UnicodeDecodeError):\n                pass\n\n        # bad cases: Content-Length and content-length coexist\n        # headers = {k: v for k, v in self.headers.items()}\n        headers = {k: v for k, v in self.headers.items() if k.lower() != 'content-length'}\n        # headers[\"Host\"] = f\"{VLLM_HOST}:{VLLM_PORT}\"\n\n        # don't set Content-Type for GET (use Accept). For write methods, optionally set application/json\n        if method == \"GET\":\n            if \"Accept\" not in self.headers:\n                headers[\"Accept\"] = \"application/json\"\n            # remove Content-Type for GET if user mistakenly set it (avoid confusing server)\n            headers.pop(\"Content-Type\", None)\n        else:\n            if AUTO_JSON and \"Content-Type\" not in self.headers:\n                headers[\"Content-Type\"] = \"application/json\"\n\n        if body:\n            headers['Content-Length'] = str(len(body))\n        else:\n            headers.pop('Content-Length', None)\n\n        return forward_path, body, headers\n\n    def _process_and_send_response(self, method, resp, path):\n        resp_body = resp.read()\n        resp_headers = dict(resp.getheaders())\n        # print(\"Proxy response:\", resp_body.decode(\"utf-8\", errors=\"ignore\"))\n        if DEBUG:\n            self._log_response(resp.status, resp_headers, resp_body, path)\n\n        self.send_response(resp.status)\n        self.send_cors_headers()\n\n        # forward headers except hop-by-hop, and override Content-Length to actual length\n        for k, v in resp.getheaders():\n            kl = k.lower()\n            # do not forward existing content-length; we'll set correct one below\n            if kl in HOP_BY_HOP or kl == \"content-length\":\n                continue\n            # safe to forward\n            try:\n                self.send_header(k, v)\n            except Exception:\n                pass\n\n        if method == \"GET\":\n            final_body = resp_body\n        else:\n            try:\n                decoded_body = resp_body.decode(\"utf-8\")\n                # remove space and \\n\n                # compressed_body = \"\".join(decoded_body.split())\n                final_body = json.dumps({\"data\": decoded_body}).encode(\"utf-8\")\n                # final_body = json.dumps({\"data\": json.loads(decoded_body)}).encode(\"utf-8\")\n            except UnicodeDecodeError:\n                final_body = json.dumps({\"data\": \"\"}).encode(\"utf-8\")\n\n        # print(\"\\n\\n==== log final_body ====\")\n        # log_body(final_body)\n        # set correct Content-Length for client\n        self.send_header(\"Content-Length\", str(len(final_body)))\n        self.end_headers()\n        self.wfile.write(final_body)\n        # self.wfile.flush()\n\n    def forward_request(self, method):\n        forward_path, body, headers = self._prepare_forwarded_request(method)\n\n        if DEBUG:\n            self._log_request(method, forward_path, headers, body)\n\n        if MOCK:\n            conn = MockHTTPConnection(VLLM_HOST, VLLM_PORT)\n        else:\n            conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n        # conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n\n        try:\n            conn.request(method, forward_path, body, headers)\n            resp = conn.getresponse()\n            self._process_and_send_response(method, resp, forward_path)\n        except Exception as e:\n            print(f\"\\n\\n==== PROXY ERROR ====\")\n            print(f\"Error connecting to upstream server: {e}\")\n            print(f\"Exception Type: {type(e).__name__}\")\n            self.send_response(502)\n            self.send_cors_headers()\n            error_message = {\n                \"error\": {\n                    \"type\": \"proxy_error\",\n                    \"message\": f\"Bad Gateway: Could not connect to the upstream server. Reason: {str(e)}\",\n                    \"upstream_host\": f\"{VLLM_HOST}:{VLLM_PORT}\"\n                }\n            }\n            error_body = json.dumps(error_message).encode(\"utf-8\")\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.send_header(\"Content-Length\", str(len(error_body)))\n            self.end_headers()\n            self.wfile.write(error_body)\n        finally:\n            conn.close()\n\n    def log_message(self, format, *args):\n        return\n\nif __name__ == \"__main__\":\n    server = HTTPServer((\"0.0.0.0\", 25521), ProxyHandler)\n    print(f\"Serving on http://0.0.0.0:25521 (proxy to vLLM:{VLLM_PORT}, strip prefix {ROUTE_PREFIX})\")\n    server.serve_forever()\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-da8be39ae79a46d9ae29afbc37169d2d",
+      "content": "from mock_http import MockHTTPConnection\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\nimport http.client\nimport urllib.parse\nimport os\nimport json\n\n# VLLM_HOST = \"127.0.0.1\"\nVLLM_HOST = os.environ.get(\"VLLM_HOST\", \"127.0.0.1\")\nVLLM_PORT = int(os.environ.get(\"VLLM_PORT\", \"8000\"))\nROUTE_PREFIX = os.environ.get(\"ROUTE_PREFIX\", \"/vllm\")\nAUTO_JSON = os.environ.get(\"AUTO_JSON_CONTENT_TYPE\", \"1\") == \"1\"\nDEBUG = os.environ.get(\"DEBUG_PROXY\", \"1\") == \"1\"\nMOCK = os.environ.get(\"MOCK\", \"0\") == \"1\"\n\n# hop-by-hop headers we must NOT forward to the client as-is\nHOP_BY_HOP = {\n    \"connection\",\n    \"keep-alive\",\n    \"proxy-authenticate\",\n    \"proxy-authorization\",\n    \"te\",\n    \"trailer\",\n    \"transfer-encoding\",\n    \"upgrade\"\n}\n\ndef log_body(body):\n    if body:\n        try:\n            print(f\"Body: {body.decode('utf-8')}\")\n        except:\n            print(f\"Body (raw bytes): {body}\")\n\nclass ProxyHandler(BaseHTTPRequestHandler):\n    def do_OPTIONS(self):\n        # respond to preflight\n        self.send_response(204)\n        self.send_cors_headers()\n        self.end_headers()\n\n    def do_GET(self):\n        if self.path == \"/api/health/ready\":\n            self.send_response(200)\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.end_headers()\n            self.wfile.write(b'{\"status\": \"ok\"}')\n        else:\n            self.forward_request(\"GET\")\n\n    def do_POST(self): self.forward_request(\"POST\")\n    def do_PUT(self): self.forward_request(\"PUT\")\n    def do_DELETE(self): self.forward_request(\"DELETE\")\n    def do_PATCH(self): self.forward_request(\"PATCH\")\n\n    def send_cors_headers(self):\n        self.send_header(\"Access-Control-Allow-Origin\", \"*\")\n        self.send_header(\"Access-Control-Allow-Methods\", \"GET, POST, PUT, DELETE, PATCH, OPTIONS\")\n        self.send_header(\"Access-Control-Allow-Headers\", \"Content-Type, Authorization, Accept\")\n        self.send_header(\"Access-Control-Expose-Headers\", \"Content-Length, Content-Type\")\n\n    def _log_request(self, method, path, headers, body):\n        \"\"\"print req\"\"\"\n        print(\"\\n\\n==== Proxy req ====\")\n        print(f\"Method: {method}\")\n        print(f\"Forward Path: {path}\")\n        print(f\"Headers: {headers}\")\n        log_body(body)\n        print(\"==== Proxy req end ====\")\n\n    def _log_response(self, status, headers, body, path):\n        \"\"\"print res\"\"\"\n        print(\"\\n\\n==== Proxy res ====\")\n        print(f\"Status: {status}\")\n        print(f\"Forward Path: {path}\")\n        print(\"Response Headers:\", headers)\n        log_body(body)\n        print(\"==== Proxy res end ====\")\n\n    def _prepare_forwarded_request(self, method):\n        parsed_url = urllib.parse.urlparse(self.path)\n\n        forward_path = parsed_url.path\n        if forward_path.startswith(ROUTE_PREFIX):\n            forward_path = forward_path[len(ROUTE_PREFIX):]\n        if not forward_path:\n            forward_path = \"/\"\n        if parsed_url.query:\n            forward_path += \"?\" + parsed_url.query\n\n        # read body if present\n        body = None\n        # Since BaseHTTPRequestHandler, same as \"content-length\" in self.headers\n        if \"Content-Length\" in self.headers:\n            try:\n                length = int(self.headers[\"Content-Length\"])\n                if length > 0:\n                    body = self.rfile.read(length)\n            except Exception:\n                body = None\n\n        if body:\n            try:\n                body_json = json.loads(body.decode(\"utf-8\"))\n                if isinstance(body_json, dict) and \"data\" in body_json:\n                    data_content = body_json[\"data\"]\n                    if isinstance(data_content, str):\n                        body = data_content.encode(\"utf-8\")\n                    elif isinstance(data_content, (dict, list)):\n                        body = json.dumps(data_content).encode(\"utf-8\")\n            except (json.JSONDecodeError, UnicodeDecodeError):\n                pass\n\n        # bad cases: Content-Length and content-length coexist\n        # headers = {k: v for k, v in self.headers.items()}\n        headers = {k: v for k, v in self.headers.items() if k.lower() != 'content-length'}\n        # headers[\"Host\"] = f\"{VLLM_HOST}:{VLLM_PORT}\"\n\n        # don't set Content-Type for GET (use Accept). For write methods, optionally set application/json\n        if method == \"GET\":\n            if \"Accept\" not in self.headers:\n                headers[\"Accept\"] = \"application/json\"\n            # remove Content-Type for GET if user mistakenly set it (avoid confusing server)\n            headers.pop(\"Content-Type\", None)\n        else:\n            if AUTO_JSON and \"Content-Type\" not in self.headers:\n                headers[\"Content-Type\"] = \"application/json\"\n\n        if body:\n            headers['Content-Length'] = str(len(body))\n        else:\n            headers.pop('Content-Length', None)\n\n        return forward_path, body, headers\n\n    def _process_and_send_response(self, method, resp, path):\n        resp_body = resp.read()\n        resp_headers = dict(resp.getheaders())\n        # print(\"Proxy response:\", resp_body.decode(\"utf-8\", errors=\"ignore\"))\n        if DEBUG:\n            self._log_response(resp.status, resp_headers, resp_body, path)\n\n        self.send_response(resp.status)\n        self.send_cors_headers()\n\n        # forward headers except hop-by-hop, and override Content-Length to actual length\n        for k, v in resp.getheaders():\n            kl = k.lower()\n            # do not forward existing content-length; we'll set correct one below\n            if kl in HOP_BY_HOP or kl == \"content-length\":\n                continue\n            # safe to forward\n            try:\n                self.send_header(k, v)\n            except Exception:\n                pass\n\n        if method == \"GET\":\n            final_body = resp_body\n        else:\n            try:\n                decoded_body = resp_body.decode(\"utf-8\")\n                # remove space and \\n\n                # compressed_body = \"\".join(decoded_body.split())\n                final_body = json.dumps({\"data\": decoded_body}).encode(\"utf-8\")\n                # final_body = json.dumps({\"data\": json.loads(decoded_body)}).encode(\"utf-8\")\n            except UnicodeDecodeError:\n                final_body = json.dumps({\"data\": \"\"}).encode(\"utf-8\")\n\n        # print(\"\\n\\n==== log final_body ====\")\n        # log_body(final_body)\n        # set correct Content-Length for client\n        self.send_header(\"Content-Length\", str(len(final_body)))\n        self.end_headers()\n        self.wfile.write(final_body)\n        # self.wfile.flush()\n\n    def forward_request(self, method):\n        forward_path, body, headers = self._prepare_forwarded_request(method)\n\n        if DEBUG:\n            self._log_request(method, forward_path, headers, body)\n\n        if MOCK:\n            conn = MockHTTPConnection(VLLM_HOST, VLLM_PORT)\n        else:\n            conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n        # conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n\n        try:\n            conn.request(method, forward_path, body, headers)\n            resp = conn.getresponse()\n            self._process_and_send_response(method, resp, forward_path)\n        except Exception as e:\n            print(f\"\\n\\n==== PROXY ERROR ====\")\n            print(f\"Error connecting to upstream server: {e}\")\n            print(f\"Exception Type: {type(e).__name__}\")\n            self.send_response(502)\n            self.send_cors_headers()\n            error_message = {\n                \"error\": {\n                    \"type\": \"proxy_error\",\n                    \"message\": f\"Bad Gateway: Could not connect to the upstream server. Reason: {str(e)}\",\n                    \"upstream_host\": f\"{VLLM_HOST}:{VLLM_PORT}\"\n                }\n            }\n            error_body = json.dumps(error_message).encode(\"utf-8\")\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.send_header(\"Content-Length\", str(len(error_body)))\n            self.end_headers()\n            self.wfile.write(error_body)\n        finally:\n            conn.close()\n\n    def log_message(self, format, *args):\n        return\n\nif __name__ == \"__main__\":\n    server = HTTPServer((\"0.0.0.0\", 25521), ProxyHandler)\n    print(f\"Serving on http://0.0.0.0:25521 (proxy to vLLM:{VLLM_PORT}, strip prefix {ROUTE_PREFIX})\")\n    server.serve_forever()\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-d23f0ae1c0194108889f44e459c42876",
+      "content": "#!/bin/bash\n\necho \"start server\"\n\npython3 ./main.py &\nHEALTH_PID=$!\necho -e \"health.py is running with PID $HEALTH_PID \\n\\n\\n\"\n\npython3 ./check_env.py\necho -e \"\\n\\n\\n\\n\\n\"\n\ndf -h /dev/shm\n# ls /mnt/posfs/globalmount/gpt-oss-encodings\n# ls -lhR /mnt/posfs/globalmount/model/openai/gpt-oss-120b\n# echo -e \"\\n\\n\\n\\n\\n\"\n\n# export VLLM_LOGGING_LEVEL=DEBUG\nexport HF_HUB_OFFLINE=1\nexport TRANSFORMERS_OFFLINE=1\n\n# export NCCL_DEBUG=INFO\nexport TIKTOKEN_ENCODINGS_BASE=/mnt/posfs/globalmount/gpt-oss-encodings\n\nvllm serve \\\n  /mnt/posfs/globalmount/model/openai/gpt-oss-120b \\\n  --enable-auto-tool-choice --tool-call-parser openai --reasoning-parser openai_gptoss \\\n  --tensor-parallel-size 4 &\nVLLM_PID=$!\necho \"vllm serve is running with PID $VLLM_PID\"\n\n# exec vllm serve \\\n  # /mnt/posfs/globalmount/model/openai/gpt-oss-120b \\\n  # --tensor-parallel-size 4 \\\n  # --dtype float16\n\n# vllm start use 10min\nsleep 600\n\necho -e \"\\n\\n\\n=== first test ===\"\ncurl http://127.0.0.1:8000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\",\n    \"messages\": [\n      {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n      {\"role\": \"user\", \"content\": \"who are you?\"}\n    ]\n  }'\n\n# hold container alive\nsleep 365d\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-2054bd22df9141098e0411265014aeed",
+      "content": ""
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-de03e79e89da434a81df1004116996b9",
+      "content": "#!/usr/bin/env python3\n\nimport os\nimport sys\nimport shutil\nimport subprocess\nimport importlib\n# import traceback\n\ndef shm_usage_mib() -> dict[str, int] | None:\n    \"\"\"\n    return {'total': MiB, 'used': MiB, 'free': MiB} or None\n    \"\"\"\n    try:\n        total, used, free = shutil.disk_usage(\"/dev/shm\")\n        # return {\n        #     \"total\": total // 1024 ** 2,\n        #     \"used\":  used // 1024 ** 2,\n        #     \"free\":  free // 1024 ** 2,\n        # }\n        print(f\"[Check] /dev/shm usage:\")\n        print(f\"  total : {total // 1024**2} MiB\")\n        print(f\"  used  : {used  // 1024**2} MiB\")\n        print(f\"  free  : {free  // 1024**2} MiB\")\n    except FileNotFoundError:\n        print(\"[WARN] system has no /dev/shm\")\n    except PermissionError:\n        print(\"[WARN] has no auth access to /dev/shm\")\n    except OSError as e:\n        print(\"[ERROR] read /dev/shm fail:\", e)\n        # traceback.print_exc()\n    return None\n\ndef check_python():\n    print(\"\\n[Check] Python & pip\")\n    print(f\"Python executable: {sys.executable}\")\n    print(f\"Python version: {sys.version}\")\n    pip_path = shutil.which(\"pip\")\n    if pip_path:\n        print(f\"pip executable: {pip_path}\")\n        try:\n            output = subprocess.check_output([pip_path, \"--version\"], text=True)\n            print(f\"pip version: {output.strip()}\")\n        except Exception as e:\n            print(f\"[WARN] Failed to run pip: {e}\")\n    else:\n        print(\"[WARN] pip not found.\")\n\ndef check_vllm():\n    print(\"\\n[Check] vLLM installation\")\n    try:\n        vllm = importlib.import_module(\"vllm\")\n        print(f\"[OK] vLLM version: {getattr(vllm, '__version__', 'unknown')}\")\n        # pip show vllm\n        pip_path = shutil.which(\"pip\")\n        if pip_path:\n            output = subprocess.check_output([pip_path, \"show\", \"vllm\"], text=True)\n            print(output.strip())\n    except ImportError:\n        print(\"[WARN] vLLM not installed.\")\n\ndef check_torch():\n    print(\"\\n[Check] PyTorch & CUDA\")\n    try:\n        import torch\n        print(f\"[OK] torch version: {torch.__version__}\")\n        print(f\"CUDA available: {torch.cuda.is_available()}\")\n        if torch.cuda.is_available():\n            print(f\"CUDA device count: {torch.cuda.device_count()}\")\n            for i in range(torch.cuda.device_count()):\n                print(f\" - GPU {i}: {torch.cuda.get_device_name(i)}\")\n    except ImportError:\n        print(\"[WARN] torch not installed.\")\n\ndef run_nvidia_smi_query(fields: str):\n    \"\"\"Run nvidia-smi query with given fields, return list of lines or [] if failed.\"\"\"\n    try:\n        output = subprocess.check_output(\n            [\"nvidia-smi\", f\"--query-gpu={fields}\", \"--format=csv,noheader,nounits\"],\n            text=True\n        )\n        return [line.strip() for line in output.strip().splitlines()]\n    except subprocess.CalledProcessError:\n        return []\n\ndef check_gpu_info():\n    print(\"\\n[Check] GPU info\")\n    if not shutil.which(\"nvidia-smi\"):\n        print(\"[WARN] shutil.which(nvidia-smi) nvidia-smi not available.\")\n        return\n    base_fields = \"name,memory.total,driver_version\"\n    base_info = run_nvidia_smi_query(base_fields)\n    if not base_info:\n        print(\"[WARN] Failed to query GPU basic info.\")\n        return\n    gpus = [line.split(\", \") for line in base_info]\n    cuda_versions = run_nvidia_smi_query(\"cuda_version\")\n    if not cuda_versions:\n        cuda_versions = [\"unknown\"] * len(gpus)\n        print(\"[WARN] cuda_version not supported by this nvidia-smi\")\n    for idx, gpu in enumerate(gpus):\n        name, mem, driver = gpu\n        cuda = cuda_versions[idx] if idx < len(cuda_versions) else \"unknown\"\n        print(f\"[OK] GPU {idx}:\")\n        print(f\"   Name           : {name}\")\n        print(f\"   Memory Total   : {mem} MiB\")\n        print(f\"   Driver Version : {driver}\")\n        print(f\"   CUDA Version   : {cuda}\")\n    else:\n        print(\"[WARN] nvidia-smi check end.\")\n\ndef check_ldconfig_and_libcuda():\n    print(\"\\n[Check] ldconfig and libcuda.so\")\n    # 1. Check ldconfig in PATH\n    ldconfig_path = shutil.which(\"ldconfig\")\n    if ldconfig_path:\n        print(f\"[OK] ldconfig found in PATH: {ldconfig_path}\")\n    else:\n        print(\"[WARN] ldconfig not found in PATH.\")\n\n    # 2. Check common ldconfig locations\n    for path in [\"/usr/sbin/ldconfig\", \"/sbin/ldconfig\"]:\n        if os.path.exists(path):\n            print(f\"[OK] ldconfig exists at {path}\")\n        else:\n            print(f\"[WARN] ldconfig not found at {path}\")\n\n    # 3. Try querying libcuda.so if ldconfig is usable\n    if ldconfig_path:\n        try:\n            output = subprocess.check_output([\"ldconfig\", \"-p\"], text=True)\n            if \"libcuda.so\" in output:\n                print(\"[OK] libcuda.so found in ldconfig cache\")\n            else:\n                print(\"[WARN] libcuda.so not found in ldconfig cache\")\n        except Exception as e:\n            print(f\"[WARN] Failed to run ldconfig: {e}\")\n    else:\n        print(\"[INFO] Skip libcuda.so cache check (no ldconfig in PATH).\")\n        for pm, cmd in {\n            \"apt-get\": \"apt-get update && apt-get install -y libc-bin\",\n            \"yum\": \"yum install -y glibc\",\n            \"dnf\": \"dnf install -y glibc\",\n            \"apk\": \"apk add libc-utils\"\n        }.items():\n            if shutil.which(pm):\n                print(f\"You can install ldconfig via: {cmd}\")\n                break\n\nif __name__ == \"__main__\":\n    shm_usage_mib()\n    check_python()\n    check_vllm()\n    check_torch()\n    check_gpu_info()\n    check_ldconfig_and_libcuda()\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8a7023d5093e4d8e833d2b0367b64ce7",
+      "content": "\nimport {\n  data1,\n  data2,\n} from './demo-data.mjs';\n\nconst rawData = data2;\n\n// post json\nasync function run(url) {\n  try {\n    const res = await fetch(url, {\n      method: \"POST\",\n      headers: {\n        \"content-type\": \"application/json\",\n      },\n      body: JSON.stringify({ \"data\": JSON.stringify(rawData) })\n    });\n    const resData = await res.json();\n    const data = JSON.parse(resData.data);\n    console.log('log data: ', data);\n    console.log('log message: ', data.choices[0].message);\n  } catch (err) {\n    console.error(err);\n  }\n}\nawait run('https://xx/v1/chat/completions');\n// run('http://127.0.0.1:25521/v1/models');\n\n\nasync function runGet(url) {\n  await fetch(url, {\n    method: \"GET\",\n    headers: {\n      \"Accept\": \"application/json\"\n    }\n  })\n  .then(res => res.text())\n  .then(txt => console.log(txt))\n  .catch(err => console.error(err));\n}\n// runGet('http://127.0.0.1:25521/v1/models');\n// runGet('https://xx/v1/models');\n\n// jsonParse()\nfunction jsonParse() {\n  var jsonStr = \"{\\\"id\\\":\\\"chatcmpl-843044eb0fa94783ad94572b1b457b7d\\\",\\\"object\\\":\\\"chat.completion\\\",\\\"created\\\":1758031882,\\\"model\\\":\\\"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\\\",\\\"choices\\\":[{\\\"index\\\":0,\\\"message\\\":{\\\"role\\\":\\\"assistant\\\",\\\"content\\\":\\\"The current weather in San Francisco, CA is:\\\\n\\\\n- **Temperature:** 58 °F  \\\\n- **Condition:** Mostly cloudy with light winds  \\\\n- **Humidity:** 78%  \\\\n- **Wind:** 6 mph from the northwest  \\\\n\\\\nFeel free to ask if you’d like a forecast or details for another location!\\\",\\\"refusal\\\":null,\\\"annotations\\\":null,\\\"audio\\\":null,\\\"function_call\\\":null,\\\"tool_calls\\\":[],\\\"reasoning_content\\\":\\\"The user asks: \\\\\\\"What is the weather like in San Francisco?\\\\\\\" We need to fetch current weather. Use function get_weather with location \\\\\\\"San Francisco, CA\\\\\\\". Probably default unit? We can choose Celsius or Fahrenheit. Likely Fahrenheit for US. Use \\\\\\\"fahrenheit\\\\\\\". We'll call function.\\\\n{\\\\n  \\\\\\\"location\\\\\\\": \\\\\\\"San Francisco, CA\\\\\\\",\\\\n  \\\\\\\"unit\\\\\\\": \\\\\\\"fahrenheit\\\\\\\"\\\\n}\\\"},\\\"logprobs\\\":null,\\\"finish_reason\\\":\\\"stop\\\",\\\"stop_reason\\\":null,\\\"token_ids\\\":null}],\\\"service_tier\\\":null,\\\"system_fingerprint\\\":null,\\\"usage\\\":{\\\"prompt_tokens\\\":152,\\\"total_tokens\\\":323,\\\"completion_tokens\\\":171,\\\"prompt_tokens_details\\\":null},\\\"prompt_logprobs\\\":null,\\\"prompt_token_ids\\\":null,\\\"kv_transfer_params\\\":null}\"\n  const outer = JSON.parse(jsonStr);\n  console.log('log outer: ', outer);\n  console.log('log message: ', outer.choices[0].message);\n}\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-d16156268f4f42459bc2bcf5ee718852",
+      "content": "\nexport var data1 = {\n  \"model\": \"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"who are you?\"\n    }\n  ]\n};\n\nexport var data2 = {\n  \"model\": \"/mnt/posfs/globalmount/model/openai/gpt-oss-120b\",\n  \"messages\": [\n    {\"role\": \"user\", \"content\": \"What is the weather like in San Francisco?\"}\n    // {\"role\": \"user\", \"content\": \"What is the project\"}\n  ],\n  \"tool_choice\": \"auto\",\n  // \"tool_choice\": \"required\",\n  \"tools\": [{\n    \"type\": \"function\",\n    \"function\": {\n      \"name\": \"get_weather\",\n      \"description\": \"Get the current weather in a given location\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"location\": {\"type\": \"string\", \"description\": \"City and state, e.g., San Francisco, CA\"},\n          \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]}\n        },\n        \"required\": [\"location\", \"unit\"]\n      }\n    }\n  }]\n};\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9ae9a2c39c054e2baf555c7e663bec6b",
+      "content": "import json\n\nclass MockHTTPResponse:\n    \"\"\"mock http.client.HTTPResponse \"\"\"\n    def __init__(self, status, body, headers):\n        self.status = status\n        self.body = body.encode('utf-8') if isinstance(body, str) else body\n        self.headers = headers\n\n    def read(self):\n        return self.body\n\n    def getheaders(self):\n        return list(self.headers.items())\n\nclass MockHTTPConnection:\n    def __init__(self, host, port):\n        self.host = host\n        self.port = port\n        self.response = None\n        print(f\"--- MockHTTPConnection initialized for {host}:{port} ---\")\n\n    def request(self, method, url, body, headers):\n        print(f\"--- Mocking request to {method} {url} ---\")\n        mock_response_data = {\n            \"message\": \"This is a mock response from the local debugger.\",\n            \"request_received\": {\n                \"method\": method,\n                \"url\": url,\n                \"headers\": dict(headers),\n                \"body\": body.decode('utf-8', errors='ignore') if body else None,\n            }\n        }\n        response_body_str = json.dumps(mock_response_data, indent=2)\n        response_headers = {\n            \"Content-Type\": \"application/json\",\n            \"Content-Length\": str(len(response_body_str)),\n            \"X-Mock-Server\": \"true\",\n        }\n        self.response = MockHTTPResponse(200, response_body_str, response_headers)\n\n    def getresponse(self):\n        return self.response\n\n    def close(self):\n        pass\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-adee2b9b0ddd4bad8f3c49f4a7a40203",
+      "content": "# xxx-service\n\n## demo\n\n```sh\nnode demo.mjs\n```\n\n## debug\n\n```sh\nMOCK=1 python3 ./main.py\n```\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-67525c6b00214fd5814b63bcd2eb69d6",
+      "content": "from mock_http import MockHTTPConnection\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\nimport http.client\nimport urllib.parse\nimport os\nimport json\n\n# VLLM_HOST = \"127.0.0.1\"\nVLLM_HOST = os.environ.get(\"VLLM_HOST\", \"127.0.0.1\")\nVLLM_PORT = int(os.environ.get(\"VLLM_PORT\", \"8000\"))\nROUTE_PREFIX = os.environ.get(\"ROUTE_PREFIX\", \"/vllm\")\nAUTO_JSON = os.environ.get(\"AUTO_JSON_CONTENT_TYPE\", \"1\") == \"1\"\nDEBUG = os.environ.get(\"DEBUG_PROXY\", \"1\") == \"1\"\nMOCK = os.environ.get(\"MOCK\", \"0\") == \"1\"\n\n# hop-by-hop headers we must NOT forward to the client as-is\nHOP_BY_HOP = {\n    \"connection\",\n    \"keep-alive\",\n    \"proxy-authenticate\",\n    \"proxy-authorization\",\n    \"te\",\n    \"trailer\",\n    \"transfer-encoding\",\n    \"upgrade\"\n}\n\ndef log_body(body):\n    if body:\n        try:\n            print(f\"Body: {body.decode('utf-8')}\")\n        except:\n            print(f\"Body (raw bytes): {body}\")\n\nclass ProxyHandler(BaseHTTPRequestHandler):\n    def do_OPTIONS(self):\n        # respond to preflight\n        self.send_response(204)\n        self.send_cors_headers()\n        self.end_headers()\n\n    def do_GET(self):\n        if self.path == \"/api/health/ready\":\n            self.send_response(200)\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.end_headers()\n            self.wfile.write(b'{\"status\": \"ok\"}')\n        else:\n            self.forward_request(\"GET\")\n\n    def do_POST(self): self.forward_request(\"POST\")\n    def do_PUT(self): self.forward_request(\"PUT\")\n    def do_DELETE(self): self.forward_request(\"DELETE\")\n    def do_PATCH(self): self.forward_request(\"PATCH\")\n\n    def send_cors_headers(self):\n        self.send_header(\"Access-Control-Allow-Origin\", \"*\")\n        self.send_header(\"Access-Control-Allow-Methods\", \"GET, POST, PUT, DELETE, PATCH, OPTIONS\")\n        self.send_header(\"Access-Control-Allow-Headers\", \"Content-Type, Authorization, Accept\")\n        self.send_header(\"Access-Control-Expose-Headers\", \"Content-Length, Content-Type\")\n\n    def _log_request(self, method, path, headers, body):\n        \"\"\"print req\"\"\"\n        print(\"\\n\\n==== Proxy req ====\")\n        print(f\"Method: {method}\")\n        print(f\"Forward Path: {path}\")\n        print(f\"Headers: {headers}\")\n        log_body(body)\n        print(\"==== Proxy req end ====\")\n\n    def _log_response(self, status, headers, body, path):\n        \"\"\"print res\"\"\"\n        print(\"\\n\\n==== Proxy res ====\")\n        print(f\"Status: {status}\")\n        print(f\"Forward Path: {path}\")\n        print(\"Response Headers:\", headers)\n        log_body(body)\n        print(\"==== Proxy res end ====\")\n\n    def _prepare_forwarded_request(self, method):\n        parsed_url = urllib.parse.urlparse(self.path)\n\n        forward_path = parsed_url.path\n        if forward_path.startswith(ROUTE_PREFIX):\n            forward_path = forward_path[len(ROUTE_PREFIX):]\n        if not forward_path:\n            forward_path = \"/\"\n        if parsed_url.query:\n            forward_path += \"?\" + parsed_url.query\n\n        # read body if present\n        body = None\n        # Since BaseHTTPRequestHandler, same as \"content-length\" in self.headers\n        if \"Content-Length\" in self.headers:\n            try:\n                length = int(self.headers[\"Content-Length\"])\n                if length > 0:\n                    body = self.rfile.read(length)\n            except Exception:\n                body = None\n\n        if body:\n            try:\n                body_json = json.loads(body.decode(\"utf-8\"))\n                if isinstance(body_json, dict) and \"data\" in body_json:\n                    data_content = body_json[\"data\"]\n                    if isinstance(data_content, str):\n                        body = data_content.encode(\"utf-8\")\n                    elif isinstance(data_content, (dict, list)):\n                        body = json.dumps(data_content).encode(\"utf-8\")\n            except (json.JSONDecodeError, UnicodeDecodeError):\n                pass\n\n        # bad cases: Content-Length and content-length coexist\n        # headers = {k: v for k, v in self.headers.items()}\n        headers = {k: v for k, v in self.headers.items() if k.lower() != 'content-length'}\n        # headers[\"Host\"] = f\"{VLLM_HOST}:{VLLM_PORT}\"\n\n        # don't set Content-Type for GET (use Accept). For write methods, optionally set application/json\n        if method == \"GET\":\n            if \"Accept\" not in self.headers:\n                headers[\"Accept\"] = \"application/json\"\n            # remove Content-Type for GET if user mistakenly set it (avoid confusing server)\n            headers.pop(\"Content-Type\", None)\n        else:\n            if AUTO_JSON and \"Content-Type\" not in self.headers:\n                headers[\"Content-Type\"] = \"application/json\"\n\n        if body:\n            headers['Content-Length'] = str(len(body))\n        else:\n            headers.pop('Content-Length', None)\n\n        return forward_path, body, headers\n\n    def _process_and_send_response(self, method, resp, path):\n        resp_body = resp.read()\n        resp_headers = dict(resp.getheaders())\n        # print(\"Proxy response:\", resp_body.decode(\"utf-8\", errors=\"ignore\"))\n        if DEBUG:\n            self._log_response(resp.status, resp_headers, resp_body, path)\n\n        self.send_response(resp.status)\n        self.send_cors_headers()\n\n        # forward headers except hop-by-hop, and override Content-Length to actual length\n        for k, v in resp.getheaders():\n            kl = k.lower()\n            # do not forward existing content-length; we'll set correct one below\n            if kl in HOP_BY_HOP or kl == \"content-length\":\n                continue\n            # safe to forward\n            try:\n                self.send_header(k, v)\n            except Exception:\n                pass\n\n        if method == \"GET\":\n            final_body = resp_body\n        else:\n            try:\n                decoded_body = resp_body.decode(\"utf-8\")\n                # remove space and \\n\n                # compressed_body = \"\".join(decoded_body.split())\n                final_body = json.dumps({\"data\": decoded_body}).encode(\"utf-8\")\n                # final_body = json.dumps({\"data\": json.loads(decoded_body)}).encode(\"utf-8\")\n            except UnicodeDecodeError:\n                final_body = json.dumps({\"data\": \"\"}).encode(\"utf-8\")\n\n        # print(\"\\n\\n==== log final_body ====\")\n        # log_body(final_body)\n        # set correct Content-Length for client\n        self.send_header(\"Content-Length\", str(len(final_body)))\n        self.end_headers()\n        self.wfile.write(final_body)\n        # self.wfile.flush()\n\n    def forward_request(self, method):\n        forward_path, body, headers = self._prepare_forwarded_request(method)\n\n        if DEBUG:\n            self._log_request(method, forward_path, headers, body)\n\n        if MOCK:\n            conn = MockHTTPConnection(VLLM_HOST, VLLM_PORT)\n        else:\n            conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n        # conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n\n        try:\n            conn.request(method, forward_path, body, headers)\n            resp = conn.getresponse()\n            self._process_and_send_response(method, resp, forward_path)\n        except Exception as e:\n            print(f\"\\n\\n==== PROXY ERROR ====\")\n            print(f\"Error connecting to upstream server: {e}\")\n            print(f\"Exception Type: {type(e).__name__}\")\n            self.send_response(502)\n            self.send_cors_headers()\n            error_message = {\n                \"error\": {\n                    \"type\": \"proxy_error\",\n                    \"message\": f\"Bad Gateway: Could not connect to the upstream server. Reason: {str(e)}\",\n                    \"upstream_host\": f\"{VLLM_HOST}:{VLLM_PORT}\"\n                }\n            }\n            error_body = json.dumps(error_message).encode(\"utf-8\")\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.send_header(\"Content-Length\", str(len(error_body)))\n            self.end_headers()\n            self.wfile.write(error_body)\n        finally:\n            conn.close()\n\n    def log_message(self, format, *args):\n        return\n\nif __name__ == \"__main__\":\n    server = HTTPServer((\"0.0.0.0\", 25521), ProxyHandler)\n    print(f\"Serving on http://0.0.0.0:25521 (proxy to vLLM:{VLLM_PORT}, strip prefix {ROUTE_PREFIX})\")\n    server.serve_forever()\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-87ed031a711040929e1193de68929730",
+      "content": "\nIMPORTANT: The file content has been truncated.\nStatus: Showing lines 1-200 of 222 total lines.\nAction: To read more of the file, you can use the 'offset' and 'limit' parameters in a subsequent 'read_file' call. For example, to read the next section of the file, use offset: 200.\n\n--- FILE CONTENT (truncated) ---\nfrom mock_http import MockHTTPConnection\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\nimport http.client\nimport urllib.parse\nimport os\nimport json\n\n# VLLM_HOST = \"127.0.0.1\"\nVLLM_HOST = os.environ.get(\"VLLM_HOST\", \"127.0.0.1\")\nVLLM_PORT = int(os.environ.get(\"VLLM_PORT\", \"8000\"))\nROUTE_PREFIX = os.environ.get(\"ROUTE_PREFIX\", \"/vllm\")\nAUTO_JSON = os.environ.get(\"AUTO_JSON_CONTENT_TYPE\", \"1\") == \"1\"\nDEBUG = os.environ.get(\"DEBUG_PROXY\", \"1\") == \"1\"\nMOCK = os.environ.get(\"MOCK\", \"0\") == \"1\"\n\n# hop-by-hop headers we must NOT forward to the client as-is\nHOP_BY_HOP = {\n    \"connection\",\n    \"keep-alive\",\n    \"proxy-authenticate\",\n    \"proxy-authorization\",\n    \"te\",\n    \"trailer\",\n    \"transfer-encoding\",\n    \"upgrade\"\n}\n\ndef log_body(body):\n    if body:\n        try:\n            print(f\"Body: {body.decode('utf-8')}\")\n        except:\n            print(f\"Body (raw bytes): {body}\")\n\nclass ProxyHandler(BaseHTTPRequestHandler):\n    def do_OPTIONS(self):\n        # respond to preflight\n        self.send_response(204)\n        self.send_cors_headers()\n        self.end_headers()\n\n    def do_GET(self):\n        if self.path == \"/api/health/ready\":\n            self.send_response(200)\n            self.send_header(\"Content-Type\", \"application/json\")\n            self.end_headers()\n            self.wfile.write(b'{\"status\": \"ok\"}')\n        else:\n            self.forward_request(\"GET\")\n\n    def do_POST(self): self.forward_request(\"POST\")\n    def do_PUT(self): self.forward_request(\"PUT\")\n    def do_DELETE(self): self.forward_request(\"DELETE\")\n    def do_PATCH(self): self.forward_request(\"PATCH\")\n\n    def send_cors_headers(self):\n        self.send_header(\"Access-Control-Allow-Origin\", \"*\")\n        self.send_header(\"Access-Control-Allow-Methods\", \"GET, POST, PUT, DELETE, PATCH, OPTIONS\")\n        self.send_header(\"Access-Control-Allow-Headers\", \"Content-Type, Authorization, Accept\")\n        self.send_header(\"Access-Control-Expose-Headers\", \"Content-Length, Content-Type\")\n\n    def _log_request(self, method, path, headers, body):\n        \"\"\"print req\"\"\"\n        print(\"\\n\\n==== Proxy req ====\")\n        print(f\"Method: {method}\")\n        print(f\"Forward Path: {path}\")\n        print(f\"Headers: {headers}\")\n        log_body(body)\n        print(\"==== Proxy req end ====\")\n\n    def _log_response(self, status, headers, body, path):\n        \"\"\"print res\"\"\"\n        print(\"\\n\\n==== Proxy res ====\")\n        print(f\"Status: {status}\")\n        print(f\"Forward Path: {path}\")\n        print(\"Response Headers:\", headers)\n        log_body(body)\n        print(\"==== Proxy res end ====\")\n\n    def _prepare_forwarded_request(self, method):\n        parsed_url = urllib.parse.urlparse(self.path)\n\n        forward_path = parsed_url.path\n        if forward_path.startswith(ROUTE_PREFIX):\n            forward_path = forward_path[len(ROUTE_PREFIX):]\n        if not forward_path:\n            forward_path = \"/\"\n        if parsed_url.query:\n            forward_path += \"?\" + parsed_url.query\n\n        # read body if present\n        body = None\n        # Since BaseHTTPRequestHandler, same as \"content-length\" in self.headers\n        if \"Content-Length\" in self.headers:\n            try:\n                length = int(self.headers[\"Content-Length\"])\n                if length > 0:\n                    body = self.rfile.read(length)\n            except Exception:\n                body = None\n\n        if body:\n            try:\n                body_json = json.loads(body.decode(\"utf-8\"))\n                if isinstance(body_json, dict) and \"data\" in body_json:\n                    data_content = body_json[\"data\"]\n                    if isinstance(data_content, str):\n                        body = data_content.encode(\"utf-8\")\n                    elif isinstance(data_content, (dict, list)):\n                        body = json.dumps(data_content).encode(\"utf-8\")\n            except (json.JSONDecodeError, UnicodeDecodeError):\n                pass\n\n        # bad cases: Content-Length and content-length coexist\n        # headers = {k: v for k, v in self.headers.items()}\n        headers = {k: v for k, v in self.headers.items() if k.lower() != 'content-length'}\n        # headers[\"Host\"] = f\"{VLLM_HOST}:{VLLM_PORT}\"\n\n        # don't set Content-Type for GET (use Accept). For write methods, optionally set application/json\n        if method == \"GET\":\n            if \"Accept\" not in self.headers:\n                headers[\"Accept\"] = \"application/json\"\n            # remove Content-Type for GET if user mistakenly set it (avoid confusing server)\n            headers.pop(\"Content-Type\", None)\n        else:\n            if AUTO_JSON and \"Content-Type\" not in self.headers:\n                headers[\"Content-Type\"] = \"application/json\"\n\n        if body:\n            headers['Content-Length'] = str(len(body))\n        else:\n            headers.pop('Content-Length', None)\n\n        return forward_path, body, headers\n\n    def _process_and_send_response(self, method, resp, path):\n        resp_body = resp.read()\n        resp_headers = dict(resp.getheaders())\n        # print(\"Proxy response:\", resp_body.decode(\"utf-8\", errors=\"ignore\"))\n        if DEBUG:\n            self._log_response(resp.status, resp_headers, resp_body, path)\n\n        self.send_response(resp.status)\n        self.send_cors_headers()\n\n        # forward headers except hop-by-hop, and override Content-Length to actual length\n        for k, v in resp.getheaders():\n            kl = k.lower()\n            # do not forward existing content-length; we'll set correct one below\n            if kl in HOP_BY_HOP or kl == \"content-length\":\n                continue\n            # safe to forward\n            try:\n                self.send_header(k, v)\n            except Exception:\n                pass\n\n        if method == \"GET\":\n            final_body = resp_body\n        else:\n            try:\n                decoded_body = resp_body.decode(\"utf-8\")\n                # remove space and \\n\n                # compressed_body = \"\".join(decoded_body.split())\n                final_body = json.dumps({\"data\": decoded_body}).encode(\"utf-8\")\n                # final_body = json.dumps({\"data\": json.loads(decoded_body)}).encode(\"utf-8\")\n            except UnicodeDecodeError:\n                final_body = json.dumps({\"data\": \"\"}).encode(\"utf-8\")\n\n        # print(\"\\n\\n==== log final_body ====\")\n        # log_body(final_body)\n        # set correct Content-Length for client\n        self.send_header(\"Content-Length\", str(len(final_body)))\n        self.end_headers()\n        self.wfile.write(final_body)\n        # self.wfile.flush()\n\n    def forward_request(self, method):\n        forward_path, body, headers = self._prepare_forwarded_request(method)\n\n        if DEBUG:\n            self._log_request(method, forward_path, headers, body)\n\n        if MOCK:\n            conn = MockHTTPConnection(VLLM_HOST, VLLM_PORT)\n        else:\n            conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n        # conn = http.client.HTTPConnection(VLLM_HOST, VLLM_PORT)\n\n        try:\n            conn.request(method, forward_path, body, headers)\n            resp = conn.getresponse()\n            self._process_and_send_response(method, resp, forward_path)\n        except Exception as e:\n            print(f\"\\n\\n==== PROXY ERROR ====\")\n            print(f\"Error connecting to upstream server: {e}\")\n            print(f\"Exception Type: {type(e).__name__}\")\n            self.send_response(502)\n            self.send_cors_headers()\n            error_message = {"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-66c46ba6870b411dbb36334269113840",
+      "content": "Tool execution succeeded."
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-e906ce865d3a4ccba9fe41a3b436e19b",
+      "content": "Directory listing for /Users/hua/inner/xxx-service:\n[DIR] __pycache__\n[DIR] data\n.gitignore\ncheck_env.py\ndemo-data.mjs\ndemo.mjs\nmain.py\nmock_http.py\npython_requirements.txt\nREADME.md\nstart.sh\n\n(2 git-ignored)"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-feb3a42080824e9e9c031542bc9d8e08",
+      "content": "Directory listing for /Users/hua/inner/xxx-service:\n[DIR] __pycache__\n[DIR] data\n.gitignore\ncheck_env.py\ndemo-data.mjs\ndemo.mjs\nmain.py\nmock_http.py\npython_requirements.txt\nREADME.md\nstart.sh\n\n(2 git-ignored)"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-00cbdd03564b4e3ca38d12ba58659cfe",
+      "content": "# xxx-service\n\n## demo\n\n```sh\nnode demo.mjs\n```\n\n## debug\n\n```sh\nMOCK=1 python3 ./main.py\n```\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-2175cfd1eee345f0ae93bfecb20e3b5f",
+      "content": "Found 60 matches for pattern \"def \" in path \"/Users/hua/inner/xxx-service\":\n---\nFile: check_env.py\nL10: def shm_usage_mib() -> dict[str, int] | None:\nL34: def check_python():\nL49: def check_vllm():\nL62: def check_torch():\nL75: def run_nvidia_smi_query(fields: str):\nL86: def check_gpu_info():\nL112: def check_ldconfig_and_libcuda():\n---\nFile: data/o200k_base.tiktoken\nL12706: 15nXmdef 12705\nL31806: 15nXldef 31805\nL37133: INeW15nXmdef 37132\nL66620: 15XXmdef 66619\nL68488: INen15nXmdef 68487\nL70885: INeT15nXmdef 70884\nL76019: INek1r/Xldef 76018\nL77135: 15nXqdef 77134\nL80569: INeU15DXkdef 80568\nL81210: 16TXldef 81209\nL85164: 15DXmdef 85163\nL88375: INep15XXmdef 88374\nL91843: 15XXkdef 91842\nL93326: 15XXldef 93325\nL95090: 15fXldef 95089\nL100820: 157Xmdef 100819\nL103611: 15LXldef 103610\nL106112: 15vXldef 106111\nL109246: 15DXldef 109245\nL114245: 15HXldef 114244\nL114346: INec16LXkdef 114345\nL116881: INee15nXmdef 116880\nL120333: INep15DXmdef 120332\nL122894: INeQ15nXmdef 122893\nL124813: INeS16LXqdeo15nXkdef 124812\nL129016: INeg15vXldef 129015\nL146053: INeU15PXmdef 146052\nL161503: INec15HXmdef 161502\nL172173: INeb15LXldef 172172\nL174802: INeS15nXmdef 174801\nL181137: INeV15DXmdef 181136\nL192352: 157Xldef 192351\n---\nFile: main.py\nL28: def log_body(body):\nL36: def do_OPTIONS(self):\nL42: def do_GET(self):\nL51: def do_POST(self): self.forward_request(\"POST\")\nL52: def do_PUT(self): self.forward_request(\"PUT\")\nL53: def do_DELETE(self): self.forward_request(\"DELETE\")\nL54: def do_PATCH(self): self.forward_request(\"PATCH\")\nL56: def send_cors_headers(self):\nL62: def _log_request(self, method, path, headers, body):\nL71: def _log_response(self, status, headers, body, path):\nL80: def _prepare_forwarded_request(self, method):\nL136: def _process_and_send_response(self, method, resp, path):\nL178: def forward_request(self, method):\nL215: def log_message(self, format, *args):\n---\nFile: mock_http.py\nL5: def __init__(self, status, body, headers):\nL10: def read(self):\nL13: def getheaders(self):\nL17: def __init__(self, host, port):\nL23: def request(self, method, url, body, headers):\nL42: def getresponse(self):\nL45: def close(self):\n---"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-d6126b4d08f5423d91dcf2f42bb96392",
+      "content": "# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.\n\n# system files / Vim backup files / Eclipse / IntelliJ IDEA\n*bak\n*.bak\n.DS_Store\nThumbs.db\n*~\n~*\n.project\n.*proj\n*.iml\n.idea\n.idea/\n.ipr\n.iws\n.vscode\n/.vscode\n\n# log / git / misc\n.history\n*.log\n*.log*\n*.tmp\ntmp\n.temp/**\n*.diff\n*.patch\n.*.sw*\n*.pem\ncert\ncert/*\n\n\n\n\n\n\n\n\n\n\n\n\n### Python\n# Byte-compiled / optimized / DLL files\n__pycache__/\n*.py[cod]\n*$py.class\n\n# C extensions\n*.so\n\n# Distribution / packaging\n.Python\nbuild/\ndevelop-eggs/\ndist/\ndownloads/\neggs/\n.eggs/\nlib/\nlib64/\nparts/\nsdist/\nvar/\nwheels/\n*.egg-info/\n.installed.cfg\n*.egg\nMANIFEST\n\n# PyInstaller\n#  Usually these files are written by a python script from a template\n#  before PyInstaller builds the exe, so as to inject date/other infos into it.\n*.manifest\n*.spec\n\n# Installer logs\npip-log.txt\npip-delete-this-directory.txt\n\n# Unit test / coverage reports\nhtmlcov/\n.tox/\n.nox/\n.coverage\n.coverage.*\n.cache\nnosetests.xml\ncoverage.xml\n*.cover\n*.py,cover\n.hypothesis/\n.pytest_cache/\n\n# Translations\n*.mo\n*.pot\n\n# Django stuff:\n*.log\nlocal_settings.py\ndb.sqlite3\ndb.sqlite3-journal\n\n# Flask stuff:\ninstance/\n.webassets-cache\n\n# Scrapy stuff:\n.scrapy\n\n# PyBuilder\ntarget/\n\n# Jupyter Notebook\n.ipynb_checkpoints\n\n# IPython\nprofile_default/\nipython_config.py\n\n# pyenv\n.python-version\n\n# pipenv\nPipfile.lock\nPipfile\n\n# PEP 582; used by e.g. github.com/David-OConnor/pyflow\n__pypackages__/\n\n# Celery stuff\ncelerybeat-schedule\ncelerybeat.pid\n\n# SageMath parsed files\n*.sage.py\n\n# Environments\nvllm_env/\n.env\n.venv\nenv/\nvenv/\nENV/\nenv.bak/\nvenv.bak/\n\n# Spyder project settings\n.spyderproject\n.spyproject\n\n# Rope project settings\n.ropeproject\n\n# mypy\n.mypy_cache/\n.dmypy.json\ndmypy.json\n\n# Pyre type checker\n.pyre/\n\n# Windows\nThumbs.db\nehthumbs_vista.dll\nehthumbs_*.dll\nDesktop.ini\n$RECYCLE.BIN/\n*.lnk\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-32e6879735cc44ac95ef058aafd86530",
+      "content": "Command: ls -R\nDirectory: (root)\nOutput: __pycache__\ncheck_env.py\ndata\ndemo-data.mjs\ndemo.mjs\nmain.py\nmock_http.py\npython_requirements.txt\nREADME.md\nstart.sh\n\n./__pycache__:\nmock_http.cpython-310.pyc\n\n./data:\ncl100k_base.tiktoken\no200k_base.tiktoken\nError: (none)\nExit Code: 0\nSignal: (none)\nBackground PIDs: (none)\nProcess Group PGID: 58915"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-6f54f10655a34b898e12a592798721a4",
+      "content": "Directory listing for /Users/hua/inner/xxx-service:\n[DIR] __pycache__\n[DIR] data\n.gitignore\ncheck_env.py\ndemo-data.mjs\ndemo.mjs\nmain.py\nmock_http.py\npython_requirements.txt\nREADME.md\nstart.sh\n\n(2 git-ignored)"
+    }
+  ],
+  "temperature": 0,
+  "top_p": 1,
+  "max_tokens": 20000,
+  "tools": [
+    "__omit_for_short_log__"
+  ]
+}

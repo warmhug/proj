@@ -837,7 +837,8 @@ Host github.com
 
 ```sh
 
-# -f 强制运行  -d 同时考虑子目录  -x 清理忽略文件  -n 模拟删除操作.
+# -f 强制运行  -d 考虑子目录  -X 清理被忽略(不含未跟踪) -x 清理"未跟踪+被忽略" -n 模拟删除操作.
+git clean -fdX
 git clean -fdxn  # git 删除 Untracked files
 
 git ls-files -m  # 列出所有已跟踪且内容已修改的文件
@@ -1111,6 +1112,9 @@ lernaCli, 'exec', '--scope', name, '--', `pnpm version ${newVersion}` --workspac
 
 # .
 # 设备
+
+chrome 的 reading mode 会使用 html lang 来作为朗读语言, 使用 chrome插件修改了 lang 参数 但仍无效 是怎么了?
+2026-04-22
 
 微软翻译 api 能免费调用吗? 不用申请 apikey 不用翻墙的有吗?
 https://chatgpt.com/c/69b2e8b3-174c-83a7-8c4c-1d476f6e8052
@@ -1480,7 +1484,7 @@ uicloner
 
 Tab Position Options / 一键切换(Jomic) 搜索拐杖 下一页(空格键自动翻到下一页) Tamper Tampermonkey / Disable Content-Security-Policy / Talend API Tester / Web Developer / Neat URL / Copy Tab Info / Open Multiple URLs / User JavaScript and CSS / Wayback Machine / Memex / 一叶 / grammarly.com / gitpod npmhub / screenity / Language Reactor / Side Browser / Sidebar Tab / Porter Plug / Video Speed Controller /
 
-Immersive Translate / ImTranslator / DeepTranslate / Tencent Translator(2020-02已不可用)
+Immersive Translate / ImTranslator / DeepTranslate / Tencent Translator(2026-02已不可用)
 
 click-to-react-component
 https://github.com/ericclemmons/click-to-component
@@ -2279,6 +2283,9 @@ export https_proxy=http://192.168.64.1:7890 http_proxy=http://192.168.64.1:7890 
 
 ## mobile / win
 
+
+mac 电脑连接了公司的 WiFi 网络, 手机不方便连接, 怎么使用 mac 的网络?
+2026-04-15
 
 手机触摸有时不受控制 画面乱跳, 可能是把手机压到枕头底下 压出问题 了吗?
 应该是 触摸层异常了, 只能换屏幕了吗?

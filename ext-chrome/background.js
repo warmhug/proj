@@ -7,82 +7,19 @@ importScripts('common.js');
 console.log('bg page, 注意其执行时机', chrome);
 // console.log('bg page init no window', window?.document?.title);
 
-const hl_inject_ai_urls = [
-  "https://gemini.google.com/",
-  "https://chatgpt.com/"
-];
-const hl_inject_ai_fns = [
-  // https://www.doubao.com/chat/
-  (clipText) => {
-    if (!clipText) return;
-    // alert(2);
-    const input = document.querySelector('.semi-input-textarea-wrapper textarea');
-    input.focus();
-    input.value = clipText;
-    // input.dispatchEvent(new Event('change'));
-    input.dispatchEvent(new Event('input', { bubbles: true }));
-    console.log('log doubao', input, hl_utils);
-    hl_utils.sleep(500).then(() => {
-      document.querySelector('.send-btn-wrapper button').dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    });
-  },
-  // https://chatgpt.com/
-  (clipText) => {
-    if (!clipText) return;
-    // alert(4);
-    const input = document.querySelector('#prompt-textarea');
-    input.innerHTML = clipText;
-    console.log('log gpt: ', input, hl_utils);
-    hl_utils.sleep(500).then(() => {
-      document.querySelector('[data-testid="send-button"]').dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    });
-  },
-  // https://kimi.moonshot.cn/
-  async (clipText) => {
-    if (!clipText) return;
-    // alert(3);
-    const selection = window.getSelection();
-    document.activeElement?.blur();
-    selection.removeAllRanges();
-    await hl_utils.sleep(500);
-    // selection.isCollapsed 为 true 是未选择
-    // const editableArea = document.querySelector('[contenteditable]');
-    const editableArea = document.querySelector('[data-testid="msh-chatinput-editor"]');
-    // 字节监控代码 会阻止 调用 dispatchEvent input change 事件
-    // https://apm.volccdn.com/mars-web/apmplus/web/browser.cn.js?aid=0&globalName=apmPlus
-    editableArea.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    // console.log('editableArea: ', editableArea);
-    // editableArea.select();
-    await hl_utils.sleep(800);
-    if (document.queryCommandSupported('insertText')) {
-      document.execCommand('selectAll', false, null); // 全选现有的内容
-      document.execCommand('delete', false, null);   // 删除全选的内容
-      document.execCommand('insertText', false, clipText);
-      // console.log("自动输入到了 contenteditable 里", editableArea.innerHTML);
-    } else {
-      alert("Your browser does not support insertText command");
-    }
-    await hl_utils.sleep(500);
-    console.log('log moonshot: ', sleep);
-    document.querySelector('#send-button')
-      .dispatchEvent(new MouseEvent('click', { bubbles: true }));
-  },
-];
-
-const hl_inject_auto_urls = [
+const injectUrls = [
   [
     // "https://*.google.com/*",
     "https://google.com/*", "https://www.google.com/*",
     "https://*.bing.com/*", "https://*.baidu.com/*"
   ],
   "https://www.zhihu.com/",
-  "https://i.mi.com/note/h5#/",
-  "https://note.txxx.tea/"
 ];
-const hl_inject_auto_params = [
+const injectUrlsPs = [
   // https://cn.bing.com  https://www.bing.com https://www.google.com  https://www.baidu.com
   {
-    func: () => {
+    func: (arg) => {
+      console.log('log arg: ', arg);
       try {
         hl_utils?.createSearchSwitch();
         window.addEventListener('popstate', function (event) {
@@ -104,42 +41,6 @@ const hl_inject_auto_params = [
     func: () => {
       // alert(11);
     },
-  },
-  // https://i.mi.com/note/h5#/
-  {
-    css: `
-      #folderList {
-        width: 100px;
-      }
-    `,
-    func: () => {
-      setTimeout(() => {
-        const linkEle = document.getElementById('pm-container')?.querySelectorAll('.ltr-element');
-        linkEle?.forEach((item) => {
-          // console.log('linkele', linkEle);
-          item.addEventListener('dblclick', (evt) => {
-            var text = evt.target.innerText;
-            console.log(text);
-            text.split(' ').forEach(http => {
-              if (http.startsWith('http')) {
-                window.open(http);
-              }
-            });
-          });
-        });
-      }, 800);
-    },
-  },
-  // company note
-  {
-    css: `
-      #main-root [data-testid="beast-core-resize-area"] {
-        overflow: scroll !important;
-      }
-      #main-root [data-testid="beast-core-resize-area"] > div:last-child {
-        width: 540px !important;
-      }
-    `,
   },
 ];
 
@@ -198,17 +99,22 @@ chrome.tabs.onCreated.addListener(async (tabInfo) => {
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   // console.log('onUpdated tabs: ', tabId, changeInfo, tab.url);
-  const result = hl_utils.asyncMap(hl_inject_auto_urls, async (url, idx) => {
+  const result = hl_utils.asyncMap(injectUrls, async (url, idx) => {
+    // const targetTab = await hl_utils.createOrUpdateTab(url, true);
+    // console.log('log targetTab: ', targetTab);
     const queryTabs = await chrome.tabs.query({ url: url });
     return await hl_utils.asyncMap(queryTabs, async (qTab) => {
       if (qTab.id == tabId) {
         // 自动注入的内容
-        const { css = '', ...rest } = hl_inject_auto_params[idx];
+        const { css = '', ...rest } = injectUrlsPs[idx];
         await chrome.scripting.insertCSS({ target: { tabId }, css });
         const injectionResults = await chrome.scripting.executeScript({
           target: { tabId },
+          args: ['executeScript_arg_test'],
           ...rest,
         });
+        // 虽然页面已经 loaded 但 页面里的元素 可能还在变化、等待其稳定
+        // await hl_utils.sleep(300);
         // console.log('auto injectionResults: ', injectionResults);
         return injectionResults;
       }
@@ -216,42 +122,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   });
   // console.log('log result: ', result);
 });
-
-async function aiChat(clipText) {
-  const maps = hl_inject_ai_urls.map((url, idx) => ({
-    url, func: hl_inject_ai_fns[idx]
-  }));
-  const runFn = async ({ url, func }) => {
-    return;
-    const targetTab = await hl_utils.createOrUpdateTab(url, true);
-    if (!targetTab) {
-      return;
-    }
-    const tabId = targetTab.id;
-    if (targetTab.index > 7) {
-      await chrome.tabs.move(tabId, { index: 0 });
-    }
-    // 虽然页面已经 loaded 但 页面里的元素 可能还在变化、等待其稳定
-    await hl_utils.sleep(300);
-    // await hl_utils.sleep(135000);
-    try {
-      const injectionResults = await chrome.scripting.executeScript({
-        func,
-        target: { tabId },
-        args: [clipText],
-      });
-    } catch (error) {
-      console.log('log executeScript error: ', url, error);
-    }
-  };
-  // console.log('log maps: ', maps);
-  for (let item of maps) {
-    await runFn(item);
-    await hl_utils.sleep(1000);
-  }
-  // 并行执行，有焦点失焦问题？
-  // await hl_utils.asyncMap(maps, runFn);
-}
 
 // 开启定时任务
 const interval = null;
@@ -262,12 +132,10 @@ hl_utils.cron(interval, async () => {
 });
 
 async function onMessageCb(request) {
+  console.log('log request.clipText: ', request.clipText);
   if (request?.action === 'reloadTabs') {
     const [curTab] = await chrome.tabs.query({ active: true });
     await hl_utils.reloadTabs(request?.reloadTabsAll ? undefined : curTab);
-  }
-  if (request?.action === 'AIChat') {
-    await aiChat(request.clipText);
   }
   if (request.action === 'openPopup') {
     await openPopup(undefined, undefined, 0);
@@ -298,15 +166,11 @@ async function openPopup(text = 'popup', cb = async () => {}, delay = 1000) {
 // chrome://extensions/shortcuts
 chrome.commands.onCommand.addListener((command) => {
   openPopup(command, async () => {
-    if (command === 'AIChat') {
-      response = await chrome.runtime.sendMessage(
-        { _bg: true, action: command },
-      );
-      // 需要等 popup 页面获取到内容，这里才能收到消息
-      console.log("Receive response in background", response);
-      if (response?.action === command && response?.clipText) {
-        await aiChat(response.clipText);
-      }
-    }
+    console.log('log command: ', command);
+    response = await chrome.runtime.sendMessage(
+      { _bg: true, action: command },
+    );
+    // 需要等 popup 页面获取到内容，这里才能收到消息
+    console.log("Receive response in background", response);
   });
 });
