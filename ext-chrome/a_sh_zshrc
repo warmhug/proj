@@ -25,9 +25,17 @@ hl_setAlias() {
   alias aa='node /Users/hua/inner/infra1/ai/aaid-cli/dist/index.js'
   alias afc='find . -type f | wc -l'
   alias atmp='node -e "console.log(require(\"os\").tmpdir())"'
-  alias scr='scrcpy --shortcut-mod=lctrl --show-touches --stay-awake -m1024 -b2M'
 }
 hl_setAlias
+
+scr() {
+  toggle() {
+    osascript -e 'tell application "System Events" to keystroke "d" using {control down, command down, option down}'
+  }
+  toggle
+  trap 'toggle' INT EXIT
+  scrcpy --shortcut-mod=lctrl --show-touches --stay-awake -m1024 -b2M --window-x=0 --window-y=90 --window-width=250
+}
 
 # adb 解锁 android 手机, 终端直接输入 locks
 locks() {

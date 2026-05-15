@@ -15,7 +15,7 @@ import { activate as temSC } from "./template-string-converter";
 
 export function activate(context: ExtensionContext) {
   console.log('log warmhug extension is now active!');
-  vscode.window.showInformationMessage('log warmhug extension is now active!');
+  // vscode.window.showInformationMessage('log warmhug extension is now active!');
 
   context.subscriptions.push(vscode.commands.registerCommand('warmhug.demo', () => {
     vscode.window.showInformationMessage('你好 warmhug !!!');

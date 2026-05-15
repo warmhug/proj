@@ -1,5 +1,5 @@
-#!/bin/bash
 
+# 运行 brew bundle
 # https://catalins.tech/how-i-setup-new-macbooks/
 
 brew "git"
@@ -10,11 +10,8 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
-# brew "pnpm"
-# brew "npm"
-# brew "gh"
 
-# apps
+# 自动安装到 /Applications 目录里
 cask "google-chrome"
 cask "postman"
 cask "cursor"

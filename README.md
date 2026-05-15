@@ -5,6 +5,8 @@ show_title: false
 permalink: /
 ---
 
+# .
+
 网易 [科技](https://tech.163.com/)  [财经](https://money.163.com/) [国际](https://news.163.com/world/)
 [热榜](https://tophub.today/) [人人PD](http://www.woshipm.com)
 [pmbaobao](https://www.pmbaobao.com/) [36kr热榜](https://www.36kr.com/hot-list/catalog)
@@ -48,7 +50,118 @@ https://gitlab.com/warmhug/test
 
 
 
-# .
+# 资源
+
+
+data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cG9seWdvbiBwb2ludHM9IjEyLDIgMTUsOSAyMiw5IDE3LDE0IDE5LDIxIDEyLDE3IDUsMjEgNywxNCAyLDkgOSw5IiBmaWxsPSIjRkZDMTMwIi8+PC9zdmc+
+
+
+------
+
+https://time.is  https://datetime.app
+
+like jq for markdown https://github.com/yshavit/mdq
+https://www.devtoolsdaily.com/jq_playground/
+https://url-decode.com/all-tools
+
+文字图
+https://emojis.click/zh
+https://asciiflow.com/
+https://ascii-tree-generator.com/
+
+markdown 表情 :+1: :smile: :smiley: :laughing:
+- [emojispark](https://emojispark.com/)
+- [emoji8](https://emoji8.com/zh-hans/)
+- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+艺术字
+- [asciiart](https://asciiart.website)
+- [figlet](http://www.figlet.org/examples.html)
+- [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
+
+占位图
+- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
+- [生成logo](https://www.logo.surf/)
+- [颜色选择](https://htmlcolorcodes.com/zh/) [flickr](https://flickr.com)
+https://www.iconfont.cn/
+
+国外图片站点
+https://www.pexels.com/zh-cn/
+https://pixabay.com/
+
+pdf转markdown https://github.com/MarkPDFdown/markpdfdown
+pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
+语音转文字 https://www.zaixianai.cn/voiceToText
+拼图 https://img.ops-coffee.com/
+https://nextbconvert.com/en
+https://tinyurl.com/
+
+https://path-motion.yysuni.com/canvas
+https://www.svgshow.cn/
+https://github.com/liujuntao123/new-svg-viewer
+
+https://clipso.agilestudio.cn/
+
+独立开发者工具 https://github.com/yaolifeng0629/Awesome-independent-tools
+新闻订阅 https://github.com/sansan0/TrendRadar
+https://github.com/glidea/zenfeed
+https://github.com/w4n9hu1/hot-hub-web
+白噪音 https://soundbox.fun/
+
+[Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
+- https://make-bookmarklets.com/
+- 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
+
+
+------ cdn
+
+[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
+https://unpkg.com  https://cdnjs.com  https://jshub.com
+https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org
+https://upcdn.b0.upaiyun.com  https://cdn.bytedance.com  https://www.webcache.cn
+
+```md
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][downloads-url]
+[![Build Status][travis-image]][travis-url]
+
+[npm-url]: https://npmjs.org/package/@huajs/demo
+[npm-image]: http://img.shields.io/npm/v/@huajs/demo.svg
+
+[downloads-url]: https://npmjs.org/package/@huajs/demo
+[downloads-image]: http://img.shields.io/npm/dm/@huajs/demo.svg?style=flat-square
+
+[travis-url]: https://travis-ci.org/react-component/m-steps
+[travis-image]: http://img.shields.io/travis/react-component/m-steps.svg
+```
+
+https://gw.alipayobjects.com/os/lib/react/16.13.0/umd/react.production.min.js
+https://gw.alipayobjects.com/os/lib/react-dom/16.13.0/umd/react-dom.production.min.js
+https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
+https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
+https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
+https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
+https://os.alipayobjects.com/rmsportal/EylTaSCtqXQRiTK.jpg
+http://images.cnblogs.com/cnblogs_com/bluedream2009/201609/o_mm.jpg
+
+http://cdn.staticfile.org/angular.js/1.2.16/angular.js
+http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
+http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
+https://code.jquery.com/ui/1.13.0/jquery-ui.js
+jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
+https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
+https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
+qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
+less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
+bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
+bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
+2019
+
+
+
+
 # 前端
 
 https://webkit.org/blog/16458/announcing-interop-2025/
@@ -267,52 +380,6 @@ package.json 中的 browser 字段 主要由打包器识别 (如 Webpack Rollup 
 - webpack 侧重模块打包，我们可以把开发中的所有资源（图片、js文件、css文件等）都看成模块，通过loader（加载器）和plugins（插件）对资源进行处理，打包成符合生产环境部署的前端资源。
 
 
-
------- cdn
-
-[国内有哪些靠谱的 Javascript 库 CDN可用](https://www.zhihu.com/question/20227463)
-https://unpkg.com  https://cdnjs.com  https://jshub.com
-https://cdnjs.cloudflare.com  https://www.bootcdn.cn  https://www.staticfile.org
-https://upcdn.b0.upaiyun.com  https://cdn.bytedance.com  https://www.webcache.cn
-
-```md
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][downloads-url]
-[![Build Status][travis-image]][travis-url]
-
-[npm-url]: https://npmjs.org/package/@huajs/demo
-[npm-image]: http://img.shields.io/npm/v/@huajs/demo.svg
-
-[downloads-url]: https://npmjs.org/package/@huajs/demo
-[downloads-image]: http://img.shields.io/npm/dm/@huajs/demo.svg?style=flat-square
-
-[travis-url]: https://travis-ci.org/react-component/m-steps
-[travis-image]: http://img.shields.io/travis/react-component/m-steps.svg
-```
-
-https://gw.alipayobjects.com/os/lib/react/16.13.0/umd/react.production.min.js
-https://gw.alipayobjects.com/os/lib/react-dom/16.13.0/umd/react-dom.production.min.js
-https://gw.alipayobjects.com/zos/rmsportal/gIYqpRZVWejUBzkRRZMl.png
-https://img.alicdn.com/bao/uploaded/i1/32785103/TB2UQQOsFXXXXaDXXXXXXXXXXXX_!!32785103.jpg_300x300q90.jpg
-https://gw.alipayobjects.com/zos/rmsportal/PnjNniBkexOKzoehotzl.jpg@100h.src
-https://gw.alipayobjects.com/zos/rmsportal/RxMbdtGwmMUIVsXRiLyJ.jpg
-https://os.alipayobjects.com/rmsportal/EylTaSCtqXQRiTK.jpg
-http://images.cnblogs.com/cnblogs_com/bluedream2009/201609/o_mm.jpg
-
-http://cdn.staticfile.org/angular.js/1.2.16/angular.js
-http://cdn.bootcss.com/placeholder.js/3.1.0/placeholder.js
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
-http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js
-https://code.jquery.com/ui/1.13.0/jquery-ui.js
-jQuery v1.12.4 https://gw.alipayobjects.com/os/rmsportal/YbGjMuYEbXdIGJRsqOSA.js
-https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery-debug.js
-https://gw.alipayobjects.com/os/lib/jquery/3.6.0/dist/jquery.min.js
-qrcode.js https://gw.alipayobjects.com/os/rmsportal/lRHmUpUMSTHDNMnENjeD.js
-less.js https://gw.alipayobjects.com/os/rmsportal/OKOpSSqWebCoOQQXdLVG.js
-bootstrap.css v3.3.7 https://gw.alipayobjects.com/os/rmsportal/SaEqgaEyUazqSndgTxGj.css
-bootstrap.js v3.3.7 https://gw.alipayobjects.com/os/rmsportal/MoeUXzBfoEONHwCbBvXl.js
-2019
 
 
 
@@ -1190,6 +1257,7 @@ https://chatgpt.com/share/6742e267-f3a0-8008-bda3-6b1b6bbce601
 2022-05 惠普z27k显示器 typec 100w 输出功率 能给电脑充电
 
 
+
 ## macOS
 
 https://github.com/PasteBar/PasteBarApp
@@ -1197,6 +1265,9 @@ https://github.com/hkdobrev/cleanmac
 
 - `shortcuts run 获取时间` [Run shortcuts from the command line](https://support.apple.com/en-gb/guide/shortcuts-mac/apd455c82f02/mac)
 - https://apps.apple.com  https://music.apple.com
+
+截图: command + shift + 4 (3全屏) 录屏: command + shift + 5
+批量修改图片 宽或高最大值(保持宽高比) `sips -Z 1600 *.jpg`
 
 ------ 设置
 - 点击和手势: 触控板。1 勾选 “轻点来点按” 2 启用词典：查询与数据检测器 - 选择三指轻点 3 更多手势 - 应用Expose。
@@ -1288,15 +1359,21 @@ crontab -e 脚本内容示例
 ## 软件
 
 https://www.npmjs.com/package/microsoft-translate-api
+https://evercoder.github.io/clipboard-inspector/
+https://cloudconvert.com/
+https://videocompressors.com/
+https://online-audio-converter.com/
+https://archive.org/web
 
-- 屏幕共享 https://github.com/tonghohin/screen-sharing
-- AppCleaner / Unarchiver / Clipy / https://github.com/Stengo/DeskPad / ngrok inlets(GitHub) / https://github.com/CrossPaste/crosspaste-desktop / https://www.hammerspoon.org / https://archive.org/web
-下载器 https://github.com/imputnet/cobalt  https://www.fastdownload.io webtorrent-desktop / NeatDownloadManager
+屏幕共享 https://github.com/tonghohin/screen-sharing
+虚拟显示器 https://github.com/Stengo/DeskPad
+变暗显示器 https://github.com/MonitorControl/MonitorControl
 
-图像视频
-- 截图: command + shift + 4 (3全屏) 录屏: command + shift + 5
-- xnip snipaste lightshot (snip) / licecap (kap gifify) / UPDF(pdf编辑) / any-video-converter(online-audio-converter.com) / XnConvert(图像处理) / Movist (IINA) / ExifRenamer(重命名图片) / ExifTool [exifr](https://mutiny.cz/exifr/) / HandBrake / MKVToolnix(mkv字幕抽取) / perian(QuickTime 插件) / aria2
-- 图片批量修改 宽或高 最大值 保持宽高比 `sips -Z 1600 *.jpg` 或指定宽高 `sips -z height width [file]`
+基础: AppCleaner / Unarchiver / Clipy (crosspaste) / xnip snipaste lightshot (snip) / licecap (kap gifify) / UPDF(pdf编辑) / ngrok inlets(GitHub)
+效率: HazeOver / MonitorControl
+下载: webtorrent-desktop / NeatDownloadManager / cobalt / fastdownload
+
+图像视频: HandBrake / Movist (IINA) / any-video-converter / XnConvert(图像处理) / ExifRenamer(重命名图片) / ExifTool exifr / MKVToolnix(mkv字幕抽取) / perian(QuickTime 插件) / aria2
 ```sh
 brew install ffmpeg
 ffmpeg -i input.mp4  # 查看分辨率 Stream #0:0: Video: h264 (High), **1920x1080**, ...
@@ -1305,19 +1382,17 @@ ffplay input.mp4 -vf "crop=1280:720:320:180"  # 裁剪视频 预览
 # 2x 倍速压缩, 没有音频
 ffmpeg -i input.mov -filter:v "setpts=0.5*PTS" -crf 28 -preset fast 2x_compressed.mp4
 ```
-https://cloudconvert.com/
-https://videocompressors.com/
 
 文件传输
 https://github.com/WCY-dt/EasyTransfer
 https://snapdrop.net/ (速度快 最方便， mac 上 edge 浏览器不可用、使用 chrome 浏览器)
 https://easychuan.cn/  https://www.wenshushu.cn/  https://github.com/schollz/croc
-Mac smb 文件共享(速度约1M/s较慢): 在需要共享文件的 Mac 上打开「系统偏好设置-共享-文件共享」会显示类似 smb://192.168.1.9 的共享地址。在另一台 Mac 上打开访达，在菜单栏选择「前往-连接服务器」。在 iPhone 或 iPad 打开「文件」App，点击右上角选项图标，选择「连接服务器」。
+> Mac smb 文件共享(速度约1M/s较慢): 在需要共享文件的 Mac 上打开「系统偏好设置-共享-文件共享」会显示类似 smb://192.168.1.9 的共享地址。在另一台 Mac 上打开访达，在菜单栏选择「前往-连接服务器」。在 iPhone 或 iPad 打开「文件」App，点击右上角选项图标，选择「连接服务器」。
 
 拼字幕 https://quotemaker.cc/zh/
 视频字幕类型有三种：内嵌字幕、外挂字幕、封装软字幕。可以视频转为音频、再提取字幕。
 - 字幕下载 https://subhd.tv  剪映 / 钉钉闪记 / B站必剪 / 迅捷文字转语音。
-- Subtitle Edit / Aegisub / Subtitle Workshop / HandBrake / FFmpeg
+- Subtitle Edit / Aegisub / Subtitle Workshop
 - 大模型 [openai/whisper](https://github.com/openai/whisper) 为视频生成字幕文件 https://github.com/buxuku/VideoSubtitleGenerator
 
 欧路词典: 修改 ~/Library/Preferences/ com.eusoft.eudic.plist 修改 MAIN_TimesLeft：允许使用次数(任意改) 10000000 重启 （更新 [notion](https://www.notion.so/Eudic-Mac-0b5e993809794576868714f613f637ff)、百度网盘下载 再升级）
@@ -1348,7 +1423,6 @@ launchctl list | grep com.hua.autorun  # 验证是否运行
 测网速 https://fast.com
 vpn检测 https://proxy.incolumitas.com/proxy_detect.html
 查看本机公网 ip: http://cip.cc  https://ipinfo.io/json  https://ifconfig.me
-
 ```sh
 curl cip.cc
 traceroute baidu.com  # 查看域名路由 或 `ping baidu.com`
@@ -1367,64 +1441,6 @@ bridge100: ...
     inet 192.168.64.1 netmask 0xffffff00 broadcast 192.168.64.255
 # 其他状态为 inactive，说明未激活或未连接
 ```
-
-
-------
-
-https://evercoder.github.io/clipboard-inspector/
-https://time.is  https://datetime.app
-
-like jq for markdown https://github.com/yshavit/mdq
-https://www.devtoolsdaily.com/jq_playground/
-https://url-decode.com/all-tools
-
-文字图
-https://emojis.click/zh
-https://asciiflow.com/
-https://ascii-tree-generator.com/
-
-markdown 表情 :+1: :smile: :smiley: :laughing:
-- [emojispark](https://emojispark.com/)
-- [emoji8](https://emoji8.com/zh-hans/)
-- [emoji-cheat-sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-艺术字
-- [asciiart](https://asciiart.website)
-- [figlet](http://www.figlet.org/examples.html)
-- [text-to-ascii-art](https://www.asciiart.eu/text-to-ascii-art)
-
-占位图
-- [dummyimage](https://dummyimage.com/750x300/eee/f0f)
-- [生成logo](https://www.logo.surf/)
-- [颜色选择](https://htmlcolorcodes.com/zh/) [flickr](https://flickr.com)
-https://www.iconfont.cn/
-
-国外图片站点
-https://www.pexels.com/zh-cn/
-https://pixabay.com/
-
-pdf转markdown https://github.com/MarkPDFdown/markpdfdown
-pdf转word: 夸克浏览器-工具 / https://www.tongyi.com/discover/convert
-语音转文字 https://www.zaixianai.cn/voiceToText
-拼图 https://img.ops-coffee.com/
-https://nextbconvert.com/en
-https://tinyurl.com/
-
-https://path-motion.yysuni.com/canvas
-https://www.svgshow.cn/
-https://github.com/liujuntao123/new-svg-viewer
-
-https://clipso.agilestudio.cn/
-
-独立开发者工具 https://github.com/yaolifeng0629/Awesome-independent-tools
-新闻订阅 https://github.com/sansan0/TrendRadar
-https://github.com/glidea/zenfeed
-https://github.com/w4n9hu1/hot-hub-web
-白噪音 https://soundbox.fun/
-
-[Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
-- https://make-bookmarklets.com/
-- 需要保存为书签 `javascript:(function(){var baseUrl="https://web.archive.org/web/*/",urlmod=document.URL;window.location.href=baseUrl+urlmod;}());`
 
 
 
@@ -2363,6 +2379,13 @@ iOS 快捷指令
 > 2021 ~ 2026
 
 
+macos scrcpy 里输入文字, Android搜狗输入法 触发联想词, 电脑左右按键 会在联想词 而不是已输入文字之间跳转.
+  解决: 按shift 切换为英文输入 联想词自动关闭, 再按 电脑左右键 即可在已输入文字之间跳转.
+2026-05-12
+
+手机微信搜狗输入法 enter 是换行, 需要单独点击发送按钮. 有什么其他快捷键能直接发送吗? 在 macOS scrcpy 里使用 mac 键盘换行 也不能触发发送按钮.
+2026-05-11
+
 adb 能否获取手机粘贴板数据
   不行: adb shell service call clipboard 1
   手机安装 Clipper 电脑运行 adb shell am broadcast -a clipper.get
@@ -2371,6 +2394,7 @@ https://chatgpt.com/c/69c8f324-8bac-8323-9621-76874e049165
 
 https://github.com/tailscale/tailscale
 2026-03
+
 
 ------ scrcpy adb
 > 衍生软件: linkandroid, QtScrcpy
@@ -2400,12 +2424,19 @@ scrcpy --tcpip
 scrcpy --tcpip=10.94.62.181  # 如果ip正确但也连不上 删掉ip 插上线。
 
 # 快捷键 https://github.com/Genymobile/scrcpy/blob/master/doc/shortcuts.md
-# ctrl p(开电源) o(屏幕关+shift开) h(主屏幕) b(返回) ↑(音量) nn(通知/设置)
+# 从电脑 拖文件进scrcpy 背后调用 adb push (所以不能反向)
+# ctrl p(开电源) o(屏幕关+shift开) h(主屏幕) b(返回) ↑(音量) nn(通知/设置) c/v(剪贴板同步)
+# 固定位置: --always-on-top --window-borderless --window-x=2 --window-y=40 --window-width=400
 # 提高性能: --max-fps 15 , -b2M == --bit-rate 2M , -m1024 == --max-size 1024
 scrcpy --shortcut-mod=lctrl --show-touches --stay-awake -m1024 -b2M --tcpip=10.94.62.181
 ```
 
 
+
+
+------ hammerspoon
+
+https://www.hammerspoon.org
 
 
 ------ AppleScript

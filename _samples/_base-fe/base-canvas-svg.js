@@ -87,7 +87,7 @@ function createImg(opts = {
     cvsContext.fillRect(0, 0, opts.size[0], opts.size[1]);
     cvsContext.fillStyle = opts.color;
     cvsContext.font = `${opts.fstyle} normal ${opts.fweight} ${opts.fsize || 100}px ${opts.ffamily}`;
-    const text_width = cvsContext.measureText(opts.text).width,
+    const text_width = cvsContext.measureText(opts.text).width;
     let scale = 1.0;
     if (!opts.fsize) {
       scale = Math.min(0.7 * opts.size[0] / text_width, 0.7 * opts.size[1] / 100);
