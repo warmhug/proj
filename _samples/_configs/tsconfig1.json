@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    // baseUrl 的 . 和 ./ 一样 ,
+    "baseUrl": "./",
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "strictBindCallApply": false,
+    "importHelpers": true,
+    // debug
+    "explainFiles": true,
+    "traceResolution": true,
+    //
+    "typeRoots": ["./typings", "./vendor/types"],
+    "types": ["node", "jest", "express"],
+    //
+    "paths": {
+      "tslib": ["node_modules/tslib/tslib.d.ts"],
+      "*": ["./node_modules/*", "*"],
+      "@/*": ["src/*"],
+      "@@/*": ["src/.space/*"],
+      "@xx/yy": ["src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "tests/**/*"]
+}
+
+// monorepo 子目录 ./packages/_demo/tsconfig.json 内容如下,
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {
+        // 注意 虽然是在 packages/_demo 子目录里, 但这里 compilerOptions - paths 路径写法是相对 项目根目录 .
+        // 如果再设了 baseUrl: "./" 才是相对 packages/_demo 解析
+        // 即 compilerOptions.baseUrl 和 paths 的解析是以：最终（合并后的） tsconfig.json 中的 baseUrl 为准。 https://chatgpt.com/c/6846814a-2dd0-8008-b63c-d61d4825318f
+      "myswr": ["./packages/swr/index.tsx"],
+    }
+  },
+  // 如果是自建的 以 点 开头的目录, 在 unix 系统里会被当做 配置文件 而默认不被 vscode 等解析.
+  // 比如 .xx 在 include 里不能只写 ".xx" 而是 ".xx/**/*"
+  "include": ["./src", "./.i18n/**/*"]
+}

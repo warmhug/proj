@@ -34,7 +34,17 @@ scr() {
   }
   toggle
   trap 'toggle' INT EXIT
-  scrcpy --shortcut-mod=lctrl --show-touches --stay-awake -m1024 -b2M --window-x=0 --window-y=90 --window-width=250
+
+  # 备份当前的亮度和自动亮度状态（移除末尾的换行符）
+  local orig_mode orig_brightness
+  orig_mode=$(adb shell settings get system screen_brightness_mode | tr -d '\r\n')
+  orig_brightness=$(adb shell settings get system screen_brightness | tr -d '\r\n')
+  echo "orig_mode: $orig_mode, orig_brightness: $orig_brightness"
+  adb shell settings put system screen_brightness 3
+
+  set -x
+  scrcpy --shortcut-mod=lctrl --show-touches --stay-awake -m1024 -b2M --window-x=0 --window-y=90 --window-width=250 --keyboard=uhid
+  set +x
 }
 
 # adb 解锁 android 手机, 终端直接输入 locks
